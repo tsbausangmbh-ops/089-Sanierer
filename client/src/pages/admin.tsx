@@ -113,13 +113,22 @@ function LeadCardSkeleton() {
 export default function AdminPage() {
   const [serviceFilter, setServiceFilter] = useState<string>("all");
 
+  const apiUrl = serviceFilter === "all" 
+    ? "/api/leads" 
+    : `/api/leads?service=${serviceFilter}`;
+
   const { data: leads, isLoading } = useQuery<Lead[]>({
-    queryKey: ["/api/leads", serviceFilter !== "all" ? serviceFilter : undefined].filter(Boolean),
+    queryKey: ["/api/leads", serviceFilter],
+    queryFn: async () => {
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error("Failed to fetch leads");
+      }
+      return response.json();
+    },
   });
 
-  const filteredLeads = leads?.filter((lead) =>
-    serviceFilter === "all" ? true : lead.service === serviceFilter
-  );
+  const filteredLeads = leads;
 
   return (
     <div className="min-h-screen bg-background">
