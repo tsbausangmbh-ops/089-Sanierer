@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Wrench, CloudLightning, Phone } from "lucide-react";
+import { Wrench, CloudLightning, Phone, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { ServiceCard } from "./ServiceCard";
 import { StepIndicator } from "./StepIndicator";
+import type { InsertLead } from "@shared/schema";
 
 const services = [
   {
@@ -53,10 +54,11 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 interface FunnelFormProps {
-  onSubmit: (data: FormData) => void;
+  onSubmit: (data: InsertLead) => void;
+  isSubmitting?: boolean;
 }
 
-export function FunnelForm({ onSubmit }: FunnelFormProps) {
+export function FunnelForm({ onSubmit, isSubmitting = false }: FunnelFormProps) {
   const [step, setStep] = useState(0);
   const steps = ["Service", "Details", "Kontakt"];
 
@@ -86,7 +88,8 @@ export function FunnelForm({ onSubmit }: FunnelFormProps) {
     } else if (step === 2) {
       isValid = await form.trigger(["name", "phone", "email", "address", "postalCode"]);
       if (isValid) {
-        form.handleSubmit(onSubmit)();
+        const values = form.getValues();
+        onSubmit(values);
         return;
       }
     }
@@ -280,6 +283,7 @@ export function FunnelForm({ onSubmit }: FunnelFormProps) {
                 type="button"
                 variant="secondary"
                 onClick={handleBack}
+                disabled={isSubmitting}
                 data-testid="button-back"
               >
                 Zurück
@@ -290,9 +294,11 @@ export function FunnelForm({ onSubmit }: FunnelFormProps) {
             <Button
               type="button"
               onClick={handleNext}
+              disabled={isSubmitting}
               data-testid="button-next"
             >
-              {step === 2 ? "Anfrage senden" : "Weiter"}
+              {isSubmitting && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
+              {step === 2 ? (isSubmitting ? "Wird gesendet..." : "Anfrage senden") : "Weiter"}
             </Button>
           </div>
         </form>

@@ -1,22 +1,41 @@
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { NotdienstBadge } from "@/components/NotdienstBadge";
 import { FunnelForm } from "@/components/FunnelForm";
 import { ConfirmationPage } from "@/components/ConfirmationPage";
 import { TrustBadges } from "@/components/TrustBadges";
 import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import type { InsertLead } from "@shared/schema";
 
 export default function FunnelPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (data: unknown) => {
-    console.log("Lead submitted:", data);
-    setIsSubmitted(true);
-    toast({
-      title: "Anfrage gesendet",
-      description: "Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.",
-    });
+  const createLeadMutation = useMutation({
+    mutationFn: async (data: InsertLead) => {
+      const response = await apiRequest("POST", "/api/leads", data);
+      return response.json();
+    },
+    onSuccess: () => {
+      setIsSubmitted(true);
+      toast({
+        title: "Anfrage gesendet",
+        description: "Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.",
+      });
+    },
+    onError: () => {
+      toast({
+        title: "Fehler",
+        description: "Es gab ein Problem beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubmit = (data: InsertLead) => {
+    createLeadMutation.mutate(data);
   };
 
   const handleReset = () => {
@@ -45,7 +64,10 @@ export default function FunnelPage() {
                 </p>
               </div>
 
-              <FunnelForm onSubmit={handleSubmit} />
+              <FunnelForm 
+                onSubmit={handleSubmit} 
+                isSubmitting={createLeadMutation.isPending}
+              />
 
               <div className="mt-16 border-t pt-8">
                 <TrustBadges />
