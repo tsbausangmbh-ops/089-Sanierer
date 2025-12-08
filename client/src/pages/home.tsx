@@ -449,11 +449,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <img src={kshwLogo} alt="KSHW München Logo" className="h-12 w-auto" />
+              <div className="flex items-center gap-2 mb-4">
+                <img src={kshwLogo} alt="KSHW München Logo" className="h-5 w-auto" />
                 <h4 className="font-bold">KSHW München</h4>
               </div>
-              <p className="text-white/70 text-sm mt-2">
+              <p className="text-white/70 text-sm">
                 Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
               </p>
             </div>
