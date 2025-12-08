@@ -1,7 +1,23 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { ArrowLeft, Phone, Mail, MapPin, Clock, AlertTriangle, Wrench, CloudLightning } from "lucide-react";
+import { 
+  ArrowLeft, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  AlertTriangle,
+  Home as HomeIcon,
+  Bath,
+  UtensilsCrossed,
+  Layers,
+  Zap,
+  Flame,
+  Building2,
+  Building,
+  Store
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,10 +31,20 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import type { Lead } from "@shared/schema";
 
-const serviceLabels: Record<string, { label: string; icon: typeof Wrench }> = {
-  dacharbeiten: { label: "Dacharbeiten", icon: Wrench },
-  sturmschaden: { label: "Sturmschaden", icon: CloudLightning },
-  notdienst: { label: "Notdienst", icon: Phone },
+const serviceLabels: Record<string, { label: string; icon: typeof HomeIcon }> = {
+  komplettsanierung: { label: "Komplettsanierung", icon: HomeIcon },
+  badsanierung: { label: "Badsanierung", icon: Bath },
+  kuechensanierung: { label: "Küchensanierung", icon: UtensilsCrossed },
+  bodensanierung: { label: "Bodensanierung", icon: Layers },
+  elektrosanierung: { label: "Elektrosanierung", icon: Zap },
+  heizungssanierung: { label: "Heizungssanierung", icon: Flame },
+};
+
+const propertyLabels: Record<string, { label: string; icon: typeof HomeIcon }> = {
+  wohnung: { label: "Wohnung", icon: Building2 },
+  einfamilienhaus: { label: "Einfamilienhaus", icon: HomeIcon },
+  mehrfamilienhaus: { label: "Mehrfamilienhaus", icon: Building },
+  gewerbe: { label: "Gewerbe", icon: Store },
 };
 
 function formatDate(date: string | Date | null): string {
@@ -34,8 +60,10 @@ function formatDate(date: string | Date | null): string {
 }
 
 function LeadCard({ lead }: { lead: Lead }) {
-  const serviceInfo = serviceLabels[lead.service] || { label: lead.service, icon: Wrench };
+  const serviceInfo = serviceLabels[lead.service] || { label: lead.service, icon: HomeIcon };
+  const propertyInfo = propertyLabels[lead.propertyType] || { label: lead.propertyType, icon: Building2 };
   const ServiceIcon = serviceInfo.icon;
+  const PropertyIcon = propertyInfo.icon;
 
   return (
     <Card data-testid={`card-lead-${lead.id}`}>
@@ -45,6 +73,10 @@ function LeadCard({ lead }: { lead: Lead }) {
             <Badge variant="secondary" className="gap-1">
               <ServiceIcon className="w-3 h-3" />
               {serviceInfo.label}
+            </Badge>
+            <Badge variant="outline" className="gap-1">
+              <PropertyIcon className="w-3 h-3" />
+              {propertyInfo.label}
             </Badge>
             {lead.isUrgent && (
               <Badge variant="destructive" className="gap-1">
@@ -145,20 +177,23 @@ export default function AdminPage() {
                 Lead-Übersicht
               </h1>
               <p className="text-sm text-muted-foreground">
-                {filteredLeads?.length ?? 0} Anfragen
+                KSHW München - {filteredLeads?.length ?? 0} Anfragen
               </p>
             </div>
           </div>
 
           <Select value={serviceFilter} onValueChange={setServiceFilter}>
-            <SelectTrigger className="w-44" data-testid="select-service-filter">
+            <SelectTrigger className="w-48" data-testid="select-service-filter">
               <SelectValue placeholder="Alle Services" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">Alle Services</SelectItem>
-              <SelectItem value="dacharbeiten">Dacharbeiten</SelectItem>
-              <SelectItem value="sturmschaden">Sturmschaden</SelectItem>
-              <SelectItem value="notdienst">Notdienst</SelectItem>
+              <SelectItem value="all">Alle Leistungen</SelectItem>
+              <SelectItem value="komplettsanierung">Komplettsanierung</SelectItem>
+              <SelectItem value="badsanierung">Badsanierung</SelectItem>
+              <SelectItem value="kuechensanierung">Küchensanierung</SelectItem>
+              <SelectItem value="bodensanierung">Bodensanierung</SelectItem>
+              <SelectItem value="elektrosanierung">Elektrosanierung</SelectItem>
+              <SelectItem value="heizungssanierung">Heizungssanierung</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -186,7 +221,7 @@ export default function AdminPage() {
             <p className="text-muted-foreground mb-6">
               Sobald Kunden das Formular ausfüllen, erscheinen die Leads hier.
             </p>
-            <Link href="/">
+            <Link href="/anfrage">
               <Button data-testid="button-go-to-funnel">
                 Zum Anfrage-Formular
               </Button>
