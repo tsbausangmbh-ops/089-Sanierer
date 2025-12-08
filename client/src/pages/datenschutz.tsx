@@ -49,7 +49,7 @@ export default function Datenschutz() {
             <section>
               <h2 className="text-xl font-bold mb-4">Verantwortlicher</h2>
               <p className="text-muted-foreground">
-                KSHW München - Kurtas Bau<br />
+                KSHW München<br />
                 Ali Kemal Kurt<br />
                 Zielstattstr. 9<br />
                 81379 München<br /><br />

@@ -39,7 +39,7 @@ export default function Impressum() {
                 www.komplettsanierungen-haus-wohnung.de
               </p>
               <p className="text-muted-foreground mt-4">
-                KSHW München - Kurtas Bau<br />
+                KSHW München<br />
                 Ali Kemal Kurt<br />
                 Zielstattstr. 9<br />
                 81379 München
