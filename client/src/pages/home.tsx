@@ -34,6 +34,7 @@ import {
 
 const services = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon },
+  { id: "hauswohnung", title: "Haus- und Wohnungssanierung", icon: HomeIcon },
   { id: "badsanierung", title: "Badezimmer", icon: Bath },
   { id: "kuechensanierung", title: "Küche", icon: UtensilsCrossed },
   { id: "fassade", title: "Fassade & Dämmung", icon: Shield },
