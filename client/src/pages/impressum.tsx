@@ -89,6 +89,14 @@ export default function Impressum() {
               </p>
             </section>
 
+            <section className="border-t pt-8 mt-8">
+              <h2 className="text-xl font-bold mb-4">Weitere rechtliche Informationen</h2>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link></li>
+                <li><Link href="/agb" className="text-primary hover:underline">Allgemeine Geschäftsbedingungen (AGB)</Link></li>
+              </ul>
+            </section>
+
           </div>
         </div>
       </main>
