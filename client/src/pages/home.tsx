@@ -389,7 +389,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14">
+      <section className="py-6 lg:py-8">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
             Sanierung München: Komplettsanierung, Badsanierung & Handwerker
