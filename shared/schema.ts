@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, boolean, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, boolean, timestamp, jsonb } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -21,6 +21,7 @@ export const leads = pgTable("leads", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   service: text("service").notNull(),
   propertyType: text("property_type").notNull().default("wohnung"),
+  serviceDetails: jsonb("service_details"),
   description: text("description").notNull(),
   isUrgent: boolean("is_urgent").default(false),
   name: text("name").notNull(),
@@ -28,6 +29,7 @@ export const leads = pgTable("leads", {
   mobile: text("mobile"),
   email: text("email").notNull(),
   address: text("address").notNull(),
+  city: text("city"),
   postalCode: text("postal_code").notNull(),
   createdAt: timestamp("created_at").defaultNow(),
 });
