@@ -41,14 +41,14 @@ const headerServices = [
 ];
 
 const allServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath },
-  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed },
-  { id: "bodensanierung", title: "Bodensanierung", icon: Layers },
-  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap },
-  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame },
-  { id: "energetisch", title: "Energetische Sanierung", icon: Flame },
-  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon },
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, description: "Rundum-Sanierung Ihrer Immobilie in München – von Grund auf neu gestaltet." },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath, description: "Moderne Bäder für München – barrierefrei, zeitgemäß und hochwertig." },
+  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, description: "Traumküchen in München – funktional, modern und individuell geplant." },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, description: "Neue Böden für München – Parkett, Fliesen oder Vinyl vom Profi." },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, description: "Sichere Elektrik in München – Modernisierung nach aktuellen Standards." },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, description: "Effiziente Heizsysteme für München – Wärmepumpe, Gas oder Fernwärme." },
+  { id: "energetisch", title: "Energetische Sanierung", icon: Flame, description: "Energieeffizient sanieren in München – KfW-Förderung nutzen." },
+  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon, description: "Professionelle Dacharbeiten in München – Dämmung und Neueindeckung." },
 ];
 
 const processSteps = [
@@ -250,7 +250,7 @@ export default function Home() {
               Von der Badsanierung bis zur Komplettrenovierung - wir bieten Ihnen professionelle Sanierung aus einer Hand in München und Umgebung.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {allServices.map((service) => (
               <Link key={service.id} href={`/anfrage?service=${service.id}`}>
                 <Card 
@@ -260,7 +260,8 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <service.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-sm">{service.title}</h3>
+                  <h3 className="font-semibold text-sm mb-2">{service.title}</h3>
+                  <p className="text-xs text-muted-foreground">{service.description}</p>
                 </Card>
               </Link>
             ))}
