@@ -386,6 +386,7 @@ export default function FunnelPage() {
   const [formData, setFormData] = useState({
     service: "",
     propertyType: "",
+    kitchenNeeded: "",
     serviceDetails: {} as ServiceDetails,
     qualityLevel: "",
     timeline: "",
@@ -503,7 +504,11 @@ export default function FunnelPage() {
   const canProceed = () => {
     switch (currentStep) {
       case 1: return formData.service !== "";
-      case 2: return formData.propertyType !== "";
+      case 2: 
+        if (formData.service === "kuechensanierung") {
+          return formData.propertyType !== "" && formData.kitchenNeeded !== "";
+        }
+        return formData.propertyType !== "";
       case 3: return canProceedStep3();
       case 4: return canProceedStep4();
       case 5: return formData.qualityLevel !== "";
@@ -519,7 +524,7 @@ export default function FunnelPage() {
       case 1: return "Welches Problem können wir für Sie lösen?";
       case 2: 
         if (formData.service === "badsanierung") return "Was für ein Bad soll saniert werden?";
-        if (formData.service === "kuechensanierung") return "Wie nutzen Sie Ihre Küche?";
+        if (formData.service === "kuechensanierung") return "Welche Sanierungsarbeiten werden benötigt?";
         if (formData.service === "bodensanierung") return "Welche Räume brauchen neuen Boden?";
         return "Um welches Objekt handelt es sich?";
       case 3: return config.scopeTitle;
@@ -537,7 +542,7 @@ export default function FunnelPage() {
       case 1: return "Wählen Sie den Bereich, der Ihnen am meisten Kopfzerbrechen bereitet";
       case 2: 
         if (formData.service === "badsanierung") return "Hauptbad, Gäste-WC oder beides?";
-        if (formData.service === "kuechensanierung") return "Ihre Kochgewohnheiten bestimmen die optimale Planung";
+        if (formData.service === "kuechensanierung") return "Wählen Sie die gewünschten Arbeiten - ohne Küchenmöbel";
         if (formData.service === "bodensanierung") return "Einzelner Raum oder die ganze Wohnung?";
         return "Jedes Objekt hat seine Besonderheiten";
       case 3: return config.scopeSubtitle;
@@ -617,8 +622,9 @@ export default function FunnelPage() {
     if (service === "kuechensanierung") {
       return (
         <div className="space-y-6">
+          <p className="text-sm text-muted-foreground mb-2">Welche Arbeiten sollen durchgeführt werden?</p>
           <div className="grid grid-cols-2 gap-4">
-            {kitchenTypes.map((type) => {
+            {kitchenWorkTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
               return (
@@ -638,6 +644,34 @@ export default function FunnelPage() {
                 </button>
               );
             })}
+          </div>
+          
+          <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+            <p className="font-medium mb-3">Wird eine neue Küche (Möbel & Geräte) gewünscht?</p>
+            <div className="flex gap-4">
+              <button
+                type="button"
+                onClick={() => updateFormData("kitchenNeeded", "ja")}
+                className={`flex-1 p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  formData.kitchenNeeded === "ja" ? "border-primary bg-primary/5" : "border-border"
+                }`}
+                data-testid="button-kitchen-yes"
+              >
+                <p className="font-semibold">Ja, neue Küche</p>
+                <p className="text-xs text-muted-foreground">Inkl. Planung & Einbau</p>
+              </button>
+              <button
+                type="button"
+                onClick={() => updateFormData("kitchenNeeded", "nein")}
+                className={`flex-1 p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  formData.kitchenNeeded === "nein" ? "border-primary bg-primary/5" : "border-border"
+                }`}
+                data-testid="button-kitchen-no"
+              >
+                <p className="font-semibold">Nein, nur Sanierung</p>
+                <p className="text-xs text-muted-foreground">Bestehende Küche bleibt</p>
+              </button>
+            </div>
           </div>
         </div>
       );
