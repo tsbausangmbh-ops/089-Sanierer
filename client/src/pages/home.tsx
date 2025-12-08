@@ -223,7 +223,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-4">
+            <p className="text-xs text-muted-foreground text-center mt-2">
               „Full Service" Baubetreuung und Schlüsselfertige Koordination von Partnerfirmen (Meisterpflichtige Gewerke werden von unseren Partnerfirmen ausgeführt)
             </p>
           </div>
