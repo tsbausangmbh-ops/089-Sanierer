@@ -69,6 +69,7 @@ const formSchema = z.object({
   isUrgent: z.boolean().default(false),
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
   phone: z.string().min(6, "Bitte geben Sie Ihre Telefonnummer ein"),
+  mobile: z.string().optional(),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
   address: z.string().min(5, "Bitte geben Sie Ihre Adresse ein"),
   postalCode: z.string().min(4, "Bitte geben Sie Ihre Postleitzahl ein"),
@@ -91,6 +92,7 @@ export default function Funnel() {
       isUrgent: false,
       name: "",
       phone: "",
+      mobile: "",
       email: "",
       address: "",
       postalCode: "",
@@ -403,6 +405,25 @@ export default function Funnel() {
                             type="tel"
                             placeholder="089 123 456 789"
                             data-testid="input-phone"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="mobile"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Handynummer (optional)</FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            type="tel"
+                            placeholder="0170 123 456 789"
+                            data-testid="input-mobile"
                           />
                         </FormControl>
                         <FormMessage />

@@ -25,6 +25,7 @@ export const leads = pgTable("leads", {
   isUrgent: boolean("is_urgent").default(false),
   name: text("name").notNull(),
   phone: text("phone").notNull(),
+  mobile: text("mobile"),
   email: text("email").notNull(),
   address: text("address").notNull(),
   postalCode: text("postal_code").notNull(),
