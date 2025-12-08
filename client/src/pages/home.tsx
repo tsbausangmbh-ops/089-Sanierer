@@ -168,7 +168,7 @@ export default function Home() {
                   Komplettsanierung in München – <span className="text-primary">Haus & Wohnung</span> professionell sanieren
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung. Meisterbetrieb mit über 15 Jahren Erfahrung. Ob Badsanierung, Küchensanierung oder komplette Renovierung – wir bieten Ihnen professionelle Qualität zu fairen Preisen.
+                  Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung. Ob Badsanierung, Küchensanierung oder komplette Renovierung – wir bieten Ihnen professionelle Qualität zu fairen Preisen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/anfrage">
@@ -452,7 +452,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-white/70 text-sm mt-2">
-                Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung. Meisterbetrieb mit über 15 Jahren Erfahrung.
+                Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
               </p>
               <p className="text-white/60 text-xs mt-3">
                 Einsatzgebiet: München, Allach, Untermenzing, Pasing, Obermenzing, Aubing, Moosach, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg
