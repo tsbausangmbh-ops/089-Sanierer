@@ -46,10 +46,9 @@ export default function Datenschutz() {
               <h2 className="text-xl font-bold mb-4">2. Verantwortliche Stelle</h2>
               <p className="text-muted-foreground">
                 Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br /><br />
-                Komplettsanierungen Haus & Wohnung<br />
-                Musterstraße 123<br />
-                80331 München<br /><br />
-                Telefon: 089 123 456 789<br />
+                KSHW München<br />
+                Zielstattstr. 9<br />
+                81379 München<br /><br />
                 E-Mail: info@komplettsanierungen-haus-wohnung.de
               </p>
             </section>

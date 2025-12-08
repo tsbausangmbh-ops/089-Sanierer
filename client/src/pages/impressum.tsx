@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Building2, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowLeft, Building2, Mail } from "lucide-react";
 
 export default function Impressum() {
   return (
@@ -35,9 +35,9 @@ export default function Impressum() {
             <section>
               <h2 className="text-xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
               <p className="text-muted-foreground">
-                Komplettsanierungen Haus & Wohnung<br />
-                Musterstraße 123<br />
-                80331 München
+                KSHW München<br />
+                Zielstattstr. 9<br />
+                81379 München
               </p>
             </section>
 
@@ -45,48 +45,10 @@ export default function Impressum() {
               <h2 className="text-xl font-bold mb-4">Kontakt</h2>
               <div className="space-y-2 text-muted-foreground">
                 <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Telefon: 089 123 456 789
-                </p>
-                <p className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   E-Mail: info@komplettsanierungen-haus-wohnung.de
                 </p>
               </div>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Vertreten durch</h2>
-              <p className="text-muted-foreground">
-                Max Mustermann<br />
-                Geschäftsführer
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Registereintrag</h2>
-              <p className="text-muted-foreground">
-                Eintragung im Handelsregister<br />
-                Registergericht: Amtsgericht München<br />
-                Registernummer: HRB XXXXXX
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Umsatzsteuer-ID</h2>
-              <p className="text-muted-foreground">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                DE XXX XXX XXX
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-              <p className="text-muted-foreground">
-                Berufsbezeichnung: Handwerksbetrieb<br />
-                Zuständige Kammer: Handwerkskammer für München und Oberbayern<br />
-                Verliehen in: Deutschland
-              </p>
             </section>
 
             <section>
