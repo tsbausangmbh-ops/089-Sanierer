@@ -377,6 +377,69 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">
+            Haus oder Wohnung sanieren – Planung, Kosten & Handwerker finden
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+            <p>
+              Eine Sanierung kann ein Haus oder eine Wohnung nicht nur optisch aufwerten, sondern auch den Wohnkomfort erheblich verbessern. Ob energetische Modernisierung, neue Böden, ein frischer Anstrich oder die komplette Badsanierung – wer eine Haus- oder Wohnungssanierung plant, sollte gut vorbereitet sein. Denn eine erfolgreiche Sanierung erfordert eine klare Struktur: Planung, Kostenschätzung und die Wahl seriöser Handwerker in der Nähe.
+            </p>
+
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Sanierung richtig planen – So geht's einfach & schnell</h3>
+            <p>
+              Der erste Schritt bei der Sanierung einer Immobilie ist eine detaillierte Planung. Welche Maßnahmen sind notwendig? Wo lassen sich Kosten einsparen? Und welche Arbeiten sollten von einem Fachbetrieb übernommen werden? Ob es sich um eine Komplettsanierung oder eine Teilsanierung handelt – eine strukturierte Herangehensweise spart Zeit und Geld.
+            </p>
+            <p>
+              Gerade bei älteren Immobilien sind oft verschiedene Gewerke involviert. Eine durchdachte Planung hilft, Sanierungsarbeiten effizient zu koordinieren und Verzögerungen zu vermeiden. Wichtig ist es, alle Kosten im Blick zu behalten und sich vorab einen Überblick über die möglichen Ausgaben zu verschaffen.
+            </p>
+
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was kostet eine Haus- oder Wohnungssanierung?</h3>
+            <p>
+              Die Kosten einer Sanierung variieren je nach Umfang der Arbeiten. Während eine einfache Renovierung – beispielsweise ein neuer Anstrich oder der Austausch des Bodenbelags – relativ kostengünstig bleibt, können energetische Modernisierungen oder Badsanierungen teurer ausfallen. Faktoren wie die Größe der Immobilie, die Wahl der Materialien und die Arbeitskosten der Handwerker spielen eine große Rolle.
+            </p>
+            <p>
+              Wer genaue Zahlen benötigt, sollte eine detaillierte Kostenschätzung vornehmen. Mit unserem Sanierungsrechner lassen sich die voraussichtlichen Kosten für die Sanierung einer Wohnung oder eines Hauses individuell ermitteln.
+            </p>
+
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Seriöse Handwerker in der Nähe finden – worauf achten?</h3>
+            <p>
+              Eine der größten Herausforderungen bei einer Sanierung ist es, zuverlässige und seriöse Handwerker in der Nähe zu finden. Um böse Überraschungen zu vermeiden, sollten folgende Punkte beachtet werden:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Erfahrung & Bewertungen prüfen:</strong> Kundenrezensionen und Referenzprojekte helfen bei der Auswahl.</li>
+              <li><strong>Angebote vergleichen:</strong> Ein schriftlicher Kostenvoranschlag gibt Klarheit über Preise und Leistungen.</li>
+              <li><strong>Qualifikationen & Zertifikate beachten:</strong> Besonders bei Facharbeiten wie Elektroinstallationen oder Heizungsmodernisierungen sollten geprüfte Handwerker beauftragt werden.</li>
+              <li><strong>Feste Zeitpläne vereinbaren:</strong> Klare Absprachen sorgen für einen reibungslosen Ablauf der Sanierung.</li>
+            </ul>
+
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unser Sanierungsrechner – Planung, Kosten & Handwerker aus einer Hand</h3>
+            <p>
+              Eine Sanierung bringt viele Fragen mit sich: Welche Kosten entstehen? Welche Arbeiten sind wirklich notwendig? Und wie finde ich einen seriösen Handwerker? Genau hier setzt unser Sanierungsrechner an.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Detaillierte Kostenschätzung:</strong> Sie erhalten eine realistische Berechnung der Sanierungskosten auf Basis Ihrer individuellen Angaben.</li>
+              <li><strong>Gezielte Planungshilfe:</strong> Unser System hilft Ihnen, die richtigen Maßnahmen zu identifizieren und unnötige Kosten zu vermeiden.</li>
+              <li><strong>Handwerkervermittlung:</strong> Wir leiten Ihre Anfrage an geprüfte und seriöse Handwerker in Ihrer Nähe weiter.</li>
+            </ul>
+            <p className="mt-6">
+              Mit unserem Sanierungsrechner wird Ihre Haus- oder Wohnungssanierung einfach, schnell und transparent. Jetzt unverbindlich ausprobieren und den ersten Schritt in Richtung Traumimmobilie machen!
+            </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/anfrage">
+              <Button size="lg" className="text-lg" data-testid="button-content-cta">
+                Jetzt Sanierungsrechner starten
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <footer className="py-12 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
