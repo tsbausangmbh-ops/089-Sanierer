@@ -1887,7 +1887,7 @@ export default function FunnelPage() {
                 <div className="flex justify-between gap-4 mt-8 pt-6 border-t">
                   {currentStep === 1 ? (
                     <Link href="/">
-                      <Button variant="outline" data-testid="button-back-home">
+                      <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-back-home">
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Zurück zur Startseite
                       </Button>
