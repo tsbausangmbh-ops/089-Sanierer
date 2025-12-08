@@ -444,14 +444,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Building2 className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3 mb-4">
+                <Building2 className="w-8 h-8 text-white" />
                 <div className="flex flex-col">
-                  <span className="font-bold leading-tight">Komplettsanierungen</span>
-                  <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                  <span className="font-bold text-xl leading-tight">Komplettsanierungen</span>
+                  <span className="text-sm text-white/70 leading-tight">Haus & Wohnung</span>
                 </div>
               </div>
-              <p className="text-white/70 text-sm">
+              <p className="text-white/70 text-sm mt-2">
                 Ihr Partner für professionelle Sanierungen in München und Umgebung.
               </p>
             </div>
