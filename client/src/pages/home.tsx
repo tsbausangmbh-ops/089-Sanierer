@@ -36,11 +36,8 @@ const services = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon },
   { id: "badsanierung", title: "Badsanierung", icon: Bath },
   { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed },
-  { id: "bodensanierung", title: "Bodensanierung", icon: Layers },
-  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap },
-  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame },
+  { id: "haussanierung", title: "Haussanierung", icon: HomeIcon },
   { id: "energetisch", title: "Energetische Sanierung", icon: Flame },
-  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon },
 ];
 
 const reviews = [
@@ -246,7 +243,7 @@ export default function Home() {
               Von der Badsanierung bis zur Komplettrenovierung - wir bieten Ihnen professionelle Sanierung aus einer Hand.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {services.map((service) => (
               <Link key={service.id} href={`/anfrage?service=${service.id}`}>
                 <Card 

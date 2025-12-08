@@ -6,11 +6,8 @@ const services = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "badsanierung", title: "Badsanierung" },
   { id: "kuechensanierung", title: "Küchensanierung" },
-  { id: "bodensanierung", title: "Bodensanierung" },
-  { id: "elektrosanierung", title: "Elektrosanierung" },
-  { id: "heizungssanierung", title: "Heizungssanierung" },
+  { id: "haussanierung", title: "Haussanierung" },
   { id: "energetisch", title: "Energetische Sanierung" },
-  { id: "dachsanierung", title: "Dachsanierung" },
 ];
 
 export default function Impressum() {
