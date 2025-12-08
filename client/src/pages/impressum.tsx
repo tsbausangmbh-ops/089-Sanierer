@@ -32,35 +32,64 @@ export default function Impressum() {
           <h1 className="text-3xl lg:text-4xl font-bold mb-8">Impressum</h1>
 
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
+            
             <section>
-              <h2 className="text-xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-xl font-bold mb-4">Verantwortlicher</h2>
               <p className="text-muted-foreground">
+                www.komplettsanierungen-haus-wohnung.de
+              </p>
+              <p className="text-muted-foreground mt-4">
                 KSHW München - Kurtas Bau<br />
                 Ali Kemal Kurt<br />
                 Zielstattstr. 9<br />
                 81379 München
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Kontakt</h2>
-              <div className="space-y-2 text-muted-foreground">
+              <p className="text-muted-foreground mt-4">
+                USt-IdNr: DE356852204
+              </p>
+              <div className="space-y-2 text-muted-foreground mt-4">
+                <p className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  Email: info@komplettsanierungen-haus-wohnung.de
+                </p>
                 <p className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
                   Tel: 0152 122 740 43
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  E-Mail: info@komplettsanierungen-haus-wohnung.de
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Umsatzsteuer-ID</h2>
+              <h2 className="text-xl font-bold mb-4">Technische Informationen</h2>
               <p className="text-muted-foreground">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                DE356852204
+                Wir weisen Sie darauf hin, dass die Vertraulichkeit im Internet nicht gewährleistet ist. Jeder Benutzer ist daher allein verantwortlich, seine Daten und/oder Softwares vor eventuell im Internet zirkulierenden Viren angemessen zu schützen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Urheberrechte</h2>
+              <p className="text-muted-foreground">
+                Die durch die Seitenbetreiber erstellten Inhalte auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Rechtsinhabers bzw. des Erstellers. Jede vollständige oder teilweise Reproduktion oder Darstellung der Webseiten, Daten oder eines Bestandteils der Website www.komplettsanierungen-haus-wohnung.de, in welchem Verfahren und auf welchem Datenträger auch immer, ist ohne die vorherige, schriftliche Zustimmung von KSHW München untersagt und stellt einen Verstoß gegen das Urheberrecht dar.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Haftungsausschluss</h2>
+              <p className="text-muted-foreground">
+                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden. Als Diensteanbieter bzw. Herausgeber dieser Website sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter bzw. Herausgeber jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Haftung für Links</h2>
+              <p className="text-muted-foreground">
+                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
               </p>
             </section>
 
@@ -76,44 +105,10 @@ export default function Impressum() {
                 Unsere E-Mail-Adresse finden Sie oben im Impressum.
               </p>
               <p className="text-muted-foreground mt-2">
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
-                Verbraucherschlichtungsstelle teilzunehmen.
+                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
             </section>
 
-            <section>
-              <h2 className="text-xl font-bold mb-4">Haftung für Inhalte</h2>
-              <p className="text-muted-foreground">
-                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den 
-                allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht 
-                verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen 
-                zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-              </p>
-              <p className="text-muted-foreground mt-2">
-                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen 
-                Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt 
-                der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden 
-                Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Haftung für Links</h2>
-              <p className="text-muted-foreground">
-                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
-                Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der 
-                verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Urheberrecht</h2>
-              <p className="text-muted-foreground">
-                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen 
-                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der 
-                Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-              </p>
-            </section>
           </div>
         </div>
       </main>
