@@ -394,7 +394,7 @@ export default function Home() {
           
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              <strong>KSHW München</strong> – Ihr Meisterbetrieb für <strong>Komplettsanierungen in München</strong>. Badsanierung, Küchensanierung, Haussanierung, Dachsanierung und energetische Sanierung aus einer Hand. Kostenlose Beratung, faire Festpreise, Termingarantie.
+              <strong>KSHW München</strong> – Ihr Partner für <strong>Komplettsanierungen in München</strong>. Badsanierung, Küchensanierung, Haussanierung, Dachsanierung und energetische Sanierung aus einer Hand. Kostenlose Beratung, faire Festpreise, Termingarantie.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 my-6">
