@@ -170,7 +170,7 @@ export default function Home() {
                 <p className="text-lg text-muted-foreground mb-8">
                   Sie möchten Ihr Bad modernisieren, die Küche erneuern oder eine Komplettsanierung in München durchführen? Mit unserem Service erhalten Sie schnell eine präzise Kostenschätzung und qualifizierte Handwerker aus München und Umgebung.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/anfrage">
                     <Button size="lg" className="text-lg w-full sm:w-auto" data-testid="button-hero-cta">
                       Jetzt Anfrage starten
@@ -184,28 +184,6 @@ export default function Home() {
                     </Button>
                   </a>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex items-center gap-3 p-4 bg-white dark:bg-card rounded-lg border flex-1">
-                    <div className="flex">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <div>
-                      <p className="font-semibold">Hervorragend bewertet</p>
-                      <p className="text-sm text-muted-foreground">50+ Kundenbewertungen</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-4 bg-white dark:bg-card rounded-lg border flex-1">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg">500+</p>
-                      <p className="text-sm text-muted-foreground">Projekte abgeschlossen</p>
-                    </div>
-                  </div>
-                </div>
               </div>
               <div className="relative">
                 <img 
@@ -213,6 +191,28 @@ export default function Home() {
                   alt="Moderne Küche nach Sanierung in München"
                   className="rounded-lg shadow-2xl w-full"
                 />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+              <div className="flex items-center gap-4 p-5 bg-white dark:bg-card rounded-lg border">
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <div>
+                  <p className="font-semibold text-lg">Hervorragend bewertet</p>
+                  <p className="text-sm text-muted-foreground">Basierend auf 50+ Kundenbewertungen</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 p-5 bg-white dark:bg-card rounded-lg border">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="font-bold text-xl">500+</p>
+                  <p className="text-sm text-muted-foreground">Projekte erfolgreich abgeschlossen</p>
+                </div>
               </div>
             </div>
           </div>
