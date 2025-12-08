@@ -169,8 +169,8 @@ export default function Home() {
       <section className="relative pt-16">
         <div className="bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 lg:py-14">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+              <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
                   Sanierungsprobleme in München? <span className="text-primary">Wir lösen sie.</span>
                 </h1>
@@ -192,11 +192,11 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative flex items-stretch">
                 <img 
                   src={bathroomBeforeAfter} 
                   alt="Badezimmer Vorher-Nachher: Links alt und veraltet, rechts modern saniert"
-                  className="rounded-lg shadow-2xl w-full"
+                  className="rounded-lg shadow-2xl w-full h-full object-cover"
                   data-testid="img-hero-bathroom"
                 />
               </div>
