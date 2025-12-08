@@ -5,7 +5,7 @@ import { Building2 } from "lucide-react";
 const services = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "hauswohnung", title: "Haus- und Wohnungssanierung" },
-  { id: "badsanierung", title: "Badezimmer" },
+  { id: "badsanierung", title: "Badsanierungen" },
   { id: "kuechensanierung", title: "Küche" },
   { id: "fassade", title: "Fassade & Dämmung" },
   { id: "dach", title: "Dach" },
