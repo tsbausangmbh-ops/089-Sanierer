@@ -440,12 +440,12 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-12 bg-black text-white">
+      <footer className="py-12 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Building2 className="w-6 h-6 text-primary" />
+                <Building2 className="w-6 h-6 text-white" />
                 <div className="flex flex-col">
                   <span className="font-bold leading-tight">Komplettsanierungen</span>
                   <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
