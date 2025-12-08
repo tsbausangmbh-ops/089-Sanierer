@@ -388,63 +388,55 @@ export default function Home() {
 
       <section className="py-10 lg:py-14">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">
-            Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker
+          <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
+            Sanierung München: Komplettsanierung, Badsanierung & Handwerker
           </h2>
           
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Eine Sanierung in München kann Ihr Haus oder Ihre Wohnung nicht nur optisch aufwerten, sondern auch den Wohnkomfort erheblich verbessern. Ob energetische Modernisierung in Schwabing, neue Böden in Sendling, ein frischer Anstrich in Bogenhausen oder die komplette Badsanierung in Haidhausen – wer eine Haus- oder Wohnungssanierung in München plant, sollte gut vorbereitet sein. Denn eine erfolgreiche Sanierung erfordert eine klare Struktur: Planung, Kostenschätzung und die Wahl seriöser Handwerker in München.
+              <strong>KSHW München</strong> – Ihr Meisterbetrieb für <strong>Komplettsanierungen in München</strong>. Badsanierung, Küchensanierung, Haussanierung, Dachsanierung und energetische Sanierung aus einer Hand. Kostenlose Beratung, faire Festpreise, Termingarantie.
             </p>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Sanierung in München richtig planen – So geht's einfach & schnell</h3>
-            <p>
-              Der erste Schritt bei der Sanierung einer Immobilie in München ist eine detaillierte Planung. Welche Maßnahmen sind notwendig? Wo lassen sich Kosten einsparen? Und welche Arbeiten sollten von einem Fachbetrieb in München übernommen werden? Ob es sich um eine Komplettsanierung in Pasing oder eine Teilsanierung in Giesing handelt – eine strukturierte Herangehensweise spart Zeit und Geld.
-            </p>
-            <p>
-              Gerade bei älteren Münchner Altbauwohnungen und Immobilien sind oft verschiedene Gewerke involviert. Eine durchdachte Planung hilft, Sanierungsarbeiten effizient zu koordinieren und Verzögerungen zu vermeiden. Wichtig ist es, alle Kosten im Blick zu behalten und sich vorab einen Überblick über die möglichen Ausgaben zu verschaffen.
-            </p>
+            <div className="grid md:grid-cols-2 gap-4 my-6">
+              <div className="bg-muted/30 p-4 rounded-md">
+                <h3 className="text-lg font-bold text-foreground mb-2">Unsere Leistungen</h3>
+                <ul className="text-sm space-y-1">
+                  <li>Komplettsanierung Haus & Wohnung</li>
+                  <li>Badsanierung & Badumbau</li>
+                  <li>Küchensanierung & Küchenumbau</li>
+                  <li>Dachsanierung & Dachreparatur</li>
+                  <li>Energetische Sanierung</li>
+                  <li>Bodensanierung & Fliesen</li>
+                </ul>
+              </div>
+              <div className="bg-muted/30 p-4 rounded-md">
+                <h3 className="text-lg font-bold text-foreground mb-2">Ihre Vorteile</h3>
+                <ul className="text-sm space-y-1">
+                  <li>Festpreis-Garantie</li>
+                  <li>Alle Gewerke aus einer Hand</li>
+                  <li>Lokale Münchner Handwerker</li>
+                  <li>Schnelle Terminvergabe</li>
+                  <li>Kostenlose Vor-Ort-Beratung</li>
+                  <li>5 Jahre Gewährleistung</li>
+                </ul>
+              </div>
+            </div>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was kostet eine Haus- oder Wohnungssanierung in München?</h3>
-            <p>
-              Die Kosten einer Sanierung in München variieren je nach Umfang der Arbeiten und Stadtgebiet. Während eine einfache Renovierung – beispielsweise ein neuer Anstrich oder der Austausch des Bodenbelags – relativ kostengünstig bleibt, können energetische Modernisierungen oder Badsanierungen in München teurer ausfallen. Faktoren wie die Größe der Immobilie, die Wahl der Materialien und die Arbeitskosten der Münchner Handwerker spielen eine große Rolle.
-            </p>
-            <p>
-              Wer genaue Zahlen für München benötigt, sollte eine detaillierte Kostenschätzung vornehmen. Mit unserem Sanierungsrechner lassen sich die voraussichtlichen Kosten für die Sanierung einer Wohnung oder eines Hauses in München und Umgebung individuell ermitteln.
-            </p>
-
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Seriöse Handwerker in München finden – worauf achten?</h3>
-            <p>
-              Eine der größten Herausforderungen bei einer Sanierung in München ist es, zuverlässige und seriöse Handwerker zu finden. Um böse Überraschungen zu vermeiden, sollten folgende Punkte beachtet werden:
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Erfahrung & Bewertungen prüfen:</strong> Kundenrezensionen und Referenzprojekte aus München helfen bei der Auswahl.</li>
-              <li><strong>Angebote vergleichen:</strong> Ein schriftlicher Kostenvoranschlag gibt Klarheit über Preise und Leistungen in München.</li>
-              <li><strong>Qualifikationen & Zertifikate beachten:</strong> Besonders bei Facharbeiten wie Elektroinstallationen oder Heizungsmodernisierungen sollten geprüfte Münchner Handwerker beauftragt werden.</li>
-              <li><strong>Feste Zeitpläne vereinbaren:</strong> Klare Absprachen sorgen für einen reibungslosen Ablauf der Sanierung.</li>
-            </ul>
-
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">KSHW München – Ihr Partner für Komplettsanierungen</h3>
-            <p>
-              Als Ihr Sanierungspartner in München bieten wir Ihnen alles aus einer Hand: Von der Badsanierung in Pasing über die Küchensanierung in Allach bis zur Komplettsanierung in Obermenzing. Wir sind in ganz München und Umgebung für Sie da – in Untermenzing, Aubing, Moosach, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising und Starnberg.
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Detaillierte Kostenschätzung:</strong> Sie erhalten eine realistische Berechnung der Sanierungskosten für Ihre Münchner Immobilie.</li>
-              <li><strong>Gezielte Planungshilfe:</strong> Unser Team in München hilft Ihnen, die richtigen Maßnahmen zu identifizieren und unnötige Kosten zu vermeiden.</li>
-              <li><strong>Lokale Handwerker:</strong> Wir arbeiten mit geprüften und erfahrenen Handwerkern aus München und Umgebung.</li>
-            </ul>
-            <p className="mt-6">
-              Mit KSHW München wird Ihre Haus- oder Wohnungssanierung in München einfach, schnell und transparent. Jetzt unverbindlich anfragen und den ersten Schritt in Richtung Traumimmobilie machen!
+            <p className="text-sm">
+              Wir sanieren in <strong>München</strong> und Umgebung: Pasing, Allach, Schwabing, Sendling, Bogenhausen, Haidhausen, Giesing, Trudering, Neuhausen, Laim, Nymphenburg, Moosach, Feldmoching, Solln, Hadern, Perlach. Auch im Umland: Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Ottobrunn, Grünwald.
             </p>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <Link href="/anfrage">
               <Button size="lg" className="text-lg" data-testid="button-content-cta">
-                Jetzt Sanierungsrechner starten
+                Kostenlose Anfrage starten
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
+            <p className="text-sm text-muted-foreground mt-3">
+              Antwort innerhalb von 24 Stunden
+            </p>
           </div>
         </div>
       </section>
