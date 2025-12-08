@@ -202,6 +202,16 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground">Basierend auf 50+ Kundenbewertungen</p>
                   </div>
                 </div>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Unsere Markenpartner:</span>
+                  <span>Villeroy & Boch</span>
+                  <span>Hansgrohe</span>
+                  <span>Dornbracht</span>
+                  <span>Gira</span>
+                  <span>Geberit</span>
+                  <span>Duravit</span>
+                  <span>Ideal Standard</span>
+                </div>
               </div>
               <div className="relative">
                 <img 
