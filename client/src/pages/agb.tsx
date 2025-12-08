@@ -354,6 +354,10 @@ export default function AGB() {
                 Hinweis: Diese AGB basieren auf dem BGB-Bauvertragsrecht in der jeweils gültigen Fassung (Stand 2025). Bei Verträgen mit Unternehmern kann ergänzend die VOB/B vereinbart werden.
               </p>
               <p className="text-muted-foreground mt-4">
+                <a href="https://089-sanierer.de/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.089-sanierer.de</a><br />
+                <a href="https://komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.komplettsanierungen-haus-wohnung.de</a>
+              </p>
+              <p className="text-muted-foreground mt-4">
                 <strong>KSHW München</strong><br />
                 Ali Kemal Kurt<br />
                 Zielstattstr. 9, 81379 München<br />

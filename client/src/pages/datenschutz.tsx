@@ -65,6 +65,10 @@ export default function Datenschutz() {
             <section>
               <h2 className="text-xl font-bold mb-4">Verantwortlicher</h2>
               <p className="text-muted-foreground">
+                <a href="https://089-sanierer.de/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.089-sanierer.de</a><br />
+                <a href="https://komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.komplettsanierungen-haus-wohnung.de</a>
+              </p>
+              <p className="text-muted-foreground mt-4">
                 KSHW München<br />
                 Ali Kemal Kurt<br />
                 Zielstattstr. 9<br />
