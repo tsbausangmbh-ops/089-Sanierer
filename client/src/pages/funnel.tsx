@@ -128,6 +128,13 @@ const kitchenTypes = [
   { id: "profikueche", label: "Hobbyköche", icon: ChefHat, desc: "Hochwertige Ausstattung gewünscht" },
 ];
 
+const floorRoomTypes = [
+  { id: "wohnzimmer", label: "Wohnzimmer", icon: Layers, desc: "Der zentrale Lebensraum" },
+  { id: "flur", label: "Flur", icon: Layers, desc: "Eingangsbereich & Durchgänge" },
+  { id: "schlafzimmer", label: "Schlafzimmer", icon: Layers, desc: "Ruhe und Erholung" },
+  { id: "komplett-wohnung", label: "Komplette Wohnung", icon: Layers, desc: "Alle Räume neu gestalten" },
+];
+
 type ServiceConfig = {
   scopeTitle: string;
   scopeSubtitle: string;
@@ -501,6 +508,7 @@ export default function FunnelPage() {
       case 2: 
         if (formData.service === "badsanierung") return "Was für ein Bad soll saniert werden?";
         if (formData.service === "kuechensanierung") return "Wie nutzen Sie Ihre Küche?";
+        if (formData.service === "bodensanierung") return "Welche Räume brauchen neuen Boden?";
         return "Um welches Objekt handelt es sich?";
       case 3: return config.scopeTitle;
       case 4: return config.conditionTitle;
@@ -518,6 +526,7 @@ export default function FunnelPage() {
       case 2: 
         if (formData.service === "badsanierung") return "Hauptbad, Gäste-WC oder beides?";
         if (formData.service === "kuechensanierung") return "Ihre Kochgewohnheiten bestimmen die optimale Planung";
+        if (formData.service === "bodensanierung") return "Einzelner Raum oder die ganze Wohnung?";
         return "Jedes Objekt hat seine Besonderheiten";
       case 3: return config.scopeSubtitle;
       case 4: return config.conditionSubtitle;
@@ -598,6 +607,35 @@ export default function FunnelPage() {
         <div className="space-y-6">
           <div className="grid grid-cols-2 gap-4">
             {kitchenTypes.map((type) => {
+              const Icon = type.icon;
+              const isSelected = formData.propertyType === type.id;
+              return (
+                <button
+                  key={type.id}
+                  type="button"
+                  onClick={() => updateFormData("propertyType", type.id)}
+                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                    isSelected ? "border-primary bg-primary/5" : "border-border"
+                  }`}
+                  data-testid={`button-property-${type.id}`}
+                >
+                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold">{type.label}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+    
+    if (service === "bodensanierung") {
+      return (
+        <div className="space-y-6">
+          <div className="grid grid-cols-2 gap-4">
+            {floorRoomTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
               return (
