@@ -1762,22 +1762,22 @@ export default function FunnelPage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black border-b">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,85%,10%)] text-white border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
-                <Building2 className="w-7 h-7 text-primary" />
+                <Building2 className="w-7 h-7 text-white" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-base leading-tight">Komplettsanierungen</span>
-                  <span className="text-xs text-muted-foreground leading-tight">Haus & Wohnung</span>
+                  <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
+                  <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
                 </div>
               </div>
             </Link>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
                 <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                  <Button variant="ghost" size="sm" className="text-sm">
+                  <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                     {service.title}
                   </Button>
                 </Link>
