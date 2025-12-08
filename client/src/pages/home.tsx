@@ -456,7 +456,10 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
-                <h4 className="font-bold">KSHW München</h4>
+                <div className="flex flex-col">
+                  <span className="font-bold text-base leading-tight">Komplettsanierungen</span>
+                  <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                </div>
               </div>
               <p className="text-white/70 text-sm">
                 Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
