@@ -2052,6 +2052,15 @@ export default function FunnelPage() {
               </ul>
             </div>
           </div>
+          <div className="mt-8 pt-6 border-t border-white/20">
+            <h4 className="font-bold mb-3 text-center">Wir sind für Sie da in München und Umgebung</h4>
+            <p className="text-sm text-white/70 text-center leading-relaxed">
+              München Pasing · Allach · Untermenzing · Obermenzing · Aubing · Moosach · Feldmoching · Schwabing · Sendling · Bogenhausen · Haidhausen · Neuhausen · Laim · Nymphenburg · Giesing · Berg am Laim · Trudering · Riem · Milbertshofen · Freimann · Solln · Großhadern · Hadern · Fürstenried · Forstenried · Thalkirchen · Obersendling · Ramersdorf · Perlach · Neuperlach
+            </p>
+            <p className="text-sm text-white/70 text-center mt-2 leading-relaxed">
+              Sowie im Münchner Umland: Dachau · Karlsfeld · Germering · Fürstenfeldbruck · Freising · Starnberg · Garching · Unterschleißheim · Oberschleißheim · Ottobrunn · Haar · Gräfelfing · Planegg · Pullach · Grünwald
+            </p>
+          </div>
           <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
             &copy; {new Date().getFullYear()} komplettsanierungen-haus-wohnung.de - Alle Rechte vorbehalten.
           </div>
