@@ -209,10 +209,10 @@ export default function Funnel() {
               <div className="space-y-8">
                 <div>
                   <h2 className="text-2xl lg:text-3xl font-bold mb-2">
-                    Welche Leistung benötigen Sie?
+                    Welche Sanierungsleistung benötigen Sie in München?
                   </h2>
                   <p className="text-muted-foreground mb-6">
-                    Wählen Sie die gewünschte Sanierungsleistung aus.
+                    Wählen Sie die gewünschte Leistung für Ihr Projekt in München und Umgebung.
                   </p>
                   <FormField
                     control={form.control}
@@ -258,10 +258,10 @@ export default function Funnel() {
 
                 <div>
                   <h2 className="text-2xl lg:text-3xl font-bold mb-2">
-                    Um welches Objekt handelt es sich?
+                    Welches Objekt in München möchten Sie sanieren?
                   </h2>
                   <p className="text-muted-foreground mb-6">
-                    Wählen Sie den Objekttyp aus.
+                    Wählen Sie den Objekttyp Ihrer Münchner Immobilie.
                   </p>
                   <FormField
                     control={form.control}
@@ -311,10 +311,10 @@ export default function Funnel() {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-2xl lg:text-3xl font-bold mb-2">
-                    Beschreiben Sie Ihr Projekt
+                    Beschreiben Sie Ihr Sanierungsprojekt in München
                   </h2>
                   <p className="text-muted-foreground mb-6">
-                    Je mehr Details Sie uns geben, desto besser können wir Sie beraten.
+                    Je mehr Details Sie uns geben, desto besser können wir Sie für Ihr Münchner Projekt beraten.
                   </p>
                 </div>
 
@@ -367,10 +367,10 @@ export default function Funnel() {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-2xl lg:text-3xl font-bold mb-2">
-                    Ihre Kontaktdaten
+                    Ihre Kontaktdaten für München
                   </h2>
                   <p className="text-muted-foreground mb-6">
-                    Wie können wir Sie für ein kostenloses Beratungsgespräch erreichen?
+                    Wie können wir Sie für ein kostenloses Beratungsgespräch in München erreichen?
                   </p>
                 </div>
 
