@@ -4,14 +4,13 @@ import { Building2 } from "lucide-react";
 
 const services = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
-  { id: "elektrosanierung", title: "Elektrik" },
   { id: "badsanierung", title: "Badezimmer" },
   { id: "fassade", title: "Fassade & Dämmung" },
   { id: "dach", title: "Dach" },
   { id: "solar", title: "Solar" },
   { id: "energetisch", title: "Energetische Sanierung" },
-  { id: "bodensanierung", title: "Boden" },
-  { id: "waende", title: "Wände" },
+  { id: "bodenwand", title: "Boden & Wand" },
+  { id: "fussbodenheizung", title: "Fußbodenheizung" },
 ];
 
 export default function Impressum() {
