@@ -1839,7 +1839,6 @@ export default function FunnelPage() {
           <div className="h-16 flex items-center justify-between gap-4">
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
-                <Building2 className="w-7 h-7 text-white" />
                 <div className="flex flex-col">
                   <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
                   <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
