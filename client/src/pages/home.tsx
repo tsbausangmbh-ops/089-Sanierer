@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import bathroomBeforeAfter from "@assets/generated_images/bathroom_before_after_renovation.png";
-import kshwLogo from "@assets/Logo_Weiß_neu_1765227759620.png";
+import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card } from "@/components/ui/card";
 import {
   Accordion,
@@ -455,7 +455,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src={kshwLogo} alt="KSHW München Logo" className="h-5 w-auto" />
+                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
                 <h4 className="font-bold">KSHW München</h4>
               </div>
               <p className="text-white/70 text-sm">
