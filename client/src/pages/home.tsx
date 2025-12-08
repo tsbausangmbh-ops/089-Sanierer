@@ -32,12 +32,23 @@ import {
   Building2
 } from "lucide-react";
 
-const services = [
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "kuechensanierung", title: "Küchensanierung" },
+  { id: "haussanierung", title: "Haussanierung" },
+  { id: "energetisch", title: "Energetische Sanierung" },
+];
+
+const allServices = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon },
   { id: "badsanierung", title: "Badsanierung", icon: Bath },
   { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed },
-  { id: "haussanierung", title: "Haussanierung", icon: HomeIcon },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame },
   { id: "energetisch", title: "Energetische Sanierung", icon: Flame },
+  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon },
 ];
 
 const reviews = [
@@ -138,7 +149,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden lg:flex items-center gap-1">
-              {services.map((service) => (
+              {headerServices.map((service) => (
                 <Link key={service.id} href={`/anfrage?service=${service.id}`}>
                   <Button variant="ghost" size="sm" className="text-sm">
                     {service.title}
@@ -244,7 +255,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {services.map((service) => (
+            {allServices.map((service) => (
               <Link key={service.id} href={`/anfrage?service=${service.id}`}>
                 <Card 
                   className="p-6 text-center cursor-pointer hover-elevate transition-transform hover:-translate-y-1 h-full"
@@ -411,7 +422,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">Leistungen</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                {services.map((service) => (
+                {headerServices.map((service) => (
                   <li key={service.id}>
                     <Link href={`/anfrage?service=${service.id}`} className="hover:text-white">
                       {service.title}
