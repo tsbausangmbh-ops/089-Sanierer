@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Building2, Mail } from "lucide-react";
+import { ArrowLeft, Building2, Mail, Phone } from "lucide-react";
 
 export default function Impressum() {
   return (
@@ -35,7 +35,8 @@ export default function Impressum() {
             <section>
               <h2 className="text-xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
               <p className="text-muted-foreground">
-                KSHW München<br />
+                KSHW München - Kurtas Bau<br />
+                Ali Kemal Kurt<br />
                 Zielstattstr. 9<br />
                 81379 München
               </p>
@@ -45,10 +46,22 @@ export default function Impressum() {
               <h2 className="text-xl font-bold mb-4">Kontakt</h2>
               <div className="space-y-2 text-muted-foreground">
                 <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Tel: 0152 122 740 43
+                </p>
+                <p className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   E-Mail: info@komplettsanierungen-haus-wohnung.de
                 </p>
               </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Umsatzsteuer-ID</h2>
+              <p className="text-muted-foreground">
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                DE356852204
+              </p>
             </section>
 
             <section>

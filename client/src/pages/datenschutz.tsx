@@ -46,9 +46,11 @@ export default function Datenschutz() {
               <h2 className="text-xl font-bold mb-4">2. Verantwortliche Stelle</h2>
               <p className="text-muted-foreground">
                 Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br /><br />
-                KSHW München<br />
+                KSHW München - Kurtas Bau<br />
+                Ali Kemal Kurt<br />
                 Zielstattstr. 9<br />
                 81379 München<br /><br />
+                Tel: 0152 122 740 43<br />
                 E-Mail: info@komplettsanierungen-haus-wohnung.de
               </p>
             </section>
