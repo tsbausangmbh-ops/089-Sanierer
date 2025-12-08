@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import bathroomBeforeAfter from "@assets/generated_images/bathroom_before_after_lightning_split.png";
+import bathroomBeforeAfter from "@assets/generated_images/bathroom_split_no_window_lightning.png";
 import { Card } from "@/components/ui/card";
 import {
   Accordion,
