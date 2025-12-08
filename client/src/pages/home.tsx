@@ -37,8 +37,8 @@ const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "badsanierung", title: "Badsanierung" },
   { id: "kuechensanierung", title: "Küchensanierung" },
-  { id: "haussanierung", title: "Haussanierung" },
-  { id: "energetisch", title: "Energetische Sanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
 ];
 
 const allServices = [
@@ -48,7 +48,7 @@ const allServices = [
   { id: "bodensanierung", title: "Bodensanierung", icon: Layers, description: "Neue Böden für München – Parkett, Fliesen oder Vinyl vom Profi." },
   { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, description: "Sichere Elektrik in München – Modernisierung nach aktuellen Standards." },
   { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, description: "Effiziente Heizsysteme für München – Wärmepumpe, Gas oder Fernwärme." },
-  { id: "energetisch", title: "Energetische Sanierung", icon: Flame, description: "Energieeffizient sanieren in München – KfW-Förderung nutzen." },
+  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Flame, description: "Energieeffizient sanieren in München – KfW-Förderung nutzen." },
   { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon, description: "Professionelle Dacharbeiten in München – Dämmung und Neueindeckung." },
 ];
 
