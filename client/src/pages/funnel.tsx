@@ -132,11 +132,12 @@ const bathroomTypes = [
   { id: "bad-und-wc", label: "Bad + Gäste-WC", icon: Bath, desc: "Beide Räume sanieren" },
 ];
 
-const kitchenTypes = [
-  { id: "familienküche", label: "Familienküche", icon: ChefHat, desc: "Täglich im Einsatz, viel Platz nötig" },
-  { id: "single-kueche", label: "Kompaktküche", icon: ChefHat, desc: "Kleine Küche, effizient geplant" },
-  { id: "wohnkueche", label: "Offene Wohnküche", icon: ChefHat, desc: "Kochen und Wohnen verbunden" },
-  { id: "profikueche", label: "Hobbyköche", icon: ChefHat, desc: "Hochwertige Ausstattung gewünscht" },
+const kitchenWorkTypes = [
+  { id: "komplett", label: "Komplette Sanierung", icon: ChefHat, desc: "Alle Arbeiten aus einer Hand" },
+  { id: "fliesen", label: "Fliesenverlegung", icon: Layers, desc: "Boden und/oder Wand neu fliesen" },
+  { id: "elektro", label: "Elektroinstallation", icon: Zap, desc: "Steckdosen, Anschlüsse, Beleuchtung" },
+  { id: "wasser", label: "Wasserleitungen", icon: Droplets, desc: "Spüle und Wasseranschlüsse" },
+  { id: "maler", label: "Malerarbeiten", icon: PaintBucket, desc: "Wände und Decke streichen" },
 ];
 
 const floorRoomTypes = [
