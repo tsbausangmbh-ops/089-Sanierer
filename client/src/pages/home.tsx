@@ -171,15 +171,15 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Komplettsanierung in München – <span className="text-primary">Haus & Wohnung</span> professionell sanieren
+                  Sanierungsprobleme in München? <span className="text-primary">Wir lösen sie.</span>
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung. Ob Badsanierung, Küchensanierung oder komplette Renovierung – wir bieten Ihnen professionelle Qualität zu fairen Preisen.
+                  Altes Bad? Kaputte Heizung? Schimmel an der Wand? Wir beheben jedes Sanierungsproblem in München – schnell, sauber und zu fairen Festpreisen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/anfrage">
                     <Button size="lg" className="text-lg w-full sm:w-auto" data-testid="button-hero-cta">
-                      Jetzt Anfrage starten
+                      Problem schildern
                       <ChevronRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
@@ -244,10 +244,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Unsere Leistungen in München
+              Welches Problem haben Sie?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Von der Badsanierung bis zur Komplettrenovierung - wir bieten Ihnen professionelle Sanierung aus einer Hand in München und Umgebung.
+              Sagen Sie uns, was Sie stört – wir kümmern uns um alles. Kein Handwerker-Chaos, keine Überraschungen.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">

@@ -40,12 +40,12 @@ export default function Confirmation() {
           </div>
           
           <h1 className="text-2xl lg:text-3xl font-bold mb-3" data-testid="text-confirmation-title">
-            Hervorragend – Ihre Anfrage ist bei uns eingegangen!
+            Wir haben Ihr Problem verstanden!
           </h1>
           
           <p className="text-lg text-muted-foreground mb-6">
-            Sie haben den ersten Schritt zu Ihrer Traumsanierung in München gemacht. 
-            Unser Expertenteam prüft jetzt Ihr Projekt.
+            Unser Expertenteam arbeitet bereits an Ihrer Lösung. 
+            Wir melden uns schnellstmöglich bei Ihnen.
           </p>
 
           <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">

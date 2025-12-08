@@ -45,14 +45,14 @@ import {
 } from "lucide-react";
 
 const services = [
-  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, benefit: "Alles aus einer Hand" },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath, benefit: "In 2-3 Wochen fertig" },
-  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, benefit: "Traumküche realisieren" },
-  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, benefit: "Parkett, Fliesen, Vinyl" },
-  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, benefit: "Sicher nach VDE" },
-  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, benefit: "Energiekosten senken" },
-  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Leaf, benefit: "KfW-Förderung nutzen" },
-  { id: "dachsanierung", title: "Dachsanierung", icon: Hammer, benefit: "Dämmung & Eindeckung" },
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, benefit: "Schluss mit Baustellen-Chaos" },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath, benefit: "Endlich ein neues Bad" },
+  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, benefit: "Kochen ohne Frust" },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, benefit: "Weg mit alten Böden" },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, benefit: "Keine Angst vor Kurzschluss" },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, benefit: "Nie wieder frieren" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Leaf, benefit: "Heizkosten endlich senken" },
+  { id: "dachsanierung", title: "Dachsanierung", icon: Hammer, benefit: "Dicht und warm" },
 ];
 
 const propertyTypes = [
@@ -70,10 +70,10 @@ const trustBadges = [
 ];
 
 const nlpBenefits = [
-  "Kostenlose Beratung vor Ort in München",
-  "Unverbindliches Angebot innerhalb 48h",
-  "Festpreisgarantie ohne versteckte Kosten",
-  "Persönlicher Ansprechpartner für Ihr Projekt",
+  "Kein Stress mit Handwerkersuche",
+  "Keine Überraschungen bei den Kosten",
+  "Keine ewigen Wartezeiten auf Termine",
+  "Ein Ansprechpartner für alles",
 ];
 
 const formSchema = z.object({
@@ -230,16 +230,16 @@ export default function Funnel() {
                   <div className="space-y-6">
                     <div>
                       <h1 className="text-2xl lg:text-3xl font-bold mb-2">
-                        Ihre Sanierung in München starten
+                        Welches Problem sollen wir für Sie lösen?
                       </h1>
                       <p className="text-muted-foreground">
-                        Wählen Sie Ihre gewünschte Leistung – wir melden uns innerhalb von 24 Stunden bei Ihnen.
+                        Sagen Sie uns, was Sie stört – wir kümmern uns um den Rest.
                       </p>
                     </div>
 
                     <div>
                       <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        Was möchten Sie sanieren lassen?
+                        Was bereitet Ihnen Kopfschmerzen?
                         <Badge variant="secondary" className="text-xs">Schritt 1</Badge>
                       </h2>
                       <FormField
@@ -289,7 +289,7 @@ export default function Funnel() {
 
                     <div>
                       <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                        Um welches Objekt handelt es sich?
+                        Wo ist das Problem?
                         <Badge variant="secondary" className="text-xs">Schritt 2</Badge>
                       </h2>
                       <FormField
@@ -343,10 +343,10 @@ export default function Funnel() {
                   <div className="space-y-6">
                     <div>
                       <h1 className="text-2xl lg:text-3xl font-bold mb-2">
-                        Erzählen Sie uns von Ihrem Projekt
+                        Was genau stört Sie?
                       </h1>
                       <p className="text-muted-foreground">
-                        Je mehr Details Sie uns geben, desto genauer können wir Ihr Angebot kalkulieren.
+                        Beschreiben Sie Ihr Problem – wir finden die Lösung.
                       </p>
                     </div>
 
@@ -416,10 +416,10 @@ export default function Funnel() {
                   <div className="space-y-6">
                     <div>
                       <h1 className="text-2xl lg:text-3xl font-bold mb-2">
-                        Fast geschafft – Ihr kostenloses Angebot wartet!
+                        Wir lösen Ihr Problem – wie erreichen wir Sie?
                       </h1>
                       <p className="text-muted-foreground">
-                        Tragen Sie Ihre Kontaktdaten ein und wir melden uns schnellstmöglich bei Ihnen.
+                        Noch heute erhalten Sie einen Rückruf von unserem Experten.
                       </p>
                     </div>
 
@@ -606,7 +606,7 @@ export default function Funnel() {
               <Card className="p-4">
                 <h3 className="font-semibold mb-3 flex items-center gap-2">
                   <Star className="w-4 h-4 text-amber-500" />
-                  Das erwartet Sie
+                  Ihre Vorteile mit uns
                 </h3>
                 <ul className="space-y-2">
                   {nlpBenefits.map((benefit, index) => (
