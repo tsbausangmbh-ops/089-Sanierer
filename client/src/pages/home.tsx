@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import bathroomBeforeAfter from "@assets/generated_images/bathroom_before_after_renovation.png";
+import kshwLogo from "@assets/favicon-Klein_1765227986049.png";
 import { Card } from "@/components/ui/card";
 import {
   Accordion,
@@ -136,11 +137,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Building2 className="w-7 h-7 text-white" />
-              <div className="flex flex-col">
-                <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
-                <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
-              </div>
+              <img src={kshwLogo} alt="KSHW München Logo" className="h-10 w-auto" />
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
@@ -453,11 +450,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Building2 className="w-8 h-8 text-white" />
-                <div className="flex flex-col">
-                  <span className="font-bold text-xl leading-tight">KSHW München</span>
-                  <span className="text-sm text-white/70 leading-tight">Komplettsanierungen Haus & Wohnung</span>
-                </div>
+                <img src={kshwLogo} alt="KSHW München Logo" className="h-12 w-auto" />
               </div>
               <p className="text-white/70 text-sm mt-2">
                 Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
