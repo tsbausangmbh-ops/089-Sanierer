@@ -211,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-12 bg-card border-t">
+      <footer className="py-12 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -219,18 +219,18 @@ export default function Home() {
                 <HomeIcon className="w-6 h-6 text-primary" />
                 <span className="font-bold text-lg">KSHW München</span>
               </div>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-white/70 text-sm">
                 Ihr Partner für Komplettsanierungen in München und Umgebung.
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Kontakt</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <a href="tel:+4989123456789" className="flex items-center gap-2 hover:text-foreground">
+              <div className="space-y-2 text-sm text-white/70">
+                <a href="tel:+4989123456789" className="flex items-center gap-2 hover:text-white">
                   <Phone className="w-4 h-4" />
                   089 123 456 789
                 </a>
-                <a href="mailto:info@kshw-muenchen.de" className="flex items-center gap-2 hover:text-foreground">
+                <a href="mailto:info@kshw-muenchen.de" className="flex items-center gap-2 hover:text-white">
                   <Mail className="w-4 h-4" />
                   info@kshw-muenchen.de
                 </a>
@@ -242,10 +242,10 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-4">Leistungen</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-sm text-white/70">
                 {services.slice(0, 4).map((service) => (
                   <li key={service.id}>
-                    <Link href={`/anfrage?service=${service.id}`} className="hover:text-foreground">
+                    <Link href={`/anfrage?service=${service.id}`} className="hover:text-white">
                       {service.title}
                     </Link>
                   </li>
@@ -253,7 +253,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
+          <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/70">
             &copy; {new Date().getFullYear()} KSHW München. Alle Rechte vorbehalten.
           </div>
         </div>
