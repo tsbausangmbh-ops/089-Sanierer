@@ -498,12 +498,6 @@ export default function Home() {
                 <li><Link href="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
                 <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
               </ul>
-              <h4 className="font-bold mb-2 mt-6">Unternehmen</h4>
-              <p className="text-sm text-white/70">
-                KSHW München<br />
-                Ali Kemal Kurt<br />
-                USt-IdNr: DE356852204
-              </p>
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
