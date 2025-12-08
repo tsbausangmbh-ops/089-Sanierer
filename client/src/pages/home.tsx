@@ -454,9 +454,6 @@ export default function Home() {
               <p className="text-white/70 text-sm mt-2">
                 Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
               </p>
-              <p className="text-white/60 text-xs mt-3">
-                Einsatzgebiet: München, Allach, Untermenzing, Pasing, Obermenzing, Aubing, Moosach, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg
-              </p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Kontakt</h4>
