@@ -51,13 +51,6 @@ const allServices = [
   { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon },
 ];
 
-const reviews = [
-  { name: "Michael S.", text: "Hervorragende Arbeit! Das Team war pünktlich, professionell und das Ergebnis übertrifft unsere Erwartungen.", rating: 5 },
-  { name: "Sandra K.", text: "Unsere Badsanierung wurde termingerecht und im Budget abgeschlossen. Sehr zufrieden!", rating: 5 },
-  { name: "Thomas M.", text: "Kompetente Beratung und saubere Ausführung. Kann ich nur weiterempfehlen.", rating: 5 },
-  { name: "Anna B.", text: "Super Service von der ersten Anfrage bis zur Fertigstellung. Top Qualität!", rating: 5 },
-];
-
 const processSteps = [
   {
     number: 1,
@@ -232,24 +225,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 border-b">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
-            {reviews.slice(0, 4).map((review, index) => (
-              <div key={index} className="flex items-center gap-3 text-sm">
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <span className="text-muted-foreground">"{review.text.substring(0, 40)}..."</span>
-                <span className="font-medium">- {review.name}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
