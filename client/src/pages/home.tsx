@@ -167,7 +167,7 @@ export default function Home() {
 
       <section className="relative pt-16">
         <div className="bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 lg:py-14">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -240,9 +240,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Unsere Leistungen in München
             </h2>
@@ -269,9 +269,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-card">
+      <section className="py-10 lg:py-14 bg-card">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Und so funktioniert es
             </h2>
@@ -303,9 +303,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Warum KSHW München für Ihre Sanierung?
             </h2>
@@ -324,9 +324,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
+      <section className="py-10 lg:py-14 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Unsere Erfolge sind Ihre Vorteile
             </h2>
@@ -342,9 +342,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="py-10 lg:py-14">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Häufig gestellte Fragen zur Sanierung in München
             </h2>
@@ -352,13 +352,13 @@ export default function Home() {
               Hier finden Sie Antworten auf die wichtigsten Fragen zur Haus- und Wohnungssanierung in München.
             </p>
           </div>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-1">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left font-semibold">
+              <AccordionItem key={index} value={`item-${index}`} className="border-b-0 bg-card rounded-md px-4">
+                <AccordionTrigger className="text-left font-semibold py-3">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground pb-3">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -367,7 +367,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-card">
+      <section className="py-10 lg:py-14 bg-card">
         <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Bereit für Ihre Sanierung in München?
@@ -384,7 +384,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="py-10 lg:py-14">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">
             Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker
