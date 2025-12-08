@@ -157,10 +157,7 @@ export default function FunnelPage() {
 
   const createLeadMutation = useMutation({
     mutationFn: async (data: typeof formData) => {
-      return apiRequest("/api/leads", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
+      return apiRequest("POST", "/api/leads", data);
     },
     onSuccess: () => {
       setLocation("/bestaetigung");
