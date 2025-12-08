@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Building2, Mail, Phone } from "lucide-react";
+import { ArrowLeft, Building2 } from "lucide-react";
 
 export default function Impressum() {
   return (
@@ -45,18 +45,10 @@ export default function Impressum() {
                 81379 München
               </p>
               <p className="text-muted-foreground mt-4">
-                USt-IdNr: DE356852204
+                USt-IdNr: DE356852204<br />
+                Email: info@komplettsanierungen-haus-wohnung.de<br />
+                Tel: 0152 122 740 43
               </p>
-              <div className="space-y-2 text-muted-foreground mt-4">
-                <p className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  Email: info@komplettsanierungen-haus-wohnung.de
-                </p>
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Tel: 0152 122 740 43
-                </p>
-              </div>
             </section>
 
             <section>
