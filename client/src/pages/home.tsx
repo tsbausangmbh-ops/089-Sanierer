@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import bathroomBeforeAfter from "@assets/generated_images/bathroom_before_after_renovation.png";
-import kshwLogo from "@assets/KSHW_Muenchen_Klein_weiß_1765227802584.png";
+import kshwLogo from "@assets/Logo_Weiß_neu_1765227759620.png";
 import { Card } from "@/components/ui/card";
 import {
   Accordion,
