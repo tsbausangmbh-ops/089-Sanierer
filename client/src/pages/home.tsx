@@ -219,17 +219,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 border-b">
+      <section className="py-8 bg-primary/5 border-y border-primary/10">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 text-sm text-muted-foreground">
-            <span className="font-medium text-foreground">Unsere Markenpartner:</span>
-            <span>Villeroy & Boch</span>
-            <span>Hansgrohe</span>
-            <span>Dornbracht</span>
-            <span>Gira</span>
-            <span>Geberit</span>
-            <span>Duravit</span>
-            <span>Ideal Standard</span>
+          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 text-sm">
+            <span className="font-medium text-muted-foreground">Unsere Markenpartner:</span>
+            <span className="text-muted-foreground/70">Villeroy & Boch</span>
+            <span className="text-muted-foreground/70">Hansgrohe</span>
+            <span className="text-muted-foreground/70">Dornbracht</span>
+            <span className="text-muted-foreground/70">Gira</span>
+            <span className="text-muted-foreground/70">Geberit</span>
+            <span className="text-muted-foreground/70">Duravit</span>
+            <span className="text-muted-foreground/70">Ideal Standard</span>
           </div>
         </div>
       </section>
