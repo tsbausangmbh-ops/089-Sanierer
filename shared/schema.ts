@@ -47,6 +47,8 @@ export const serviceTypes = [
   "bodensanierung",
   "elektrosanierung",
   "heizungssanierung",
+  "energetische-sanierung",
+  "dachsanierung",
 ] as const;
 
 export const propertyTypes = [
