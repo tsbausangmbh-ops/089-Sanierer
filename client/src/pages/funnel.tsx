@@ -2062,7 +2062,7 @@ export default function FunnelPage() {
             </p>
           </div>
           <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
-            &copy; {new Date().getFullYear()} komplettsanierungen-haus-wohnung.de - Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} <a href="https://komplettsanierungen-haus-wohnung.de" className="hover:text-white underline">komplettsanierungen-haus-wohnung.de</a> - Alle Rechte vorbehalten.
           </div>
         </div>
       </footer>
