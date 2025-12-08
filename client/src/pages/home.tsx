@@ -136,9 +136,15 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,85%,10%)] text-white border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <img src={kshwLogo} alt="KSHW München Logo" className="h-10 w-auto" />
-            </div>
+            <Link href="/">
+              <div className="flex items-center gap-2 cursor-pointer">
+                <img src={kshwLogo} alt="KSHW München Logo" className="h-8 w-auto" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
+                  <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                </div>
+              </div>
+            </Link>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
                 <Link key={service.id} href={`/anfrage?service=${service.id}`}>
