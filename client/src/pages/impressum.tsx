@@ -1,6 +1,18 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Building2 } from "lucide-react";
+import { Building2 } from "lucide-react";
+
+const services = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "elektrosanierung", title: "Elektrik" },
+  { id: "badsanierung", title: "Badezimmer" },
+  { id: "fassade", title: "Fassade & Dämmung" },
+  { id: "dach", title: "Dach" },
+  { id: "solar", title: "Solar" },
+  { id: "energetisch", title: "Energetische Sanierung" },
+  { id: "bodensanierung", title: "Boden" },
+  { id: "waende", title: "Wände" },
+];
 
 export default function Impressum() {
   return (
@@ -17,10 +29,18 @@ export default function Impressum() {
                 </div>
               </div>
             </Link>
-            <Link href="/">
-              <Button variant="ghost" data-testid="button-back-home">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Zurück zur Startseite
+            <div className="hidden lg:flex items-center gap-1">
+              {services.map((service) => (
+                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                  <Button variant="ghost" size="sm" className="text-sm">
+                    {service.title}
+                  </Button>
+                </Link>
+              ))}
+            </div>
+            <Link href="/anfrage">
+              <Button data-testid="button-header-cta">
+                Kostenlose Anfrage
               </Button>
             </Link>
           </div>

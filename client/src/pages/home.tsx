@@ -34,11 +34,14 @@ import {
 
 const services = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon },
-  { id: "badsanierung", title: "Badezimmer", icon: Bath },
-  { id: "kuechensanierung", title: "Küche", icon: UtensilsCrossed },
-  { id: "bodensanierung", title: "Boden", icon: Layers },
   { id: "elektrosanierung", title: "Elektrik", icon: Zap },
-  { id: "heizungssanierung", title: "Heizung", icon: Flame },
+  { id: "badsanierung", title: "Badezimmer", icon: Bath },
+  { id: "fassade", title: "Fassade & Dämmung", icon: Shield },
+  { id: "dach", title: "Dach", icon: HomeIcon },
+  { id: "solar", title: "Solar", icon: Zap },
+  { id: "energetisch", title: "Energetische Sanierung", icon: Flame },
+  { id: "bodensanierung", title: "Boden", icon: Layers },
+  { id: "waende", title: "Wände", icon: Layers },
 ];
 
 const reviews = [
