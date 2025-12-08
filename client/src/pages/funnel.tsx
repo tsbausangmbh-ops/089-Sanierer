@@ -147,6 +147,14 @@ const floorRoomTypes = [
   { id: "komplett-wohnung", label: "Komplette Wohnung", icon: Layers, desc: "Alle Räume neu gestalten" },
 ];
 
+const roofPropertyTypes = [
+  { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home, desc: "Freistehendes Haus" },
+  { id: "doppelhaushaelfte", label: "Doppelhaushälfte", icon: Home, desc: "Reihen- oder Doppelhaus" },
+  { id: "reihenhaus", label: "Reihenhaus", icon: Home, desc: "Haus in einer Reihe" },
+  { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2, desc: "Mehrere Wohneinheiten" },
+  { id: "gewerbe", label: "Gewerbegebäude", icon: Building2, desc: "Büro, Halle, Werkstatt" },
+];
+
 type ServiceConfig = {
   scopeTitle: string;
   scopeSubtitle: string;
@@ -682,6 +690,35 @@ export default function FunnelPage() {
         <div className="space-y-6">
           <div className="grid grid-cols-2 gap-4">
             {floorRoomTypes.map((type) => {
+              const Icon = type.icon;
+              const isSelected = formData.propertyType === type.id;
+              return (
+                <button
+                  key={type.id}
+                  type="button"
+                  onClick={() => updateFormData("propertyType", type.id)}
+                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                    isSelected ? "border-primary bg-primary/5" : "border-border"
+                  }`}
+                  data-testid={`button-property-${type.id}`}
+                >
+                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold">{type.label}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+    
+    if (service === "dachsanierung") {
+      return (
+        <div className="space-y-6">
+          <div className="grid grid-cols-2 gap-4">
+            {roofPropertyTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
               return (
