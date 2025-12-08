@@ -1,103 +1,115 @@
-# Design Guidelines: 089Dach.de Funnel-Landingpage
+# Design Guidelines: KSHW München Renovation Funnel
 
 ## Design Approach
-**Reference-Based with Service Industry Focus**: Drawing from high-converting service funnels like Handy, HomeAdvisor, and German Handwerker platforms. Professional, trust-building aesthetic that balances urgency (for Notdienst) with reliability.
+**Reference-Based**: Drawing from premium renovation services like Sweeten, Houzz Pro, and German Handwerker platforms. Professional craftsmanship aesthetic balancing warmth with technical expertise. Think Airbnb's trust-building + HomeAdvisor's service clarity + German precision.
 
 ## Typography System
-- **Primary Font**: Inter or Open Sans via Google Fonts
-- **Headings**: Bold (700), größere Größen für Dringlichkeit
-  - H1: text-4xl lg:text-5xl
-  - H2: text-3xl lg:text-4xl
+- **Primary**: Inter via Google Fonts
+- **Headings**: Bold (700)
+  - H1: text-4xl lg:text-6xl
+  - H2: text-3xl lg:text-4xl  
   - H3: text-xl lg:text-2xl
-- **Body**: Regular (400), Medium (500) für Betonung
+- **Body**: Regular (400), Medium (500) for emphasis
   - Base: text-base lg:text-lg
   - Small: text-sm
-- **CTA Buttons**: Semibold (600), text-lg
+- **CTAs**: Semibold (600), text-lg
 
-## Layout & Spacing System
-**Tailwind Units**: Primär 4, 6, 8, 12, 16, 24 für konsistente Abstände
-- Container: max-w-6xl mx-auto px-4
-- Section Padding: py-12 md:py-16
-- Card Spacing: p-6 md:p-8
+## Layout & Spacing
+**Tailwind Units**: 4, 6, 8, 12, 16, 20, 24
+- Container: max-w-7xl mx-auto px-4 lg:px-8
+- Section Padding: py-16 lg:py-24
+- Card Spacing: p-6 lg:p-8
 - Form Elements: gap-6
 
 ## Core Components
 
-### 1. Hero Section mit Vertrauenselementen
-- Kein großes Hero-Bild - fokussiert auf sofortigen Funnel-Einstieg
-- Kompakte Höhe (60vh max), prominente Service-Überschrift
-- Trust Badges: "24h Notdienst", "München & Umgebung", "15+ Jahre Erfahrung"
-- Sofortige Sichtbarkeit der drei Service-Kategorien
+### 1. Hero Section with Image
+**Layout**: Full-width, 75vh height on desktop
+**Image**: Professional photo showing a beautifully renovated modern kitchen or bathroom - bright, clean, high-quality craftsmanship visible. Natural lighting, warm wood tones, contemporary fixtures. Image should convey "after" transformation quality.
+**Content Overlay**: Centered, dark gradient overlay (bottom 60%) for text legibility
+- Headline: "Komplette Renovierung in München"
+- Subheadline: "Vom Bad bis zur Heizung - Alles aus Meisterhand"
+- Primary CTA Button with blurred background (backdrop-blur-md bg-white/20)
+- Trust indicators below: "20+ Jahre Erfahrung | 500+ Projekte | Meisterbetrieb"
 
-### 2. Service-Auswahl Cards (Funnel Schritt 1)
-- Grid: grid-cols-1 md:grid-cols-3 gap-6
-- Große, klickbare Karten mit Icons (z.B. Heroicons: Wrench, ExclamationTriangle, Phone)
-- **Karten-Design**:
-  - Border mit Hover-Elevation
-  - Icon-Container oben: w-16 h-16
-  - Service-Name: text-2xl font-bold
-  - Kurze Beschreibung: 2-3 Zeilen
-  - Subtiler Pfeil/Chevron als visueller CTA
-- Aktiv-Status: Border-Highlight für gewählten Service
+### 2. Service Selection Cards (Funnel Step 1)
+**Grid**: grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6, below hero
+**Each Card**:
+- Aspect ratio container with service-specific image (bathroom, kitchen, flooring close-ups)
+- Dark gradient overlay on image
+- Icon overlay (Heroicons: Home, Wrench, Bolt, Fire) - w-12 h-12
+- Service name: text-2xl font-bold
+- 2-line description
+- Hover: Lift effect (shadow-lg, scale-102)
+- Selected state: Border highlight
 
-### 3. Progressiver Formular-Funnel
-**Schritt-Indikator** (oben):
-- Horizontale Schrittanzeige: flex items-center justify-between
-- Nummerierte Kreise mit Verbindungslinien
-- Aktiv/Abgeschlossen/Inaktiv States deutlich unterscheidbar
+**Services**: Badsanierung | Küchen | Böden | Elektrik | Heizung | Komplettsanierung
 
-**Formular-Struktur** (mehrstufig):
-- **Schritt 1**: Service-Auswahl (visual cards)
-- **Schritt 2**: Projekt-Details (Textarea, optional Checkboxes für Dringlichkeit)
-- **Schritt 3**: Kontaktdaten (Name, Telefon, E-Mail, PLZ/Adresse)
+### 3. Multi-Step Form Funnel
+**Step Indicator**: Horizontal progress bar with 3 steps
+- Numbers in circles, connecting lines
+- Active/Complete/Inactive states with smooth transitions
 
-**Form Styling**:
-- Input Fields: Großzügige Höhe (h-12), rounded-lg, klarer Border
-- Labels: text-sm font-medium, mb-2
-- Required Indicator: Roter Asterisk
-- Error States: Rote Border + Fehlermeldung unter Input
-- Button Navigation: "Zurück" (secondary) + "Weiter/Absenden" (primary)
+**Form Steps**:
+- **Step 1**: Service selection (visual cards above)
+- **Step 2**: Project scope (Checkboxes for rooms, textarea for details, timeline selector)
+- **Step 3**: Contact (Name, Phone, Email, Address/PLZ, preferred contact time)
 
-### 4. Notdienst-Badge
-- Fixed Position: top-4 right-4 (Desktop) oder full-width Banner (Mobile)
-- Pulsierender Indikator für 24h-Verfügbarkeit
-- Telefonnummer prominent mit Click-to-Call Link
+**Styling**:
+- Inputs: h-12, rounded-lg, border
+- Checkboxes: Large (w-6 h-6), custom styling
+- Textareas: min-h-32
+- Buttons: "Zurück" (ghost) + "Weiter" (solid primary)
+- Validation: Inline error messages
 
-### 5. Trust-Elemente
-Unterhalb Formular:
-- Kleine Icon-Grid: "Versichert", "Lokaler Meisterbetrieb", "Schnelle Reaktion"
-- Icons: w-8 h-8, text unter Icons
-- Layout: flex items-center gap-4, zentriert
+### 4. Trust Section (Between Funnel Steps)
+**2-Column Layout** (lg:grid-cols-2):
+- **Left**: Customer testimonial card with star rating, quote, name/project type
+- **Right**: Grid of trust badges (2x2)
+  - Icons (Heroicons): Shield (Versichert), Star (Meisterbetrieb), Clock (Pünktlich), Users (Erfahrung)
+  - Label under each icon
 
-### 6. Bestätigungsseite
-Nach Absenden:
-- Großes Bestätigungs-Icon (Checkmark Circle)
-- "Vielen Dank"-Headline
-- Nächste Schritte: nummerierte Liste
-- Erwartete Reaktionszeit
-- Kontaktinformationen als Fallback
+### 5. Process Preview
+**Below form, before footer**:
+3-column grid showing "Ihr Weg zur Traumrenovierung"
+- Step cards numbered 1-3
+- Icons + short descriptions
+- Timeline: "Beratung → Planung → Umsetzung"
 
-## Animations & Interactions
-**Minimal, zweckorientiert**:
-- Card Hover: Leichter Shadow-Lift (shadow-md → shadow-lg)
-- Form Step Transitions: Sanftes Fade (100ms)
-- Button States: Standard Hover-Aufhellung
-- **Keine** ablenkenden Scroll-Animationen
+### 6. Confirmation Page
+**Center-aligned**:
+- Large success icon (CheckCircle) w-20 h-20
+- "Anfrage erhalten!" headline
+- Numbered next steps list
+- Expected response time highlighted
+- Contact fallback (phone, email)
+- Secondary CTA: "Weitere Projekte ansehen"
 
 ## Images
-**Kein großes Hero-Image** - Funnel-Fokus über visuelle Dramaturgie
-**Service-Icons**: Heroicons (Tool, ExclamationCircle, Phone) - CDN integration
-**Trust Badges**: Simple Icon-Grafiken, keine Fotos nötig für maximale Conversion-Fokussierung
+**Hero**: High-quality renovation "after" photo - modern kitchen or bathroom, professional photography, warm natural light
+**Service Cards**: 6 specific images showing each service category - close-up detail shots emphasizing craftsmanship quality
+**Trust Section**: Single customer testimonial photo (homeowner in renovated space) - authentic, professional but approachable
+**All images**: WebP format, lazy loading, proper aspect ratios
 
-## Responsive Breakpoints
-- Mobile First: Stack alles vertikal
-- md (768px): 2-Spalten für Service-Cards wenn platzsparend
-- lg (1024px): 3-Spalten Service-Grid, horizontale Form-Layouts
+## Animations
+- Card hover lifts: translate-y-1
+- Form step transitions: 200ms fade
+- Button states: Standard brightness/scale changes
+- No scroll-triggered animations
+
+## Icons
+**Heroicons via CDN**: Home, Wrench, Bolt, Fire, CheckCircle, Shield, Star, Clock, Users, ChevronRight
+
+## Responsive Strategy
+- Mobile: Single column, stacked form, compact hero (50vh)
+- Tablet (md): 2-column service grid
+- Desktop (lg): 3-column service grid, side-by-side form sections where logical
 
 ## Accessibility
-- Aria-Labels für Formular-Schritte
-- Keyboard-Navigation zwischen Schritten
-- Focus States: Ring-2 für alle interaktiven Elemente
-- Error-Announcements für Screen Reader
+- All form inputs: Labels + aria-required
+- Step navigation: Aria-current for active step
+- Focus rings: ring-2 on all interactive elements
+- Alt text for all images describing renovation quality
+- Color contrast: WCAG AA minimum
 
-**Kernprinzip**: Reibungslose Conversion durch klare Hierarchie, minimale Ablenkung, und vertrauensbildende Elemente. Deutsche Direktheit mit professioneller Handwerker-Ästhetik.
+**Core Philosophy**: Premium craftsmanship aesthetic with German precision. Warm, inviting imagery balanced with clear, efficient funnel mechanics. Every element builds trust while reducing friction to conversion.

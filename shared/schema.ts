@@ -20,6 +20,7 @@ export type User = typeof users.$inferSelect;
 export const leads = pgTable("leads", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   service: text("service").notNull(),
+  propertyType: text("property_type").notNull().default("wohnung"),
   description: text("description").notNull(),
   isUrgent: boolean("is_urgent").default(false),
   name: text("name").notNull(),
@@ -37,3 +38,22 @@ export const insertLeadSchema = createInsertSchema(leads).omit({
 
 export type InsertLead = z.infer<typeof insertLeadSchema>;
 export type Lead = typeof leads.$inferSelect;
+
+export const serviceTypes = [
+  "komplettsanierung",
+  "badsanierung",
+  "kuechensanierung", 
+  "bodensanierung",
+  "elektrosanierung",
+  "heizungssanierung",
+] as const;
+
+export const propertyTypes = [
+  "wohnung",
+  "einfamilienhaus",
+  "mehrfamilienhaus",
+  "gewerbe",
+] as const;
+
+export type ServiceType = typeof serviceTypes[number];
+export type PropertyType = typeof propertyTypes[number];
