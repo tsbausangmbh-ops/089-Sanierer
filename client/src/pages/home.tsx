@@ -422,8 +422,12 @@ export default function Home() {
               </div>
             </div>
 
+            <h3 className="text-lg font-bold text-foreground mt-6 mb-2">Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker</h3>
             <p className="text-sm">
-              Wir sanieren in <strong>München</strong> und Umgebung: Pasing, Allach, Schwabing, Sendling, Bogenhausen, Haidhausen, Giesing, Trudering, Neuhausen, Laim, Nymphenburg, Moosach, Feldmoching, Solln, Hadern, Perlach. Auch im Umland: Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Ottobrunn, Grünwald.
+              München Pasing · Allach · Untermenzing · Obermenzing · Aubing · Moosach · Feldmoching · Schwabing · Sendling · Bogenhausen · Haidhausen · Neuhausen · Laim · Nymphenburg · Giesing · Berg am Laim · Trudering · Riem · Milbertshofen · Freimann · Solln · Großhadern · Hadern · Fürstenried · Forstenried · Thalkirchen · Obersendling · Ramersdorf · Perlach · Neuperlach
+            </p>
+            <p className="text-sm">
+              Sowie im Münchner Umland: Dachau · Karlsfeld · Germering · Fürstenfeldbruck · Freising · Starnberg · Garching · Unterschleißheim · Oberschleißheim · Ottobrunn · Haar · Gräfelfing · Planegg · Pullach · Grünwald
             </p>
           </div>
 
