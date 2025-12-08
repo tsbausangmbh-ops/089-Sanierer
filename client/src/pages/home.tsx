@@ -124,7 +124,7 @@ const faqs = [
   },
   {
     question: "In welchen Stadtteilen und Umland von München sind Sie tätig?",
-    answer: "Wir sind in ganz München tätig – von Schwabing über Bogenhausen bis Sendling und Pasing. Auch im Münchner Umland wie Starnberg, Freising, Dachau, Fürstenfeldbruck und Erding sind wir für Sie da.",
+    answer: "Wir sind in ganz München tätig – Allach, Untermenzing, Pasing, Obermenzing, Aubing, Moosach, Feldmoching und allen anderen Stadtteilen. Auch im Münchner Umland wie Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising und Starnberg sind wir für Sie da.",
   },
 ];
 
@@ -168,7 +168,7 @@ export default function Home() {
                   Komplettsanierung in München – <span className="text-primary">Haus & Wohnung</span> professionell sanieren
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Sie möchten Ihr Bad modernisieren, die Küche erneuern oder eine Komplettsanierung in München durchführen? Mit unserem Service erhalten Sie schnell eine präzise Kostenschätzung und qualifizierte Handwerker aus München und Umgebung.
+                  Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung. Meisterbetrieb mit über 15 Jahren Erfahrung. Ob Badsanierung, Küchensanierung oder komplette Renovierung – wir bieten Ihnen professionelle Qualität zu fairen Preisen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/anfrage">
@@ -177,10 +177,10 @@ export default function Home() {
                       <ChevronRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
-                  <a href="tel:+4989123456789">
+                  <a href="tel:+4915212274043">
                     <Button size="lg" variant="outline" className="text-lg w-full sm:w-auto">
                       <Phone className="w-5 h-5 mr-2" />
-                      089 123 456 789
+                      0152 122 740 43
                     </Button>
                   </a>
                 </div>
@@ -417,7 +417,7 @@ export default function Home() {
 
             <h3 className="text-xl font-bold text-foreground mt-8 mb-4">KSHW München – Ihr Partner für Komplettsanierungen</h3>
             <p>
-              Als Ihr Sanierungspartner in München bieten wir Ihnen alles aus einer Hand: Von der Badsanierung in Neuhausen über die Küchensanierung in Laim bis zur Komplettsanierung in Trudering. Wir sind in ganz München und Umgebung für Sie da – in Starnberg, Freising, Dachau, Fürstenfeldbruck und dem gesamten Münchner Umland.
+              Als Ihr Sanierungspartner in München bieten wir Ihnen alles aus einer Hand: Von der Badsanierung in Pasing über die Küchensanierung in Allach bis zur Komplettsanierung in Obermenzing. Wir sind in ganz München und Umgebung für Sie da – in Untermenzing, Aubing, Moosach, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising und Starnberg.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Detaillierte Kostenschätzung:</strong> Sie erhalten eine realistische Berechnung der Sanierungskosten für Ihre Münchner Immobilie.</li>
@@ -447,28 +447,35 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <Building2 className="w-8 h-8 text-white" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-xl leading-tight">Komplettsanierungen</span>
-                  <span className="text-sm text-white/70 leading-tight">Haus & Wohnung</span>
+                  <span className="font-bold text-xl leading-tight">KSHW München</span>
+                  <span className="text-sm text-white/70 leading-tight">Komplettsanierungen Haus & Wohnung</span>
                 </div>
               </div>
               <p className="text-white/70 text-sm mt-2">
-                Ihr Partner für professionelle Sanierungen in München und Umgebung.
+                Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung. Meisterbetrieb mit über 15 Jahren Erfahrung.
+              </p>
+              <p className="text-white/60 text-xs mt-3">
+                Einsatzgebiet: München, Allach, Untermenzing, Pasing, Obermenzing, Aubing, Moosach, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Kontakt</h4>
               <div className="space-y-2 text-sm text-white/70">
-                <a href="tel:+4989123456789" className="flex items-center gap-2 hover:text-white">
+                <a href="tel:+4915212274043" className="flex items-center gap-2 hover:text-white">
                   <Phone className="w-4 h-4" />
-                  089 123 456 789
+                  0152 122 740 43
                 </a>
                 <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center gap-2 hover:text-white">
                   <Mail className="w-4 h-4" />
                   info@komplettsanierungen-haus-wohnung.de
                 </a>
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>Zielstattstr. 9<br />81379 München</span>
+                </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  München und Umgebung
+                  <Clock className="w-4 h-4" />
+                  Mo-Fr: 8:00-17:00 Uhr
                 </div>
               </div>
             </div>
@@ -491,6 +498,12 @@ export default function Home() {
                 <li><Link href="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
                 <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
               </ul>
+              <h4 className="font-bold mb-2 mt-6">Unternehmen</h4>
+              <p className="text-sm text-white/70">
+                KSHW München<br />
+                Ali Kemal Kurt<br />
+                USt-IdNr: DE356852204
+              </p>
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">

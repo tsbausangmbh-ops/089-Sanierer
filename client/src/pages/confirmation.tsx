@@ -83,13 +83,13 @@ export default function Confirmation() {
               Erwartete Antwortzeit: <span className="text-primary font-bold">Innerhalb von 24 Stunden</span>
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm text-muted-foreground">
-              <a href="tel:+4989123456789" className="flex items-center justify-center gap-2 hover:text-foreground">
+              <a href="tel:+4915212274043" className="flex items-center justify-center gap-2 hover:text-foreground">
                 <Phone className="w-4 h-4" />
-                089 123 456 789
+                0152 122 740 43
               </a>
-              <a href="mailto:info@kshw-muenchen.de" className="flex items-center justify-center gap-2 hover:text-foreground">
+              <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center justify-center gap-2 hover:text-foreground">
                 <Mail className="w-4 h-4" />
-                info@kshw-muenchen.de
+                info@komplettsanierungen-haus-wohnung.de
               </a>
             </div>
           </div>
