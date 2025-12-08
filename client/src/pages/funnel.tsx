@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { useLocation } from "wouter";
+import { useLocation, useSearch } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -345,6 +345,7 @@ type ServiceDetails = {
 
 export default function FunnelPage() {
   const [, setLocation] = useLocation();
+  const searchString = useSearch();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState(1);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
@@ -367,6 +368,17 @@ export default function FunnelPage() {
     phone: "",
     email: "",
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchString);
+    const serviceParam = params.get("service");
+    const validServices = ["komplettsanierung", "badsanierung", "kuechensanierung", "bodensanierung", "elektrosanierung", "heizungssanierung", "energetische-sanierung", "dachsanierung"];
+    
+    if (serviceParam && validServices.includes(serviceParam)) {
+      setFormData(prev => ({ ...prev, service: serviceParam }));
+      setCurrentStep(2);
+    }
+  }, [searchString]);
 
   const totalSteps = 8;
   const progress = (currentStep / totalSteps) * 100;
