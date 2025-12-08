@@ -33,14 +33,14 @@ import {
 } from "lucide-react";
 
 const services = [
-  { id: "haussanierung", title: "Haussanierungen", icon: HomeIcon },
-  { id: "wohnungssanierung", title: "Wohnungssanierungen", icon: HomeIcon },
-  { id: "badsanierung", title: "Badsanierungen", icon: Bath },
-  { id: "komplettsanierung", title: "Komplettsanierungen", icon: HomeIcon },
-  { id: "fussbodenheizung", title: "Fußbodenheizung", icon: Flame },
-  { id: "dachdeckerarbeiten", title: "Dachdeckerarbeiten", icon: HomeIcon },
-  { id: "dachausbau", title: "Dachausbau", icon: HomeIcon },
-  { id: "dachfenster", title: "Dachfenster", icon: HomeIcon },
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath },
+  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame },
+  { id: "energetisch", title: "Energetische Sanierung", icon: Flame },
+  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon },
 ];
 
 const reviews = [

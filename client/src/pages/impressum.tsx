@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Building2 } from "lucide-react";
 
 const services = [
-  { id: "haussanierung", title: "Haussanierungen" },
-  { id: "wohnungssanierung", title: "Wohnungssanierungen" },
-  { id: "badsanierung", title: "Badsanierungen" },
-  { id: "komplettsanierung", title: "Komplettsanierungen" },
-  { id: "fussbodenheizung", title: "Fußbodenheizung" },
-  { id: "dachdeckerarbeiten", title: "Dachdeckerarbeiten" },
-  { id: "dachausbau", title: "Dachausbau" },
-  { id: "dachfenster", title: "Dachfenster" },
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "kuechensanierung", title: "Küchensanierung" },
+  { id: "bodensanierung", title: "Bodensanierung" },
+  { id: "elektrosanierung", title: "Elektrosanierung" },
+  { id: "heizungssanierung", title: "Heizungssanierung" },
+  { id: "energetisch", title: "Energetische Sanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
 ];
 
 export default function Impressum() {
