@@ -165,10 +165,10 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Haus oder Wohnung sanieren – <span className="text-primary">Planung & Kosten</span> auf einen Blick
+                  Komplettsanierung in München – <span className="text-primary">Haus & Wohnung</span> professionell sanieren
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Sie möchten Ihr Bad modernisieren, die Küche erneuern oder eine Komplettsanierung durchführen? Mit unserem Service erhalten Sie schnell eine präzise Kostenschätzung und qualifizierte Handwerker.
+                  Sie möchten Ihr Bad modernisieren, die Küche erneuern oder eine Komplettsanierung in München durchführen? Mit unserem Service erhalten Sie schnell eine präzise Kostenschätzung und qualifizierte Handwerker aus München und Umgebung.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link href="/anfrage">
@@ -184,28 +184,21 @@ export default function Home() {
                     </Button>
                   </a>
                 </div>
-                <div className="flex items-center gap-4 p-4 bg-white dark:bg-card rounded-lg border">
-                  <div className="flex">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    ))}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex items-center gap-3 p-4 bg-white dark:bg-card rounded-lg border flex-1">
+                    <div className="flex">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <div>
+                      <p className="font-semibold">Hervorragend bewertet</p>
+                      <p className="text-sm text-muted-foreground">50+ Kundenbewertungen</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold">Hervorragend bewertet</p>
-                    <p className="text-sm text-muted-foreground">Basierend auf 50+ Kundenbewertungen</p>
-                  </div>
-                </div>
-              </div>
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Moderne Küche nach Sanierung"
-                  className="rounded-lg shadow-2xl w-full"
-                />
-                <div className="absolute -bottom-6 -left-6 bg-white dark:bg-card p-4 rounded-lg shadow-lg border hidden lg:block">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-primary" />
+                  <div className="flex items-center gap-3 p-4 bg-white dark:bg-card rounded-lg border flex-1">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <p className="font-bold text-lg">500+</p>
@@ -213,6 +206,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Moderne Küche nach Sanierung in München"
+                  className="rounded-lg shadow-2xl w-full"
+                />
               </div>
             </div>
           </div>
@@ -238,10 +238,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Unsere Leistungen
+              Unsere Leistungen in München
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Von der Badsanierung bis zur Komplettrenovierung - wir bieten Ihnen professionelle Sanierung aus einer Hand.
+              Von der Badsanierung bis zur Komplettrenovierung - wir bieten Ihnen professionelle Sanierung aus einer Hand in München und Umgebung.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -300,7 +300,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Warum Komplettsanierungen Haus & Wohnung?
+              Warum KSHW München für Ihre Sanierung?
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -339,10 +339,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Häufig gestellte Fragen
+              Häufig gestellte Fragen zur Sanierung in München
             </h2>
             <p className="text-lg text-muted-foreground">
-              Hier finden Sie Antworten auf die wichtigsten Fragen zur Haus- und Wohnungssanierung.
+              Hier finden Sie Antworten auf die wichtigsten Fragen zur Haus- und Wohnungssanierung in München.
             </p>
           </div>
           <Accordion type="single" collapsible className="w-full">
@@ -380,7 +380,7 @@ export default function Home() {
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">
-            Haus oder Wohnung sanieren – Planung, Kosten & Handwerker finden
+            Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker
           </h2>
           
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">

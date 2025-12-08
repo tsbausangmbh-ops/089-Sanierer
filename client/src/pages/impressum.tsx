@@ -45,7 +45,7 @@ export default function Impressum() {
 
       <main className="pt-24 pb-16 flex-1">
         <div className="max-w-3xl mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-8">Impressum</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-8">Impressum – KSHW Komplettsanierungen München</h1>
 
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
             

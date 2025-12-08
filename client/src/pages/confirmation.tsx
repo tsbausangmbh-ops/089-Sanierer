@@ -29,7 +29,7 @@ export default function Confirmation() {
           </div>
           
           <h1 className="text-3xl lg:text-4xl font-bold mb-4" data-testid="text-confirmation-title">
-            Anfrage erhalten!
+            Ihre Sanierungsanfrage für München wurde erhalten!
           </h1>
           
           <p className="text-lg text-muted-foreground mb-8">
