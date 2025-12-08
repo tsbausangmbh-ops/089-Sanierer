@@ -1867,6 +1867,14 @@ export default function FunnelPage() {
 
       <div className="container mx-auto px-4 py-8 max-w-4xl pt-24 flex-1">
         <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <Link href="/">
+              <Button variant="ghost" size="sm" className="text-muted-foreground" data-testid="button-back-home">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Zurück zur Startseite
+              </Button>
+            </Link>
+          </div>
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>
             <span className="text-sm font-medium">{Math.round(progress)}%</span>
