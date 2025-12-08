@@ -96,7 +96,7 @@ const benefits = [
 ];
 
 const stats = [
-  { value: "500+", label: "Abgeschlossene Projekte" },
+  { value: "268", label: "Abgeschlossene Projekte" },
   { value: "20+", label: "Jahre Erfahrung" },
   { value: "98%", label: "Zufriedene Kunden" },
 ];
@@ -216,7 +216,7 @@ export default function Home() {
                   <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold text-xl">500+</p>
+                  <p className="font-bold text-xl">268</p>
                   <p className="text-sm text-muted-foreground">Projekte erfolgreich abgeschlossen</p>
                 </div>
               </div>
