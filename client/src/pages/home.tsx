@@ -138,6 +138,7 @@ export default function Home() {
           <div className="h-16 flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <img src={kshwLogo} alt="KSHW München Logo" className="h-10 w-auto" />
+              <span className="font-bold text-lg text-white hidden sm:inline">KSHW München</span>
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
