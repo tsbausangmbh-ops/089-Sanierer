@@ -7,6 +7,8 @@ import Home from "@/pages/home";
 import Funnel from "@/pages/funnel";
 import Confirmation from "@/pages/confirmation";
 import Admin from "@/pages/admin";
+import Impressum from "@/pages/impressum";
+import Datenschutz from "@/pages/datenschutz";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +18,8 @@ function Router() {
       <Route path="/anfrage" component={Funnel} />
       <Route path="/bestaetigung" component={Confirmation} />
       <Route path="/admin" component={Admin} />
+      <Route path="/impressum" component={Impressum} />
+      <Route path="/datenschutz" component={Datenschutz} />
       <Route component={NotFound} />
     </Switch>
   );
