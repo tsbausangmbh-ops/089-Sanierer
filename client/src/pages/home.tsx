@@ -184,7 +184,7 @@ export default function Home() {
                     </Button>
                   </Link>
                   <a href="tel:+4915212274043">
-                    <Button size="lg" variant="outline" className="text-lg w-full sm:w-auto">
+                    <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500">
                       <Phone className="w-5 h-5 mr-2" />
                       0152 122 740 43
                     </Button>
