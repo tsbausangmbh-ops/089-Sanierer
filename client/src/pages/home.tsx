@@ -150,6 +150,12 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+            <a href="tel:+4915212274043" className="hidden sm:flex">
+              <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
+                <Phone className="w-4 h-4 mr-2" />
+                0152 122 740 43
+              </Button>
+            </a>
             <Link href="/anfrage">
               <Button data-testid="button-header-cta">
                 Kostenlose Anfrage
