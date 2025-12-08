@@ -114,6 +114,20 @@ const propertyTypes = [
   { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2, desc: "Mehrere Wohneinheiten" },
 ];
 
+const bathroomTypes = [
+  { id: "hauptbad", label: "Hauptbad", icon: Bath, desc: "Das tägliche Familienbad" },
+  { id: "gaeste-wc", label: "Gäste-WC", icon: Droplets, desc: "Kleines WC für Besucher" },
+  { id: "duschbad", label: "Duschbad", icon: Droplets, desc: "Bad mit Dusche, ohne Wanne" },
+  { id: "bad-und-wc", label: "Bad + Gäste-WC", icon: Bath, desc: "Beide Räume sanieren" },
+];
+
+const kitchenTypes = [
+  { id: "familienküche", label: "Familienküche", icon: ChefHat, desc: "Täglich im Einsatz, viel Platz nötig" },
+  { id: "single-kueche", label: "Kompaktküche", icon: ChefHat, desc: "Kleine Küche, effizient geplant" },
+  { id: "wohnkueche", label: "Offene Wohnküche", icon: ChefHat, desc: "Kochen und Wohnen verbunden" },
+  { id: "profikueche", label: "Hobbyköche", icon: ChefHat, desc: "Hochwertige Ausstattung gewünscht" },
+];
+
 type ServiceConfig = {
   scopeTitle: string;
   scopeSubtitle: string;
@@ -484,7 +498,10 @@ export default function FunnelPage() {
   const getStepTitle = () => {
     switch (currentStep) {
       case 1: return "Welches Problem können wir für Sie lösen?";
-      case 2: return "Um welches Objekt handelt es sich?";
+      case 2: 
+        if (formData.service === "badsanierung") return "Was für ein Bad soll saniert werden?";
+        if (formData.service === "kuechensanierung") return "Wie nutzen Sie Ihre Küche?";
+        return "Um welches Objekt handelt es sich?";
       case 3: return config.scopeTitle;
       case 4: return config.conditionTitle;
       case 5: return config.qualityTitle;
@@ -498,7 +515,10 @@ export default function FunnelPage() {
   const getStepSubtitle = () => {
     switch (currentStep) {
       case 1: return "Wählen Sie den Bereich, der Ihnen am meisten Kopfzerbrechen bereitet";
-      case 2: return "Jedes Objekt hat seine Besonderheiten";
+      case 2: 
+        if (formData.service === "badsanierung") return "Hauptbad, Gäste-WC oder beides?";
+        if (formData.service === "kuechensanierung") return "Ihre Kochgewohnheiten bestimmen die optimale Planung";
+        return "Jedes Objekt hat seine Besonderheiten";
       case 3: return config.scopeSubtitle;
       case 4: return config.conditionSubtitle;
       case 5: return "Ihre Wahl bestimmt Materialien und Ausführung";
@@ -541,72 +561,134 @@ export default function FunnelPage() {
     </div>
   );
 
-  const renderStep2 = () => (
-    <div className="space-y-6">
-      <div className="grid grid-cols-2 gap-4">
-        {propertyTypes.map((type) => {
-          const Icon = type.icon;
-          const isSelected = formData.propertyType === type.id;
-          return (
-            <button
-              key={type.id}
-              type="button"
-              onClick={() => updateFormData("propertyType", type.id)}
-              className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
-                isSelected ? "border-primary bg-primary/5" : "border-border"
-              }`}
-              data-testid={`button-property-${type.id}`}
+  const renderStep2 = () => {
+    const service = formData.service;
+    
+    if (service === "badsanierung") {
+      return (
+        <div className="space-y-6">
+          <div className="grid grid-cols-2 gap-4">
+            {bathroomTypes.map((type) => {
+              const Icon = type.icon;
+              const isSelected = formData.propertyType === type.id;
+              return (
+                <button
+                  key={type.id}
+                  type="button"
+                  onClick={() => updateFormData("propertyType", type.id)}
+                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                    isSelected ? "border-primary bg-primary/5" : "border-border"
+                  }`}
+                  data-testid={`button-property-${type.id}`}
+                >
+                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold">{type.label}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+    
+    if (service === "kuechensanierung") {
+      return (
+        <div className="space-y-6">
+          <div className="grid grid-cols-2 gap-4">
+            {kitchenTypes.map((type) => {
+              const Icon = type.icon;
+              const isSelected = formData.propertyType === type.id;
+              return (
+                <button
+                  key={type.id}
+                  type="button"
+                  onClick={() => updateFormData("propertyType", type.id)}
+                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                    isSelected ? "border-primary bg-primary/5" : "border-border"
+                  }`}
+                  data-testid={`button-property-${type.id}`}
+                >
+                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold">{type.label}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+    
+    return (
+      <div className="space-y-6">
+        <div className="grid grid-cols-2 gap-4">
+          {propertyTypes.map((type) => {
+            const Icon = type.icon;
+            const isSelected = formData.propertyType === type.id;
+            return (
+              <button
+                key={type.id}
+                type="button"
+                onClick={() => updateFormData("propertyType", type.id)}
+                className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  isSelected ? "border-primary bg-primary/5" : "border-border"
+                }`}
+                data-testid={`button-property-${type.id}`}
+              >
+                <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                <p className="font-semibold">{type.label}</p>
+                <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
+                {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
+          <div>
+            <Label className="text-base font-medium">Baujahr des Gebäudes</Label>
+            <Select
+              value={formData.serviceDetails.buildYear || ""}
+              onValueChange={(value) => updateServiceDetails("buildYear", value)}
             >
-              <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-              <p className="font-semibold">{type.label}</p>
-              <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
-              {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
-            </button>
-          );
-        })}
-      </div>
+              <SelectTrigger className="mt-2" data-testid="select-build-year">
+                <SelectValue placeholder="Ungefähres Baujahr" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="vor-1950">Altbau (vor 1950)</SelectItem>
+                <SelectItem value="1950-1970">Nachkriegsbau (1950-1970)</SelectItem>
+                <SelectItem value="1970-1990">1970-1990</SelectItem>
+                <SelectItem value="1990-2010">1990-2010</SelectItem>
+                <SelectItem value="nach-2010">Neubau (nach 2010)</SelectItem>
+                <SelectItem value="unbekannt">Weiß ich nicht</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
-        <div>
-          <Label className="text-base font-medium">Baujahr des Gebäudes</Label>
-          <Select
-            value={formData.serviceDetails.buildYear || ""}
-            onValueChange={(value) => updateServiceDetails("buildYear", value)}
-          >
-            <SelectTrigger className="mt-2" data-testid="select-build-year">
-              <SelectValue placeholder="Ungefähres Baujahr" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="vor-1950">Altbau (vor 1950)</SelectItem>
-              <SelectItem value="1950-1970">Nachkriegsbau (1950-1970)</SelectItem>
-              <SelectItem value="1970-1990">1970-1990</SelectItem>
-              <SelectItem value="1990-2010">1990-2010</SelectItem>
-              <SelectItem value="nach-2010">Neubau (nach 2010)</SelectItem>
-              <SelectItem value="unbekannt">Weiß ich nicht</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div>
-          <Label className="text-base font-medium">Sie sind...</Label>
-          <Select
-            value={formData.serviceDetails.ownership || ""}
-            onValueChange={(value) => updateServiceDetails("ownership", value)}
-          >
-            <SelectTrigger className="mt-2" data-testid="select-ownership">
-              <SelectValue placeholder="Bitte wählen" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="eigentuemer">Eigentümer</SelectItem>
-              <SelectItem value="kaeufer">Käufer (Kauf geplant)</SelectItem>
-              <SelectItem value="verwalter">Hausverwaltung</SelectItem>
-              <SelectItem value="mieter">Mieter (mit Genehmigung)</SelectItem>
-            </SelectContent>
-          </Select>
+          <div>
+            <Label className="text-base font-medium">Sie sind...</Label>
+            <Select
+              value={formData.serviceDetails.ownership || ""}
+              onValueChange={(value) => updateServiceDetails("ownership", value)}
+            >
+              <SelectTrigger className="mt-2" data-testid="select-ownership">
+                <SelectValue placeholder="Bitte wählen" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="eigentuemer">Eigentümer</SelectItem>
+                <SelectItem value="kaeufer">Käufer (Kauf geplant)</SelectItem>
+                <SelectItem value="verwalter">Hausverwaltung</SelectItem>
+                <SelectItem value="mieter">Mieter (mit Genehmigung)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderStep3Scope = () => {
     const service = formData.service;
