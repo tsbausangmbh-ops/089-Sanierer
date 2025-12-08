@@ -4,7 +4,7 @@ import { ArrowLeft, Building2 } from "lucide-react";
 
 export default function Datenschutz() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black border-b">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
@@ -27,7 +27,7 @@ export default function Datenschutz() {
         </div>
       </header>
 
-      <main className="pt-24 pb-16">
+      <main className="pt-24 pb-16 flex-1">
         <div className="max-w-3xl mx-auto px-4 lg:px-8">
           <h1 className="text-3xl lg:text-4xl font-bold mb-8">Datenschutzerklärung</h1>
 
