@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import bathroomBeforeAfter from "@assets/generated_images/bathroom_before_after_lightning_split.png";
 import { Card } from "@/components/ui/card";
 import {
   Accordion,
@@ -193,9 +194,10 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Moderne Küche nach Sanierung in München"
+                  src={bathroomBeforeAfter} 
+                  alt="Badezimmer Vorher-Nachher: Links alt und veraltet, rechts modern saniert"
                   className="rounded-lg shadow-2xl w-full"
+                  data-testid="img-hero-bathroom"
                 />
               </div>
             </div>
