@@ -493,7 +493,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-white/20 text-center text-base text-white/80">
+          <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
             &copy; {new Date().getFullYear()} komplettsanierungen-haus-wohnung.de - Alle Rechte vorbehalten.
           </div>
         </div>
