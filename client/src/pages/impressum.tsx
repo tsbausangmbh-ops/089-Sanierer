@@ -151,7 +151,7 @@ export default function Impressum() {
             <div>
               <h4 className="font-bold mb-4">Leistungen</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                {services.map((service) => (
+                {headerServices.map((service) => (
                   <li key={service.id}>
                     <Link href={`/anfrage?service=${service.id}`} className="hover:text-white">
                       {service.title}
