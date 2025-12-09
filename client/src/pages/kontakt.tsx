@@ -282,17 +282,17 @@ export default function Kontakt() {
                     Sie wissen schon, was Sie brauchen? In 2 Minuten zum kostenlosen Festpreis-Angebot.
                   </p>
                   <div className="space-y-3">
-                    <Link href="/anfrage">
-                      <Button variant="outline" className="w-full" data-testid="button-contact-funnel">
-                        Zur Projektanfrage
-                      </Button>
-                    </Link>
                     <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
                       <Button className="w-full bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-contact-booking">
                         <Calendar className="w-4 h-4 mr-2" />
                         24 Std. Online Termin
                       </Button>
                     </a>
+                    <Link href="/anfrage">
+                      <Button variant="outline" className="w-full" data-testid="button-contact-funnel">
+                        Zur Projektanfrage
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

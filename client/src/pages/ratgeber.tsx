@@ -902,18 +902,18 @@ export default function Ratgeber() {
                   Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link href="/anfrage">
-                    <Button size="lg" variant="secondary" className="gap-2" data-testid="button-ratgeber-cta">
-                      Jetzt kostenlos anfragen
-                      <ArrowRight className="w-5 h-5" />
-                    </Button>
-                  </Link>
                   <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
                     <Button size="lg" className="gap-2 bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-ratgeber-booking">
                       <Calendar className="w-5 h-5" />
                       24 Std. Online Termin
                     </Button>
                   </a>
+                  <Link href="/anfrage">
+                    <Button size="lg" variant="secondary" className="gap-2" data-testid="button-ratgeber-cta">
+                      Jetzt kostenlos anfragen
+                      <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
