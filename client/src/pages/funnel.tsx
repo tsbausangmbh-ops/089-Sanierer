@@ -2217,7 +2217,7 @@ export default function FunnelPage() {
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold mb-2">Ihr lokaler Partner in München</h3>
+                <h3 className="font-semibold mb-2">Wir sind vor Ort – Ihr lokaler Partner in München</h3>
                 <p className="text-muted-foreground text-sm">{content.geoText}</p>
               </div>
             </div>
@@ -2254,9 +2254,9 @@ export default function FunnelPage() {
         )}
 
         <div className="text-center py-8 bg-muted/30 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">Jetzt unverbindliches Angebot anfordern</h2>
+          <h2 className="text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Beantworten Sie uns ein paar kurze Fragen zu Ihrem Projekt und erhalten Sie innerhalb von 24 Stunden ein kostenloses, unverbindliches Angebot.
+            Kurze Fragen beantworten – Angebot in 24 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
           </p>
           <Button size="lg" onClick={handleStartFromSeoIntro} className="text-lg" data-testid="button-start-funnel">
             {content.ctaText}
@@ -2524,7 +2524,7 @@ export default function FunnelPage() {
 
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-semibold mb-3">Ihre Vorteile</h3>
+                <h3 className="font-semibold mb-3">Das bekommen Sie bei uns</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
@@ -2550,7 +2550,7 @@ export default function FunnelPage() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-3">
                   <Phone className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold">Lieber telefonisch?</h3>
+                  <h3 className="font-semibold">Lieber kurz anrufen?</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">Rufen Sie uns direkt an:</p>
                 <a href="tel:+4915212274043" className="text-lg font-bold text-primary" data-testid="link-phone">

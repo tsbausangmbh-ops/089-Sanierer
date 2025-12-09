@@ -368,9 +368,9 @@ export default function GewerkeFunnel() {
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <Handshake className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="text-2xl lg:text-3xl font-bold mb-2">Handwerker-Vermittlung München</h1>
+            <h1 className="text-2xl lg:text-3xl font-bold mb-2">Geprüfte Handwerker in München – schnell und kostenlos vermittelt</h1>
             <p className="text-muted-foreground">
-              Wir vermitteln Sie an geprüfte Meisterbetriebe in München
+              Kein langes Suchen mehr: Wir finden den richtigen Meisterbetrieb für Sie
             </p>
           </div>
 
@@ -385,8 +385,8 @@ export default function GewerkeFunnel() {
           {step === 1 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <h2 className="text-xl font-semibold mb-2">Welches Gewerk benötigen Sie?</h2>
-                <p className="text-muted-foreground">Wählen Sie das passende Handwerk aus</p>
+                <h2 className="text-xl font-semibold mb-2">Was brauchen Sie erledigt?</h2>
+                <p className="text-muted-foreground">Wählen Sie Ihr Gewerk – wir finden den Experten</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -449,7 +449,7 @@ export default function GewerkeFunnel() {
           {step === 2 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <h2 className="text-xl font-semibold mb-2">Ihr Objekt</h2>
+                <h2 className="text-xl font-semibold mb-2">Wo soll gearbeitet werden?</h2>
                 <p className="text-muted-foreground">
                   {formData.trade === "fliesenleger" 
                     ? "Um welche Art von Immobilie handelt es sich?" 
@@ -528,8 +528,8 @@ export default function GewerkeFunnel() {
           {step === 3 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <h2 className="text-xl font-semibold mb-2">Wohnfläche</h2>
-                <p className="text-muted-foreground">Wie groß ist Ihre Immobilie ungefähr?</p>
+                <h2 className="text-xl font-semibold mb-2">Wie groß ist Ihr Objekt?</h2>
+                <p className="text-muted-foreground">Wählen Sie die ungefähre Wohnfläche</p>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -700,7 +700,7 @@ export default function GewerkeFunnel() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Euro className="w-6 h-6 text-primary" />
                 </div>
-                <h2 className="text-xl font-semibold mb-2">Ihr Budget in München</h2>
+                <h2 className="text-xl font-semibold mb-2">Mit welchem Budget planen Sie?</h2>
                 <p className="text-muted-foreground">Realistische Preise für {tradeOptions.find(t => t.id === formData.trade)?.label} in München</p>
               </div>
 
@@ -768,8 +768,8 @@ export default function GewerkeFunnel() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
-                <h2 className="text-xl font-semibold mb-2">Zeitplan & Projektbeschreibung</h2>
-                <p className="text-muted-foreground">Wann soll es losgehen?</p>
+                <h2 className="text-xl font-semibold mb-2">Wann soll es losgehen?</h2>
+                <p className="text-muted-foreground">Zeitplan und kurze Beschreibung Ihres Projekts</p>
               </div>
 
               <Card>
@@ -857,8 +857,8 @@ export default function GewerkeFunnel() {
           {step === 8 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <h2 className="text-xl font-semibold mb-2">Ihre Kontaktdaten</h2>
-                <p className="text-muted-foreground">Damit wir Sie mit dem passenden Handwerker verbinden können</p>
+                <h2 className="text-xl font-semibold mb-2">Fast geschafft – wie erreichen wir Sie?</h2>
+                <p className="text-muted-foreground">Wir verbinden Sie schnell mit dem richtigen Handwerker</p>
               </div>
 
               <Card>
