@@ -146,67 +146,67 @@ const priceRanges = [
   {
     service: "Komplettsanierung",
     icon: HomeIcon,
-    priceRange: "800 - 1.500 €/m²",
+    priceRange: "920 - 1.725 €/m²",
     description: "Je nach Zustand und Ausstattungswünschen",
     examples: [
-      "Wohnung 60 m²: ab 48.000 €",
-      "Wohnung 100 m²: ab 80.000 €",
-      "Haus 150 m²: ab 120.000 €"
+      "Wohnung 60 m²: ab 55.000 €",
+      "Wohnung 100 m²: ab 92.000 €",
+      "Haus 150 m²: ab 138.000 €"
     ]
   },
   {
     service: "Badsanierung",
     icon: Bath,
-    priceRange: "8.000 - 30.000 €",
+    priceRange: "9.200 - 34.500 €",
     description: "Abhängig von Größe und Ausstattung",
     examples: [
-      "Gäste-WC: ab 4.000 €",
-      "Standard-Bad 6 m²: ab 12.000 €",
-      "Premium-Bad 10 m²: ab 25.000 €"
+      "Gäste-WC: ab 4.600 €",
+      "Standard-Bad 6 m²: ab 13.800 €",
+      "Premium-Bad 10 m²: ab 28.750 €"
     ]
   },
   {
     service: "Küchensanierung",
     icon: UtensilsCrossed,
-    priceRange: "5.000 - 25.000 €",
+    priceRange: "5.750 - 28.750 €",
     description: "Ohne Kücheneinrichtung",
     examples: [
-      "Elektrik & Wasser: ab 3.000 €",
-      "Fliesen & Boden: ab 2.500 €",
-      "Komplett inkl. Malerarbeiten: ab 8.000 €"
+      "Elektrik & Wasser: ab 3.450 €",
+      "Fliesen & Boden: ab 2.875 €",
+      "Komplett inkl. Malerarbeiten: ab 9.200 €"
     ]
   },
   {
     service: "Bodensanierung",
     icon: Layers,
-    priceRange: "40 - 120 €/m²",
+    priceRange: "46 - 138 €/m²",
     description: "Material und Verlegung",
     examples: [
-      "Laminat verlegen: ab 40 €/m²",
-      "Parkett verlegen: ab 80 €/m²",
-      "Fliesen verlegen: ab 60 €/m²"
+      "Laminat verlegen: ab 46 €/m²",
+      "Parkett verlegen: ab 92 €/m²",
+      "Fliesen verlegen: ab 69 €/m²"
     ]
   },
   {
     service: "Elektrosanierung",
     icon: Zap,
-    priceRange: "80 - 150 €/m²",
+    priceRange: "92 - 172 €/m²",
     description: "Kompletterneuerung der Elektrik",
     examples: [
-      "Steckdose setzen: ab 80 €",
-      "Sicherungskasten erneuern: ab 1.500 €",
-      "Wohnung komplett: ab 6.000 €"
+      "Steckdose setzen: ab 92 €",
+      "Sicherungskasten erneuern: ab 1.725 €",
+      "Wohnung komplett: ab 6.900 €"
     ]
   },
   {
     service: "Heizungssanierung",
     icon: Flame,
-    priceRange: "8.000 - 35.000 €",
+    priceRange: "9.200 - 40.250 €",
     description: "Neue Heizungsanlage inkl. Einbau",
     examples: [
-      "Gasbrennwert: ab 8.000 €",
-      "Wärmepumpe: ab 15.000 €",
-      "Mit Fußbodenheizung: ab 25.000 €"
+      "Gasbrennwert: ab 9.200 €",
+      "Wärmepumpe: ab 17.250 €",
+      "Mit Fußbodenheizung: ab 28.750 €"
     ]
   }
 ];
@@ -215,85 +215,85 @@ const tradePrices = [
   {
     trade: "Maler & Lackierer",
     icon: PaintBucket,
-    hourlyRate: "55 - 75 €/Std.",
+    hourlyRate: "63 - 86 €/Std.",
     description: "Malerarbeiten in München",
     examples: [
-      "Wände streichen (pro m²): 12 - 18 €",
-      "Decken streichen (pro m²): 14 - 20 €",
-      "Türen/Zargen lackieren (pro Stück): 80 - 150 €",
-      "Tapezieren (pro m²): 15 - 25 €",
-      "Fassade streichen (pro m²): 25 - 45 €",
-      "Schimmelbeseitigung: ab 350 €"
+      "Wände streichen (pro m²): 14 - 21 €",
+      "Decken streichen (pro m²): 16 - 23 €",
+      "Türen/Zargen lackieren (pro Stück): 92 - 172 €",
+      "Tapezieren (pro m²): 17 - 29 €",
+      "Fassade streichen (pro m²): 29 - 52 €",
+      "Schimmelbeseitigung: ab 402 €"
     ]
   },
   {
     trade: "Elektriker",
     icon: Plug,
-    hourlyRate: "65 - 85 €/Std.",
+    hourlyRate: "75 - 98 €/Std.",
     description: "Elektroinstallation in München",
     examples: [
-      "Steckdose setzen: 80 - 120 €",
-      "Lichtschalter installieren: 60 - 100 €",
-      "Lampe anschließen: 45 - 80 €",
-      "Sicherungskasten erneuern: 1.500 - 3.000 €",
-      "E-Herd Anschluss: 120 - 200 €",
-      "Elektrocheck (E-Check): 150 - 250 €"
+      "Steckdose setzen: 92 - 138 €",
+      "Lichtschalter installieren: 69 - 115 €",
+      "Lampe anschließen: 52 - 92 €",
+      "Sicherungskasten erneuern: 1.725 - 3.450 €",
+      "E-Herd Anschluss: 138 - 230 €",
+      "Elektrocheck (E-Check): 172 - 287 €"
     ]
   },
   {
     trade: "Sanitär & Klempner",
     icon: Droplets,
-    hourlyRate: "70 - 90 €/Std.",
+    hourlyRate: "80 - 103 €/Std.",
     description: "Sanitärinstallation in München",
     examples: [
-      "Wasserhahn montieren: 80 - 150 €",
-      "WC austauschen: 250 - 450 €",
-      "Waschbecken montieren: 150 - 300 €",
-      "Duschkabine einbauen: 400 - 800 €",
-      "Rohrbruch reparieren: 200 - 500 €",
-      "Abfluss verstopft: 80 - 180 €"
+      "Wasserhahn montieren: 92 - 172 €",
+      "WC austauschen: 287 - 517 €",
+      "Waschbecken montieren: 172 - 345 €",
+      "Duschkabine einbauen: 460 - 920 €",
+      "Rohrbruch reparieren: 230 - 575 €",
+      "Abfluss verstopft: 92 - 207 €"
     ]
   },
   {
     trade: "Heizungsbauer",
     icon: Thermometer,
-    hourlyRate: "70 - 95 €/Std.",
+    hourlyRate: "80 - 109 €/Std.",
     description: "Heizungsinstallation in München",
     examples: [
-      "Heizkörper austauschen: 250 - 500 €",
-      "Thermostat wechseln: 80 - 150 €",
-      "Heizung entlüften: 80 - 120 €",
-      "Gasbrennwertkessel: 8.000 - 12.000 €",
-      "Wärmepumpe komplett: 15.000 - 25.000 €",
-      "Fußbodenheizung (pro m²): 80 - 120 €"
+      "Heizkörper austauschen: 287 - 575 €",
+      "Thermostat wechseln: 92 - 172 €",
+      "Heizung entlüften: 92 - 138 €",
+      "Gasbrennwertkessel: 9.200 - 13.800 €",
+      "Wärmepumpe komplett: 17.250 - 28.750 €",
+      "Fußbodenheizung (pro m²): 92 - 138 €"
     ]
   },
   {
     trade: "Fliesenleger",
     icon: Layers,
-    hourlyRate: "55 - 75 €/Std.",
+    hourlyRate: "63 - 86 €/Std.",
     description: "Fliesenarbeiten in München",
     examples: [
-      "Bodenfliesen verlegen (pro m²): 45 - 70 €",
-      "Wandfliesen verlegen (pro m²): 50 - 80 €",
-      "Großformat-Fliesen (pro m²): 65 - 100 €",
-      "Mosaikfliesen (pro m²): 80 - 120 €",
-      "Alte Fliesen entfernen (pro m²): 20 - 35 €",
-      "Abdichtung Bad (pro m²): 25 - 40 €"
+      "Bodenfliesen verlegen (pro m²): 52 - 80 €",
+      "Wandfliesen verlegen (pro m²): 57 - 92 €",
+      "Großformat-Fliesen (pro m²): 75 - 115 €",
+      "Mosaikfliesen (pro m²): 92 - 138 €",
+      "Alte Fliesen entfernen (pro m²): 23 - 40 €",
+      "Abdichtung Bad (pro m²): 29 - 46 €"
     ]
   },
   {
     trade: "Schreiner & Tischler",
     icon: Wrench,
-    hourlyRate: "60 - 85 €/Std.",
+    hourlyRate: "69 - 98 €/Std.",
     description: "Schreinerarbeiten in München",
     examples: [
-      "Zimmertür einbauen: 250 - 450 €",
-      "Einbauschrank (pro lfm): 800 - 1.500 €",
-      "Fenster austauschen: 400 - 800 €",
-      "Parkett verlegen (pro m²): 60 - 100 €",
-      "Treppe renovieren: 1.500 - 4.000 €",
-      "Möbel nach Maß: ab 500 €"
+      "Zimmertür einbauen: 287 - 517 €",
+      "Einbauschrank (pro lfm): 920 - 1.725 €",
+      "Fenster austauschen: 460 - 920 €",
+      "Parkett verlegen (pro m²): 69 - 115 €",
+      "Treppe renovieren: 1.725 - 4.600 €",
+      "Möbel nach Maß: ab 575 €"
     ]
   }
 ];
