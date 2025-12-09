@@ -485,7 +485,7 @@ export default function FaqPreise() {
                 <Handshake className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Nur einen Handwerker gesucht? So viel kostet es</h2>
+                <h2 className="text-2xl font-bold">Nur einen Handwerker gesucht?<br />So viel kostet es</h2>
                 <p className="text-muted-foreground">Geprüfte Meisterbetriebe aus München – faire Stundensätze</p>
               </div>
             </div>
@@ -554,7 +554,7 @@ export default function FaqPreise() {
                 <HelpCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Ihre Fragen – ehrliche Antworten aus der Praxis</h2>
+                <h2 className="text-2xl font-bold">Ihre Fragen –<br />ehrliche Antworten aus der Praxis</h2>
                 <p className="text-muted-foreground">Das wollen Münchner über Sanierung wissen</p>
               </div>
             </div>
