@@ -405,9 +405,8 @@ export default function GewerkeFunnel() {
               <div className="flex justify-between gap-4 pt-6">
                 <Link href="/">
                   <Button
-                    variant="outline"
                     size="lg"
-                    className="border-green-500 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20"
+                    className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                     data-testid="button-back-step1"
                   >
                     <ArrowLeft className="w-5 h-5 mr-2" />
