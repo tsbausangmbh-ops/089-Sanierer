@@ -96,7 +96,7 @@ const benefits = [
   {
     icon: Shield,
     title: "Geprüfte Handwerker",
-    description: "Wir arbeiten nur mit verifizierten Meisterbetrieben zusammen, die höchste Qualität liefern.",
+    description: "Wir arbeiten nur mit verifizierten Handwerkern zusammen, die höchste Qualität liefern.",
   },
   {
     icon: CheckCircle,
@@ -252,7 +252,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch lg:items-stretch">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Komplettsanierung München – Ihr Meisterbetrieb für Haus & Wohnung
+                  Komplettsanierung München – Ihr Partner für Haus & Wohnung
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
                   Schluss mit Handwerker-Chaos und Terminsorgen: Wir übernehmen Ihre komplette Sanierung in München – von der Planung bis zur Schlüsselübergabe. Sie lehnen sich zurück, wir machen das.
@@ -400,7 +400,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ihr Vorteil: Meisterbetrieb mit Festpreisgarantie
+              Ihr Vorteil: Qualität mit Festpreisgarantie
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -427,7 +427,7 @@ export default function Home() {
               Handwerker München – Maler, Elektriker & Sanitär finden
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Sie brauchen nur einen Maler, Elektriker oder Fliesenleger? Wir vermitteln Ihnen geprüfte Meisterbetriebe aus München – ohne Suche, ohne Risiko, ohne versteckte Kosten.
+              Sie brauchen nur einen Maler, Elektriker oder Fliesenleger? Wir vermitteln Ihnen geprüfte Handwerker aus München – ohne Suche, ohne Risiko, ohne versteckte Kosten.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -482,7 +482,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <p className="text-muted-foreground mb-4">
-              Alle unsere Partnerfirmen sind Meisterbetriebe aus München und Umgebung mit nachgewiesener Qualität und Zuverlässigkeit.
+              Alle unsere Partnerfirmen sind geprüfte Handwerker aus München und Umgebung mit nachgewiesener Qualität und Zuverlässigkeit.
             </p>
             <Link href="/gewerke">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white border-orange-500" data-testid="button-partner-cta">
