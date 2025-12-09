@@ -2507,8 +2507,8 @@ export default function FunnelPage() {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium">Schnelle Antwort</p>
-                      <p className="text-sm text-muted-foreground">Innerhalb von 24 Stunden</p>
+                      <p className="font-medium">Leistungsangebot in 48h</p>
+                      <p className="text-sm text-muted-foreground">Detailliertes Angebot innerhalb von 48 Stunden</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

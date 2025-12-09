@@ -949,6 +949,20 @@ export default function GewerkeFunnel() {
                 </CardContent>
               </Card>
 
+              <Card className="bg-green-500/10 border-green-500/20">
+                <CardContent className="p-4">
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm">
+                      <p className="font-medium text-green-700 dark:text-green-400">Leistungsangebot in 48 Stunden</p>
+                      <p className="text-muted-foreground">
+                        Sie erhalten innerhalb von 48 Stunden ein detailliertes Leistungsangebot von uns.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className="flex justify-between pt-6">
                 <Button
                   variant="outline"
@@ -1007,8 +1021,8 @@ export default function GewerkeFunnel() {
                 <Clock className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-medium text-sm">Schnelle Rückmeldung</p>
-                <p className="text-xs text-muted-foreground">Innerhalb von 24h</p>
+                <p className="font-medium text-sm">Leistungsangebot in 48h</p>
+                <p className="text-xs text-muted-foreground">Detailliertes Angebot</p>
               </div>
             </div>
           </div>
