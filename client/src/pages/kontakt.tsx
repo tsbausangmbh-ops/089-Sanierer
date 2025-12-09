@@ -134,12 +134,6 @@ export default function Kontakt() {
                   0152 122 740 43
                 </Button>
               </a>
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer" className="ml-2">
-                <Button size="sm" className="text-sm bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  24 h Termin
-                </Button>
-              </a>
             </div>
           </div>
         </div>
