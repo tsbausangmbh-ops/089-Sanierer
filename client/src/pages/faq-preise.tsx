@@ -346,9 +346,9 @@ export default function FaqPreise() {
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">FAQ & Preise</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es? Ihre wichtigsten Fragen beantwortet</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Häufig gestellte Fragen und transparente Preisübersicht für Ihre Sanierung in München
+                Transparente Preise, ehrliche Antworten – so wissen Sie vorab, was Ihre Sanierung in München kostet.
               </p>
             </div>
           </div>
@@ -361,8 +361,8 @@ export default function FaqPreise() {
                 <Euro className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Preisübersicht</h2>
-                <p className="text-muted-foreground">Orientierungspreise für Ihre Sanierung</p>
+                <h2 className="text-2xl font-bold">Mit diesen Kosten können Sie rechnen</h2>
+                <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit</p>
               </div>
             </div>
 
@@ -399,8 +399,8 @@ export default function FaqPreise() {
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex-1 text-center sm:text-left">
-                    <h3 className="font-semibold mb-1">Individuelles Angebot gewünscht?</h3>
-                    <p className="text-sm text-muted-foreground">Kostenlose Vor-Ort-Beratung und Festpreisangebot</p>
+                    <h3 className="font-semibold mb-1">Ihr persönliches Festpreis-Angebot</h3>
+                    <p className="text-sm text-muted-foreground">Kostenlose Beratung vor Ort – ohne Überraschungen am Ende</p>
                   </div>
                   <Link href="/anfrage">
                     <Button size="lg" data-testid="button-cta-angebot">
@@ -421,8 +421,8 @@ export default function FaqPreise() {
                 <Handshake className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Handwerker-Vermittlung München</h2>
-                <p className="text-muted-foreground">Preise für einzelne Gewerke (Münchner Niveau)</p>
+                <h2 className="text-2xl font-bold">Nur einen Handwerker gesucht? So viel kostet es</h2>
+                <p className="text-muted-foreground">Geprüfte Meisterbetriebe aus München – faire Stundensätze</p>
               </div>
             </div>
 
@@ -461,8 +461,8 @@ export default function FaqPreise() {
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex-1 text-center sm:text-left">
-                    <h3 className="font-semibold mb-1">Handwerker gesucht?</h3>
-                    <p className="text-sm text-muted-foreground">Kostenlose Vermittlung an geprüfte Meisterbetriebe</p>
+                    <h3 className="font-semibold mb-1">Schnell den richtigen Handwerker finden</h3>
+                    <p className="text-sm text-muted-foreground">Wir vermitteln kostenlos – Sie sparen die Suche</p>
                   </div>
                   <Link href="/gewerke">
                     <Button size="lg" className="bg-green-500 hover:bg-green-600" data-testid="button-cta-gewerke">
@@ -483,8 +483,8 @@ export default function FaqPreise() {
                 <HelpCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Häufig gestellte Fragen</h2>
-                <p className="text-muted-foreground">Antworten auf Ihre wichtigsten Fragen</p>
+                <h2 className="text-2xl font-bold">Ihre Fragen – ehrliche Antworten aus der Praxis</h2>
+                <p className="text-muted-foreground">Das wollen Münchner über Sanierung wissen</p>
               </div>
             </div>
 
