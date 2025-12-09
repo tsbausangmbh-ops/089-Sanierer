@@ -2459,7 +2459,7 @@ export default function FunnelPage() {
                       </Button>
                     </Link>
                   ) : (
-                    <Button variant="outline" onClick={handleBack} data-testid="button-back">
+                    <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500" onClick={handleBack} data-testid="button-back">
                       <ArrowLeft className="w-4 h-4 mr-2" />
                       Zurück
                     </Button>
