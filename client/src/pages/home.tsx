@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import bathroomBeforeAfter from "@assets/generated_images/bathroom_before_after_renovation.png";
+import houseBeforeAfter from "@assets/generated_images/house_before-after_lightning_split.png";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card } from "@/components/ui/card";
 import {
@@ -274,8 +274,8 @@ export default function Home() {
               </div>
               <div className="relative flex items-stretch">
                 <img 
-                  src={bathroomBeforeAfter} 
-                  alt="Badezimmer Vorher-Nachher: Links alt und veraltet, rechts modern saniert"
+                  src={houseBeforeAfter} 
+                  alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
                   className="rounded-lg shadow-2xl w-full h-full object-cover"
                   data-testid="img-hero-bathroom"
                 />
