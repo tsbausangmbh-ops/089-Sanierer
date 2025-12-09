@@ -209,12 +209,6 @@ export default function Home() {
                       0152 122 740 43
                     </Button>
                   </a>
-                  <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="text-lg w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-hero-booking">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      24 Std. Online Termin
-                    </Button>
-                  </a>
                 </div>
               </div>
               <div className="relative flex items-stretch">
