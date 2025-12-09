@@ -252,7 +252,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch lg:items-stretch">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  <strong>Sanierung München</strong> – Ihr Zuhause in besten Händen
+                  <strong>Sanierung München</strong> – Ihr Zuhause in sicheren Händen seit über 20 Jahren
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
                   <strong>Kennen Sie das?</strong> Wochenlange Handwerkersuche, Terminprobleme, unklare Kosten? <strong>Das muss nicht sein.</strong> Seit über 20 Jahren sanieren wir Häuser und Wohnungen in München – mit Festpreisgarantie, einem persönlichen Ansprechpartner und 2 Jahren Gewährleistung. <strong>268+ zufriedene Kunden</strong> vertrauen uns bereits.
@@ -331,10 +331,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Welche <strong>Sanierung in München</strong> planen Sie?
+              Was möchten Sie in München sanieren lassen?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Von der <strong>Badsanierung</strong> bis zur <strong>Komplettsanierung</strong> – wir koordinieren alle Gewerke für Sie. <strong>Festpreis, fester Termin, volle Gewährleistung.</strong> Wählen Sie Ihr Projekt:
+              Von der <strong>Badsanierung</strong> bis zur <strong>Komplettsanierung</strong> – <strong>268+ Münchner Familien</strong> haben uns bereits vertraut. <strong>Festpreis-Garantie, fester Termin, 2 Jahre Gewährleistung.</strong>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -360,10 +360,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              In <strong>3 einfachen Schritten</strong> zur fertigen Sanierung
+              Wie läuft eine Sanierung mit KSHW München ab?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Während Sie bei anderen Anbietern wochenlang auf Angebote warten, erhalten Sie bei uns <strong>innerhalb von 24 Stunden</strong> eine Kostenschätzung.
+              <strong>Transparent, planbar, sicher:</strong> Während andere Anbieter wochenlang auf Angebote warten lassen, erhalten Sie bei uns <strong>innerhalb von 24 Stunden</strong> Ihre persönliche Kostenschätzung.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -403,10 +403,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Warum <strong>268+ Münchner</strong> uns vertrauen
+              Was macht KSHW München so vertrauenswürdig?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Wir wissen, dass eine Sanierung <strong>Vertrauenssache</strong> ist. Deshalb geben wir Ihnen diese Garantien:
+              <strong>268+ erfolgreiche Projekte, 98% Weiterempfehlung, 20+ Jahre Erfahrung</strong> – wir geben Ihnen schriftliche Garantien, die andere nicht bieten:
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -430,7 +430,7 @@ export default function Home() {
               <Handshake className="w-8 h-8 text-primary" />
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              <strong>Einzelne Handwerker</strong> in München gesucht?
+              Brauchen Sie nur einen <strong>Handwerker in München</strong>?
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Sie brauchen nur einen <strong>Maler, Elektriker oder Fliesenleger</strong>? Kein Problem – wir vermitteln Ihnen <strong>geprüfte Fachbetriebe</strong> aus München. Alle Partner sind von uns persönlich ausgewählt und liefern nachweislich Qualitätsarbeit.
@@ -504,7 +504,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              268+ erfolgreiche Sanierungsprojekte in München
+              Unsere Bilanz: 268+ zufriedene Kunden in München
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -522,10 +522,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Häufige Fragen zur Sanierung in München
+              Ihre Fragen – unsere ehrlichen Antworten
             </h2>
             <p className="text-lg text-muted-foreground">
-              Was kostet eine Sanierung wirklich? Wie lange dauert es? Wir beantworten die häufigsten Fragen unserer Münchner Kunden.
+              <strong>Was kostet eine Sanierung in München wirklich?</strong> Wie lange dauert es? Aus 268+ Projekten teilen wir echte Erfahrungswerte:
             </p>
           </div>
           <Accordion type="single" collapsible className="w-full space-y-1">
@@ -546,10 +546,10 @@ export default function Home() {
       <section className="py-10 lg:py-14 bg-card">
         <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Kostenlose Beratung für Ihre Sanierung in München
+            Bereit für Ihre Sanierung in München?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Kostenlose Beratung, unverbindliches Angebot, Festpreis-Garantie. München, Pasing, Schwabing, Dachau, Starnberg – wir sind vor Ort.
+            <strong>Kostenlose Erstberatung</strong>, unverbindliches Festpreis-Angebot, <strong>Antwort in 24 Stunden</strong>. Wir sind vor Ort in München, Pasing, Schwabing, Sendling, Dachau, Starnberg und Umgebung.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
@@ -571,7 +571,7 @@ export default function Home() {
       <section className="py-6 lg:py-8">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
-            Renovierung & Sanierung München – Altbau bis Neubau
+            Komplettsanierung München – von Altbau bis Neubau, alles aus einer Hand
           </h2>
           
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">

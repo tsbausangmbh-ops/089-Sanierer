@@ -156,16 +156,16 @@ export default function Kontakt() {
 
       <main className="pt-24 pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Kontakt KSHW München – Sanierungsberatung</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Kontaktieren Sie <strong>KSHW München</strong> – Ihre Sanierungsexperten</h1>
           <p className="text-muted-foreground text-lg mb-8">
-            Fragen zur Sanierung? Unverbindliches Angebot gewünscht? Schreiben Sie uns oder rufen Sie direkt an.
+            <strong>Kostenlose Erstberatung</strong>, unverbindliches Angebot, persönlicher Ansprechpartner. Schreiben Sie uns oder rufen Sie direkt an – <strong>wir antworten innerhalb von 24 Stunden</strong>.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-6">Kostenlose Anfrage für Sanierung München</h2>
+                  <h2 className="text-xl font-bold mb-6">Ihre kostenlose Sanierungsanfrage – 100% unverbindlich</h2>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                       <FormField
@@ -280,7 +280,7 @@ export default function Kontakt() {
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">So erreichen Sie uns</h2>
+                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie KSHW München?</h2>
                   <div className="space-y-4">
                     <a href="tel:+4915212274043" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                       <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
@@ -324,7 +324,7 @@ export default function Kontakt() {
 
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">Direkt zur Projektanfrage</h2>
+                  <h2 className="text-xl font-bold mb-4">Welche Sanierung brauchen Sie in München?</h2>
                   <p className="text-muted-foreground mb-4">
                     Sie wissen schon, was Sie brauchen? In 2 Minuten zum kostenlosen Festpreis-Angebot.
                   </p>
