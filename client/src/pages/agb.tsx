@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar } from "lucide-react";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
@@ -50,10 +50,10 @@ export default function AGB() {
                 </Button>
               </Link>
             </div>
-            <a href="tel:+4915212274043" className="hidden sm:flex">
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer" className="hidden sm:flex">
               <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
-                <Phone className="w-4 h-4 mr-2" />
-                0152 122 740 43
+                <Calendar className="w-4 h-4 mr-2" />
+                24 Std. Online Termin
               </Button>
             </a>
             <Link href="/anfrage">
