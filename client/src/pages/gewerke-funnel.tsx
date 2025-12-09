@@ -359,6 +359,11 @@ export default function GewerkeFunnel() {
                 0152 122 740 43
               </Button>
             </a>
+            <Link href="/anfrage">
+              <Button data-testid="button-header-cta">
+                Kostenlose Anfrage
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
