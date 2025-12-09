@@ -42,15 +42,9 @@ import {
   MapPin,
   HelpCircle,
   Calendar,
-  Menu
+  Menu,
+  X
 } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { Link } from "wouter";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
@@ -690,6 +684,7 @@ export default function FunnelPage() {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [showSeoIntro, setShowSeoIntro] = useState(false);
   const [preSelectedService, setPreSelectedService] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const [formData, setFormData] = useState({
     service: "",
@@ -2320,61 +2315,20 @@ export default function FunnelPage() {
                 </div>
               </Link>
               <div className="flex lg:hidden items-center gap-2">
-                <a href="tel:+4915212274043">
-                  <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
-                    <Phone className="w-4 h-4" />
-                  </Button>
-                </a>
-                <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                  <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
-                    <Calendar className="w-4 h-4" />
-                  </Button>
-                </a>
-                <Sheet>
-                  <SheetTrigger asChild>
-                    <Button size="icon" variant="ghost" className="text-white hover:bg-white/10">
-                      <Menu className="w-5 h-5" />
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent side="right" className="w-[280px] bg-[hsl(220,85%,10%)] text-white border-l-white/20">
-                    <SheetHeader>
-                      <SheetTitle className="text-white text-left">Navigation</SheetTitle>
-                    </SheetHeader>
-                    <nav className="flex flex-col gap-2 mt-6">
-                      {headerServices.map((service) => (
-                        <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                          <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                            {service.title}
-                          </Button>
-                        </Link>
-                      ))}
-                      <div className="border-t border-white/20 my-2" />
-                      <Link href="/ratgeber">
-                        <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                          Ratgeber
-                        </Button>
-                      </Link>
-                      <Link href="/faq-preise">
-                        <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                          FAQ & Preise
-                        </Button>
-                      </Link>
-                      <Link href="/kontakt">
-                        <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                          Kontakt
-                        </Button>
-                      </Link>
-                      <div className="border-t border-white/20 my-2" />
-                      <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          24 h Termin
-                        </Button>
-                      </a>
-                    </nav>
-                  </SheetContent>
-                </Sheet>
-              </div>
+              <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </Button>
+              <a href="tel:+4915212274043">
+                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
+                  <Phone className="w-4 h-4" />
+                </Button>
+              </a>
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
+                  <Calendar className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
               <div className="hidden lg:flex items-center gap-1">
                 {headerServices.map((service) => (
                   <Link key={service.id} href={`/anfrage?service=${service.id}`}>
@@ -2402,7 +2356,26 @@ export default function FunnelPage() {
               </div>
             </div>
           </div>
-        </header>
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-[hsl(220,85%,15%)] border-t border-white/10">
+            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+              {headerServices.map((service) => (
+                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                  <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>{service.title}</Button>
+                </Link>
+              ))}
+              <div className="border-t border-white/20 my-2" />
+              <Link href="/ratgeber"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Ratgeber</Button></Link>
+              <Link href="/faq-preise"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>FAQ & Preise</Button></Link>
+              <Link href="/kontakt"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Kontakt</Button></Link>
+              <div className="border-t border-white/20 my-2" />
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"><Calendar className="w-4 h-4 mr-2" />24 h Termin</Button>
+              </a>
+            </nav>
+          </div>
+        )}
+      </header>
 
         {renderSeoIntro()}
 
@@ -2498,6 +2471,9 @@ export default function FunnelPage() {
               </div>
             </Link>
             <div className="flex lg:hidden items-center gap-2">
+              <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </Button>
               <a href="tel:+4915212274043">
                 <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4" />
@@ -2508,50 +2484,6 @@ export default function FunnelPage() {
                   <Calendar className="w-4 h-4" />
                 </Button>
               </a>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button size="icon" variant="ghost" className="text-white hover:bg-white/10">
-                    <Menu className="w-5 h-5" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-[280px] bg-[hsl(220,85%,10%)] text-white border-l-white/20">
-                  <SheetHeader>
-                    <SheetTitle className="text-white text-left">Navigation</SheetTitle>
-                  </SheetHeader>
-                  <nav className="flex flex-col gap-2 mt-6">
-                    {headerServices.map((service) => (
-                      <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                        <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                          {service.title}
-                        </Button>
-                      </Link>
-                    ))}
-                    <div className="border-t border-white/20 my-2" />
-                    <Link href="/ratgeber">
-                      <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                        Ratgeber
-                      </Button>
-                    </Link>
-                    <Link href="/faq-preise">
-                      <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                        FAQ & Preise
-                      </Button>
-                    </Link>
-                    <Link href="/kontakt">
-                      <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
-                        Kontakt
-                      </Button>
-                    </Link>
-                    <div className="border-t border-white/20 my-2" />
-                    <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        24 h Termin
-                      </Button>
-                    </a>
-                  </nav>
-                </SheetContent>
-              </Sheet>
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
@@ -2580,6 +2512,25 @@ export default function FunnelPage() {
             </div>
           </div>
         </div>
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-[hsl(220,85%,15%)] border-t border-white/10">
+            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+              {headerServices.map((service) => (
+                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                  <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>{service.title}</Button>
+                </Link>
+              ))}
+              <div className="border-t border-white/20 my-2" />
+              <Link href="/ratgeber"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Ratgeber</Button></Link>
+              <Link href="/faq-preise"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>FAQ & Preise</Button></Link>
+              <Link href="/kontakt"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Kontakt</Button></Link>
+              <div className="border-t border-white/20 my-2" />
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"><Calendar className="w-4 h-4 mr-2" />24 h Termin</Button>
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
 
       <div className="container mx-auto px-4 py-8 max-w-4xl pt-24 flex-1">

@@ -42,11 +42,6 @@ import {
   Menu,
   X
 } from "lucide-react";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -161,6 +156,15 @@ export default function Home() {
               </div>
             </Link>
             <div className="flex lg:hidden items-center gap-2">
+              <Button 
+                size="icon" 
+                variant="ghost" 
+                className="text-white hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                data-testid="button-mobile-menu"
+              >
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </Button>
               <a href="tel:+4915212274043">
                 <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4" />
@@ -171,14 +175,6 @@ export default function Home() {
                   <Calendar className="w-4 h-4" />
                 </Button>
               </a>
-              <Button 
-                size="icon" 
-                variant="ghost" 
-                className="text-white hover:bg-white/10"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </Button>
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
