@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import { useAuth } from "@/hooks/use-auth";
 import { 
   ArrowLeft, 
   Phone, 
@@ -16,7 +17,8 @@ import {
   Flame,
   Building2,
   Building,
-  Store
+  Store,
+  LogOut
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -144,6 +146,8 @@ function LeadCardSkeleton() {
 
 export default function AdminPage() {
   const [serviceFilter, setServiceFilter] = useState<string>("all");
+  const { logoutMutation } = useAuth();
+  const [, setLocation] = useLocation();
 
   const apiUrl = serviceFilter === "all" 
     ? "/api/leads" 
@@ -152,13 +156,21 @@ export default function AdminPage() {
   const { data: leads, isLoading } = useQuery<Lead[]>({
     queryKey: ["/api/leads", serviceFilter],
     queryFn: async () => {
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiUrl, { credentials: "include" });
       if (!response.ok) {
         throw new Error("Failed to fetch leads");
       }
       return response.json();
     },
   });
+
+  const handleLogout = () => {
+    logoutMutation.mutate(undefined, {
+      onSuccess: () => {
+        setLocation("/admin-login");
+      }
+    });
+  };
 
   const filteredLeads = leads;
 
@@ -182,20 +194,30 @@ export default function AdminPage() {
             </div>
           </div>
 
-          <Select value={serviceFilter} onValueChange={setServiceFilter}>
-            <SelectTrigger className="w-48" data-testid="select-service-filter">
-              <SelectValue placeholder="Alle Services" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Alle Leistungen</SelectItem>
-              <SelectItem value="komplettsanierung">Komplettsanierung</SelectItem>
-              <SelectItem value="badsanierung">Badsanierung</SelectItem>
-              <SelectItem value="kuechensanierung">Küchensanierung</SelectItem>
-              <SelectItem value="bodensanierung">Bodensanierung</SelectItem>
-              <SelectItem value="elektrosanierung">Elektrosanierung</SelectItem>
-              <SelectItem value="heizungssanierung">Heizungssanierung</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="flex items-center gap-2 flex-wrap">
+            <Select value={serviceFilter} onValueChange={setServiceFilter}>
+              <SelectTrigger className="w-48" data-testid="select-service-filter">
+                <SelectValue placeholder="Alle Services" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Alle Leistungen</SelectItem>
+                <SelectItem value="komplettsanierung">Komplettsanierung</SelectItem>
+                <SelectItem value="badsanierung">Badsanierung</SelectItem>
+                <SelectItem value="kuechensanierung">Küchensanierung</SelectItem>
+                <SelectItem value="bodensanierung">Bodensanierung</SelectItem>
+                <SelectItem value="elektrosanierung">Elektrosanierung</SelectItem>
+                <SelectItem value="heizungssanierung">Heizungssanierung</SelectItem>
+              </SelectContent>
+            </Select>
+            <Button 
+              variant="outline" 
+              size="icon" 
+              onClick={handleLogout}
+              data-testid="button-logout"
+            >
+              <LogOut className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </header>
 

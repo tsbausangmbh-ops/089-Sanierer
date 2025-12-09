@@ -3,11 +3,14 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertLeadSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
+import { setupAuth, requireAuth } from "./auth";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  setupAuth(app);
+
   app.post("/api/leads", async (req, res) => {
     const result = insertLeadSchema.safeParse(req.body);
     if (!result.success) {
@@ -19,7 +22,7 @@ export async function registerRoutes(
     res.status(201).json(lead);
   });
 
-  app.get("/api/leads", async (req, res) => {
+  app.get("/api/leads", requireAuth, async (req, res) => {
     const { service } = req.query;
     
     if (service && typeof service === "string") {
@@ -31,7 +34,7 @@ export async function registerRoutes(
     res.json(leads);
   });
 
-  app.get("/api/leads/:id", async (req, res) => {
+  app.get("/api/leads/:id", requireAuth, async (req, res) => {
     const lead = await storage.getLead(req.params.id);
     if (!lead) {
       return res.status(404).json({ error: "Lead nicht gefunden" });
