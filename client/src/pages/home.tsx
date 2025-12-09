@@ -362,42 +362,54 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <Card className="p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                <PaintBucket className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Maler</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                <Plug className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Elektriker</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                <Droplets className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Sanitär</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                <Thermometer className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Heizung</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                <Layers className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Fliesenleger</p>
-            </Card>
-            <Card className="p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                <Wrench className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Schreiner</p>
-            </Card>
+            <Link href="/gewerke?trade=maler">
+              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-maler">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <PaintBucket className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium">Maler</p>
+              </Card>
+            </Link>
+            <Link href="/gewerke?trade=elektriker">
+              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-elektriker">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <Plug className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium">Elektriker</p>
+              </Card>
+            </Link>
+            <Link href="/gewerke?trade=sanitaer">
+              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-sanitaer">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <Droplets className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium">Sanitär</p>
+              </Card>
+            </Link>
+            <Link href="/gewerke?trade=heizung">
+              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-heizung">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <Thermometer className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium">Heizung</p>
+              </Card>
+            </Link>
+            <Link href="/gewerke?trade=fliesenleger">
+              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-fliesenleger">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <Layers className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium">Fliesenleger</p>
+              </Card>
+            </Link>
+            <Link href="/gewerke?trade=schreiner">
+              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-schreiner">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <Wrench className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium">Schreiner</p>
+              </Card>
+            </Link>
           </div>
           <div className="text-center mt-8">
             <p className="text-muted-foreground mb-4">
