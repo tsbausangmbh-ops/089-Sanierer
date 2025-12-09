@@ -106,7 +106,7 @@ export default function Confirmation() {
             </div>
             <div className="flex flex-col items-center p-3 bg-muted/50 rounded-lg">
               <Users className="w-5 h-5 text-primary mb-1" />
-              <span className="text-xs text-center">268 Projekte</span>
+              <span className="text-xs text-center">268+ Projekte</span>
             </div>
             <div className="flex flex-col items-center p-3 bg-muted/50 rounded-lg">
               <Star className="w-5 h-5 text-amber-500 mb-1" />

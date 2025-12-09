@@ -104,7 +104,7 @@ const benefits = [
 ];
 
 const stats = [
-  { value: "268", label: "Abgeschlossene Projekte" },
+  { value: "268+", label: "Abgeschlossene Projekte" },
   { value: "20+", label: "Jahre Erfahrung" },
   { value: "98%", label: "Zufriedene Kunden" },
 ];
@@ -232,7 +232,7 @@ export default function Home() {
                   <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold text-xl">268</p>
+                  <p className="font-bold text-xl">268+</p>
                   <p className="text-sm text-muted-foreground">Projekte erfolgreich abgeschlossen</p>
                 </div>
               </div>
@@ -430,7 +430,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              268 Münchner Familien wohnen jetzt in ihrem Traumhaus
+              268+ Münchner Familien wohnen jetzt in ihrem Traumhaus
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
