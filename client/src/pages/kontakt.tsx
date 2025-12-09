@@ -229,32 +229,9 @@ export default function Kontakt() {
                           </FormItem>
                         )}
                       />
-                      <div className="flex gap-3 flex-wrap">
-                        <a href="tel:+4915212274043" className="flex-1">
-                          <Button 
-                            type="button" 
-                            variant="outline"
-                            className="w-full bg-green-500 hover:bg-green-600 text-white border-green-500"
-                            data-testid="button-contact-phone"
-                          >
-                            <Phone className="w-4 h-4 mr-2" />
-                            0152 122 740 43
-                          </Button>
-                        </a>
-                        <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer" className="flex-1">
-                          <Button 
-                            type="button" 
-                            className="w-full bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500"
-                            data-testid="button-contact-booking-form"
-                          >
-                            <Calendar className="w-4 h-4 mr-2" />
-                            24 h Termin
-                          </Button>
-                        </a>
-                      </div>
                       <Button 
                         type="submit" 
-                        className="w-full bg-orange-500 hover:bg-orange-600 text-white border-orange-500 mt-3"
+                        className="w-full bg-orange-500 hover:bg-orange-600 text-white border-orange-500"
                         disabled={mutation.isPending}
                         data-testid="button-contact-submit"
                       >
