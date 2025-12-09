@@ -218,7 +218,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-semibold text-lg">Hervorragend bewertet</p>
-                  <p className="text-sm text-muted-foreground">Basierend auf 50+ Kundenbewertungen</p>
+                  <p className="text-sm text-muted-foreground">Basierend auf 98 Kundenbewertungen</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-5 bg-white dark:bg-card rounded-lg border">
