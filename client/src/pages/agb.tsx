@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Calendar, Menu, X } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Menu, X, ArrowLeft } from "lucide-react";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
@@ -19,15 +19,20 @@ export default function AGB() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,75%,22%)] text-white border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
-            <Link href="/">
-              <div className="flex items-center gap-2 cursor-pointer">
-                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
-                <div className="hidden sm:flex flex-col">
-                  <span className="font-bold text-base leading-tight">KSHW München</span>
-                  <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
+            <div className="flex items-center gap-2">
+              <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" data-testid="button-back" onClick={() => window.history.back()}>
+                <ArrowLeft className="w-5 h-5" />
+              </Button>
+              <Link href="/">
+                <div className="flex items-center gap-2 cursor-pointer">
+                  <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                  <div className="hidden sm:flex flex-col">
+                    <span className="font-bold text-base leading-tight">KSHW München</span>
+                    <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div className="flex lg:hidden items-center gap-2">
               <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

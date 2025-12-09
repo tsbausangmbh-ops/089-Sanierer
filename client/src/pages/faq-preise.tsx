@@ -32,7 +32,8 @@ import {
   Handshake,
   Calendar,
   Menu,
-  X
+  X,
+  ArrowLeft
 } from "lucide-react";
 
 const headerServices = [
@@ -362,15 +363,22 @@ export default function FaqPreise() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,75%,22%)] text-white border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
-            <Link href="/">
-              <div className="flex items-center gap-2 cursor-pointer">
-                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
-                <div className="hidden sm:flex flex-col">
-                  <span className="font-bold text-base leading-tight">KSHW München</span>
-                  <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
+            <div className="flex items-center gap-2">
+              <Link href="/">
+                <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" data-testid="button-back">
+                  <ArrowLeft className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href="/">
+                <div className="flex items-center gap-2 cursor-pointer">
+                  <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                  <div className="hidden sm:flex flex-col">
+                    <span className="font-bold text-base leading-tight">KSHW München</span>
+                    <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div className="flex lg:hidden items-center gap-2">
               <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -429,9 +437,9 @@ export default function FaqPreise() {
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierungskosten München: Preise für<br />Badsanierung, Haussanierung & Küche</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4"><strong>Sanierungskosten München</strong>: Was kostet<br />Badsanierung, Haussanierung & Küche?</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Transparente Preise, ehrliche Antworten – so wissen Sie vorab, was Ihre Sanierung in München kostet.
+                <strong>Keine versteckten Kosten, keine bösen Überraschungen.</strong> Hier finden Sie transparente Preise aus unserer Erfahrung mit <strong>268+ Projekten in München</strong>. Alle Preise inkl. Material, Arbeit und Entsorgung.
               </p>
             </div>
             <div className="text-center mt-6">

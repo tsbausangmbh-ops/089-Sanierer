@@ -51,33 +51,33 @@ const headerServices = [
 ];
 
 const allServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, description: "Rundum-Sanierung Ihrer Immobilie in München – von Grund auf neu gestaltet." },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath, description: "Moderne Bäder für München – barrierefrei, zeitgemäß und hochwertig." },
-  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, description: "Traumküchen in München – funktional, modern und individuell geplant." },
-  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, description: "Neue Böden für München – Parkett, Fliesen oder Vinyl vom Profi." },
-  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, description: "Sichere Elektrik in München – Modernisierung nach aktuellen Standards." },
-  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, description: "Effiziente Heizsysteme für München – Wärmepumpe, Gas oder Fernwärme." },
-  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Flame, description: "Energieeffizient sanieren in München – KfW-Förderung nutzen." },
-  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon, description: "Professionelle Dacharbeiten in München – Dämmung und Neueindeckung." },
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, description: "Rundum-Sanierung mit Festpreisgarantie – ein Ansprechpartner für Ihr gesamtes Projekt in München." },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath, description: "Ihr Traumbad in 2-3 Wochen – barrierefrei, modern & mit 2 Jahren Gewährleistung." },
+  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, description: "Professionelle Küchenplanung & Montage – alles aus einer Hand, termingerecht." },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, description: "Parkett, Fliesen oder Vinyl – fachgerechte Verlegung durch erfahrene Handwerker." },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, description: "VDE-konforme Elektroinstallation – Sicherheit für Ihre Familie in München." },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, description: "Bis zu 40% Heizkosten sparen – mit Wärmepumpe, Gas oder Fernwärme." },
+  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Flame, description: "KfW-Förderung nutzen – wir beraten Sie zu allen Fördermöglichkeiten." },
+  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon, description: "Dämmung & Neueindeckung – Werterhalt und Energieeinsparung für Ihr Haus." },
 ];
 
 const processSteps = [
   {
     number: 1,
-    title: "Beschreiben Sie Ihr Vorhaben",
-    description: "Füllen Sie unser Formular aus und erhalten Sie eine transparente Kostenschätzung für Ihr Projekt.",
+    title: "Kostenlose Anfrage stellen",
+    description: "In nur 2 Minuten ausgefüllt – Sie erhalten eine unverbindliche Kostenschätzung basierend auf 268+ Projekten in München.",
     icon: Calculator,
   },
   {
     number: 2,
-    title: "Wir kontaktieren Sie",
-    description: "Unser Expertenteam meldet sich bei Ihnen, um die Details zu besprechen und einen Termin zu vereinbaren.",
+    title: "Persönliche Beratung",
+    description: "Innerhalb von 24 Stunden meldet sich Ihr persönlicher Ansprechpartner – keine Callcenter, keine Wartezeiten.",
     icon: MessageSquare,
   },
   {
     number: 3,
-    title: "Professionelle Umsetzung",
-    description: "Qualifizierte Handwerker renovieren Ihr Zuhause termingerecht und zum vereinbarten Preis.",
+    title: "Sorgenfrei sanieren",
+    description: "Festpreis, fester Termin, volle Gewährleistung – Sie lehnen sich zurück, wir koordinieren alles.",
     icon: Hammer,
   },
 ];
@@ -85,23 +85,23 @@ const processSteps = [
 const benefits = [
   {
     icon: Clock,
-    title: "Schnell und unkompliziert",
-    description: "In wenigen Minuten erhalten Sie eine Kostenschätzung. Sparen Sie Wochen der Handwerkersuche.",
+    title: "Keine Handwerkersuche mehr",
+    description: "Vergessen Sie wochenlanges Telefonieren – wir haben geprüfte Partner für jedes Gewerk sofort verfügbar.",
   },
   {
     icon: Euro,
-    title: "Auf Ihr Budget zugeschnitten",
-    description: "Wählen Sie zwischen Budget, Standard oder Premium Ausstattung nach Ihren Wünschen.",
+    title: "Festpreisgarantie",
+    description: "Der Preis, den wir nennen, ist der Preis, den Sie zahlen. Keine versteckten Kosten, keine bösen Überraschungen.",
   },
   {
     icon: Shield,
-    title: "Geprüfte Handwerker",
-    description: "Wir arbeiten nur mit verifizierten Handwerkern zusammen, die höchste Qualität liefern.",
+    title: "2 Jahre Gewährleistung",
+    description: "Alle Arbeiten mit voller Gewährleistung – wir stehen zu unserer Qualität, auch nach Projektabschluss.",
   },
   {
     icon: CheckCircle,
-    title: "Kosteneinschätzung vorab",
-    description: "Dank unserer Erfahrung aus hunderten Projekten erhalten Sie eine präzise Kostenschätzung.",
+    title: "Ein Ansprechpartner",
+    description: "Sie haben einen festen Projektleiter – bei Fragen sind wir direkt erreichbar, nicht über ein Callcenter.",
   },
 ];
 
@@ -114,27 +114,27 @@ const stats = [
 const faqs = [
   {
     question: "Was kostet eine Komplettsanierung in München?",
-    answer: "Die Kosten für eine Sanierung in München hängen vom Umfang der Arbeiten, der Größe der Immobilie und den gewählten Materialien ab. Eine einfache Renovierung in München beginnt bei wenigen tausend Euro, während eine Komplettsanierung fünf- bis sechsstellige Beträge erreichen kann. Nutzen Sie unser Anfrageformular für eine individuelle Kostenschätzung für Ihre Münchner Immobilie.",
+    answer: "Aus unserer Erfahrung mit 268+ Projekten in München: Eine Badsanierung beginnt ab ca. 8.000€, eine Küchensanierung ab ca. 12.000€ und eine Komplettsanierung ab ca. 800€/m². Der genaue Preis hängt von Ihren Wünschen ab – wir erstellen Ihnen eine kostenlose, unverbindliche Kostenschätzung innerhalb von 24 Stunden.",
   },
   {
     question: "Wie lange dauert eine Sanierung in München?",
-    answer: "Die Dauer hängt von der Größe und dem Umfang ab. Eine Badsanierung in München dauert typischerweise 2-3 Wochen, während eine Komplettsanierung mehrere Monate in Anspruch nehmen kann. Wir erstellen Ihnen einen detaillierten Zeitplan für Ihr Projekt in München.",
+    answer: "Dank unseres eingespielten Handwerkernetzwerks arbeiten wir schneller als Einzelhandwerker: Badsanierung 2-3 Wochen, Küchensanierung 1-2 Wochen, Komplettsanierung 6-12 Wochen je nach Größe. Wir nennen Ihnen einen verbindlichen Endtermin – und halten ihn.",
   },
   {
-    question: "Welche Sanierungsmaßnahmen steigern den Immobilienwert in München?",
-    answer: "In München sind energetische Maßnahmen wie Dämmung, neue Fenster oder Heizungsmodernisierung besonders wertsteigernd. Auch ein modernes Badezimmer oder hochwertige Böden machen Ihre Münchner Immobilie deutlich attraktiver auf dem lokalen Markt.",
+    question: "Warum sollte ich KSHW München beauftragen statt einzelne Handwerker?",
+    answer: "Sie sparen Zeit, Nerven und oft auch Geld: Statt 5-8 verschiedene Handwerker zu koordinieren, haben Sie einen Ansprechpartner. Wir übernehmen Terminkoordination, Qualitätskontrolle und Gewährleistung. 98% unserer Kunden empfehlen uns weiter – weil alles einfach funktioniert.",
   },
   {
-    question: "Muss ich während der Sanierung in München ausziehen?",
-    answer: "Das hängt vom Umfang ab. Bei einer Badsanierung in München ist ein Weiterwohnen meist möglich. Bei einer Komplettsanierung empfehlen wir einen vorübergehenden Auszug für mehr Komfort und schnellere Fertigstellung.",
+    question: "Sind die Handwerker von KSHW qualifiziert?",
+    answer: "Ja, alle unsere Partnerfirmen sind geprüfte Fachbetriebe aus München und Umgebung. Meisterpflichtige Gewerke werden von qualifizierten Handwerkern ausgeführt. Wir arbeiten nur mit Partnern zusammen, die unsere Qualitätsstandards erfüllen – das ist unsere Garantie an Sie.",
   },
   {
-    question: "Bieten Sie eine Garantie auf die Sanierungsarbeiten in München?",
-    answer: "Ja, alle unsere Sanierungsarbeiten in München werden mit einer Gewährleistung von mindestens 2 Jahren durchgeführt. Bei vielen Materialien gelten zusätzlich Herstellergarantien.",
+    question: "Gibt es eine Garantie auf die Sanierungsarbeiten?",
+    answer: "Selbstverständlich: Alle Arbeiten werden mit mindestens 2 Jahren Gewährleistung ausgeführt. Bei Materialien wie Sanitärkeramik, Armaturen oder Heizsystemen gelten zusätzlich die Herstellergarantien. Sollte nach der Sanierung etwas nicht stimmen, sind wir sofort für Sie da.",
   },
   {
-    question: "In welchen Stadtteilen und Umland von München sind Sie tätig?",
-    answer: "Wir sind in ganz München tätig – Allach, Untermenzing, Pasing, Obermenzing, Aubing, Moosach, Feldmoching und allen anderen Stadtteilen. Auch im Münchner Umland wie Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising und Starnberg sind wir für Sie da.",
+    question: "In welchen Stadtteilen von München sind Sie tätig?",
+    answer: "Wir sind in ganz München und Umgebung tätig: Pasing, Laim, Sendling, Schwabing, Bogenhausen, Trudering, Neuperlach, Solln, Hadern und alle anderen Stadtteile. Im Umland bedienen wir Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching und weitere Gemeinden.",
   },
 ];
 
@@ -252,10 +252,10 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch lg:items-stretch">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Komplettsanierung München – Ihr Partner für Haus & Wohnung
+                  <strong>Sanierung München</strong> – Ihr Zuhause in besten Händen
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Schluss mit Handwerker-Chaos und Terminsorgen: Wir übernehmen Ihre komplette Sanierung in München – von der Planung bis zur Schlüsselübergabe. Sie lehnen sich zurück, wir machen das.
+                  <strong>Kennen Sie das?</strong> Wochenlange Handwerkersuche, Terminprobleme, unklare Kosten? <strong>Das muss nicht sein.</strong> Seit über 20 Jahren sanieren wir Häuser und Wohnungen in München – mit Festpreisgarantie, einem persönlichen Ansprechpartner und 2 Jahren Gewährleistung. <strong>268+ zufriedene Kunden</strong> vertrauen uns bereits.
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-4">
                   <Link href="/gewerke">
@@ -331,10 +331,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Badsanierung, Küchensanierung & Haussanierung München
+              Welche <strong>Sanierung in München</strong> planen Sie?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ob Bad, Küche oder ganzes Haus – wählen Sie Ihr Projekt und erleben Sie, wie einfach Sanieren sein kann. Festpreis, ein Ansprechpartner, fertig.
+              Von der <strong>Badsanierung</strong> bis zur <strong>Komplettsanierung</strong> – wir koordinieren alle Gewerke für Sie. <strong>Festpreis, fester Termin, volle Gewährleistung.</strong> Wählen Sie Ihr Projekt:
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -360,8 +360,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Sanierung München – So einfach funktioniert es
+              In <strong>3 einfachen Schritten</strong> zur fertigen Sanierung
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Während Sie bei anderen Anbietern wochenlang auf Angebote warten, erhalten Sie bei uns <strong>innerhalb von 24 Stunden</strong> eine Kostenschätzung.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {processSteps.map((step) => (
@@ -400,8 +403,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ihr Vorteil: Qualität mit Festpreisgarantie
+              Warum <strong>268+ Münchner</strong> uns vertrauen
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Wir wissen, dass eine Sanierung <strong>Vertrauenssache</strong> ist. Deshalb geben wir Ihnen diese Garantien:
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -424,10 +430,10 @@ export default function Home() {
               <Handshake className="w-8 h-8 text-primary" />
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Handwerker München – Maler, Elektriker & Sanitär finden
+              <strong>Einzelne Handwerker</strong> in München gesucht?
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Sie brauchen nur einen Maler, Elektriker oder Fliesenleger? Wir vermitteln Ihnen geprüfte Handwerker aus München – ohne Suche, ohne Risiko, ohne versteckte Kosten.
+              Sie brauchen nur einen <strong>Maler, Elektriker oder Fliesenleger</strong>? Kein Problem – wir vermitteln Ihnen <strong>geprüfte Fachbetriebe</strong> aus München. Alle Partner sind von uns persönlich ausgewählt und liefern nachweislich Qualitätsarbeit.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
