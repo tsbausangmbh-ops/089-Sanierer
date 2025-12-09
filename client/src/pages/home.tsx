@@ -249,7 +249,7 @@ export default function Home() {
       <section className="relative pt-16">
         <div className="bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-10 lg:pt-14 pb-6 lg:pb-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch lg:items-stretch">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
                   Endlich sorgenfrei sanieren in München – Ihr Traumbad wartet
@@ -272,12 +272,12 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="relative flex items-center h-full py-2">
-                <div className="w-full overflow-hidden rounded-lg shadow-2xl">
+              <div className="relative h-full">
+                <div className="w-full h-full overflow-hidden rounded-lg shadow-2xl">
                   <img 
                     src={houseBeforeAfter} 
                     alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
-                    className="w-full h-auto object-cover object-center"
+                    className="w-full h-full object-cover object-center"
                     data-testid="img-hero-bathroom"
                   />
                 </div>
