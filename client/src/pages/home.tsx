@@ -190,10 +190,10 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Komplettsanierung München – Badsanierung, Küchensanierung & Haussanierung
+                  Endlich sorgenfrei sanieren in München – Ihr Traumhaus wartet
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Ihr Sanierungspartner in München: Wir koordinieren alle Gewerke für Ihre Komplettsanierung, Badsanierung oder Küchensanierung – faire Festpreise, Termingarantie.
+                  Schluss mit Handwerker-Chaos und Terminsorgen: Wir übernehmen Ihre komplette Sanierung in München – von der Planung bis zur Schlüsselübergabe. Sie lehnen sich zurück, wir machen das.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/gewerke">
@@ -267,10 +267,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Sanierungsleistungen in München & Umgebung
+              Was dürfen wir für Sie in München verwandeln?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Von Badsanierung bis Dachsanierung – wir koordinieren alle Handwerker für Ihr Projekt in München, Dachau, Starnberg und Umland.
+              Ob Bad, Küche oder ganzes Haus – wählen Sie Ihr Projekt und erleben Sie, wie einfach Sanieren sein kann. Festpreis, ein Ansprechpartner, fertig.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -296,7 +296,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Sanierung München: So einfach geht's
+              In 3 Schritten zu Ihrem sanierten Zuhause in München
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -330,7 +330,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ihr Vorteil: Sanierung aus einer Hand in München
+              Warum Münchner uns ihre Sanierung anvertrauen
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -354,11 +354,10 @@ export default function Home() {
               <Handshake className="w-8 h-8 text-primary" />
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Vermittlung an Partnerfirmen
+              Nur einen Handwerker gesucht? Kein Problem.
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Neben unseren eigenen Leistungen vermitteln wir Sie bei Bedarf auch direkt an unsere geprüften Partnerfirmen. 
-              Ob Einzelgewerk oder Spezialist – wir finden den richtigen Handwerker für Ihr Projekt in München.
+              Sie brauchen nur einen Maler, Elektriker oder Fliesenleger? Wir vermitteln Ihnen geprüfte Meisterbetriebe aus München – ohne Suche, ohne Risiko, ohne versteckte Kosten.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -429,7 +428,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              268 Sanierungsprojekte in München erfolgreich abgeschlossen
+              268 Münchner Familien wohnen jetzt in ihrem Traumhaus
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -447,10 +446,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Häufig gestellte Fragen zur Sanierung in München
+              Ihre Fragen – ehrliche Antworten aus der Praxis
             </h2>
             <p className="text-lg text-muted-foreground">
-              Hier finden Sie Antworten auf die wichtigsten Fragen zur Haus- und Wohnungssanierung in München.
+              Was kostet eine Sanierung wirklich? Wie lange dauert es? Wir beantworten die häufigsten Fragen unserer Münchner Kunden.
             </p>
           </div>
           <Accordion type="single" collapsible className="w-full space-y-1">
@@ -471,10 +470,10 @@ export default function Home() {
       <section className="py-10 lg:py-14 bg-card">
         <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Jetzt Sanierung in München anfragen
+            Bereit für Ihr neues Zuhause? Starten Sie jetzt.
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Kostenlose Beratung für Ihre Komplettsanierung in München, Pasing, Schwabing, Dachau oder Starnberg.
+            Kostenlose Beratung, unverbindliches Angebot, Festpreis-Garantie. München, Pasing, Schwabing, Dachau, Starnberg – wir sind vor Ort.
           </p>
           <Link href="/anfrage">
             <Button size="lg" className="text-lg px-8" data-testid="button-cta-section">
@@ -488,7 +487,7 @@ export default function Home() {
       <section className="py-6 lg:py-8">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
-            Haus & Wohnung sanieren in München – Planung, Kosten & Handwerker
+            KSHW München: Ihr lokaler Partner für stressfreie Sanierungen
           </h2>
           
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -498,7 +497,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-4 my-6">
               <div className="bg-muted/30 p-4 rounded-md">
-                <h3 className="text-lg font-bold text-foreground mb-2">Unsere Leistungen</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Das bekommen Sie bei uns</h3>
                 <ul className="text-sm space-y-1">
                   <li>Komplettsanierung Haus & Wohnung</li>
                   <li>Badsanierung & Badumbau</li>
@@ -509,7 +508,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="bg-muted/30 p-4 rounded-md">
-                <h3 className="text-lg font-bold text-foreground mb-2">Ihre Vorteile</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Darum vertrauen uns Münchner</h3>
                 <ul className="text-sm space-y-1">
                   <li>Festpreis-Garantie</li>
                   <li>Alle Gewerke aus einer Hand</li>
