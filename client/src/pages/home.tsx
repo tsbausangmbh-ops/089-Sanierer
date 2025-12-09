@@ -169,6 +169,11 @@ export default function Home() {
                   FAQ & Preise
                 </Button>
               </Link>
+              <Link href="/gewerke">
+                <Button size="sm" className="text-sm bg-orange-500 hover:bg-orange-600 text-white border-orange-500">
+                  Handwerkervermittlung
+                </Button>
+              </Link>
             </div>
             <a href="tel:+4915212274043" className="hidden sm:flex">
               <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
