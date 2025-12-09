@@ -137,7 +137,7 @@ const serviceSeoContent: Record<string, {
   komplettsanierung: {
     headline: "Komplettsanierung München | Haus & Wohnung renovieren lassen",
     subheadline: "Schlüsselfertige Sanierung aus einer Hand – Festpreis, Termingarantie, 5 Jahre Gewährleistung",
-    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei KSHW München erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 800€/m² und einer Fertigstellungsgarantie. Über 500 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
+    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei KSHW München erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 800€/m² und einer Fertigstellungsgarantie. Über 268 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
     problems: [
       "Handwerkersuche in München: Wochenlange Wartezeiten und unzuverlässige Termine",
       "Kostenexplosion: Angebote ohne Festpreis führen zu 30-50% Mehrkosten",
@@ -156,7 +156,7 @@ const serviceSeoContent: Record<string, {
       "Zeitersparnis: 100+ Stunden weniger Aufwand durch Komplettkoordination",
       "Kostensicherheit: Festpreis ab 800€/m² – was im Angebot steht, wird bezahlt",
       "Qualitätsgarantie: 5 Jahre Gewährleistung auf alle Arbeiten, Materialien und Gewerke",
-      "Erfahrung: 500+ Projekte in München seit 2010 – Altbau, Neubau, Gewerbe",
+      "Erfahrung: 268+ Projekte in München seit 2010 – Altbau, Neubau, Gewerbe",
       "Flexibilität: Sanierung bei bewohnter Immobilie möglich – Staubschutz, Lärmschutz, Reinigung inklusive"
     ],
     geoText: "KSHW München – Ihr Sanierungspartner vor Ort. Wir sanieren in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Au, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Obermenzing, Allach, Moosach, Milbertshofen, Freimann, Trudering, Riem, Berg am Laim, Ramersdorf, Perlach, Neuperlach, Solln, Obersendling, Thalkirchen, Fürstenried, Forstenried, Großhadern und Hadern. Ebenso im Münchner Umland: Landkreis München, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald, Pullach, Gräfelfing und Planegg.",
