@@ -50,12 +50,6 @@ export default function Ratgeber() {
                   24 h Termin
                 </Button>
               </a>
-              <a href="tel:+4915212274043" className="ml-2">
-                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
-                  <Phone className="w-4 h-4 mr-1" />
-                  Anrufen
-                </Button>
-              </a>
             </div>
           </div>
         </div>
