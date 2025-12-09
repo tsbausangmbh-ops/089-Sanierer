@@ -342,7 +342,7 @@ export default function GewerkeFunnel() {
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
               <a href="tel:+4915212274043">
-                <Button size="icon" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4" />
                 </Button>
               </a>
@@ -366,7 +366,7 @@ export default function GewerkeFunnel() {
                 </Button>
               </Link>
               <a href="tel:+4915212274043" className="ml-3">
-                <Button size="sm" className="text-sm bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4 mr-1" />
                   0152 122 740 43
                 </Button>
@@ -455,7 +455,7 @@ export default function GewerkeFunnel() {
                 <Link href="/">
                   <Button
                     size="lg"
-                    className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                    className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                     data-testid="button-back-step1"
                   >
                     <ArrowLeft className="w-5 h-5 mr-2" />
@@ -535,7 +535,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step2"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
@@ -594,7 +594,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step3"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
@@ -649,7 +649,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step4"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
@@ -704,7 +704,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step5"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
@@ -772,7 +772,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step6"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
@@ -864,7 +864,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step7"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
@@ -1007,7 +1007,7 @@ export default function GewerkeFunnel() {
                   variant="outline"
                   onClick={handleBack}
                   size="lg"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
                   data-testid="button-back-step8"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />

@@ -39,7 +39,7 @@ export default function Ratgeber() {
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
               <a href="tel:+4915212274043">
-                <Button size="icon" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4" />
                 </Button>
               </a>
@@ -63,7 +63,7 @@ export default function Ratgeber() {
                 </Button>
               </Link>
               <a href="tel:+4915212274043" className="ml-3">
-                <Button size="sm" className="text-sm bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4 mr-1" />
                   0152 122 740 43
                 </Button>

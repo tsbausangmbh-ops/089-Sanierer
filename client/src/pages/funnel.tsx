@@ -2319,7 +2319,7 @@ export default function FunnelPage() {
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
               <a href="tel:+4915212274043">
-                <Button size="icon" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4" />
                 </Button>
               </a>
@@ -2343,7 +2343,7 @@ export default function FunnelPage() {
                   </Button>
                 </Link>
                 <a href="tel:+4915212274043" className="ml-3">
-                  <Button size="sm" className="text-sm bg-white/20 hover:bg-white/30 text-white border-white/30">
+                  <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
                     <Phone className="w-4 h-4 mr-1" />
                     0152 122 740 43
                   </Button>
@@ -2466,7 +2466,7 @@ export default function FunnelPage() {
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
               <a href="tel:+4915212274043">
-                <Button size="icon" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4" />
                 </Button>
               </a>
@@ -2490,7 +2490,7 @@ export default function FunnelPage() {
                 </Button>
               </Link>
               <a href="tel:+4915212274043" className="ml-3">
-                <Button size="sm" className="text-sm bg-white/20 hover:bg-white/30 text-white border-white/30">
+                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
                   <Phone className="w-4 h-4 mr-1" />
                   0152 122 740 43
                 </Button>
@@ -2537,13 +2537,13 @@ export default function FunnelPage() {
                 <div className="flex justify-between gap-4 mt-8 pt-6 border-t">
                   {currentStep === 1 ? (
                     <Link href="/">
-                      <Button className="bg-white/20 hover:bg-white/30 text-white border-white/30" data-testid="button-back-home">
+                      <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-back-home">
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Zurück zur Startseite
                       </Button>
                     </Link>
                   ) : (
-                    <Button className="bg-white/20 hover:bg-white/30 text-white border-white/30" onClick={handleBack} data-testid="button-back">
+                    <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500" onClick={handleBack} data-testid="button-back">
                       <ArrowLeft className="w-4 h-4 mr-2" />
                       Zurück
                     </Button>
