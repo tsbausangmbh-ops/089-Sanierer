@@ -450,7 +450,7 @@ export default function FaqPreise() {
               <p className="text-muted-foreground mb-4">Haben Sie weitere Fragen?</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="tel:+4915212274043">
-                  <Button variant="outline" size="lg" data-testid="button-call-faq">
+                  <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-call-faq">
                     <Phone className="w-4 h-4 mr-2" />
                     Anrufen
                   </Button>
