@@ -376,26 +376,26 @@ export default function FaqPreise() {
       <main className="flex-1 pt-16">
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es? Ihre wichtigsten Fragen beantwortet</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Transparente Preise, ehrliche Antworten – so wissen Sie vorab, was Ihre Sanierung in München kostet.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section className="py-12 lg:py-16">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center justify-center gap-3 mt-6">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <Euro className="w-6 h-6 text-primary" />
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h2 className="text-2xl font-bold">Mit diesen Kosten können Sie rechnen</h2>
                 <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-8 lg:py-12">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {priceRanges.map((item) => (
@@ -560,7 +560,7 @@ export default function FaqPreise() {
                       }} />
                       {item.link && (
                         <Link href={item.link}>
-                          <Button variant="link" size="sm" className="mt-2 p-0 h-auto text-primary">
+                          <Button variant="ghost" size="sm" className="mt-2 p-0 h-auto text-primary">
                             Mehr erfahren <ChevronRight className="w-4 h-4 ml-1" />
                           </Button>
                         </Link>
