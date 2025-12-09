@@ -27,10 +27,7 @@ function usePageTracking() {
   
   useEffect(() => {
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'user_engagement', {
-        page_path: location,
-        page_title: document.title,
-      });
+      window.gtag('event', 'session_start', {});
     }
   }, [location]);
 }
