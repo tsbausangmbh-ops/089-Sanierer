@@ -272,13 +272,15 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="relative flex items-stretch">
-                <img 
-                  src={houseBeforeAfter} 
-                  alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
-                  className="rounded-lg shadow-2xl w-full h-full object-cover"
-                  data-testid="img-hero-bathroom"
-                />
+              <div className="relative flex items-center justify-center">
+                <div className="w-full aspect-[16/10] overflow-hidden rounded-lg shadow-2xl">
+                  <img 
+                    src={houseBeforeAfter} 
+                    alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
+                    className="w-full h-full object-cover object-center"
+                    data-testid="img-hero-bathroom"
+                  />
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
