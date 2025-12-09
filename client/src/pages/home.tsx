@@ -158,6 +158,16 @@ export default function Home() {
                   </Button>
                 </Link>
               ))}
+              <Link href="/ratgeber">
+                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                  Ratgeber
+                </Button>
+              </Link>
+              <Link href="/faq-preise">
+                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                  FAQ & Preise
+                </Button>
+              </Link>
             </div>
             <a href="tel:+4915212274043" className="hidden sm:flex">
               <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
