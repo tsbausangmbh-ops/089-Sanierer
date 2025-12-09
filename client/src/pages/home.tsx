@@ -427,14 +427,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h3 className="text-lg font-bold text-foreground mt-6 mb-2">Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker</h3>
-            <p className="text-sm">
-              München Pasing · Allach · Untermenzing · Obermenzing · Aubing · Moosach · Feldmoching · Schwabing · Sendling · Bogenhausen · Haidhausen · Neuhausen · Laim · Nymphenburg · Giesing · Berg am Laim · Trudering · Riem · Milbertshofen · Freimann · Solln · Großhadern · Hadern · Fürstenried · Forstenried · Thalkirchen · Obersendling · Ramersdorf · Perlach · Neuperlach
-            </p>
-            <p className="text-sm">
-              Sowie im Münchner Umland: Dachau · Karlsfeld · Germering · Fürstenfeldbruck · Freising · Starnberg · Garching · Unterschleißheim · Oberschleißheim · Ottobrunn · Haar · Gräfelfing · Planegg · Pullach · Grünwald
-            </p>
-          </div>
+            </div>
 
           <div className="text-center mt-8">
             <Link href="/anfrage">
@@ -506,6 +499,15 @@ export default function Home() {
                 <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
               </ul>
             </div>
+          </div>
+          <div className="mt-8 pt-6 border-t border-white/20">
+            <h4 className="font-bold mb-2 text-sm">Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker</h4>
+            <p className="text-xs text-white/60 mb-2">
+              München Pasing · Allach · Untermenzing · Obermenzing · Aubing · Moosach · Feldmoching · Schwabing · Sendling · Bogenhausen · Haidhausen · Neuhausen · Laim · Nymphenburg · Giesing · Berg am Laim · Trudering · Riem · Milbertshofen · Freimann · Solln · Großhadern · Hadern · Fürstenried · Forstenried · Thalkirchen · Obersendling · Ramersdorf · Perlach · Neuperlach
+            </p>
+            <p className="text-xs text-white/60">
+              Sowie im Münchner Umland: Dachau · Karlsfeld · Germering · Fürstenfeldbruck · Freising · Starnberg · Garching · Unterschleißheim · Oberschleißheim · Ottobrunn · Haar · Gräfelfing · Planegg · Pullach · Grünwald
+            </p>
           </div>
           <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
             &copy; {new Date().getFullYear()} <a href="https://komplettsanierungen-haus-wohnung.de" className="hover:text-white underline">komplettsanierungen-haus-wohnung.de</a> - Alle Rechte vorbehalten.
