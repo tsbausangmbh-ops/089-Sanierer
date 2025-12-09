@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Calendar } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -287,11 +287,19 @@ export default function Kontakt() {
                   <p className="text-muted-foreground mb-4">
                     Sie wissen schon, was Sie brauchen? In 2 Minuten zum kostenlosen Festpreis-Angebot.
                   </p>
-                  <Link href="/anfrage">
-                    <Button variant="outline" className="w-full" data-testid="button-contact-funnel">
-                      Zur Projektanfrage
-                    </Button>
-                  </Link>
+                  <div className="space-y-3">
+                    <Link href="/anfrage">
+                      <Button variant="outline" className="w-full" data-testid="button-contact-funnel">
+                        Zur Projektanfrage
+                      </Button>
+                    </Link>
+                    <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-contact-booking">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        24 Std. Online Termin
+                      </Button>
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>

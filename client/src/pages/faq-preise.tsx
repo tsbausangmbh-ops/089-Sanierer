@@ -28,7 +28,8 @@ import {
   Droplets,
   Thermometer,
   Wrench,
-  Handshake
+  Handshake,
+  Calendar
 } from "lucide-react";
 
 const headerServices = [
@@ -435,12 +436,20 @@ export default function FaqPreise() {
                     <h3 className="font-semibold mb-1">Ihr persönliches Festpreis-Angebot</h3>
                     <p className="text-sm text-muted-foreground">Kostenlose Beratung vor Ort – ohne Überraschungen am Ende</p>
                   </div>
-                  <Link href="/anfrage">
-                    <Button size="lg" data-testid="button-cta-angebot">
-                      Jetzt Angebot anfordern
-                      <ChevronRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <Link href="/anfrage">
+                      <Button size="lg" data-testid="button-cta-angebot">
+                        Jetzt Angebot anfordern
+                        <ChevronRight className="w-5 h-5 ml-2" />
+                      </Button>
+                    </Link>
+                    <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                      <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-cta-booking">
+                        <Calendar className="w-5 h-5 mr-2" />
+                        24 Std. Online Termin
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -567,11 +576,17 @@ export default function FaqPreise() {
 
             <div className="mt-12 text-center">
               <p className="text-muted-foreground mb-4">Haben Sie weitere Fragen?</p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
                 <a href="tel:+4915212274043">
                   <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-call-faq">
                     <Phone className="w-4 h-4 mr-2" />
                     Anrufen
+                  </Button>
+                </a>
+                <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-booking-faq">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    24 Std. Online Termin
                   </Button>
                 </a>
                 <Link href="/kontakt">

@@ -37,7 +37,8 @@ import {
   PaintBucket,
   Plug,
   Droplets,
-  Thermometer
+  Thermometer,
+  Calendar
 } from "lucide-react";
 
 const headerServices = [
@@ -201,7 +202,7 @@ export default function Home() {
                 <p className="text-lg text-muted-foreground mb-8">
                   Schluss mit Handwerker-Chaos und Terminsorgen: Wir übernehmen Ihre komplette Sanierung in München – von der Planung bis zur Schlüsselübergabe. Sie lehnen sich zurück, wir machen das.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-4">
                   <Link href="/gewerke">
                     <Button size="lg" className="text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500" data-testid="button-hero-cta">
                       Handwerker-Vermittlung
@@ -212,6 +213,12 @@ export default function Home() {
                     <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500">
                       <Phone className="w-5 h-5 mr-2" />
                       0152 122 740 43
+                    </Button>
+                  </a>
+                  <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-hero-booking">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      24 Std. Online Termin
                     </Button>
                   </a>
                 </div>
@@ -321,13 +328,19 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/anfrage">
               <Button size="lg" className="text-lg" data-testid="button-process-cta">
                 Zum Anfrageformular
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-process-booking">
+                <Calendar className="w-5 h-5 mr-2" />
+                24 Std. Online Termin
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -481,12 +494,20 @@ export default function Home() {
           <p className="text-xl text-muted-foreground mb-8">
             Kostenlose Beratung, unverbindliches Angebot, Festpreis-Garantie. München, Pasing, Schwabing, Dachau, Starnberg – wir sind vor Ort.
           </p>
-          <Link href="/anfrage">
-            <Button size="lg" className="text-lg px-8" data-testid="button-cta-section">
-              Kostenlose Anfrage starten
-              <ChevronRight className="w-5 h-5 ml-2" />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/anfrage">
+              <Button size="lg" className="text-lg px-8" data-testid="button-cta-section">
+                Kostenlose Anfrage starten
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-cta-booking">
+                <Calendar className="w-5 h-5 mr-2" />
+                24 Std. Online Termin
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -529,12 +550,20 @@ export default function Home() {
             </div>
 
           <div className="text-center mt-8">
-            <Link href="/anfrage">
-              <Button size="lg" className="text-lg" data-testid="button-content-cta">
-                Kostenlose Anfrage starten
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/anfrage">
+                <Button size="lg" className="text-lg" data-testid="button-content-cta">
+                  Kostenlose Anfrage starten
+                  <ChevronRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-content-booking">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  24 Std. Online Termin
+                </Button>
+              </a>
+            </div>
             <p className="text-sm text-muted-foreground mt-3">
               Antwort innerhalb von 24 Stunden
             </p>
