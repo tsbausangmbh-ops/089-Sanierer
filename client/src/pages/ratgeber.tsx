@@ -45,11 +45,12 @@ export default function Ratgeber() {
                   FAQ & Preise
                 </Button>
               </Link>
-              <Link href="/gewerke">
-                <Button size="sm" className="text-sm bg-orange-500 hover:bg-orange-600 text-white border-orange-500">
-                  Handwerkervermittlung
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="text-sm bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  Onlinetermin
                 </Button>
-              </Link>
+              </a>
             </div>
             <Link href="/anfrage">
               <Button data-testid="button-header-cta">
