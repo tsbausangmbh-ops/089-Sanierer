@@ -14,12 +14,12 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
-const services = [
+const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "badsanierung", title: "Badsanierung" },
   { id: "kuechensanierung", title: "Küchensanierung" },
-  { id: "haussanierung", title: "Haussanierung" },
-  { id: "energetisch", title: "Energetische Sanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
 ];
 
 const contactFormSchema = z.object({
@@ -91,14 +91,30 @@ export default function Kontakt() {
               </div>
             </Link>
             <div className="hidden lg:flex items-center gap-1">
-              {services.map((service) => (
+              {headerServices.map((service) => (
                 <Link key={service.id} href={`/anfrage?service=${service.id}`}>
                   <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                     {service.title}
                   </Button>
                 </Link>
               ))}
+              <Link href="/ratgeber">
+                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                  Ratgeber
+                </Button>
+              </Link>
+              <Link href="/faq-preise">
+                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                  FAQ & Preise
+                </Button>
+              </Link>
             </div>
+            <a href="tel:+4915212274043" className="hidden sm:flex">
+              <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
+                <Phone className="w-4 h-4 mr-2" />
+                0152 122 740 43
+              </Button>
+            </a>
             <Link href="/anfrage">
               <Button data-testid="button-header-cta">
                 Kostenlose Anfrage

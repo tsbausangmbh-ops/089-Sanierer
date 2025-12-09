@@ -49,8 +49,8 @@ const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "badsanierung", title: "Badsanierung" },
   { id: "kuechensanierung", title: "Küchensanierung" },
-  { id: "bodensanierung", title: "Bodensanierung" },
-  { id: "heizungssanierung", title: "Heizungssanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
 ];
 
 const serviceOptions = [
