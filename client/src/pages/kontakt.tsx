@@ -25,6 +25,7 @@ const contactFormSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
   phone: z.string().optional(),
+  address: z.string().optional(),
   message: z.string().min(10, "Bitte geben Sie eine Nachricht ein (mind. 10 Zeichen)"),
 });
 
@@ -39,6 +40,7 @@ export default function Kontakt() {
       name: "",
       email: "",
       phone: "",
+      address: "",
       message: "",
     },
   });
@@ -51,7 +53,7 @@ export default function Kontakt() {
         email: data.email,
         phone: data.phone || "",
         message: data.message,
-        address: "",
+        address: data.address || "",
         postalCode: "",
         preferredContact: "email",
       });
@@ -179,6 +181,23 @@ export default function Kontakt() {
                                 type="tel" 
                                 placeholder="Ihre Telefonnummer" 
                                 data-testid="input-contact-phone"
+                                {...field} 
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="address"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Adresse / Ort (optional)</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Straße, PLZ Ort" 
+                                data-testid="input-contact-address"
                                 {...field} 
                               />
                             </FormControl>
