@@ -9,15 +9,15 @@ export async function seedAdminUser() {
     return;
   }
 
+  const hashedPassword = await hashPassword(adminPassword);
   const existingAdmin = await storage.getUserByUsername("admin");
   
   if (existingAdmin) {
-    console.log("Admin user already exists");
+    await storage.updateUserPassword(existingAdmin.id, hashedPassword);
+    console.log("Admin password updated successfully");
     return;
   }
 
-  const hashedPassword = await hashPassword(adminPassword);
-  
   await storage.createUser({
     username: "admin",
     password: hashedPassword,
