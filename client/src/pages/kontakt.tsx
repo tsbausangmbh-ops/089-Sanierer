@@ -206,7 +206,7 @@ export default function Kontakt() {
                       />
                       <Button 
                         type="submit" 
-                        className="w-full"
+                        className="w-full bg-orange-500 hover:bg-orange-600 text-white border-orange-500"
                         disabled={mutation.isPending}
                         data-testid="button-contact-submit"
                       >
