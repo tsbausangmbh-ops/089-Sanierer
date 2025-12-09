@@ -457,7 +457,7 @@ export default function FaqPreise() {
               ))}
             </div>
 
-            <Card className="bg-green-500/5 border-green-500/20">
+            <Card className="bg-orange-500/5 border-orange-500/20">
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex-1 text-center sm:text-left">
@@ -465,7 +465,7 @@ export default function FaqPreise() {
                     <p className="text-sm text-muted-foreground">Wir vermitteln kostenlos – Sie sparen die Suche</p>
                   </div>
                   <Link href="/gewerke">
-                    <Button size="lg" className="bg-green-500 hover:bg-green-600" data-testid="button-cta-gewerke">
+                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600" data-testid="button-cta-gewerke">
                       Handwerker anfragen
                       <ChevronRight className="w-5 h-5 ml-2" />
                     </Button>
