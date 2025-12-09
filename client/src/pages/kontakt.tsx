@@ -284,7 +284,7 @@ export default function Kontakt() {
                       </Button>
                     </a>
                     <Link href="/anfrage" className="block mt-4">
-                      <Button variant="outline" className="w-full" data-testid="button-contact-funnel">
+                      <Button className="w-full" data-testid="button-contact-funnel">
                         Zur Projektanfrage
                       </Button>
                     </Link>
