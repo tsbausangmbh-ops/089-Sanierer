@@ -238,6 +238,17 @@ export default function Kontakt() {
                           </>
                         )}
                       </Button>
+                      <a href="tel:+4915212274043" className="block mt-3">
+                        <Button 
+                          type="button" 
+                          variant="outline"
+                          className="w-full bg-green-500 hover:bg-green-600 text-white border-green-500"
+                          data-testid="button-contact-phone"
+                        >
+                          <Phone className="w-4 h-4 mr-2" />
+                          0152 122 740 43
+                        </Button>
+                      </a>
                     </form>
                   </Form>
                 </CardContent>
