@@ -17,6 +17,7 @@ import AGB from "@/pages/agb";
 import Kontakt from "@/pages/kontakt";
 import Ratgeber from "@/pages/ratgeber";
 import GewerkeFunnel from "@/pages/gewerke-funnel";
+import FaqPreise from "@/pages/faq-preise";
 import NotFound from "@/pages/not-found";
 
 declare global {
@@ -50,6 +51,7 @@ function Router() {
       <Route path="/kontakt" component={Kontakt} />
       <Route path="/ratgeber" component={Ratgeber} />
       <Route path="/gewerke" component={GewerkeFunnel} />
+      <Route path="/faq-preise" component={FaqPreise} />
       <Route path="/danke" component={Confirmation} />
       <Route component={NotFound} />
     </Switch>
