@@ -87,10 +87,10 @@ const tradeQuestions: Record<string, {
   maler: {
     title: "Malerarbeiten - Details",
     questions: [
-      { id: "bereich", label: "Welcher Bereich soll gestrichen werden?", type: "select", options: ["Innenräume", "Fassade/Außen", "Beides"] },
-      { id: "raeume", label: "Wie viele Räume?", type: "select", options: ["1-2 Räume", "3-4 Räume", "5-6 Räume", "Mehr als 6 Räume", "Ganze Wohnung/Haus"] },
-      { id: "flaeche", label: "Ungefähre Fläche in m²", type: "select", options: ["Bis 50 m²", "50-100 m²", "100-150 m²", "150-200 m²", "Über 200 m²"] },
-      { id: "vorarbeiten", label: "Sind Vorarbeiten nötig?", type: "select", options: ["Nur streichen", "Tapete entfernen", "Löcher/Risse spachteln", "Schimmelbehandlung", "Unsicher"] },
+      { id: "objekt", label: "Was soll gestrichen werden?", type: "select", options: ["Wände", "Decken", "Wände + Decken", "Türen/Zargen", "Fenster/Rahmen", "Fassade/Außen", "Treppe/Geländer"] },
+      { id: "raeume", label: "Wie viele Räume?", type: "select", options: ["1 Raum", "2-3 Räume", "4-5 Räume", "6+ Räume", "Ganze Wohnung", "Ganzes Haus"] },
+      { id: "flaeche", label: "Ungefähre Wandfläche in m²", type: "select", options: ["Bis 30 m²", "30-60 m²", "60-100 m²", "100-150 m²", "150-250 m²", "Über 250 m²"] },
+      { id: "vorarbeiten", label: "Welche Vorarbeiten sind nötig?", type: "select", options: ["Nur streichen (Wände ok)", "Tapete entfernen", "Löcher/Risse spachteln", "Alte Farbe abschleifen", "Schimmelbehandlung", "Unsicher"] },
     ]
   },
   elektriker: {
@@ -123,10 +123,10 @@ const tradeQuestions: Record<string, {
   fliesenleger: {
     title: "Fliesenarbeiten - Details",
     questions: [
-      { id: "raum", label: "Welcher Raum?", type: "select", options: ["Badezimmer", "Küche", "Flur/Eingang", "Wohnbereich", "Terrasse/Balkon", "Mehrere Räume"] },
-      { id: "flaeche", label: "Ungefähre Fläche", type: "select", options: ["Bis 10 m²", "10-20 m²", "20-40 m²", "40-60 m²", "Über 60 m²"] },
-      { id: "demontage", label: "Alte Fliesen entfernen?", type: "select", options: ["Ja, komplett", "Teilweise", "Nein, Neubau/Untergrund vorbereitet", "Unsicher"] },
-      { id: "material", label: "Gewünschtes Material", type: "select", options: ["Keramikfliesen", "Feinsteinzeug", "Naturstein", "Mosaik", "Noch nicht entschieden"] },
+      { id: "arbeit", label: "Welche Fliesenarbeiten benötigen Sie?", type: "select", options: ["Bad/WC komplett fliesen", "Bodenfliesen/Bodensanierung", "Großformatfliesen (ab 60x120)", "Dusche/Walk-In Abdichtung + Fliesen", "Küchenrückwand", "Reparaturen/einzelne Fliesen", "Balkon/Terrasse fliesen"] },
+      { id: "zustand", label: "Aktueller Zustand?", type: "select", options: ["Rohbau/Neubau", "Altbestand - Entfernen nötig", "Altbelag teilweise vorhanden", "Nur Reparatur"] },
+      { id: "demontage", label: "Alte Fliesen entfernen?", type: "select", options: ["Ja", "Nein", "Unklar"] },
+      { id: "material", label: "Sind die neuen Fliesen vorhanden?", type: "select", options: ["Ja, vorhanden", "Nein, bitte mit anbieten", "Noch unklar"] },
     ]
   },
   schreiner: {
@@ -420,23 +420,31 @@ export default function GewerkeFunnel() {
                 <h2 className="text-xl font-semibold mb-2">Ihr Objekt</h2>
                 <p className="text-muted-foreground">
                   {formData.trade === "fliesenleger" 
-                    ? "In welchem Bereich sollen die Fliesen verlegt werden?" 
+                    ? "Um welche Art von Immobilie handelt es sich?" 
+                    : formData.trade === "maler"
+                    ? "In welchem Objekt sollen die Malerarbeiten stattfinden?"
                     : "Um welchen Immobilientyp handelt es sich?"}
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 {(formData.trade === "fliesenleger" ? [
-                  { id: "wohnung", label: "Wohnung (komplett)", icon: Building2 },
-                  { id: "bad", label: "Bad", icon: Droplets },
-                  { id: "kueche", label: "Küche", icon: Home },
-                  { id: "wc", label: "WC / Gäste-WC", icon: Droplets },
+                  { id: "wohnung", label: "Wohnung", icon: Building2 },
+                  { id: "haus", label: "Haus", icon: Home },
+                  { id: "neubau", label: "Neubau", icon: Building2 },
+                  { id: "gewerbe", label: "Gewerbe", icon: Building2 },
+                  { id: "vermietet", label: "Vermietete Immobilie", icon: Building2 },
+                ] : (formData.trade === "maler" ? [
+                  { id: "wohnung", label: "Wohnung", icon: Building2 },
+                  { id: "haus", label: "Haus", icon: Home },
+                  { id: "neubau", label: "Neubau", icon: Building2 },
+                  { id: "gewerbe", label: "Gewerbe/Büro", icon: Building2 },
                 ] : [
                   { id: "wohnung", label: "Wohnung", icon: Building2 },
                   { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home },
                   { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2 },
                   { id: "gewerbe", label: "Gewerbe", icon: Building2 },
-                ]).map((type) => {
+                ])).map((type) => {
                   const isSelected = formData.propertyType === type.id;
                   return (
                     <Card
