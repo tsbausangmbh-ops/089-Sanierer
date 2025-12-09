@@ -15,6 +15,7 @@ import Impressum from "@/pages/impressum";
 import Datenschutz from "@/pages/datenschutz";
 import AGB from "@/pages/agb";
 import Kontakt from "@/pages/kontakt";
+import Ratgeber from "@/pages/ratgeber";
 import NotFound from "@/pages/not-found";
 
 declare global {
@@ -46,6 +47,7 @@ function Router() {
       <Route path="/datenschutz" component={Datenschutz} />
       <Route path="/agb" component={AGB} />
       <Route path="/kontakt" component={Kontakt} />
+      <Route path="/ratgeber" component={Ratgeber} />
       <Route component={NotFound} />
     </Switch>
   );
