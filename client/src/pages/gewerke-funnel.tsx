@@ -224,7 +224,7 @@ export default function GewerkeFunnel() {
     privacyAccepted: false,
   });
 
-  const totalSteps = 6;
+  const totalSteps = 8;
   const progress = (step / totalSteps) * 100;
 
   const submitMutation = useMutation({
@@ -268,13 +268,15 @@ export default function GewerkeFunnel() {
   const currentTradeBudgets = formData.trade ? tradeBudgets[formData.trade] : [];
 
   const canProceedStep1 = formData.trade !== "";
-  const canProceedStep2 = formData.propertyType !== "" && formData.livingArea !== "";
-  const canProceedStep3 = currentTradeQuestions 
-    ? currentTradeQuestions.questions.every(q => formData.tradeDetails[q.id])
-    : false;
-  const canProceedStep4 = formData.budget !== "";
-  const canProceedStep5 = formData.timeline !== "" && formData.description.length >= 10;
-  const canProceedStep6 = 
+  const canProceedStep2 = formData.propertyType !== "";
+  const canProceedStep3 = formData.livingArea !== "";
+  const firstTwoQuestions = currentTradeQuestions?.questions.slice(0, 2) || [];
+  const lastTwoQuestions = currentTradeQuestions?.questions.slice(2, 4) || [];
+  const canProceedStep4 = firstTwoQuestions.every(q => formData.tradeDetails[q.id]);
+  const canProceedStep5 = lastTwoQuestions.every(q => formData.tradeDetails[q.id]);
+  const canProceedStep6 = formData.budget !== "";
+  const canProceedStep7 = formData.timeline !== "" && formData.description.length >= 10;
+  const canProceedStep8 = 
     formData.name.length >= 2 &&
     formData.phone.length >= 6 &&
     formData.email.includes("@") &&
@@ -294,7 +296,7 @@ export default function GewerkeFunnel() {
   };
 
   const handleSubmit = () => {
-    if (canProceedStep6) {
+    if (canProceedStep8) {
       submitMutation.mutate(formData);
     }
   };
@@ -416,61 +418,39 @@ export default function GewerkeFunnel() {
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <h2 className="text-xl font-semibold mb-2">Ihr Objekt</h2>
-                <p className="text-muted-foreground">Angaben zu Ihrer Immobilie</p>
+                <p className="text-muted-foreground">Um welchen Immobilientyp handelt es sich?</p>
               </div>
 
-              <Card>
-                <CardContent className="p-6 space-y-6">
-                  <div>
-                    <Label className="text-base font-medium">Um welchen Immobilientyp handelt es sich?</Label>
-                    <div className="grid grid-cols-2 gap-3 mt-3">
-                      {[
-                        { id: "wohnung", label: "Wohnung", icon: Building2 },
-                        { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home },
-                        { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2 },
-                        { id: "gewerbe", label: "Gewerbe", icon: Building2 },
-                      ].map((type) => (
-                        <Button
-                          key={type.id}
-                          type="button"
-                          variant={formData.propertyType === type.id ? "default" : "outline"}
-                          className="h-auto py-4 flex flex-col gap-2"
-                          onClick={() => setFormData(prev => ({ ...prev, propertyType: type.id }))}
-                          data-testid={`button-property-${type.id}`}
-                        >
-                          <type.icon className="w-6 h-6" />
-                          <span>{type.label}</span>
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label className="text-base font-medium">Ungefähre Wohnfläche</Label>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3">
-                      {[
-                        "Bis 50 m²",
-                        "50-80 m²",
-                        "80-120 m²",
-                        "120-180 m²",
-                        "180-250 m²",
-                        "Über 250 m²",
-                      ].map((area) => (
-                        <Button
-                          key={area}
-                          type="button"
-                          variant={formData.livingArea === area ? "default" : "outline"}
-                          className="w-full"
-                          onClick={() => setFormData(prev => ({ ...prev, livingArea: area }))}
-                          data-testid={`button-area-${area}`}
-                        >
-                          {area}
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { id: "wohnung", label: "Wohnung", icon: Building2 },
+                  { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home },
+                  { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2 },
+                  { id: "gewerbe", label: "Gewerbe", icon: Building2 },
+                ].map((type) => {
+                  const isSelected = formData.propertyType === type.id;
+                  return (
+                    <Card
+                      key={type.id}
+                      className={`cursor-pointer transition-all ${
+                        isSelected ? "ring-2 ring-primary bg-primary/5" : "hover-elevate"
+                      }`}
+                      onClick={() => setFormData(prev => ({ ...prev, propertyType: type.id }))}
+                      data-testid={`card-property-${type.id}`}
+                    >
+                      <CardContent className="p-6 text-center">
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${
+                          isSelected ? "bg-primary text-primary-foreground" : "bg-primary/10"
+                        }`}>
+                          <type.icon className={`w-6 h-6 ${isSelected ? "" : "text-primary"}`} />
+                        </div>
+                        <h3 className="font-semibold">{type.label}</h3>
+                        {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-2" />}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
 
               <div className="flex justify-between pt-6">
                 <Button
@@ -496,16 +476,75 @@ export default function GewerkeFunnel() {
             </div>
           )}
 
-          {step === 3 && currentTradeQuestions && (
+          {step === 3 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <h2 className="text-xl font-semibold mb-2">{currentTradeQuestions.title}</h2>
+                <h2 className="text-xl font-semibold mb-2">Wohnfläche</h2>
+                <p className="text-muted-foreground">Wie groß ist Ihre Immobilie ungefähr?</p>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {[
+                  "Bis 50 m²",
+                  "50-80 m²",
+                  "80-120 m²",
+                  "120-180 m²",
+                  "180-250 m²",
+                  "Über 250 m²",
+                ].map((area) => {
+                  const isSelected = formData.livingArea === area;
+                  return (
+                    <Card
+                      key={area}
+                      className={`cursor-pointer transition-all ${
+                        isSelected ? "ring-2 ring-primary bg-primary/5" : "hover-elevate"
+                      }`}
+                      onClick={() => setFormData(prev => ({ ...prev, livingArea: area }))}
+                      data-testid={`card-area-${area}`}
+                    >
+                      <CardContent className="p-4 text-center">
+                        <h3 className="font-semibold">{area}</h3>
+                        {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-2" />}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+
+              <div className="flex justify-between pt-6">
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  size="lg"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
+                  data-testid="button-back-step3"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Zurück
+                </Button>
+                <Button
+                  onClick={handleNext}
+                  disabled={!canProceedStep3}
+                  size="lg"
+                  data-testid="button-next-step3"
+                >
+                  Weiter
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 4 && currentTradeQuestions && (
+            <div className="space-y-6">
+              <div className="text-center mb-6">
+                <h2 className="text-xl font-semibold mb-2">{currentTradeQuestions.title} (1/2)</h2>
                 <p className="text-muted-foreground">Bitte beantworten Sie die folgenden Fragen</p>
               </div>
 
               <Card>
                 <CardContent className="p-6 space-y-6">
-                  {currentTradeQuestions.questions.map((question) => (
+                  {firstTwoQuestions.map((question) => (
                     <div key={question.id}>
                       <Label className="text-base font-medium">{question.label}</Label>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-3">
@@ -533,16 +572,16 @@ export default function GewerkeFunnel() {
                   onClick={handleBack}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600 text-white border-green-500"
-                  data-testid="button-back-step3"
+                  data-testid="button-back-step4"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Zurück
                 </Button>
                 <Button
                   onClick={handleNext}
-                  disabled={!canProceedStep3}
+                  disabled={!canProceedStep4}
                   size="lg"
-                  data-testid="button-next-step3"
+                  data-testid="button-next-step4"
                 >
                   Weiter
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -551,7 +590,62 @@ export default function GewerkeFunnel() {
             </div>
           )}
 
-          {step === 4 && (
+          {step === 5 && currentTradeQuestions && (
+            <div className="space-y-6">
+              <div className="text-center mb-6">
+                <h2 className="text-xl font-semibold mb-2">{currentTradeQuestions.title} (2/2)</h2>
+                <p className="text-muted-foreground">Noch zwei Fragen zu Ihrem Projekt</p>
+              </div>
+
+              <Card>
+                <CardContent className="p-6 space-y-6">
+                  {lastTwoQuestions.map((question) => (
+                    <div key={question.id}>
+                      <Label className="text-base font-medium">{question.label}</Label>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-3">
+                        {question.options?.map((option) => (
+                          <Button
+                            key={option}
+                            type="button"
+                            variant={formData.tradeDetails[question.id] === option ? "default" : "outline"}
+                            className="w-full text-sm h-auto py-3 whitespace-normal"
+                            onClick={() => setTradeDetail(question.id, option)}
+                            data-testid={`button-${question.id}-${option}`}
+                          >
+                            {option}
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+
+              <div className="flex justify-between pt-6">
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  size="lg"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
+                  data-testid="button-back-step5"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Zurück
+                </Button>
+                <Button
+                  onClick={handleNext}
+                  disabled={!canProceedStep5}
+                  size="lg"
+                  data-testid="button-next-step5"
+                >
+                  Weiter
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 6 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
@@ -601,16 +695,16 @@ export default function GewerkeFunnel() {
                   onClick={handleBack}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600 text-white border-green-500"
-                  data-testid="button-back-step4"
+                  data-testid="button-back-step6"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Zurück
                 </Button>
                 <Button
                   onClick={handleNext}
-                  disabled={!canProceedStep4}
+                  disabled={!canProceedStep6}
                   size="lg"
-                  data-testid="button-next-step4"
+                  data-testid="button-next-step6"
                 >
                   Weiter
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -619,7 +713,7 @@ export default function GewerkeFunnel() {
             </div>
           )}
 
-          {step === 5 && (
+          {step === 7 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
@@ -693,16 +787,16 @@ export default function GewerkeFunnel() {
                   onClick={handleBack}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600 text-white border-green-500"
-                  data-testid="button-back-step5"
+                  data-testid="button-back-step7"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Zurück
                 </Button>
                 <Button
                   onClick={handleNext}
-                  disabled={!canProceedStep5}
+                  disabled={!canProceedStep7}
                   size="lg"
-                  data-testid="button-next-step5"
+                  data-testid="button-next-step7"
                 >
                   Weiter
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -711,7 +805,7 @@ export default function GewerkeFunnel() {
             </div>
           )}
 
-          {step === 6 && (
+          {step === 8 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <h2 className="text-xl font-semibold mb-2">Ihre Kontaktdaten</h2>
@@ -822,14 +916,14 @@ export default function GewerkeFunnel() {
                   onClick={handleBack}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600 text-white border-green-500"
-                  data-testid="button-back-step6"
+                  data-testid="button-back-step8"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Zurück
                 </Button>
                 <Button
                   onClick={handleSubmit}
-                  disabled={!canProceedStep6 || submitMutation.isPending}
+                  disabled={!canProceedStep8 || submitMutation.isPending}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600"
                   data-testid="button-submit"
