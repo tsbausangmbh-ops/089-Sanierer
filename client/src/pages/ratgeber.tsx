@@ -51,12 +51,6 @@ export default function Ratgeber() {
                 </Button>
               </Link>
             </div>
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer" className="hidden sm:flex">
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
-                <Calendar className="w-4 h-4 mr-2" />
-                24 Std. Online Termin
-              </Button>
-            </a>
             <Link href="/anfrage">
               <Button data-testid="button-header-cta">
                 Kostenlose Anfrage
