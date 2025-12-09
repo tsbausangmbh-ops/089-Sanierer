@@ -94,14 +94,14 @@ export default function Ratgeber() {
       <main className="pt-24 pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es wirklich? Ihr ehrlicher Ratgeber</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München Ratgeber: Kosten, Förderung & Tipps vom Experten</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Transparente Preise, echte Erfahrungswerte und Fördertipps aus der Praxis. So sparen Sie Zeit, Geld und Nerven bei Ihrer Sanierung in München.
             </p>
           </div>
 
           <nav className="mb-12 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
-            <h2 className="font-semibold mb-3">Direkt zum Thema springen</h2>
+            <h2 className="font-semibold mb-3">Sanierungsthemen im Überblick</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
               <a href="#haus-sanieren" className="text-primary hover:underline flex items-center gap-1"><Home className="w-4 h-4" /> Haus sanieren</a>
               <a href="#fassade" className="text-primary hover:underline flex items-center gap-1"><Paintbrush className="w-4 h-4" /> Fassade</a>
@@ -121,7 +121,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Home className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Haussanierung München: Endlich wissen, was es kostet</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Haussanierung München: Kosten, Dauer & Ablauf</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -218,7 +218,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Paintbrush className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Fassadenarbeiten München: So wird Ihr Haus wieder zum Hingucker</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Fassade streichen München: Kosten & Anbieter</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -315,7 +315,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Triangle className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Dachsanierung München: Endlich ein dichtes, gedämmtes Dach</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Dachsanierung München: Kosten pro m² & Förderung</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -427,7 +427,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Bath className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Badsanierung München: Ihr Traumbad in 2-4 Wochen</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Badsanierung München: Kosten, Dauer & Ablauf</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -524,7 +524,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Building className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Kellersanierung München: Schluss mit Feuchtigkeit und Schimmel</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Kellersanierung München: Kosten & Abdichtung</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -597,7 +597,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Thermometer className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Dämmung München: Bis zu 30% Heizkosten sparen</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Wärmedämmung München: Kosten & Förderung 2024</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -706,7 +706,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <DoorOpen className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Wohnungssanierung München: Vom Altbau zum Wohlfühl-Zuhause</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Wohnungssanierung München: Kosten & Tipps</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -790,7 +790,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Zap className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Energetische Sanierung: Bis zu 70% Förderung sichern</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Energetische Sanierung München: Förderung & KfW</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -928,7 +928,7 @@ export default function Ratgeber() {
           <div className="mt-16 text-center">
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-2xl font-bold mb-4">Bereit für Ihre Sanierung? Wir beraten Sie kostenlos.</h2>
+                <h2 className="text-2xl font-bold mb-4">Kostenlose Beratung für Sanierung in München</h2>
                 <p className="mb-6 opacity-90">
                   Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
                 </p>

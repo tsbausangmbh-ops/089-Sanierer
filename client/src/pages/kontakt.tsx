@@ -151,7 +151,7 @@ export default function Kontakt() {
 
       <main className="pt-24 pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sprechen Sie mit uns – wir sind für Sie da</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Kontakt KSHW München – Sanierungsberatung</h1>
           <p className="text-muted-foreground text-lg mb-8">
             Fragen zur Sanierung? Unverbindliches Angebot gewünscht? Schreiben Sie uns oder rufen Sie direkt an.
           </p>
@@ -160,7 +160,7 @@ export default function Kontakt() {
             <div>
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-6">Schreiben Sie uns eine Nachricht</h2>
+                  <h2 className="text-xl font-bold mb-6">Kostenlose Anfrage für Sanierung München</h2>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                       <FormField

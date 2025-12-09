@@ -429,7 +429,7 @@ export default function FaqPreise() {
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es?<br />Ihre wichtigsten Fragen beantwortet</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierungskosten München: Preise für<br />Badsanierung, Haussanierung & Küche</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Transparente Preise, ehrliche Antworten – so wissen Sie vorab, was Ihre Sanierung in München kostet.
               </p>
@@ -437,7 +437,7 @@ export default function FaqPreise() {
             <div className="text-center mt-6">
               <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1">
                 <Euro className="w-6 h-6 text-primary" />
-                Mit diesen Kosten können Sie rechnen
+                Sanierungspreise München – Kostenübersicht
               </h2>
               <p className="text-muted-foreground mt-2">Faire Preise für Münchner Qualitätsarbeit – alle Preise sind Netto und können je nach Projekt variieren</p>
             </div>
@@ -512,7 +512,7 @@ export default function FaqPreise() {
                 <Handshake className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Nur einen Handwerker gesucht?<br />So viel kostet es</h2>
+                <h2 className="text-2xl font-bold">Handwerker Stundenlohn München –<br />Preise für Maler, Elektriker & Sanitär</h2>
                 <p className="text-muted-foreground">Geprüfte Meisterbetriebe aus München – faire Stundensätze</p>
               </div>
             </div>
@@ -581,7 +581,7 @@ export default function FaqPreise() {
                 <HelpCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Ihre Fragen –<br />ehrliche Antworten aus der Praxis</h2>
+                <h2 className="text-2xl font-bold">FAQ Sanierung München –<br />Häufige Fragen & Antworten</h2>
                 <p className="text-muted-foreground">Das wollen Münchner über Sanierung wissen</p>
               </div>
             </div>
