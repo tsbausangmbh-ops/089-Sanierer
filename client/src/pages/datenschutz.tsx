@@ -333,6 +333,7 @@ export default function Datenschutz() {
                 <li><Link href="/impressum" className="hover:text-white">Impressum</Link></li>
                 <li><Link href="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
                 <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
+                <li><Link href="/kontakt" className="hover:text-white">Kontakt</Link></li>
               </ul>
             </div>
           </div>
