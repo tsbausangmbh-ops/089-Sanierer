@@ -64,7 +64,7 @@ export default function Ratgeber() {
             </p>
           </div>
 
-          <nav className="mb-12 p-4 bg-muted/50 rounded-lg">
+          <nav className="mb-12 p-4 bg-primary/10 rounded-lg">
             <h2 className="font-semibold mb-3">Direkt zum Thema springen</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
               <a href="#haus-sanieren" className="text-primary hover:underline flex items-center gap-1"><Home className="w-4 h-4" /> Haus sanieren</a>
