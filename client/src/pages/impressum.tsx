@@ -156,6 +156,7 @@ export default function Impressum() {
                 <li><Link href="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
                 <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
                 <li><Link href="/kontakt" className="hover:text-white">Kontakt</Link></li>
+                <li><Link href="/faq-preise" className="hover:text-white">FAQ & Preise</Link></li>
               </ul>
             </div>
           </div>
