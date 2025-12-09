@@ -405,14 +405,12 @@ export default function FaqPreise() {
                 Transparente Preise, ehrliche Antworten – so wissen Sie vorab, was Ihre Sanierung in München kostet.
               </p>
             </div>
-            <div className="flex items-center justify-center gap-3 mt-6">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <div className="text-center mt-6">
+              <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1">
                 <Euro className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-center">
-                <h2 className="text-2xl font-bold">Mit diesen Kosten können Sie rechnen</h2>
-                <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit – alle Preise sind Netto und können je nach Projekt variieren</p>
-              </div>
+                Mit diesen Kosten können Sie rechnen
+              </h2>
+              <p className="text-muted-foreground mt-2">Faire Preise für Münchner Qualitätsarbeit – alle Preise sind Netto und können je nach Projekt variieren</p>
             </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
               {priceRanges.map((item) => (
