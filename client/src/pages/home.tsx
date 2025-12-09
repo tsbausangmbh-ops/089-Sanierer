@@ -545,18 +545,18 @@ export default function Home() {
 
           <div className="text-center mt-8">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/anfrage">
-                <Button size="lg" className="text-lg" data-testid="button-content-cta">
-                  Kostenlose Anfrage starten
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
               <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-content-booking">
                   <Calendar className="w-5 h-5 mr-2" />
                   24 Std. Online Termin
                 </Button>
               </a>
+              <Link href="/anfrage">
+                <Button size="lg" className="text-lg" data-testid="button-content-cta">
+                  Kostenlose Anfrage starten
+                  <ChevronRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
             <p className="text-sm text-muted-foreground mt-3">
               Antwort innerhalb von 24 Stunden
