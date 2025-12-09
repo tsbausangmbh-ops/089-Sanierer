@@ -391,13 +391,7 @@ export default function FaqPreise() {
                 <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="py-8 lg:py-12">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
               {priceRanges.map((item) => (
                 <Card key={item.service} className="overflow-hidden" data-testid={`card-price-${item.service.toLowerCase().replace(/\s+/g, '-')}`}>
                   <CardHeader className="pb-3">
@@ -426,7 +420,7 @@ export default function FaqPreise() {
               ))}
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-4 mb-8">
+            <div className="bg-muted/50 rounded-lg p-4 mt-8 max-w-4xl mx-auto">
               <p className="text-sm text-muted-foreground">
                 <strong>Hinweis:</strong> Alle angegebenen Preise sind Durchschnittspreise für München und Umgebung und können von Angebot zu Angebot variieren. 
                 Wir geben hierzu keine Garantie – jeder Handwerker und Handwerksbetrieb macht seine eigene Kalkulation. 
@@ -434,7 +428,7 @@ export default function FaqPreise() {
               </p>
             </div>
 
-            <Card className="bg-primary/5 border-primary/20">
+            <Card className="bg-primary/5 border-primary/20 mt-8 max-w-4xl mx-auto">
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex-1 text-center sm:text-left">
