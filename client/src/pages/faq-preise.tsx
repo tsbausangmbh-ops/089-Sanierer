@@ -410,8 +410,8 @@ export default function FaqPreise() {
                 <Euro className="w-6 h-6 text-primary" />
               </div>
               <div className="text-center sm:text-left">
-                <h2 className="text-2xl font-bold">Mit diesen Kosten können Sie rechnen</h2>
-                <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit</p>
+                <h2 className="text-2xl font-bold">Mit diesen Kosten<br />können Sie rechnen</h2>
+                <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit – alle Preise sind Netto und können je nach Projekt variieren</p>
               </div>
             </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
