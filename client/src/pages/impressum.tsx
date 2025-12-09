@@ -25,6 +25,18 @@ export default function Impressum() {
                 </div>
               </div>
             </Link>
+            <div className="flex lg:hidden items-center gap-2">
+              <a href="tel:+4915212274043">
+                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
+                  <Phone className="w-4 h-4" />
+                </Button>
+              </a>
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
+                  <Calendar className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
                 <Link key={service.id} href={`/anfrage?service=${service.id}`}>
