@@ -55,9 +55,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://089-sanierer.de/handwerker</loc>
+    <loc>https://089-sanierer.de/gewerke</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://089-sanierer.de/anfrage?service=kuechensanierung</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

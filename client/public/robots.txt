@@ -1,4 +1,131 @@
+# KSHW München - robots.txt
+# https://089-sanierer.de
+
+# Default: Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*?*
+Disallow: /bestaetigung
 
+# Google Search (primary)
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Google Mobile
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Bing Preview
+User-agent: BingPreview
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# Yandex (Russia)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 5
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# AI Search Engines - ALLOW for visibility in AI search results
+# ChatGPT Search / OpenAI Search
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# ChatGPT User (browsing)
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini Search
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Microsoft Copilot
+User-agent: Copilot
+Allow: /
+
+# AI Training Bots - BLOCK (training data only, not search)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+# Aggressive/unwanted bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# Sitemap
 Sitemap: https://089-sanierer.de/sitemap.xml
+
+# Host
+Host: https://089-sanierer.de
