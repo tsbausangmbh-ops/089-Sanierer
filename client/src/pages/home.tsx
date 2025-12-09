@@ -559,7 +559,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-sm text-muted-foreground mt-3">
-              Antwort innerhalb von 24 Stunden
+              Antwort innerhalb von 48 Stunden
             </p>
           </div>
         </div>

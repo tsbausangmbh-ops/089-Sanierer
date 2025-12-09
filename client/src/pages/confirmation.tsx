@@ -50,7 +50,7 @@ export default function Confirmation() {
 
           <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <Clock className="w-4 h-4" />
-            Erwartete Rückmeldung: Innerhalb von 24 Stunden
+            Erwartete Rückmeldung: Innerhalb von 48 Stunden
           </div>
 
           <Card className="p-5 lg:p-6 text-left mb-6">

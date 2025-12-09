@@ -865,7 +865,7 @@ export default function FunnelPage() {
       case 5: return "Ihre Wahl bestimmt Materialien und Ausführung";
       case 6: return "So können wir optimal planen";
       case 7: return "Für eine realistische Kostenschätzung";
-      case 8: return "Wir melden uns innerhalb von 24 Stunden";
+      case 8: return "Wir melden uns innerhalb von 48 Stunden";
       default: return "";
     }
   };
@@ -2257,7 +2257,7 @@ export default function FunnelPage() {
         <div className="text-center py-8 bg-muted/30 rounded-lg">
           <h2 className="text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Kurze Fragen beantworten – Angebot in 24 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
+            Kurze Fragen beantworten – Angebot in 48 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
@@ -2285,7 +2285,7 @@ export default function FunnelPage() {
           <div className="flex flex-col items-center">
             <Clock className="w-10 h-10 text-primary mb-3" />
             <h4 className="font-semibold">Schnelle Reaktion</h4>
-            <p className="text-sm text-muted-foreground">Angebot in 24 Stunden</p>
+            <p className="text-sm text-muted-foreground">Angebot in 48 Stunden</p>
           </div>
           <div className="flex flex-col items-center">
             <Award className="w-10 h-10 text-primary mb-3" />
