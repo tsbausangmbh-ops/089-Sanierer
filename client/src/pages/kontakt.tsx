@@ -110,7 +110,13 @@ export default function Kontakt() {
                   FAQ & Preise
                 </Button>
               </Link>
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer" className="ml-3">
+              <a href="tel:+4915212274043" className="ml-2">
+                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
+                  <Phone className="w-4 h-4 mr-1" />
+                  0152 122 740 43
+                </Button>
+              </a>
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer" className="ml-2">
                 <Button size="sm" className="text-sm bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
                   <Calendar className="w-4 h-4 mr-1" />
                   24 h Termin
