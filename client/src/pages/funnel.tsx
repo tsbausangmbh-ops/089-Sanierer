@@ -119,6 +119,47 @@ const serviceOptions = [
   },
 ];
 
+// SEO Content for each service - shown as intro when service is pre-selected
+const serviceSeoContent: Record<string, {
+  headline: string;
+  subheadline: string;
+  intro: string;
+  problems: string[];
+  solutions: string[];
+  benefits: string[];
+  geoText: string;
+  ctaText: string;
+}> = {
+  komplettsanierung: {
+    headline: "Komplettsanierung in München – Ihr Zuhause in neuen Händen",
+    subheadline: "Stressfrei renovieren mit nur einem Ansprechpartner",
+    intro: "Sie planen eine umfassende Renovierung Ihrer Immobilie in München? Eine Komplettsanierung ist ein großes Projekt – aber mit dem richtigen Partner wird es zum Erfolgserlebnis. Bei KSHW München übernehmen wir die komplette Koordination aller Gewerke und liefern Ihnen ein schlüsselfertiges Ergebnis.",
+    problems: [
+      "Viele verschiedene Handwerker koordinieren ist zeitaufwändig und stressig",
+      "Unklare Kosten und ständige Nachforderungen verunsichern",
+      "Terminverschiebungen und Verzögerungen kosten Zeit und Nerven",
+      "Qualitätsmängel durch fehlende Abstimmung zwischen Gewerken",
+      "Keine klaren Ansprechpartner bei Problemen"
+    ],
+    solutions: [
+      "Ein Ansprechpartner für alle Gewerke – von Elektrik bis Malerarbeiten",
+      "Festpreisgarantie nach detaillierter Vor-Ort-Besichtigung",
+      "Verbindlicher Zeitplan mit Fertigstellungsgarantie",
+      "Eigene Qualitätskontrolle durch erfahrene Bauleiter",
+      "24h-Erreichbarkeit während der gesamten Bauphase"
+    ],
+    benefits: [
+      "Zeitersparnis: Sie kümmern sich um nichts – wir um alles",
+      "Kostenklarheit: Festpreis bedeutet keine bösen Überraschungen",
+      "Qualität: 5 Jahre Gewährleistung auf alle Arbeiten",
+      "Erfahrung: Über 500 erfolgreiche Projekte in München",
+      "Flexibilität: Sanierung auch bei bewohnter Immobilie möglich"
+    ],
+    geoText: "Wir sind Ihr lokaler Partner für Komplettsanierungen in ganz München und dem Umland. Ob Schwabing, Sendling, Bogenhausen oder Pasing – unsere Teams kennen die Besonderheiten Münchner Immobilien. Auch im Landkreis München, Dachau, Fürstenfeldbruck und Starnberg sind wir für Sie da.",
+    ctaText: "Kostenlose Beratung in 24h"
+  }
+};
+
 const propertyTypes = [
   { id: "wohnung", label: "Wohnung", icon: Building2, desc: "Eigentumswohnung oder Mietwohnung" },
   { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home, desc: "Freistehendes Haus" },
@@ -391,6 +432,8 @@ export default function FunnelPage() {
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState(1);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [showSeoIntro, setShowSeoIntro] = useState(false);
+  const [preSelectedService, setPreSelectedService] = useState<string | null>(null);
   
   const [formData, setFormData] = useState({
     service: "",
@@ -418,10 +461,24 @@ export default function FunnelPage() {
     const validServices = ["komplettsanierung", "badsanierung", "kuechensanierung", "bodensanierung", "elektrosanierung", "heizungssanierung", "energetische-sanierung", "dachsanierung"];
     
     if (serviceParam && validServices.includes(serviceParam)) {
-      setFormData(prev => ({ ...prev, service: serviceParam }));
-      setCurrentStep(2);
+      setPreSelectedService(serviceParam);
+      // Show SEO intro if content exists for this service
+      if (serviceSeoContent[serviceParam]) {
+        setShowSeoIntro(true);
+      } else {
+        setFormData(prev => ({ ...prev, service: serviceParam }));
+        setCurrentStep(2);
+      }
     }
   }, [searchString]);
+
+  const handleStartFromSeoIntro = () => {
+    if (preSelectedService) {
+      setFormData(prev => ({ ...prev, service: preSelectedService }));
+      setCurrentStep(2);
+    }
+    setShowSeoIntro(false);
+  };
 
   const totalSteps = 8;
   const progress = (currentStep / totalSteps) * 100;
@@ -1832,6 +1889,238 @@ export default function FunnelPage() {
       default: return null;
     }
   };
+
+  const renderSeoIntro = () => {
+    if (!preSelectedService || !serviceSeoContent[preSelectedService]) return null;
+    const content = serviceSeoContent[preSelectedService];
+    
+    return (
+      <div className="container mx-auto px-4 py-8 max-w-5xl pt-24 flex-1">
+        <div className="mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{content.headline}</h1>
+          <p className="text-xl text-muted-foreground">{content.subheadline}</p>
+        </div>
+
+        <div className="prose prose-lg max-w-none mb-8">
+          <p className="text-foreground leading-relaxed">{content.intro}</p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <Card>
+            <CardHeader className="pb-4">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-orange-500" />
+                Kennen Sie diese Probleme?
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {content.problems.map((problem, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center flex-shrink-0 text-sm font-medium">{index + 1}</span>
+                    <span className="text-muted-foreground">{problem}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-4">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-600" />
+                Unsere Lösung für Sie
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {content.solutions.map((solution, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{solution}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        <Card className="mb-8 border-primary/20 bg-primary/5">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Star className="w-5 h-5 text-primary" />
+              Ihre Vorteile mit KSHW München
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {content.benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start gap-2">
+                  <Award className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                  <span className="text-sm text-foreground">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-8">
+          <CardContent className="pt-6">
+            <div className="flex items-start gap-3">
+              <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="font-semibold mb-2">Ihr lokaler Partner in München</h3>
+                <p className="text-muted-foreground text-sm">{content.geoText}</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <div className="text-center py-8 bg-muted/30 rounded-lg">
+          <h2 className="text-2xl font-bold mb-4">Jetzt unverbindliches Angebot anfordern</h2>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Beantworten Sie uns ein paar kurze Fragen zu Ihrem Projekt und erhalten Sie innerhalb von 24 Stunden ein kostenloses, unverbindliches Angebot.
+          </p>
+          <Button size="lg" onClick={handleStartFromSeoIntro} className="text-lg" data-testid="button-start-funnel">
+            {content.ctaText}
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+          <p className="text-sm text-muted-foreground mt-4">
+            Keine versteckten Kosten. Keine Verpflichtungen.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="flex flex-col items-center">
+            <Shield className="w-10 h-10 text-primary mb-3" />
+            <h4 className="font-semibold">100% Unverbindlich</h4>
+            <p className="text-sm text-muted-foreground">Kostenlose Erstberatung</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Clock className="w-10 h-10 text-primary mb-3" />
+            <h4 className="font-semibold">Schnelle Reaktion</h4>
+            <p className="text-sm text-muted-foreground">Angebot in 24 Stunden</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Award className="w-10 h-10 text-primary mb-3" />
+            <h4 className="font-semibold">Meisterqualität</h4>
+            <p className="text-sm text-muted-foreground">5 Jahre Gewährleistung</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  if (showSeoIntro && preSelectedService && serviceSeoContent[preSelectedService]) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,85%,10%)] text-white border-b border-white/20">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="h-16 flex items-center justify-between gap-4">
+              <Link href="/">
+                <div className="flex items-center gap-2 cursor-pointer">
+                  <div className="flex flex-col">
+                    <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
+                    <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                  </div>
+                </div>
+              </Link>
+              <div className="hidden lg:flex items-center gap-1">
+                {headerServices.map((service) => (
+                  <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                    <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                      {service.title}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
+              <a href="tel:+4915212274043" className="hidden sm:flex">
+                <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
+                  <Phone className="w-4 h-4 mr-2" />
+                  0152 122 740 43
+                </Button>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {renderSeoIntro()}
+
+        <footer className="pt-12 pb-6 bg-[hsl(220,85%,10%)] text-white">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                  <div className="flex flex-col">
+                    <span className="font-bold text-base leading-tight">Komplettsanierungen</span>
+                    <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                  </div>
+                </div>
+                <p className="text-white/70 text-sm">
+                  Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4">Kontakt</h4>
+                <div className="space-y-2 text-sm text-white/70">
+                  <a href="tel:+4915212274043" className="flex items-center gap-2 hover:text-white">
+                    <Phone className="w-4 h-4" />
+                    0152 122 740 43
+                  </a>
+                  <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center gap-2 hover:text-white">
+                    <Mail className="w-4 h-4" />
+                    info@komplettsanierungen-haus-wohnung.de
+                  </a>
+                  <div className="flex items-start gap-2">
+                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                    <span>Zielstattstr. 9<br />81379 München</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    Mo-Fr: 8:00-17:00 Uhr
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4">Leistungen</h4>
+                <ul className="space-y-2 text-sm text-white/70">
+                  {headerServices.map((service) => (
+                    <li key={service.id}>
+                      <Link href={`/anfrage?service=${service.id}`} className="hover:text-white">
+                        {service.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4">Rechtliches</h4>
+                <ul className="space-y-2 text-sm text-white/70">
+                  <li><Link href="/impressum" className="hover:text-white">Impressum</Link></li>
+                  <li><Link href="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
+                  <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
+                  <li><Link href="/kontakt" className="hover:text-white">Kontakt</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <h4 className="font-bold mb-2 text-sm">Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker</h4>
+              <p className="text-xs text-white/60 mb-2">
+                München Pasing · Allach · Untermenzing · Obermenzing · Aubing · Moosach · Feldmoching · Schwabing · Sendling · Bogenhausen · Haidhausen · Neuhausen · Laim · Nymphenburg · Giesing · Berg am Laim · Trudering · Riem · Milbertshofen · Freimann · Solln · Großhadern · Hadern · Fürstenried · Forstenried · Thalkirchen · Obersendling · Ramersdorf · Perlach · Neuperlach
+              </p>
+              <p className="text-xs text-white/60">
+                Sowie im Münchner Umland: Dachau · Karlsfeld · Germering · Fürstenfeldbruck · Freising · Starnberg · Garching · Unterschleißheim · Oberschleißheim · Ottobrunn · Haar · Gräfelfing · Planegg · Pullach · Grünwald
+              </p>
+            </div>
+            <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
+              &copy; {new Date().getFullYear()} <a href="https://komplettsanierungen-haus-wohnung.de" className="hover:text-white underline">komplettsanierungen-haus-wohnung.de</a> - Alle Rechte vorbehalten.
+            </div>
+          </div>
+        </footer>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
