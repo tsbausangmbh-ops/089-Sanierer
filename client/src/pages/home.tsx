@@ -44,7 +44,6 @@ import {
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "badsanierung", title: "Badsanierung" },
-  { id: "kuechensanierung", title: "Küchensanierung" },
   { id: "dachsanierung", title: "Dachsanierung" },
   { id: "energetische-sanierung", title: "Energetische Sanierung" },
 ];
