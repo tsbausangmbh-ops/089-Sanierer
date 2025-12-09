@@ -418,16 +418,25 @@ export default function GewerkeFunnel() {
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <h2 className="text-xl font-semibold mb-2">Ihr Objekt</h2>
-                <p className="text-muted-foreground">Um welchen Immobilientyp handelt es sich?</p>
+                <p className="text-muted-foreground">
+                  {formData.trade === "fliesenleger" 
+                    ? "In welchem Bereich sollen die Fliesen verlegt werden?" 
+                    : "Um welchen Immobilientyp handelt es sich?"}
+                </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                {[
+                {(formData.trade === "fliesenleger" ? [
+                  { id: "wohnung", label: "Wohnung (komplett)", icon: Building2 },
+                  { id: "bad", label: "Bad", icon: Droplets },
+                  { id: "kueche", label: "Küche", icon: Home },
+                  { id: "wc", label: "WC / Gäste-WC", icon: Droplets },
+                ] : [
                   { id: "wohnung", label: "Wohnung", icon: Building2 },
                   { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home },
                   { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2 },
                   { id: "gewerbe", label: "Gewerbe", icon: Building2 },
-                ].map((type) => {
+                ]).map((type) => {
                   const isSelected = formData.propertyType === type.id;
                   return (
                     <Card
