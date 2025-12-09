@@ -1,0 +1,163 @@
+8-Schritte-Funnel – FLIESENLEGER München (High-Conversion NLP-Version)
+📍 STEP 1 – Welche Fliesenarbeiten benötigen Sie?
+
+Mehrfachauswahl:
+
+Bad/WC komplett neu fliesen
+
+Bodensanierung / Bodenfliesen
+
+Großformatfliesen (ab 60×120)
+
+Dusche/Walk-In Abdichtung + Fliesen
+
+Küchenrückwand
+
+Reparaturen / einzelne Fliesen
+
+Balkon/Terrasse fliesen
+
+Sonstiges (Freitext)
+
+🎯 Ziel: Nutzer sofort in die passende Leistungsschiene führen.
+
+📍 STEP 2 – Objekt & Lage in München
+
+„Um welche Art von Immobilie handelt es sich?“
+
+Wohnung
+
+Haus
+
+Neubau
+
+Gewerbe
+
+Vermietete Immobilie (WEG / Verwaltung)
+
+„PLZ oder Stadtteil in München?“
+→ wichtig für Geo-Targeting.
+
+📍 STEP 3 – Projektumfang
+
+Automatisch je nach Auswahl:
+
+Bad / WC:
+
+„Wie groß ist das Bad?“ (m²)
+
+„Wieviel Wandfläche soll gefliest werden?“ (m²)
+
+„Bodenfläche?“ (m²)
+
+Boden:
+
+„Welche Fläche soll gefliest werden?“ (m²)
+
+„Untergrund: Estrich / Beton / Altbau-Holzboden?“
+
+Großformat:
+
+„Welche Größe ist gewünscht?“
+
+60x120
+
+80x80
+
+120x120
+
+120x240
+
+Noch unklar
+
+Balkon/Terrasse:
+
+„Ist eine Abdichtung vorhanden?“
+
+„Gefälle vorhanden?“
+
+📍 STEP 4 – Zustand / Vorbereitung
+
+„Wie ist der aktuelle Zustand?“
+
+Rohbau
+
+Alter Bestand → Entfernen erforderlich
+
+Altbelag teilweise vorhanden
+
+Nur Reparatur
+
+„Sollen alte Fliesen entfernt werden?“
+
+Ja
+
+Nein
+
+Unklar
+
+📍 STEP 5 – Fliesenmaterial
+
+„Sind die neuen Fliesen bereits vorhanden?“
+
+Ja, vorhanden
+
+Nein, bitte mit anbieten
+
+Noch unklar
+
+Wenn mit anbieten → Zusatzfrage:
+
+„Welche Art bevorzugen Sie?“
+
+Standard (30x60)
+
+Modern (große Formate)
+
+Naturstein
+
+Holzoptik
+
+Noch offen
+
+📍 STEP 6 – Bilderupload
+
+„Bitte laden Sie 1–5 Fotos der Fläche hoch – das beschleunigt Ihr Angebot erheblich.“
+
+Warum wichtig:
+
+Untergrundbewertung
+
+Schneideaufwand
+
+Fugenbild
+
+Demontage
+
+📍 STEP 7 – Dringlichkeit
+
+Sofort / Notfall
+
+Diese Woche
+
+In 1–3 Wochen
+
+Geplante Renovierung
+
+➡️ Hochdringliche Leads werden zuerst kontaktiert.
+
+📍 STEP 8 – Kontaktdaten + Termin-CTA (Abschluss)
+
+Headline:
+„Perfekt – Ihre Fliesenarbeiten in München wurden erfasst!“
+
+Text (NLP-optimiert):
+„Damit wir Ihnen das passende Fachteam zuordnen und Ihnen ein präzises Angebot erstellen können, wählen Sie jetzt Ihren bevorzugten Rückruftermin aus. So stellen Sie sicher, dass Ihr Projekt ohne Verzögerung starten kann.“
+
+Buttons (Höchste Conversion):
+
+Sofort-Rückruf anfordern
+
+Wunschtermin auswählen (Kalender)
+
+WhatsApp starten
