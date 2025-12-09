@@ -359,13 +359,13 @@ export default function GewerkeFunnel() {
                   24 h Termin
                 </Button>
               </a>
+              <a href="tel:+4915212274043">
+                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
+                  <Phone className="w-4 h-4 mr-1" />
+                  Anrufen
+                </Button>
+              </a>
             </div>
-            <a href="tel:+4915212274043" className="hidden sm:flex">
-              <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500">
-                <Phone className="w-4 h-4 mr-2" />
-                0152 122 740 43
-              </Button>
-            </a>
           </div>
         </div>
       </header>
