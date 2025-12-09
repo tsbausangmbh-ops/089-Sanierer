@@ -39,8 +39,8 @@ const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
   { id: "badsanierung", title: "Badsanierung" },
   { id: "kuechensanierung", title: "Küchensanierung" },
-  { id: "bodensanierung", title: "Bodensanierung" },
-  { id: "heizungssanierung", title: "Heizungssanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
 ];
 
 const tradeOptions = [
@@ -402,7 +402,18 @@ export default function GewerkeFunnel() {
                 })}
               </div>
 
-              <div className="flex justify-end pt-6">
+              <div className="flex justify-between gap-4 pt-6">
+                <Link href="/">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-green-500 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20"
+                    data-testid="button-back-step1"
+                  >
+                    <ArrowLeft className="w-5 h-5 mr-2" />
+                    Zurück
+                  </Button>
+                </Link>
                 <Button
                   onClick={handleNext}
                   disabled={!canProceedStep1}
