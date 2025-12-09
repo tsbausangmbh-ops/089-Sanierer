@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route";
+import { CookieConsent } from "@/components/cookie-consent";
 import Home from "@/pages/home";
 import Funnel from "@/pages/funnel";
 import Confirmation from "@/pages/confirmation";
@@ -65,6 +66,7 @@ export default function App() {
         <AuthProvider>
           <Router />
           <Toaster />
+          <CookieConsent />
         </AuthProvider>
       </TooltipProvider>
     </QueryClientProvider>

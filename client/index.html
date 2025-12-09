@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYW3QW8W6"></script>
+    <!-- Google Consent Mode V2 - DSGVO-konform -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Standard: Analytics verweigert bis Einwilligung
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
       gtag('js', new Date());
-      gtag('config', 'G-CTYW3QW8W6');
+      gtag('config', 'G-CTYW3QW8W6', {
+        'anonymize_ip': true
+      });
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYW3QW8W6"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     
     <!-- Primary Meta Tags - AI & Google Optimized -->
     <title>Komplettsanierung München | Badsanierung, Haussanierung & Wohnungssanierung | KSHW München</title>
     <meta name="title" content="Komplettsanierung München | Badsanierung, Haussanierung & Wohnungssanierung | KSHW München" />
-    <meta name="description" content="KSHW München ist Ihr Meisterbetrieb für Komplettsanierung in München. Badsanierung ab 8.000€, Küchensanierung, Haussanierung & Wohnungssanierung mit Festpreisgarantie. 268+ Projekte, 5 Jahre Gewährleistung. Kostenlose Beratung: 0152 122 740 43" />
+    <meta name="description" content="KSHW München ist Ihr Partner für Komplettsanierung in München. Badsanierung ab 8.000€, Küchensanierung, Haussanierung & Wohnungssanierung mit Festpreisgarantie. 268+ Projekte, 5 Jahre Gewährleistung. Kostenlose Beratung: 0152 122 740 43" />
     <meta name="keywords" content="Komplettsanierung München, Badsanierung München, Küchensanierung München, Haussanierung München, Wohnungssanierung München, Sanierung München, Renovierung München, Altbausanierung München, Kernsanierung München, Sanierung Schwabing, Sanierung Bogenhausen, Sanierung Sendling, Sanierung Pasing, Sanierung Trudering, Sanierung Haidhausen, Sanierung Dachau, Sanierung Starnberg, Sanierung Fürstenfeldbruck, KSHW München, 089 Sanierer" />
     
     <!-- Geo Meta Tags -->
@@ -46,7 +60,7 @@
     <meta property="og:url" content="https://089-sanierer.de" />
     <meta property="og:site_name" content="KSHW München - Komplettsanierungen Haus & Wohnung" />
     <meta property="og:title" content="Komplettsanierung München | Badsanierung & Haussanierung | KSHW" />
-    <meta property="og:description" content="Ihr Meisterbetrieb für Sanierung in München: Badsanierung ab 8.000€, Komplettsanierung, Küchensanierung. 268+ Projekte, Festpreisgarantie, 5 Jahre Gewährleistung. Jetzt kostenlos anfragen!" />
+    <meta property="og:description" content="Ihr Partner für Sanierung in München: Badsanierung ab 8.000€, Komplettsanierung, Küchensanierung. 268+ Projekte, Festpreisgarantie, 5 Jahre Gewährleistung. Jetzt kostenlos anfragen!" />
     <meta property="og:image" content="https://089-sanierer.de/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
