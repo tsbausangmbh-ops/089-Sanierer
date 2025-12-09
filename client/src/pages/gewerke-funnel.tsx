@@ -87,10 +87,10 @@ const tradeQuestions: Record<string, {
   maler: {
     title: "Malerarbeiten - Details",
     questions: [
-      { id: "objekt", label: "Was soll gestrichen werden?", type: "select", options: ["Wände", "Decken", "Wände + Decken", "Türen/Zargen", "Fenster/Rahmen", "Fassade/Außen", "Treppe/Geländer"] },
-      { id: "raeume", label: "Wie viele Räume?", type: "select", options: ["1 Raum", "2-3 Räume", "4-5 Räume", "6+ Räume", "Ganze Wohnung", "Ganzes Haus"] },
-      { id: "flaeche", label: "Ungefähre Wandfläche in m²", type: "select", options: ["Bis 30 m²", "30-60 m²", "60-100 m²", "100-150 m²", "150-250 m²", "Über 250 m²"] },
-      { id: "vorarbeiten", label: "Welche Vorarbeiten sind nötig?", type: "select", options: ["Nur streichen (Wände ok)", "Tapete entfernen", "Löcher/Risse spachteln", "Alte Farbe abschleifen", "Schimmelbehandlung", "Unsicher"] },
+      { id: "arbeit", label: "Welche Malerarbeiten benötigen Sie?", type: "select", options: ["Wände neu streichen", "Decken streichen", "Türen/Zargen lackieren", "Fassade streichen", "Schimmelbeseitigung", "Tapeten entfernen/neu", "Spachteln/Glätten (Q1-Q4)", "Sonstiges"] },
+      { id: "zustand", label: "Aktueller Zustand der Flächen?", type: "select", options: ["Normaler Verschmutzungsgrad", "Starke Verschmutzung/Nikotin", "Schimmelbefall", "Alte Farbe blättert ab", "Tapete vorhanden"] },
+      { id: "vorbereitung", label: "Oberflächenvorbereitung gewünscht?", type: "select", options: ["Nur streichen", "Spachtelarbeiten nötig", "Glätten Q2/Q3/Q4", "Tapeten entfernen", "Unsicher"] },
+      { id: "farbsystem", label: "Welches Farbsystem?", type: "select", options: ["Standard Weiß", "Farbig nach Wunsch", "Premium/Allergikerfarbe", "Schmutzabweisend", "Noch unklar"] },
     ]
   },
   elektriker: {
