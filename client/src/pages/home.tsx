@@ -197,7 +197,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/gewerke">
-                    <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-hero-cta">
+                    <Button size="lg" className="text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500" data-testid="button-hero-cta">
                       Handwerker-Vermittlung
                       <ChevronRight className="w-5 h-5 ml-2" />
                     </Button>
@@ -416,7 +416,7 @@ export default function Home() {
               Alle unsere Partnerfirmen sind Meisterbetriebe aus München und Umgebung mit nachgewiesener Qualität und Zuverlässigkeit.
             </p>
             <Link href="/gewerke">
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-partner-cta">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white border-orange-500" data-testid="button-partner-cta">
                 Handwerker-Vermittlung anfragen
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
