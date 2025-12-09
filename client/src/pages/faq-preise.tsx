@@ -90,7 +90,7 @@ const faqItems = [
   },
   {
     question: "Vermitteln Sie einzelne Handwerker in München?",
-    answer: "Ja, über unseren **Handwerker-Vermittlungsservice** vermitteln wir auch einzelne **Gewerke** wie **Maler, Elektriker, Fliesenleger oder Sanitärinstallateure**. Alle Partner sind **geprüfte Meisterbetriebe aus München** und Umgebung.",
+    answer: "Ja, über unseren **Handwerker-Vermittlungsservice** vermitteln wir auch einzelne **Gewerke** wie **Maler, Elektriker, Fliesenleger oder Sanitärinstallateure**. Alle Partner sind **geprüfte Handwerker aus München** und Umgebung.",
     link: "/gewerke"
   },
   {
@@ -513,7 +513,7 @@ export default function FaqPreise() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Handwerker Stundenlohn München –<br />Preise für Maler, Elektriker & Sanitär</h2>
-                <p className="text-muted-foreground">Geprüfte Meisterbetriebe aus München – faire Stundensätze</p>
+                <p className="text-muted-foreground">Geprüfte Handwerker aus München – faire Stundensätze</p>
               </div>
             </div>
 
@@ -560,7 +560,7 @@ export default function FaqPreise() {
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex-1 text-center sm:text-left">
                     <h3 className="font-semibold mb-1">Geprüfte Münchner Handwerker – kostenlos vermittelt</h3>
-                    <p className="text-sm text-muted-foreground">Kein langes Suchen: Wir finden den passenden Meisterbetrieb für Sie</p>
+                    <p className="text-sm text-muted-foreground">Kein langes Suchen: Wir finden den passenden Handwerker für Sie</p>
                   </div>
                   <Link href="/gewerke">
                     <Button size="lg" className="bg-green-600 hover:bg-green-700" data-testid="button-cta-gewerke">
