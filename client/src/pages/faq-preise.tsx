@@ -409,8 +409,8 @@ export default function FaqPreise() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <Euro className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-center sm:text-left">
-                <h2 className="text-2xl font-bold">Mit diesen Kosten<br />können Sie rechnen</h2>
+              <div className="text-center">
+                <h2 className="text-2xl font-bold">Mit diesen Kosten können Sie rechnen</h2>
                 <p className="text-muted-foreground">Faire Preise für Münchner Qualitätsarbeit – alle Preise sind Netto und können je nach Projekt variieren</p>
               </div>
             </div>
