@@ -272,12 +272,12 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="relative flex items-stretch h-full">
+              <div className="relative flex items-center h-full py-3">
                 <div className="w-full overflow-hidden rounded-lg shadow-2xl">
                   <img 
                     src={houseBeforeAfter} 
                     alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
-                    className="w-full h-full object-cover object-center min-h-[300px] lg:min-h-[400px]"
+                    className="w-full h-full object-cover object-center min-h-[280px] lg:min-h-[360px]"
                     data-testid="img-hero-bathroom"
                   />
                 </div>
