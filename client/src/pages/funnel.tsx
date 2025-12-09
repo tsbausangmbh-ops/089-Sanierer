@@ -2296,9 +2296,10 @@ export default function FunnelPage() {
             <div className="h-16 flex items-center justify-between gap-4">
               <Link href="/">
                 <div className="flex items-center gap-2 cursor-pointer">
-                  <div className="flex flex-col">
-                    <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
-                    <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                  <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                  <div className="hidden sm:flex flex-col">
+                    <span className="font-bold text-base leading-tight">KSHW München</span>
+                    <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
                   </div>
                 </div>
               </Link>
@@ -2407,9 +2408,10 @@ export default function FunnelPage() {
           <div className="h-16 flex items-center justify-between gap-4">
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
-                <div className="flex flex-col">
-                  <span className="font-bold text-base leading-tight text-white">Komplettsanierungen</span>
-                  <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
+                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                <div className="hidden sm:flex flex-col">
+                  <span className="font-bold text-base leading-tight">KSHW München</span>
+                  <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
                 </div>
               </div>
             </Link>
