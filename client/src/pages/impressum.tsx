@@ -1,6 +1,13 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
@@ -36,6 +43,50 @@ export default function Impressum() {
                   <Calendar className="w-4 h-4" />
                 </Button>
               </a>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button size="icon" variant="ghost" className="text-white hover:bg-white/10">
+                    <Menu className="w-5 h-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[280px] bg-[hsl(220,85%,10%)] text-white border-l-white/20">
+                  <SheetHeader>
+                    <SheetTitle className="text-white text-left">Navigation</SheetTitle>
+                  </SheetHeader>
+                  <nav className="flex flex-col gap-2 mt-6">
+                    {headerServices.map((service) => (
+                      <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                        <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
+                          {service.title}
+                        </Button>
+                      </Link>
+                    ))}
+                    <div className="border-t border-white/20 my-2" />
+                    <Link href="/ratgeber">
+                      <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
+                        Ratgeber
+                      </Button>
+                    </Link>
+                    <Link href="/faq-preise">
+                      <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
+                        FAQ & Preise
+                      </Button>
+                    </Link>
+                    <Link href="/kontakt">
+                      <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
+                        Kontakt
+                      </Button>
+                    </Link>
+                    <div className="border-t border-white/20 my-2" />
+                    <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        24 h Termin
+                      </Button>
+                    </a>
+                  </nav>
+                </SheetContent>
+              </Sheet>
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
