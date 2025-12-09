@@ -290,19 +290,19 @@ export default function Ratgeber() {
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Neueindeckung:</strong> 100-200 EUR/m²</span>
+                        <span><strong>Neueindeckung:</strong> 120-240 EUR/m²</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Inkl. Dämmung:</strong> 150-300 EUR/m²</span>
+                        <span><strong>Inkl. Dämmung:</strong> 180-360 EUR/m²</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Dachstuhl-Erneuerung:</strong> ab 60 EUR/m²</span>
+                        <span><strong>Dachstuhl-Erneuerung:</strong> ab 72 EUR/m²</span>
                       </li>
                     </ul>
                     <p className="text-xs text-muted-foreground mt-4">
-                      Beispiel: Dach 100 m² neu eindecken mit Dämmung = ca. 15.000-30.000 EUR
+                      Beispiel: Dach 100 m² neu eindecken mit Dämmung = ca. 18.000-36.000 EUR
                     </p>
                   </CardContent>
                 </Card>
@@ -318,15 +318,15 @@ export default function Ratgeber() {
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Einfacher Ausbau:</strong> 500-800 EUR/m²</span>
+                        <span><strong>Einfacher Ausbau:</strong> 600-960 EUR/m²</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Mit Bad/Küche:</strong> 800-1.200 EUR/m²</span>
+                        <span><strong>Mit Bad/Küche:</strong> 960-1.440 EUR/m²</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Dachgauben:</strong> 3.000-8.000 EUR/Stück</span>
+                        <span><strong>Dachgauben:</strong> 3.600-9.600 EUR/Stück</span>
                       </li>
                     </ul>
                   </CardContent>
@@ -343,15 +343,15 @@ export default function Ratgeber() {
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Dämmung:</strong> 40-100 EUR/m²</span>
+                        <span><strong>Dämmung:</strong> 48-120 EUR/m²</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Trockenbau:</strong> 50-80 EUR/m²</span>
+                        <span><strong>Trockenbau:</strong> 60-96 EUR/m²</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span><strong>Fenster/Gauben:</strong> 1.000-5.000 EUR</span>
+                        <span><strong>Fenster/Gauben:</strong> 1.200-6.000 EUR</span>
                       </li>
                     </ul>
                   </CardContent>
