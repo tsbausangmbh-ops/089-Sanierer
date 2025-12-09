@@ -40,7 +40,8 @@ import {
   PaintBucket,
   Mail,
   MapPin,
-  HelpCircle
+  HelpCircle,
+  Calendar
 } from "lucide-react";
 import { Link } from "wouter";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
@@ -2258,10 +2259,18 @@ export default function FunnelPage() {
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Kurze Fragen beantworten – Angebot in 24 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
           </p>
-          <Button size="lg" onClick={handleStartFromSeoIntro} className="text-lg" data-testid="button-start-funnel">
-            {content.ctaText}
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-seo-booking">
+                <Calendar className="w-5 h-5 mr-2" />
+                24 Std. Online Termin
+              </Button>
+            </a>
+            <Button size="lg" onClick={handleStartFromSeoIntro} className="text-lg" data-testid="button-start-funnel">
+              {content.ctaText}
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
           <p className="text-sm text-muted-foreground mt-4">
             Keine versteckten Kosten. Keine Verpflichtungen.
           </p>
