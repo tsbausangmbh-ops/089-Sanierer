@@ -16,6 +16,7 @@ import Datenschutz from "@/pages/datenschutz";
 import AGB from "@/pages/agb";
 import Kontakt from "@/pages/kontakt";
 import Ratgeber from "@/pages/ratgeber";
+import GewerkeFunnel from "@/pages/gewerke-funnel";
 import NotFound from "@/pages/not-found";
 
 declare global {
@@ -48,6 +49,8 @@ function Router() {
       <Route path="/agb" component={AGB} />
       <Route path="/kontakt" component={Kontakt} />
       <Route path="/ratgeber" component={Ratgeber} />
+      <Route path="/gewerke" component={GewerkeFunnel} />
+      <Route path="/danke" component={Confirmation} />
       <Route component={NotFound} />
     </Switch>
   );
