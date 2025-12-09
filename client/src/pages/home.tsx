@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import houseBeforeAfter from "@assets/generated_images/house_renovation_zigzag_clean.png";
+import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card } from "@/components/ui/card";
 import {
