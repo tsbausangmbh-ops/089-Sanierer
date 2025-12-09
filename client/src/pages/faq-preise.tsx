@@ -301,7 +301,7 @@ const tradePrices = [
 export default function FaqPreise() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <header className="sticky top-0 z-50 bg-[hsl(220,85%,18%)] text-white shadow-lg">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,85%,10%)] text-white border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/">
@@ -342,7 +342,7 @@ export default function FaqPreise() {
         </div>
       </header>
 
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
