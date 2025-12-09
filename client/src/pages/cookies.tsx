@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Cookie, Shield, BarChart3, Megaphone, Settings } from "lucide-react";
 import { CookieSettingsButton } from "@/components/cookie-consent";
-import kshwLogoWhiteBg from "@assets/kshw-logo-white-bg.png";
+import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 export default function Cookies() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[hsl(220,85%,22%)]">
       <header className="bg-[hsl(220,85%,22%)] text-white py-4">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
@@ -30,14 +30,14 @@ export default function Cookies() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-4xl mx-auto px-4 py-12 text-white">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-            <Cookie className="w-6 h-6 text-primary" />
+          <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+            <Cookie className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold" data-testid="heading-cookies">Cookie-Richtlinie</h1>
-            <p className="text-muted-foreground">Stand: Dezember 2024</p>
+            <h1 className="text-3xl font-bold text-white" data-testid="heading-cookies">Cookie-Richtlinie</h1>
+            <p className="text-white/70">Stand: Dezember 2024</p>
           </div>
         </div>
 
