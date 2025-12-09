@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -18,7 +19,6 @@ import {
   Phone,
   Loader2,
   Mail,
-  MapPin,
   PaintBucket,
   Plug,
   Droplets,
@@ -26,10 +26,12 @@ import {
   Layers,
   Wrench,
   Handshake,
-  Clock
+  Clock,
+  Home,
+  Building2,
+  Euro
 } from "lucide-react";
 import { Link } from "wouter";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -78,10 +80,120 @@ const tradeOptions = [
   },
 ];
 
+const tradeQuestions: Record<string, {
+  title: string;
+  questions: { id: string; label: string; type: "select" | "checkbox" | "number" | "text"; options?: string[] }[];
+}> = {
+  maler: {
+    title: "Malerarbeiten - Details",
+    questions: [
+      { id: "bereich", label: "Welcher Bereich soll gestrichen werden?", type: "select", options: ["Innenräume", "Fassade/Außen", "Beides"] },
+      { id: "raeume", label: "Wie viele Räume?", type: "select", options: ["1-2 Räume", "3-4 Räume", "5-6 Räume", "Mehr als 6 Räume", "Ganze Wohnung/Haus"] },
+      { id: "flaeche", label: "Ungefähre Fläche in m²", type: "select", options: ["Bis 50 m²", "50-100 m²", "100-150 m²", "150-200 m²", "Über 200 m²"] },
+      { id: "vorarbeiten", label: "Sind Vorarbeiten nötig?", type: "select", options: ["Nur streichen", "Tapete entfernen", "Löcher/Risse spachteln", "Schimmelbehandlung", "Unsicher"] },
+    ]
+  },
+  elektriker: {
+    title: "Elektroarbeiten - Details",
+    questions: [
+      { id: "art", label: "Art der Arbeit", type: "select", options: ["Neuinstallation", "Renovierung/Erweiterung", "Reparatur", "Sicherungskasten erneuern", "Komplettsanierung Elektrik"] },
+      { id: "gebaeude", label: "Gebäudeart", type: "select", options: ["Altbau (vor 1970)", "Altbau (1970-1990)", "Neubau/Modernbau", "Gewerbe"] },
+      { id: "umfang", label: "Umfang der Arbeiten", type: "select", options: ["1-2 Steckdosen/Schalter", "Ganzer Raum", "Mehrere Räume", "Ganze Wohnung", "Ganzes Haus"] },
+      { id: "zusatz", label: "Zusätzliche Leistungen?", type: "select", options: ["Keine", "Smart Home", "Netzwerk/LAN", "Beleuchtungskonzept", "E-Auto Wallbox"] },
+    ]
+  },
+  sanitaer: {
+    title: "Sanitärarbeiten - Details",
+    questions: [
+      { id: "bereich", label: "Welcher Bereich?", type: "select", options: ["Badezimmer", "Gäste-WC", "Küche", "Waschküche/Keller", "Mehrere Bereiche"] },
+      { id: "art", label: "Art der Arbeit", type: "select", options: ["Neuinstallation", "Austausch Armaturen", "Rohrleitungen erneuern", "Verstopfung/Reparatur", "Komplettsanierung"] },
+      { id: "objekte", label: "Anzahl Sanitärobjekte", type: "select", options: ["1-2 Objekte", "3-4 Objekte", "5-6 Objekte", "Mehr als 6"] },
+      { id: "problem", label: "Aktuelles Problem?", type: "select", options: ["Kein akutes Problem", "Undichtigkeit", "Verstopfung", "Niedriger Wasserdruck", "Defekte Armatur"] },
+    ]
+  },
+  heizung: {
+    title: "Heizungsarbeiten - Details",
+    questions: [
+      { id: "system", label: "Aktuelles Heizsystem", type: "select", options: ["Gasheizung", "Ölheizung", "Fernwärme", "Elektroheizung", "Wärmepumpe", "Unbekannt"] },
+      { id: "baujahr", label: "Baujahr der Heizung", type: "select", options: ["Neuer als 10 Jahre", "10-20 Jahre", "20-30 Jahre", "Älter als 30 Jahre", "Unbekannt"] },
+      { id: "art", label: "Gewünschte Leistung", type: "select", options: ["Wartung/Reparatur", "Heizungstausch", "Neue Wärmepumpe", "Hybridheizung", "Fußbodenheizung nachrüsten"] },
+      { id: "flaeche", label: "Zu beheizende Fläche", type: "select", options: ["Bis 80 m²", "80-120 m²", "120-180 m²", "180-250 m²", "Über 250 m²"] },
+    ]
+  },
+  fliesenleger: {
+    title: "Fliesenarbeiten - Details",
+    questions: [
+      { id: "raum", label: "Welcher Raum?", type: "select", options: ["Badezimmer", "Küche", "Flur/Eingang", "Wohnbereich", "Terrasse/Balkon", "Mehrere Räume"] },
+      { id: "flaeche", label: "Ungefähre Fläche", type: "select", options: ["Bis 10 m²", "10-20 m²", "20-40 m²", "40-60 m²", "Über 60 m²"] },
+      { id: "demontage", label: "Alte Fliesen entfernen?", type: "select", options: ["Ja, komplett", "Teilweise", "Nein, Neubau/Untergrund vorbereitet", "Unsicher"] },
+      { id: "material", label: "Gewünschtes Material", type: "select", options: ["Keramikfliesen", "Feinsteinzeug", "Naturstein", "Mosaik", "Noch nicht entschieden"] },
+    ]
+  },
+  schreiner: {
+    title: "Schreinerarbeiten - Details",
+    questions: [
+      { id: "projekt", label: "Art des Projekts", type: "select", options: ["Einbauschrank", "Küche/Küchenzeile", "Türen", "Fenster", "Treppe", "Möbel nach Maß", "Sonstiges"] },
+      { id: "anzahl", label: "Anzahl/Umfang", type: "select", options: ["Einzelstück", "2-3 Elemente", "4-6 Elemente", "Kompletter Raum", "Mehrere Räume"] },
+      { id: "material", label: "Gewünschtes Material", type: "select", options: ["Holz massiv", "Furnier", "MDF/Spanplatte", "Kombination", "Noch offen"] },
+      { id: "zustand", label: "Aktueller Zustand", type: "select", options: ["Neubau/leerer Raum", "Renovierung", "Austausch vorhandener Elemente", "Reparatur"] },
+    ]
+  },
+};
+
+const tradeBudgets: Record<string, { id: string; label: string; description: string }[]> = {
+  maler: [
+    { id: "1000-2500", label: "1.000 - 2.500 EUR", description: "1-2 Räume streichen" },
+    { id: "2500-4500", label: "2.500 - 4.500 EUR", description: "3-4 Räume oder kleine Wohnung" },
+    { id: "4500-7000", label: "4.500 - 7.000 EUR", description: "Große Wohnung komplett" },
+    { id: "7000-12000", label: "7.000 - 12.000 EUR", description: "Haus innen komplett" },
+    { id: "12000+", label: "Über 12.000 EUR", description: "Großprojekt inkl. Fassade" },
+  ],
+  elektriker: [
+    { id: "500-1500", label: "500 - 1.500 EUR", description: "Kleine Reparaturen, wenige Steckdosen" },
+    { id: "1500-3500", label: "1.500 - 3.500 EUR", description: "Raum komplett, Sicherungskasten" },
+    { id: "3500-6000", label: "3.500 - 6.000 EUR", description: "Mehrere Räume, Smart Home Basis" },
+    { id: "6000-12000", label: "6.000 - 12.000 EUR", description: "Wohnung komplett erneuern" },
+    { id: "12000+", label: "Über 12.000 EUR", description: "Haus komplett, inkl. Unterverteilung" },
+  ],
+  sanitaer: [
+    { id: "500-1500", label: "500 - 1.500 EUR", description: "Armaturentausch, kleine Reparaturen" },
+    { id: "1500-4000", label: "1.500 - 4.000 EUR", description: "WC/Waschbecken austauschen" },
+    { id: "4000-8000", label: "4.000 - 8.000 EUR", description: "Gäste-WC komplett" },
+    { id: "8000-15000", label: "8.000 - 15.000 EUR", description: "Badezimmer Sanitärinstallation" },
+    { id: "15000+", label: "Über 15.000 EUR", description: "Mehrere Bäder, Rohrleitungen komplett" },
+  ],
+  heizung: [
+    { id: "500-2000", label: "500 - 2.000 EUR", description: "Wartung, kleine Reparaturen" },
+    { id: "2000-6000", label: "2.000 - 6.000 EUR", description: "Heizkörper austauschen, Thermostate" },
+    { id: "6000-15000", label: "6.000 - 15.000 EUR", description: "Gasheizung/Brennwert erneuern" },
+    { id: "15000-25000", label: "15.000 - 25.000 EUR", description: "Wärmepumpe Luft-Wasser" },
+    { id: "25000+", label: "Über 25.000 EUR", description: "Erdwärme, Hybridanlage, Fußbodenheizung" },
+  ],
+  fliesenleger: [
+    { id: "1000-2500", label: "1.000 - 2.500 EUR", description: "Kleiner Bereich bis 10 m²" },
+    { id: "2500-5000", label: "2.500 - 5.000 EUR", description: "Gäste-WC oder Küche" },
+    { id: "5000-8000", label: "5.000 - 8.000 EUR", description: "Badezimmer komplett" },
+    { id: "8000-12000", label: "8.000 - 12.000 EUR", description: "Großes Bad oder mehrere Räume" },
+    { id: "12000+", label: "Über 12.000 EUR", description: "Mehrere Bäder, großflächig" },
+  ],
+  schreiner: [
+    { id: "1500-4000", label: "1.500 - 4.000 EUR", description: "Einzelmöbel, Türen" },
+    { id: "4000-8000", label: "4.000 - 8.000 EUR", description: "Einbauschrank, Garderobe" },
+    { id: "8000-15000", label: "8.000 - 15.000 EUR", description: "Begehbarer Schrank, mehrere Möbel" },
+    { id: "15000-25000", label: "15.000 - 25.000 EUR", description: "Maßküche, kompletter Raum" },
+    { id: "25000+", label: "Über 25.000 EUR", description: "Mehrere Räume, Luxusausstattung" },
+  ],
+};
+
 interface FormData {
-  trades: string[];
-  description: string;
+  trade: string;
+  propertyType: string;
+  livingArea: string;
+  tradeDetails: Record<string, string>;
+  budget: string;
   timeline: string;
+  isUrgent: boolean;
+  description: string;
   name: string;
   phone: string;
   email: string;
@@ -96,9 +208,14 @@ export default function GewerkeFunnel() {
   const { toast } = useToast();
   
   const [formData, setFormData] = useState<FormData>({
-    trades: [],
-    description: "",
+    trade: "",
+    propertyType: "wohnung",
+    livingArea: "",
+    tradeDetails: {},
+    budget: "",
     timeline: "flexibel",
+    isUrgent: false,
+    description: "",
     name: "",
     phone: "",
     email: "",
@@ -107,23 +224,31 @@ export default function GewerkeFunnel() {
     privacyAccepted: false,
   });
 
-  const totalSteps = 3;
+  const totalSteps = 6;
   const progress = (step / totalSteps) * 100;
 
   const submitMutation = useMutation({
     mutationFn: async (data: FormData) => {
+      const tradeLabel = tradeOptions.find(t => t.id === data.trade)?.label || data.trade;
       const leadData = {
         service: "handwerker-vermittlung",
-        propertyType: "wohnung",
-        serviceDetails: { trades: data.trades },
+        propertyType: data.propertyType,
+        serviceDetails: { 
+          tradeType: data.trade,
+          tradeLabel: tradeLabel,
+          scopeAnswers: data.tradeDetails,
+          livingArea: data.livingArea,
+        },
+        budgetRange: data.budget,
         timeline: data.timeline,
+        isUrgent: data.isUrgent,
         description: data.description,
         name: data.name,
         phone: data.phone,
         email: data.email,
         postalCode: data.postalCode,
         city: data.city,
-        additionalNotes: `Gewünschte Gewerke: ${data.trades.map(t => tradeOptions.find(o => o.id === t)?.label).join(", ")}`,
+        additionalNotes: `Gewerk: ${tradeLabel}, Budget: ${data.budget}`,
       };
       return apiRequest("POST", "/api/leads", leadData);
     },
@@ -139,18 +264,17 @@ export default function GewerkeFunnel() {
     },
   });
 
-  const toggleTrade = (tradeId: string) => {
-    setFormData(prev => ({
-      ...prev,
-      trades: prev.trades.includes(tradeId)
-        ? prev.trades.filter(t => t !== tradeId)
-        : [...prev.trades, tradeId]
-    }));
-  };
+  const currentTradeQuestions = formData.trade ? tradeQuestions[formData.trade] : null;
+  const currentTradeBudgets = formData.trade ? tradeBudgets[formData.trade] : [];
 
-  const canProceedStep1 = formData.trades.length > 0;
-  const canProceedStep2 = formData.description.length >= 20;
-  const canProceedStep3 = 
+  const canProceedStep1 = formData.trade !== "";
+  const canProceedStep2 = formData.propertyType !== "" && formData.livingArea !== "";
+  const canProceedStep3 = currentTradeQuestions 
+    ? currentTradeQuestions.questions.every(q => formData.tradeDetails[q.id])
+    : false;
+  const canProceedStep4 = formData.budget !== "";
+  const canProceedStep5 = formData.timeline !== "" && formData.description.length >= 10;
+  const canProceedStep6 = 
     formData.name.length >= 2 &&
     formData.phone.length >= 6 &&
     formData.email.includes("@") &&
@@ -170,9 +294,16 @@ export default function GewerkeFunnel() {
   };
 
   const handleSubmit = () => {
-    if (canProceedStep3) {
+    if (canProceedStep6) {
       submitMutation.mutate(formData);
     }
+  };
+
+  const setTradeDetail = (questionId: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      tradeDetails: { ...prev.tradeDetails, [questionId]: value }
+    }));
   };
 
   return (
@@ -213,7 +344,7 @@ export default function GewerkeFunnel() {
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <Handshake className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="text-2xl lg:text-3xl font-bold mb-2">Handwerker-Vermittlung</h1>
+            <h1 className="text-2xl lg:text-3xl font-bold mb-2">Handwerker-Vermittlung München</h1>
             <p className="text-muted-foreground">
               Wir vermitteln Sie an geprüfte Meisterbetriebe in München
             </p>
@@ -231,12 +362,12 @@ export default function GewerkeFunnel() {
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <h2 className="text-xl font-semibold mb-2">Welches Gewerk benötigen Sie?</h2>
-                <p className="text-muted-foreground">Wählen Sie ein oder mehrere Gewerke aus</p>
+                <p className="text-muted-foreground">Wählen Sie das passende Handwerk aus</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {tradeOptions.map((trade) => {
-                  const isSelected = formData.trades.includes(trade.id);
+                  const isSelected = formData.trade === trade.id;
                   return (
                     <Card
                       key={trade.id}
@@ -245,7 +376,7 @@ export default function GewerkeFunnel() {
                           ? "ring-2 ring-primary bg-primary/5"
                           : "hover-elevate"
                       }`}
-                      onClick={() => toggleTrade(trade.id)}
+                      onClick={() => setFormData(prev => ({ ...prev, trade: trade.id, tradeDetails: {} }))}
                       data-testid={`card-trade-${trade.id}`}
                     >
                       <CardContent className="p-6 text-center">
@@ -284,47 +415,56 @@ export default function GewerkeFunnel() {
           {step === 2 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <h2 className="text-xl font-semibold mb-2">Beschreiben Sie Ihr Projekt</h2>
-                <p className="text-muted-foreground">Je detaillierter, desto besser können wir Ihnen helfen</p>
+                <h2 className="text-xl font-semibold mb-2">Ihr Objekt</h2>
+                <p className="text-muted-foreground">Angaben zu Ihrer Immobilie</p>
               </div>
 
               <Card>
                 <CardContent className="p-6 space-y-6">
                   <div>
-                    <Label htmlFor="description" className="text-base font-medium">
-                      Was soll gemacht werden? *
-                    </Label>
-                    <Textarea
-                      id="description"
-                      placeholder="Beschreiben Sie hier Ihr Projekt, z.B.: Wände in 3-Zimmer-Wohnung streichen, ca. 80m² Wohnfläche, weiße Farbe, Decken müssen nicht gestrichen werden..."
-                      className="mt-2 min-h-32"
-                      value={formData.description}
-                      onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-                      data-testid="input-description"
-                    />
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Mindestens 20 Zeichen ({formData.description.length}/20)
-                    </p>
+                    <Label className="text-base font-medium">Um welchen Immobilientyp handelt es sich?</Label>
+                    <div className="grid grid-cols-2 gap-3 mt-3">
+                      {[
+                        { id: "wohnung", label: "Wohnung", icon: Building2 },
+                        { id: "einfamilienhaus", label: "Einfamilienhaus", icon: Home },
+                        { id: "mehrfamilienhaus", label: "Mehrfamilienhaus", icon: Building2 },
+                        { id: "gewerbe", label: "Gewerbe", icon: Building2 },
+                      ].map((type) => (
+                        <Button
+                          key={type.id}
+                          type="button"
+                          variant={formData.propertyType === type.id ? "default" : "outline"}
+                          className="h-auto py-4 flex flex-col gap-2"
+                          onClick={() => setFormData(prev => ({ ...prev, propertyType: type.id }))}
+                          data-testid={`button-property-${type.id}`}
+                        >
+                          <type.icon className="w-6 h-6" />
+                          <span>{type.label}</span>
+                        </Button>
+                      ))}
+                    </div>
                   </div>
 
                   <div>
-                    <Label className="text-base font-medium">Wann soll es losgehen?</Label>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2">
+                    <Label className="text-base font-medium">Ungefähre Wohnfläche</Label>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3">
                       {[
-                        { id: "sofort", label: "Sofort" },
-                        { id: "2-wochen", label: "In 2 Wochen" },
-                        { id: "1-monat", label: "In 1 Monat" },
-                        { id: "flexibel", label: "Flexibel" },
-                      ].map((option) => (
+                        "Bis 50 m²",
+                        "50-80 m²",
+                        "80-120 m²",
+                        "120-180 m²",
+                        "180-250 m²",
+                        "Über 250 m²",
+                      ].map((area) => (
                         <Button
-                          key={option.id}
+                          key={area}
                           type="button"
-                          variant={formData.timeline === option.id ? "default" : "outline"}
+                          variant={formData.livingArea === area ? "default" : "outline"}
                           className="w-full"
-                          onClick={() => setFormData(prev => ({ ...prev, timeline: option.id }))}
-                          data-testid={`button-timeline-${option.id}`}
+                          onClick={() => setFormData(prev => ({ ...prev, livingArea: area }))}
+                          data-testid={`button-area-${area}`}
                         >
-                          {option.label}
+                          {area}
                         </Button>
                       ))}
                     </div>
@@ -356,7 +496,222 @@ export default function GewerkeFunnel() {
             </div>
           )}
 
-          {step === 3 && (
+          {step === 3 && currentTradeQuestions && (
+            <div className="space-y-6">
+              <div className="text-center mb-6">
+                <h2 className="text-xl font-semibold mb-2">{currentTradeQuestions.title}</h2>
+                <p className="text-muted-foreground">Bitte beantworten Sie die folgenden Fragen</p>
+              </div>
+
+              <Card>
+                <CardContent className="p-6 space-y-6">
+                  {currentTradeQuestions.questions.map((question) => (
+                    <div key={question.id}>
+                      <Label className="text-base font-medium">{question.label}</Label>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-3">
+                        {question.options?.map((option) => (
+                          <Button
+                            key={option}
+                            type="button"
+                            variant={formData.tradeDetails[question.id] === option ? "default" : "outline"}
+                            className="w-full text-sm h-auto py-3 whitespace-normal"
+                            onClick={() => setTradeDetail(question.id, option)}
+                            data-testid={`button-${question.id}-${option}`}
+                          >
+                            {option}
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+
+              <div className="flex justify-between pt-6">
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  size="lg"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
+                  data-testid="button-back-step3"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Zurück
+                </Button>
+                <Button
+                  onClick={handleNext}
+                  disabled={!canProceedStep3}
+                  size="lg"
+                  data-testid="button-next-step3"
+                >
+                  Weiter
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 4 && (
+            <div className="space-y-6">
+              <div className="text-center mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <Euro className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-xl font-semibold mb-2">Ihr Budget in München</h2>
+                <p className="text-muted-foreground">Realistische Preise für {tradeOptions.find(t => t.id === formData.trade)?.label} in München</p>
+              </div>
+
+              <Card>
+                <CardContent className="p-6">
+                  <RadioGroup
+                    value={formData.budget}
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+                    className="space-y-3"
+                  >
+                    {currentTradeBudgets.map((budget) => (
+                      <div
+                        key={budget.id}
+                        className={`flex items-center space-x-3 p-4 rounded-lg border cursor-pointer transition-colors ${
+                          formData.budget === budget.id
+                            ? "border-primary bg-primary/5"
+                            : "border-border hover:border-primary/50"
+                        }`}
+                        onClick={() => setFormData(prev => ({ ...prev, budget: budget.id }))}
+                        data-testid={`radio-budget-${budget.id}`}
+                      >
+                        <RadioGroupItem value={budget.id} id={budget.id} />
+                        <div className="flex-1">
+                          <Label htmlFor={budget.id} className="font-semibold cursor-pointer">
+                            {budget.label}
+                          </Label>
+                          <p className="text-sm text-muted-foreground">{budget.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </RadioGroup>
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    * Preise basieren auf durchschnittlichen Münchner Handwerkerpreisen (Stand 2024/2025)
+                  </p>
+                </CardContent>
+              </Card>
+
+              <div className="flex justify-between pt-6">
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  size="lg"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
+                  data-testid="button-back-step4"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Zurück
+                </Button>
+                <Button
+                  onClick={handleNext}
+                  disabled={!canProceedStep4}
+                  size="lg"
+                  data-testid="button-next-step4"
+                >
+                  Weiter
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 5 && (
+            <div className="space-y-6">
+              <div className="text-center mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-xl font-semibold mb-2">Zeitplan & Projektbeschreibung</h2>
+                <p className="text-muted-foreground">Wann soll es losgehen?</p>
+              </div>
+
+              <Card>
+                <CardContent className="p-6 space-y-6">
+                  <div>
+                    <Label className="text-base font-medium">Gewünschter Zeitraum</Label>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
+                      {[
+                        { id: "sofort", label: "Sofort / Notfall" },
+                        { id: "2-wochen", label: "In 2 Wochen" },
+                        { id: "1-monat", label: "In 1 Monat" },
+                        { id: "flexibel", label: "Flexibel" },
+                      ].map((option) => (
+                        <Button
+                          key={option.id}
+                          type="button"
+                          variant={formData.timeline === option.id ? "default" : "outline"}
+                          className="w-full"
+                          onClick={() => setFormData(prev => ({ ...prev, timeline: option.id }))}
+                          data-testid={`button-timeline-${option.id}`}
+                        >
+                          {option.label}
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    <Checkbox
+                      id="urgent"
+                      checked={formData.isUrgent}
+                      onCheckedChange={(checked) => 
+                        setFormData(prev => ({ ...prev, isUrgent: checked === true }))
+                      }
+                      data-testid="checkbox-urgent"
+                    />
+                    <Label htmlFor="urgent" className="cursor-pointer">
+                      Dringend / Notfall (z.B. Wasserschaden, Heizungsausfall)
+                    </Label>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="description" className="text-base font-medium">
+                      Beschreiben Sie Ihr Projekt kurz *
+                    </Label>
+                    <Textarea
+                      id="description"
+                      placeholder="z.B.: 3-Zimmer-Wohnung Altbau, Wände sollen weiß gestrichen werden, alte Tapete muss entfernt werden..."
+                      className="mt-2 min-h-28"
+                      value={formData.description}
+                      onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+                      data-testid="input-description"
+                    />
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Mindestens 10 Zeichen ({formData.description.length}/10)
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="flex justify-between pt-6">
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  size="lg"
+                  className="bg-green-500 hover:bg-green-600 text-white border-green-500"
+                  data-testid="button-back-step5"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  Zurück
+                </Button>
+                <Button
+                  onClick={handleNext}
+                  disabled={!canProceedStep5}
+                  size="lg"
+                  data-testid="button-next-step5"
+                >
+                  Weiter
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 6 && (
             <div className="space-y-6">
               <div className="text-center mb-6">
                 <h2 className="text-xl font-semibold mb-2">Ihre Kontaktdaten</h2>
@@ -467,14 +822,14 @@ export default function GewerkeFunnel() {
                   onClick={handleBack}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600 text-white border-green-500"
-                  data-testid="button-back-step3"
+                  data-testid="button-back-step6"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Zurück
                 </Button>
                 <Button
                   onClick={handleSubmit}
-                  disabled={!canProceedStep3 || submitMutation.isPending}
+                  disabled={!canProceedStep6 || submitMutation.isPending}
                   size="lg"
                   className="bg-green-500 hover:bg-green-600"
                   data-testid="button-submit"
