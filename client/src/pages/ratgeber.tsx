@@ -63,14 +63,14 @@ export default function Ratgeber() {
       <main className="pt-24 pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierungsratgeber München</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es wirklich? Ihr ehrlicher Ratgeber</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ihr umfassender Ratgeber für Sanierungen in München: Kosten, Tipps und Fördermöglichkeiten für Haus, Fassade, Dach, Bad und mehr.
+              Transparente Preise, echte Erfahrungswerte und Fördertipps aus der Praxis. So sparen Sie Zeit, Geld und Nerven bei Ihrer Sanierung in München.
             </p>
           </div>
 
           <nav className="mb-12 p-4 bg-muted/50 rounded-lg">
-            <h2 className="font-semibold mb-3">Inhaltsverzeichnis</h2>
+            <h2 className="font-semibold mb-3">Direkt zum Thema springen</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
               <a href="#haus-sanieren" className="text-primary hover:underline flex items-center gap-1"><Home className="w-4 h-4" /> Haus sanieren</a>
               <a href="#fassade" className="text-primary hover:underline flex items-center gap-1"><Paintbrush className="w-4 h-4" /> Fassade</a>
@@ -90,7 +90,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Home className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Haus sanieren in München</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Haussanierung München: Endlich wissen, was es kostet</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -163,7 +163,7 @@ export default function Ratgeber() {
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Häufige Fragen zur Haussanierung</h3>
+                  <h3 className="font-semibold mb-3">Das fragen uns Münchner Hausbesitzer am häufigsten</h3>
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wie lange dauert eine Haussanierung?</p>
@@ -187,7 +187,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Paintbrush className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Fassade sanieren und streichen</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Fassadenarbeiten München: So wird Ihr Haus wieder zum Hingucker</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -260,7 +260,7 @@ export default function Ratgeber() {
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Häufige Fragen zu Malerarbeiten</h3>
+                  <h3 className="font-semibold mb-3">Ihre Fragen zu Fassade und Malerarbeiten</h3>
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wie finde ich gute Malerarbeiten in meiner Nähe?</p>
@@ -284,7 +284,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Triangle className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Dachsanierung und Dachausbau</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Dachsanierung München: Endlich ein dichtes, gedämmtes Dach</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -376,7 +376,7 @@ export default function Ratgeber() {
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Häufige Fragen zur Dachsanierung</h3>
+                  <h3 className="font-semibold mb-3">Das wollen Sie über Dachsanierung wissen</h3>
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wann muss ein Dach saniert werden?</p>
@@ -396,7 +396,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Bath className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Badsanierung in München</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Badsanierung München: Ihr Traumbad in 2-4 Wochen</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -473,7 +473,7 @@ export default function Ratgeber() {
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Häufige Fragen zur Badsanierung</h3>
+                  <h3 className="font-semibold mb-3">Ihre Fragen zur Badsanierung</h3>
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wie lange dauert eine Badsanierung?</p>
@@ -493,7 +493,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Building className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Kellersanierung in München</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Kellersanierung München: Schluss mit Feuchtigkeit und Schimmel</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -566,7 +566,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Thermometer className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Dämmung und Innenausbau</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Dämmung München: Bis zu 30% Heizkosten sparen</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -655,7 +655,7 @@ export default function Ratgeber() {
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Häufige Fragen zur Dämmung</h3>
+                  <h3 className="font-semibold mb-3">Das wollen Sie über Dämmung wissen</h3>
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Was bringt eine Dachdämmung?</p>
@@ -675,7 +675,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <DoorOpen className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Wohnungssanierung in München</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Wohnungssanierung München: Vom Altbau zum Wohlfühl-Zuhause</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -759,7 +759,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Zap className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Energetische Sanierung mit BAFA und KfW Förderung</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Energetische Sanierung: Bis zu 70% Förderung sichern</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
@@ -837,7 +837,7 @@ export default function Ratgeber() {
 
               <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 mb-8">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-4 text-green-700 dark:text-green-300">Vorteile der energetischen Sanierung für Sie:</h3>
+                  <h3 className="font-semibold mb-4 text-green-700 dark:text-green-300">Das bringt Ihnen die energetische Sanierung:</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start gap-2">
@@ -873,7 +873,7 @@ export default function Ratgeber() {
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Häufige Fragen zur energetischen Sanierung</h3>
+                  <h3 className="font-semibold mb-3">So funktioniert die Förderung</h3>
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Was ist der Unterschied zwischen BAFA und KfW Förderung?</p>
@@ -897,9 +897,9 @@ export default function Ratgeber() {
           <div className="mt-16 text-center">
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-2xl font-bold mb-4">Kostenlose Beratung für Ihre Sanierung</h2>
+                <h2 className="text-2xl font-bold mb-4">Bereit für Ihre Sanierung? Wir beraten Sie kostenlos.</h2>
                 <p className="mb-6 opacity-90">
-                  Lassen Sie sich unverbindlich beraten und erhalten Sie ein individuelles Angebot für Ihr Projekt in München.
+                  Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
                 </p>
                 <Link href="/anfrage">
                   <Button size="lg" variant="secondary" className="gap-2" data-testid="button-ratgeber-cta">
