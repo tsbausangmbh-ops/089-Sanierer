@@ -472,16 +472,16 @@ export default function FaqPreise() {
               </p>
             </div>
 
-            <Card className="bg-orange-500/5 border-orange-500/20">
+            <Card className="bg-green-600/10 border-green-600/20">
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex-1 text-center sm:text-left">
-                    <h3 className="font-semibold mb-1">Schnell den richtigen Handwerker finden</h3>
-                    <p className="text-sm text-muted-foreground">Wir vermitteln kostenlos – Sie sparen die Suche</p>
+                    <h3 className="font-semibold mb-1">Geprüfte Münchner Handwerker – kostenlos vermittelt</h3>
+                    <p className="text-sm text-muted-foreground">Kein langes Suchen: Wir finden den passenden Meisterbetrieb für Sie</p>
                   </div>
                   <Link href="/gewerke">
-                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600" data-testid="button-cta-gewerke">
-                      Handwerker anfragen
+                    <Button size="lg" className="bg-green-600 hover:bg-green-700" data-testid="button-cta-gewerke">
+                      Jetzt Handwerker finden
                       <ChevronRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
