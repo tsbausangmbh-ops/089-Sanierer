@@ -79,6 +79,66 @@ const faqItems = [
   {
     question: "Vermitteln Sie auch einzelne Handwerker?",
     answer: "Ja, über unseren Handwerker-Vermittlungsservice vermitteln wir auch einzelne Gewerke wie Maler, Elektriker, Fliesenleger oder Sanitärinstallateure. Alle Partner sind geprüfte Meisterbetriebe aus München und Umgebung."
+  },
+  {
+    question: "Brauche ich eine Baugenehmigung für meine Sanierung?",
+    answer: "Für reine Innenraumsanierungen ist in der Regel keine Baugenehmigung erforderlich. Bei tragenden Wänden, Fassadenänderungen oder Dachausbauten kann jedoch eine Genehmigung nötig sein. Wir klären dies im Vorfeld für Sie ab."
+  },
+  {
+    question: "Wie hoch ist die Anzahlung?",
+    answer: "Wir arbeiten mit einer fairen Zahlungsregelung: 30% bei Auftragserteilung, 40% bei Baubeginn und 30% nach Fertigstellung und Abnahme. So haben Sie Sicherheit und wir können Material vorfinanzieren."
+  },
+  {
+    question: "Was passiert bei unvorhergesehenen Problemen während der Sanierung?",
+    answer: "Unvorhergesehene Probleme wie versteckte Wasserschäden oder marode Leitungen können vorkommen. Wir informieren Sie sofort, dokumentieren alles und besprechen die Lösung mit Ihnen, bevor zusätzliche Kosten entstehen."
+  },
+  {
+    question: "Sind Ihre Handwerker versichert?",
+    answer: "Ja, alle unsere Handwerker und Partnerunternehmen sind vollständig versichert. Wir verfügen über eine Betriebshaftpflichtversicherung mit einer Deckungssumme von 5 Millionen Euro."
+  },
+  {
+    question: "Kann ich eigene Materialien beistellen?",
+    answer: "Grundsätzlich ja, allerdings übernehmen wir dann keine Gewährleistung für diese Materialien. Wir empfehlen, Materialien über uns zu beziehen, da wir Handwerkerrabatte weitergeben und die Qualität garantieren können."
+  },
+  {
+    question: "Wie läuft die Kommunikation während der Bauphase?",
+    answer: "Sie erhalten einen festen Ansprechpartner, der Sie regelmäßig über den Fortschritt informiert. Wir sind telefonisch und per WhatsApp erreichbar. Auf Wunsch erhalten Sie wöchentliche Foto-Updates."
+  },
+  {
+    question: "Entsorgen Sie auch den Bauschutt?",
+    answer: "Ja, die fachgerechte Entsorgung von Bauschutt und Altmaterialien ist in unseren Angeboten enthalten. Wir stellen Container und kümmern uns um die umweltgerechte Entsorgung."
+  },
+  {
+    question: "Arbeiten Sie auch in meinem Stadtteil?",
+    answer: "Wir arbeiten in ganz München und dem Münchner Umland: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden."
+  },
+  {
+    question: "Wie gehen Sie mit Altbauten um?",
+    answer: "Altbauten erfordern besondere Sorgfalt. Wir haben langjährige Erfahrung mit Münchner Altbauten und kennen die typischen Herausforderungen wie Holzbalkendecken, alte Leitungen und Denkmalschutzauflagen."
+  },
+  {
+    question: "Bieten Sie auch barrierefreie Sanierungen an?",
+    answer: "Ja, wir sind spezialisiert auf barrierefreie Umbauten nach DIN 18040. Dazu gehören bodengleiche Duschen, verbreiterte Türen, Haltegriffe und rutschfeste Böden. Für solche Maßnahmen gibt es oft KfW-Förderungen."
+  },
+  {
+    question: "Können Sie auch nur Teilsanierungen durchführen?",
+    answer: "Selbstverständlich. Ob Badsanierung, Küchenerneuerung oder nur neue Böden – wir führen auch Teilsanierungen durch. Die Mindestauftragssumme liegt bei 5.000 Euro."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Renovierung und Sanierung?",
+    answer: "Eine Renovierung umfasst kosmetische Verbesserungen wie Streichen oder Tapezieren. Eine Sanierung beinhaltet tiefgreifende Maßnahmen wie neue Elektrik, Sanitär, Heizung oder Bausubstanzverbesserungen."
+  },
+  {
+    question: "Wie schützen Sie meine Möbel und Böden während der Arbeiten?",
+    answer: "Wir arbeiten mit professionellen Abdeckungen, Staubschutzwänden und Folien. Empfindliche Bereiche werden sorgfältig geschützt. Bei Komplettsanierungen empfehlen wir, Möbel vorübergehend auszulagern."
+  },
+  {
+    question: "Erstellen Sie auch 3D-Visualisierungen?",
+    answer: "Ja, auf Wunsch erstellen wir 3D-Visualisierungen Ihrer geplanten Sanierung. So können Sie sich vorab ein genaues Bild machen und Änderungen vor Baubeginn vornehmen."
+  },
+  {
+    question: "Wie kann ich den Fortschritt meiner Sanierung verfolgen?",
+    answer: "Sie erhalten regelmäßige Updates per WhatsApp oder E-Mail mit Fotos. Zusätzlich sind Baustellenbesuche nach Absprache jederzeit möglich. Bei größeren Projekten führen wir wöchentliche Baubesprechungen durch."
   }
 ];
 
