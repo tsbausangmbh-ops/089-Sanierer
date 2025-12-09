@@ -157,6 +157,202 @@ const serviceSeoContent: Record<string, {
     ],
     geoText: "Wir sind Ihr lokaler Partner für Komplettsanierungen in ganz München und dem Umland. Ob Schwabing, Sendling, Bogenhausen oder Pasing – unsere Teams kennen die Besonderheiten Münchner Immobilien. Auch im Landkreis München, Dachau, Fürstenfeldbruck und Starnberg sind wir für Sie da.",
     ctaText: "Kostenlose Beratung in 24h"
+  },
+  badsanierung: {
+    headline: "Badsanierung in München – Ihr Traumbad vom Profi",
+    subheadline: "Modernes Badezimmer in nur 2-3 Wochen – stressfrei und termingerecht",
+    intro: "Ihr Badezimmer ist in die Jahre gekommen? Undichte Fugen, veraltete Fliesen oder Schimmelprobleme machen Ihnen das Leben schwer? Eine professionelle Badsanierung in München verwandelt Ihr altes Bad in eine moderne Wohlfühloase. Bei KSHW München koordinieren wir alle Gewerke und liefern Ihr neues Traumbad schlüsselfertig.",
+    problems: [
+      "Schimmel an Wänden und Fugen gefährdet Ihre Gesundheit",
+      "Alte Fliesen und Armaturen wirken unmodern und unattraktiv",
+      "Undichte Stellen verursachen Wasserschäden und hohe Folgekosten",
+      "Zu wenig Stauraum und unpraktische Raumaufteilung",
+      "Hoher Wasserverbrauch durch veraltete Sanitäranlagen"
+    ],
+    solutions: [
+      "Komplette Schimmelentfernung und Ursachenbekämpfung",
+      "Moderne Fliesen, Armaturen und Sanitärobjekte nach Ihren Wünschen",
+      "Professionelle Abdichtung nach aktuellen Standards",
+      "Clevere Raumlösungen mit mehr Stauraum und Komfort",
+      "Wassersparende Armaturen und Spülsysteme"
+    ],
+    benefits: [
+      "Schnelle Umsetzung: Fertigstellung in 2-3 Wochen",
+      "Alles aus einer Hand: Ein Ansprechpartner für alle Gewerke",
+      "Festpreis: Keine versteckten Kosten oder Nachforderungen",
+      "Qualität: 5 Jahre Gewährleistung auf alle Arbeiten",
+      "Sauberkeit: Tägliche Reinigung der Baustelle"
+    ],
+    geoText: "Badsanierung in München und Umgebung – wir sind vor Ort für Sie da. Ob Altbau in Schwabing, Neubau in Riem oder Reihenhaus in Pasing – unsere erfahrenen Teams kennen die Besonderheiten Münchner Badezimmer. Service auch in Dachau, Starnberg, Fürstenfeldbruck und dem gesamten Münchner Umland.",
+    ctaText: "Traumbad planen"
+  },
+  kuechensanierung: {
+    headline: "Küchensanierung in München – Ihre Traumküche wird Realität",
+    subheadline: "Neue Küche mit professioneller Planung und fachgerechter Umsetzung",
+    intro: "Die Küche ist das Herz Ihres Zuhauses – doch Ihre aktuelle Küche entspricht nicht mehr Ihren Ansprüchen? Zu wenig Arbeitsfläche, veraltete Geräte oder eine unpraktische Aufteilung? Bei KSHW München planen und realisieren wir Ihre neue Traumküche. Von der Demontage der alten Küche bis zur fertigen Montage – alles aus einer Hand.",
+    problems: [
+      "Zu wenig Arbeitsfläche und Stauraum für den Alltag",
+      "Veraltete Elektrogeräte mit hohem Energieverbrauch",
+      "Unpraktische Aufteilung erschwert das Kochen",
+      "Abgenutzte Fronten und Arbeitsplatten wirken unattraktiv",
+      "Fehlende oder unzureichende Elektro- und Wasseranschlüsse"
+    ],
+    solutions: [
+      "Individuelle Planung mit optimaler Raumausnutzung",
+      "Moderne, energieeffiziente Markengeräte",
+      "Ergonomische Arbeitshöhen und kurze Wege",
+      "Hochwertige Materialien für Fronten und Arbeitsplatten",
+      "Professionelle Verlegung aller Anschlüsse"
+    ],
+    benefits: [
+      "Komplettservice: Abbau, Umbau und Montage aus einer Hand",
+      "Festpreisgarantie: Transparente Kosten ohne Überraschungen",
+      "Markenqualität: Nur bewährte Hersteller und Materialien",
+      "Termingarantie: Ihre Küche ist pünktlich fertig",
+      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+    ],
+    geoText: "Küchensanierung in München – vom Erstgespräch bis zur fertigen Küche. Wir kennen die Herausforderungen Münchner Küchen, ob in Altbauwohnungen in Haidhausen oder modernen Häusern in Trudering. Unser Service erstreckt sich auf ganz München sowie Dachau, Freising, Starnberg und das gesamte Umland.",
+    ctaText: "Küche planen lassen"
+  },
+  bodensanierung: {
+    headline: "Bodensanierung in München – Neuer Boden für Ihr Zuhause",
+    subheadline: "Parkett, Laminat, Fliesen oder Vinyl – fachgerecht verlegt vom Profi",
+    intro: "Der Boden prägt den gesamten Charakter eines Raumes. Kratzer, Dellen oder quietschende Dielen stören nicht nur optisch, sondern mindern auch den Wohnkomfort. Eine professionelle Bodensanierung in München gibt Ihren Räumen ein neues Gesicht. Bei KSHW München beraten wir Sie zu allen Bodenbelägen und verlegen fachgerecht nach höchsten Standards.",
+    problems: [
+      "Tiefe Kratzer und Abnutzungsspuren im Boden",
+      "Quietschende oder lose Dielen und Parkettstäbe",
+      "Veraltete Teppiche mit Allergenen und Gerüchen",
+      "Unebene Böden mit Stolperfallen",
+      "Kalte Böden ohne Fußbodenheizung"
+    ],
+    solutions: [
+      "Professionelle Aufarbeitung oder kompletter Austausch",
+      "Befestigung und Ausgleich vorhandener Untergründe",
+      "Moderne, pflegeleichte Bodenbeläge nach Ihren Wünschen",
+      "Präzise Nivellierung für ebene Oberflächen",
+      "Fußbodenheizung nachrüsten auf Wunsch möglich"
+    ],
+    benefits: [
+      "Große Auswahl: Parkett, Laminat, Vinyl, Fliesen und mehr",
+      "Schnelle Umsetzung: Minimale Einschränkung im Alltag",
+      "Staubarm: Moderne Maschinen mit Absaugung",
+      "Festpreis: Alle Kosten transparent und verbindlich",
+      "Gewährleistung: 5 Jahre auf Material und Verlegung"
+    ],
+    geoText: "Bodensanierung in München und Umgebung – für alle Wohn- und Geschäftsräume. Ob Altbau-Parkett in Schwabing aufarbeiten oder neuen Designboden in Neuperlach verlegen – wir sind Ihr Partner. Service in ganz München, Dachau, Germering, Starnberg und dem Münchner Umland.",
+    ctaText: "Boden erneuern lassen"
+  },
+  elektrosanierung: {
+    headline: "Elektrosanierung in München – Sichere Elektrik vom Fachmann",
+    subheadline: "Mehr Sicherheit, mehr Komfort, mehr Steckdosen – alles nach VDE-Norm",
+    intro: "Flackerndes Licht, zu wenig Steckdosen oder alte Sicherungskästen? Eine veraltete Elektroinstallation ist nicht nur unpraktisch, sondern kann auch gefährlich sein. Bei KSHW München modernisieren wir Ihre Elektrik fachgerecht nach aktuellen VDE-Normen. Für mehr Sicherheit und Komfort in Ihrem Zuhause.",
+    problems: [
+      "Zu wenige Steckdosen für moderne Geräte",
+      "Alte Sicherungskästen ohne FI-Schutzschalter",
+      "Flackernde Lampen und Spannungsschwankungen",
+      "Veraltete Leitungen mit Brandgefahr",
+      "Keine Vorbereitung für Smart Home oder E-Mobilität"
+    ],
+    solutions: [
+      "Bedarfsgerechte Planung mit ausreichend Steckdosen",
+      "Moderner Sicherungskasten mit FI-Schutz",
+      "Neue Leitungen nach aktuellen Standards",
+      "Kompletter Austausch veralteter Installationen",
+      "Vorbereitung für Smart Home und Wallbox"
+    ],
+    benefits: [
+      "Sicherheit: Alle Arbeiten nach VDE-Norm",
+      "Meisterbetrieb: Nur geprüfte Elektrofachkräfte",
+      "Dokumentation: Prüfprotokoll für Versicherung",
+      "Festpreis: Transparente Kostenaufstellung",
+      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+    ],
+    geoText: "Elektrosanierung in München – für sichere Elektrik in jedem Gebäude. Ob Altbau in Haidhausen oder Neubau in Riem – unsere Elektriker kennen die Anforderungen. Service in ganz München sowie Dachau, Fürstenfeldbruck, Freising und dem Münchner Umland.",
+    ctaText: "Elektrik prüfen lassen"
+  },
+  heizungssanierung: {
+    headline: "Heizungssanierung in München – Effizient heizen, Kosten sparen",
+    subheadline: "Moderne Heizsysteme mit staatlicher Förderung – bis zu 70% Zuschuss möglich",
+    intro: "Die Heizkosten explodieren und Ihre alte Heizung arbeitet ineffizient? Eine Heizungssanierung in München senkt nicht nur Ihre Energiekosten, sondern steigert auch den Wert Ihrer Immobilie. Bei KSHW München beraten wir Sie zu allen modernen Heizsystemen und übernehmen die komplette Umsetzung – inklusive Förderanträge.",
+    problems: [
+      "Hohe Heizkosten durch ineffiziente Altanlagen",
+      "Ungleichmäßige Wärmeverteilung in den Räumen",
+      "Alte Heizkessel mit hohem Verschleiß und Ausfallrisiko",
+      "Keine Nutzung staatlicher Förderprogramme",
+      "Abhängigkeit von fossilen Brennstoffen wie Öl und Gas"
+    ],
+    solutions: [
+      "Moderne Brennwerttechnik mit bis zu 30% Ersparnis",
+      "Hydraulischer Abgleich für gleichmäßige Wärme",
+      "Zuverlässige Neuanlagen mit langer Lebensdauer",
+      "Komplette Förderberatung und Antragsstellung",
+      "Wärmepumpen und erneuerbare Energien auf Wunsch"
+    ],
+    benefits: [
+      "Förderung: Bis zu 70% staatlicher Zuschuss möglich",
+      "Energieersparnis: Bis zu 40% niedrigere Heizkosten",
+      "Komplettservice: Von der Beratung bis zur Wartung",
+      "Markenqualität: Nur bewährte Hersteller",
+      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+    ],
+    geoText: "Heizungssanierung in München und Umgebung – für warme Räume und niedrige Kosten. Wir kennen die Anforderungen Münchner Immobilien, ob Altbau in Schwabing oder Einfamilienhaus in Germering. Service in ganz München, Dachau, Starnberg, Freising und dem Umland.",
+    ctaText: "Heizung modernisieren"
+  },
+  "energetische-sanierung": {
+    headline: "Energetische Sanierung in München – Weniger Kosten, mehr Komfort",
+    subheadline: "Dämmung, Fenster, Heizung – bis zu 50% Energiekosten sparen",
+    intro: "Im Winter frieren, im Sommer schwitzen und hohe Nebenkosten zahlen? Eine energetische Sanierung in München macht Ihr Zuhause nicht nur komfortabler, sondern spart bares Geld. Bei KSHW München analysieren wir Ihr Gebäude und entwickeln ein maßgeschneidertes Sanierungskonzept – mit maximaler Förderung vom Staat.",
+    problems: [
+      "Hohe Heizkosten durch schlechte Dämmung",
+      "Zugluft und kalte Wände im Winter",
+      "Überhitzung der Räume im Sommer",
+      "Alte Fenster mit schlechter Isolierung",
+      "Schimmelgefahr durch Wärmebrücken"
+    ],
+    solutions: [
+      "Fassadendämmung mit modernen Dämmstoffen",
+      "Professionelle Luftdichtheit und Wärmebrückenvermeidung",
+      "Sommerlicher Wärmeschutz durch richtige Dämmung",
+      "Neue Fenster mit 3-fach-Verglasung",
+      "Behebung von Wärmebrücken und Kondensproblemen"
+    ],
+    benefits: [
+      "Förderung: Bis zu 45% staatlicher Zuschuss",
+      "Energieersparnis: Bis zu 50% niedrigere Heizkosten",
+      "Wertsteigerung: Höherer Immobilienwert",
+      "Wohnkomfort: Angenehmes Raumklima ganzjährig",
+      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+    ],
+    geoText: "Energetische Sanierung in München – für nachhaltiges Wohnen und Sparen. Ob Altbau in Bogenhausen oder Reihenhaus in Pasing – wir finden die optimale Lösung. Service in ganz München, Dachau, Fürstenfeldbruck, Starnberg und dem Münchner Umland.",
+    ctaText: "Energieberatung starten"
+  },
+  dachsanierung: {
+    headline: "Dachsanierung in München – Schutz von oben für Ihr Zuhause",
+    subheadline: "Dicht, gedämmt, langlebig – Ihr Dach in besten Händen",
+    intro: "Das Dach schützt Ihr gesamtes Zuhause vor Wind und Wetter. Undichte Stellen, fehlende Dämmung oder alte Ziegel können jedoch zu teuren Schäden führen. Eine professionelle Dachsanierung in München sichert Ihr Gebäude für Jahrzehnte. Bei KSHW München übernehmen wir alle Arbeiten – von der Inspektion bis zur fertigen Eindeckung.",
+    problems: [
+      "Undichte Stellen mit Wassereintritt und Feuchteschäden",
+      "Fehlende oder unzureichende Dachdämmung",
+      "Alte, poröse Dachziegel mit Bruchgefahr",
+      "Verstopfte oder defekte Dachrinnen",
+      "Moose und Flechten auf der Dachfläche"
+    ],
+    solutions: [
+      "Professionelle Abdichtung aller kritischen Stellen",
+      "Moderne Dachdämmung nach EnEV-Standard",
+      "Neueindeckung mit langlebigen Materialien",
+      "Erneuerung von Dachrinnen und Fallrohren",
+      "Gründliche Reinigung und Beschichtung"
+    ],
+    benefits: [
+      "Langlebigkeit: Qualitätsmaterialien für Jahrzehnte",
+      "Energieersparnis: Bis zu 30% durch gute Dämmung",
+      "Sicherheit: Alle Arbeiten nach DIN-Normen",
+      "Förderung: Staatliche Zuschüsse für Dämmung möglich",
+      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+    ],
+    geoText: "Dachsanierung in München und Umgebung – für ein dichtes Dach über dem Kopf. Ob Steildach, Flachdach oder Walmdach – unsere Dachdecker kennen alle Dachformen. Service in ganz München, Dachau, Germering, Starnberg, Freising und dem Umland.",
+    ctaText: "Dach prüfen lassen"
   }
 };
 
