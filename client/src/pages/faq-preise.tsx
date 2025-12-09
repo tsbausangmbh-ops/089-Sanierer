@@ -22,7 +22,13 @@ import {
   Home as HomeIcon,
   Euro,
   HelpCircle,
-  CheckCircle
+  CheckCircle,
+  PaintBucket,
+  Plug,
+  Droplets,
+  Thermometer,
+  Wrench,
+  Handshake
 } from "lucide-react";
 
 const headerServices = [
@@ -145,6 +151,93 @@ const priceRanges = [
   }
 ];
 
+const tradePrices = [
+  {
+    trade: "Maler & Lackierer",
+    icon: PaintBucket,
+    hourlyRate: "55 - 75 €/Std.",
+    description: "Malerarbeiten in München",
+    examples: [
+      "Wände streichen (pro m²): 12 - 18 €",
+      "Decken streichen (pro m²): 14 - 20 €",
+      "Türen/Zargen lackieren (pro Stück): 80 - 150 €",
+      "Tapezieren (pro m²): 15 - 25 €",
+      "Fassade streichen (pro m²): 25 - 45 €",
+      "Schimmelbeseitigung: ab 350 €"
+    ]
+  },
+  {
+    trade: "Elektriker",
+    icon: Plug,
+    hourlyRate: "65 - 85 €/Std.",
+    description: "Elektroinstallation in München",
+    examples: [
+      "Steckdose setzen: 80 - 120 €",
+      "Lichtschalter installieren: 60 - 100 €",
+      "Lampe anschließen: 45 - 80 €",
+      "Sicherungskasten erneuern: 1.500 - 3.000 €",
+      "E-Herd Anschluss: 120 - 200 €",
+      "Elektrocheck (E-Check): 150 - 250 €"
+    ]
+  },
+  {
+    trade: "Sanitär & Klempner",
+    icon: Droplets,
+    hourlyRate: "70 - 90 €/Std.",
+    description: "Sanitärinstallation in München",
+    examples: [
+      "Wasserhahn montieren: 80 - 150 €",
+      "WC austauschen: 250 - 450 €",
+      "Waschbecken montieren: 150 - 300 €",
+      "Duschkabine einbauen: 400 - 800 €",
+      "Rohrbruch reparieren: 200 - 500 €",
+      "Abfluss verstopft: 80 - 180 €"
+    ]
+  },
+  {
+    trade: "Heizungsbauer",
+    icon: Thermometer,
+    hourlyRate: "70 - 95 €/Std.",
+    description: "Heizungsinstallation in München",
+    examples: [
+      "Heizkörper austauschen: 250 - 500 €",
+      "Thermostat wechseln: 80 - 150 €",
+      "Heizung entlüften: 80 - 120 €",
+      "Gasbrennwertkessel: 8.000 - 12.000 €",
+      "Wärmepumpe komplett: 15.000 - 25.000 €",
+      "Fußbodenheizung (pro m²): 80 - 120 €"
+    ]
+  },
+  {
+    trade: "Fliesenleger",
+    icon: Layers,
+    hourlyRate: "55 - 75 €/Std.",
+    description: "Fliesenarbeiten in München",
+    examples: [
+      "Bodenfliesen verlegen (pro m²): 45 - 70 €",
+      "Wandfliesen verlegen (pro m²): 50 - 80 €",
+      "Großformat-Fliesen (pro m²): 65 - 100 €",
+      "Mosaikfliesen (pro m²): 80 - 120 €",
+      "Alte Fliesen entfernen (pro m²): 20 - 35 €",
+      "Abdichtung Bad (pro m²): 25 - 40 €"
+    ]
+  },
+  {
+    trade: "Schreiner & Tischler",
+    icon: Wrench,
+    hourlyRate: "60 - 85 €/Std.",
+    description: "Schreinerarbeiten in München",
+    examples: [
+      "Zimmertür einbauen: 250 - 450 €",
+      "Einbauschrank (pro lfm): 800 - 1.500 €",
+      "Fenster austauschen: 400 - 800 €",
+      "Parkett verlegen (pro m²): 60 - 100 €",
+      "Treppe renovieren: 1.500 - 4.000 €",
+      "Möbel nach Maß: ab 500 €"
+    ]
+  }
+];
+
 export default function FaqPreise() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -252,6 +345,68 @@ export default function FaqPreise() {
         </section>
 
         <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
+                <Handshake className="w-6 h-6 text-green-600" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold">Handwerker-Vermittlung München</h2>
+                <p className="text-muted-foreground">Preise für einzelne Gewerke (Münchner Niveau)</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {tradePrices.map((item) => (
+                <Card key={item.trade} className="overflow-hidden" data-testid={`card-trade-price-${item.trade.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">{item.trade}</CardTitle>
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-xl font-bold text-green-600 mb-4">
+                      Stundensatz: {item.hourlyRate}
+                    </div>
+                    <ul className="space-y-2">
+                      {item.examples.map((example, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span>{example}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="bg-green-500/5 border-green-500/20">
+              <CardContent className="p-6">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="font-semibold mb-1">Handwerker gesucht?</h3>
+                    <p className="text-sm text-muted-foreground">Kostenlose Vermittlung an geprüfte Meisterbetriebe</p>
+                  </div>
+                  <Link href="/gewerke">
+                    <Button size="lg" className="bg-green-500 hover:bg-green-600" data-testid="button-cta-gewerke">
+                      Handwerker anfragen
+                      <ChevronRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="py-12 lg:py-16">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
