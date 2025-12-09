@@ -400,7 +400,7 @@ export default function FaqPreise() {
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es? Ihre wichtigsten Fragen beantwortet</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4">Sanierung München: Was kostet es?<br />Ihre wichtigsten Fragen beantwortet</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Transparente Preise, ehrliche Antworten – so wissen Sie vorab, was Ihre Sanierung in München kostet.
               </p>
