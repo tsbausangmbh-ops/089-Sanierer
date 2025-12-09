@@ -170,11 +170,6 @@ export default function Home() {
                   <Phone className="w-4 h-4" />
                 </Button>
               </a>
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
-                  <Calendar className="w-4 h-4" />
-                </Button>
-              </a>
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
@@ -246,14 +241,7 @@ export default function Home() {
                   Kontakt
                 </Button>
               </Link>
-              <div className="border-t border-white/20 my-2" />
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  24 h Termin
-                </Button>
-              </a>
-            </nav>
+                          </nav>
           </div>
         )}
       </header>

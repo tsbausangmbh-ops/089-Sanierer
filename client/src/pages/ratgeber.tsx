@@ -43,11 +43,6 @@ export default function Ratgeber() {
                   <Phone className="w-4 h-4" />
                 </Button>
               </a>
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500">
-                  <Calendar className="w-4 h-4" />
-                </Button>
-              </a>
             </div>
             <div className="hidden lg:flex items-center gap-1">
               {headerServices.map((service) => (
@@ -91,11 +86,7 @@ export default function Ratgeber() {
               <Link href="/ratgeber"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Ratgeber</Button></Link>
               <Link href="/faq-preise"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>FAQ & Preise</Button></Link>
               <Link href="/kontakt"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Kontakt</Button></Link>
-              <div className="border-t border-white/20 my-2" />
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"><Calendar className="w-4 h-4 mr-2" />24 h Termin</Button>
-              </a>
-            </nav>
+                          </nav>
           </div>
         )}
       </header>
