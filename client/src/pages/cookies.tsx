@@ -7,7 +7,7 @@ import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 export default function Cookies() {
   return (
-    <div className="min-h-screen bg-[hsl(220,85%,22%)]">
+    <div className="min-h-screen bg-background">
       <header className="bg-[hsl(220,85%,22%)] text-white py-4">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
@@ -30,14 +30,14 @@ export default function Cookies() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-12 text-white">
+      <main className="max-w-4xl mx-auto px-4 py-12">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-            <Cookie className="w-6 h-6 text-white" />
+          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <Cookie className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-white" data-testid="heading-cookies">Cookie-Richtlinie</h1>
-            <p className="text-white/70">Stand: Dezember 2024</p>
+            <h1 className="text-3xl font-bold" data-testid="heading-cookies">Cookie-Richtlinie</h1>
+            <p className="text-muted-foreground">Stand: Dezember 2024</p>
           </div>
         </div>
 
