@@ -39,7 +39,8 @@ import {
   Plug,
   PaintBucket,
   Mail,
-  MapPin
+  MapPin,
+  HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
@@ -120,6 +121,7 @@ const serviceOptions = [
 ];
 
 // SEO Content for each service - shown as intro when service is pre-selected
+// Optimized for Google, Bing, and AI search (ChatGPT, Perplexity, Gemini)
 const serviceSeoContent: Record<string, {
   headline: string;
   subheadline: string;
@@ -129,230 +131,280 @@ const serviceSeoContent: Record<string, {
   benefits: string[];
   geoText: string;
   ctaText: string;
+  faq: { question: string; answer: string }[];
+  keywords: string[];
 }> = {
   komplettsanierung: {
-    headline: "Komplettsanierung in München – Ihr Zuhause in neuen Händen",
-    subheadline: "Stressfrei renovieren mit nur einem Ansprechpartner",
-    intro: "Sie planen eine umfassende Renovierung Ihrer Immobilie in München? Eine Komplettsanierung ist ein großes Projekt – aber mit dem richtigen Partner wird es zum Erfolgserlebnis. Bei KSHW München übernehmen wir die komplette Koordination aller Gewerke und liefern Ihnen ein schlüsselfertiges Ergebnis.",
+    headline: "Komplettsanierung München | Haus & Wohnung renovieren lassen",
+    subheadline: "Schlüsselfertige Sanierung aus einer Hand – Festpreis, Termingarantie, 5 Jahre Gewährleistung",
+    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei KSHW München erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 800€/m² und einer Fertigstellungsgarantie. Über 500 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
     problems: [
-      "Viele verschiedene Handwerker koordinieren ist zeitaufwändig und stressig",
-      "Unklare Kosten und ständige Nachforderungen verunsichern",
-      "Terminverschiebungen und Verzögerungen kosten Zeit und Nerven",
-      "Qualitätsmängel durch fehlende Abstimmung zwischen Gewerken",
-      "Keine klaren Ansprechpartner bei Problemen"
+      "Handwerkersuche in München: Wochenlange Wartezeiten und unzuverlässige Termine",
+      "Kostenexplosion: Angebote ohne Festpreis führen zu 30-50% Mehrkosten",
+      "Koordinationschaos: 5-8 verschiedene Gewerke müssen aufeinander abgestimmt werden",
+      "Qualitätsprobleme: Pfusch durch fehlende Bauleitung und Qualitätskontrolle",
+      "Zeitverlust: Durchschnittlich 3 Monate Verzögerung ohne professionelle Projektleitung"
     ],
     solutions: [
-      "Ein Ansprechpartner für alle Gewerke – von Elektrik bis Malerarbeiten",
-      "Festpreisgarantie nach detaillierter Vor-Ort-Besichtigung",
-      "Verbindlicher Zeitplan mit Fertigstellungsgarantie",
-      "Eigene Qualitätskontrolle durch erfahrene Bauleiter",
-      "24h-Erreichbarkeit während der gesamten Bauphase"
+      "Ein Meisterbetrieb koordiniert alle Gewerke: Elektriker, Sanitär, Maler, Fliesenleger, Trockenbauer",
+      "Festpreisgarantie nach kostenloser Vor-Ort-Besichtigung – keine Nachträge",
+      "Terminplan mit Meilensteinen und Fertigstellungsdatum im Vertrag",
+      "Eigener Bauleiter mit täglicher Qualitätskontrolle auf der Baustelle",
+      "24/7 Erreichbarkeit über WhatsApp, Telefon und E-Mail während der Bauphase"
     ],
     benefits: [
-      "Zeitersparnis: Sie kümmern sich um nichts – wir um alles",
-      "Kostenklarheit: Festpreis bedeutet keine bösen Überraschungen",
-      "Qualität: 5 Jahre Gewährleistung auf alle Arbeiten",
-      "Erfahrung: Über 500 erfolgreiche Projekte in München",
-      "Flexibilität: Sanierung auch bei bewohnter Immobilie möglich"
+      "Zeitersparnis: 100+ Stunden weniger Aufwand durch Komplettkoordination",
+      "Kostensicherheit: Festpreis ab 800€/m² – was im Angebot steht, wird bezahlt",
+      "Qualitätsgarantie: 5 Jahre Gewährleistung auf alle Arbeiten, Materialien und Gewerke",
+      "Erfahrung: 500+ Projekte in München seit 2010 – Altbau, Neubau, Gewerbe",
+      "Flexibilität: Sanierung bei bewohnter Immobilie möglich – Staubschutz, Lärmschutz, Reinigung inklusive"
     ],
-    geoText: "Wir sind Ihr lokaler Partner für Komplettsanierungen in ganz München und dem Umland. Ob Schwabing, Sendling, Bogenhausen oder Pasing – unsere Teams kennen die Besonderheiten Münchner Immobilien. Auch im Landkreis München, Dachau, Fürstenfeldbruck und Starnberg sind wir für Sie da.",
-    ctaText: "Kostenlose Beratung in 24h"
+    geoText: "KSHW München – Ihr Sanierungspartner vor Ort. Wir sanieren in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Au, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Obermenzing, Allach, Moosach, Milbertshofen, Freimann, Trudering, Riem, Berg am Laim, Ramersdorf, Perlach, Neuperlach, Solln, Obersendling, Thalkirchen, Fürstenried, Forstenried, Großhadern und Hadern. Ebenso im Münchner Umland: Landkreis München, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald, Pullach, Gräfelfing und Planegg.",
+    ctaText: "Kostenloses Angebot in 24h",
+    faq: [
+      { question: "Was kostet eine Komplettsanierung in München pro m²?", answer: "Eine Komplettsanierung in München kostet durchschnittlich 800-1.500€ pro Quadratmeter, abhängig von Zustand, Ausstattungswunsch und Umfang der Arbeiten." },
+      { question: "Wie lange dauert eine Komplettsanierung?", answer: "Eine Komplettsanierung einer 80m² Wohnung dauert ca. 6-8 Wochen, ein Einfamilienhaus 10-16 Wochen – abhängig vom Sanierungsumfang." },
+      { question: "Kann ich während der Sanierung in der Wohnung bleiben?", answer: "Ja, wir bieten Sanierung bei bewohnter Immobilie an – mit Staubschutz, Lärmschutzzeiten und täglicher Reinigung." }
+    ],
+    keywords: ["Komplettsanierung München", "Haus sanieren München", "Wohnung renovieren München", "Kernsanierung München Kosten", "Altbausanierung München", "Sanierung aus einer Hand München"]
   },
   badsanierung: {
-    headline: "Badsanierung in München – Ihr Traumbad vom Profi",
-    subheadline: "Modernes Badezimmer in nur 2-3 Wochen – stressfrei und termingerecht",
-    intro: "Ihr Badezimmer ist in die Jahre gekommen? Undichte Fugen, veraltete Fliesen oder Schimmelprobleme machen Ihnen das Leben schwer? Eine professionelle Badsanierung in München verwandelt Ihr altes Bad in eine moderne Wohlfühloase. Bei KSHW München koordinieren wir alle Gewerke und liefern Ihr neues Traumbad schlüsselfertig.",
+    headline: "Badsanierung München | Bad renovieren & neu gestalten lassen",
+    subheadline: "Komplette Badrenovierung in 10-15 Werktagen – Festpreis ab 8.000€, alle Gewerke inklusive",
+    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei KSHW München erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 35.000€ für Wellness-Bad. Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 300+ Bäder in München erfolgreich saniert.",
     problems: [
-      "Schimmel an Wänden und Fugen gefährdet Ihre Gesundheit",
-      "Alte Fliesen und Armaturen wirken unmodern und unattraktiv",
-      "Undichte Stellen verursachen Wasserschäden und hohe Folgekosten",
-      "Zu wenig Stauraum und unpraktische Raumaufteilung",
-      "Hoher Wasserverbrauch durch veraltete Sanitäranlagen"
+      "Schimmel im Bad München: Gesundheitsrisiko durch schwarze Fugen und feuchte Wände",
+      "Alte Badezimmer: 70er/80er Jahre Fliesen, verkalkte Armaturen, vergilbte Wannen",
+      "Wasserschäden: Undichte Silikonfugen und defekte Abdichtungen verursachen teure Folgeschäden",
+      "Platzmangel: Unpraktische Raumaufteilung, fehlender Stauraum, keine bodengleiche Dusche",
+      "Hohe Wasserkosten: Alte Spülkästen und Armaturen verschwenden 30-50% mehr Wasser"
     ],
     solutions: [
-      "Komplette Schimmelentfernung und Ursachenbekämpfung",
-      "Moderne Fliesen, Armaturen und Sanitärobjekte nach Ihren Wünschen",
-      "Professionelle Abdichtung nach aktuellen Standards",
-      "Clevere Raumlösungen mit mehr Stauraum und Komfort",
-      "Wassersparende Armaturen und Spülsysteme"
+      "Schimmelsanierung: Professionelle Entfernung, Ursachenbekämpfung, neue Abdichtung nach DIN 18534",
+      "Komplettumbau: Neue Fliesen, Sanitärobjekte, Armaturen – Marken wie Villeroy & Boch, Grohe, Geberit",
+      "Wasserdicht: Fachmännische Abdichtung aller Nassbereiche, 10 Jahre Dichtheitsgarantie",
+      "Raumwunder: Clevere Grundrissoptimierung, Einbauschränke, Walk-In-Dusche statt Wanne",
+      "Wassersparen: Moderne Spülsysteme und Armaturen reduzieren Wasserverbrauch um 40%"
     ],
     benefits: [
-      "Schnelle Umsetzung: Fertigstellung in 2-3 Wochen",
-      "Alles aus einer Hand: Ein Ansprechpartner für alle Gewerke",
-      "Festpreis: Keine versteckten Kosten oder Nachforderungen",
-      "Qualität: 5 Jahre Gewährleistung auf alle Arbeiten",
-      "Sauberkeit: Tägliche Reinigung der Baustelle"
+      "Schnell: Komplette Badsanierung in 10-15 Werktagen, Gäste-WC in 5-7 Tagen",
+      "Festpreis: Ab 8.000€ (Gäste-WC) bis 35.000€ (Wellness-Bad) – keine Nachträge",
+      "Alles inklusive: Fliesenleger, Sanitär, Elektriker, Maler aus einer Hand",
+      "Qualität: 5 Jahre Gewährleistung, nur Markenprodukte, Meisterqualität",
+      "Sauber: Staubschutz, tägliche Reinigung, Nutzung von Ersatz-WC organisiert"
     ],
-    geoText: "Badsanierung in München und Umgebung – wir sind vor Ort für Sie da. Ob Altbau in Schwabing, Neubau in Riem oder Reihenhaus in Pasing – unsere erfahrenen Teams kennen die Besonderheiten Münchner Badezimmer. Service auch in Dachau, Starnberg, Fürstenfeldbruck und dem gesamten Münchner Umland.",
-    ctaText: "Traumbad planen"
+    geoText: "Badsanierung in München und Umgebung – Ihr lokaler Badexperte. Wir sanieren Badezimmer in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Trudering, Riem, Berg am Laim, Perlach, Neuperlach, Solln, Großhadern und allen weiteren Stadtteilen. Auch im Münchner Umland: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald und Pullach.",
+    ctaText: "Traumbad planen lassen",
+    faq: [
+      { question: "Was kostet eine komplette Badsanierung in München?", answer: "Eine Badsanierung in München kostet: Gäste-WC 8.000-12.000€, Standard-Bad 15.000-22.000€, Komfort-Bad 22.000-30.000€, Wellness-Bad ab 30.000€ – abhängig von Größe und Ausstattung." },
+      { question: "Wie lange dauert eine Badsanierung?", answer: "Eine komplette Badsanierung dauert 10-15 Werktage. Ein Gäste-WC ist in 5-7 Tagen fertig. Während der Bauzeit organisieren wir Ersatz-WC-Nutzung." },
+      { question: "Muss ich während der Badsanierung ausziehen?", answer: "Nein, Sie können in Ihrer Wohnung bleiben. Wir installieren Staubschutzwände und organisieren die Nutzung eines Ersatz-WCs." }
+    ],
+    keywords: ["Badsanierung München", "Bad renovieren München", "Badezimmer sanieren München Kosten", "Badsanierung München Festpreis", "Badrenovierung München", "Bad komplett sanieren München"]
   },
   kuechensanierung: {
-    headline: "Küchensanierung in München – Ihre Traumküche wird Realität",
-    subheadline: "Neue Küche mit professioneller Planung und fachgerechter Umsetzung",
-    intro: "Die Küche ist das Herz Ihres Zuhauses – doch Ihre aktuelle Küche entspricht nicht mehr Ihren Ansprüchen? Zu wenig Arbeitsfläche, veraltete Geräte oder eine unpraktische Aufteilung? Bei KSHW München planen und realisieren wir Ihre neue Traumküche. Von der Demontage der alten Küche bis zur fertigen Montage – alles aus einer Hand.",
+    headline: "Küchensanierung München | Küche renovieren & umbauen lassen",
+    subheadline: "Neue Küche komplett installiert – Elektrik, Wasser, Fliesen, Montage aus einer Hand",
+    intro: "Was kostet eine Küchenrenovierung in München? Wer verlegt die Anschlüsse für die neue Küche? Wie lange dauert ein Küchenumbau? Bei KSHW München erhalten Sie den kompletten Küchenumbau aus einer Hand – Elektroinstallation, Wasseranschlüsse, Fliesenarbeiten und finale Montage perfekt koordiniert. Ob Sie Ihre alte Küche aufwerten oder komplett neu gestalten möchten: Festpreis, fester Termin, 5 Jahre Gewährleistung.",
     problems: [
-      "Zu wenig Arbeitsfläche und Stauraum für den Alltag",
-      "Veraltete Elektrogeräte mit hohem Energieverbrauch",
-      "Unpraktische Aufteilung erschwert das Kochen",
-      "Abgenutzte Fronten und Arbeitsplatten wirken unattraktiv",
-      "Fehlende oder unzureichende Elektro- und Wasseranschlüsse"
+      "Zu wenig Steckdosen: Moderne Küchen brauchen 8-12 Steckdosen, alte haben oft nur 3-4",
+      "Veraltete Elektrik: Alte Leitungen sind nicht für Induktion, Backofen und Dampfgarer ausgelegt",
+      "Wasseranschlüsse: Falsche Position für Spüle, Spülmaschine, Kühlschrank mit Wasserspender",
+      "Alte Fliesen: Abgenutzte Fliesenspiegel passen nicht zur neuen Küche",
+      "Schlechte Beleuchtung: Dunkle Arbeitsflächen durch fehlende Unterbauleuchten"
     ],
     solutions: [
-      "Individuelle Planung mit optimaler Raumausnutzung",
-      "Moderne, energieeffiziente Markengeräte",
-      "Ergonomische Arbeitshöhen und kurze Wege",
-      "Hochwertige Materialien für Fronten und Arbeitsplatten",
-      "Professionelle Verlegung aller Anschlüsse"
+      "Elektro-Komplettpaket: Ausreichend Steckdosen, Starkstrom für Herd, LED-Beleuchtung",
+      "Moderne Installation: Neue Leitungen für Induktion bis 7,4kW, Backofen, alle Geräte",
+      "Wasserinstallation: Anschlüsse exakt nach Küchenplan, Absperrventile, Rückstausicherung",
+      "Fliesenarbeiten: Neuer Fliesenspiegel oder Nischenrückwand aus Glas/Edelstahl",
+      "Lichtkonzept: Arbeitslicht, Ambientelicht, smarte Steuerung auf Wunsch"
     ],
     benefits: [
-      "Komplettservice: Abbau, Umbau und Montage aus einer Hand",
-      "Festpreisgarantie: Transparente Kosten ohne Überraschungen",
-      "Markenqualität: Nur bewährte Hersteller und Materialien",
-      "Termingarantie: Ihre Küche ist pünktlich fertig",
-      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+      "Alles inklusive: Elektriker, Sanitär, Fliesenleger – ein Ansprechpartner für alles",
+      "Festpreis: Komplette Kücheninstallation ab 3.500€, keine versteckten Kosten",
+      "Schnell: Küchenumbau in 5-10 Werktagen, minimale Zeit ohne Küche",
+      "Sauber: Staubschutz, Möbelschutz, tägliche Reinigung der Baustelle",
+      "Garantie: 5 Jahre Gewährleistung auf alle Installations- und Handwerksarbeiten"
     ],
-    geoText: "Küchensanierung in München – vom Erstgespräch bis zur fertigen Küche. Wir kennen die Herausforderungen Münchner Küchen, ob in Altbauwohnungen in Haidhausen oder modernen Häusern in Trudering. Unser Service erstreckt sich auf ganz München sowie Dachau, Freising, Starnberg und das gesamte Umland.",
-    ctaText: "Küche planen lassen"
+    geoText: "Küchensanierung in München und Umgebung – Ihr Partner für den Küchenumbau. Wir arbeiten in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen weiteren. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    ctaText: "Küchenumbau planen",
+    faq: [
+      { question: "Was kostet ein kompletter Küchenumbau in München?", answer: "Die Handwerkerarbeiten für einen Küchenumbau (Elektro, Wasser, Fliesen, Montage) kosten in München 3.500-8.000€ – abhängig von Umfang und Anpassungen. Die Küchenmöbel kommen separat dazu." },
+      { question: "Wie lange dauert eine Küchenrenovierung?", answer: "Ein Küchenumbau mit neuen Anschlüssen dauert 5-10 Werktage. Die reine Küchenmontage ohne Umbauarbeiten ist in 1-2 Tagen erledigt." },
+      { question: "Können Sie auch nur die Anschlüsse verlegen?", answer: "Ja, wir bieten auch einzelne Leistungen an: Elektroinstallation, Wasseranschlüsse oder Fliesenarbeiten – ganz nach Ihrem Bedarf." }
+    ],
+    keywords: ["Küchensanierung München", "Küche renovieren München", "Küchenumbau München Kosten", "Küche umbauen München", "Küchenanschlüsse verlegen München", "Küche neu gestalten München"]
   },
   bodensanierung: {
-    headline: "Bodensanierung in München – Neuer Boden für Ihr Zuhause",
-    subheadline: "Parkett, Laminat, Fliesen oder Vinyl – fachgerecht verlegt vom Profi",
-    intro: "Der Boden prägt den gesamten Charakter eines Raumes. Kratzer, Dellen oder quietschende Dielen stören nicht nur optisch, sondern mindern auch den Wohnkomfort. Eine professionelle Bodensanierung in München gibt Ihren Räumen ein neues Gesicht. Bei KSHW München beraten wir Sie zu allen Bodenbelägen und verlegen fachgerecht nach höchsten Standards.",
+    headline: "Bodensanierung München | Parkett, Fliesen & Vinylboden verlegen",
+    subheadline: "Neuer Boden in 2-5 Tagen – Parkett ab 45€/m², Vinyl ab 35€/m², Fliesen ab 55€/m²",
+    intro: "Was kostet ein neuer Boden in München? Wie lange dauert eine Bodenrenovierung? Welcher Bodenbelag ist der beste? Bei KSHW München erhalten Sie professionelle Bodenverlegung vom Fachmann – Parkett, Laminat, Vinyl, Fliesen oder Designboden. Inklusive Untergrundvorbereitung, Trittschalldämmung und Sockelleisten. Festpreis pro m², schnelle Umsetzung, 5 Jahre Gewährleistung.",
     problems: [
-      "Tiefe Kratzer und Abnutzungsspuren im Boden",
-      "Quietschende oder lose Dielen und Parkettstäbe",
-      "Veraltete Teppiche mit Allergenen und Gerüchen",
-      "Unebene Böden mit Stolperfallen",
-      "Kalte Böden ohne Fußbodenheizung"
+      "Alte Böden: Kratzer, Dellen, Verfärbungen – der Boden sieht abgenutzt aus",
+      "Quietschende Dielen: Lose Parkettstäbe und knarrende Böden bei jedem Schritt",
+      "Teppich-Probleme: Allergene, Gerüche, Flecken – unhygienisch und unmodern",
+      "Unebener Untergrund: Stolperfallen durch Höhenunterschiede und Wellen",
+      "Kalte Füße: Fehlende Fußbodenheizung, schlechte Wärmedämmung"
     ],
     solutions: [
-      "Professionelle Aufarbeitung oder kompletter Austausch",
-      "Befestigung und Ausgleich vorhandener Untergründe",
-      "Moderne, pflegeleichte Bodenbeläge nach Ihren Wünschen",
-      "Präzise Nivellierung für ebene Oberflächen",
-      "Fußbodenheizung nachrüsten auf Wunsch möglich"
+      "Bodenaufarbeitung: Parkett schleifen, versiegeln oder ölen – wie neu für 25-40€/m²",
+      "Untergrundausgleich: Spachteln, nivellieren, Trittschalldämmung verlegen",
+      "Neuer Bodenbelag: Parkett, Vinyl, Laminat, Fliesen – fachgerecht verlegt",
+      "Präzise Verlegung: Laser-Nivellierung für perfekt ebene Oberflächen",
+      "Fußbodenheizung: Nachrüstung möglich, kompatible Bodenbeläge"
     ],
     benefits: [
-      "Große Auswahl: Parkett, Laminat, Vinyl, Fliesen und mehr",
-      "Schnelle Umsetzung: Minimale Einschränkung im Alltag",
-      "Staubarm: Moderne Maschinen mit Absaugung",
-      "Festpreis: Alle Kosten transparent und verbindlich",
-      "Gewährleistung: 5 Jahre auf Material und Verlegung"
+      "Große Auswahl: Parkett, Laminat, Vinyl, Fliesen, Designböden – alle Marken",
+      "Schnell: 50m² Wohnung in 2-3 Tagen, 100m² Haus in 4-5 Tagen fertig",
+      "Staubarm: Maschinen mit Absaugung, tägliche Reinigung, Möbelschutz",
+      "Festpreis: Ab 35€/m² (Vinyl) bis 85€/m² (Massivparkett) – inklusive allem",
+      "Garantie: 5 Jahre Gewährleistung auf Verlegung und Material"
     ],
-    geoText: "Bodensanierung in München und Umgebung – für alle Wohn- und Geschäftsräume. Ob Altbau-Parkett in Schwabing aufarbeiten oder neuen Designboden in Neuperlach verlegen – wir sind Ihr Partner. Service in ganz München, Dachau, Germering, Starnberg und dem Münchner Umland.",
-    ctaText: "Boden erneuern lassen"
+    geoText: "Bodensanierung in München und Umgebung – Ihr Bodenleger-Fachbetrieb. Wir verlegen neue Böden in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    ctaText: "Bodenangebot anfordern",
+    faq: [
+      { question: "Was kostet ein neuer Boden pro m² in München?", answer: "Bodenpreise in München: Vinyl ab 35€/m², Laminat ab 40€/m², Parkett ab 45€/m², Fliesen ab 55€/m² – jeweils inkl. Verlegung, Trittschalldämmung und Sockelleisten." },
+      { question: "Wie lange dauert eine Bodenrenovierung?", answer: "Eine 50m² Wohnung ist in 2-3 Tagen fertig, ein 100m² Haus in 4-5 Tagen. Parkett schleifen dauert 1-2 Tage pro Raum." },
+      { question: "Können Sie auch altes Parkett aufarbeiten?", answer: "Ja, Parkett schleifen und versiegeln kostet 25-40€/m² und macht Ihren Boden wie neu. Wir prüfen, ob Aufarbeiten oder Austausch sinnvoller ist." }
+    ],
+    keywords: ["Bodensanierung München", "Parkett verlegen München", "Vinylboden München", "Boden erneuern München Kosten", "Laminat verlegen München", "Fliesen verlegen München"]
   },
   elektrosanierung: {
-    headline: "Elektrosanierung in München – Sichere Elektrik vom Fachmann",
-    subheadline: "Mehr Sicherheit, mehr Komfort, mehr Steckdosen – alles nach VDE-Norm",
-    intro: "Flackerndes Licht, zu wenig Steckdosen oder alte Sicherungskästen? Eine veraltete Elektroinstallation ist nicht nur unpraktisch, sondern kann auch gefährlich sein. Bei KSHW München modernisieren wir Ihre Elektrik fachgerecht nach aktuellen VDE-Normen. Für mehr Sicherheit und Komfort in Ihrem Zuhause.",
+    headline: "Elektrosanierung München | Elektrik erneuern & modernisieren",
+    subheadline: "Sichere Elektroinstallation nach VDE – mehr Steckdosen, FI-Schutz, Smart Home ready",
+    intro: "Ist Ihre Elektrik noch sicher? Wie viele Steckdosen braucht eine moderne Wohnung? Was kostet eine Elektrosanierung in München? Bei KSHW München modernisieren wir Ihre Elektroinstallation fachgerecht nach VDE-Norm. Vom neuen Sicherungskasten über ausreichend Steckdosen bis zur Wallbox-Vorbereitung. Eingetragener Elektro-Meisterbetrieb, E-Check, Prüfprotokoll für Versicherung inklusive.",
     problems: [
-      "Zu wenige Steckdosen für moderne Geräte",
-      "Alte Sicherungskästen ohne FI-Schutzschalter",
-      "Flackernde Lampen und Spannungsschwankungen",
-      "Veraltete Leitungen mit Brandgefahr",
-      "Keine Vorbereitung für Smart Home oder E-Mobilität"
+      "Zu wenige Steckdosen: Moderne Haushalte brauchen 40-60 Steckdosen, Altbauten haben oft nur 15-20",
+      "Veraltete Sicherungen: Schmelzsicherungen und fehlender FI-Schutz – lebensgefährlich",
+      "Alte Leitungen: Stoff- oder Gummi-ummantelte Leitungen aus den 50er-70er Jahren – Brandgefahr",
+      "Überlastung: Sicherungen fliegen raus, flackerndes Licht, Geräte funktionieren nicht richtig",
+      "Keine Zukunftssicherheit: Keine Vorbereitung für E-Auto, Wärmepumpe oder Smart Home"
     ],
     solutions: [
-      "Bedarfsgerechte Planung mit ausreichend Steckdosen",
-      "Moderner Sicherungskasten mit FI-Schutz",
-      "Neue Leitungen nach aktuellen Standards",
-      "Kompletter Austausch veralteter Installationen",
-      "Vorbereitung für Smart Home und Wallbox"
+      "Bedarfsanalyse: Ausreichend Steckdosen für jeden Raum nach aktuellem Standard planen",
+      "Sicherungskasten neu: Moderner Verteiler mit FI-Schaltern, Überspannungsschutz, Reserveplätze",
+      "Neue Leitungen: Komplette Neuverkabelung mit NYM-Leitungen, sauber unter Putz oder in Kabelkanälen",
+      "Leistungserhöhung: Zählerkasten-Upgrade, Hausanschluss prüfen, ausreichend Absicherung",
+      "Zukunftssicher: Wallbox-Vorbereitung, Wärmepumpen-Anschluss, Smart-Home-Verkabelung"
     ],
     benefits: [
-      "Sicherheit: Alle Arbeiten nach VDE-Norm",
-      "Meisterbetrieb: Nur geprüfte Elektrofachkräfte",
-      "Dokumentation: Prüfprotokoll für Versicherung",
-      "Festpreis: Transparente Kostenaufstellung",
-      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+      "VDE-konform: Alle Arbeiten nach aktuellen Normen und Vorschriften",
+      "Meisterbetrieb: Eingetragener Elektrofachbetrieb, nur geprüfte Elektriker",
+      "E-Check: Prüfprotokoll für Versicherung und Vermieter inklusive",
+      "Festpreis: Elektrosanierung ab 3.500€ (Wohnung) bis 12.000€ (Haus) – transparent kalkuliert",
+      "Garantie: 5 Jahre Gewährleistung auf alle Elektroarbeiten"
     ],
-    geoText: "Elektrosanierung in München – für sichere Elektrik in jedem Gebäude. Ob Altbau in Haidhausen oder Neubau in Riem – unsere Elektriker kennen die Anforderungen. Service in ganz München sowie Dachau, Fürstenfeldbruck, Freising und dem Münchner Umland.",
-    ctaText: "Elektrik prüfen lassen"
+    geoText: "Elektrosanierung in München und Umgebung – Ihr Elektro-Meisterbetrieb. Wir modernisieren Elektrik in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    ctaText: "Elektrik-Check anfordern",
+    faq: [
+      { question: "Was kostet eine komplette Elektrosanierung in München?", answer: "Eine Elektrosanierung kostet in München: 2-Zimmer-Wohnung 3.500-5.500€, 4-Zimmer-Wohnung 5.500-8.000€, Einfamilienhaus 8.000-15.000€ – abhängig von Zustand und Umfang." },
+      { question: "Wie erkenne ich, ob meine Elektrik veraltet ist?", answer: "Warnsignale: Schmelzsicherungen statt Automaten, fehlender FI-Schalter, zu wenige Steckdosen, flackerndes Licht, Sicherungen fliegen oft raus. Wir machen einen kostenlosen E-Check." },
+      { question: "Wie lange dauert eine Elektrosanierung?", answer: "Eine Wohnung ist in 3-5 Tagen fertig, ein Einfamilienhaus in 5-10 Tagen – abhängig davon, ob die Leitungen über oder unter Putz verlegt werden." }
+    ],
+    keywords: ["Elektrosanierung München", "Elektrik erneuern München", "Elektriker München Altbau", "Elektroinstallation München Kosten", "Steckdosen nachrüsten München", "Sicherungskasten erneuern München"]
   },
   heizungssanierung: {
-    headline: "Heizungssanierung in München – Effizient heizen, Kosten sparen",
-    subheadline: "Moderne Heizsysteme mit staatlicher Förderung – bis zu 70% Zuschuss möglich",
-    intro: "Die Heizkosten explodieren und Ihre alte Heizung arbeitet ineffizient? Eine Heizungssanierung in München senkt nicht nur Ihre Energiekosten, sondern steigert auch den Wert Ihrer Immobilie. Bei KSHW München beraten wir Sie zu allen modernen Heizsystemen und übernehmen die komplette Umsetzung – inklusive Förderanträge.",
+    headline: "Heizungssanierung München | Neue Heizung mit bis zu 70% Förderung",
+    subheadline: "Wärmepumpe, Gas-Brennwert, Pellets – staatliche Förderung sichern, Heizkosten senken",
+    intro: "Was kostet eine neue Heizung in München? Welche Förderung gibt es 2024/2025? Wärmepumpe oder Gas-Brennwert – was ist besser? Bei KSHW München erhalten Sie unabhängige Beratung und kompletten Heizungstausch aus einer Hand. Wir beantragen Ihre BEG-Förderung (bis 70% Zuschuss), koordinieren alle Gewerke und garantieren einen reibungslosen Umstieg. Zertifizierter Fachbetrieb für Wärmepumpen, Gas, Öl und Pellets.",
     problems: [
-      "Hohe Heizkosten durch ineffiziente Altanlagen",
-      "Ungleichmäßige Wärmeverteilung in den Räumen",
-      "Alte Heizkessel mit hohem Verschleiß und Ausfallrisiko",
-      "Keine Nutzung staatlicher Förderprogramme",
-      "Abhängigkeit von fossilen Brennstoffen wie Öl und Gas"
+      "Hohe Heizkosten: Alte Heizungen verbrauchen 30-50% mehr Energie als moderne Anlagen",
+      "Ausfall-Risiko: Heizkessel über 20 Jahre haben erhöhte Ausfallgefahr – gerade im Winter kritisch",
+      "Gesetzliche Pflicht: Heizungen über 30 Jahre müssen laut GEG ausgetauscht werden",
+      "Förderung ungenutzt: Viele verschenken bis zu 70% staatlichen Zuschuss durch falsche Beratung",
+      "Ungleichmäßige Wärme: Manche Räume zu warm, andere zu kalt – fehlender hydraulischer Abgleich"
     ],
     solutions: [
-      "Moderne Brennwerttechnik mit bis zu 30% Ersparnis",
-      "Hydraulischer Abgleich für gleichmäßige Wärme",
-      "Zuverlässige Neuanlagen mit langer Lebensdauer",
-      "Komplette Förderberatung und Antragsstellung",
-      "Wärmepumpen und erneuerbare Energien auf Wunsch"
+      "Heizungsanalyse: Welches System passt zu Ihrem Haus? Wärmepumpe, Gas, Pellets, Hybrid?",
+      "Förderberatung: BEG-Förderung beantragen – bis zu 70% Zuschuss für Wärmepumpe möglich",
+      "Kompletter Austausch: Alte Heizung raus, neue rein – an 1-3 Tagen, minimale Ausfallzeit",
+      "Hydraulischer Abgleich: Optimale Wärmeverteilung in allen Räumen, Pflicht für Förderung",
+      "Wartungsvertrag: Regelmäßige Wartung für lange Lebensdauer und Garantieerhalt"
     ],
     benefits: [
-      "Förderung: Bis zu 70% staatlicher Zuschuss möglich",
-      "Energieersparnis: Bis zu 40% niedrigere Heizkosten",
-      "Komplettservice: Von der Beratung bis zur Wartung",
-      "Markenqualität: Nur bewährte Hersteller",
-      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+      "Förderung: Bis zu 70% Zuschuss (BEG EM) – wir stellen den Antrag für Sie",
+      "Ersparnis: 30-50% niedrigere Heizkosten durch moderne Technik",
+      "Schnell: Heizungstausch in 1-3 Tagen, fast keine Zeit ohne Heizung",
+      "Marken: Viessmann, Vaillant, Bosch, Daikin, Wolf – nur bewährte Hersteller",
+      "Garantie: 5 Jahre Gewährleistung plus Herstellergarantie bis 10 Jahre"
     ],
-    geoText: "Heizungssanierung in München und Umgebung – für warme Räume und niedrige Kosten. Wir kennen die Anforderungen Münchner Immobilien, ob Altbau in Schwabing oder Einfamilienhaus in Germering. Service in ganz München, Dachau, Starnberg, Freising und dem Umland.",
-    ctaText: "Heizung modernisieren"
+    geoText: "Heizungssanierung in München und Umgebung – Ihr zertifizierter Heizungsfachbetrieb. Wir installieren neue Heizungen in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    ctaText: "Förderung & Angebot sichern",
+    faq: [
+      { question: "Was kostet eine neue Heizung in München?", answer: "Heizungskosten 2024: Gas-Brennwert 8.000-12.000€, Luft-Wärmepumpe 15.000-25.000€, Pelletheizung 20.000-30.000€ – minus bis zu 70% Förderung. Netto zahlen Sie oft nur 5.000-10.000€." },
+      { question: "Wie viel Förderung bekomme ich für eine neue Heizung?", answer: "BEG-Förderung 2024: 30% Basis + 20% Klimabonus + 20% Einkommensbonus = bis zu 70%. Wärmepumpe mit max. Förderung: Von 20.000€ Kosten zahlen Sie nur 6.000€." },
+      { question: "Wie lange dauert ein Heizungstausch?", answer: "Ein Heizungstausch dauert 1-3 Tage. In dieser Zeit stellen wir eine mobile Heizung, damit Sie nicht frieren. Bei Wärmepumpen kann die Außeneinheit manchmal länger dauern." }
+    ],
+    keywords: ["Heizungssanierung München", "Neue Heizung München", "Wärmepumpe München Kosten", "Heizung austauschen München", "Heizungsförderung München", "Gas Brennwert München"]
   },
   "energetische-sanierung": {
-    headline: "Energetische Sanierung in München – Weniger Kosten, mehr Komfort",
-    subheadline: "Dämmung, Fenster, Heizung – bis zu 50% Energiekosten sparen",
-    intro: "Im Winter frieren, im Sommer schwitzen und hohe Nebenkosten zahlen? Eine energetische Sanierung in München macht Ihr Zuhause nicht nur komfortabler, sondern spart bares Geld. Bei KSHW München analysieren wir Ihr Gebäude und entwickeln ein maßgeschneidertes Sanierungskonzept – mit maximaler Förderung vom Staat.",
+    headline: "Energetische Sanierung München | Dämmung, Fenster & Förderung",
+    subheadline: "Heizkosten um 50% senken – bis zu 45% staatliche Förderung für Dämmung und Fenster",
+    intro: "Wie viel kann ich durch Dämmung sparen? Was kostet eine energetische Sanierung in München? Welche Förderung gibt es? Bei KSHW München erstellen wir Ihren individuellen Sanierungsfahrplan (iSFP) und setzen alle Maßnahmen um – Fassadendämmung, Dachdämmung, neue Fenster, Kellerdeckendämmung. Mit iSFP erhalten Sie 5% Extra-Förderung und sparen langfristig 40-60% Heizkosten. Zertifizierte Energieeffizienz-Experten, BEG-Förderung inklusive.",
     problems: [
-      "Hohe Heizkosten durch schlechte Dämmung",
-      "Zugluft und kalte Wände im Winter",
-      "Überhitzung der Räume im Sommer",
-      "Alte Fenster mit schlechter Isolierung",
-      "Schimmelgefahr durch Wärmebrücken"
+      "Hohe Heizkosten: Schlecht gedämmte Häuser verbrauchen 150-250 kWh/m² statt möglicher 50-70 kWh/m²",
+      "Kalte Wände: Außenwände unter 17°C führen zu Schimmel und Unbehaglichkeit",
+      "Zugluft: Undichte Fenster und Türen lassen kalte Luft herein und warme Luft raus",
+      "Sommerhitze: Fehlende Dämmung bedeutet auch Überhitzung im Sommer",
+      "Wärmebrücken: Rollladenkästen, Balkone, Fensterstürze – hier entweicht die meiste Wärme"
     ],
     solutions: [
-      "Fassadendämmung mit modernen Dämmstoffen",
-      "Professionelle Luftdichtheit und Wärmebrückenvermeidung",
-      "Sommerlicher Wärmeschutz durch richtige Dämmung",
-      "Neue Fenster mit 3-fach-Verglasung",
-      "Behebung von Wärmebrücken und Kondensproblemen"
+      "Fassadendämmung: WDVS oder vorgehängte Fassade – 20-40% Heizkostenersparnis",
+      "Dachdämmung: Zwischensparren, Aufsparren oder Geschossdecke – bis 30% Ersparnis",
+      "Neue Fenster: 3-fach-Verglasung Uw ≤ 0,95 – bis 15% Ersparnis, plus Lärmschutz",
+      "Kellerdeckendämmung: Einfachste Maßnahme – 5-10% Ersparnis, schnell umgesetzt",
+      "Wärmebrückenoptimierung: Rollladenkästen, Balkone, Fensteranschlüsse fachgerecht dämmen"
     ],
     benefits: [
-      "Förderung: Bis zu 45% staatlicher Zuschuss",
-      "Energieersparnis: Bis zu 50% niedrigere Heizkosten",
-      "Wertsteigerung: Höherer Immobilienwert",
-      "Wohnkomfort: Angenehmes Raumklima ganzjährig",
-      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+      "Förderung: 15% BEG-Förderung + 5% iSFP-Bonus = 20% Zuschuss auf Dämmung und Fenster",
+      "Ersparnis: 40-60% niedrigere Heizkosten – die Investition zahlt sich in 8-15 Jahren zurück",
+      "Wohnkomfort: Warme Wände, keine Zugluft, angenehmes Raumklima ganzjährig",
+      "Wertsteigerung: Bessere Energieeffizienzklasse = höherer Immobilienwert",
+      "Garantie: 5 Jahre Gewährleistung auf alle Dämmarbeiten"
     ],
-    geoText: "Energetische Sanierung in München – für nachhaltiges Wohnen und Sparen. Ob Altbau in Bogenhausen oder Reihenhaus in Pasing – wir finden die optimale Lösung. Service in ganz München, Dachau, Fürstenfeldbruck, Starnberg und dem Münchner Umland.",
-    ctaText: "Energieberatung starten"
+    geoText: "Energetische Sanierung in München und Umgebung – Ihr Partner für Wärmedämmung und Fenstertausch. Wir sanieren energetisch in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    ctaText: "Energieberatung anfordern",
+    faq: [
+      { question: "Was kostet eine energetische Sanierung in München?", answer: "Kosten pro Maßnahme: Fassadendämmung 120-180€/m², Dachdämmung 80-150€/m², neue Fenster 400-800€/Stück, Kellerdeckendämmung 30-50€/m² – minus 20% BEG-Förderung." },
+      { question: "Wie viel Heizkosten spare ich durch Dämmung?", answer: "Typische Ersparnis: Fassadendämmung 20-40%, Dachdämmung 15-30%, neue Fenster 10-15%, Kellerdecke 5-10%. Komplett saniert: 50-70% Ersparnis möglich." },
+      { question: "Welche Förderung gibt es für energetische Sanierung?", answer: "BEG EM 2024: 15% Zuschuss auf Dämmung, Fenster, Türen. Mit iSFP (individueller Sanierungsfahrplan): +5% Bonus = 20% Förderung. Steuerliche Förderung alternativ: 20% über 3 Jahre." }
+    ],
+    keywords: ["Energetische Sanierung München", "Dämmung München", "Fenster tauschen München", "Fassadendämmung München Kosten", "Wärmedämmung München", "iSFP München"]
   },
   dachsanierung: {
-    headline: "Dachsanierung in München – Schutz von oben für Ihr Zuhause",
-    subheadline: "Dicht, gedämmt, langlebig – Ihr Dach in besten Händen",
-    intro: "Das Dach schützt Ihr gesamtes Zuhause vor Wind und Wetter. Undichte Stellen, fehlende Dämmung oder alte Ziegel können jedoch zu teuren Schäden führen. Eine professionelle Dachsanierung in München sichert Ihr Gebäude für Jahrzehnte. Bei KSHW München übernehmen wir alle Arbeiten – von der Inspektion bis zur fertigen Eindeckung.",
+    headline: "Dachsanierung München | Dachdecker für Neueindeckung & Dämmung",
+    subheadline: "Dach reparieren, dämmen oder komplett neu eindecken – Festpreis, 10 Jahre Garantie",
+    intro: "Ist mein Dach noch dicht? Was kostet eine Dachsanierung in München? Wann lohnt sich eine Neueindeckung? Bei KSHW München erhalten Sie professionelle Dacharbeiten vom Meisterbetrieb – Reparatur, Dämmung, Neueindeckung. Wir arbeiten mit allen Dachformen: Steildach, Flachdach, Walmdach, Pultdach. Festpreis nach kostenloser Dachinspektion, bis zu 20% Förderung für Dachdämmung, 10 Jahre Gewährleistung auf Eindeckung.",
     problems: [
-      "Undichte Stellen mit Wassereintritt und Feuchteschäden",
-      "Fehlende oder unzureichende Dachdämmung",
-      "Alte, poröse Dachziegel mit Bruchgefahr",
-      "Verstopfte oder defekte Dachrinnen",
-      "Moose und Flechten auf der Dachfläche"
+      "Undichtes Dach: Wassereintritt bei Regen oder Schnee – teure Folgeschäden an Dämmung und Bausubstanz",
+      "Alte Dachziegel: Poröse, bemooste oder gebrochene Ziegel – Sturmschäden und weitere Undichtigkeiten drohen",
+      "Fehlende Dämmung: Ungedämmtes Dach bedeutet 20-30% höhere Heizkosten und kalte Räume oben",
+      "Defekte Dachrinnen: Verstopfte oder undichte Rinnen führen zu Fassadenschäden und Wassereintritt",
+      "Schädlingsbefall: Marder, Wespen, Tauben – beschädigte Unterspannbahn und Dämmung"
     ],
     solutions: [
-      "Professionelle Abdichtung aller kritischen Stellen",
-      "Moderne Dachdämmung nach EnEV-Standard",
-      "Neueindeckung mit langlebigen Materialien",
-      "Erneuerung von Dachrinnen und Fallrohren",
-      "Gründliche Reinigung und Beschichtung"
+      "Dachreparatur: Undichte Stellen abdichten, einzelne Ziegel tauschen, Bleianschlüsse erneuern",
+      "Dachdämmung: Zwischensparren, Aufsparren oder Untersparren – nach GEG, bis zu 30% Heizkosten sparen",
+      "Neueindeckung: Alte Ziegel runter, neue drauf – mit Unterspannbahn und Lattung nach aktuellen Standards",
+      "Dachrinnen: Zink, Kupfer oder Kunststoff – Rinnen und Fallrohre komplett erneuern",
+      "Schädlingsschutz: Marderabwehr, Taubenspikes, neue Lüftungsöffnungen mit Gittern"
     ],
     benefits: [
-      "Langlebigkeit: Qualitätsmaterialien für Jahrzehnte",
-      "Energieersparnis: Bis zu 30% durch gute Dämmung",
-      "Sicherheit: Alle Arbeiten nach DIN-Normen",
-      "Förderung: Staatliche Zuschüsse für Dämmung möglich",
-      "Gewährleistung: 5 Jahre auf alle Arbeiten"
+      "10 Jahre Garantie: Überdurchschnittliche Gewährleistung auf Neueindeckung und Abdichtung",
+      "Förderung: Bis zu 20% BEG-Zuschuss für Dachdämmung möglich",
+      "Meisterbetrieb: Eingetragener Dachdeckerbetrieb, zertifizierte Facharbeiter",
+      "Alle Dachformen: Steildach, Flachdach, Walmdach, Pultdach, Mansarddach",
+      "Festpreis: Verbindliches Angebot nach kostenloser Dachinspektion"
     ],
-    geoText: "Dachsanierung in München und Umgebung – für ein dichtes Dach über dem Kopf. Ob Steildach, Flachdach oder Walmdach – unsere Dachdecker kennen alle Dachformen. Service in ganz München, Dachau, Germering, Starnberg, Freising und dem Umland.",
-    ctaText: "Dach prüfen lassen"
+    geoText: "Dachsanierung in München und Umgebung – Ihr Dachdecker-Meisterbetrieb. Wir arbeiten an Dächern in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    ctaText: "Kostenlose Dachinspektion",
+    faq: [
+      { question: "Was kostet eine Dachsanierung in München?", answer: "Dachkosten in München: Reparatur 500-3.000€, Neueindeckung 100-180€/m², Dachdämmung 80-150€/m², Dachrinnen 30-60€/lfm. Ein 100m² Dach komplett: 15.000-25.000€." },
+      { question: "Wie lange hält ein neues Dach?", answer: "Lebensdauer nach Material: Tonziegel 60-100 Jahre, Betondachsteine 40-60 Jahre, Schiefer 100+ Jahre, Flachdach-Bitumen 20-30 Jahre, Flachdach-EPDM 40-50 Jahre." },
+      { question: "Wann sollte ich mein Dach sanieren lassen?", answer: "Warnsignale: Ziegel gebrochen/bemooste Flächen, Wasserspuren am Dachboden, Zugluft unter dem Dach, Dachrinnen undicht. Nach 30-40 Jahren ist meist eine Sanierung sinnvoll." }
+    ],
+    keywords: ["Dachsanierung München", "Dachdecker München", "Dach neu eindecken München Kosten", "Dachreparatur München", "Dachdämmung München", "Dachziegel erneuern München"]
   }
 };
 
@@ -2171,6 +2223,35 @@ export default function FunnelPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* FAQ Section - Optimized for AI Search (ChatGPT, Perplexity, Gemini) */}
+        {content.faq && content.faq.length > 0 && (
+          <Card className="mb-8">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <HelpCircle className="w-5 h-5 text-primary" />
+                Häufige Fragen
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {content.faq.map((item, index) => (
+                  <div key={index} className="border-b border-border last:border-0 pb-4 last:pb-0">
+                    <h4 className="font-semibold text-foreground mb-2">{item.question}</h4>
+                    <p className="text-muted-foreground text-sm">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Hidden structured data for AI and SEO */}
+        {content.keywords && (
+          <div className="sr-only" aria-hidden="true">
+            <p>Relevante Suchbegriffe: {content.keywords.join(", ")}</p>
+          </div>
+        )}
 
         <div className="text-center py-8 bg-muted/30 rounded-lg">
           <h2 className="text-2xl font-bold mb-4">Jetzt unverbindliches Angebot anfordern</h2>
