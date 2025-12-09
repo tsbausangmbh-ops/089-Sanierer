@@ -395,6 +395,14 @@ export default function FaqPreise() {
               ))}
             </div>
 
+            <div className="bg-muted/50 rounded-lg p-4 mb-8">
+              <p className="text-sm text-muted-foreground">
+                <strong>Hinweis:</strong> Alle angegebenen Preise sind Durchschnittspreise für München und Umgebung und können von Angebot zu Angebot variieren. 
+                Wir geben hierzu keine Garantie – jeder Handwerker und Handwerksbetrieb macht seine eigene Kalkulation. 
+                Auf Wunsch übernehmen wir auch die <strong>Koordination, Bauleitung und Bauüberwachung</strong> gegen Aufpreis.
+              </p>
+            </div>
+
             <Card className="bg-primary/5 border-primary/20">
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -455,6 +463,13 @@ export default function FaqPreise() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            <div className="bg-muted/50 rounded-lg p-4 mb-8">
+              <p className="text-sm text-muted-foreground">
+                <strong>Hinweis:</strong> Die angegebenen Stundensätze und Preise sind Durchschnittswerte für München und können variieren. 
+                Jeder Handwerksbetrieb erstellt seine eigene Kalkulation. Auf Wunsch übernehmen wir auch die <strong>Koordination, Bauleitung und Bauüberwachung</strong> gegen Aufpreis.
+              </p>
             </div>
 
             <Card className="bg-orange-500/5 border-orange-500/20">
