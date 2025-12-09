@@ -272,8 +272,8 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="relative flex items-center justify-center">
-                <div className="w-full aspect-[16/10] overflow-hidden rounded-lg shadow-2xl">
+              <div className="relative flex items-center justify-center py-4">
+                <div className="w-full aspect-[16/8] overflow-hidden rounded-lg shadow-2xl">
                   <img 
                     src={houseBeforeAfter} 
                     alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
