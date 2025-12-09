@@ -41,88 +41,109 @@ const headerServices = [
 
 const faqItems = [
   {
-    question: "Wie lange dauert eine Komplettsanierung?",
-    answer: "Die Dauer einer Komplettsanierung hängt von der Größe und dem Zustand der Immobilie ab. Eine Wohnung (60-80 m²) dauert in der Regel 6-10 Wochen, ein Einfamilienhaus 3-6 Monate. Wir erstellen Ihnen einen detaillierten Zeitplan vor Projektbeginn."
+    question: "Wie lange dauert eine Komplettsanierung in München?",
+    answer: "Die Dauer einer **Komplettsanierung in München** hängt von der Größe und dem Zustand der Immobilie ab. Eine **Wohnung (60-80 m²)** dauert in der Regel **6-10 Wochen**, ein **Einfamilienhaus 3-6 Monate**. Wir erstellen Ihnen einen detaillierten Zeitplan vor Projektbeginn.",
+    link: "/anfrage?service=komplettsanierung"
   },
   {
     question: "Was kostet eine Badsanierung in München?",
-    answer: "Eine Badsanierung in München kostet je nach Größe und Ausstattung zwischen 8.000 € und 25.000 €. Ein Standard-Bad (ca. 6 m²) liegt bei etwa 12.000-15.000 €, ein Premium-Bad mit hochwertiger Ausstattung bei 20.000-30.000 €. Wir erstellen Ihnen ein individuelles Angebot."
+    answer: "Eine **Badsanierung in München** kostet je nach Größe und Ausstattung zwischen **8.000 € und 25.000 €**. Ein **Standard-Bad (ca. 6 m²)** liegt bei etwa **12.000-15.000 €**, ein **Premium-Bad** mit hochwertiger Ausstattung bei **20.000-30.000 €**. Wir erstellen Ihnen ein individuelles Angebot.",
+    link: "/anfrage?service=badsanierung"
   },
   {
-    question: "Übernehmen Sie auch die Koordination aller Gewerke?",
-    answer: "Ja, als Generalunternehmer koordinieren wir alle Handwerker und Gewerke für Sie. Sie haben einen einzigen Ansprechpartner und müssen sich um nichts kümmern. Wir übernehmen die komplette Projektleitung von der Planung bis zur Abnahme."
+    question: "Übernehmen Sie die Koordination aller Gewerke in München?",
+    answer: "Ja, als **Generalunternehmer in München** koordinieren wir alle **Handwerker und Gewerke** für Sie. Sie haben **einen einzigen Ansprechpartner** und müssen sich um nichts kümmern. Wir übernehmen die **komplette Projektleitung** von der Planung bis zur Abnahme.",
+    link: "/gewerke"
   },
   {
-    question: "Welche Garantie erhalte ich auf die Arbeiten?",
-    answer: "Wir gewähren 5 Jahre Gewährleistung auf alle ausgeführten Arbeiten. Dies geht über die gesetzliche Gewährleistung hinaus und gibt Ihnen zusätzliche Sicherheit. Bei Mängeln reagieren wir schnell und unkompliziert."
+    question: "Welche Garantie erhalte ich auf Sanierungsarbeiten?",
+    answer: "Wir gewähren **5 Jahre Gewährleistung** auf alle ausgeführten Arbeiten. Dies geht über die gesetzliche Gewährleistung hinaus und gibt Ihnen **zusätzliche Sicherheit**. Bei Mängeln reagieren wir **schnell und unkompliziert**.",
+    link: "/kontakt"
   },
   {
-    question: "Kann ich während der Sanierung in der Wohnung bleiben?",
-    answer: "Bei kleineren Sanierungen (z.B. Badsanierung) ist das oft möglich, jedoch mit Einschränkungen. Bei einer Komplettsanierung empfehlen wir, die Wohnung vorübergehend zu räumen. Wir beraten Sie individuell zu Ihren Möglichkeiten."
+    question: "Kann ich während der Sanierung in München wohnen bleiben?",
+    answer: "Bei kleineren Sanierungen (z.B. **Badsanierung**) ist das oft möglich, jedoch mit Einschränkungen. Bei einer **Komplettsanierung** empfehlen wir, die Wohnung vorübergehend zu räumen. Wir beraten Sie individuell zu Ihren Möglichkeiten.",
+    link: "/ratgeber"
   },
   {
-    question: "Wie läuft die Kostenplanung ab?",
-    answer: "Nach einem kostenlosen Vor-Ort-Termin erstellen wir Ihnen ein detailliertes Angebot mit transparenter Kostenaufstellung. Sie erhalten einen Festpreis ohne versteckte Kosten. Änderungen während der Bauphase werden immer vorher mit Ihnen abgestimmt."
+    question: "Wie läuft die Kostenplanung für Sanierungen ab?",
+    answer: "Nach einem **kostenlosen Vor-Ort-Termin** erstellen wir Ihnen ein detailliertes Angebot mit **transparenter Kostenaufstellung**. Sie erhalten einen **Festpreis ohne versteckte Kosten**. Änderungen während der Bauphase werden immer vorher mit Ihnen abgestimmt.",
+    link: "/anfrage"
   },
   {
-    question: "Arbeiten Sie auch am Wochenende?",
-    answer: "Unsere regulären Arbeitszeiten sind Montag bis Freitag von 7:00 bis 17:00 Uhr. In Ausnahmefällen und nach Absprache können wir auch samstags arbeiten. Lärmintensive Arbeiten führen wir nur zu den gesetzlich erlaubten Zeiten durch."
+    question: "Arbeiten Ihre Handwerker auch am Wochenende?",
+    answer: "Unsere regulären **Arbeitszeiten** sind **Montag bis Freitag von 7:00 bis 17:00 Uhr**. In Ausnahmefällen und nach Absprache können wir auch **samstags** arbeiten. Lärmintensive Arbeiten führen wir nur zu den gesetzlich erlaubten Zeiten durch.",
+    link: "/kontakt"
   },
   {
-    question: "Welche Fördermittel kann ich nutzen?",
-    answer: "Für energetische Sanierungen gibt es attraktive KfW-Förderungen und BAFA-Zuschüsse. Wir beraten Sie zu den Fördermöglichkeiten und unterstützen Sie bei der Antragstellung. So können Sie bis zu 45% der Kosten sparen."
+    question: "Welche Fördermittel gibt es für Sanierungen in München?",
+    answer: "Für **energetische Sanierungen** gibt es attraktive **KfW-Förderungen** und **BAFA-Zuschüsse**. Wir beraten Sie zu den Fördermöglichkeiten und unterstützen Sie bei der Antragstellung. So können Sie **bis zu 45% der Kosten sparen**.",
+    link: "/anfrage?service=energetische-sanierung"
   },
   {
-    question: "Wie schnell können Sie mit der Sanierung beginnen?",
-    answer: "Nach Auftragserteilung können wir in der Regel innerhalb von 2-4 Wochen mit den Arbeiten beginnen. Bei dringenden Projekten versuchen wir, schnellere Lösungen zu finden. Die Materialbestellung und Planung benötigt jedoch etwas Vorlaufzeit."
+    question: "Wie schnell können Sie mit der Sanierung in München beginnen?",
+    answer: "Nach Auftragserteilung können wir in der Regel **innerhalb von 2-4 Wochen** mit den Arbeiten beginnen. Bei **dringenden Projekten** versuchen wir, schnellere Lösungen zu finden. Die Materialbestellung und Planung benötigt jedoch etwas Vorlaufzeit.",
+    link: "/anfrage"
   },
   {
-    question: "Vermitteln Sie auch einzelne Handwerker?",
-    answer: "Ja, über unseren Handwerker-Vermittlungsservice vermitteln wir auch einzelne Gewerke wie Maler, Elektriker, Fliesenleger oder Sanitärinstallateure. Alle Partner sind geprüfte Meisterbetriebe aus München und Umgebung."
+    question: "Vermitteln Sie einzelne Handwerker in München?",
+    answer: "Ja, über unseren **Handwerker-Vermittlungsservice** vermitteln wir auch einzelne **Gewerke** wie **Maler, Elektriker, Fliesenleger oder Sanitärinstallateure**. Alle Partner sind **geprüfte Meisterbetriebe aus München** und Umgebung.",
+    link: "/gewerke"
   },
   {
-    question: "Brauche ich eine Baugenehmigung für meine Sanierung?",
-    answer: "Für reine Innenraumsanierungen ist in der Regel keine Baugenehmigung erforderlich. Bei tragenden Wänden, Fassadenänderungen oder Dachausbauten kann jedoch eine Genehmigung nötig sein. Wir klären dies im Vorfeld für Sie ab."
+    question: "Brauche ich eine Baugenehmigung für meine Sanierung in München?",
+    answer: "Für reine **Innenraumsanierungen** ist in der Regel **keine Baugenehmigung** erforderlich. Bei **tragenden Wänden**, Fassadenänderungen oder **Dachausbauten** kann jedoch eine Genehmigung nötig sein. Wir klären dies im Vorfeld für Sie ab.",
+    link: "/ratgeber"
   },
   {
-    question: "Wie hoch ist die Anzahlung?",
-    answer: "Wir arbeiten mit einer fairen Zahlungsregelung: 30% bei Auftragserteilung, 40% bei Baubeginn und 30% nach Fertigstellung und Abnahme. So haben Sie Sicherheit und wir können Material vorfinanzieren."
+    question: "Wie hoch ist die Anzahlung bei Sanierungsprojekten?",
+    answer: "Wir arbeiten mit einer **fairen Zahlungsregelung**: **30% bei Auftragserteilung**, **40% bei Baubeginn** und **30% nach Fertigstellung** und Abnahme. So haben Sie Sicherheit und wir können Material vorfinanzieren.",
+    link: "/anfrage"
   },
   {
     question: "Was passiert bei unvorhergesehenen Problemen während der Sanierung?",
-    answer: "Unvorhergesehene Probleme wie versteckte Wasserschäden oder marode Leitungen können vorkommen. Wir informieren Sie sofort, dokumentieren alles und besprechen die Lösung mit Ihnen, bevor zusätzliche Kosten entstehen."
+    answer: "Unvorhergesehene Probleme wie **versteckte Wasserschäden** oder **marode Leitungen** können vorkommen. Wir informieren Sie **sofort**, dokumentieren alles und besprechen die Lösung mit Ihnen, **bevor zusätzliche Kosten entstehen**.",
+    link: "/kontakt"
   },
   {
-    question: "Sind Ihre Handwerker versichert?",
-    answer: "Ja, alle unsere Handwerker und Partnerunternehmen sind vollständig versichert. Wir verfügen über eine Betriebshaftpflichtversicherung mit einer Deckungssumme von 5 Millionen Euro."
+    question: "Sind Ihre Handwerker in München versichert?",
+    answer: "Ja, alle unsere **Handwerker und Partnerunternehmen** sind vollständig versichert. Wir verfügen über eine **Betriebshaftpflichtversicherung** mit einer Deckungssumme von **5 Millionen Euro**.",
+    link: "/gewerke"
   },
   {
-    question: "Kann ich eigene Materialien beistellen?",
-    answer: "Grundsätzlich ja, allerdings übernehmen wir dann keine Gewährleistung für diese Materialien. Wir empfehlen, Materialien über uns zu beziehen, da wir Handwerkerrabatte weitergeben und die Qualität garantieren können."
+    question: "Kann ich eigene Materialien für die Sanierung beistellen?",
+    answer: "Grundsätzlich ja, allerdings übernehmen wir dann **keine Gewährleistung** für diese Materialien. Wir empfehlen, Materialien über uns zu beziehen, da wir **Handwerkerrabatte** weitergeben und die Qualität garantieren können.",
+    link: "/anfrage"
   },
   {
     question: "Wie läuft die Kommunikation während der Bauphase?",
-    answer: "Sie erhalten einen festen Ansprechpartner, der Sie regelmäßig über den Fortschritt informiert. Wir sind telefonisch und per WhatsApp erreichbar. Auf Wunsch erhalten Sie wöchentliche Foto-Updates."
+    answer: "Sie erhalten einen **festen Ansprechpartner**, der Sie regelmäßig über den Fortschritt informiert. Wir sind **telefonisch und per WhatsApp** erreichbar. Auf Wunsch erhalten Sie **wöchentliche Foto-Updates**.",
+    link: "/kontakt"
   },
   {
-    question: "Entsorgen Sie auch den Bauschutt?",
-    answer: "Ja, die fachgerechte Entsorgung von Bauschutt und Altmaterialien ist in unseren Angeboten enthalten. Wir stellen Container und kümmern uns um die umweltgerechte Entsorgung."
+    question: "Entsorgen Sie auch den Bauschutt bei Sanierungen?",
+    answer: "Ja, die **fachgerechte Entsorgung** von Bauschutt und Altmaterialien ist in unseren Angeboten enthalten. Wir stellen Container und kümmern uns um die **umweltgerechte Entsorgung**.",
+    link: "/anfrage"
   },
   {
-    question: "Arbeiten Sie auch in meinem Stadtteil?",
-    answer: "Wir arbeiten in ganz München und dem Münchner Umland: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden."
+    question: "In welchen Münchner Stadtteilen arbeiten Sie?",
+    answer: "Wir arbeiten in **ganz München** und dem **Münchner Umland**: **Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing** sowie **Dachau, Starnberg, Freising, Germering** und weitere Gemeinden.",
+    link: "/kontakt"
   },
   {
-    question: "Wie gehen Sie mit Altbauten um?",
-    answer: "Altbauten erfordern besondere Sorgfalt. Wir haben langjährige Erfahrung mit Münchner Altbauten und kennen die typischen Herausforderungen wie Holzbalkendecken, alte Leitungen und Denkmalschutzauflagen."
+    question: "Wie gehen Sie mit Altbausanierungen in München um?",
+    answer: "**Altbauten** erfordern besondere Sorgfalt. Wir haben **langjährige Erfahrung mit Münchner Altbauten** und kennen die typischen Herausforderungen wie **Holzbalkendecken**, alte Leitungen und **Denkmalschutzauflagen**.",
+    link: "/ratgeber"
   },
   {
-    question: "Bieten Sie auch barrierefreie Sanierungen an?",
-    answer: "Ja, wir sind spezialisiert auf barrierefreie Umbauten nach DIN 18040. Dazu gehören bodengleiche Duschen, verbreiterte Türen, Haltegriffe und rutschfeste Böden. Für solche Maßnahmen gibt es oft KfW-Förderungen."
+    question: "Bieten Sie barrierefreie Sanierungen in München an?",
+    answer: "Ja, wir sind spezialisiert auf **barrierefreie Umbauten nach DIN 18040**. Dazu gehören **bodengleiche Duschen**, verbreiterte Türen, Haltegriffe und rutschfeste Böden. Für solche Maßnahmen gibt es oft **KfW-Förderungen**.",
+    link: "/anfrage?service=badsanierung"
   },
   {
-    question: "Können Sie auch nur Teilsanierungen durchführen?",
-    answer: "Selbstverständlich. Ob Badsanierung, Küchenerneuerung oder nur neue Böden – wir führen auch Teilsanierungen durch. Die Mindestauftragssumme liegt bei 5.000 Euro."
+    question: "Können Sie auch Teilsanierungen in München durchführen?",
+    answer: "Selbstverständlich. Ob **Badsanierung**, **Küchenerneuerung** oder nur **neue Böden** – wir führen auch **Teilsanierungen** durch. Die **Mindestauftragssumme** liegt bei **5.000 Euro**.",
+    link: "/anfrage"
   },
   {
     question: "Was ist der Unterschied zwischen Renovierung und Sanierung?",
@@ -520,12 +541,31 @@ export default function FaqPreise() {
                   value={`item-${index}`}
                   className="bg-background rounded-lg border px-4"
                   data-testid={`accordion-faq-${index}`}
+                  itemScope
+                  itemProp="mainEntity"
+                  itemType="https://schema.org/Question"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-4">
-                    <span className="font-medium">{item.question}</span>
+                    <span className="font-medium" itemProp="name">{item.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-4">
-                    {item.answer}
+                  <AccordionContent 
+                    className="text-muted-foreground pb-4"
+                    itemScope
+                    itemProp="acceptedAnswer"
+                    itemType="https://schema.org/Answer"
+                  >
+                    <div itemProp="text">
+                      <p dangerouslySetInnerHTML={{ 
+                        __html: item.answer.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+                      }} />
+                      {item.link && (
+                        <Link href={item.link}>
+                          <Button variant="link" size="sm" className="mt-2 p-0 h-auto text-primary">
+                            Mehr erfahren <ChevronRight className="w-4 h-4 ml-1" />
+                          </Button>
+                        </Link>
+                      )}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}
