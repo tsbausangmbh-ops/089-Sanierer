@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -320,6 +321,38 @@ const tradePrices = [
 ];
 
 export default function FaqPreise() {
+  // FAQPage Schema.org structured data for SEO
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer.replace(/\*\*/g, '')
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'faq-schema';
+    script.textContent = JSON.stringify(faqSchema);
+    
+    // Remove existing schema if present
+    const existing = document.getElementById('faq-schema');
+    if (existing) existing.remove();
+    
+    document.head.appendChild(script);
+
+    return () => {
+      const schemaScript = document.getElementById('faq-schema');
+      if (schemaScript) schemaScript.remove();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,85%,10%)] text-white border-b border-white/20">
