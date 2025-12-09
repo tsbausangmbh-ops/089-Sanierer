@@ -31,7 +31,13 @@ import {
   MessageSquare,
   Hammer,
   Euro,
-  Building2
+  Building2,
+  Handshake,
+  Wrench,
+  PaintBucket,
+  Plug,
+  Droplets,
+  Thermometer
 } from "lucide-react";
 
 const headerServices = [
@@ -327,6 +333,72 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">{benefit.description}</p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 lg:py-14 bg-card">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <Handshake className="w-8 h-8 text-primary" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Vermittlung an Partnerfirmen
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Neben unseren eigenen Leistungen vermitteln wir Sie bei Bedarf auch direkt an unsere geprüften Partnerfirmen. 
+              Ob Einzelgewerk oder Spezialist – wir finden den richtigen Handwerker für Ihr Projekt in München.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <Card className="p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                <PaintBucket className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium">Maler</p>
+            </Card>
+            <Card className="p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                <Plug className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium">Elektriker</p>
+            </Card>
+            <Card className="p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                <Droplets className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium">Sanitär</p>
+            </Card>
+            <Card className="p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                <Thermometer className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium">Heizung</p>
+            </Card>
+            <Card className="p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                <Layers className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium">Fliesenleger</p>
+            </Card>
+            <Card className="p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
+                <Wrench className="w-5 h-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium">Schreiner</p>
+            </Card>
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground mb-4">
+              Alle unsere Partnerfirmen sind Meisterbetriebe aus München und Umgebung mit nachgewiesener Qualität und Zuverlässigkeit.
+            </p>
+            <Link href="/anfrage">
+              <Button variant="outline" size="lg" data-testid="button-partner-cta">
+                Handwerker-Vermittlung anfragen
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
