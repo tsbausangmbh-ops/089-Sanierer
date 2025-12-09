@@ -186,9 +186,9 @@ export default function Home() {
                   Ihr Sanierungspartner in München: Wir koordinieren alle Gewerke für Ihre Komplettsanierung, Badsanierung oder Küchensanierung – faire Festpreise, Termingarantie.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/anfrage">
-                    <Button size="lg" className="text-lg w-full sm:w-auto" data-testid="button-hero-cta">
-                      Problem schildern
+                  <Link href="/gewerke">
+                    <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-hero-cta">
+                      Handwerker-Vermittlung
                       <ChevronRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
