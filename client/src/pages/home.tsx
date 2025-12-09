@@ -210,7 +210,7 @@ export default function Home() {
                     </Button>
                   </a>
                   <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-hero-booking">
+                    <Button size="lg" className="text-lg w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-hero-booking">
                       <Calendar className="w-5 h-5 mr-2" />
                       24 Std. Online Termin
                     </Button>
@@ -324,7 +324,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-process-booking">
+              <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-process-booking">
                 <Calendar className="w-5 h-5 mr-2" />
                 24 Std. Online Termin
               </Button>
@@ -490,7 +490,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-cta-booking">
+              <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
                 <Calendar className="w-5 h-5 mr-2" />
                 24 Std. Online Termin
               </Button>
@@ -546,7 +546,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="text-lg bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-content-booking">
+                <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-content-booking">
                   <Calendar className="w-5 h-5 mr-2" />
                   24 Std. Online Termin
                 </Button>

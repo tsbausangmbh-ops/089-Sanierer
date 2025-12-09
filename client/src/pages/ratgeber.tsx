@@ -903,7 +903,7 @@ export default function Ratgeber() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="gap-2 bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-ratgeber-booking">
+                    <Button size="lg" className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-ratgeber-booking">
                       <Calendar className="w-5 h-5" />
                       24 Std. Online Termin
                     </Button>

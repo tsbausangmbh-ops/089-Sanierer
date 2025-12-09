@@ -432,7 +432,7 @@ export default function FaqPreise() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-2">
                     <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                      <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-cta-booking">
+                      <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
                         <Calendar className="w-5 h-5 mr-2" />
                         24 Std. Online Termin
                       </Button>
@@ -572,7 +572,7 @@ export default function FaqPreise() {
               <p className="text-muted-foreground mb-4">Haben Sie weitere Fragen?</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
                 <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-booking-faq">
+                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-booking-faq">
                     <Calendar className="w-4 h-4 mr-2" />
                     24 Std. Online Termin
                   </Button>
