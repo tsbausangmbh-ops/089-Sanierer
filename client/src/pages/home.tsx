@@ -394,7 +394,7 @@ export default function Home() {
               Alle unsere Partnerfirmen sind Meisterbetriebe aus München und Umgebung mit nachgewiesener Qualität und Zuverlässigkeit.
             </p>
             <Link href="/anfrage">
-              <Button variant="outline" size="lg" data-testid="button-partner-cta">
+              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-partner-cta">
                 Handwerker-Vermittlung anfragen
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
