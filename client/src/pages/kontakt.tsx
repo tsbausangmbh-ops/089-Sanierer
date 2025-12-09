@@ -116,11 +116,6 @@ export default function Kontakt() {
                 </Button>
               </a>
             </div>
-            <Link href="/anfrage">
-              <Button data-testid="button-header-cta">
-                Kostenlose Anfrage
-              </Button>
-            </Link>
           </div>
         </div>
       </header>
