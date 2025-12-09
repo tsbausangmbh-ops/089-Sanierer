@@ -191,7 +191,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  Endlich sorgenfrei sanieren in München – Ihr Traumhaus wartet
+                  Endlich sorgenfrei sanieren in München – Ihr Traumbad wartet
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
                   Schluss mit Handwerker-Chaos und Terminsorgen: Wir übernehmen Ihre komplette Sanierung in München – von der Planung bis zur Schlüsselübergabe. Sie lehnen sich zurück, wir machen das.
