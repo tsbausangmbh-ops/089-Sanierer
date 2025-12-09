@@ -1,7 +1,18 @@
 # KSHW München - robots.txt
 # https://089-sanierer.de
+# Optimiert für Google, AI-Suchmaschinen und GEO-SEO
 
-# Default: Allow all crawlers
+# ===========================================
+# GEOGRAPHIC TARGETING - München & Umgebung
+# ===========================================
+# Service Area: München, Bayern, Deutschland
+# Coordinates: 48.137154, 11.576124
+# Radius: 50km (Großraum München)
+# Languages: German (de-DE)
+
+# ===========================================
+# DEFAULT: Allow all search crawlers
+# ===========================================
 User-agent: *
 Allow: /
 Disallow: /admin/
@@ -9,76 +20,123 @@ Disallow: /api/
 Disallow: /*?*
 Disallow: /bestaetigung
 
-# Google Search (primary)
+# ===========================================
+# GOOGLE FAMILY - Primary Search Engine
+# ===========================================
 User-agent: Googlebot
 Allow: /
+Allow: /anfrage
+Allow: /ratgeber
+Allow: /faq-preise
+Allow: /kontakt
+Allow: /gewerke
 Disallow: /admin/
 Disallow: /api/
 
-# Google Images
 User-agent: Googlebot-Image
 Allow: /
 
-# Google Mobile
 User-agent: Googlebot-Mobile
 Allow: /
 
-# Bing
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /ratgeber
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# Google AdsBot
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# ===========================================
+# BING / MICROSOFT FAMILY
+# ===========================================
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-# Bing Preview
 User-agent: BingPreview
 Allow: /
 
-# Yahoo
+User-agent: msnbot
+Allow: /
+
+# ===========================================
+# OTHER SEARCH ENGINES
+# ===========================================
 User-agent: Slurp
 Allow: /
 
-# Yandex (Russia)
-User-agent: Yandex
-Allow: /
-Crawl-delay: 5
-
-# Baidu (China)
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 5
-
-# DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 
-# Apple
 User-agent: Applebot
 Allow: /
 
-# AI Search Engines - ALLOW for visibility in AI search results
-# ChatGPT Search / OpenAI Search
+# European Search Engines
+User-agent: Qwantify
+Allow: /
+
+User-agent: Ecosia
+Allow: /
+
+# International (limited crawl)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 10
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 10
+
+# ===========================================
+# AI SEARCH ENGINES - ALLOW (für KI-Suche)
+# ===========================================
+
+# OpenAI / ChatGPT Search
 User-agent: OAI-SearchBot
 Allow: /
+Allow: /anfrage
+Allow: /ratgeber
+Allow: /faq-preise
+Allow: /kontakt
+Allow: /gewerke
 Disallow: /admin/
 Disallow: /api/
 
-# ChatGPT User (browsing)
+# ChatGPT User Browsing
 User-agent: ChatGPT-User
 Allow: /
 
-# Google Gemini Search
+# Google Gemini / Bard
 User-agent: Google-Extended
 Allow: /
 
 # Perplexity AI Search
 User-agent: PerplexityBot
 Allow: /
+Allow: /anfrage
+Allow: /ratgeber
+Allow: /faq-preise
+Allow: /kontakt
 Disallow: /admin/
 Disallow: /api/
 
-# Anthropic Claude
+# Anthropic Claude Search
 User-agent: ClaudeBot
 Allow: /
+Allow: /anfrage
+Allow: /ratgeber
+Allow: /faq-preise
 Disallow: /admin/
 Disallow: /api/
 
@@ -87,15 +145,36 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-# Meta AI
-User-agent: FacebookBot
-Allow: /
-
 # Microsoft Copilot
 User-agent: Copilot
 Allow: /
 
-# AI Training Bots - BLOCK (training data only, not search)
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# You.com Search
+User-agent: YouBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Neeva AI (now Snowflake)
+User-agent: NeevaBot
+Allow: /
+
+# Cohere AI Search
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# ===========================================
+# AI TRAINING BOTS - BLOCK (nur Training, keine Suche)
+# ===========================================
 User-agent: GPTBot
 Disallow: /
 
@@ -111,12 +190,23 @@ Disallow: /
 User-agent: Omgilibot
 Disallow: /
 
-# Aggressive/unwanted bots
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+# ===========================================
+# SEO TOOLS - Limited Access
+# ===========================================
 User-agent: AhrefsBot
-Crawl-delay: 10
+Crawl-delay: 30
 
 User-agent: SemrushBot
-Crawl-delay: 10
+Crawl-delay: 30
 
 User-agent: MJ12bot
 Disallow: /
@@ -124,8 +214,36 @@ Disallow: /
 User-agent: dotbot
 Disallow: /
 
-# Sitemap
+User-agent: PetalBot
+Crawl-delay: 30
+
+User-agent: DataForSeoBot
+Crawl-delay: 30
+
+# ===========================================
+# SPAM / AGGRESSIVE BOTS - BLOCK
+# ===========================================
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /
+
+# ===========================================
+# SITEMAP & HOST
+# ===========================================
 Sitemap: https://089-sanierer.de/sitemap.xml
 
-# Host
 Host: https://089-sanierer.de
