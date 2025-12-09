@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
+import { useEffect } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -15,7 +16,27 @@ import Datenschutz from "@/pages/datenschutz";
 import AGB from "@/pages/agb";
 import NotFound from "@/pages/not-found";
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
+function usePageTracking() {
+  const [location] = useLocation();
+  
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'user_engagement', {
+        page_path: location,
+        page_title: document.title,
+      });
+    }
+  }, [location]);
+}
+
 function Router() {
+  usePageTracking();
   return (
     <Switch>
       <Route path="/" component={Home} />
