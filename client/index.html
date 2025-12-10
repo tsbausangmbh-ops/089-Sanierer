@@ -82,24 +82,39 @@
     <link rel="canonical" href="https://089-sanierer.de" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     
-    <!-- Schema.org LocalBusiness - Erweitert für KI -->
+    <!-- Schema.org LocalBusiness - Google Business Profile & GEO optimiert -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
+      "@type": ["HomeAndConstructionBusiness", "LocalBusiness", "GeneralContractor"],
       "@id": "https://089-sanierer.de/#organization",
       "name": "KSHW München - Komplettsanierungen Haus & Wohnung",
-      "alternateName": ["KSHW München", "089 Sanierer", "Komplettsanierungen München"],
-      "description": "KSHW München ist Ihr Partner für Komplettsanierung in München und Umgebung. Was kostet Badsanierung? Was kostet Haussanierung? Wir bieten Badsanierung ab 9.200€, Komplettsanierung ab 920€/m² mit Festpreisgarantie und 2 Jahren Gewährleistung. 268+ zufriedene Kunden seit 2004.",
+      "legalName": "KSHW München GmbH",
+      "alternateName": ["KSHW München", "089 Sanierer", "Komplettsanierungen München", "Sanierung München"],
+      "description": "Was kostet eine Sanierung in München? KSHW München bietet Badsanierung ab 9.200€, Komplettsanierung ab 920€/m² mit Festpreisgarantie. 268+ zufriedene Kunden in München, Schwabing, Sendling, Pasing, Dachau, Starnberg. Kostenlose Beratung in 24h.",
       "url": "https://089-sanierer.de",
-      "logo": "https://089-sanierer.de/logo.png",
-      "image": "https://089-sanierer.de/og-image.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://089-sanierer.de/logo.png",
+        "width": "400",
+        "height": "100"
+      },
+      "image": [
+        "https://089-sanierer.de/og-image.jpg",
+        "https://089-sanierer.de/badsanierung-muenchen.jpg",
+        "https://089-sanierer.de/komplettsanierung-muenchen.jpg"
+      ],
       "telephone": "+4915212274043",
       "email": "info@komplettsanierungen-haus-wohnung.de",
-      "foundingDate": "2010",
+      "foundingDate": "2004",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": "10",
+        "maxValue": "50"
+      },
       "founder": {
         "@type": "Person",
-        "name": "KSHW Team"
+        "name": "KSHW Team München"
       },
       "address": {
         "@type": "PostalAddress",
@@ -107,84 +122,160 @@
         "addressLocality": "München",
         "addressRegion": "Bayern",
         "postalCode": "81379",
-        "addressCountry": "DE"
+        "addressCountry": "DE",
+        "areaServed": "Großraum München"
       },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": "48.137154",
-        "longitude": "11.576124"
+        "longitude": "11.576124",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "München",
+          "addressRegion": "Bayern",
+          "addressCountry": "DE"
+        }
       },
-      "hasMap": "https://maps.google.com/?q=KSHW+München+Zielstattstr+9+81379+München",
+      "hasMap": "https://www.google.com/maps/place/KSHW+M%C3%BCnchen/@48.137154,11.576124,15z",
       "areaServed": [
-        {"@type": "City", "name": "München", "sameAs": "https://de.wikipedia.org/wiki/München"},
-        {"@type": "City", "name": "Schwabing"},
-        {"@type": "City", "name": "Bogenhausen"},
-        {"@type": "City", "name": "Sendling"},
-        {"@type": "City", "name": "Pasing"},
-        {"@type": "City", "name": "Trudering"},
-        {"@type": "City", "name": "Haidhausen"},
-        {"@type": "City", "name": "Giesing"},
-        {"@type": "City", "name": "Neuhausen"},
-        {"@type": "City", "name": "Nymphenburg"},
-        {"@type": "City", "name": "Laim"},
-        {"@type": "City", "name": "Moosach"},
-        {"@type": "City", "name": "Milbertshofen"},
-        {"@type": "City", "name": "Freimann"},
-        {"@type": "City", "name": "Berg am Laim"},
-        {"@type": "City", "name": "Ramersdorf"},
-        {"@type": "City", "name": "Perlach"},
-        {"@type": "City", "name": "Solln"},
-        {"@type": "City", "name": "Obersendling"},
-        {"@type": "City", "name": "Thalkirchen"},
-        {"@type": "City", "name": "Dachau"},
-        {"@type": "City", "name": "Starnberg"},
-        {"@type": "City", "name": "Fürstenfeldbruck"},
-        {"@type": "City", "name": "Germering"},
-        {"@type": "City", "name": "Freising"},
-        {"@type": "City", "name": "Garching"},
-        {"@type": "City", "name": "Unterschleißheim"},
-        {"@type": "City", "name": "Ottobrunn"},
-        {"@type": "City", "name": "Haar"},
-        {"@type": "City", "name": "Grünwald"},
-        {"@type": "City", "name": "Pullach"},
-        {"@type": "City", "name": "Gräfelfing"},
-        {"@type": "City", "name": "Planegg"}
-      ],
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "48.137154",
-          "longitude": "11.576124"
+        {
+          "@type": "State",
+          "name": "Bayern",
+          "sameAs": "https://de.wikipedia.org/wiki/Bayern"
         },
-        "geoRadius": "50000"
-      },
+        {
+          "@type": "City",
+          "name": "München",
+          "sameAs": "https://de.wikipedia.org/wiki/München",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.137154",
+            "longitude": "11.576124"
+          }
+        },
+        {"@type": "Place", "name": "München-Schwabing", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Bogenhausen", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Sendling", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Pasing", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Trudering", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Haidhausen", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Giesing", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Neuhausen", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Nymphenburg", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Laim", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Moosach", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Milbertshofen", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Freimann", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Berg am Laim", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Ramersdorf", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Perlach", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Solln", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Obersendling", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "Place", "name": "München-Thalkirchen", "containedInPlace": {"@type": "City", "name": "München"}},
+        {"@type": "City", "name": "Dachau", "geo": {"@type": "GeoCoordinates", "latitude": "48.2603", "longitude": "11.4342"}},
+        {"@type": "City", "name": "Starnberg", "geo": {"@type": "GeoCoordinates", "latitude": "47.9983", "longitude": "11.3406"}},
+        {"@type": "City", "name": "Fürstenfeldbruck", "geo": {"@type": "GeoCoordinates", "latitude": "48.1789", "longitude": "11.2553"}},
+        {"@type": "City", "name": "Germering", "geo": {"@type": "GeoCoordinates", "latitude": "48.1333", "longitude": "11.3667"}},
+        {"@type": "City", "name": "Freising", "geo": {"@type": "GeoCoordinates", "latitude": "48.4028", "longitude": "11.7489"}},
+        {"@type": "City", "name": "Garching", "geo": {"@type": "GeoCoordinates", "latitude": "48.2489", "longitude": "11.6511"}},
+        {"@type": "City", "name": "Unterschleißheim", "geo": {"@type": "GeoCoordinates", "latitude": "48.2833", "longitude": "11.5667"}},
+        {"@type": "City", "name": "Ottobrunn", "geo": {"@type": "GeoCoordinates", "latitude": "48.0633", "longitude": "11.6608"}},
+        {"@type": "City", "name": "Haar", "geo": {"@type": "GeoCoordinates", "latitude": "48.1", "longitude": "11.7333"}},
+        {"@type": "City", "name": "Grünwald", "geo": {"@type": "GeoCoordinates", "latitude": "48.0439", "longitude": "11.5211"}},
+        {"@type": "City", "name": "Pullach", "geo": {"@type": "GeoCoordinates", "latitude": "48.0608", "longitude": "11.5236"}},
+        {"@type": "City", "name": "Gräfelfing", "geo": {"@type": "GeoCoordinates", "latitude": "48.1167", "longitude": "11.4333"}},
+        {"@type": "City", "name": "Planegg", "geo": {"@type": "GeoCoordinates", "latitude": "48.1", "longitude": "11.4333"}},
+        {"@type": "City", "name": "Ismaning", "geo": {"@type": "GeoCoordinates", "latitude": "48.2167", "longitude": "11.6667"}},
+        {"@type": "City", "name": "Unterhaching", "geo": {"@type": "GeoCoordinates", "latitude": "48.0667", "longitude": "11.6167"}},
+        {"@type": "City", "name": "Taufkirchen", "geo": {"@type": "GeoCoordinates", "latitude": "48.0458", "longitude": "11.6153"}}
+      ],
+      "serviceArea": [
+        {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.137154",
+            "longitude": "11.576124"
+          },
+          "geoRadius": "50000"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Großraum München",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Bayern",
+            "addressCountry": "DE"
+          }
+        }
+      ],
       "priceRange": "€€-€€€",
       "currenciesAccepted": "EUR",
-      "paymentAccepted": "Überweisung, Bar, Finanzierung",
+      "paymentAccepted": ["Überweisung", "Barzahlung", "Finanzierung", "Ratenzahlung"],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "08:00",
           "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
         }
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+4915212274043",
-        "contactType": "customer service",
-        "availableLanguage": ["German", "English"],
-        "areaServed": "DE-BY"
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+4915212274043",
+          "contactType": "customer service",
+          "availableLanguage": ["German", "English"],
+          "areaServed": ["DE-BY", "München"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+4915212274043",
+          "contactType": "sales",
+          "availableLanguage": "German",
+          "areaServed": "München"
+        }
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "bestRating": "5",
         "worstRating": "1",
         "ratingCount": "268",
-        "reviewCount": "268"
+        "reviewCount": "268",
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "KSHW München"
+        }
       },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Familie M., München-Schwabing"},
+          "datePublished": "2024-10-15",
+          "reviewBody": "Komplettsanierung unserer Altbauwohnung in Schwabing. Alles pünktlich, im Budget und in Top-Qualität. Klare Empfehlung!",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Herr K., Starnberg"},
+          "datePublished": "2024-09-20",
+          "reviewBody": "Badsanierung mit bodengleicher Dusche. Saubere Arbeit, freundliches Team, faire Preise.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Sanierungsleistungen",
