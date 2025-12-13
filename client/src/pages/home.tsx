@@ -144,7 +144,7 @@ export default function Home() {
   
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,75%,22%)] text-white border-b border-white/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,80%,10%)] text-white border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="h-16 flex items-center justify-between gap-4">
             <Link href="/">
@@ -201,7 +201,7 @@ export default function Home() {
         </div>
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[hsl(220,75%,28%)] border-t border-white/10">
+          <div className="lg:hidden bg-[hsl(220,80%,12%)] border-t border-white/10">
             <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
               {headerServices.map((service) => (
                 <Link key={service.id} href={`/anfrage?service=${service.id}`}>
