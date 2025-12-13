@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertLeadSchema, type Lead } from "@shared/schema";
+import { insertLeadSchema, insertAppointmentSchema, type Lead, type Appointment } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
 import { setupAuth, requireAuth } from "./auth";
 import OpenAI from "openai";
@@ -103,6 +103,128 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   }
 }
 
+async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
+  const serviceLabel = serviceLabels[appointment.service] || appointment.service;
+  
+  const customerHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #1e3a5f; color: white; padding: 20px; text-align: center; }
+    .content { padding: 20px; background: #f9f9f9; }
+    .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; }
+    .highlight { background: #fff; padding: 15px; border-left: 4px solid #f59e0b; margin: 15px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>KSHW München</h1>
+      <p>Terminbestätigung</p>
+    </div>
+    <div class="content">
+      <h2>Vielen Dank für Ihre Terminanfrage, ${appointment.name}!</h2>
+      <p>Wir haben Ihre Terminanfrage erhalten und werden uns in Kürze bei Ihnen melden, um den Termin zu bestätigen.</p>
+      
+      <div class="highlight">
+        <strong>Ihre Terminanfrage:</strong><br>
+        Service: ${serviceLabel}<br>
+        Wunschtermin: ${appointment.preferredDate}<br>
+        Uhrzeit: ${appointment.preferredTime}<br>
+        ${appointment.message ? `Nachricht: ${appointment.message}` : ""}
+      </div>
+      
+      <p>Bei Fragen erreichen Sie uns unter:</p>
+      <p>
+        <strong>Telefon:</strong> 0152 122 740 43<br>
+        <strong>E-Mail:</strong> info@089-sanierer.de
+      </p>
+    </div>
+    <div class="footer">
+      <p>KSHW München | Zielstattstr. 9, 81379 München</p>
+      <p>www.089-sanierer.de</p>
+    </div>
+  </div>
+</body>
+</html>
+  `;
+
+  const companyHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #f59e0b; color: white; padding: 20px; text-align: center; }
+    .content { padding: 20px; background: #f9f9f9; }
+    .info-box { background: #fff; padding: 15px; margin: 15px 0; border: 1px solid #ddd; }
+    .info-box strong { color: #1e3a5f; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Neue Terminanfrage</h1>
+      <p>Über KI-Bot eingegangen</p>
+    </div>
+    <div class="content">
+      <h2>Neue Terminanfrage eingegangen</h2>
+      
+      <div class="info-box">
+        <strong>Kundendaten:</strong><br>
+        Name: ${appointment.name}<br>
+        E-Mail: ${appointment.email}<br>
+        Telefon: ${appointment.phone}
+      </div>
+      
+      <div class="info-box">
+        <strong>Termindetails:</strong><br>
+        Service: ${serviceLabel}<br>
+        Wunschtermin: ${appointment.preferredDate}<br>
+        Uhrzeit: ${appointment.preferredTime}
+      </div>
+      
+      ${appointment.message ? `
+      <div class="info-box">
+        <strong>Nachricht:</strong><br>
+        ${appointment.message}
+      </div>
+      ` : ""}
+      
+      <p><strong>Bitte kontaktieren Sie den Kunden zeitnah, um den Termin zu bestätigen.</strong></p>
+    </div>
+  </div>
+</body>
+</html>
+  `;
+
+  try {
+    await Promise.all([
+      transporter.sendMail({
+        from: `"KSHW München" <${process.env.SMTP_FROM_EMAIL}>`,
+        to: appointment.email,
+        subject: `Terminanfrage bei KSHW München: ${serviceLabel}`,
+        html: customerHtml,
+      }),
+      transporter.sendMail({
+        from: `"KSHW München Bot" <${process.env.SMTP_FROM_EMAIL}>`,
+        to: process.env.SMTP_FROM_EMAIL,
+        subject: `Neue Terminanfrage: ${appointment.name} - ${serviceLabel}`,
+        html: companyHtml,
+      })
+    ]);
+    console.log(`Appointment emails sent for ${appointment.email}`);
+  } catch (error) {
+    console.error("Failed to send appointment emails:", error);
+  }
+}
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
@@ -144,6 +266,27 @@ export async function registerRoutes(
       return res.status(404).json({ error: "Lead nicht gefunden" });
     }
     res.json(lead);
+  });
+
+  app.post("/api/appointments", async (req, res) => {
+    const result = insertAppointmentSchema.safeParse(req.body);
+    if (!result.success) {
+      const validationError = fromZodError(result.error);
+      return res.status(400).json({ error: validationError.message });
+    }
+
+    const appointment = await storage.createAppointment(result.data);
+    
+    sendAppointmentEmails(appointment).catch(err => {
+      console.error("Appointment email sending failed:", err);
+    });
+    
+    res.status(201).json(appointment);
+  });
+
+  app.get("/api/appointments", requireAuth, async (req, res) => {
+    const appointments = await storage.getAppointments();
+    res.json(appointments);
   });
 
   const openai = new OpenAI({

@@ -1,4 +1,4 @@
-import { users, leads, type User, type InsertUser, type Lead, type InsertLead } from "@shared/schema";
+import { users, leads, appointments, type User, type InsertUser, type Lead, type InsertLead, type Appointment, type InsertAppointment } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc } from "drizzle-orm";
 
@@ -11,6 +11,9 @@ export interface IStorage {
   getLeads(): Promise<Lead[]>;
   getLead(id: string): Promise<Lead | undefined>;
   getLeadsByService(service: string): Promise<Lead[]>;
+  createAppointment(appointment: InsertAppointment): Promise<Appointment>;
+  getAppointments(): Promise<Appointment[]>;
+  getAppointment(id: string): Promise<Appointment | undefined>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -54,6 +57,20 @@ export class DatabaseStorage implements IStorage {
       .from(leads)
       .where(eq(leads.service, service))
       .orderBy(desc(leads.createdAt));
+  }
+
+  async createAppointment(insertAppointment: InsertAppointment): Promise<Appointment> {
+    const [appointment] = await db.insert(appointments).values(insertAppointment).returning();
+    return appointment;
+  }
+
+  async getAppointments(): Promise<Appointment[]> {
+    return db.select().from(appointments).orderBy(desc(appointments.createdAt));
+  }
+
+  async getAppointment(id: string): Promise<Appointment | undefined> {
+    const [appointment] = await db.select().from(appointments).where(eq(appointments.id, id));
+    return appointment || undefined;
   }
 }
 
