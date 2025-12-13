@@ -98,14 +98,14 @@ export function ChatBot() {
         </div>
         <div className="relative">
           {showPulse && (
-            <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
+            <div className="absolute inset-0 rounded-full bg-orange-500 animate-ping opacity-30" />
           )}
           <Button
             onClick={() => {
               setIsOpen(true);
               setShowPulse(false);
             }}
-            className="relative rounded-full w-14 h-14 shadow-lg"
+            className="relative rounded-full w-14 h-14 shadow-lg bg-orange-500 hover:bg-orange-600"
             data-testid="button-open-chat"
           >
             <MessageCircle className="w-6 h-6" />
