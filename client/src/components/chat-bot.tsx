@@ -57,17 +57,27 @@ export function ChatBot() {
     if (!messageText.trim() || isLoading) return;
 
     setInput("");
-    setMessages(prev => [...prev, { role: "user", content: messageText }]);
+    const newUserMessage: Message = { role: "user", content: messageText };
+    const updatedMessages = [...messages, newUserMessage];
+    setMessages(updatedMessages);
     setIsLoading(true);
 
     try {
-      const response = await apiRequest("POST", "/api/chat", { message: messageText });
+      const conversationHistory = updatedMessages.slice(1).map(m => ({
+        role: m.role,
+        content: m.content
+      }));
+      
+      const response = await apiRequest("POST", "/api/chat", { 
+        message: messageText,
+        conversationHistory 
+      });
       const data = await response.json();
       setMessages(prev => [...prev, { role: "assistant", content: data.reply }]);
     } catch (error) {
       setMessages(prev => [...prev, { 
         role: "assistant", 
-        content: "Entschuldigung, es gab einen Fehler. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an: 0152 122 740 43" 
+        content: "Entschuldigung, es gab einen Fehler. Bitte versuchen Sie es erneut." 
       }]);
     } finally {
       setIsLoading(false);

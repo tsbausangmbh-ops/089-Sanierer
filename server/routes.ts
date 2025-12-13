@@ -327,91 +327,201 @@ export async function registerRoutes(
     baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
   });
 
+  const chatTools: OpenAI.Chat.Completions.ChatCompletionTool[] = [
+    {
+      type: "function",
+      function: {
+        name: "create_appointment",
+        description: "Erstellt einen Beratungstermin im Kalender und sendet Bestätigungs-E-Mails an Kunde und KSHW. Nutze diese Funktion NUR wenn du alle erforderlichen Daten hast.",
+        parameters: {
+          type: "object",
+          properties: {
+            name: {
+              type: "string",
+              description: "Vollständiger Name des Kunden"
+            },
+            email: {
+              type: "string",
+              description: "E-Mail-Adresse des Kunden"
+            },
+            phone: {
+              type: "string",
+              description: "Telefonnummer des Kunden"
+            },
+            service: {
+              type: "string",
+              enum: ["komplettsanierung", "badsanierung", "kuechensanierung", "bodensanierung", "elektrosanierung", "heizungssanierung", "dachsanierung", "energetische-sanierung"],
+              description: "Art der gewünschten Sanierung"
+            },
+            date: {
+              type: "string",
+              description: "Gewünschtes Datum im Format YYYY-MM-DD"
+            },
+            time: {
+              type: "string",
+              description: "Gewünschte Uhrzeit im Format HH:00 (z.B. 10:00, 14:00)"
+            },
+            message: {
+              type: "string",
+              description: "Optionale zusätzliche Nachricht oder Projektbeschreibung"
+            }
+          },
+          required: ["name", "email", "phone", "service", "date", "time"]
+        }
+      }
+    }
+  ];
+
   app.post("/api/chat", async (req, res) => {
     try {
-      const { message } = req.body;
+      const { message, conversationHistory } = req.body;
       if (!message || typeof message !== "string") {
         return res.status(400).json({ error: "Nachricht erforderlich" });
       }
 
-      const systemPrompt = `Du bist der empathische Lead-Berater von KSHW München (Komplettsanierungen Haus & Wohnung). Dein Ziel ist es, Interessenten durch gezielte Fragen zu verstehen und ihre Kontaktdaten für eine persönliche Beratung zu sammeln.
+      const systemPrompt = `Du bist der empathische Lead-Berater von KSHW München (Komplettsanierungen Haus & Wohnung). Dein Ziel ist es, Interessenten zu beraten und Termine direkt zu buchen.
 
 ## DEINE ROLLE
 - Du bist ein einfühlsamer, professioneller Berater
 - Du stellst Fragen, um das Projekt des Kunden zu verstehen
-- Du sammelst schrittweise Informationen für eine individuelle Beratung
+- Du kannst Termine DIREKT im Kalender buchen
 - Du gibst NIEMALS unsere Telefonnummer oder E-Mail heraus
 
-## ÜBER KSHW MÜNCHEN (Hintergrundwissen)
+## ÜBER KSHW MÜNCHEN
 - Spezialisierung: Komplettsanierung, Badsanierung, Küchensanierung, Bodensanierung, Elektrosanierung, Heizungssanierung, Dachsanierung, Energetische Sanierung
 - Erfahrung: 268+ erfolgreich abgeschlossene Projekte, über 20 Jahre Branchenerfahrung
 - Servicegebiet: München und gesamter Großraum (ca. 50km Umkreis)
 - Vorteile: Festpreisgarantie, ein Ansprechpartner, 2 Jahre Gewährleistung
 
-## PREISRICHTLINIEN (nur als Orientierung nennen)
+## PREISRICHTLINIEN
 - Badsanierung: ab 8.000€
 - Küchensanierung: ab 12.000€
 - Komplettsanierung: ab 800€/m²
-- Immer betonen: Genaue Preise erst nach persönlicher Beratung
+- Genaue Preise erst nach persönlicher Beratung
 
-## GESPRÄCHSFÜHRUNG - SCHRITT FÜR SCHRITT
-1. Begrüßung & Verständnis zeigen für das Anliegen
-2. Frage nach der gewünschten Sanierungsart
-3. Frage nach Objekttyp (Wohnung/Haus) und Größe
-4. Frage nach Zeitrahmen/Dringlichkeit
-5. Frage nach Name und Kontaktdaten für Rückruf
-6. Bestätigung und Zusicherung einer schnellen Rückmeldung
+## TERMINBUCHUNG - WICHTIG!
+Du kannst Termine direkt buchen! Wenn der Kunde einen Termin möchte:
+1. Frage nach NAME
+2. Frage nach E-MAIL
+3. Frage nach TELEFONNUMMER
+4. Frage nach SERVICE (welche Sanierung)
+5. Frage nach WUNSCHDATUM (Format: YYYY-MM-DD)
+6. Frage nach WUNSCHUHRZEIT (8:00-16:00)
+
+Sobald du ALLE Daten hast, nutze die create_appointment Funktion!
+Der Termin wird dann automatisch:
+- Im Google Kalender eingetragen
+- Bestätigungs-E-Mail an den Kunden gesendet
+- Benachrichtigung an KSHW gesendet
+
+## GESPRÄCHSFÜHRUNG
+1. Begrüßung & Verständnis zeigen
+2. Frage nach Sanierungsart
+3. Frage nach Objektdetails
+4. Angebot zur Terminbuchung
+5. Wenn Termin gewünscht: Alle Daten sammeln
+6. Termin buchen und bestätigen
 
 ## KOMMUNIKATIONSREGELN
 - Antworte IMMER auf Deutsch
-- Sei empathisch: Zeige Verständnis für Sorgen und Wünsche
+- Sei empathisch und verständnisvoll
 - Stelle am Ende JEDER Antwort eine Frage
 - Halte Antworten kurz (2-3 Sätze + Frage)
-- GIB NIEMALS Telefonnummer oder E-Mail von uns heraus
-- Frage stattdessen nach DEREN Kontaktdaten für einen Rückruf
-- Vermeide Fachsprache, erkläre einfach verständlich
-
-## BEISPIEL-PHRASEN
-- "Das klingt nach einem spannenden Projekt! Darf ich fragen, um welche Art Sanierung es geht?"
-- "Ich verstehe, das ist eine wichtige Entscheidung. Wie groß ist die Fläche ungefähr?"
-- "Damit wir Ihnen ein passendes Angebot erstellen können - wie darf ich Sie erreichen?"
-- "Wunderbar! Unter welcher Nummer können wir Sie für eine kostenlose Beratung zurückrufen?"
-
-## WENN KUNDE NACH KONTAKT FRAGT
-Sage NIEMALS unsere Nummer. Biete stattdessen zwei Optionen:
-1. Rückruf: Frage nach ihrer Telefonnummer
-2. Online-Termin: Verweise auf unseren Online-Kalender
-
-Beispiel:
-"Gerne! Sie haben zwei Möglichkeiten:
-
-1. Rückruf: Nennen Sie mir Ihre Telefonnummer und wir melden uns innerhalb von 24 Stunden.
-
-2. Online-Termin: Buchen Sie direkt einen Beratungstermin über unseren Online-Kalender auf der Website.
-
-Was ist Ihnen lieber?"
-
-## FORMATIERUNG
+- GIB NIEMALS Telefonnummer oder E-Mail von KSHW heraus
 - Verwende Zeilenumbrüche zwischen Absätzen
-- Bei Listen jeden Punkt auf eigene Zeile
 
-## WICHTIG
-- Du sammelst Leads - immer nach Kontaktdaten fragen
-- Niemals Telefon/E-Mail von KSHW nennen
-- Immer empathisch und verständnisvoll
-- Jede Antwort endet mit einer Frage`;
+## WENN ALLE TERMINDATEN VORHANDEN
+Wenn du Name, E-Mail, Telefon, Service, Datum und Uhrzeit hast:
+1. Rufe die create_appointment Funktion auf
+2. Bestätige dem Kunden: "Ich habe Ihren Termin eingetragen und Sie erhalten gleich eine Bestätigung per E-Mail."`;
+
+      const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
+        { role: "system", content: systemPrompt }
+      ];
+
+      if (Array.isArray(conversationHistory)) {
+        for (const msg of conversationHistory) {
+          if (msg.role === "user" || msg.role === "assistant") {
+            messages.push({ role: msg.role, content: msg.content });
+          }
+        }
+      }
+
+      messages.push({ role: "user", content: message });
 
       const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: systemPrompt },
-          { role: "user", content: message }
-        ],
+        messages,
+        tools: chatTools,
+        tool_choice: "auto",
         max_tokens: 500,
         temperature: 0.7,
       });
 
-      const reply = completion.choices[0]?.message?.content || "Entschuldigung, ich konnte keine Antwort generieren.";
+      const responseMessage = completion.choices[0]?.message;
+
+      if (responseMessage?.tool_calls && responseMessage.tool_calls.length > 0) {
+        const toolCall = responseMessage.tool_calls[0];
+        
+        if (toolCall.function.name === "create_appointment") {
+          try {
+            const args = JSON.parse(toolCall.function.arguments);
+            
+            const appointment = await storage.createAppointment({
+              name: args.name,
+              email: args.email,
+              phone: args.phone,
+              service: args.service,
+              preferredDate: args.date,
+              preferredTime: args.time,
+              message: args.message || null,
+            });
+
+            createCalendarEvent(
+              appointment.service,
+              appointment.name,
+              appointment.email,
+              appointment.phone,
+              appointment.preferredDate,
+              appointment.preferredTime,
+              appointment.message || undefined
+            ).catch(err => {
+              console.error("Calendar event creation failed:", err);
+            });
+
+            sendAppointmentEmails(appointment).catch(err => {
+              console.error("Appointment email sending failed:", err);
+            });
+
+            const serviceLabel = serviceLabels[args.service] || args.service;
+            const confirmationReply = `Wunderbar, ${args.name}! Ich habe Ihren Beratungstermin erfolgreich eingetragen:
+
+Termin: ${args.date} um ${args.time} Uhr
+Service: ${serviceLabel}
+
+Sie erhalten in Kürze eine Bestätigung per E-Mail an ${args.email}.
+
+Wir freuen uns auf das Gespräch mit Ihnen!`;
+
+            return res.json({ 
+              reply: confirmationReply,
+              appointmentCreated: true,
+              appointment: {
+                date: args.date,
+                time: args.time,
+                service: serviceLabel
+              }
+            });
+          } catch (error) {
+            console.error("Error creating appointment:", error);
+            return res.json({ 
+              reply: "Es tut mir leid, bei der Terminbuchung ist leider ein Fehler aufgetreten. Können Sie es bitte noch einmal versuchen oder uns über das Kontaktformular erreichen?" 
+            });
+          }
+        }
+      }
+
+      const reply = responseMessage?.content || "Entschuldigung, ich konnte keine Antwort generieren.";
       res.json({ reply });
     } catch (error) {
       console.error("Chat API error:", error);
