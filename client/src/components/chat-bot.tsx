@@ -35,8 +35,8 @@ const serviceOptions = [
   { value: "dachsanierung", label: "Dachsanierung" },
 ];
 
-const timeOptions = [
-  "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"
+const fallbackTimeOptions = [
+  "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00"
 ];
 
 export function ChatBot() {
@@ -52,6 +52,9 @@ export function ChatBot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  
+  const [availableSlots, setAvailableSlots] = useState<string[]>(fallbackTimeOptions);
+  const [isLoadingSlots, setIsLoadingSlots] = useState(false);
   
   const [appointmentData, setAppointmentData] = useState({
     name: "",
@@ -81,6 +84,37 @@ export function ChatBot() {
     const timer = setTimeout(() => setShowPulse(false), 10000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!appointmentData.preferredDate) {
+      setAvailableSlots(fallbackTimeOptions);
+      return;
+    }
+    
+    const fetchAvailableSlots = async () => {
+      setIsLoadingSlots(true);
+      setAppointmentData(prev => ({ ...prev, preferredTime: "" }));
+      try {
+        const response = await fetch(`/api/calendar/availability?date=${appointmentData.preferredDate}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.slots && data.slots.length > 0) {
+            setAvailableSlots(data.slots);
+          } else {
+            setAvailableSlots(fallbackTimeOptions);
+          }
+        } else {
+          setAvailableSlots(fallbackTimeOptions);
+        }
+      } catch {
+        setAvailableSlots(fallbackTimeOptions);
+      } finally {
+        setIsLoadingSlots(false);
+      }
+    };
+    
+    fetchAvailableSlots();
+  }, [appointmentData.preferredDate]);
 
   const sendMessage = async (messageText: string) => {
     if (!messageText.trim() || isLoading) return;
@@ -342,16 +376,21 @@ export function ChatBot() {
                   <Select 
                     value={appointmentData.preferredTime} 
                     onValueChange={(value) => setAppointmentData(prev => ({ ...prev, preferredTime: value }))}
+                    disabled={isLoadingSlots || !appointmentData.preferredDate}
                   >
                     <SelectTrigger className={`w-full mt-1 ${formErrors.preferredTime ? "border-destructive" : ""}`} data-testid="select-appointment-time">
-                      <SelectValue placeholder="Zeit" />
+                      <SelectValue placeholder={isLoadingSlots ? "Laden..." : "Zeit"} />
                     </SelectTrigger>
                     <SelectContent>
-                      {timeOptions.map((time) => (
-                        <SelectItem key={time} value={time}>
-                          {time} Uhr
-                        </SelectItem>
-                      ))}
+                      {availableSlots.length > 0 ? (
+                        availableSlots.map((time) => (
+                          <SelectItem key={time} value={time}>
+                            {time} Uhr
+                          </SelectItem>
+                        ))
+                      ) : (
+                        <SelectItem value="none" disabled>Keine freien Termine</SelectItem>
+                      )}
                     </SelectContent>
                   </Select>
                   {formErrors.preferredTime && <p className="text-xs text-destructive mt-1">{formErrors.preferredTime}</p>}
