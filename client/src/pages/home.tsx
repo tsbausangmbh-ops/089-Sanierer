@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card } from "@/components/ui/card";
+import { ChatBot } from "@/components/chat-bot";
 import {
   Accordion,
   AccordionContent,
@@ -702,6 +703,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <ChatBot />
     </div>
   );
 }
