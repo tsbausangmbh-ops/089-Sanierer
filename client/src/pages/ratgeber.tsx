@@ -3,6 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Building, Thermometer, DoorOpen, Zap, Triangle } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
+
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "kuechensanierung", title: "Küchensanierung" },
+  { id: "bodensanierung", title: "Bodensanierung" },
+  { id: "elektrosanierung", title: "Elektrosanierung" },
+  { id: "heizungssanierung", title: "Heizungssanierung" },
+];
 
 export default function Ratgeber() {
   return (
