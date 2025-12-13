@@ -6,6 +6,7 @@ import { fromZodError } from "zod-validation-error";
 import { setupAuth, requireAuth } from "./auth";
 import OpenAI from "openai";
 import nodemailer from "nodemailer";
+import { getAvailableSlots, createCalendarEvent } from "./calendar";
 
 const serviceLabels: Record<string, string> = {
   komplettsanierung: "Komplettsanierung",
@@ -277,6 +278,18 @@ export async function registerRoutes(
 
     const appointment = await storage.createAppointment(result.data);
     
+    createCalendarEvent(
+      appointment.service,
+      appointment.name,
+      appointment.email,
+      appointment.phone,
+      appointment.preferredDate,
+      appointment.preferredTime,
+      appointment.message || undefined
+    ).catch(err => {
+      console.error("Calendar event creation failed:", err);
+    });
+    
     sendAppointmentEmails(appointment).catch(err => {
       console.error("Appointment email sending failed:", err);
     });
@@ -287,6 +300,26 @@ export async function registerRoutes(
   app.get("/api/appointments", requireAuth, async (req, res) => {
     const appointments = await storage.getAppointments();
     res.json(appointments);
+  });
+
+  app.get("/api/calendar/availability", async (req, res) => {
+    try {
+      const { date } = req.query;
+      if (!date || typeof date !== "string") {
+        return res.status(400).json({ error: "Datum erforderlich (YYYY-MM-DD)" });
+      }
+      
+      const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+      if (!dateRegex.test(date)) {
+        return res.status(400).json({ error: "Ungültiges Datumsformat" });
+      }
+      
+      const slots = await getAvailableSlots(date);
+      res.json({ date, slots });
+    } catch (error) {
+      console.error("Calendar availability error:", error);
+      res.status(500).json({ error: "Kalender nicht verfügbar" });
+    }
   });
 
   const openai = new OpenAI({
