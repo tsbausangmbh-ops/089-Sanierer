@@ -1,10 +1,17 @@
-import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card } from "@/components/ui/card";
 import { ChatBot } from "@/components/chat-bot";
+import { SiteHeader } from "@/components/site-header";
+
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
+];
 import {
   Accordion,
   AccordionContent,
@@ -19,9 +26,7 @@ import {
   Flame, 
   Home as HomeIcon,
   Shield,
-  Award,
   Clock,
-  Users,
   ChevronRight,
   Phone,
   Mail,
@@ -32,24 +37,13 @@ import {
   MessageSquare,
   Hammer,
   Euro,
-  Building2,
   Handshake,
-  Wrench,
   PaintBucket,
   Plug,
   Droplets,
   Thermometer,
-  Calendar,
-  Menu,
-  X
+  Calendar
 } from "lucide-react";
-
-const headerServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung" },
-  { id: "badsanierung", title: "Badsanierung" },
-  { id: "dachsanierung", title: "Dachsanierung" },
-  { id: "energetische-sanierung", title: "Energetische Sanierung" },
-];
 
 const allServices = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, description: "Rundum-Sanierung mit Festpreisgarantie – ein Ansprechpartner für Ihr gesamtes Projekt in München." },
@@ -140,113 +134,11 @@ const faqs = [
 ];
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,80%,10%)] text-white border-b border-white/20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="h-16 flex items-center justify-between gap-4">
-            <Link href="/">
-              <div className="flex items-center gap-2 cursor-pointer">
-                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
-                <div className="hidden sm:flex flex-col">
-                  <span className="font-bold text-base leading-tight">KSHW München</span>
-                  <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
-                </div>
-              </div>
-            </Link>
-            <div className="flex lg:hidden items-center gap-2">
-              <Button 
-                size="icon" 
-                variant="ghost" 
-                className="text-white hover:bg-white/10"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                data-testid="button-mobile-menu"
-              >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </Button>
-              <a href="tel:+4915212274043">
-                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
-                  <Phone className="w-4 h-4" />
-                </Button>
-              </a>
-            </div>
-            <div className="hidden lg:flex items-center gap-1">
-              {headerServices.map((service) => (
-                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                  <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                    {service.title}
-                  </Button>
-                </Link>
-              ))}
-              <Link href="/ratgeber">
-                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                  Ratgeber
-                </Button>
-              </Link>
-              <Link href="/faq-preise">
-                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                  FAQ & Preise
-                </Button>
-              </Link>
-              <a href="tel:+4915212274043" className="ml-3">
-                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
-                  <Phone className="w-4 h-4 mr-1" />
-                  0152 122 740 43
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-        {/* Mobile Dropdown Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-[hsl(220,80%,12%)] border-t border-white/10">
-            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
-              {headerServices.map((service) => (
-                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                  <Button 
-                    variant="ghost" 
-                    className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {service.title}
-                  </Button>
-                </Link>
-              ))}
-              <div className="border-t border-white/20 my-2" />
-              <Link href="/ratgeber">
-                <Button 
-                  variant="ghost" 
-                  className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Ratgeber
-                </Button>
-              </Link>
-              <Link href="/faq-preise">
-                <Button 
-                  variant="ghost" 
-                  className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  FAQ & Preise
-                </Button>
-              </Link>
-              <Link href="/kontakt">
-                <Button 
-                  variant="ghost" 
-                  className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Kontakt
-                </Button>
-              </Link>
-                          </nav>
-          </div>
-        )}
-      </header>
+      <SiteHeader />
 
+      <main id="main-content">
       <section className="relative pt-16">
         <div className="bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-10 lg:pt-14 pb-6 lg:pb-8">
@@ -703,6 +595,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      </main>
 
       <ChatBot />
     </div>
