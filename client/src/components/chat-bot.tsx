@@ -46,7 +46,7 @@ export function ChatBot() {
   const [appointmentSuccess, setAppointmentSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hallo! Ich bin Ihr digitaler Berater von KSHW München. Wie kann ich Ihnen bei Ihrer Sanierung helfen?" }
+    { role: "assistant", content: "Hallo!\n\nIch bin Ihr digitaler Berater von KSHW München.\n\nWie kann ich Ihnen bei Ihrer Sanierung helfen?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -396,7 +396,7 @@ export function ChatBot() {
                   </div>
                 )}
                 <div 
-                  className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+                  className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
                     msg.role === "user" 
                       ? "bg-primary text-primary-foreground rounded-br-sm" 
                       : "bg-card shadow-sm rounded-bl-sm"
