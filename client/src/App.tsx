@@ -1,5 +1,5 @@
 import { Switch, Route, useLocation } from "wouter";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,20 +7,23 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route";
 import { CookieConsent } from "@/components/cookie-consent";
+import { Loader2 } from "lucide-react";
+
 import Home from "@/pages/home";
 import Funnel from "@/pages/funnel";
 import Confirmation from "@/pages/confirmation";
-import Admin from "@/pages/admin";
-import AdminLogin from "@/pages/admin-login";
-import Impressum from "@/pages/impressum";
-import Datenschutz from "@/pages/datenschutz";
-import AGB from "@/pages/agb";
-import Kontakt from "@/pages/kontakt";
-import Ratgeber from "@/pages/ratgeber";
-import GewerkeFunnel from "@/pages/gewerke-funnel";
-import FaqPreise from "@/pages/faq-preise";
-import Cookies from "@/pages/cookies";
-import NotFound from "@/pages/not-found";
+
+const Admin = lazy(() => import("@/pages/admin"));
+const AdminLogin = lazy(() => import("@/pages/admin-login"));
+const Impressum = lazy(() => import("@/pages/impressum"));
+const Datenschutz = lazy(() => import("@/pages/datenschutz"));
+const AGB = lazy(() => import("@/pages/agb"));
+const Kontakt = lazy(() => import("@/pages/kontakt"));
+const Ratgeber = lazy(() => import("@/pages/ratgeber"));
+const GewerkeFunnel = lazy(() => import("@/pages/gewerke-funnel"));
+const FaqPreise = lazy(() => import("@/pages/faq-preise"));
+const Cookies = lazy(() => import("@/pages/cookies"));
+const NotFound = lazy(() => import("@/pages/not-found"));
 
 declare global {
   interface Window {
@@ -28,12 +31,20 @@ declare global {
   }
 }
 
+function PageLoader() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <Loader2 className="w-8 h-8 animate-spin text-primary" />
+    </div>
+  );
+}
+
 function usePageTracking() {
   const [location] = useLocation();
   
   useEffect(() => {
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'session_start', {});
+      window.gtag('event', 'page_view', { page_path: location });
     }
   }, [location]);
 }
@@ -41,23 +52,25 @@ function usePageTracking() {
 function Router() {
   usePageTracking();
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/anfrage" component={Funnel} />
-      <Route path="/bestaetigung" component={Confirmation} />
-      <Route path="/admin-login" component={AdminLogin} />
-      <ProtectedRoute path="/admin" component={Admin} />
-      <Route path="/impressum" component={Impressum} />
-      <Route path="/datenschutz" component={Datenschutz} />
-      <Route path="/agb" component={AGB} />
-      <Route path="/kontakt" component={Kontakt} />
-      <Route path="/ratgeber" component={Ratgeber} />
-      <Route path="/gewerke" component={GewerkeFunnel} />
-      <Route path="/faq-preise" component={FaqPreise} />
-      <Route path="/cookies" component={Cookies} />
-      <Route path="/danke" component={Confirmation} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<PageLoader />}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/anfrage" component={Funnel} />
+        <Route path="/bestaetigung" component={Confirmation} />
+        <Route path="/admin-login" component={AdminLogin} />
+        <ProtectedRoute path="/admin" component={Admin} />
+        <Route path="/impressum" component={Impressum} />
+        <Route path="/datenschutz" component={Datenschutz} />
+        <Route path="/agb" component={AGB} />
+        <Route path="/kontakt" component={Kontakt} />
+        <Route path="/ratgeber" component={Ratgeber} />
+        <Route path="/gewerke" component={GewerkeFunnel} />
+        <Route path="/faq-preise" component={FaqPreise} />
+        <Route path="/cookies" component={Cookies} />
+        <Route path="/danke" component={Confirmation} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 
