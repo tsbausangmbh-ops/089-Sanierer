@@ -295,6 +295,23 @@ export default function Datenschutz() {
             </section>
 
             <section>
+              <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Verordnung / AI Act)</h2>
+              <p className="text-sm text-muted-foreground mb-4">Stand: Dezember 2025</p>
+              <p className="text-muted-foreground">
+                Im Rahmen unserer Dienstleistungen können wir KI-gestützte Systeme zur Unterstützung unserer Arbeitsprozesse einsetzen. Dies erfolgt in Übereinstimmung mit der Verordnung (EU) 2024/1689 (KI-Verordnung / AI Act).
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Einsatzbereiche:</strong> Wir nutzen KI-Technologien ausschließlich zur Verbesserung unserer Servicequalität, beispielsweise für die Analyse von Anfragen, Terminplanung oder Kommunikationsunterstützung. Es erfolgt keine automatisierte Entscheidungsfindung mit rechtlicher oder ähnlich erheblicher Wirkung für Sie.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Transparenz:</strong> Gemäß Art. 50 der KI-Verordnung informieren wir Sie hiermit über den möglichen Einsatz von KI-Systemen. Personenbezogene Daten werden dabei nur im Rahmen der in dieser Datenschutzerklärung genannten Zwecke und Rechtsgrundlagen verarbeitet.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Ihre Rechte:</strong> Sie haben das Recht, Auskunft über den Einsatz von KI-Systemen bei der Verarbeitung Ihrer Daten zu erhalten. Bei Fragen wenden Sie sich bitte an: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-xl font-bold mb-4">Änderung unserer Datenschutzbestimmungen</h2>
               <p className="text-muted-foreground">
                 Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
