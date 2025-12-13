@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
+import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { 
   ArrowRight,
   ArrowLeft,
@@ -35,6 +36,13 @@ import {
   Calendar
 } from "lucide-react";
 import { Link } from "wouter";
+
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
+];
 
 const tradeOptions = [
   { 
