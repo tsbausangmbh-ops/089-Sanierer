@@ -10,9 +10,9 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { Loader2 } from "lucide-react";
 
 import Home from "@/pages/home";
-import Funnel from "@/pages/funnel";
-import Confirmation from "@/pages/confirmation";
 
+const Funnel = lazy(() => import("@/pages/funnel"));
+const Confirmation = lazy(() => import("@/pages/confirmation"));
 const Admin = lazy(() => import("@/pages/admin"));
 const AdminLogin = lazy(() => import("@/pages/admin-login"));
 const Impressum = lazy(() => import("@/pages/impressum"));
