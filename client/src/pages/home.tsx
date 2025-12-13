@@ -174,6 +174,9 @@ export default function Home() {
                     src={houseBeforeAfter} 
                     alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
                     className="w-full h-full object-cover object-center"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                     data-testid="img-hero-bathroom"
                   />
                 </div>
