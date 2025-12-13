@@ -250,7 +250,7 @@ export function ChatBot() {
 
   return (
     <Card 
-      className="fixed bottom-32 right-6 z-50 w-[380px] h-[520px] flex flex-col shadow-2xl border-0 overflow-hidden" 
+      className="fixed bottom-32 right-6 z-50 w-[450px] h-[560px] flex flex-col shadow-2xl border-0 overflow-hidden" 
       data-testid="chat-container"
     >
       <div className="flex items-center justify-between gap-2 px-4 py-3 bg-primary text-primary-foreground">
