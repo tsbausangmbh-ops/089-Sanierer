@@ -85,6 +85,13 @@ export const insertAppointmentSchema = createInsertSchema(appointments).omit({
   id: true,
   status: true,
   createdAt: true,
+}).extend({
+  name: z.string().min(2, "Name ist erforderlich"),
+  email: z.string().email("Gültige E-Mail-Adresse erforderlich"),
+  phone: z.string().min(6, "Telefonnummer ist erforderlich"),
+  service: z.string().min(1, "Service auswählen"),
+  preferredDate: z.string().min(1, "Datum auswählen"),
+  preferredTime: z.string().min(1, "Uhrzeit auswählen"),
 });
 
 export type InsertAppointment = z.infer<typeof insertAppointmentSchema>;
