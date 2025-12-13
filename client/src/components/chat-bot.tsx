@@ -151,7 +151,13 @@ export function ChatBot() {
         </Button>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-muted/30">
+      <div 
+        className="flex-1 overflow-y-auto p-4 space-y-3 bg-muted/30"
+        role="log"
+        aria-live="polite"
+        aria-label="Chat-Verlauf"
+        aria-busy={isLoading}
+      >
         {messages.map((msg, idx) => (
           <div 
             key={idx} 
