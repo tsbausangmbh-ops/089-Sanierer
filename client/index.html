@@ -439,6 +439,131 @@
       }
     }
     </script>
+    
+    <!-- Schema.org FAQPage - Für Google FAQ Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet eine Badsanierung in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine Komplettbadsanierung in München kostet bei KSHW ab 9.200 Euro für ein Standard-Bad (6-8 m²). Der Preis ist ein verbindlicher Festpreis und beinhaltet alle Arbeiten: Demontage, Fliesen, Sanitärobjekte, Elektro und bodengleiche Dusche. Für ein größeres Bad oder Luxusausstattung rechnen Sie mit 15.000-25.000 Euro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert eine Komplettsanierung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine Komplettsanierung dauert je nach Größe 4-12 Wochen. Eine 80 m² Wohnung ist in ca. 6-8 Wochen fertig, ein Einfamilienhaus benötigt 10-12 Wochen. Wir erstellen vor Beginn einen detaillierten Zeitplan mit allen Meilensteinen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bietet KSHW Festpreise für Sanierungen an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, KSHW München arbeitet ausschließlich mit verbindlichen Festpreisen. Der im Angebot genannte Preis ist fix und bleibt auch bei unvorhergesehenen Arbeiten gleich - außer Sie wünschen Änderungen. So haben Sie volle Kostenkontrolle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet eine Komplettsanierung pro Quadratmeter in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine Komplettsanierung kostet bei KSHW München ab 920 Euro pro Quadratmeter. Der Preis hängt vom Umfang ab: Standardsanierung 920-1.200 Euro/m², Kernsanierung mit neuer Elektrik und Sanitär 1.200-1.600 Euro/m². Alle Preise als Festpreis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es eine Gewährleistung auf die Sanierung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, KSHW München bietet 2 Jahre Gewährleistung auf alle Arbeiten. Bei Mängeln kommen wir kostenfrei zur Nachbesserung. Das gibt Ihnen Sicherheit für Ihre Investition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welchen Münchner Stadtteilen arbeitet KSHW?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KSHW München ist in allen Münchner Stadtteilen tätig: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Nymphenburg und viele mehr. Wir arbeiten auch im Münchner Umland (50 km Radius): Dachau, Starnberg, Freising, Fürstenfeldbruck, Germering."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org HowTo - Für Anleitungen -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Wie beantrage ich eine Sanierung bei KSHW München?",
+      "description": "So einfach beauftragen Sie Ihre Sanierung bei KSHW München - in 4 Schritten zum Festpreis-Angebot.",
+      "totalTime": "PT5M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "0"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Anfrage stellen",
+          "text": "Füllen Sie unser Online-Formular aus oder rufen Sie uns an. Beschreiben Sie Ihr Projekt kurz.",
+          "position": 1
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Kostenlose Beratung",
+          "text": "Innerhalb von 24 Stunden melden wir uns für eine kostenlose Erstberatung. Wir besprechen Ihre Wünsche.",
+          "position": 2
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Besichtigung vor Ort",
+          "text": "Wir vereinbaren einen Termin zur Besichtigung. Unser Experte nimmt alle Details auf.",
+          "position": 3
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Festpreis-Angebot",
+          "text": "Sie erhalten ein verbindliches Festpreis-Angebot. Bei Zusage starten wir zum vereinbarten Termin.",
+          "position": 4
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org AI Agent / VirtualAgent für Chat-Bot -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VirtualAgent",
+      "name": "KSHW Sanierungsberater",
+      "description": "KI-gestützter Sanierungsberater von KSHW München. Beantwortet Fragen zu Kosten, Dauer und Ablauf von Sanierungen in München. Hilft bei der Terminbuchung.",
+      "availableLanguage": ["de-DE"],
+      "provider": {"@id": "https://089-sanierer.de/#organization"},
+      "serviceType": "Kundenberatung",
+      "areaServed": {
+        "@type": "City",
+        "name": "München"
+      },
+      "actionableFeedbackPolicy": "https://089-sanierer.de/kontakt",
+      "potentialAction": {
+        "@type": "AskAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://089-sanierer.de/anfrage"
+        }
+      }
+    }
+    </script>
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

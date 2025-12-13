@@ -3,6 +3,57 @@
 # Optimiert für Google, AI-Suchmaschinen und GEO-SEO
 
 # ===========================================
+# KEYWORDS & THEMEN (für AI-Suchmaschinen)
+# ===========================================
+# 
+# HAUPT-KEYWORDS:
+# - Sanierung München
+# - Badsanierung München
+# - Komplettsanierung München
+# - Haussanierung München
+# - Wohnungssanierung München
+# - Küchensanierung München
+# - Elektrosanierung München
+# - Heizungssanierung München
+#
+# KOSTEN-KEYWORDS:
+# - Was kostet Sanierung München
+# - Badsanierung Kosten München
+# - Komplettsanierung Preis München
+# - Sanierungskosten München
+# - Festpreis Sanierung München
+#
+# MARKEN-KEYWORDS:
+# - KSHW München
+# - 089 Sanierer
+# - Komplettsanierungen Haus Wohnung
+#
+# STADTTEIL-KEYWORDS:
+# - Sanierung Schwabing
+# - Sanierung Bogenhausen
+# - Sanierung Sendling
+# - Sanierung Pasing
+# - Sanierung Trudering
+# - Sanierung Haidhausen
+# - Sanierung Neuhausen
+# - Sanierung Giesing
+#
+# UMLAND-KEYWORDS:
+# - Sanierung Dachau
+# - Sanierung Starnberg
+# - Sanierung Freising
+# - Sanierung Fürstenfeldbruck
+# - Sanierung Germering
+#
+# LONG-TAIL-KEYWORDS:
+# - Altbausanierung München Kosten
+# - Kernsanierung München Preis
+# - Badsanierung mit bodengleicher Dusche München
+# - Komplettsanierung Wohnung München Festpreis
+# - Handwerker für Sanierung München
+#
+
+# ===========================================
 # GEOGRAPHIC TARGETING - München & Umgebung
 # ===========================================
 # Service Area: München, Bayern, Deutschland
