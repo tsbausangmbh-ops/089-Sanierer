@@ -14,6 +14,15 @@ import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "kuechensanierung", title: "Küchensanierung" },
+  { id: "bodensanierung", title: "Bodensanierung" },
+  { id: "elektrosanierung", title: "Elektrosanierung" },
+  { id: "heizungssanierung", title: "Heizungssanierung" },
+];
+
 const contactFormSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
