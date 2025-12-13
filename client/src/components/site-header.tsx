@@ -1,0 +1,140 @@
+import { useState } from "react";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Phone, Menu, X } from "lucide-react";
+import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
+
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "dachsanierung", title: "Dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung" },
+];
+
+export function SiteHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,80%,10%)] text-white border-b border-white/20">
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded"
+      >
+        Zum Hauptinhalt springen
+      </a>
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="h-16 flex items-center justify-between gap-4">
+          <Link href="/" aria-label="KSHW München Startseite">
+            <div className="flex items-center gap-2 cursor-pointer">
+              <img 
+                src={kshwLogoWhiteBg} 
+                alt="KSHW München Logo" 
+                className="h-10 w-auto rounded"
+                width="40"
+                height="40"
+                loading="eager"
+              />
+              <div className="hidden sm:flex flex-col">
+                <span className="font-bold text-base leading-tight">KSHW München</span>
+                <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
+              </div>
+            </div>
+          </Link>
+          <div className="flex lg:hidden items-center gap-2">
+            <Button 
+              size="icon" 
+              variant="ghost" 
+              className="text-white hover:bg-white/10"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
+              data-testid="button-mobile-menu"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
+            </Button>
+            <a href="tel:+4915212274043" aria-label="Anrufen: 0152 122 740 43">
+              <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
+                <Phone className="w-4 h-4" aria-hidden="true" />
+              </Button>
+            </a>
+          </div>
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
+            {headerServices.map((service) => (
+              <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                  {service.title}
+                </Button>
+              </Link>
+            ))}
+            <Link href="/ratgeber">
+              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                Ratgeber
+              </Button>
+            </Link>
+            <Link href="/faq-preise">
+              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                FAQ & Preise
+              </Button>
+            </Link>
+            <a href="tel:+4915212274043" className="ml-3" aria-label="Anrufen: 0152 122 740 43">
+              <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
+                <Phone className="w-4 h-4 mr-1" aria-hidden="true" />
+                0152 122 740 43
+              </Button>
+            </a>
+          </nav>
+        </div>
+      </div>
+      {mobileMenuOpen && (
+        <nav 
+          id="mobile-menu"
+          className="lg:hidden bg-[hsl(220,80%,12%)] border-t border-white/10"
+          aria-label="Mobile Navigation"
+        >
+          <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+            {headerServices.map((service) => (
+              <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {service.title}
+                </Button>
+              </Link>
+            ))}
+            <div className="border-t border-white/20 my-2" role="separator" />
+            <Link href="/ratgeber">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Ratgeber
+              </Button>
+            </Link>
+            <Link href="/faq-preise">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ & Preise
+              </Button>
+            </Link>
+            <Link href="/kontakt">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Kontakt
+              </Button>
+            </Link>
+          </div>
+        </nav>
+      )}
+    </header>
+  );
+}
