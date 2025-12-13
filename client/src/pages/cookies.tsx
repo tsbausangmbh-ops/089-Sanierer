@@ -97,7 +97,7 @@ export default function Cookies() {
             </div>
             <div>
               <h1 className="text-3xl lg:text-4xl font-bold" data-testid="heading-cookies">Cookie-Richtlinie</h1>
-              <p className="text-muted-foreground">Stand: Dezember 2024</p>
+              <p className="text-muted-foreground">Stand: Dezember 2025</p>
             </div>
           </div>
 
