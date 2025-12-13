@@ -91,7 +91,7 @@ export function ChatBot() {
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-24 right-6 z-50">
+      <div className="fixed bottom-32 right-6 z-50">
         {showPulse && (
           <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
         )}
@@ -111,7 +111,7 @@ export function ChatBot() {
 
   return (
     <Card 
-      className="fixed bottom-24 right-6 z-50 w-[380px] h-[520px] flex flex-col shadow-2xl border-0 overflow-hidden" 
+      className="fixed bottom-32 right-6 z-50 w-[380px] h-[520px] flex flex-col shadow-2xl border-0 overflow-hidden" 
       data-testid="chat-container"
     >
       <div className="flex items-center justify-between gap-2 px-4 py-3 bg-primary text-primary-foreground">
