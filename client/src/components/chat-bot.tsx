@@ -91,20 +91,25 @@ export function ChatBot() {
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-32 right-6 z-50">
-        {showPulse && (
-          <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
-        )}
-        <Button
-          onClick={() => {
-            setIsOpen(true);
-            setShowPulse(false);
-          }}
-          className="relative rounded-full w-14 h-14 shadow-lg"
-          data-testid="button-open-chat"
-        >
-          <MessageCircle className="w-6 h-6" />
-        </Button>
+      <div className="fixed bottom-32 right-6 z-50 flex items-center gap-3">
+        <div className="bg-card shadow-lg rounded-full px-4 py-2 text-sm font-medium">
+          KSHW München KI-Assistent
+        </div>
+        <div className="relative">
+          {showPulse && (
+            <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
+          )}
+          <Button
+            onClick={() => {
+              setIsOpen(true);
+              setShowPulse(false);
+            }}
+            className="relative rounded-full w-14 h-14 shadow-lg"
+            data-testid="button-open-chat"
+          >
+            <MessageCircle className="w-6 h-6" />
+          </Button>
+        </div>
       </div>
     );
   }
