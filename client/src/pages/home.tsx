@@ -142,73 +142,64 @@ export default function Home() {
       <SiteHeader />
 
       <main id="main-content">
-      <section className="relative pt-16">
-        <div className="bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-10 lg:pt-14 pb-6 lg:pb-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch lg:items-stretch">
-              <div className="flex flex-col justify-center">
-                <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                  <strong>Sanierung München</strong> – Ihr Zuhause in sicheren Händen seit über 20 Jahren
-                </h1>
-                <p className="text-lg text-muted-foreground mb-8">
-                  <strong>Kennen Sie das?</strong> Wochenlange Handwerkersuche, Terminprobleme, unklare Kosten? <strong>Das muss nicht sein.</strong> Seit über 20 Jahren sanieren wir Häuser und Wohnungen in München – mit Festpreisgarantie, einem persönlichen Ansprechpartner und 2 Jahren Gewährleistung. <strong>268+ zufriedene Kunden</strong> vertrauen uns bereits.
-                </p>
-                <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-                  <Link href="/gewerke">
-                    <Button size="lg" className="text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500" data-testid="button-hero-cta">
-                      Handwerker-Vermittlung
-                      <ChevronRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </Link>
-                  <a href="tel:+4915212274043">
-                    <Button size="lg" className="text-lg w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-500">
-                      <Phone className="w-5 h-5 mr-2" />
-                      0152 122 740 43
-                    </Button>
-                  </a>
-                </div>
-              </div>
-              <div className="relative h-full">
-                <div className="w-full h-full overflow-hidden rounded-lg shadow-2xl">
-                  <img 
-                    src={houseBeforeAfter} 
-                    alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
-                    className="w-full h-full object-cover object-center"
-                    loading="eager"
-                    decoding="async"
-                    fetchPriority="high"
-                    data-testid="img-hero-bathroom"
-                  />
-                </div>
-              </div>
+      <section className="relative pt-16 min-h-[85vh] lg:min-h-[75vh] flex items-center">
+        <div className="absolute inset-0 pt-16">
+          <img 
+            src={houseBeforeAfter} 
+            alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
+            className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            data-testid="img-hero-bathroom"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30 lg:to-transparent" />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-20 w-full">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
+              <Shield className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm font-medium text-white">Meisterbetrieb seit 20+ Jahren</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
-              <div className="flex items-center gap-4 p-5 bg-white dark:bg-card rounded-lg border">
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <div>
-                  <p className="font-semibold text-lg">Hervorragend bewertet</p>
-                  <p className="text-sm text-muted-foreground">Basierend auf 98 Kundenbewertungen</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4 p-5 bg-white dark:bg-card rounded-lg border">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-bold text-xl">268+</p>
-                  <p className="text-sm text-muted-foreground">Projekte erfolgreich abgeschlossen</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-xs text-muted-foreground text-center mt-2">
-              „Full Service" Baubetreuung und Schlüsselfertige Koordination von Partnerfirmen (Meisterpflichtige Gewerke werden von unseren Partnerfirmen ausgeführt)
+            
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              Sanierung München
+              <span className="block text-2xl lg:text-3xl font-normal mt-2 text-white/90">
+                Ihr Zuhause in sicheren Händen
+              </span>
+            </h1>
+            
+            <p className="text-lg lg:text-xl text-white/85 mb-8 leading-relaxed">
+              Schluss mit Handwerkersuche und Terminproblemen. <strong className="text-white">Festpreisgarantie</strong>, ein persönlicher Ansprechpartner und <strong className="text-white">2 Jahre Gewährleistung</strong> – das ist KSHW München.
             </p>
+            
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-10">
+              <Link href="/anfrage">
+                <Button size="lg" className="text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500 shadow-lg" data-testid="button-hero-cta">
+                  Kostenlos anfragen
+                  <ChevronRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="tel:+4915212274043">
+                <Button size="lg" variant="outline" className="text-lg w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+                  <Phone className="w-5 h-5 mr-2" />
+                  0152 122 740 43
+                </Button>
+              </a>
+            </div>
+            
+            <div className="grid grid-cols-3 gap-4 lg:gap-8">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center lg:text-left">
+                  <p className="text-2xl lg:text-3xl font-bold text-white">{stat.value}</p>
+                  <p className="text-xs lg:text-sm text-white/70">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent h-16 lg:h-24" />
       </section>
 
       <section className="py-8 bg-primary">
