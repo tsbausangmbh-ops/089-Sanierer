@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
@@ -84,13 +85,17 @@ export default function Kontakt() {
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
 
-      <main id="main-content" className="pt-24 pb-16 flex-1">
-        <div className="max-w-5xl mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Kontaktieren Sie <strong>KSHW München</strong> – Ihre Sanierungsexperten</h1>
-          <p className="text-muted-foreground text-lg mb-8">
-            <strong>Kostenlose Erstberatung</strong>, unverbindliches Angebot, persönlicher Ansprechpartner. Schreiben Sie uns oder rufen Sie direkt an – <strong>wir antworten innerhalb von 24 Stunden</strong>.
-          </p>
+      <PageHero
+        title="Kontakt"
+        subtitle="Wir sind für Sie da"
+        description="Kostenlose Erstberatung, unverbindliches Angebot, persönlicher Ansprechpartner. Wir antworten innerhalb von 24 Stunden."
+        badge="Ihr direkter Draht zu uns"
+        showCta={false}
+        compact={true}
+      />
 
+      <main id="main-content" className="py-12 flex-1">
+        <div className="max-w-5xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <Card>
