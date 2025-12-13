@@ -10,16 +10,6 @@ import {
 } from "@/components/ui/accordion";
 import { SiteHeader } from "@/components/site-header";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
-
-const headerServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung" },
-  { id: "badsanierung", title: "Badsanierung" },
-  { id: "kuechensanierung", title: "Küchensanierung" },
-  { id: "bodensanierung", title: "Bodensanierung" },
-  { id: "elektrosanierung", title: "Elektrosanierung" },
-  { id: "heizungssanierung", title: "Heizungssanierung" },
-];
-
 import { 
   Phone, 
   Mail, 
@@ -43,6 +33,15 @@ import {
   Handshake,
   Calendar
 } from "lucide-react";
+
+const headerServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung" },
+  { id: "kuechensanierung", title: "Küchensanierung" },
+  { id: "bodensanierung", title: "Bodensanierung" },
+  { id: "elektrosanierung", title: "Elektrosanierung" },
+  { id: "heizungssanierung", title: "Heizungssanierung" },
+];
 
 const faqItems = [
   {
