@@ -40,3 +40,11 @@ waitForPort = 5000
 
 [agent]
 integrations = ["javascript_mem_db:1.0.0", "javascript_database:1.0.0"]
+
+[userenv]
+
+[userenv.shared]
+SMTP_HOST = "smtp.ionos.de"
+SMTP_PORT = "587"
+SMTP_USER = "info@089-sanierer.de"
+SMTP_FROM_EMAIL = "info@089-sanierer.de"
