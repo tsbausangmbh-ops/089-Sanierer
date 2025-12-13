@@ -482,7 +482,7 @@ Wenn du Name, E-Mail, Telefon, Service, Datum und Uhrzeit hast:
       if (responseMessage?.tool_calls && responseMessage.tool_calls.length > 0) {
         const toolCall = responseMessage.tool_calls[0];
         
-        if (toolCall.function.name === "create_appointment") {
+        if (toolCall.type === "function" && toolCall.function.name === "create_appointment") {
           try {
             const args = JSON.parse(toolCall.function.arguments);
             
