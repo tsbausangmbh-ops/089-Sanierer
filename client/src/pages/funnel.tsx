@@ -48,6 +48,7 @@ import {
 import { Link } from "wouter";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -2147,12 +2148,7 @@ export default function FunnelPage() {
     const content = serviceSeoContent[preSelectedService];
     
     return (
-      <div className="container mx-auto px-4 py-8 max-w-5xl pt-24 flex-1">
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{content.headline}</h1>
-          <p className="text-xl text-muted-foreground">{content.subheadline}</p>
-        </div>
-
+      <div className="container mx-auto px-4 py-8 max-w-5xl flex-1">
         <div className="prose prose-lg max-w-none mb-8">
           <p className="text-foreground leading-relaxed">{content.intro}</p>
         </div>
@@ -2301,11 +2297,19 @@ export default function FunnelPage() {
   };
 
   if (showSeoIntro && preSelectedService && serviceSeoContent[preSelectedService]) {
+    const content = serviceSeoContent[preSelectedService];
     return (
       <div className="min-h-screen bg-background flex flex-col">
         <SiteHeader />
+        <PageHero 
+          title={content.headline}
+          subtitle={content.subheadline}
+          showCta={true}
+          showStats={false}
+          compact={true}
+        />
 
-        <main id="main-content">
+        <main id="main-content" className="pb-16 flex-1">
         {renderSeoIntro()}
         </main>
 
