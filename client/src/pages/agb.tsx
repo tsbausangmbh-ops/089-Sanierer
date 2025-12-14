@@ -1,7 +1,7 @@
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Calendar, Menu, X, ArrowLeft } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
@@ -12,84 +12,18 @@ const headerServices = [
 ];
 
 export default function AGB() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,75%,22%)] text-white border-b border-white/20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="h-16 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" data-testid="button-back" onClick={() => window.history.back()}>
-                <ArrowLeft className="w-5 h-5" />
-              </Button>
-              <Link href="/">
-                <div className="flex items-center gap-2 cursor-pointer">
-                  <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
-                  <div className="hidden sm:flex flex-col">
-                    <span className="font-bold text-base leading-tight">KSHW München</span>
-                    <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="flex lg:hidden items-center gap-2">
-              <Button size="icon" variant="ghost" className="text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </Button>
-              <a href="tel:+4915212274043">
-                <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
-                  <Phone className="w-4 h-4" />
-                </Button>
-              </a>
-            </div>
-            <div className="hidden lg:flex items-center gap-1">
-              {headerServices.map((service) => (
-                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                  <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                    {service.title}
-                  </Button>
-                </Link>
-              ))}
-              <Link href="/ratgeber">
-                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                  Ratgeber
-                </Button>
-              </Link>
-              <Link href="/faq-preise">
-                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                  FAQ & Preise
-                </Button>
-              </Link>
-              <a href="tel:+4915212274043" className="ml-3">
-                <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
-                  <Phone className="w-4 h-4 mr-1" />
-                  0152 122 740 43
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-[hsl(220,75%,28%)] border-t border-white/10">
-            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
-              {headerServices.map((service) => (
-                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                  <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>{service.title}</Button>
-                </Link>
-              ))}
-              <div className="border-t border-white/20 my-2" />
-              <Link href="/ratgeber"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Ratgeber</Button></Link>
-              <Link href="/faq-preise"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>FAQ & Preise</Button></Link>
-              <Link href="/kontakt"><Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10" onClick={() => setMobileMenuOpen(false)}>Kontakt</Button></Link>
-                          </nav>
-          </div>
-        )}
-      </header>
+      <SiteHeader />
+      <PageHero 
+        title="AGB" 
+        subtitle="Allgemeine Geschäftsbedingungen"
+        showCta={false}
+        compact={true}
+      />
 
-      <main className="pt-24 pb-16 flex-1">
+      <main className="pb-16 flex-1">
         <div className="max-w-3xl mx-auto px-4 lg:px-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-8">Allgemeine Geschäftsbedingungen</h1>
 
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
 

@@ -11,6 +11,8 @@ interface PageHeroProps {
   showCta?: boolean;
   showStats?: boolean;
   compact?: boolean;
+  image?: string;
+  imageAlt?: string;
 }
 
 const stats = [
@@ -26,7 +28,9 @@ export function PageHero({
   badge = "Im Partnernetzwerk",
   showCta = true,
   showStats = false,
-  compact = true
+  compact = true,
+  image,
+  imageAlt
 }: PageHeroProps) {
   const minHeight = compact ? "min-h-[40vh] lg:min-h-[35vh]" : "min-h-[85vh] lg:min-h-[75vh]";
   const padding = compact ? "py-8 lg:py-12" : "py-12 lg:py-20";
@@ -35,8 +39,8 @@ export function PageHero({
     <section className={`relative pt-16 ${minHeight} flex items-center`}>
       <div className="absolute inset-0 pt-16">
         <img 
-          src={houseBeforeAfter} 
-          alt="Haussanierung Vorher-Nachher"
+          src={image || houseBeforeAfter} 
+          alt={imageAlt || "Haussanierung Vorher-Nachher"}
           className="w-full h-full object-cover"
           loading="eager"
           decoding="async"

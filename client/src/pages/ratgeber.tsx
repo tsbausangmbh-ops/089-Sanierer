@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Building, Thermometer, DoorOpen, Zap, Triangle } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 
 const headerServices = [
@@ -18,16 +19,16 @@ export default function Ratgeber() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
+      <PageHero 
+        title="Sanierung München Ratgeber" 
+        subtitle="Kosten, Förderung & Expertentipps"
+        description="Aus 268+ Projekten in München teilen wir unser Wissen mit Ihnen"
+        showCta={true}
+        compact={true}
+      />
 
-      <main id="main-content" className="pt-24 pb-16 flex-1">
+      <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl lg:text-4xl font-bold mb-4"><strong>Sanierung München Ratgeber</strong>: Kosten, Förderung & Expertentipps</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              <strong>Aus 268+ Projekten in München</strong> teilen wir unser Wissen mit Ihnen: Echte Preise, aktuelle Fördermöglichkeiten und praktische Tipps – damit Ihre Sanierung <strong>planbar, sicher und erfolgreich</strong> wird.
-            </p>
-          </div>
-
           <nav className="mb-12 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
             <h2 className="font-semibold mb-3">Welches Thema interessiert Sie?</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
