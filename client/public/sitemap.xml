@@ -1,395 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- ============================================ -->
-  <!-- HAUPTSEITEN - Sanierung München -->
-  <!-- ============================================ -->
-  
-  <!-- Homepage - Sanierung München -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://089-sanierer.de/</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://089-sanierer.de/og-image.jpg</image:loc>
-      <image:title>Sanierung München - KSHW Komplettsanierung</image:title>
-      <image:caption>KSHW München: Badsanierung, Komplettsanierung, Haussanierung mit Festpreisgarantie</image:caption>
-      <image:geo_location>München, Bayern, Deutschland</image:geo_location>
-    </image:image>
   </url>
-
-  <!-- Anfrage Funnel - Lead Generation -->
   <url>
     <loc>https://089-sanierer.de/anfrage</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
-
-  <!-- ============================================ -->
-  <!-- SERVICE-SEITEN - Sanierung München -->
-  <!-- ============================================ -->
-
-  <!-- Komplettsanierung München -->
   <url>
     <loc>https://089-sanierer.de/anfrage?service=komplettsanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Badsanierung München -->
   <url>
     <loc>https://089-sanierer.de/anfrage?service=badsanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Küchensanierung München -->
   <url>
     <loc>https://089-sanierer.de/anfrage?service=kuechensanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Dachsanierung München -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?service=dachsanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Energetische Sanierung München -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?service=energetische-sanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Bodensanierung München -->
   <url>
     <loc>https://089-sanierer.de/anfrage?service=bodensanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Elektrosanierung München -->
   <url>
     <loc>https://089-sanierer.de/anfrage?service=elektrosanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Heizungssanierung München -->
   <url>
     <loc>https://089-sanierer.de/anfrage?service=heizungssanierung</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- HANDWERKER-VERMITTLUNG - Gewerke München -->
-  <!-- ============================================ -->
-
-  <!-- Gewerke Hauptseite -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Maler München -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=maler</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Elektriker München -->
   <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=elektriker</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://089-sanierer.de/anfrage?service=dachsanierung</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Fliesenleger München -->
   <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=fliesenleger</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://089-sanierer.de/anfrage?service=energetische-sanierung</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Sanitär München -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=sanitaer</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Trockenbau München -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=trockenbau</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Bodenleger München -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=bodenleger</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Schreiner München -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=schreiner</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Heizungsbauer München -->
-  <url>
-    <loc>https://089-sanierer.de/gewerke?gewerk=heizungsbauer</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- INFORMATIONSSEITEN -->
-  <!-- ============================================ -->
-
-  <!-- FAQ & Preise - Sanierungskosten München -->
   <url>
     <loc>https://089-sanierer.de/faq-preise</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Ratgeber - Sanierung München Tipps -->
-  <url>
-    <loc>https://089-sanierer.de/ratgeber</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Kontakt KSHW München -->
-  <url>
-    <loc>https://089-sanierer.de/kontakt</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ============================================ -->
-  <!-- GEO-SEITEN - Stadtteile München -->
-  <!-- ============================================ -->
-
-  <!-- Sanierung München-Schwabing -->
   <url>
-    <loc>https://089-sanierer.de/anfrage?ort=schwabing</loc>
-    <lastmod>2024-12-10</lastmod>
+    <loc>https://089-sanierer.de/ratgeber</loc>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Sanierung München-Bogenhausen -->
   <url>
-    <loc>https://089-sanierer.de/anfrage?ort=bogenhausen</loc>
-    <lastmod>2024-12-10</lastmod>
+    <loc>https://089-sanierer.de/gewerke</loc>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Sanierung München-Sendling -->
   <url>
-    <loc>https://089-sanierer.de/anfrage?ort=sendling</loc>
-    <lastmod>2024-12-10</lastmod>
+    <loc>https://089-sanierer.de/kontakt</loc>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Sanierung München-Pasing -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=pasing</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung München-Trudering -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=trudering</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung München-Haidhausen -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=haidhausen</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung München-Giesing -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=giesing</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung München-Neuhausen -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=neuhausen</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- GEO-SEITEN - Münchner Umland -->
-  <!-- ============================================ -->
-
-  <!-- Sanierung Dachau -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=dachau</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Starnberg -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=starnberg</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Fürstenfeldbruck -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=fuerstenfeldbruck</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Germering -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=germering</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Freising -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=freising</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Garching -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=garching</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Unterschleißheim -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=unterschleissheim</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Ottobrunn -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=ottobrunn</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Grünwald -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=gruenwald</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sanierung Unterhaching -->
-  <url>
-    <loc>https://089-sanierer.de/anfrage?ort=unterhaching</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- RECHTLICHE SEITEN -->
-  <!-- ============================================ -->
-
-  <!-- Impressum -->
   <url>
     <loc>https://089-sanierer.de/impressum</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Datenschutz -->
   <url>
     <loc>https://089-sanierer.de/datenschutz</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- AGB -->
   <url>
     <loc>https://089-sanierer.de/agb</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Cookies -->
-  <url>
-    <loc>https://089-sanierer.de/cookies</loc>
-    <lastmod>2024-12-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>

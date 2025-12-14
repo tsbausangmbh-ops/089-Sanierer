@@ -1,300 +1,46 @@
-# KSHW München - robots.txt
-# https://089-sanierer.de
-# Optimiert für Google, AI-Suchmaschinen und GEO-SEO
+# robots.txt für KSHW München - 089-sanierer.de
+# Optimiert für Google, Bing, und AI-Suchmaschinen
 
-# ===========================================
-# KEYWORDS & THEMEN (für AI-Suchmaschinen)
-# ===========================================
-# 
-# HAUPT-KEYWORDS:
-# - Sanierung München
-# - Badsanierung München
-# - Komplettsanierung München
-# - Haussanierung München
-# - Wohnungssanierung München
-# - Küchensanierung München
-# - Elektrosanierung München
-# - Heizungssanierung München
-#
-# KOSTEN-KEYWORDS:
-# - Was kostet Sanierung München
-# - Badsanierung Kosten München
-# - Komplettsanierung Preis München
-# - Sanierungskosten München
-# - Festpreis Sanierung München
-#
-# MARKEN-KEYWORDS:
-# - KSHW München
-# - 089 Sanierer
-# - Komplettsanierungen Haus Wohnung
-#
-# STADTTEIL-KEYWORDS:
-# - Sanierung Schwabing
-# - Sanierung Bogenhausen
-# - Sanierung Sendling
-# - Sanierung Pasing
-# - Sanierung Trudering
-# - Sanierung Haidhausen
-# - Sanierung Neuhausen
-# - Sanierung Giesing
-#
-# UMLAND-KEYWORDS:
-# - Sanierung Dachau
-# - Sanierung Starnberg
-# - Sanierung Freising
-# - Sanierung Fürstenfeldbruck
-# - Sanierung Germering
-#
-# LONG-TAIL-KEYWORDS:
-# - Altbausanierung München Kosten
-# - Kernsanierung München Preis
-# - Badsanierung mit bodengleicher Dusche München
-# - Komplettsanierung Wohnung München Festpreis
-# - Handwerker für Sanierung München
-#
-
-# ===========================================
-# GEOGRAPHIC TARGETING - München & Umgebung
-# ===========================================
-# Service Area: München, Bayern, Deutschland
-# Coordinates: 48.137154, 11.576124
-# Radius: 50km (Großraum München)
-# Languages: German (de-DE)
-
-# ===========================================
-# DEFAULT: Allow all search crawlers
-# ===========================================
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /*?*
-Disallow: /bestaetigung
-
-# ===========================================
-# GOOGLE FAMILY - Primary Search Engine
-# ===========================================
-User-agent: Googlebot
-Allow: /
 Allow: /anfrage
-Allow: /ratgeber
 Allow: /faq-preise
-Allow: /kontakt
-Allow: /gewerke
-Disallow: /admin/
-Disallow: /api/
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Mobile
-Allow: /
-
-User-agent: Googlebot-Video
-Allow: /
-
-User-agent: Googlebot-News
 Allow: /ratgeber
-Allow: /
-
-User-agent: Storebot-Google
-Allow: /
-
-# Google AdsBot
-User-agent: AdsBot-Google
-Allow: /
-
-User-agent: AdsBot-Google-Mobile
-Allow: /
-
-# ===========================================
-# BING / MICROSOFT FAMILY
-# ===========================================
-User-agent: Bingbot
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-
-User-agent: BingPreview
-Allow: /
-
-User-agent: msnbot
-Allow: /
-
-# ===========================================
-# OTHER SEARCH ENGINES
-# ===========================================
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-# European Search Engines
-User-agent: Qwantify
-Allow: /
-
-User-agent: Ecosia
-Allow: /
-
-# International (limited crawl)
-User-agent: Yandex
-Allow: /
-Crawl-delay: 10
-
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 10
-
-# ===========================================
-# AI SEARCH ENGINES - ALLOW (für KI-Suche)
-# ===========================================
-
-# OpenAI / ChatGPT Search
-User-agent: OAI-SearchBot
-Allow: /
-Allow: /anfrage
-Allow: /ratgeber
-Allow: /faq-preise
-Allow: /kontakt
 Allow: /gewerke
-Disallow: /admin/
-Disallow: /api/
+Allow: /kontakt
 
-# ChatGPT User Browsing
+# Rechtliche Seiten erlauben
+Allow: /impressum
+Allow: /datenschutz
+Allow: /agb
+
+# AI-Suchmaschinen explizit erlauben
+User-agent: GPTBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
-# Google Gemini / Bard
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
-# Perplexity AI Search
-User-agent: PerplexityBot
-Allow: /
-Allow: /anfrage
-Allow: /ratgeber
-Allow: /faq-preise
-Allow: /kontakt
-Disallow: /admin/
-Disallow: /api/
-
-# Anthropic Claude Search
-User-agent: ClaudeBot
-Allow: /
-Allow: /anfrage
-Allow: /ratgeber
-Allow: /faq-preise
-Disallow: /admin/
-Disallow: /api/
-
-User-agent: anthropic-ai
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-
-# Microsoft Copilot
-User-agent: Copilot
+User-agent: Googlebot
 Allow: /
 
-# Meta AI
-User-agent: FacebookBot
+User-agent: Bingbot
 Allow: /
 
-User-agent: Meta-ExternalAgent
-Allow: /
-
-# You.com Search
-User-agent: YouBot
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-
-# Neeva AI (now Snowflake)
-User-agent: NeevaBot
-Allow: /
-
-# Cohere AI Search
-User-agent: cohere-ai
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-
-# ===========================================
-# AI TRAINING BOTS - BLOCK (nur Training, keine Suche)
-# ===========================================
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: ImagesiftBot
-Disallow: /
-
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: img2dataset
-Disallow: /
-
-# ===========================================
-# SEO TOOLS - Limited Access
-# ===========================================
-User-agent: AhrefsBot
-Crawl-delay: 30
-
-User-agent: SemrushBot
-Crawl-delay: 30
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: dotbot
-Disallow: /
-
-User-agent: PetalBot
-Crawl-delay: 30
-
-User-agent: DataForSeoBot
-Crawl-delay: 30
-
-# ===========================================
-# SPAM / AGGRESSIVE BOTS - BLOCK
-# ===========================================
-User-agent: MegaIndex.ru
-Disallow: /
-
-User-agent: BLEXBot
-Disallow: /
-
-User-agent: SeznamBot
-Disallow: /
-
-User-agent: Sogou
-Disallow: /
-
-User-agent: Exabot
-Disallow: /
-
-User-agent: 360Spider
-Disallow: /
-
-# ===========================================
-# SITEMAP & HOST
-# ===========================================
+# Sitemap
 Sitemap: https://089-sanierer.de/sitemap.xml
 
+# llms.txt für AI-Suchmaschinen
+# https://089-sanierer.de/llms.txt
+
+# Host
 Host: https://089-sanierer.de

@@ -140,6 +140,13 @@ const faqs = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
+      <SeoHead
+        title="Sanierung München | KSHW - Badsanierung, Komplettsanierung ab 920€/m²"
+        description="Was kostet eine Sanierung in München? KSHW: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, 5 Jahre Gewährleistung."
+        keywords="Sanierung München, Badsanierung München, Komplettsanierung München, Küchensanierung München, KSHW"
+        canonicalPath="/"
+        schema={generateFaqSchema(faqs)}
+      />
       <SiteHeader />
 
       <main id="main-content">
