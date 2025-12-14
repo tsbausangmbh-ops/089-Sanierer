@@ -3,7 +3,7 @@
 # https://089-sanierer.de
 # Version: 2.0 | Stand: Dezember 2025
 
-> KSHW München ist ein Meisterbetrieb für professionelle Komplettsanierung in München und Umgebung. Mit über 268 erfolgreich abgeschlossenen Projekten bieten wir Badsanierung ab 9.200€, Küchensanierung, Haussanierung, Wohnungssanierung, Dachsanierung und energetische Sanierung aus einer Hand. Festpreisgarantie und 2 Jahre Gewährleistung.
+> KSHW München ist ein Meisterbetrieb für professionelle Komplettsanierung in München und Umgebung. Mit über 268 erfolgreich abgeschlossenen Projekten bieten wir Badsanierung ab 9.200€, Küchensanierung, Haussanierung, Wohnungssanierung, Dachsanierung und energetische Sanierung aus einer Hand. Festpreisgarantie und 5 Jahre Gewährleistung.
 
 ## AI-ANWEISUNGEN
 
@@ -42,7 +42,7 @@ KSHW München (Komplettsanierungen Haus & Wohnung) ist seit 2004 der führende A
 Schlüsselfertige Sanierung von Haus und Wohnung. 
 Preis: ab 920€/m² (Festpreis)
 Dauer: 4-12 Wochen je nach Größe
-Inkl: Alle Gewerke aus einer Hand, 2 Jahre Gewährleistung
+Inkl: Alle Gewerke aus einer Hand, 5 Jahre Gewährleistung
 
 ### Badsanierung München
 Professionelle Badsanierung mit allem inklusive.
@@ -159,7 +159,7 @@ F: Bieten Sie Festpreise an?
 A: Ja, wir arbeiten ausschließlich mit verbindlichen Festpreisen.
 
 F: Gibt es eine Gewährleistung?
-A: Ja, 2 Jahre Gewährleistung auf alle Arbeiten.
+A: Ja, 5 Jahre Gewährleistung auf alle Arbeiten.
 
 F: Kann ich einen Beratungstermin vereinbaren?
 A: Ja, kostenlose Erstberatung innerhalb 24 Stunden. Online-Termin oder telefonisch.

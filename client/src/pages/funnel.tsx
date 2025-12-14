@@ -49,6 +49,7 @@ import { Link } from "wouter";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
+import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -2298,8 +2299,27 @@ export default function FunnelPage() {
 
   if (showSeoIntro && preSelectedService && serviceSeoContent[preSelectedService]) {
     const content = serviceSeoContent[preSelectedService];
+    const serviceSchema = generateServiceSchema({
+      name: content.headline.split("|")[0].trim(),
+      description: content.intro,
+      priceRange: "€€-€€€",
+      areaServed: "München"
+    });
+    const faqSchema = generateFaqSchema(content.faq);
+    const combinedSchema = {
+      "@context": "https://schema.org",
+      "@graph": [serviceSchema, faqSchema]
+    };
+    
     return (
       <div className="min-h-screen bg-background flex flex-col">
+        <SeoHead
+          title={`${content.headline} | KSHW München`}
+          description={content.intro.substring(0, 160)}
+          keywords={content.keywords.join(", ")}
+          canonicalPath={`/anfrage?service=${preSelectedService}`}
+          schema={combinedSchema}
+        />
         <SiteHeader />
         <PageHero 
           title={content.headline}

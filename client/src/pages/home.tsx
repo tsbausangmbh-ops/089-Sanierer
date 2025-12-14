@@ -5,6 +5,7 @@ import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_sp
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
+import { SeoHead, generateFaqSchema } from "@/components/seo-head";
 
 const ChatBot = lazy(() => import("@/components/chat-bot").then(m => ({ default: m.ChatBot })));
 
@@ -50,7 +51,7 @@ import {
 
 const allServices = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, description: "Rundum-Sanierung mit Festpreisgarantie – ein Ansprechpartner für Ihr gesamtes Projekt in München." },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath, description: "Ihr Traumbad in 2-3 Wochen – barrierefrei, modern & mit 2 Jahren Gewährleistung." },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath, description: "Ihr Traumbad in 2-3 Wochen – barrierefrei, modern & mit 5 Jahren Gewährleistung." },
   { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, description: "Professionelle Küchenplanung & Montage – alles aus einer Hand, termingerecht." },
   { id: "bodensanierung", title: "Bodensanierung", icon: Layers, description: "Parkett, Fliesen oder Vinyl – fachgerechte Verlegung durch erfahrene Handwerker." },
   { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, description: "VDE-konforme Elektroinstallation – Sicherheit für Ihre Familie in München." },
@@ -93,7 +94,7 @@ const benefits = [
   },
   {
     icon: Shield,
-    title: "2 Jahre Gewährleistung",
+    title: "5 Jahre Gewährleistung",
     description: "Alle Arbeiten mit voller Gewährleistung – wir stehen zu unserer Qualität, auch nach Projektabschluss.",
   },
   {
@@ -128,7 +129,7 @@ const faqs = [
   },
   {
     question: "Gibt es eine Garantie auf die Sanierungsarbeiten?",
-    answer: "Selbstverständlich: Alle Arbeiten werden mit mindestens 2 Jahren Gewährleistung ausgeführt. Bei Materialien wie Sanitärkeramik, Armaturen oder Heizsystemen gelten zusätzlich die Herstellergarantien. Sollte nach der Sanierung etwas nicht stimmen, sind wir sofort für Sie da.",
+    answer: "Selbstverständlich: Alle Arbeiten werden mit mindestens 5 Jahren Gewährleistung ausgeführt. Bei Materialien wie Sanitärkeramik, Armaturen oder Heizsystemen gelten zusätzlich die Herstellergarantien. Sollte nach der Sanierung etwas nicht stimmen, sind wir sofort für Sie da.",
   },
   {
     question: "In welchen Stadtteilen von München sind Sie tätig?",
@@ -170,7 +171,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg lg:text-xl text-white/85 mb-8 leading-relaxed">
-              Schluss mit Handwerkersuche und Terminproblemen. <strong className="text-white">Festpreisgarantie</strong>, ein persönlicher Ansprechpartner und <strong className="text-white">2 Jahre Gewährleistung</strong> – das ist KSHW München.
+              Schluss mit Handwerkersuche und Terminproblemen. <strong className="text-white">Festpreisgarantie</strong>, ein persönlicher Ansprechpartner und <strong className="text-white">5 Jahre Gewährleistung</strong> – das ist KSHW München.
             </p>
             
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-10">
@@ -224,7 +225,7 @@ export default function Home() {
               Was möchten Sie in München sanieren lassen?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Von der <strong>Badsanierung</strong> bis zur <strong>Komplettsanierung</strong> – <strong>268+ Münchner Familien</strong> haben uns bereits vertraut. <strong>Festpreis-Garantie, fester Termin, 2 Jahre Gewährleistung.</strong>
+              Von der <strong>Badsanierung</strong> bis zur <strong>Komplettsanierung</strong> – <strong>268+ Münchner Familien</strong> haben uns bereits vertraut. <strong>Festpreis-Garantie, fester Termin, 5 Jahre Gewährleistung.</strong>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">

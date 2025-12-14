@@ -391,7 +391,7 @@ export async function registerRoutes(
 - Spezialisierung: Komplettsanierung, Badsanierung, Küchensanierung, Bodensanierung, Elektrosanierung, Heizungssanierung, Dachsanierung, Energetische Sanierung
 - Erfahrung: 268+ erfolgreich abgeschlossene Projekte, über 20 Jahre Branchenerfahrung
 - Servicegebiet: München und gesamter Großraum (ca. 50km Umkreis)
-- Vorteile: Festpreisgarantie, ein Ansprechpartner, 2 Jahre Gewährleistung
+- Vorteile: Festpreisgarantie, ein Ansprechpartner, 5 Jahre Gewährleistung
 
 ## PREISRICHTLINIEN
 - Badsanierung: ab 8.000€
