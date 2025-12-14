@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { 
   Phone, 
@@ -360,16 +361,17 @@ export default function FaqPreise() {
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
 
-      <main id="main-content" className="flex-1 pt-16">
+      <PageHero
+        title="FAQ & Preise"
+        subtitle="Sanierungskosten München"
+        description="Keine versteckten Kosten, keine bösen Überraschungen. Transparente Preise aus 268+ Projekten in München."
+        compact={true}
+      />
+
+      <main id="main-content" className="flex-1">
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4"><strong>Sanierungskosten München</strong>: Was kostet<br />Badsanierung, Haussanierung & Küche?</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                <strong>Keine versteckten Kosten, keine bösen Überraschungen.</strong> Hier finden Sie transparente Preise aus unserer Erfahrung mit <strong>268+ Projekten in München</strong>. Alle Preise inkl. Material, Arbeit und Entsorgung.
-              </p>
-            </div>
-            <div className="text-center mt-6">
               <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1">
                 <Euro className="w-6 h-6 text-primary" />
                 Sanierungspreise München – Kostenübersicht
