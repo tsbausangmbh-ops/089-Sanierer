@@ -159,7 +159,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
               <Shield className="w-4 h-4 text-yellow-400" />
-              <span className="text-sm font-medium text-white">Meisterbetrieb seit 20+ Jahren</span>
+              <span className="text-sm font-medium text-white">Im Partnernetzwerk</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">

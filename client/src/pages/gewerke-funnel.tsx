@@ -333,7 +333,7 @@ export default function GewerkeFunnel() {
             </div>
             <h1 className="text-2xl lg:text-3xl font-bold mb-2">Geprüfte Handwerker in München – schnell und kostenlos vermittelt</h1>
             <p className="text-muted-foreground">
-              Kein langes Suchen mehr: Wir finden den richtigen Meisterbetrieb für Sie
+              Kein langes Suchen mehr: Wir finden den richtigen Fachbetrieb für Sie
             </p>
           </div>
 
@@ -986,7 +986,7 @@ export default function GewerkeFunnel() {
               </div>
               <div>
                 <p className="font-medium text-sm">Geprüfte Betriebe</p>
-                <p className="text-xs text-muted-foreground">Nur Meisterbetriebe</p>
+                <p className="text-xs text-muted-foreground">Geprüfte Fachbetriebe</p>
               </div>
             </div>
             <div className="flex items-center gap-3">

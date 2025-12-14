@@ -23,7 +23,7 @@ export function PageHero({
   title, 
   subtitle, 
   description, 
-  badge = "Meisterbetrieb seit 20+ Jahren",
+  badge = "Im Partnernetzwerk",
   showCta = true,
   showStats = false,
   compact = true

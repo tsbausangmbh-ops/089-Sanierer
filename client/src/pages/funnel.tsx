@@ -149,7 +149,7 @@ const serviceSeoContent: Record<string, {
       "Zeitverlust: Durchschnittlich 3 Monate Verzögerung ohne professionelle Projektleitung"
     ],
     solutions: [
-      "Ein Meisterbetrieb koordiniert alle Gewerke: Elektriker, Sanitär, Maler, Fliesenleger, Trockenbauer",
+      "Ein Fachbetrieb koordiniert alle Gewerke: Elektriker, Sanitär, Maler, Fliesenleger, Trockenbauer",
       "Festpreisgarantie nach kostenloser Vor-Ort-Besichtigung – keine Nachträge",
       "Terminplan mit Meilensteinen und Fertigstellungsdatum im Vertrag",
       "Eigener Bauleiter mit täglicher Qualitätskontrolle auf der Baustelle",
@@ -276,7 +276,7 @@ const serviceSeoContent: Record<string, {
   elektrosanierung: {
     headline: "Elektrosanierung München | Elektrik erneuern & modernisieren",
     subheadline: "Sichere Elektroinstallation nach VDE – mehr Steckdosen, FI-Schutz, Smart Home ready",
-    intro: "Ist Ihre Elektrik noch sicher? Wie viele Steckdosen braucht eine moderne Wohnung? Was kostet eine Elektrosanierung in München? Bei KSHW München modernisieren wir Ihre Elektroinstallation fachgerecht nach VDE-Norm. Vom neuen Sicherungskasten über ausreichend Steckdosen bis zur Wallbox-Vorbereitung. Eingetragener Elektro-Meisterbetrieb, E-Check, Prüfprotokoll für Versicherung inklusive.",
+    intro: "Ist Ihre Elektrik noch sicher? Wie viele Steckdosen braucht eine moderne Wohnung? Was kostet eine Elektrosanierung in München? Bei KSHW München modernisieren wir Ihre Elektroinstallation fachgerecht nach VDE-Norm. Vom neuen Sicherungskasten über ausreichend Steckdosen bis zur Wallbox-Vorbereitung. Eingetragener Elektrofachbetrieb, E-Check, Prüfprotokoll für Versicherung inklusive.",
     problems: [
       "Zu wenige Steckdosen: Moderne Haushalte brauchen 40-60 Steckdosen, Altbauten haben oft nur 15-20",
       "Veraltete Sicherungen: Schmelzsicherungen und fehlender FI-Schutz – lebensgefährlich",
@@ -293,12 +293,12 @@ const serviceSeoContent: Record<string, {
     ],
     benefits: [
       "VDE-konform: Alle Arbeiten nach aktuellen Normen und Vorschriften",
-      "Meisterbetrieb: Eingetragener Elektrofachbetrieb, nur geprüfte Elektriker",
+      "Fachbetrieb: Eingetragener Elektrofachbetrieb, nur geprüfte Elektriker",
       "E-Check: Prüfprotokoll für Versicherung und Vermieter inklusive",
       "Festpreis: Elektrosanierung ab 3.500€ (Wohnung) bis 12.000€ (Haus) – transparent kalkuliert",
       "Garantie: 5 Jahre Gewährleistung auf alle Elektroarbeiten"
     ],
-    geoText: "Elektrosanierung in München und Umgebung – Ihr Elektro-Meisterbetrieb. Wir modernisieren Elektrik in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    geoText: "Elektrosanierung in München und Umgebung – Ihr Elektrofachbetrieb im Partnernetzwerk. Wir modernisieren Elektrik in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
     ctaText: "Elektrik-Check anfordern",
     faq: [
       { question: "Was kostet eine komplette Elektrosanierung in München?", answer: "Eine Elektrosanierung kostet in München: 2-Zimmer-Wohnung 3.500-5.500€, 4-Zimmer-Wohnung 5.500-8.000€, Einfamilienhaus 8.000-15.000€ – abhängig von Zustand und Umfang." },
@@ -378,7 +378,7 @@ const serviceSeoContent: Record<string, {
   dachsanierung: {
     headline: "Dachsanierung München | Dachdecker für Neueindeckung & Dämmung",
     subheadline: "Dach reparieren, dämmen oder komplett neu eindecken – Festpreis, 10 Jahre Garantie",
-    intro: "Ist mein Dach noch dicht? Was kostet eine Dachsanierung in München? Wann lohnt sich eine Neueindeckung? Bei KSHW München erhalten Sie professionelle Dacharbeiten vom Meisterbetrieb – Reparatur, Dämmung, Neueindeckung. Wir arbeiten mit allen Dachformen: Steildach, Flachdach, Walmdach, Pultdach. Festpreis nach kostenloser Dachinspektion, bis zu 20% Förderung für Dachdämmung, 10 Jahre Gewährleistung auf Eindeckung.",
+    intro: "Ist mein Dach noch dicht? Was kostet eine Dachsanierung in München? Wann lohnt sich eine Neueindeckung? Bei KSHW München erhalten Sie professionelle Dacharbeiten vom Fachbetrieb – Reparatur, Dämmung, Neueindeckung. Wir arbeiten mit allen Dachformen: Steildach, Flachdach, Walmdach, Pultdach. Festpreis nach kostenloser Dachinspektion, bis zu 20% Förderung für Dachdämmung, 10 Jahre Gewährleistung auf Eindeckung.",
     problems: [
       "Undichtes Dach: Wassereintritt bei Regen oder Schnee – teure Folgeschäden an Dämmung und Bausubstanz",
       "Alte Dachziegel: Poröse, bemooste oder gebrochene Ziegel – Sturmschäden und weitere Undichtigkeiten drohen",
@@ -396,11 +396,11 @@ const serviceSeoContent: Record<string, {
     benefits: [
       "10 Jahre Garantie: Überdurchschnittliche Gewährleistung auf Neueindeckung und Abdichtung",
       "Förderung: Bis zu 20% BEG-Zuschuss für Dachdämmung möglich",
-      "Meisterbetrieb: Eingetragener Dachdeckerbetrieb, zertifizierte Facharbeiter",
+      "Fachbetrieb: Eingetragener Dachdeckerbetrieb, zertifizierte Facharbeiter",
       "Alle Dachformen: Steildach, Flachdach, Walmdach, Pultdach, Mansarddach",
       "Festpreis: Verbindliches Angebot nach kostenloser Dachinspektion"
     ],
-    geoText: "Dachsanierung in München und Umgebung – Ihr Dachdecker-Meisterbetrieb. Wir arbeiten an Dächern in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
+    geoText: "Dachsanierung in München und Umgebung – Ihr Dachdeckerbetrieb im Partnernetzwerk. Wir arbeiten an Dächern in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
     ctaText: "Kostenlose Dachinspektion",
     faq: [
       { question: "Was kostet eine Dachsanierung in München?", answer: "Dachkosten in München: Reparatur 500-3.000€, Neueindeckung 100-180€/m², Dachdämmung 80-150€/m², Dachrinnen 30-60€/lfm. Ein 100m² Dach komplett: 15.000-25.000€." },

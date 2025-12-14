@@ -223,7 +223,7 @@ export default function Ratgeber() {
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wie finde ich gute Malerarbeiten in meiner Nähe?</p>
-                      <p className="text-muted-foreground">Achten Sie auf Meisterbetriebe mit Referenzen aus Ihrer Region München. Wir arbeiten mit geprüften Partnerbetrieben zusammen.</p>
+                      <p className="text-muted-foreground">Achten Sie auf erfahrene Handwerker mit Referenzen aus Ihrer Region München. Wir arbeiten mit geprüften Partnerbetrieben zusammen.</p>
                     </div>
                     <div>
                       <p className="font-medium">Wie oft muss man eine Fassade streichen?</p>
