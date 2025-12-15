@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
