@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
+import { SeoFooter } from "@/components/seo-footer";
 import { 
   Phone, 
   Mail, 

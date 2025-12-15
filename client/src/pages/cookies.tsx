@@ -1,17 +1,10 @@
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Cookie, Shield, BarChart3, Megaphone, Settings } from "lucide-react";
+import { Cookie, Shield, BarChart3, Megaphone, Settings } from "lucide-react";
 import { CookieSettingsButton } from "@/components/cookie-consent";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
-
-const headerServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung" },
-  { id: "badsanierung", title: "Badsanierung" },
-  { id: "dachsanierung", title: "Dachsanierung" },
-  { id: "energetische-sanierung", title: "Energetische Sanierung" },
-];
+import { SeoFooter } from "@/components/seo-footer";
 
 export default function Cookies() {
   return (
@@ -214,80 +207,7 @@ export default function Cookies() {
         </div>
       </main>
 
-      <footer className="pt-12 pb-6 bg-[hsl(220,75%,22%)] text-white">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
-                <div className="flex flex-col">
-                  <span className="font-bold text-base leading-tight">Komplettsanierungen</span>
-                  <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
-                </div>
-              </div>
-              <p className="text-white/70 text-sm">
-                Ihr zuverlässiger Partner für Komplettsanierungen in München und Umgebung.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Kontakt</h4>
-              <div className="space-y-2 text-sm text-white/70">
-                <a href="tel:+4915212274043" className="flex items-center gap-2 hover:text-white">
-                  <Phone className="w-4 h-4" />
-                  0152 122 740 43
-                </a>
-                <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center gap-2 hover:text-white">
-                  <Mail className="w-4 h-4" />
-                  info@komplettsanierungen-haus-wohnung.de
-                </a>
-                <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span>Zielstattstr. 9<br />81379 München</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  Mo-Fr: 8:00-17:00 Uhr
-                </div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Leistungen</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                {headerServices.map((service) => (
-                  <li key={service.id}>
-                    <Link href={`/anfrage?service=${service.id}`} className="hover:text-white">
-                      {service.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Rechtliches</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li><Link href="/impressum" className="hover:text-white">Impressum</Link></li>
-                <li><Link href="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
-                <li><Link href="/agb" className="hover:text-white">AGB</Link></li>
-                <li><Link href="/cookies" className="hover:text-white">Cookie-Richtlinie</Link></li>
-                <li><Link href="/kontakt" className="hover:text-white">Kontakt</Link></li>
-                <li><Link href="/faq-preise" className="hover:text-white">FAQ & Preise</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-6 border-t border-white/20">
-            <h4 className="font-bold mb-2 text-sm">Haus oder Wohnung sanieren in München – Planung, Kosten & Handwerker</h4>
-            <p className="text-xs text-white/60 mb-2">
-              München Pasing · Allach · Untermenzing · Obermenzing · Aubing · Moosach · Feldmoching · Schwabing · Sendling · Bogenhausen · Haidhausen · Neuhausen · Laim · Nymphenburg · Giesing · Berg am Laim · Trudering · Riem · Milbertshofen · Freimann · Solln · Großhadern · Hadern · Fürstenried · Forstenried · Thalkirchen · Obersendling · Ramersdorf · Perlach · Neuperlach
-            </p>
-            <p className="text-xs text-white/60">
-              Sowie im Münchner Umland: Dachau · Karlsfeld · Germering · Fürstenfeldbruck · Freising · Starnberg · Garching · Unterschleißheim · Oberschleißheim · Ottobrunn · Haar · Gräfelfing · Planegg · Pullach · Grünwald
-            </p>
-          </div>
-          <div className="mt-4 pt-4 border-t border-white/20 text-center text-sm text-white/70">
-            &copy; {new Date().getFullYear()} <a href="https://komplettsanierungen-haus-wohnung.de" className="hover:text-white underline">komplettsanierungen-haus-wohnung.de</a> - Alle Rechte vorbehalten.
-          </div>
-        </div>
-      </footer>
+      <SeoFooter />
     </div>
   );
 }
