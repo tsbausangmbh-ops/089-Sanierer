@@ -96,7 +96,14 @@ export function ChatBot() {
     <>
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed right-0 top-1/2 -translate-y-1/2 z-[9999] rounded-l-lg rounded-r-none px-2 py-8 shadow-lg bg-primary transition-all ${isOpen ? 'translate-x-full opacity-0' : ''}`}
+        className={`rounded-l-lg rounded-r-none px-2 py-8 shadow-lg bg-primary transition-all ${isOpen ? 'opacity-0 pointer-events-none' : ''}`}
+        style={{ 
+          position: 'fixed', 
+          right: 0, 
+          top: '50%', 
+          transform: 'translateY(-50%)',
+          zIndex: 9999 
+        }}
         data-testid="button-toggle-chat-sidebar"
       >
         <div className="flex flex-col items-center gap-2">
