@@ -226,16 +226,25 @@ export default function Ratgeber() {
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wie finde ich gute Malerarbeiten in meiner Nähe?</p>
-                      <p className="text-muted-foreground">Achten Sie auf erfahrene Handwerker mit Referenzen aus Ihrer Region München. Wir arbeiten mit geprüften Partnerbetrieben zusammen.</p>
+                      <p className="text-muted-foreground">Achten Sie auf erfahrene <strong>Handwerker in München</strong> mit Referenzen aus Ihrer Region. Wir arbeiten mit <strong>geprüften Partnerbetrieben</strong> zusammen.</p>
                     </div>
                     <div>
                       <p className="font-medium">Wie oft muss man eine Fassade streichen?</p>
-                      <p className="text-muted-foreground">Alle 10-15 Jahre bei normaler Beanspruchung. Nordseiten und Wetterseiten können früher Auffrischung benötigen.</p>
+                      <p className="text-muted-foreground">Alle <strong>10-15 Jahre</strong> bei normaler Beanspruchung. Nordseiten und Wetterseiten können früher Auffrischung benötigen.</p>
                     </div>
                     <div>
                       <p className="font-medium">Wann ist die beste Zeit für Fassadenarbeiten?</p>
-                      <p className="text-muted-foreground">April bis Oktober bei trockener Witterung und Temperaturen über 5°C. Keine direkte Sonneneinstrahlung beim Trocknen.</p>
+                      <p className="text-muted-foreground"><strong>April bis Oktober</strong> bei trockener Witterung und Temperaturen über 5°C. Keine direkte Sonneneinstrahlung beim Trocknen.</p>
                     </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
+                    <Link href="/gewerke" className="text-primary hover:underline text-sm" data-testid="link-fassade-gewerke">
+                      Maler & Fassadenbauer in München finden
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-fassade-anfrage">
+                      Fassadenarbeiten München anfragen
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -342,12 +351,21 @@ export default function Ratgeber() {
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Wann muss ein Dach saniert werden?</p>
-                      <p className="text-muted-foreground">Bei undichten Stellen, beschädigten Ziegeln, Moos-/Algenbefall oder nach 40-60 Jahren Lebensdauer.</p>
+                      <p className="text-muted-foreground">Bei undichten Stellen, beschädigten Ziegeln, Moos-/Algenbefall oder nach <strong>40-60 Jahren Lebensdauer</strong>.</p>
                     </div>
                     <div>
                       <p className="font-medium">Gibt es Förderung für Dachsanierung?</p>
-                      <p className="text-muted-foreground">Ja! BAFA fördert Dachdämmung mit 15% Zuschuss, bei iSFP sogar 20%. KfW bietet günstige Kredite.</p>
+                      <p className="text-muted-foreground">Ja! <strong>BAFA fördert Dachdämmung</strong> mit 15% Zuschuss, bei iSFP sogar <strong>20%</strong>. KfW bietet günstige Kredite.</p>
                     </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
+                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-dach-preise">
+                      Dachsanierung Kosten München im Detail
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=dachsanierung" className="text-primary hover:underline text-sm" data-testid="link-dach-anfrage">
+                      Dachsanierung München anfragen
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -530,6 +548,20 @@ export default function Ratgeber() {
                   </CardContent>
                 </Card>
               </div>
+
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="pt-6">
+                  <div className="flex flex-wrap gap-3">
+                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-keller-preise">
+                      Kellersanierung Kosten München
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-keller-anfrage">
+                      Kellersanierung in München anfragen
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
             </section>
 
             <section id="daemmung" className="scroll-mt-24">
@@ -630,12 +662,21 @@ export default function Ratgeber() {
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="font-medium">Was bringt eine Dachdämmung?</p>
-                      <p className="text-muted-foreground">Bis zu 30% Heizenergie-Ersparnis. Die Investition amortisiert sich oft in 8-12 Jahren.</p>
+                      <p className="text-muted-foreground">Bis zu <strong>30% Heizenergie-Ersparnis</strong>. Die Investition amortisiert sich oft in <strong>8-12 Jahren</strong>.</p>
                     </div>
                     <div>
                       <p className="font-medium">Welche Dämmung ist die beste?</p>
-                      <p className="text-muted-foreground">Die Aufsparrendämmung bietet die beste Dämmwirkung, ist aber teurer. Zwischensparrendämmung ist ein guter Kompromiss.</p>
+                      <p className="text-muted-foreground">Die <strong>Aufsparrendämmung</strong> bietet die beste Dämmwirkung, ist aber teurer. <strong>Zwischensparrendämmung</strong> ist ein guter Kompromiss.</p>
                     </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
+                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-daemmung-preise">
+                      Dämmung Kosten München im Detail
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=energetische-sanierung" className="text-primary hover:underline text-sm" data-testid="link-daemmung-anfrage">
+                      Energetische Sanierung München anfragen
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -723,6 +764,24 @@ export default function Ratgeber() {
                   </CardContent>
                 </Card>
               </div>
+
+              <Card className="bg-primary/5 border-primary/20 mt-8">
+                <CardContent className="pt-6">
+                  <div className="flex flex-wrap gap-3">
+                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-wohnung-preise">
+                      Wohnungssanierung Kosten München
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-wohnung-anfrage">
+                      Wohnungssanierung in München anfragen
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/gewerke" className="text-primary hover:underline text-sm" data-testid="link-wohnung-gewerke">
+                      Handwerker in München finden
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
             </section>
 
             <section id="energetisch" className="scroll-mt-24">

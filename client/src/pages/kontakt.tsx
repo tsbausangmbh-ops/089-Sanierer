@@ -208,7 +208,7 @@ export default function Kontakt() {
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie KSHW München?</h2>
+                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie <strong>KSHW München</strong>?</h2>
                   <div className="space-y-4">
                     <a href="tel:+4915212274043" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                       <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
@@ -234,7 +234,7 @@ export default function Kontakt() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Adresse</p>
-                        <p className="font-medium">Zielstattstr. 9, 81379 München</p>
+                        <p className="font-medium">Zielstattstr. 9, 81379 <strong>München-Sendling</strong></p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -247,14 +247,17 @@ export default function Kontakt() {
                       </div>
                     </div>
                   </div>
+                  <p className="text-sm text-muted-foreground mt-4">
+                    <strong>Sanierungsbetrieb München</strong> – Wir sind in allen Stadtteilen für Sie da: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Trudering und Umland.
+                  </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">Welche Sanierung brauchen Sie in München?</h2>
+                  <h2 className="text-xl font-bold mb-4">Welche <strong>Sanierung</strong> brauchen Sie in <strong>München</strong>?</h2>
                   <p className="text-muted-foreground mb-4">
-                    Sie wissen schon, was Sie brauchen? In 2 Minuten zum kostenlosen Festpreis-Angebot.
+                    Sie wissen schon, was Sie brauchen? In 2 Minuten zum kostenlosen <strong>Festpreis-Angebot</strong>.
                   </p>
                   <div className="space-y-4">
                     <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
