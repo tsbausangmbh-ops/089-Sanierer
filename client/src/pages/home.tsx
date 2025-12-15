@@ -1,11 +1,17 @@
-import { Link } from "wouter";
+import { useState } from "react";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead, generateFaqSchema } from "@/components/seo-head";
+import { useToast } from "@/hooks/use-toast";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -44,7 +50,10 @@ import {
   Droplets,
   Thermometer,
   Calendar,
-  Wrench
+  Wrench,
+  AlertCircle,
+  Users,
+  ArrowRight
 } from "lucide-react";
 
 const allServices = [
@@ -107,6 +116,260 @@ const stats = [
   { value: "20+", label: "Jahre Erfahrung" },
   { value: "98%", label: "Zufriedene Kunden" },
 ];
+
+const painPoints = [
+  { id: "handwerkersuche", label: "Zuverlässige Handwerker sind schwer zu finden", icon: Users },
+  { id: "kosten", label: "Angst vor Kostenexplosion", icon: Euro },
+  { id: "zeit", label: "Keine Zeit für die Koordination", icon: Clock },
+  { id: "qualitaet", label: "Sorge um Qualität der Arbeit", icon: AlertCircle },
+];
+
+const urgencyOptions = [
+  { id: "sofort", label: "So schnell wie möglich", sublabel: "Innerhalb der nächsten 4 Wochen" },
+  { id: "bald", label: "In den nächsten 1-3 Monaten", sublabel: "Gute Planungszeit" },
+  { id: "planung", label: "Ich plane erst mal", sublabel: "Mehr als 3 Monate" },
+];
+
+const painPointSolutions: Record<string, string> = {
+  handwerkersuche: "Wir haben ein Netzwerk aus 40+ geprüften Fachbetrieben in München. Kein Telefonieren mehr für Sie.",
+  kosten: "Festpreisgarantie: Der Preis, den wir nennen, ist der Preis, den Sie zahlen. Keine versteckten Kosten.",
+  zeit: "Ein Ansprechpartner koordiniert alles. Sie lehnen sich zurück, wir kümmern uns um den Rest.",
+  qualitaet: "5 Jahre Gewährleistung auf alle Arbeiten. 98% unserer Kunden empfehlen uns weiter.",
+};
+
+function MiniLeadFunnel() {
+  const [step, setStep] = useState(1);
+  const [problem, setProblem] = useState("");
+  const [urgency, setUrgency] = useState("");
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [, navigate] = useLocation();
+  const { toast } = useToast();
+
+  const handleSubmit = () => {
+    if (!problem || !urgency || !name || !contact) return;
+    
+    const isEmail = contact.includes("@");
+    const params = new URLSearchParams({
+      problem,
+      urgency,
+      name,
+      ...(isEmail ? { email: contact } : { phone: contact }),
+    });
+    
+    toast({
+      title: "Fast geschafft!",
+      description: "Bitte vervollständigen Sie Ihre Angaben.",
+    });
+    
+    navigate(`/anfrage?${params.toString()}`);
+  };
+
+  const progressPercent = (step / 3) * 100;
+
+  return (
+    <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
+      <div className="max-w-2xl mx-auto px-4 lg:px-8">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+            Starten Sie jetzt Ihre Sanierung
+          </h2>
+          <p className="text-muted-foreground">
+            3 kurze Fragen, dann erhalten Sie Ihre persönliche Beratung
+          </p>
+        </div>
+
+        <Card className="p-6 lg:p-8">
+          <div className="mb-6">
+            <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
+              <span>Schritt {step} von 3</span>
+              <span>{Math.round(progressPercent)}%</span>
+            </div>
+            <Progress value={progressPercent} className="h-2" />
+          </div>
+
+          {step === 1 && (
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-2">
+                  Was bereitet Ihnen aktuell die größten Sorgen?
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Wählen Sie Ihre größte Herausforderung
+                </p>
+              </div>
+              <RadioGroup value={problem} onValueChange={setProblem} className="space-y-3">
+                {painPoints.map((point) => (
+                  <Label
+                    key={point.id}
+                    htmlFor={`pain-${point.id}`}
+                    className={`flex items-center gap-4 p-4 rounded-md border cursor-pointer transition-colors ${
+                      problem === point.id
+                        ? "border-primary bg-primary/5"
+                        : "border-border hover-elevate"
+                    }`}
+                    data-testid={`radio-pain-${point.id}`}
+                  >
+                    <RadioGroupItem value={point.id} id={`pain-${point.id}`} />
+                    <point.icon className="w-5 h-5 text-primary" />
+                    <span className="font-medium">{point.label}</span>
+                  </Label>
+                ))}
+              </RadioGroup>
+              {problem && (
+                <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-md border border-primary/20">
+                  <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-medium text-primary">Unsere Lösung für Sie:</p>
+                    <p className="text-sm text-muted-foreground">{painPointSolutions[problem]}</p>
+                  </div>
+                </div>
+              )}
+              <div className="text-center text-sm text-muted-foreground">
+                <Users className="w-4 h-4 inline mr-1" />
+                Sie sind nicht allein: <strong>268+ Münchner</strong> hatten dieselben Sorgen
+              </div>
+              <Button
+                onClick={() => setStep(2)}
+                disabled={!problem}
+                className="w-full"
+                size="lg"
+                data-testid="button-funnel-step1"
+              >
+                Weiter
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          )}
+
+          {step === 2 && (
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-2">
+                  Wie dringend ist Ihr Projekt?
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Je früher Sie anfragen, desto schneller können wir Ihnen helfen
+                </p>
+              </div>
+              <RadioGroup value={urgency} onValueChange={setUrgency} className="space-y-3">
+                {urgencyOptions.map((option) => (
+                  <Label
+                    key={option.id}
+                    htmlFor={`urgency-${option.id}`}
+                    className={`flex items-center gap-4 p-4 rounded-md border cursor-pointer transition-colors ${
+                      urgency === option.id
+                        ? "border-primary bg-primary/5"
+                        : "border-border hover-elevate"
+                    }`}
+                    data-testid={`radio-urgency-${option.id}`}
+                  >
+                    <RadioGroupItem value={option.id} id={`urgency-${option.id}`} />
+                    <div>
+                      <span className="font-medium block">{option.label}</span>
+                      <span className="text-sm text-muted-foreground">{option.sublabel}</span>
+                    </div>
+                  </Label>
+                ))}
+              </RadioGroup>
+              {urgency === "sofort" && (
+                <div className="flex items-start gap-3 p-4 bg-orange-500/10 rounded-md border border-orange-500/20">
+                  <Clock className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+                  <p className="text-sm">
+                    <strong>Eilig?</strong> Wir haben aktuell Kapazitäten frei und können sofort starten.
+                  </p>
+                </div>
+              )}
+              <div className="flex gap-3">
+                <Button
+                  variant="outline"
+                  onClick={() => setStep(1)}
+                  className="flex-1"
+                  data-testid="button-funnel-back2"
+                >
+                  Zurück
+                </Button>
+                <Button
+                  onClick={() => setStep(3)}
+                  disabled={!urgency}
+                  className="flex-1"
+                  size="lg"
+                  data-testid="button-funnel-step2"
+                >
+                  Weiter
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 3 && (
+            <div className="space-y-6">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-2">
+                  Wie können wir Sie erreichen?
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  In 24 Stunden meldet sich Ihr persönlicher Ansprechpartner
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="funnel-name" className="text-sm font-medium">Ihr Vorname</Label>
+                  <Input
+                    id="funnel-name"
+                    placeholder="z.B. Thomas"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="mt-1"
+                    data-testid="input-funnel-name"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="funnel-contact" className="text-sm font-medium">Telefon oder E-Mail</Label>
+                  <Input
+                    id="funnel-contact"
+                    placeholder="z.B. 0170 1234567 oder name@email.de"
+                    value={contact}
+                    onChange={(e) => setContact(e.target.value)}
+                    className="mt-1"
+                    data-testid="input-funnel-contact"
+                  />
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-md border border-primary/20">
+                <Shield className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <p className="text-sm text-muted-foreground">
+                  Ihre Daten sind bei uns sicher. Kein Spam, kein Weiterverkauf.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <Button
+                  variant="outline"
+                  onClick={() => setStep(2)}
+                  className="flex-1"
+                  data-testid="button-funnel-back3"
+                >
+                  Zurück
+                </Button>
+                <Button
+                  onClick={handleSubmit}
+                  disabled={!name || !contact}
+                  className="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
+                  size="lg"
+                  data-testid="button-funnel-submit"
+                >
+                  Jetzt Beratung sichern
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            </div>
+          )}
+        </Card>
+      </div>
+    </section>
+  );
+}
 
 const faqs = [
   {
@@ -222,6 +485,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MiniLeadFunnel />
 
       <section className="py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
