@@ -11,6 +11,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { 
   Phone, 
   Mail, 
@@ -367,6 +368,7 @@ export default function FaqPreise() {
         description="Keine versteckten Kosten, keine bösen Überraschungen. Transparente Preise aus 268+ Projekten in München."
         compact={true}
       />
+      <Breadcrumb items={[{ label: "FAQ & Preise" }]} />
 
       <main id="main-content" className="flex-1">
         <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">

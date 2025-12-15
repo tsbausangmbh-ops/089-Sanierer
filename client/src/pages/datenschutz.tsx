@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function Datenschutz() {
   return (
@@ -13,6 +14,7 @@ export default function Datenschutz() {
         showCta={false}
         compact={true}
       />
+      <Breadcrumb items={[{ label: "Datenschutz" }]} />
 
       <main className="pb-16 flex-1">
         <div className="max-w-3xl mx-auto px-4 lg:px-8">

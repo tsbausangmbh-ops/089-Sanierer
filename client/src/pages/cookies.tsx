@@ -5,6 +5,7 @@ import { CookieSettingsButton } from "@/components/cookie-consent";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function Cookies() {
   return (
@@ -16,6 +17,7 @@ export default function Cookies() {
         showCta={false}
         compact={true}
       />
+      <Breadcrumb items={[{ label: "Cookie-Richtlinie" }]} />
 
       <main className="pb-16 flex-1">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">

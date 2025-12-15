@@ -5,6 +5,7 @@ import { Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Buildi
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function Ratgeber() {
   return (
@@ -17,6 +18,7 @@ export default function Ratgeber() {
         showCta={true}
         compact={true}
       />
+      <Breadcrumb items={[{ label: "Ratgeber" }]} />
 
       <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">

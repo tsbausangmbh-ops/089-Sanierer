@@ -14,6 +14,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
@@ -84,6 +85,7 @@ export default function Kontakt() {
         showCta={false}
         compact={true}
       />
+      <Breadcrumb items={[{ label: "Kontakt" }]} />
 
       <main id="main-content" className="py-12 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
