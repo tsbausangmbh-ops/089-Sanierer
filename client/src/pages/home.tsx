@@ -168,7 +168,7 @@ function MiniLeadFunnel() {
   const progressPercent = (step / 3) * 100;
 
   return (
-    <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
+    <section className="py-4 lg:py-6 bg-gradient-to-b from-primary/5 to-background">
       <div className="max-w-2xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl lg:text-3xl font-bold mb-3">
@@ -488,7 +488,7 @@ export default function Home() {
 
       <MiniLeadFunnel />
 
-      <section className="py-10 lg:py-14">
+      <section className="py-4 lg:py-6">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -517,7 +517,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14 bg-card">
+      <section className="py-4 lg:py-6 bg-card">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -560,7 +560,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14">
+      <section className="py-4 lg:py-6">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -584,7 +584,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14 bg-card">
+      <section className="py-4 lg:py-6 bg-card">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
@@ -661,7 +661,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14 bg-primary text-primary-foreground">
+      <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -679,7 +679,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14">
+      <section className="py-4 lg:py-6">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -704,7 +704,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 lg:py-14 bg-card">
+      <section className="py-4 lg:py-6 bg-card">
         <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Bereit für Ihre Sanierung in München?
