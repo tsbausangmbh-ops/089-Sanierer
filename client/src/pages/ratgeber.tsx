@@ -131,6 +131,15 @@ export default function Ratgeber() {
                       <p className="text-muted-foreground">Fachgerechte Analyse der Bausubstanz, Schadstoffprüfung und ein realistischer Kostenplan mit Puffer (ca. 20%).</p>
                     </div>
                   </div>
+                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
+                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-haus-preise">
+                      Alle Sanierungskosten München im Überblick
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-haus-anfrage">
+                      Komplettsanierung in München anfragen
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </section>
@@ -436,6 +445,15 @@ export default function Ratgeber() {
                       <p className="font-medium">Gibt es Förderung für barrierefreie Bäder?</p>
                       <p className="text-muted-foreground">Ja! KfW fördert altersgerechte Umbauten mit bis zu 6.250 EUR Zuschuss (Programm 455-B).</p>
                     </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
+                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-bad-preise">
+                      Detaillierte Badsanierung Preise in München
+                    </Link>
+                    <span className="text-muted-foreground">|</span>
+                    <Link href="/anfrage?service=badsanierung" className="text-primary hover:underline text-sm" data-testid="link-bad-anfrage">
+                      Jetzt Badsanierung in München anfragen
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

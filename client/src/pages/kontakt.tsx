@@ -271,6 +271,29 @@ export default function Kontakt() {
                   </div>
                 </CardContent>
               </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <h2 className="text-xl font-bold mb-4">Weiterführende Informationen</h2>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link href="/ratgeber" className="text-primary hover:underline flex items-center gap-2" data-testid="link-kontakt-ratgeber">
+                        Sanierung München Ratgeber – Kosten, Förderung & Tipps
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/faq-preise" className="text-primary hover:underline flex items-center gap-2" data-testid="link-kontakt-faq">
+                        FAQ & Preise – Handwerkerkosten in München
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/gewerke" className="text-primary hover:underline flex items-center gap-2" data-testid="link-kontakt-gewerke">
+                        Handwerker-Vermittlung München – Geprüfte Partnerbetriebe
+                      </Link>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
