@@ -195,7 +195,7 @@ export function SeoFooter() {
 
         <div className="mt-4 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/70">
           <p>
-            &copy; {new Date().getFullYear()} <Link href="/" className="hover:text-white underline">KSHW München</Link> - Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">ExtruCon GmbH</a> - Alle Rechte vorbehalten.
           </p>
           <nav aria-label="Schnelllinks" className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/" className="hover:text-white" data-testid="link-footer-home">Startseite</Link>
