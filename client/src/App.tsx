@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route";
 import { CookieConsent } from "@/components/cookie-consent";
+import { ChatBot } from "@/components/chat-bot";
 import { Loader2 } from "lucide-react";
 
 import Home from "@/pages/home";
@@ -82,6 +83,7 @@ export default function App() {
           <Router />
           <Toaster />
           <CookieConsent />
+          <ChatBot />
         </AuthProvider>
       </TooltipProvider>
     </QueryClientProvider>

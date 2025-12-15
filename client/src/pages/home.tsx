@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
@@ -7,8 +6,6 @@ import { Card } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead, generateFaqSchema } from "@/components/seo-head";
-
-const ChatBot = lazy(() => import("@/components/chat-bot").then(m => ({ default: m.ChatBot })));
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -529,10 +526,6 @@ export default function Home() {
 
       <SeoFooter />
       </main>
-
-      <Suspense fallback={null}>
-        <ChatBot />
-      </Suspense>
     </div>
   );
 }
