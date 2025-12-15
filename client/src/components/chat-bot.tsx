@@ -96,7 +96,7 @@ export function ChatBot() {
     <>
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed right-0 top-1/2 -translate-y-1/2 z-50 rounded-l-lg rounded-r-none px-2 py-8 shadow-lg bg-primary hover:bg-primary/90 transition-all ${isOpen ? 'translate-x-full opacity-0' : ''}`}
+        className={`fixed right-0 top-1/2 -translate-y-1/2 z-[9999] rounded-l-lg rounded-r-none px-2 py-8 shadow-lg bg-primary transition-all ${isOpen ? 'translate-x-full opacity-0' : ''}`}
         data-testid="button-toggle-chat-sidebar"
       >
         <div className="flex flex-col items-center gap-2">
@@ -107,7 +107,7 @@ export function ChatBot() {
       </Button>
 
       <div 
-        className={`fixed right-0 top-0 h-full z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed right-0 top-0 h-full z-[9999] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
         style={{ width: '380px' }}
       >
         <div className="h-full bg-card border-l shadow-2xl flex flex-col">
