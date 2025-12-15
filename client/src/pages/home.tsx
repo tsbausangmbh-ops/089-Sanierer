@@ -169,7 +169,7 @@ function MiniLeadFunnel() {
 
   return (
     <section className="py-4 lg:py-6 bg-gradient-to-b from-primary/5 to-background">
-      <div className="max-w-2xl mx-auto px-4 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl lg:text-3xl font-bold mb-3">
             Starten Sie jetzt Ihre Sanierung
