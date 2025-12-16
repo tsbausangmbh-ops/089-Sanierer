@@ -1,0 +1,102 @@
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.png";
+
+function isNewYearDay(): boolean {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+
+  return month === 1 && day === 1;
+}
+
+export default function NewYearPopup() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    if (!isNewYearDay()) {
+      return;
+    }
+
+    setCurrentYear(new Date().getFullYear());
+
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 300);
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div 
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 transition-all duration-300 ${
+        isClosing ? "opacity-0" : "opacity-100"
+      }`}
+      onClick={handleClose}
+      data-testid="newyear-popup-overlay"
+    >
+      <div 
+        className={`relative max-w-4xl w-full mx-4 rounded-lg overflow-hidden shadow-2xl transition-all duration-300 ${
+          isClosing ? "scale-95" : "scale-100"
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img 
+          src={christmasBackground} 
+          alt="Neujahrsgrüße" 
+          className="w-full h-auto"
+        />
+        
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />
+        
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <p 
+            className="text-7xl md:text-[10rem] font-bold text-white/15 whitespace-nowrap select-none"
+            style={{ transform: "rotate(-15deg)" }}
+          >
+            KSHW München
+          </p>
+        </div>
+        
+        <Button
+          size="icon"
+          variant="ghost"
+          className="absolute top-2 right-2 text-white"
+          onClick={handleClose}
+          data-testid="button-close-newyear"
+        >
+          <X className="w-10 h-10" />
+        </Button>
+        
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
+          <h3 className="text-xl md:text-3xl font-bold mb-4 text-amber-200">
+            Frohes neues Jahr {currentYear}!
+          </h3>
+          <p className="text-base md:text-lg font-medium mb-3">
+            Liebe Kunden und Kundinnen,
+          </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            Wir wünschen Ihnen ein erfolgreiches, gesundes und glückliches Jahr {currentYear}.
+          </p>
+          <p className="text-sm md:text-base text-white/90">
+            Wir freuen uns auf die weitere Zusammenarbeit mit Ihnen!
+          </p>
+          <p className="text-base md:text-lg mt-4 font-semibold text-amber-300">
+            Ihr Team von KSHW München
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
