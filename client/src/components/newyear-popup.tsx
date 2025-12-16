@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.png";
+import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
 
 function isNewYearDay(): boolean {
   const now = new Date();
@@ -53,8 +53,17 @@ export default function NewYearPopup() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
+        <Button
+          size="icon"
+          variant="ghost"
+          className="absolute top-2 right-2 z-10 text-white"
+          onClick={handleClose}
+          data-testid="button-close-newyear"
+        >
+          <X className="w-10 h-10" />
+        </Button>
         <img 
-          src={christmasBackground} 
+          src={fireworksBackground} 
           alt="Neujahrsgrüße" 
           className="w-full h-auto"
         />
@@ -69,16 +78,6 @@ export default function NewYearPopup() {
             KSHW München
           </p>
         </div>
-        
-        <Button
-          size="icon"
-          variant="ghost"
-          className="absolute top-2 right-2 text-white"
-          onClick={handleClose}
-          data-testid="button-close-newyear"
-        >
-          <X className="w-10 h-10" />
-        </Button>
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
           <h3 className="text-xl md:text-3xl font-bold mb-4 text-amber-200">
