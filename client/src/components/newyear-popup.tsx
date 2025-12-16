@@ -8,7 +8,8 @@ function isNewYearDay(): boolean {
   const month = now.getMonth() + 1;
   const day = now.getDate();
 
-  return month === 1 && day === 1;
+  // TODO: Remove true || for production - only for testing
+  return true || (month === 1 && day === 1);
 }
 
 export default function NewYearPopup() {
@@ -87,10 +88,13 @@ export default function NewYearPopup() {
             Liebe Kunden und Kundinnen,
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
-            Wir wünschen Ihnen ein erfolgreiches, gesundes und glückliches Jahr {currentYear}.
+            Danke für Ihr Vertrauen im vergangenen Jahr. Ihre Zufriedenheit ist unser Antrieb.
+          </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            Auch {currentYear} stehen wir Ihnen als zuverlässiger Partner für alle Sanierungsprojekte zur Seite.
           </p>
           <p className="text-sm md:text-base text-white/90">
-            Wir freuen uns auf die weitere Zusammenarbeit mit Ihnen!
+            Wir wünschen Ihnen Gesundheit, Erfolg und ein wundervolles Jahr!
           </p>
           <p className="text-base md:text-lg mt-4 font-semibold text-amber-300">
             Ihr Team von KSHW München
