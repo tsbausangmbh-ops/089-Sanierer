@@ -3,6 +3,8 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
 
+const COOKIE_NAME = "kshw_newyear_popup_shown";
+
 function isNewYearDay(): boolean {
   const now = new Date();
   const month = now.getMonth() + 1;
@@ -10,6 +12,30 @@ function isNewYearDay(): boolean {
 
   // Zeigt am 01.01 (00:01 - 23:59)
   return month === 1 && day === 1;
+}
+
+function getCookie(name: string): string | null {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
+}
+
+function setCookie(name: string, value: string, days: number): void {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+}
+
+function hasSeenPopup(): boolean {
+  const year = new Date().getFullYear();
+  const cookieValue = getCookie(COOKIE_NAME);
+  const localValue = localStorage.getItem(COOKIE_NAME);
+  return cookieValue === String(year) || localValue === String(year);
+}
+
+function markPopupAsSeen(): void {
+  const year = new Date().getFullYear();
+  setCookie(COOKIE_NAME, String(year), 30);
+  localStorage.setItem(COOKIE_NAME, String(year));
 }
 
 export default function NewYearPopup() {
@@ -20,6 +46,10 @@ export default function NewYearPopup() {
 
   useEffect(() => {
     if (!isNewYearDay()) {
+      return;
+    }
+
+    if (hasSeenPopup()) {
       return;
     }
 
@@ -34,6 +64,7 @@ export default function NewYearPopup() {
   }, []);
 
   const handleClose = () => {
+    markPopupAsSeen();
     setIsClosing(true);
     setTimeout(() => {
       setIsVisible(false);
