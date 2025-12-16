@@ -56,16 +56,15 @@ export default function NewYearPopup() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <Button
-          size="icon"
-          variant="ghost"
-          className="absolute z-50 text-white bg-black/30 rounded-full"
-          style={{ top: "12px", right: "12px" }}
+        <button
+          type="button"
+          className="absolute z-50 text-white bg-black/30 rounded-full p-2"
+          style={{ top: "12px", right: "12px", left: "auto" }}
           onClick={handleClose}
           data-testid="button-close-newyear"
         >
           <X className="w-8 h-8" />
-        </Button>
+        </button>
         <img 
           src={fireworksBackground} 
           alt="Neujahrsgrüße" 

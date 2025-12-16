@@ -67,15 +67,15 @@ export default function ChristmasPopup() {
           </p>
         </div>
         
-        <Button
-          size="icon"
-          variant="ghost"
-          className="absolute top-3 right-3 z-50 text-white bg-black/30 rounded-full"
+        <button
+          type="button"
+          className="absolute z-50 text-white bg-black/30 rounded-full p-2"
+          style={{ top: "12px", right: "12px", left: "auto" }}
           onClick={handleClose}
           data-testid="button-close-christmas"
         >
           <X className="w-8 h-8" />
-        </Button>
+        </button>
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
           <h3 className="text-xl md:text-3xl font-bold mb-4 text-amber-200">
