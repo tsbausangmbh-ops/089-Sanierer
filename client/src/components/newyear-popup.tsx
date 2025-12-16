@@ -59,11 +59,11 @@ export default function NewYearPopup() {
         <Button
           size="icon"
           variant="ghost"
-          className="absolute top-2 right-2 z-10 text-white"
+          className="absolute top-3 right-3 z-50 text-white bg-black/30 rounded-full"
           onClick={handleClose}
           data-testid="button-close-newyear"
         >
-          <X className="w-10 h-10" />
+          <X className="w-8 h-8" />
         </Button>
         <img 
           src={fireworksBackground} 
