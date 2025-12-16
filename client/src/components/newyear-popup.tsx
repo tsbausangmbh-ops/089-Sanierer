@@ -59,7 +59,8 @@ export default function NewYearPopup() {
         <Button
           size="icon"
           variant="ghost"
-          className="absolute top-3 right-3 z-50 text-white bg-black/30 rounded-full"
+          className="absolute z-50 text-white bg-black/30 rounded-full"
+          style={{ top: "12px", right: "12px" }}
           onClick={handleClose}
           data-testid="button-close-newyear"
         >
