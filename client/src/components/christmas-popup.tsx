@@ -89,7 +89,7 @@ export default function ChristmasPopup() {
           <p className="text-sm md:text-base text-white/90">
             Wir freuen uns, auch im nächsten Jahr für Sie im Einsatz zu sein.
           </p>
-          <p className="text-sm mt-4 text-amber-300">
+          <p className="text-base md:text-lg mt-4 font-semibold text-amber-300">
             Ihr Team von KSHW München
           </p>
         </div>
