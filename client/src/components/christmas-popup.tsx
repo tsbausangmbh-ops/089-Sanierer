@@ -8,8 +8,8 @@ function isChristmasSeason(): boolean {
   const month = now.getMonth() + 1;
   const day = now.getDate();
 
-  // TODO: Testing New Year popup - temporarily disabled
-  return false && month === 12 && day >= 16 && day <= 26;
+  // Zeigt vom 16.12 bis 26.12 (00:01 - 23:59)
+  return month === 12 && day >= 16 && day <= 26;
 }
 
 export default function ChristmasPopup() {

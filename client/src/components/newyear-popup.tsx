@@ -8,8 +8,8 @@ function isNewYearDay(): boolean {
   const month = now.getMonth() + 1;
   const day = now.getDate();
 
-  // TODO: Remove true || for production - only for testing
-  return true || (month === 1 && day === 1);
+  // Zeigt am 01.01 (00:01 - 23:59)
+  return month === 1 && day === 1;
 }
 
 export default function NewYearPopup() {
