@@ -15,11 +15,17 @@ function isChristmasSeason(): boolean {
 export default function ChristmasPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [nextYear, setNextYear] = useState(new Date().getFullYear() + 1);
 
   useEffect(() => {
     if (!isChristmasSeason()) {
       return;
     }
+
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+    setNextYear(year + 1);
 
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -79,13 +85,13 @@ export default function ChristmasPopup() {
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
           <h3 className="text-xl md:text-3xl font-bold mb-4 text-amber-200">
-            Frohe Weihnachten und ein gesundes und glückliches Jahr 2026
+            Frohe Weihnachten und ein gesundes und glückliches Jahr {nextYear}
           </h3>
           <p className="text-base md:text-lg font-medium mb-3">
             Liebe Kunden und Kundinnen,
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
-            Wir sagen Danke für die gute Zusammenarbeit und das Vertrauen, das Sie uns 2025 entgegengebracht haben.
+            Wir sagen Danke für die gute Zusammenarbeit und das Vertrauen, das Sie uns {currentYear} entgegengebracht haben.
           </p>
           <p className="text-sm md:text-base text-white/90">
             Wir freuen uns, auch im nächsten Jahr für Sie im Einsatz zu sein.
