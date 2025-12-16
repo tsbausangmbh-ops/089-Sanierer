@@ -55,11 +55,11 @@ export default function ChristmasPopup() {
           className="w-full h-auto"
         />
         
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-black/10 to-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-emerald-900/50 to-transparent" />
         
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <p 
-            className="text-6xl md:text-9xl font-bold text-gray-500/15 whitespace-nowrap select-none"
+            className="text-6xl md:text-9xl font-bold text-white/10 whitespace-nowrap select-none"
             style={{ transform: "rotate(15deg)" }}
           >
             KSHW München
@@ -69,27 +69,27 @@ export default function ChristmasPopup() {
         <Button
           size="lg"
           variant="ghost"
-          className="absolute top-4 right-4 text-gray-700 p-3"
+          className="absolute top-4 right-4 text-white p-3"
           onClick={handleClose}
           data-testid="button-close-christmas"
         >
           <X className="w-8 h-8" />
         </Button>
         
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-gray-800">
-          <h3 className="text-xl md:text-3xl font-bold mb-4">
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
+          <h3 className="text-xl md:text-3xl font-bold mb-4 text-amber-200">
             Frohe Weihnachten und ein gesundes und glückliches Jahr 2026
           </h3>
           <p className="text-base md:text-lg font-medium mb-3">
             Liebe Kunden und Kundinnen,
           </p>
-          <p className="text-sm md:text-base mb-2">
+          <p className="text-sm md:text-base mb-2 text-white/90">
             Wir sagen Danke für die gute Zusammenarbeit und das Vertrauen, das Sie uns 2025 entgegengebracht haben.
           </p>
-          <p className="text-sm md:text-base">
+          <p className="text-sm md:text-base text-white/90">
             Wir freuen uns, auch im nächsten Jahr für Sie im Einsatz zu sein.
           </p>
-          <p className="text-sm mt-4 text-gray-600">
+          <p className="text-sm mt-4 text-amber-300">
             Ihr Team von KSHW München
           </p>
         </div>
