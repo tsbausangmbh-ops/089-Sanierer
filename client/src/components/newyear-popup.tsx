@@ -16,13 +16,16 @@ export default function NewYearPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [lastYear, setLastYear] = useState(new Date().getFullYear() - 1);
 
   useEffect(() => {
     if (!isNewYearDay()) {
       return;
     }
 
-    setCurrentYear(new Date().getFullYear());
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+    setLastYear(year - 1);
 
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -87,7 +90,7 @@ export default function NewYearPopup() {
             Liebe Kunden und Kundinnen,
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
-            Danke für Ihr Vertrauen im vergangenen Jahr. Ihre Zufriedenheit ist unser Antrieb.
+            Danke für Ihr Vertrauen in {lastYear}. Ihre Zufriedenheit ist unser Antrieb.
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
             Auch {currentYear} stehen wir Ihnen als zuverlässiger Partner für alle Sanierungsprojekte zur Seite.
