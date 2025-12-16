@@ -67,13 +67,13 @@ export default function ChristmasPopup() {
         </div>
         
         <Button
-          size="lg"
+          size="icon"
           variant="ghost"
-          className="absolute top-4 right-4 text-white p-3"
+          className="absolute top-2 right-2 text-white"
           onClick={handleClose}
           data-testid="button-close-christmas"
         >
-          <X className="w-8 h-8" />
+          <X className="w-10 h-10" />
         </Button>
         
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 text-center text-white">
