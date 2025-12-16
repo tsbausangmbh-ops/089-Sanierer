@@ -59,10 +59,10 @@ export default function ChristmasPopup() {
         
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <p 
-            className="text-6xl md:text-9xl font-bold text-white/10 whitespace-nowrap select-none"
-            style={{ transform: "rotate(15deg)" }}
+            className="text-7xl md:text-[10rem] font-bold text-white/15 whitespace-nowrap select-none"
+            style={{ transform: "rotate(-15deg)" }}
           >
-            KSHW München
+            089Dach GmbH
           </p>
         </div>
         
