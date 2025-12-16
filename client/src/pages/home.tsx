@@ -396,6 +396,30 @@ const faqs = [
     question: "In welchen Stadtteilen von München sind Sie tätig?",
     answer: "Wir sind in ganz München und Umgebung tätig: Pasing, Laim, Sendling, Schwabing, Bogenhausen, Trudering, Neuperlach, Solln, Hadern und alle anderen Stadtteile. Im Umland bedienen wir Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching und weitere Gemeinden.",
   },
+  {
+    question: "Welche Fördermittel gibt es für Sanierungen in München?",
+    answer: "Für energetische Sanierungen in München gibt es attraktive Fördermittel: KfW-Förderung bis zu 45.000€ pro Wohneinheit, BAFA-Zuschüsse für Heizungsaustausch, und das Münchner Förderprogramm Klimaneutrale Gebäude. Wir beraten Sie kostenlos zu allen Fördermöglichkeiten und helfen bei der Antragstellung.",
+  },
+  {
+    question: "Kann ich während der Sanierung in meiner Wohnung wohnen bleiben?",
+    answer: "Das hängt vom Umfang der Sanierung ab. Bei einer Badsanierung können Sie meist wohnen bleiben – wir richten ein Provisorium ein. Bei Komplettsanierungen empfehlen wir oft einen temporären Auszug, um die Arbeiten schneller und effizienter durchzuführen. Wir beraten Sie individuell.",
+  },
+  {
+    question: "Was ist der Unterschied zwischen Renovierung und Sanierung?",
+    answer: "Eine Renovierung umfasst meist optische Verbesserungen wie Streichen, Tapezieren oder neue Böden. Eine Sanierung geht tiefer: Sie beinhaltet die Erneuerung von Installationen (Elektrik, Sanitär, Heizung), Bausubstanzverbesserung und oft energetische Maßnahmen. KSHW München ist Ihr Spezialist für beides.",
+  },
+  {
+    question: "Arbeitet KSHW München auch an Altbauten?",
+    answer: "Ja, Altbausanierung ist eine unserer Kernkompetenzen! München hat viele wunderschöne Altbauten, die besondere Expertise erfordern. Wir kennen die typischen Herausforderungen: Stuck erhalten, Kastenfenster aufarbeiten, alte Elektrik erneuern, Bäder modernisieren – alles mit Respekt für den historischen Charakter.",
+  },
+  {
+    question: "Wie läuft die Erstberatung bei KSHW München ab?",
+    answer: "Die Erstberatung ist kostenlos und unverbindlich. Ein Projektleiter kommt zu Ihnen nach Hause, besichtigt die Räumlichkeiten, bespricht Ihre Wünsche und macht sich ein Bild vom Aufwand. Innerhalb von 48 Stunden erhalten Sie ein detailliertes Festpreis-Angebot – ohne versteckte Kosten.",
+  },
+  {
+    question: "Bietet KSHW München auch Notfall-Reparaturen an?",
+    answer: "Für unsere Bestandskunden bieten wir einen schnellen Reparaturservice bei Notfällen wie Rohrbrüchen, Heizungsausfällen oder Elektroproblemen. Neue Kunden können über unsere Handwerkervermittlung schnell einen zuverlässigen Fachbetrieb finden.",
+  },
 ];
 
 export default function Home() {
@@ -764,6 +788,36 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Sanierung in München: Warum jetzt der richtige Zeitpunkt ist</h3>
+            <p>
+              München wächst stetig und die Immobilienpreise bleiben auf hohem Niveau. Eine professionelle Sanierung steigert den Wert Ihrer Immobilie erheblich – ob für den Eigenbedarf oder als Kapitalanlage. Mit den aktuellen <strong>Förderprogrammen für energetische Sanierung</strong> (KfW, BAFA, Münchner Klimaschutzprogramm) war der Zeitpunkt für eine Sanierung nie günstiger.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Badsanierung München: Ihr Traumbad in 2-3 Wochen</h3>
+            <p>
+              Das Bad ist einer der wichtigsten Räume im Haus. Eine moderne <strong>Badsanierung in München</strong> umfasst: neue Fliesen, Walk-in-Dusche, bodengleiche Dusche, barrierefreie Gestaltung, Wellness-Oase mit Regendusche, hochwertige Sanitärkeramik von Marken wie Villeroy & Boch, Duravit und Geberit. Wir planen und realisieren Ihr neues Bad schlüsselfertig – von der Demontage bis zur Endreinigung.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Küchensanierung München: Die Küche als Herzstück des Hauses</h3>
+            <p>
+              Eine neue Küche verändert Ihr Leben. Unsere <strong>Küchensanierung in München</strong> beinhaltet: professionelle Küchenplanung, Elektroinstallation, Wasseranschlüsse, Fliesenspiegel, Montage Ihrer Traumküche. Wir arbeiten mit allen führenden Küchenherstellern zusammen und koordinieren alle Gewerke, damit Sie stressfrei zu Ihrer neuen Küche kommen.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Energetische Sanierung München: Heizkosten senken, Wert steigern</h3>
+            <p>
+              Mit einer <strong>energetischen Sanierung</strong> sparen Sie langfristig Heizkosten und steigern den Wert Ihrer Immobilie. Unsere Leistungen: Wärmedämmung, neue Fenster, Heizungsaustausch (Wärmepumpe, Gas-Brennwert, Pelletheizung), Photovoltaik-Vorbereitung, Lüftungsanlagen mit Wärmerückgewinnung. Wir beraten Sie zu allen Fördermitteln und übernehmen die Antragstellung.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Altbausanierung München: Charme erhalten, Komfort schaffen</h3>
+            <p>
+              Münchens Altbauten sind architektonische Schätze. Unsere <strong>Altbausanierung</strong> verbindet historischen Charme mit modernem Wohnkomfort: Stuck restaurieren, Kastenfenster aufarbeiten oder erneuern, Parkettböden schleifen, Elektrik erneuern, Bäder modernisieren, Küchen einbauen – alles mit Respekt für die Bausubstanz und den Denkmalschutz.
+            </p>
+            
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unsere Einsatzgebiete in München und Umgebung</h3>
+            <p>
+              Wir sind in ganz München und dem Umland für Sie da: <strong>Pasing, Laim, Sendling, Schwabing, Bogenhausen, Trudering, Riem, Neuperlach, Solln, Hadern, Giesing, Au-Haidhausen, Maxvorstadt, Ludwigsvorstadt, Altstadt-Lehel, Moosach, Milbertshofen, Feldmoching</strong> und allen weiteren Stadtteilen. Im Münchner Umland bedienen wir <strong>Dachau, Karlsfeld, Germering, Olching, Gröbenzell, Puchheim, Fürstenfeldbruck, Freising, Garching, Unterschleißheim, Oberschleißheim, Neubiberg, Ottobrunn, Unterhaching, Taufkirchen, Haar, Grasbrunn, Vaterstetten, Baldham, Starnberg, Gauting, Planegg, Gräfelfing, Unterföhring, Ismaning</strong> und viele weitere Gemeinden.
+            </p>
 
             </div>
 
