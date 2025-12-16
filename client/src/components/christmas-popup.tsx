@@ -45,7 +45,7 @@ export default function ChristmasPopup() {
       data-testid="christmas-popup-overlay"
     >
       <div 
-        className={`relative max-w-4xl w-full mx-4 rounded-lg overflow-hidden shadow-2xl transition-all duration-300 ${
+        className={`relative max-w-4xl w-full mx-4 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 ${
           isClosing ? "scale-95" : "scale-100"
         }`}
         onClick={(e) => e.stopPropagation()}
