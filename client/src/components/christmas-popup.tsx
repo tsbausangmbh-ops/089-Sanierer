@@ -93,8 +93,14 @@ export default function ChristmasPopup() {
           <p className="text-sm md:text-base mb-2 text-white/90">
             Wir sagen Danke für die gute Zusammenarbeit und das Vertrauen, das Sie uns {currentYear} entgegengebracht haben.
           </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            In dieser besinnlichen Zeit wünschen wir Ihnen und Ihrer Familie erholsame Feiertage.
+          </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            Genießen Sie die Zeit mit Ihren Liebsten und tanken Sie neue Energie für das kommende Jahr.
+          </p>
           <p className="text-sm md:text-base text-white/90">
-            Wir freuen uns, auch im nächsten Jahr für Sie im Einsatz zu sein.
+            Wir freuen uns, auch {nextYear} als Ihr zuverlässiger Partner für alle Sanierungsprojekte an Ihrer Seite zu stehen.
           </p>
           <p className="text-base md:text-lg mt-4 font-semibold text-amber-300">
             Ihr Team von KSHW München

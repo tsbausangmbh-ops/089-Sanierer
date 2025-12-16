@@ -90,13 +90,19 @@ export default function NewYearPopup() {
             Liebe Kunden und Kundinnen,
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
-            Danke für Ihr Vertrauen in {lastYear}. Ihre Zufriedenheit ist unser Antrieb.
+            Herzlichen Dank für Ihr Vertrauen und die tolle Zusammenarbeit in {lastYear}!
           </p>
           <p className="text-sm md:text-base mb-2 text-white/90">
-            Auch {currentYear} stehen wir Ihnen als zuverlässiger Partner für alle Sanierungsprojekte zur Seite.
+            Ihre Zufriedenheit ist unser größter Antrieb und motiviert uns jeden Tag aufs Neue.
+          </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            Auch {currentYear} stehen wir Ihnen als zuverlässiger Partner für alle Sanierungsprojekte zur Seite - von der Komplettsanierung bis zur Badsanierung.
+          </p>
+          <p className="text-sm md:text-base mb-2 text-white/90">
+            Wir wünschen Ihnen und Ihrer Familie Gesundheit, Erfolg, Glück und ein wundervolles neues Jahr!
           </p>
           <p className="text-sm md:text-base text-white/90">
-            Wir wünschen Ihnen Gesundheit, Erfolg und ein wundervolles Jahr!
+            Auf eine weiterhin erfolgreiche Partnerschaft!
           </p>
           <p className="text-base md:text-lg mt-4 font-semibold text-amber-300">
             Ihr Team von KSHW München
