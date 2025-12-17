@@ -339,6 +339,22 @@ export async function registerRoutes(
     res.json(leads);
   });
 
+  // Admin endpoint to resend notifications for all leads (must be before :id route)
+  app.post("/api/leads/resend-all", requireAuth, async (req, res) => {
+    try {
+      const leads = await storage.getLeads();
+      let sent = 0;
+      for (const lead of leads) {
+        await sendCompanyLeadNotification(lead);
+        sent++;
+      }
+      res.json({ success: true, message: `${sent} Benachrichtigungen gesendet` });
+    } catch (error) {
+      console.error("Resend all failed:", error);
+      res.status(500).json({ error: "Fehler beim Senden" });
+    }
+  });
+
   app.get("/api/leads/:id", requireAuth, async (req, res) => {
     const lead = await storage.getLead(req.params.id);
     if (!lead) {
