@@ -876,7 +876,7 @@ export default function FunnelPage() {
   };
 
   const renderStep1 = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {serviceOptions.map((service) => {
         const Icon = service.icon;
         const isSelected = formData.service === service.id;
@@ -885,18 +885,24 @@ export default function FunnelPage() {
             key={service.id}
             type="button"
             onClick={() => updateFormData("service", service.id)}
-            className={`p-3 rounded-lg border-2 text-left transition-all hover-elevate ${
+            className={`p-3 rounded-md border text-left transition-all hover-elevate ${
               isSelected ? "border-primary bg-primary/5" : "border-border"
             }`}
             data-testid={`button-service-${service.id}`}
           >
             <div className="flex items-center gap-3">
-              <div className={`p-2 rounded-md ${isSelected ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
-                <Icon className="w-4 h-4" />
+              <div className={`p-2 rounded-md flex-shrink-0 ${
+                isSelected ? "bg-primary/20" : "bg-muted"
+              }`}>
+                <Icon className={`w-5 h-5 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-sm truncate">{service.label}</p>
-                <p className="text-xs text-muted-foreground truncate">{service.painPoint}</p>
+                <p className={`font-semibold text-sm truncate ${isSelected ? "text-primary" : ""}`}>
+                  {service.label}
+                </p>
+                <p className="text-xs text-muted-foreground truncate">
+                  {service.painPoint}
+                </p>
               </div>
               {isSelected && <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />}
             </div>
@@ -906,33 +912,45 @@ export default function FunnelPage() {
     </div>
   );
 
+  const renderOptionCard = (type: { id: string; label: string; desc: string; icon: any }, isSelected: boolean, onClick: () => void, testId: string) => {
+    const Icon = type.icon;
+    return (
+      <button
+        key={type.id}
+        type="button"
+        onClick={onClick}
+        className={`p-3 rounded-md border text-center transition-all hover-elevate ${
+          isSelected ? "border-primary bg-primary/5" : "border-border"
+        }`}
+        data-testid={testId}
+      >
+        <div className={`w-10 h-10 mx-auto mb-2 rounded-md flex items-center justify-center ${
+          isSelected ? "bg-primary/20" : "bg-muted"
+        }`}>
+          <Icon className={`w-5 h-5 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+        </div>
+        <p className={`font-semibold text-sm truncate ${isSelected ? "text-primary" : ""}`}>{type.label}</p>
+        <p className="text-xs text-muted-foreground mt-0.5 truncate">{type.desc}</p>
+        {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
+      </button>
+    );
+  };
+
   const renderStep2 = () => {
     const service = formData.service;
     
     if (service === "badsanierung") {
       return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-2">
-            {bathroomTypes.map((type) => {
-              const Icon = type.icon;
-              const isSelected = formData.propertyType === type.id;
-              return (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
-                    isSelected ? "border-primary bg-primary/5" : "border-border"
-                  }`}
-                  data-testid={`button-property-${type.id}`}
-                >
-                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold text-sm">{type.label}</p>
-                  <p className="text-xs text-muted-foreground">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
-                </button>
-              );
-            })}
+          <div className="grid grid-cols-2 gap-3">
+            {bathroomTypes.map((type) => 
+              renderOptionCard(
+                type, 
+                formData.propertyType === type.id, 
+                () => updateFormData("propertyType", type.id),
+                `button-property-${type.id}`
+              )
+            )}
           </div>
         </div>
       );
@@ -940,53 +958,45 @@ export default function FunnelPage() {
     
     if (service === "kuechensanierung") {
       return (
-        <div className="space-y-4">
-          <p className="text-xs text-muted-foreground">Welche Arbeiten sollen durchgeführt werden?</p>
-          <div className="grid grid-cols-2 gap-2">
-            {kitchenWorkTypes.map((type) => {
-              const Icon = type.icon;
-              const isSelected = formData.propertyType === type.id;
-              return (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
-                    isSelected ? "border-primary bg-primary/5" : "border-border"
-                  }`}
-                  data-testid={`button-property-${type.id}`}
-                >
-                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold text-sm">{type.label}</p>
-                  <p className="text-xs text-muted-foreground">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
-                </button>
-              );
-            })}
+        <div className="space-y-5">
+          <p className="text-sm text-muted-foreground">Welche Arbeiten sollen durchgeführt werden?</p>
+          <div className="grid grid-cols-2 gap-3">
+            {kitchenWorkTypes.map((type) => 
+              renderOptionCard(
+                type, 
+                formData.propertyType === type.id, 
+                () => updateFormData("propertyType", type.id),
+                `button-property-${type.id}`
+              )
+            )}
           </div>
           
-          <div className="mt-4 p-3 bg-muted/50 rounded-lg">
-            <p className="text-sm font-medium mb-2">Wird eine neue Küche (Möbel & Geräte) gewünscht?</p>
-            <div className="flex gap-2">
+          <div className="p-4 bg-gradient-to-br from-muted/50 to-muted/30 rounded-xl border">
+            <p className="text-sm font-semibold mb-3">Wird eine neue Küche (Möbel & Geräte) gewünscht?</p>
+            <div className="flex gap-3">
               <button
                 type="button"
                 onClick={() => updateFormData("kitchenNeeded", "ja")}
-                className={`flex-1 p-2 rounded-md border-2 text-center transition-all hover-elevate ${
-                  formData.kitchenNeeded === "ja" ? "border-primary bg-primary/5" : "border-border"
+                className={`flex-1 p-3 rounded-lg border-2 text-center transition-all font-semibold ${
+                  formData.kitchenNeeded === "ja" 
+                    ? "border-primary bg-primary/10 text-primary" 
+                    : "border-border hover:border-primary/50"
                 }`}
                 data-testid="button-kitchen-yes"
               >
-                <p className="font-semibold text-sm">Ja</p>
+                Ja
               </button>
               <button
                 type="button"
                 onClick={() => updateFormData("kitchenNeeded", "nein")}
-                className={`flex-1 p-2 rounded-md border-2 text-center transition-all hover-elevate ${
-                  formData.kitchenNeeded === "nein" ? "border-primary bg-primary/5" : "border-border"
+                className={`flex-1 p-3 rounded-lg border-2 text-center transition-all font-semibold ${
+                  formData.kitchenNeeded === "nein" 
+                    ? "border-primary bg-primary/10 text-primary" 
+                    : "border-border hover:border-primary/50"
                 }`}
                 data-testid="button-kitchen-no"
               >
-                <p className="font-semibold text-sm">Nein</p>
+                Nein
               </button>
             </div>
           </div>
@@ -997,27 +1007,15 @@ export default function FunnelPage() {
     if (service === "bodensanierung") {
       return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-2">
-            {floorRoomTypes.map((type) => {
-              const Icon = type.icon;
-              const isSelected = formData.propertyType === type.id;
-              return (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
-                    isSelected ? "border-primary bg-primary/5" : "border-border"
-                  }`}
-                  data-testid={`button-property-${type.id}`}
-                >
-                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold text-sm">{type.label}</p>
-                  <p className="text-xs text-muted-foreground">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
-                </button>
-              );
-            })}
+          <div className="grid grid-cols-2 gap-3">
+            {floorRoomTypes.map((type) => 
+              renderOptionCard(
+                type, 
+                formData.propertyType === type.id, 
+                () => updateFormData("propertyType", type.id),
+                `button-property-${type.id}`
+              )
+            )}
           </div>
         </div>
       );
@@ -1026,58 +1024,34 @@ export default function FunnelPage() {
     if (service === "dachsanierung") {
       return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-2">
-            {roofPropertyTypes.map((type) => {
-              const Icon = type.icon;
-              const isSelected = formData.propertyType === type.id;
-              return (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
-                    isSelected ? "border-primary bg-primary/5" : "border-border"
-                  }`}
-                  data-testid={`button-property-${type.id}`}
-                >
-                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold text-sm">{type.label}</p>
-                  <p className="text-xs text-muted-foreground">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
-                </button>
-              );
-            })}
+          <div className="grid grid-cols-2 gap-3">
+            {roofPropertyTypes.map((type) => 
+              renderOptionCard(
+                type, 
+                formData.propertyType === type.id, 
+                () => updateFormData("propertyType", type.id),
+                `button-property-${type.id}`
+              )
+            )}
           </div>
         </div>
       );
     }
     
     return (
-      <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-2">
-          {propertyTypes.map((type) => {
-            const Icon = type.icon;
-            const isSelected = formData.propertyType === type.id;
-            return (
-              <button
-                key={type.id}
-                type="button"
-                onClick={() => updateFormData("propertyType", type.id)}
-                className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
-                  isSelected ? "border-primary bg-primary/5" : "border-border"
-                }`}
-                data-testid={`button-property-${type.id}`}
-              >
-                <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                <p className="font-semibold text-sm">{type.label}</p>
-                <p className="text-xs text-muted-foreground">{type.desc}</p>
-                {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
-              </button>
-            );
-          })}
+      <div className="space-y-5">
+        <div className="grid grid-cols-2 gap-3">
+          {propertyTypes.map((type) => 
+            renderOptionCard(
+              type, 
+              formData.propertyType === type.id, 
+              () => updateFormData("propertyType", type.id),
+              `button-property-${type.id}`
+            )
+          )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3 border-t">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
           <div>
             <Label className="text-sm font-medium">Baujahr des Gebäudes</Label>
             <Select
@@ -2411,57 +2385,57 @@ export default function FunnelPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
 
-      <main id="main-content" className="container mx-auto px-4 py-6 max-w-3xl pt-20 flex-1">
-        <div className="mb-4">
-          <div className="flex justify-between items-center mb-1">
-            <span className="text-xs text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>
-            <span className="text-xs font-medium">{Math.round(progress)}%</span>
+      <main id="main-content" className="container mx-auto px-4 py-6 max-w-4xl pt-20 flex-1">
+        <div className="mb-6">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-sm text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>
+            <span className="text-sm font-medium">{Math.round(progress)}%</span>
           </div>
-          <Progress value={progress} className="h-1.5" />
+          <Progress value={progress} className="h-2" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-          <div className="lg:col-span-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
             <Card>
-              <CardHeader className="pb-3">
+              <CardHeader className="pb-4">
                 <CardTitle className="text-lg">{getStepTitle()}</CardTitle>
                 <p className="text-sm text-muted-foreground">{getStepSubtitle()}</p>
               </CardHeader>
-              <CardContent className="pt-0">
+              <CardContent>
                 {renderCurrentStep()}
 
-                <div className="flex justify-between gap-3 mt-5 pt-4 border-t">
+                <div className="flex justify-between gap-4 mt-6 pt-4 border-t">
                   {currentStep === 1 ? (
                     <Link href="/">
-                      <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-back-home">
-                        <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
-                        Zurück
+                      <Button variant="outline" data-testid="button-back-home">
+                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        Startseite
                       </Button>
                     </Link>
                   ) : (
-                    <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white border-green-500" onClick={handleBack} data-testid="button-back">
-                      <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
+                    <Button variant="outline" onClick={handleBack} data-testid="button-back">
+                      <ArrowLeft className="w-4 h-4 mr-2" />
                       Zurück
                     </Button>
                   )}
                   
                   <div className="ml-auto">
                     {currentStep < totalSteps ? (
-                      <Button size="sm" onClick={handleNext} disabled={!canProceed()} data-testid="button-next">
+                      <Button onClick={handleNext} disabled={!canProceed()} data-testid="button-next">
                         Weiter
-                        <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                        <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     ) : (
-                      <Button size="sm" onClick={handleSubmit} disabled={!canProceed() || createLeadMutation.isPending} data-testid="button-submit">
+                      <Button onClick={handleSubmit} disabled={!canProceed() || createLeadMutation.isPending} data-testid="button-submit">
                         {createLeadMutation.isPending ? (
                           <>
-                            <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
-                            Senden...
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Wird gesendet...
                           </>
                         ) : (
                           <>
-                            <CheckCircle className="w-3.5 h-3.5 mr-1.5" />
-                            Angebot anfordern
+                            <CheckCircle className="w-4 h-4 mr-2" />
+                            Kostenlos anfragen
                           </>
                         )}
                       </Button>
@@ -2472,56 +2446,73 @@ export default function FunnelPage() {
             </Card>
           </div>
 
-          <div className="lg:col-span-2 space-y-3 hidden lg:block">
+          <div className="space-y-4 hidden lg:block">
             <Card className="p-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-primary flex-shrink-0" />
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-4 h-4 text-primary" />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium">100% Unverbindlich</p>
+                    <p className="font-semibold text-sm">100% Kostenlos</p>
+                    <p className="text-xs text-muted-foreground">Unverbindliche Beratung</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-4 h-4 text-primary" />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium">Angebot in 48h</p>
+                    <p className="font-semibold text-sm">Schnelle Antwort</p>
+                    <p className="text-xs text-muted-foreground">Innerhalb 48 Stunden</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4 text-primary flex-shrink-0" />
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Award className="w-4 h-4 text-primary" />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium">20+ Jahre Erfahrung</p>
+                    <p className="font-semibold text-sm">Meisterqualität</p>
+                    <p className="text-xs text-muted-foreground">20+ Jahre Erfahrung</p>
                   </div>
                 </div>
               </div>
             </Card>
 
             <Card className="p-4">
-              <h3 className="text-sm font-semibold mb-2">Das bekommen Sie</h3>
-              <ul className="space-y-1.5 text-xs">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
-                  <span>Festpreis ohne Überraschungen</span>
+              <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
+                <Star className="w-4 h-4 text-amber-500" />
+                Das bekommen Sie
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Festpreis ohne versteckte Kosten</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
-                  <span>Ein Ansprechpartner</span>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Ein fester Ansprechpartner</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
-                  <span>Termintreue Umsetzung</span>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">5 Jahre Gewährleistung</span>
                 </li>
               </ul>
             </Card>
 
             <Card className="p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <Phone className="w-4 h-4 text-primary" />
-                <h3 className="text-sm font-semibold">Lieber anrufen?</h3>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Lieber telefonieren?</p>
+                  <a href="tel:+4915212274043" className="font-bold text-primary" data-testid="link-phone">
+                    0152 122 740 43
+                  </a>
+                </div>
               </div>
-              <a href="tel:+4915212274043" className="text-sm font-bold text-primary" data-testid="link-phone">
-                0152 122 740 43
-              </a>
+              <p className="text-xs text-muted-foreground mt-2">Mo-Fr 8:00-17:00, Sa 10:00-14:00</p>
             </Card>
           </div>
         </div>
