@@ -26,6 +26,7 @@ const Ratgeber = lazy(() => import("@/pages/ratgeber"));
 const GewerkeFunnel = lazy(() => import("@/pages/gewerke-funnel"));
 const FaqPreise = lazy(() => import("@/pages/faq-preise"));
 const Cookies = lazy(() => import("@/pages/cookies"));
+const Termin = lazy(() => import("@/pages/termin"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 declare global {
@@ -70,6 +71,7 @@ function Router() {
         <Route path="/gewerke" component={GewerkeFunnel} />
         <Route path="/faq-preise" component={FaqPreise} />
         <Route path="/cookies" component={Cookies} />
+        <Route path="/termin" component={Termin} />
         <Route path="/danke" component={Confirmation} />
         <Route component={NotFound} />
       </Switch>

@@ -939,12 +939,12 @@ export default function Ratgeber() {
                   Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+                  <Link href="/termin">
                     <Button size="lg" className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-ratgeber-booking">
                       <Calendar className="w-5 h-5" />
                       24 Std. Online Termin
                     </Button>
-                  </a>
+                  </Link>
                   <Link href="/anfrage">
                     <Button size="lg" variant="secondary" className="gap-2" data-testid="button-ratgeber-cta">
                       Jetzt kostenlos anfragen

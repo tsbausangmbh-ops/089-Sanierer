@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -11,11 +12,15 @@ import {
   Star,
   Shield,
   Award,
-  Users
+  Users,
+  CalendarDays
 } from "lucide-react";
 import { SeoHead } from "@/components/seo-head";
+import { AppointmentBooking } from "@/components/appointment-booking";
 
 export default function Confirmation() {
+  const [showBooking, setShowBooking] = useState(false);
+  
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
@@ -99,6 +104,32 @@ export default function Confirmation() {
                 </div>
               </li>
             </ol>
+          </Card>
+
+          <Card className="p-5 border-amber-200 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800 mb-6">
+            <div className="flex items-start gap-3">
+              <CalendarDays className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="flex-1">
+                <h3 className="font-bold text-lg mb-1">Beratungstermin direkt buchen</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Möchten Sie nicht warten? Buchen Sie jetzt einen kostenlosen Beratungstermin.
+                </p>
+                {!showBooking ? (
+                  <Button 
+                    onClick={() => setShowBooking(true)}
+                    className="bg-amber-500 hover:bg-amber-600 text-black"
+                    data-testid="button-show-booking"
+                  >
+                    <CalendarDays className="w-4 h-4 mr-2" />
+                    Jetzt Termin buchen
+                  </Button>
+                ) : (
+                  <div className="mt-4">
+                    <AppointmentBooking />
+                  </div>
+                )}
+              </div>
+            </div>
           </Card>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">

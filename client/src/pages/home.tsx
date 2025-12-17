@@ -568,12 +568,12 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+            <Link href="/termin">
               <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-process-booking">
                 <Calendar className="w-5 h-5 mr-2" />
                 24 Std. Online Termin
               </Button>
-            </a>
+            </Link>
             <Link href="/anfrage">
               <Button size="lg" className="text-lg" data-testid="button-process-cta">
                 Zum Anfrageformular
@@ -737,12 +737,12 @@ export default function Home() {
             <strong>Kostenlose Erstberatung</strong>, unverbindliches Festpreis-Angebot, <strong>Antwort in 24 Stunden</strong>. Wir sind vor Ort in München, Pasing, Schwabing, Sendling, Dachau, Starnberg und Umgebung.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+            <Link href="/termin">
               <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
                 <Calendar className="w-5 h-5 mr-2" />
                 24 Std. Online Termin
               </Button>
-            </a>
+            </Link>
             <Link href="/anfrage">
               <Button size="lg" className="text-lg px-8" data-testid="button-cta-section">
                 Kostenlose Anfrage starten
@@ -823,12 +823,12 @@ export default function Home() {
 
           <div className="text-center mt-8">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+              <Link href="/termin">
                 <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-content-booking">
                   <Calendar className="w-5 h-5 mr-2" />
                   24 Std. Online Termin
                 </Button>
-              </a>
+              </Link>
               <Link href="/anfrage">
                 <Button size="lg" className="text-lg" data-testid="button-content-cta">
                   Kostenlose Anfrage starten

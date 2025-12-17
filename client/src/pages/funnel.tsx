@@ -2260,12 +2260,12 @@ export default function FunnelPage() {
             Kurze Fragen beantworten – Angebot in 48 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=37431138" target="_blank" rel="noopener noreferrer">
+            <Link href="/termin">
               <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-seo-booking">
                 <Calendar className="w-5 h-5 mr-2" />
                 24 Std. Online Termin
               </Button>
-            </a>
+            </Link>
             <Button size="lg" onClick={handleStartFromSeoIntro} className="text-lg" data-testid="button-start-funnel">
               {content.ctaText}
               <ArrowRight className="w-5 h-5 ml-2" />
