@@ -876,7 +876,7 @@ export default function FunnelPage() {
   };
 
   const renderStep1 = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
       {serviceOptions.map((service) => {
         const Icon = service.icon;
         const isSelected = formData.service === service.id;
@@ -885,21 +885,20 @@ export default function FunnelPage() {
             key={service.id}
             type="button"
             onClick={() => updateFormData("service", service.id)}
-            className={`p-5 rounded-lg border-2 text-left transition-all hover-elevate ${
+            className={`p-3 rounded-lg border-2 text-left transition-all hover-elevate ${
               isSelected ? "border-primary bg-primary/5" : "border-border"
             }`}
             data-testid={`button-service-${service.id}`}
           >
-            <div className="flex items-start gap-4">
-              <div className={`p-3 rounded-lg ${isSelected ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
-                <Icon className="w-6 h-6" />
+            <div className="flex items-center gap-3">
+              <div className={`p-2 rounded-md ${isSelected ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
+                <Icon className="w-4 h-4" />
               </div>
-              <div className="flex-1">
-                <p className="font-bold text-primary mb-1">{service.problem}</p>
-                <p className="font-semibold">{service.label}</p>
-                <p className="text-sm text-muted-foreground mt-1">{service.painPoint}</p>
+              <div className="flex-1 min-w-0">
+                <p className="font-semibold text-sm truncate">{service.label}</p>
+                <p className="text-xs text-muted-foreground truncate">{service.painPoint}</p>
               </div>
-              {isSelected && <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />}
+              {isSelected && <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />}
             </div>
           </button>
         );
@@ -912,8 +911,8 @@ export default function FunnelPage() {
     
     if (service === "badsanierung") {
       return (
-        <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-2">
             {bathroomTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
@@ -922,15 +921,15 @@ export default function FunnelPage() {
                   key={type.id}
                   type="button"
                   onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
                     isSelected ? "border-primary bg-primary/5" : "border-border"
                   }`}
                   data-testid={`button-property-${type.id}`}
                 >
-                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold">{type.label}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold text-sm">{type.label}</p>
+                  <p className="text-xs text-muted-foreground">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
                 </button>
               );
             })}
@@ -941,9 +940,9 @@ export default function FunnelPage() {
     
     if (service === "kuechensanierung") {
       return (
-        <div className="space-y-6">
-          <p className="text-sm text-muted-foreground mb-2">Welche Arbeiten sollen durchgeführt werden?</p>
-          <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <p className="text-xs text-muted-foreground">Welche Arbeiten sollen durchgeführt werden?</p>
+          <div className="grid grid-cols-2 gap-2">
             {kitchenWorkTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
@@ -952,44 +951,42 @@ export default function FunnelPage() {
                   key={type.id}
                   type="button"
                   onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
                     isSelected ? "border-primary bg-primary/5" : "border-border"
                   }`}
                   data-testid={`button-property-${type.id}`}
                 >
-                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold">{type.label}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold text-sm">{type.label}</p>
+                  <p className="text-xs text-muted-foreground">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
                 </button>
               );
             })}
           </div>
           
-          <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-            <p className="font-medium mb-3">Wird eine neue Küche (Möbel & Geräte) gewünscht?</p>
-            <div className="flex gap-4">
+          <div className="mt-4 p-3 bg-muted/50 rounded-lg">
+            <p className="text-sm font-medium mb-2">Wird eine neue Küche (Möbel & Geräte) gewünscht?</p>
+            <div className="flex gap-2">
               <button
                 type="button"
                 onClick={() => updateFormData("kitchenNeeded", "ja")}
-                className={`flex-1 p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
+                className={`flex-1 p-2 rounded-md border-2 text-center transition-all hover-elevate ${
                   formData.kitchenNeeded === "ja" ? "border-primary bg-primary/5" : "border-border"
                 }`}
                 data-testid="button-kitchen-yes"
               >
-                <p className="font-semibold">Ja, neue Küche</p>
-                <p className="text-xs text-muted-foreground">Inkl. Planung & Einbau</p>
+                <p className="font-semibold text-sm">Ja</p>
               </button>
               <button
                 type="button"
                 onClick={() => updateFormData("kitchenNeeded", "nein")}
-                className={`flex-1 p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
+                className={`flex-1 p-2 rounded-md border-2 text-center transition-all hover-elevate ${
                   formData.kitchenNeeded === "nein" ? "border-primary bg-primary/5" : "border-border"
                 }`}
                 data-testid="button-kitchen-no"
               >
-                <p className="font-semibold">Nein, nur Sanierung</p>
-                <p className="text-xs text-muted-foreground">Bestehende Küche bleibt</p>
+                <p className="font-semibold text-sm">Nein</p>
               </button>
             </div>
           </div>
@@ -999,8 +996,8 @@ export default function FunnelPage() {
     
     if (service === "bodensanierung") {
       return (
-        <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-2">
             {floorRoomTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
@@ -1009,15 +1006,15 @@ export default function FunnelPage() {
                   key={type.id}
                   type="button"
                   onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
                     isSelected ? "border-primary bg-primary/5" : "border-border"
                   }`}
                   data-testid={`button-property-${type.id}`}
                 >
-                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold">{type.label}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold text-sm">{type.label}</p>
+                  <p className="text-xs text-muted-foreground">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
                 </button>
               );
             })}
@@ -1028,8 +1025,8 @@ export default function FunnelPage() {
     
     if (service === "dachsanierung") {
       return (
-        <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-2">
             {roofPropertyTypes.map((type) => {
               const Icon = type.icon;
               const isSelected = formData.propertyType === type.id;
@@ -1038,15 +1035,15 @@ export default function FunnelPage() {
                   key={type.id}
                   type="button"
                   onClick={() => updateFormData("propertyType", type.id)}
-                  className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                  className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
                     isSelected ? "border-primary bg-primary/5" : "border-border"
                   }`}
                   data-testid={`button-property-${type.id}`}
                 >
-                  <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                  <p className="font-semibold">{type.label}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
-                  {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                  <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  <p className="font-semibold text-sm">{type.label}</p>
+                  <p className="text-xs text-muted-foreground">{type.desc}</p>
+                  {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
                 </button>
               );
             })}
@@ -1056,8 +1053,8 @@ export default function FunnelPage() {
     }
     
     return (
-      <div className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-4">
+        <div className="grid grid-cols-2 gap-2">
           {propertyTypes.map((type) => {
             const Icon = type.icon;
             const isSelected = formData.propertyType === type.id;
@@ -1066,23 +1063,23 @@ export default function FunnelPage() {
                 key={type.id}
                 type="button"
                 onClick={() => updateFormData("propertyType", type.id)}
-                className={`p-5 rounded-lg border-2 text-center transition-all hover-elevate ${
+                className={`p-3 rounded-lg border-2 text-center transition-all hover-elevate ${
                   isSelected ? "border-primary bg-primary/5" : "border-border"
                 }`}
                 data-testid={`button-property-${type.id}`}
               >
-                <Icon className={`w-10 h-10 mx-auto mb-3 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-                <p className="font-semibold">{type.label}</p>
-                <p className="text-xs text-muted-foreground mt-1">{type.desc}</p>
-                {isSelected && <CheckCircle className="w-5 h-5 text-primary mx-auto mt-3" />}
+                <Icon className={`w-6 h-6 mx-auto mb-2 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                <p className="font-semibold text-sm">{type.label}</p>
+                <p className="text-xs text-muted-foreground">{type.desc}</p>
+                {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
               </button>
             );
           })}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3 border-t">
           <div>
-            <Label className="text-base font-medium">Baujahr des Gebäudes</Label>
+            <Label className="text-sm font-medium">Baujahr des Gebäudes</Label>
             <Select
               value={formData.serviceDetails.buildYear || ""}
               onValueChange={(value) => updateServiceDetails("buildYear", value)}
@@ -1102,7 +1099,7 @@ export default function FunnelPage() {
           </div>
 
           <div>
-            <Label className="text-base font-medium">Sie sind...</Label>
+            <Label className="text-sm font-medium">Sie sind...</Label>
             <Select
               value={formData.serviceDetails.ownership || ""}
               onValueChange={(value) => updateServiceDetails("ownership", value)}
@@ -1151,7 +1148,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Anzahl Sanitärobjekte</Label>
+                <Label className="text-sm font-medium">Anzahl Sanitärobjekte</Label>
                 <Select
                   value={formData.serviceDetails.sanitaryCount || ""}
                   onValueChange={(value) => updateServiceDetails("sanitaryCount", value)}
@@ -1169,7 +1166,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Was wünschen Sie sich?</Label>
+              <Label className="text-sm font-medium">Was wünschen Sie sich?</Label>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-3">
                 {[
                   { id: "dusche", label: "Ebenerdige Dusche", icon: Droplets },
@@ -1229,7 +1226,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Küchenform</Label>
+                <Label className="text-sm font-medium">Küchenform</Label>
                 <Select
                   value={formData.serviceDetails.currentFloor || ""}
                   onValueChange={(value) => updateServiceDetails("currentFloor", value)}
@@ -1249,7 +1246,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Arbeitsplatte</Label>
+              <Label className="text-sm font-medium">Arbeitsplatte</Label>
               <Select
                 value={formData.serviceDetails.countertopMaterial || ""}
                 onValueChange={(value) => updateServiceDetails("countertopMaterial", value)}
@@ -1269,7 +1266,7 @@ export default function FunnelPage() {
             </div>
 
             <div className="space-y-3">
-              <Label className="text-base font-medium">Zusätzliche Wünsche</Label>
+              <Label className="text-sm font-medium">Zusätzliche Wünsche</Label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="flex items-center space-x-3 p-3 border rounded-lg">
                   <Checkbox
@@ -1316,7 +1313,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Anzahl Zimmer</Label>
+                <Label className="text-sm font-medium">Anzahl Zimmer</Label>
                 <Select
                   value={formData.serviceDetails.roomCount || ""}
                   onValueChange={(value) => updateServiceDetails("roomCount", value)}
@@ -1335,7 +1332,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Was soll alles saniert werden?</Label>
+              <Label className="text-sm font-medium">Was soll alles saniert werden?</Label>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 {[
                   { id: "includesBathroom", label: "Bad/Bäder", icon: Bath },
@@ -1367,7 +1364,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Wird das Objekt bewohnt?</Label>
+              <Label className="text-sm font-medium">Wird das Objekt bewohnt?</Label>
               <Select
                 value={formData.serviceDetails.occupancy || ""}
                 onValueChange={(value) => updateServiceDetails("occupancy", value)}
@@ -1409,7 +1406,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Anzahl Räume</Label>
+                <Label className="text-sm font-medium">Anzahl Räume</Label>
                 <Select
                   value={formData.serviceDetails.roomCount || ""}
                   onValueChange={(value) => updateServiceDetails("roomCount", value)}
@@ -1428,7 +1425,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Aktueller Bodenbelag</Label>
+              <Label className="text-sm font-medium">Aktueller Bodenbelag</Label>
               <Select
                 value={formData.serviceDetails.currentFloor || ""}
                 onValueChange={(value) => updateServiceDetails("currentFloor", value)}
@@ -1449,7 +1446,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Gewünschter neuer Boden</Label>
+              <Label className="text-sm font-medium">Gewünschter neuer Boden</Label>
               <Select
                 value={formData.serviceDetails.floorType || ""}
                 onValueChange={(value) => updateServiceDetails("floorType", value)}
@@ -1505,7 +1502,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Anzahl Räume</Label>
+                <Label className="text-sm font-medium">Anzahl Räume</Label>
                 <Select
                   value={formData.serviceDetails.roomCount || ""}
                   onValueChange={(value) => updateServiceDetails("roomCount", value)}
@@ -1524,7 +1521,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Alter der Elektroinstallation</Label>
+              <Label className="text-sm font-medium">Alter der Elektroinstallation</Label>
               <Select
                 value={formData.serviceDetails.electricYear || ""}
                 onValueChange={(value) => updateServiceDetails("electricYear", value)}
@@ -1543,7 +1540,7 @@ export default function FunnelPage() {
             </div>
 
             <div className="space-y-3">
-              <Label className="text-base font-medium">Was wird benötigt?</Label>
+              <Label className="text-sm font-medium">Was wird benötigt?</Label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="flex items-center space-x-3 p-3 border rounded-lg">
                   <Checkbox
@@ -1590,7 +1587,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Aktuelle Heizung</Label>
+                <Label className="text-sm font-medium">Aktuelle Heizung</Label>
                 <Select
                   value={formData.serviceDetails.currentHeating || ""}
                   onValueChange={(value) => updateServiceDetails("currentHeating", value)}
@@ -1611,7 +1608,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Gewünschtes neues System</Label>
+              <Label className="text-sm font-medium">Gewünschtes neues System</Label>
               <Select
                 value={formData.serviceDetails.desiredHeating || ""}
                 onValueChange={(value) => updateServiceDetails("desiredHeating", value)}
@@ -1666,7 +1663,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Was soll gedämmt werden?</Label>
+              <Label className="text-sm font-medium">Was soll gedämmt werden?</Label>
               <p className="text-sm text-muted-foreground mb-3">Mehrfachauswahl möglich</p>
               <div className="grid grid-cols-2 gap-3">
                 {[
@@ -1738,7 +1735,7 @@ export default function FunnelPage() {
               </div>
 
               <div>
-                <Label className="text-base font-medium">Dachform</Label>
+                <Label className="text-sm font-medium">Dachform</Label>
                 <Select
                   value={formData.serviceDetails.roofType || ""}
                   onValueChange={(value) => updateServiceDetails("roofType", value)}
@@ -1758,7 +1755,7 @@ export default function FunnelPage() {
             </div>
 
             <div>
-              <Label className="text-base font-medium">Dachgeschoss-Nutzung</Label>
+              <Label className="text-sm font-medium">Dachgeschoss-Nutzung</Label>
               <Select
                 value={formData.serviceDetails.atticUse || ""}
                 onValueChange={(value) => updateServiceDetails("atticUse", value)}
@@ -1793,7 +1790,7 @@ export default function FunnelPage() {
         return (
           <div className="space-y-6">
             <div>
-              <Label className="text-base font-medium">Projektgröße</Label>
+              <Label className="text-sm font-medium">Projektgröße</Label>
               <div className="flex items-center gap-2 mt-2">
                 <Input
                   type="number"
@@ -1888,7 +1885,7 @@ export default function FunnelPage() {
         </RadioGroup>
 
         <div className="pt-4 border-t">
-          <Label htmlFor="specialRequirements" className="text-base font-medium">Gibt es Besonderheiten?</Label>
+          <Label htmlFor="specialRequirements" className="text-sm font-medium">Gibt es Besonderheiten?</Label>
           <p className="text-sm text-muted-foreground mb-2">Asbest, Schimmel, Denkmalschutz, besondere Wünsche...</p>
           <Textarea
             id="specialRequirements"
@@ -2016,7 +2013,7 @@ export default function FunnelPage() {
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <Label htmlFor="postalCode" className="text-base font-medium">Postleitzahl *</Label>
+          <Label htmlFor="postalCode" className="text-sm font-medium">Postleitzahl *</Label>
           <Input
             id="postalCode"
             type="text"
@@ -2029,7 +2026,7 @@ export default function FunnelPage() {
         </div>
 
         <div>
-          <Label htmlFor="city" className="text-base font-medium">Ort *</Label>
+          <Label htmlFor="city" className="text-sm font-medium">Ort *</Label>
           <Input
             id="city"
             type="text"
@@ -2043,7 +2040,7 @@ export default function FunnelPage() {
       </div>
 
       <div>
-        <Label htmlFor="address" className="text-base font-medium">Straße und Hausnummer</Label>
+        <Label htmlFor="address" className="text-sm font-medium">Straße und Hausnummer</Label>
         <Input
           id="address"
           type="text"
@@ -2074,7 +2071,7 @@ export default function FunnelPage() {
       </div>
 
       <div>
-        <Label htmlFor="name" className="text-base font-medium">Ihr Name *</Label>
+        <Label htmlFor="name" className="text-sm font-medium">Ihr Name *</Label>
         <Input
           id="name"
           type="text"
@@ -2088,7 +2085,7 @@ export default function FunnelPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <Label htmlFor="phone" className="text-base font-medium">Telefon *</Label>
+          <Label htmlFor="phone" className="text-sm font-medium">Telefon *</Label>
           <Input
             id="phone"
             type="tel"
@@ -2101,7 +2098,7 @@ export default function FunnelPage() {
         </div>
 
         <div>
-          <Label htmlFor="email" className="text-base font-medium">E-Mail *</Label>
+          <Label htmlFor="email" className="text-sm font-medium">E-Mail *</Label>
           <Input
             id="email"
             type="email"
@@ -2414,56 +2411,56 @@ export default function FunnelPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
 
-      <main id="main-content" className="container mx-auto px-4 py-8 max-w-4xl pt-24 flex-1">
-        <div className="mb-8">
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>
-            <span className="text-sm font-medium">{Math.round(progress)}%</span>
+      <main id="main-content" className="container mx-auto px-4 py-6 max-w-3xl pt-20 flex-1">
+        <div className="mb-4">
+          <div className="flex justify-between items-center mb-1">
+            <span className="text-xs text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>
+            <span className="text-xs font-medium">{Math.round(progress)}%</span>
           </div>
-          <Progress value={progress} className="h-2" />
+          <Progress value={progress} className="h-1.5" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+          <div className="lg:col-span-3">
             <Card>
-              <CardHeader>
-                <CardTitle className="text-xl md:text-2xl">{getStepTitle()}</CardTitle>
-                <p className="text-muted-foreground">{getStepSubtitle()}</p>
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg">{getStepTitle()}</CardTitle>
+                <p className="text-sm text-muted-foreground">{getStepSubtitle()}</p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pt-0">
                 {renderCurrentStep()}
 
-                <div className="flex justify-between gap-4 mt-8 pt-6 border-t">
+                <div className="flex justify-between gap-3 mt-5 pt-4 border-t">
                   {currentStep === 1 ? (
                     <Link href="/">
-                      <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-back-home">
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        Zurück zur Startseite
+                      <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-back-home">
+                        <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
+                        Zurück
                       </Button>
                     </Link>
                   ) : (
-                    <Button className="bg-green-500 hover:bg-green-600 text-white border-green-500" onClick={handleBack} data-testid="button-back">
-                      <ArrowLeft className="w-4 h-4 mr-2" />
+                    <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white border-green-500" onClick={handleBack} data-testid="button-back">
+                      <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
                       Zurück
                     </Button>
                   )}
                   
                   <div className="ml-auto">
                     {currentStep < totalSteps ? (
-                      <Button onClick={handleNext} disabled={!canProceed()} data-testid="button-next">
+                      <Button size="sm" onClick={handleNext} disabled={!canProceed()} data-testid="button-next">
                         Weiter
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                       </Button>
                     ) : (
-                      <Button onClick={handleSubmit} disabled={!canProceed() || createLeadMutation.isPending} data-testid="button-submit">
+                      <Button size="sm" onClick={handleSubmit} disabled={!canProceed() || createLeadMutation.isPending} data-testid="button-submit">
                         {createLeadMutation.isPending ? (
                           <>
-                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                            Wird gesendet...
+                            <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" />
+                            Senden...
                           </>
                         ) : (
                           <>
-                            <CheckCircle className="w-4 h-4 mr-2" />
+                            <CheckCircle className="w-3.5 h-3.5 mr-1.5" />
                             Angebot anfordern
                           </>
                         )}
@@ -2475,70 +2472,56 @@ export default function FunnelPage() {
             </Card>
           </div>
 
-          <div className="space-y-4">
-            <Card>
-              <CardContent className="pt-6">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-medium">100% Unverbindlich</p>
-                      <p className="text-sm text-muted-foreground">Kostenlose Beratung</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Leistungsangebot in 48h</p>
-                      <p className="text-sm text-muted-foreground">Detailliertes Angebot innerhalb von 48 Stunden</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Award className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Meisterqualität</p>
-                      <p className="text-sm text-muted-foreground">20+ Jahre Erfahrung</p>
-                    </div>
+          <div className="lg:col-span-2 space-y-3 hidden lg:block">
+            <Card className="p-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium">100% Unverbindlich</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="pt-6">
-                <h3 className="font-semibold mb-3">Das bekommen Sie bei uns</h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                    <span>Kein Stress mit Handwerkersuche</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                    <span>Festpreis ohne Überraschungen</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                    <span>Ein Ansprechpartner für alles</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                    <span>Termintreue Umsetzung</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold">Lieber kurz anrufen?</h3>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium">Angebot in 48h</p>
+                  </div>
                 </div>
-                <p className="text-sm text-muted-foreground mb-2">Rufen Sie uns direkt an:</p>
-                <a href="tel:+4915212274043" className="text-lg font-bold text-primary" data-testid="link-phone">
-                  0152 122 740 43
-                </a>
-              </CardContent>
+                <div className="flex items-center gap-2">
+                  <Award className="w-4 h-4 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium">20+ Jahre Erfahrung</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-4">
+              <h3 className="text-sm font-semibold mb-2">Das bekommen Sie</h3>
+              <ul className="space-y-1.5 text-xs">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
+                  <span>Festpreis ohne Überraschungen</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
+                  <span>Ein Ansprechpartner</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
+                  <span>Termintreue Umsetzung</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Phone className="w-4 h-4 text-primary" />
+                <h3 className="text-sm font-semibold">Lieber anrufen?</h3>
+              </div>
+              <a href="tel:+4915212274043" className="text-sm font-bold text-primary" data-testid="link-phone">
+                0152 122 740 43
+              </a>
             </Card>
           </div>
         </div>
