@@ -13,10 +13,16 @@ import {
   Award,
   Users
 } from "lucide-react";
+import { SeoHead } from "@/components/seo-head";
 
 export default function Confirmation() {
   return (
     <div className="min-h-screen bg-background">
+      <SeoHead
+        title="Anfrage erhalten | KSHW München"
+        description="Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24-48 Stunden bei Ihnen."
+        noIndex={true}
+      />
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2">

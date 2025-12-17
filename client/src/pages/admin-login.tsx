@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Loader2, Lock, Shield } from "lucide-react";
+import { SeoHead } from "@/components/seo-head";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -29,6 +30,11 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
+      <SeoHead
+        title="Admin Login | KSHW München"
+        description="Admin-Bereich Login"
+        noIndex={true}
+      />
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">

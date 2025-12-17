@@ -3,10 +3,16 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SeoHead } from "@/components/seo-head";
 
 export default function Impressum() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SeoHead
+        title="Impressum | KSHW München"
+        description="Impressum und Kontaktdaten von KSHW München. Verantwortlicher: Ali Kemal Kurt, Zielstattstr. 9, 81379 München. USt-IdNr: DE356852204."
+        canonicalPath="/impressum"
+      />
       <SiteHeader />
       <PageHero 
         title="Impressum" 

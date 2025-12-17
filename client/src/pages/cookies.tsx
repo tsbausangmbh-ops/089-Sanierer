@@ -6,10 +6,16 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SeoHead } from "@/components/seo-head";
 
 export default function Cookies() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SeoHead
+        title="Cookie-Richtlinie | KSHW München"
+        description="Informationen zu Cookies auf 089-sanierer.de. Erfahren Sie, welche Cookies wir verwenden und wie Sie Ihre Einstellungen anpassen können."
+        canonicalPath="/cookies"
+      />
       <SiteHeader />
       <PageHero 
         title="Cookie-Richtlinie" 

@@ -3,10 +3,16 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SeoHead } from "@/components/seo-head";
 
 export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SeoHead
+        title="Datenschutz | KSHW München - Datenschutzerklärung"
+        description="Datenschutzerklärung von KSHW München. Informationen zur Verarbeitung personenbezogener Daten, Ihre Rechte und Kontakt zum Datenschutzbeauftragten."
+        canonicalPath="/datenschutz"
+      />
       <SiteHeader />
       <PageHero 
         title="Datenschutz" 

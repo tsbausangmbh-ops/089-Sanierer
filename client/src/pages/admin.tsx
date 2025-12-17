@@ -31,6 +31,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
+import { SeoHead } from "@/components/seo-head";
 import type { Lead } from "@shared/schema";
 
 const serviceLabels: Record<string, { label: string; icon: typeof HomeIcon }> = {
@@ -176,6 +177,11 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHead
+        title="Admin Dashboard | KSHW München"
+        description="Admin-Bereich zur Lead-Verwaltung"
+        noIndex={true}
+      />
       <header className="border-b bg-background sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-4">

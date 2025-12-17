@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SeoHead, generateFaqSchema } from "@/components/seo-head";
 import { 
   Phone, 
   Mail, 
@@ -361,6 +362,12 @@ export default function FaqPreise() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SeoHead
+        title="FAQ & Preise | Sanierungskosten München - KSHW"
+        description="Was kostet eine Sanierung in München? Badsanierung ab 8.000€, Komplettsanierung ab 800€/m². Transparente Preise, FAQ zu Sanierung, Gewährleistung & Ablauf."
+        keywords="Sanierung Kosten München, Badsanierung Preis, Komplettsanierung Kosten, Handwerker Preise München, FAQ Sanierung"
+        canonicalPath="/faq-preise"
+      />
       <SiteHeader />
 
       <PageHero

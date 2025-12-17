@@ -3,10 +3,16 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SeoHead } from "@/components/seo-head";
 
 export default function AGB() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SeoHead
+        title="AGB | KSHW München - Allgemeine Geschäftsbedingungen"
+        description="Allgemeine Geschäftsbedingungen von KSHW München. Informationen für Interessenten und Handwerkerpartner zu Leistungen, Haftung und Vertragsgestaltung."
+        canonicalPath="/agb"
+      />
       <SiteHeader />
       <PageHero 
         title="AGB" 

@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
+import { SeoHead } from "@/components/seo-head";
 import { 
   ArrowRight,
   ArrowLeft,
@@ -323,6 +324,12 @@ export default function GewerkeFunnel() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SeoHead
+        title="Handwerker-Vermittlung München | Maler, Elektriker, Sanitär - KSHW"
+        description="Geprüfte Handwerker in München: Maler, Elektriker, Sanitär, Heizung, Fliesenleger, Schreiner. Kostenlose Anfrage, faire Preise, schnelle Vermittlung."
+        keywords="Handwerker München, Maler München, Elektriker München, Sanitär München, Fliesenleger München, Handwerkervermittlung"
+        canonicalPath="/gewerke"
+      />
       <SiteHeader />
 
       <main id="main-content" className="pt-20 pb-16 flex-1">

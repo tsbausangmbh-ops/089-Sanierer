@@ -15,6 +15,7 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { SeoHead } from "@/components/seo-head";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
@@ -75,6 +76,12 @@ export default function Kontakt() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SeoHead
+        title="Kontakt | KSHW München - Kostenlose Sanierungsberatung"
+        description="Kontaktieren Sie KSHW München für Ihre kostenlose Sanierungsberatung. Telefon: 0152 122 740 43. Antwort innerhalb 24 Stunden. Zielstattstr. 9, 81379 München."
+        keywords="Kontakt KSHW München, Sanierung Beratung München, Handwerker kontaktieren, Renovierung Anfrage"
+        canonicalPath="/kontakt"
+      />
       <SiteHeader />
 
       <PageHero
