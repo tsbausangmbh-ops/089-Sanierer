@@ -209,6 +209,7 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
       <div class="highlight">
         <strong>Ihre Terminanfrage:</strong><br>
         Service: ${serviceLabel}<br>
+        Adresse: ${appointment.address || "Nicht angegeben"}<br>
         Wunschtermin: ${appointment.preferredDate}<br>
         Uhrzeit: ${appointment.preferredTime}<br>
         ${appointment.message ? `Nachricht: ${appointment.message}` : ""}
@@ -256,7 +257,8 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
         <strong>Kundendaten:</strong><br>
         Name: ${appointment.name}<br>
         E-Mail: ${appointment.email}<br>
-        Telefon: ${appointment.phone}
+        Telefon: ${appointment.phone}<br>
+        Adresse: ${appointment.address || "Nicht angegeben"}
       </div>
       
       <div class="info-box">
