@@ -53,6 +53,24 @@ const BUSINESS_HOURS = {
   slotDuration: 60
 };
 
+const ARTIFICIAL_BUSY_PERCENTAGE = 0.6;
+
+function hashCode(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  return Math.abs(hash);
+}
+
+function shouldHideSlot(date: string, slot: string): boolean {
+  const seed = hashCode(`${date}-${slot}-kshw-munich`);
+  const pseudoRandom = (seed % 100) / 100;
+  return pseudoRandom < ARTIFICIAL_BUSY_PERCENTAGE;
+}
+
 export async function getAvailableSlots(date: string): Promise<string[]> {
   const calendar = await getGoogleCalendarClient();
   
@@ -76,7 +94,7 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
       allSlots.push(`${hour.toString().padStart(2, '0')}:00`);
     }
     
-    const availableSlots = allSlots.filter(slot => {
+    let availableSlots = allSlots.filter(slot => {
       const slotHour = parseInt(slot.split(':')[0]);
       const slotStart = new Date(`${date}T${slot}:00+01:00`);
       const slotEnd = new Date(slotStart.getTime() + BUSINESS_HOURS.slotDuration * 60 * 1000);
@@ -87,6 +105,13 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
         return (slotStart < busyEnd && slotEnd > busyStart);
       });
     });
+    
+    availableSlots = availableSlots.filter(slot => !shouldHideSlot(date, slot));
+    
+    if (availableSlots.length === 0 && allSlots.length > 0) {
+      const fallbackIndex = hashCode(date) % allSlots.length;
+      availableSlots = [allSlots[fallbackIndex]];
+    }
     
     return availableSlots;
   } catch (error) {
