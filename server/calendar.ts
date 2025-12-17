@@ -141,6 +141,7 @@ export async function createCalendarEvent(
   name: string,
   email: string,
   phone: string,
+  address: string,
   date: string,
   time: string,
   message?: string
@@ -168,7 +169,8 @@ export async function createCalendarEvent(
       calendarId: 'primary',
       requestBody: {
         summary: `Beratungstermin: ${serviceLabel} - ${name}`,
-        description: `Kunde: ${name}\nTelefon: ${phone}\nE-Mail: ${email}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
+        description: `Kunde: ${name}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
+        location: address,
         start: {
           dateTime: startDateTime.toISOString(),
           timeZone: 'Europe/Berlin'

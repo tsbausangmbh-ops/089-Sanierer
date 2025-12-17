@@ -377,6 +377,7 @@ export async function registerRoutes(
       appointment.name,
       appointment.email,
       appointment.phone,
+      appointment.address || "",
       appointment.preferredDate,
       appointment.preferredTime,
       appointment.message || undefined
@@ -442,6 +443,10 @@ export async function registerRoutes(
               type: "string",
               description: "Telefonnummer des Kunden"
             },
+            address: {
+              type: "string",
+              description: "Adresse des Objekts (Ort der Sanierung)"
+            },
             service: {
               type: "string",
               enum: ["komplettsanierung", "badsanierung", "kuechensanierung", "bodensanierung", "elektrosanierung", "heizungssanierung", "dachsanierung", "energetische-sanierung"],
@@ -460,7 +465,7 @@ export async function registerRoutes(
               description: "Optionale zusätzliche Nachricht oder Projektbeschreibung"
             }
           },
-          required: ["name", "email", "phone", "service", "date", "time"]
+          required: ["name", "email", "phone", "address", "service", "date", "time"]
         }
       }
     }
@@ -498,9 +503,10 @@ Du kannst Termine direkt buchen! Wenn der Kunde einen Termin möchte:
 1. Frage nach NAME
 2. Frage nach E-MAIL
 3. Frage nach TELEFONNUMMER
-4. Frage nach SERVICE (welche Sanierung)
-5. Frage nach WUNSCHDATUM (Format: YYYY-MM-DD)
-6. Frage nach WUNSCHUHRZEIT (8:00-16:00)
+4. Frage nach ADRESSE (Ort der Sanierung)
+5. Frage nach SERVICE (welche Sanierung)
+6. Frage nach WUNSCHDATUM (Format: YYYY-MM-DD)
+7. Frage nach WUNSCHUHRZEIT (8:00-16:00)
 
 Sobald du ALLE Daten hast, nutze die create_appointment Funktion!
 Der Termin wird dann automatisch:
@@ -584,6 +590,7 @@ Wenn du Name, E-Mail, Telefon, Service, Datum und Uhrzeit hast:
               name: args.name,
               email: args.email,
               phone: args.phone,
+              address: args.address || "",
               service: args.service,
               preferredDate: args.date,
               preferredTime: args.time,
@@ -595,6 +602,7 @@ Wenn du Name, E-Mail, Telefon, Service, Datum und Uhrzeit hast:
               appointment.name,
               appointment.email,
               appointment.phone,
+              appointment.address || "",
               appointment.preferredDate,
               appointment.preferredTime,
               appointment.message || undefined

@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
-import { CalendarDays, Clock, User, Phone, Mail, Loader2, CheckCircle, MessageSquare } from "lucide-react";
+import { CalendarDays, Clock, User, Phone, Mail, Loader2, CheckCircle, MessageSquare, MapPin } from "lucide-react";
 import { format, addDays, isSunday } from "date-fns";
 import { de } from "date-fns/locale";
 
@@ -44,6 +44,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
     name: "",
     email: "",
     phone: "",
+    address: "",
     service: preSelectedService || "",
     message: "",
   });
@@ -305,6 +306,22 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                   className="pl-10"
                   required
                   data-testid="input-appointment-phone"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="address">Adresse (Ort der Sanierung)</Label>
+              <div className="relative">
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Input
+                  id="address"
+                  placeholder="Straße, PLZ Ort"
+                  value={formData.address}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, address: e.target.value }))}
+                  className="pl-10"
+                  required
+                  data-testid="input-appointment-address"
                 />
               </div>
             </div>
