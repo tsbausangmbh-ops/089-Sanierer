@@ -50,7 +50,7 @@ export async function getGoogleCalendarClient(): Promise<calendar_v3.Calendar> {
 const BUSINESS_HOURS = {
   weekday: { start: 8, end: 17 },
   saturday: { start: 10, end: 14 },
-  slotDuration: 60
+  slotDuration: 120
 };
 
 const ARTIFICIAL_BUSY_PERCENTAGE = 0.6;
