@@ -48,8 +48,8 @@ export async function getGoogleCalendarClient(): Promise<calendar_v3.Calendar> {
 }
 
 const BUSINESS_HOURS = {
-  start: 8,
-  end: 17,
+  weekday: { start: 8, end: 17 },
+  saturday: { start: 10, end: 14 },
   slotDuration: 60
 };
 
@@ -74,6 +74,15 @@ function shouldHideSlot(date: string, slot: string): boolean {
 export async function getAvailableSlots(date: string): Promise<string[]> {
   const calendar = await getGoogleCalendarClient();
   
+  const dateObj = new Date(`${date}T12:00:00+01:00`);
+  const dayOfWeek = dateObj.getDay();
+  
+  if (dayOfWeek === 0) {
+    return [];
+  }
+  
+  const hours = dayOfWeek === 6 ? BUSINESS_HOURS.saturday : BUSINESS_HOURS.weekday;
+  
   const startOfDay = new Date(`${date}T00:00:00+01:00`);
   const endOfDay = new Date(`${date}T23:59:59+01:00`);
   
@@ -90,12 +99,11 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
     const busySlots = response.data.calendars?.primary?.busy || [];
     
     const allSlots: string[] = [];
-    for (let hour = BUSINESS_HOURS.start; hour < BUSINESS_HOURS.end; hour++) {
+    for (let hour = hours.start; hour < hours.end; hour++) {
       allSlots.push(`${hour.toString().padStart(2, '0')}:00`);
     }
     
     let availableSlots = allSlots.filter(slot => {
-      const slotHour = parseInt(slot.split(':')[0]);
       const slotStart = new Date(`${date}T${slot}:00+01:00`);
       const slotEnd = new Date(slotStart.getTime() + BUSINESS_HOURS.slotDuration * 60 * 1000);
       

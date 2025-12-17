@@ -16,7 +16,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { CalendarDays, Clock, User, Phone, Mail, Loader2, CheckCircle, MessageSquare } from "lucide-react";
-import { format, addDays, isWeekend } from "date-fns";
+import { format, addDays, isSunday } from "date-fns";
 import { de } from "date-fns/locale";
 
 interface AppointmentBookingProps {
@@ -110,7 +110,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
   const maxDate = addDays(new Date(), 60);
 
   const isDateDisabled = (date: Date) => {
-    return date < minDate || date > maxDate || isWeekend(date);
+    return date < minDate || date > maxDate || isSunday(date);
   };
 
   if (step === "success") {
