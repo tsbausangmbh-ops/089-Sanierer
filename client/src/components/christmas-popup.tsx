@@ -67,19 +67,22 @@ export default function ChristmasPopup() {
       return;
     }
 
-    // Prüfe auf Marketing-Cookie-Zustimmung
-    if (!hasMarketingConsent()) {
-      return;
-    }
+    // Warte bis Cookie-Banner geschlossen wurde und Marketing-Cookies akzeptiert wurden
+    const checkInterval = setInterval(() => {
+      if (hasMarketingConsent()) {
+        clearInterval(checkInterval);
+        
+        const year = new Date().getFullYear();
+        setCurrentYear(year);
+        setNextYear(year + 1);
 
-    const year = new Date().getFullYear();
-    setCurrentYear(year);
-    setNextYear(year + 1);
+        setTimeout(() => {
+          setIsVisible(true);
+        }, 2000);
+      }
+    }, 500);
 
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000);
-    return () => clearTimeout(timer);
+    return () => clearInterval(checkInterval);
   }, []);
 
   const handleClose = () => {
