@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.png";
 
 const COOKIE_NAME = "kshw_christmas_popup_shown";
+const COOKIE_CONSENT_KEY = "kshw_cookie_consent";
 
 function isChristmasSeason(): boolean {
   const now = new Date();
@@ -12,6 +13,19 @@ function isChristmasSeason(): boolean {
 
   // Zeigt vom 16.12 bis 26.12 (00:01 - 23:59)
   return month === 12 && day >= 16 && day <= 26;
+}
+
+function hasMarketingConsent(): boolean {
+  const savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
+  if (!savedConsent) {
+    return false;
+  }
+  try {
+    const parsed = JSON.parse(savedConsent);
+    return parsed.marketing === true;
+  } catch {
+    return false;
+  }
 }
 
 function getCookie(name: string): string | null {
@@ -53,13 +67,18 @@ export default function ChristmasPopup() {
       return;
     }
 
+    // Prüfe auf Marketing-Cookie-Zustimmung
+    if (!hasMarketingConsent()) {
+      return;
+    }
+
     const year = new Date().getFullYear();
     setCurrentYear(year);
     setNextYear(year + 1);
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
