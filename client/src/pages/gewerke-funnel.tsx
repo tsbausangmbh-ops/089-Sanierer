@@ -325,9 +325,9 @@ export default function GewerkeFunnel() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Handwerker-Vermittlung München | Maler, Elektriker, Sanitär - KSHW"
-        description="Geprüfte Handwerker in München: Maler, Elektriker, Sanitär, Heizung, Fliesenleger, Schreiner. Kostenlose Anfrage, faire Preise, schnelle Vermittlung."
-        keywords="Handwerker München, Maler München, Elektriker München, Sanitär München, Fliesenleger München, Handwerkervermittlung"
+        title="Handwerker München finden | Maler, Elektriker, Sanitär | Kostenlose Vermittlung"
+        description="Geprüfte Handwerker in München: Maler, Elektriker, Sanitär, Heizungsbauer, Fliesenleger, Schreiner. Kostenlose Anfrage, faire Preise, schnelle Vermittlung innerhalb 48h."
+        keywords="Handwerker München, Maler München finden, Elektriker München günstig, Sanitär Notdienst München, Fliesenleger gesucht, Handwerker Empfehlung München"
         canonicalPath="/gewerke"
       />
       <SiteHeader />

@@ -8,9 +8,9 @@ export default function TerminPage() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Beratungstermin buchen | KSHW München - Kostenlose Erstberatung"
-        description="Buchen Sie jetzt Ihren kostenlosen Beratungstermin für Ihre Sanierung in München. Unverbindlich, persönlich und individuell. Mo-Fr 08:00-17:00 Uhr."
-        keywords="Beratungstermin München, Sanierung Beratung, kostenlose Erstberatung, KSHW Termin"
+        title="Beratungstermin Sanierung München | Kostenlos & Unverbindlich buchen"
+        description="Jetzt kostenlosen Beratungstermin für Ihre Sanierung in München buchen. Persönliche Beratung vor Ort, unverbindliches Angebot. Online-Terminbuchung Mo-Fr 08:00-17:00."
+        keywords="Sanierung Beratungstermin München, kostenlose Bauberatung, Renovierung Termin buchen, Handwerker Termin München"
         canonicalPath="/termin"
       />
       

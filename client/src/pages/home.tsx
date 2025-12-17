@@ -426,9 +426,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Sanierung München | KSHW - Badsanierung, Komplettsanierung ab 920€/m²"
-        description="Was kostet eine Sanierung in München? KSHW: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, 5 Jahre Gewährleistung."
-        keywords="Sanierung München, Badsanierung München, Komplettsanierung München, Küchensanierung München, KSHW"
+        title="Sanierung München | Badsanierung ab 9.200€ | Komplettsanierung ab 920€/m²"
+        description="Was kostet Sanierung in München? Badsanierung ab 9.200€, Komplettsanierung ab 920€/m², Küchensanierung, Altbausanierung. 268+ Projekte, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h!"
+        keywords="Sanierung München Kosten, Badsanierung München Preis, Komplettsanierung München, Haussanierung München, Wohnungssanierung, Küchensanierung, Altbausanierung, Kernsanierung München"
         canonicalPath="/"
         schema={generateFaqSchema(faqs)}
       />

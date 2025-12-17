@@ -9,9 +9,9 @@ export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Datenschutz | KSHW München - DSGVO-konforme Sanierungsberatung"
-        description="Datenschutzerklärung von KSHW München. Informationen zur Verarbeitung personenbezogener Daten, Ihre Rechte und Kontakt zum Datenschutzbeauftragten."
-        keywords="Datenschutz Sanierung München, DSGVO KSHW, Datenschutzerklärung 089 Sanierer"
+        title="Datenschutz | DSGVO-konforme Sanierungsberatung München | 089-sanierer.de"
+        description="Datenschutzerklärung 089-sanierer.de. DSGVO-konforme Verarbeitung Ihrer Daten. Ihre Rechte, Cookies, Datenverarbeitung bei Sanierungsanfragen."
+        keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung"
         canonicalPath="/datenschutz"
       />
       <SiteHeader />

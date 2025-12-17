@@ -77,9 +77,9 @@ export default function Kontakt() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Kontakt | KSHW München - Kostenlose Sanierungsberatung"
-        description="Kontaktieren Sie KSHW München für Ihre kostenlose Sanierungsberatung. Telefon: 0152 122 740 43. Antwort innerhalb 24 Stunden. Zielstattstr. 9, 81379 München."
-        keywords="Kontakt KSHW München, Sanierung Beratung München, Handwerker kontaktieren, Renovierung Anfrage"
+        title="Kontakt Sanierung München | Kostenlose Beratung | Tel. 0152 122 740 43"
+        description="Kostenlose Sanierungsberatung München. Telefon: 0152 122 740 43. Antwort innerhalb 24 Stunden. Persönliche Beratung vor Ort. Zielstattstr. 9, 81379 München."
+        keywords="Sanierung München Kontakt, Handwerker München anrufen, Renovierung Beratung München, Sanierung Angebot München"
         canonicalPath="/kontakt"
       />
       <SiteHeader />
