@@ -9,8 +9,9 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Impressum | KSHW München"
+        title="Impressum | KSHW München - Sanierung & Renovierung"
         description="Impressum und Kontaktdaten von KSHW München. Verantwortlicher: Ali Kemal Kurt, Zielstattstr. 9, 81379 München. USt-IdNr: DE356852204."
+        keywords="KSHW München Impressum, Sanierung München Kontakt, 089 Sanierer Impressum"
         canonicalPath="/impressum"
       />
       <SiteHeader />

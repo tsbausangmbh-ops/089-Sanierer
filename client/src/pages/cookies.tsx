@@ -12,8 +12,9 @@ export default function Cookies() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Cookie-Richtlinie | KSHW München"
+        title="Cookie-Richtlinie | KSHW München - Datenschutz & Cookies"
         description="Informationen zu Cookies auf 089-sanierer.de. Erfahren Sie, welche Cookies wir verwenden und wie Sie Ihre Einstellungen anpassen können."
+        keywords="Cookies KSHW München, Cookie-Einstellungen 089 Sanierer, Datenschutz Cookies"
         canonicalPath="/cookies"
       />
       <SiteHeader />

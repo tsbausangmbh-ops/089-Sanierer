@@ -9,8 +9,9 @@ export default function AGB() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="AGB | KSHW München - Allgemeine Geschäftsbedingungen"
+        title="AGB | KSHW München - Allgemeine Geschäftsbedingungen Sanierung"
         description="Allgemeine Geschäftsbedingungen von KSHW München. Informationen für Interessenten und Handwerkerpartner zu Leistungen, Haftung und Vertragsgestaltung."
+        keywords="AGB Sanierung München, KSHW Geschäftsbedingungen, Sanierung Vertrag München"
         canonicalPath="/agb"
       />
       <SiteHeader />
