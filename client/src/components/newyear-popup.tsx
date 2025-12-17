@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
 
 const COOKIE_NAME = "kshw_newyear_popup_shown";
+const COOKIE_CONSENT_KEY = "kshw_cookie_consent";
 
 function isNewYearDay(): boolean {
   const now = new Date();
@@ -12,6 +13,19 @@ function isNewYearDay(): boolean {
 
   // Zeigt am 01.01 (00:01 - 23:59)
   return month === 1 && day === 1;
+}
+
+function hasMarketingConsent(): boolean {
+  const savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
+  if (!savedConsent) {
+    return false;
+  }
+  try {
+    const parsed = JSON.parse(savedConsent);
+    return parsed.marketing === true;
+  } catch {
+    return false;
+  }
 }
 
 function getCookie(name: string): string | null {
@@ -53,13 +67,18 @@ export default function NewYearPopup() {
       return;
     }
 
+    // Prüfe auf Marketing-Cookie-Zustimmung
+    if (!hasMarketingConsent()) {
+      return;
+    }
+
     const year = new Date().getFullYear();
     setCurrentYear(year);
     setLastYear(year - 1);
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
