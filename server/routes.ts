@@ -104,6 +104,81 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   }
 }
 
+async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
+  const serviceLabel = serviceLabels[lead.service] || lead.service;
+  
+  const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #1e3a5f; color: white; padding: 20px; text-align: center; }
+    .content { padding: 20px; background: #f9f9f9; }
+    .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; }
+    .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    .data-table td { padding: 10px; border-bottom: 1px solid #ddd; }
+    .data-table td:first-child { font-weight: bold; width: 40%; background: #fff; }
+    .urgent { background: #fee2e2; color: #dc2626; padding: 10px; text-align: center; font-weight: bold; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Neue Anfrage eingegangen!</h1>
+      <p>${serviceLabel}</p>
+    </div>
+    <div class="content">
+      ${lead.isUrgent ? '<div class="urgent">DRINGEND</div>' : ''}
+      
+      <h3>Kontaktdaten:</h3>
+      <table class="data-table">
+        <tr><td>Name</td><td>${lead.name}</td></tr>
+        <tr><td>E-Mail</td><td><a href="mailto:${lead.email}">${lead.email}</a></td></tr>
+        <tr><td>Telefon</td><td><a href="tel:${lead.phone}">${lead.phone}</a></td></tr>
+        ${lead.mobile ? `<tr><td>Mobil</td><td><a href="tel:${lead.mobile}">${lead.mobile}</a></td></tr>` : ''}
+      </table>
+      
+      <h3>Projektdetails:</h3>
+      <table class="data-table">
+        <tr><td>Service</td><td>${serviceLabel}</td></tr>
+        <tr><td>Objekttyp</td><td>${lead.propertyType || '-'}</td></tr>
+        <tr><td>PLZ / Stadt</td><td>${lead.postalCode}${lead.city ? `, ${lead.city}` : ''}</td></tr>
+        ${lead.address ? `<tr><td>Adresse</td><td>${lead.address}</td></tr>` : ''}
+        ${lead.timeline ? `<tr><td>Zeitrahmen</td><td>${lead.timeline}</td></tr>` : ''}
+        ${lead.qualityLevel ? `<tr><td>Qualitätsstufe</td><td>${lead.qualityLevel}</td></tr>` : ''}
+        ${lead.budgetRange ? `<tr><td>Budget</td><td>${lead.budgetRange}</td></tr>` : ''}
+      </table>
+      
+      ${lead.description ? `<h3>Beschreibung:</h3><p>${lead.description}</p>` : ''}
+      ${lead.additionalNotes ? `<h3>Zusätzliche Anmerkungen:</h3><p>${lead.additionalNotes}</p>` : ''}
+      
+      ${lead.serviceDetails ? `<h3>Service-Details:</h3><pre style="background: #fff; padding: 10px; overflow-x: auto;">${JSON.stringify(lead.serviceDetails, null, 2)}</pre>` : ''}
+    </div>
+    <div class="footer">
+      <p>Lead-ID: ${lead.id}</p>
+      <p>Eingegangen am: ${new Date(lead.createdAt!).toLocaleString('de-DE')}</p>
+    </div>
+  </div>
+</body>
+</html>
+  `;
+
+  try {
+    await transporter.sendMail({
+      from: `"KSHW Lead-Bot" <${process.env.SMTP_FROM_EMAIL}>`,
+      to: process.env.SMTP_FROM_EMAIL,
+      subject: `${lead.isUrgent ? '[DRINGEND] ' : ''}Neue Anfrage: ${lead.name} - ${serviceLabel}`,
+      html: htmlContent,
+    });
+    console.log(`Company notification email sent for lead ${lead.id}`);
+  } catch (error) {
+    console.error("Failed to send company notification email:", error);
+  }
+}
+
 async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   const serviceLabel = serviceLabels[appointment.service] || appointment.service;
   
@@ -241,9 +316,12 @@ export async function registerRoutes(
 
     const lead = await storage.createLead(result.data);
     
-    // Send confirmation email to customer (non-blocking)
+    // Send emails (non-blocking)
     sendCustomerConfirmationEmail(lead).catch(err => {
-      console.error("Email sending failed:", err);
+      console.error("Customer email failed:", err);
+    });
+    sendCompanyLeadNotification(lead).catch(err => {
+      console.error("Company notification failed:", err);
     });
     
     res.status(201).json(lead);
