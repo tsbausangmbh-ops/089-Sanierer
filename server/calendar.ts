@@ -65,8 +65,16 @@ function hashCode(str: string): number {
   return Math.abs(hash);
 }
 
+function getWeekNumber(date: string): number {
+  const d = new Date(date);
+  const startOfYear = new Date(d.getFullYear(), 0, 1);
+  const days = Math.floor((d.getTime() - startOfYear.getTime()) / (24 * 60 * 60 * 1000));
+  return Math.ceil((days + startOfYear.getDay() + 1) / 7);
+}
+
 function shouldHideSlot(date: string, slot: string): boolean {
-  const seed = hashCode(`${date}-${slot}-kshw-munich`);
+  const weekNumber = getWeekNumber(date);
+  const seed = hashCode(`${date}-${slot}-week${weekNumber}-kshw`);
   const pseudoRandom = (seed % 100) / 100;
   return pseudoRandom < ARTIFICIAL_BUSY_PERCENTAGE;
 }
