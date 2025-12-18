@@ -143,21 +143,24 @@ function MiniLeadFunnel() {
   const [city, setCity] = useState("");
   const [problem, setProblem] = useState("");
   const [urgency, setUrgency] = useState("");
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [contact, setContact] = useState("");
+  const [address, setAddress] = useState("");
   const [, navigate] = useLocation();
   const { toast } = useToast();
 
   const handleSubmit = () => {
-    if (!postalCode || !city || !problem || !urgency || !name || !contact) return;
+    if (!postalCode || !city || !problem || !urgency || !firstName || !lastName || !contact || !address) return;
     
     const isEmail = contact.includes("@");
     const params = new URLSearchParams({
       postalCode,
       city,
+      address,
       problem,
       urgency,
-      name,
+      name: `${firstName} ${lastName}`,
       ...(isEmail ? { email: contact } : { phone: contact }),
     });
     
@@ -341,16 +344,29 @@ function MiniLeadFunnel() {
                 </p>
               </div>
               <div className="space-y-4">
-                <div>
-                  <Label htmlFor="funnel-name" className="text-sm font-medium">Ihr Vorname</Label>
-                  <Input
-                    id="funnel-name"
-                    placeholder="z.B. Thomas"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="mt-1"
-                    data-testid="input-funnel-name"
-                  />
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <Label htmlFor="funnel-firstname" className="text-sm font-medium">Vorname</Label>
+                    <Input
+                      id="funnel-firstname"
+                      placeholder="z.B. Thomas"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className="mt-1"
+                      data-testid="input-funnel-firstname"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="funnel-lastname" className="text-sm font-medium">Nachname</Label>
+                    <Input
+                      id="funnel-lastname"
+                      placeholder="z.B. Müller"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      className="mt-1"
+                      data-testid="input-funnel-lastname"
+                    />
+                  </div>
                 </div>
                 <div>
                   <Label htmlFor="funnel-contact" className="text-sm font-medium">Telefon oder E-Mail</Label>
@@ -362,6 +378,20 @@ function MiniLeadFunnel() {
                     className="mt-1"
                     data-testid="input-funnel-contact"
                   />
+                </div>
+                <div>
+                  <Label htmlFor="funnel-address" className="text-sm font-medium">Adresse der Baustelle</Label>
+                  <Input
+                    id="funnel-address"
+                    placeholder="z.B. Marienplatz 1"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    className="mt-1"
+                    data-testid="input-funnel-address"
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">
+                    PLZ/Stadt: {postalCode} {city}
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-md border border-primary/20">
@@ -381,7 +411,7 @@ function MiniLeadFunnel() {
                 </Button>
                 <Button
                   onClick={handleSubmit}
-                  disabled={!name || !contact}
+                  disabled={!firstName || !lastName || !contact || !address}
                   className="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
                   size="lg"
                   data-testid="button-funnel-submit"
