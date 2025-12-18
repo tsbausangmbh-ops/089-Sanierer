@@ -681,15 +681,16 @@ type ServiceDetails = {
 };
 
 const getPriceRangeForService = (service: string): string => {
+  // Preise München Stand 12/2025 inkl. 30% München-Zuschlag, Netto zzgl. MwSt.
   const priceRanges: Record<string, string> = {
-    komplettsanierung: "Richtpreis: ab 800€/m² für eine Komplettsanierung in München",
-    badsanierung: "Richtpreis: ab 8.000€ für eine Badsanierung in München",
-    kuechensanierung: "Richtpreis: ab 12.000€ für eine Küchensanierung in München",
-    bodensanierung: "Richtpreis: ab 50€/m² für eine Bodensanierung in München",
-    elektrosanierung: "Richtpreis: ab 80€/m² für eine Elektrosanierung in München",
-    heizungssanierung: "Richtpreis: ab 8.000€ für eine Heizungssanierung in München",
-    "energetische-sanierung": "Richtpreis: ab 200€/m² für eine energetische Sanierung in München",
-    dachsanierung: "Richtpreis: ab 150€/m² für eine Dachsanierung in München",
+    komplettsanierung: "Richtpreis: ab 1.040€/m² netto zzgl. MwSt. für eine Komplettsanierung in München (Stand 12/2025)",
+    badsanierung: "Richtpreis: ab 10.400€ netto zzgl. MwSt. für eine Badsanierung in München (Stand 12/2025)",
+    kuechensanierung: "Richtpreis: ab 15.600€ netto zzgl. MwSt. für eine Küchensanierung in München (Stand 12/2025)",
+    bodensanierung: "Richtpreis: ab 65€/m² netto zzgl. MwSt. für eine Bodensanierung in München (Stand 12/2025)",
+    elektrosanierung: "Richtpreis: ab 105€/m² netto zzgl. MwSt. für eine Elektrosanierung in München (Stand 12/2025)",
+    heizungssanierung: "Richtpreis: ab 10.400€ netto zzgl. MwSt. für eine Heizungssanierung in München (Stand 12/2025)",
+    "energetische-sanierung": "Richtpreis: ab 260€/m² netto zzgl. MwSt. für eine energetische Sanierung in München (Stand 12/2025)",
+    dachsanierung: "Richtpreis: ab 195€/m² netto zzgl. MwSt. für eine Dachsanierung in München (Stand 12/2025)",
   };
   return priceRanges[service] || "Fordern Sie jetzt Ihr kostenloses Festpreis-Angebot an!";
 };
