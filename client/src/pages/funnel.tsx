@@ -684,7 +684,7 @@ const getPriceRangeForService = (service: string): string => {
   // Münchner Preise Stand 12/2025 (Internet-Recherche + 30% Zuschlag), netto zzgl. MwSt., ca.-Angaben ohne Gewähr
   const priceRanges: Record<string, string> = {
     komplettsanierung: "Ca.-Preise München: Standard 1.000-1.300€/m² | Gehoben 1.300-1.700€/m² | Premium 1.700-2.300€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    badsanierung: "Ca.-Preise München je nach Umfang: Dusche ca. 3.300€ | Gäste-WC ca. 8.000-12.000€ | Standard-Bad ca. 16.000-22.000€ | Luxus-Bad ca. 35.000-50.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    badsanierung: "Ca.-Preise München je nach Umfang: Dusche ca. 3.300€ | Gäste-WC ca. 8.000-12.000€ | Standard-Bad ca. 16.000-22.000€ | Luxus-Bad ca. 35.000-50.000€ | Barrierefrei +3.000-5.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
     kuechensanierung: "Ca.-Preise München (nur Bauarbeiten OHNE Küchenmöbel): Fliesen, Elektro, Wasser - kleine Küche ca. 6.500-10.000€ | mittlere ca. 10.000-15.000€ | große ca. 15.000-22.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
     bodensanierung: "Ca.-Preise München: Laminat/Vinyl 65-100€/m² | Parkett 130-200€/m² | Fliesen 100-160€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
     elektrosanierung: "Ca.-Preise München: Teilsanierung 85-130€/m² | Komplett 130-200€/m² | Mit Smart Home 200-300€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
