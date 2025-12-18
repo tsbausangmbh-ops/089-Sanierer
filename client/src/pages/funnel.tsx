@@ -50,6 +50,7 @@ import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
+import { EmbeddedServiceAdvisor } from "@/components/embedded-service-advisor";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -2265,6 +2266,20 @@ export default function FunnelPage() {
             <p>Relevante Suchbegriffe: {content.keywords.join(", ")}</p>
           </div>
         )}
+
+        {/* Integrated Service Advisor */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-center">Ihr persönlicher {content.headline.split(" ")[0]}-Berater</h2>
+          <p className="text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
+            Stellen Sie Ihre Fragen zu Kosten, Ablauf, Materialien und mehr. Unser KI-Berater gibt Ihnen sofort Auskunft.
+          </p>
+          <EmbeddedServiceAdvisor
+            serviceName={content.headline.split("|")[0].trim().split(" ").slice(0, 2).join(" ")}
+            serviceDescription={content.intro.substring(0, 300)}
+            priceRange={getPriceRangeForService(preSelectedService)}
+            serviceId={preSelectedService}
+          />
+        </div>
 
         <div className="text-center py-8 bg-muted/30 rounded-lg">
           <h2 className="text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
