@@ -77,8 +77,8 @@ export default function Kontakt() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Kontakt Sanierung München | Kostenlose Beratung | Tel. 0152 122 740 43"
-        description="Kostenlose Sanierungsberatung München. Telefon: 0152 122 740 43. Antwort innerhalb 24 Stunden. Persönliche Beratung vor Ort. Zielstattstr. 9, 81379 München."
+        title="Kontakt Sanierung München | Tel. 0152 122 740 43"
+        description="Brauchen Sie einen Handwerker in München? Kostenlose Beratung, Antwort in 24h. Rufen Sie an: 0152 122 740 43 oder schreiben Sie uns!"
         keywords="Sanierung München Kontakt, Handwerker München anrufen, Renovierung Beratung München, Sanierung Angebot München"
         canonicalPath="/kontakt"
       />

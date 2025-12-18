@@ -363,8 +363,8 @@ export default function FaqPreise() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SeoHead
-        title="Sanierung München Preise | Badsanierung ab 8.000€ | FAQ & Kosten"
-        description="Sanierungskosten München: Badsanierung ab 8.000€, Komplettsanierung ab 800€/m², Küchensanierung ab 5.000€. Transparente Preisliste, FAQ zu Ablauf, Dauer & Gewährleistung."
+        title="Sanierungskosten München | Preise & FAQ | Badsanierung ab 8.000€"
+        description="Was kostet Sanierung in München wirklich? Badsanierung ab 8.000€, Komplettsanierung ab 800€/m². Transparente Preise, FAQ zu Ablauf und Gewährleistung."
         keywords="Sanierung München Preise, Badsanierung Kosten, Komplettsanierung Preis pro qm, Handwerker Preise München, Renovierung Kosten Übersicht"
         canonicalPath="/faq-preise"
       />

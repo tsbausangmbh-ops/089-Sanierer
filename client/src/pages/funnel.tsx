@@ -2285,8 +2285,8 @@ export default function FunnelPage() {
     return (
       <div className="min-h-screen bg-background flex flex-col">
         <SeoHead
-          title={`${content.headline} | KSHW München`}
-          description={content.intro.substring(0, 160)}
+          title={`${content.headline} | München`}
+          description={content.intro.substring(0, 155) + "..."}
           keywords={content.keywords.join(", ")}
           canonicalPath={`/anfrage?service=${preSelectedService}`}
           schema={combinedSchema}

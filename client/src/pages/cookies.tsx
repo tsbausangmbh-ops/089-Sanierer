@@ -12,8 +12,8 @@ export default function Cookies() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Cookie-Richtlinie | 089-sanierer.de | Cookie-Einstellungen"
-        description="Cookie-Richtlinie 089-sanierer.de. Welche Cookies wir verwenden, wie Sie Einstellungen anpassen und Ihre Privatsphäre schützen können."
+        title="Cookie-Richtlinie | 089-sanierer.de"
+        description="Welche Cookies nutzen wir? So können Sie Ihre Cookie-Einstellungen anpassen und Ihre Privatsphäre auf unserer Website schützen."
         keywords="Cookie Einstellungen Sanierung, Cookie-Richtlinie München, Datenschutz Cookies Website"
         canonicalPath="/cookies"
       />

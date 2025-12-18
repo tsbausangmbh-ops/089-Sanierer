@@ -9,8 +9,8 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Impressum | Sanierung München | 089-sanierer.de"
-        description="Impressum 089-sanierer.de. Verantwortlich: Ali Kemal Kurt, Zielstattstr. 9, 81379 München. Tel: 0152 122 740 43. USt-IdNr: DE356852204."
+        title="Impressum | 089-sanierer.de | Sanierung München"
+        description="Impressum und Kontaktdaten. Verantwortlich: Ali Kemal Kurt, Zielstattstr. 9, 81379 München. Telefon: 0152 122 740 43. USt-IdNr: DE356852204."
         keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum"
         canonicalPath="/impressum"
       />

@@ -426,8 +426,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Sanierung München | Badsanierung ab 9.200€ | Komplettsanierung ab 920€/m²"
-        description="Was kostet Sanierung in München? Badsanierung ab 9.200€, Komplettsanierung ab 920€/m², Küchensanierung, Altbausanierung. 268+ Projekte, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h!"
+        title="Sanierung München ab 920€/m² | Badsanierung ab 9.200€"
+        description="Was kostet eine Sanierung in München? Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Jetzt kostenlos beraten lassen!"
         keywords="Sanierung München Kosten, Badsanierung München Preis, Komplettsanierung München, Haussanierung München, Wohnungssanierung, Küchensanierung, Altbausanierung, Kernsanierung München"
         canonicalPath="/"
         schema={generateFaqSchema(faqs)}

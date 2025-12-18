@@ -9,8 +9,8 @@ export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Datenschutz | DSGVO-konforme Sanierungsberatung München | 089-sanierer.de"
-        description="Datenschutzerklärung 089-sanierer.de. DSGVO-konforme Verarbeitung Ihrer Daten. Ihre Rechte, Cookies, Datenverarbeitung bei Sanierungsanfragen."
+        title="Datenschutz | 089-sanierer.de | DSGVO-konform"
+        description="Datenschutzerklärung: So schützen wir Ihre Daten. DSGVO-konform, Ihre Rechte, Cookies und Datenverarbeitung bei Sanierungsanfragen erklärt."
         keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung"
         canonicalPath="/datenschutz"
       />

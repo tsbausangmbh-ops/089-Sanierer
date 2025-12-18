@@ -9,8 +9,8 @@ export default function AGB() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="AGB Sanierung München | Allgemeine Geschäftsbedingungen | 089-sanierer.de"
-        description="Allgemeine Geschäftsbedingungen für Sanierungsleistungen. Informationen zu Leistungen, Haftung, Gewährleistung und Vertragsgestaltung bei Renovierungsprojekten."
+        title="AGB | 089-sanierer.de | Allgemeine Geschäftsbedingungen"
+        description="Allgemeine Geschäftsbedingungen für Sanierungsleistungen. Informationen zu Leistungen, Haftung und Gewährleistung bei Renovierungsprojekten."
         keywords="AGB Sanierung München, Handwerker Vertragsbedingungen, Renovierung AGB, Sanierung Gewährleistung"
         canonicalPath="/agb"
       />
