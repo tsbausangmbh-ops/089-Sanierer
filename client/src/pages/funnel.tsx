@@ -2269,9 +2269,9 @@ export default function FunnelPage() {
         )}
 
         {/* Integrated Service Advisor */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Ihr persönlicher {content.headline.split(" ")[0]}-Berater</h2>
-          <p className="text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
+        <div className="mb-8 bg-primary/10 dark:bg-primary/20 border-2 border-primary/30 rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-4 text-center text-primary">Ihr persönlicher {content.headline.split(" ")[0]}-Berater</h2>
+          <p className="text-foreground text-center mb-6 max-w-2xl mx-auto">
             Stellen Sie Ihre Fragen zu Kosten, Ablauf, Materialien und mehr. Unser KI-Berater gibt Ihnen sofort Auskunft.
           </p>
           <EmbeddedServiceAdvisor

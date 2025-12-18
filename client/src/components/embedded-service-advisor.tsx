@@ -158,14 +158,14 @@ export function EmbeddedServiceAdvisor({
 
   if (!hasStarted) {
     return (
-      <Card className="border-primary/20">
-        <CardHeader className="pb-4">
+      <Card className="border-2 border-primary bg-card shadow-lg">
+        <CardHeader className="pb-4 bg-primary/5">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center">
-              <Bot className="w-6 h-6 text-primary" />
+            <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center">
+              <Bot className="w-6 h-6 text-primary-foreground" />
             </div>
             <div>
-              <CardTitle className="text-xl">{serviceName}-Berater</CardTitle>
+              <CardTitle className="text-xl text-primary">{serviceName}-Berater</CardTitle>
               <p className="text-sm text-muted-foreground">Fragen zu Kosten, Ablauf & Materialien</p>
             </div>
           </div>
@@ -227,7 +227,7 @@ export function EmbeddedServiceAdvisor({
   }
 
   return (
-    <Card className="border-primary/20">
+    <Card className="border-2 border-primary bg-card shadow-lg">
       <CardHeader className="pb-3 bg-primary text-primary-foreground rounded-t-md">
         <div className="flex items-center gap-3">
           <Bot className="w-5 h-5" />
