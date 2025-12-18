@@ -189,7 +189,7 @@ export async function createCalendarEvent(
     const event = await calendar.events.insert({
       calendarId: 'primary',
       requestBody: {
-        summary: `089 - Sanierer - ${customerName} - ${serviceLabel}`,
+        summary: `089-Sanierer - ${customerName} - ${serviceLabel}`,
         description: `Termin: ${formattedDate} um ${formattedTime} Uhr\nKunde: ${customerName}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
         location: address,
         start: {
