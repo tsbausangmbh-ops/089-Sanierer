@@ -153,13 +153,13 @@ export async function createCalendarEvent(
   
   const serviceLabels: Record<string, string> = {
     komplettsanierung: "Komplettsanierung",
-    badsanierung: "Badsanierung",
-    kuechensanierung: "Küchensanierung",
-    bodensanierung: "Bodensanierung",
-    elektrosanierung: "Elektrosanierung",
-    heizungssanierung: "Heizungssanierung",
-    "energetische-sanierung": "Energetische Sanierung",
-    dachsanierung: "Dachsanierung",
+    badsanierung: "Sanitär",
+    kuechensanierung: "Küche",
+    bodensanierung: "Boden",
+    elektrosanierung: "Elektro",
+    heizungssanierung: "Heizung",
+    "energetische-sanierung": "Energetisch",
+    dachsanierung: "Dach",
   };
   
   const serviceLabel = serviceLabels[service] || service;
@@ -168,7 +168,7 @@ export async function createCalendarEvent(
     const event = await calendar.events.insert({
       calendarId: 'primary',
       requestBody: {
-        summary: `Beratungstermin: ${serviceLabel} - ${name}`,
+        summary: `089-Sanitär - ${name} - ${serviceLabel}`,
         description: `Kunde: ${name}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
         location: address,
         start: {
