@@ -684,7 +684,7 @@ const getPriceRangeForService = (service: string): string => {
   // Münchner Preise Stand 12/2025, netto zzgl. MwSt., ca.-Angaben ohne Gewähr
   const priceRanges: Record<string, string> = {
     komplettsanierung: "Ca.-Preis München: ab 1.040€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    badsanierung: "Ca.-Preis München: ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    badsanierung: "Ca.-Preise München: Gäste-WC ca. 8.000€ | Standard-Bad ca. 16.500€ | Luxus-Bad ca. 35.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
     kuechensanierung: "Ca.-Preis München: ab 15.600€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
     bodensanierung: "Ca.-Preis München: ab 65€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
     elektrosanierung: "Ca.-Preis München: ab 105€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",

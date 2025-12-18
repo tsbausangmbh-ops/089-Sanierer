@@ -539,15 +539,22 @@ export async function registerRoutes(
 - Vorteile: Festpreisgarantie, ein Ansprechpartner, 5 Jahre Gewährleistung
 
 ## PREISRICHTLINIEN (München Stand 12/2025, netto zzgl. MwSt., ca.-Angaben ohne Gewähr)
+
+### Badsanierung (detailliert):
+- Gäste-WC: ca. 8.000€ netto zzgl. MwSt.
+- Standard-Bad: ca. 16.500€ netto zzgl. MwSt.
+- Luxus-Bad: ca. 35.000€ netto zzgl. MwSt.
+
+### Weitere Leistungen:
 - Komplettsanierung: ab ca. 1.040€/m² netto zzgl. MwSt.
-- Badsanierung: ab ca. 10.400€ netto zzgl. MwSt.
 - Küchensanierung: ab ca. 15.600€ netto zzgl. MwSt.
 - Bodensanierung: ab ca. 65€/m² netto zzgl. MwSt.
 - Elektrosanierung: ab ca. 105€/m² netto zzgl. MwSt.
 - Heizungssanierung: ab ca. 10.400€ netto zzgl. MwSt.
 - Energetische Sanierung: ab ca. 260€/m² netto zzgl. MwSt.
 - Dachsanierung: ab ca. 195€/m² netto zzgl. MwSt.
-- WICHTIG: Alle Preise sind ca.-Angaben ohne Gewähr! Genaue Preise erst nach persönlicher Beratung vor Ort.
+
+WICHTIG: Alle Preise sind ca.-Angaben ohne Gewähr! Genaue Preise erst nach persönlicher Beratung vor Ort.
 
 ## TERMINBUCHUNG
 Wenn der Kunde einen Termin möchte, sammle freundlich:
