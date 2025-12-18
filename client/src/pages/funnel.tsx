@@ -823,7 +823,7 @@ export default function FunnelPage() {
 
   const canProceed = () => {
     switch (currentStep) {
-      case 1: return formData.service !== "";
+      case 1: return formData.service !== "" && formData.postalCode !== "" && formData.city !== "";
       case 2: 
         if (formData.service === "kuechensanierung") {
           return formData.propertyType !== "" && formData.kitchenNeeded !== "";
@@ -841,7 +841,7 @@ export default function FunnelPage() {
 
   const getStepTitle = () => {
     switch (currentStep) {
-      case 1: return "Welches Problem können wir für Sie lösen?";
+      case 1: return "Wo und was möchten Sie sanieren?";
       case 2: 
         if (formData.service === "badsanierung") return "Was für ein Bad soll saniert werden?";
         if (formData.service === "kuechensanierung") return "Welche Sanierungsarbeiten werden benötigt?";
@@ -859,7 +859,7 @@ export default function FunnelPage() {
 
   const getStepSubtitle = () => {
     switch (currentStep) {
-      case 1: return "Wählen Sie den Bereich, der Ihnen am meisten Kopfzerbrechen bereitet";
+      case 1: return "Ihr Standort hilft uns bei der Kostenschätzung";
       case 2: 
         if (formData.service === "badsanierung") return "Hauptbad, Gäste-WC oder beides?";
         if (formData.service === "kuechensanierung") return "Wählen Sie die gewünschten Arbeiten - ohne Küchenmöbel";
@@ -876,39 +876,66 @@ export default function FunnelPage() {
   };
 
   const renderStep1 = () => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {serviceOptions.map((service) => {
-        const Icon = service.icon;
-        const isSelected = formData.service === service.id;
-        return (
-          <button
-            key={service.id}
-            type="button"
-            onClick={() => updateFormData("service", service.id)}
-            className={`p-3 rounded-md border text-left transition-all hover-elevate ${
-              isSelected ? "border-primary bg-primary/5" : "border-border"
-            }`}
-            data-testid={`button-service-${service.id}`}
-          >
-            <div className="flex items-center gap-3">
-              <div className={`p-2 rounded-md flex-shrink-0 ${
-                isSelected ? "bg-primary/20" : "bg-muted"
-              }`}>
-                <Icon className={`w-5 h-5 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className={`font-semibold text-sm truncate ${isSelected ? "text-primary" : ""}`}>
-                  {service.label}
-                </p>
-                <p className="text-xs text-muted-foreground truncate">
-                  {service.painPoint}
-                </p>
-              </div>
-              {isSelected && <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />}
-            </div>
-          </button>
-        );
-      })}
+    <div className="space-y-6">
+      <div>
+        <Label className="text-sm font-medium mb-3 block flex items-center gap-2">
+          <MapPin className="w-4 h-4 text-primary" />
+          In welcher Stadt/PLZ befindet sich Ihr Objekt?
+        </Label>
+        <div className="grid grid-cols-2 gap-3">
+          <Input
+            placeholder="PLZ (z.B. 80331)"
+            value={formData.postalCode}
+            onChange={(e) => updateFormData("postalCode", e.target.value)}
+            maxLength={5}
+            data-testid="input-postal-code-step1"
+          />
+          <Input
+            placeholder="Stadt (z.B. München)"
+            value={formData.city}
+            onChange={(e) => updateFormData("city", e.target.value)}
+            data-testid="input-city-step1"
+          />
+        </div>
+      </div>
+
+      <div>
+        <Label className="text-sm font-medium mb-3 block">Welche Sanierung benötigen Sie?</Label>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {serviceOptions.map((service) => {
+            const Icon = service.icon;
+            const isSelected = formData.service === service.id;
+            return (
+              <button
+                key={service.id}
+                type="button"
+                onClick={() => updateFormData("service", service.id)}
+                className={`p-3 rounded-md border text-left transition-all hover-elevate ${
+                  isSelected ? "border-primary bg-primary/5" : "border-border"
+                }`}
+                data-testid={`button-service-${service.id}`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`p-2 rounded-md flex-shrink-0 ${
+                    isSelected ? "bg-primary/20" : "bg-muted"
+                  }`}>
+                    <Icon className={`w-5 h-5 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className={`font-semibold text-sm truncate ${isSelected ? "text-primary" : ""}`}>
+                      {service.label}
+                    </p>
+                    <p className="text-xs text-muted-foreground truncate">
+                      {service.painPoint}
+                    </p>
+                  </div>
+                  {isSelected && <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 
