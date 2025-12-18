@@ -2435,8 +2435,7 @@ export default function FunnelPage() {
           <Progress value={progress} className="h-2" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2">
+        <div>
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle className="text-lg">{getStepTitle()}</CardTitle>
@@ -2485,77 +2484,6 @@ export default function FunnelPage() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-
-          <div className="space-y-4 hidden lg:block">
-            <Card className="p-4">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-4 h-4 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm">100% Kostenlos</p>
-                    <p className="text-xs text-muted-foreground">Unverbindliche Beratung</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-4 h-4 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm">Schnelle Antwort</p>
-                    <p className="text-xs text-muted-foreground">Innerhalb 48 Stunden</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Award className="w-4 h-4 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm">Meisterqualität</p>
-                    <p className="text-xs text-muted-foreground">20+ Jahre Erfahrung</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-4">
-              <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
-                <Star className="w-4 h-4 text-amber-500" />
-                Das bekommen Sie
-              </h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Festpreis ohne versteckte Kosten</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Ein fester Ansprechpartner</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">5 Jahre Gewährleistung</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-4">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Lieber telefonieren?</p>
-                  <a href="tel:+4915212274043" className="font-bold text-primary" data-testid="link-phone">
-                    0152 122 740 43
-                  </a>
-                </div>
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">Mo-Fr 8:00-17:00, Sa 10:00-14:00</p>
-            </Card>
-          </div>
         </div>
       </main>
 
