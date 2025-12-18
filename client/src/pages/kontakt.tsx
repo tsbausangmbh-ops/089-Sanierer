@@ -77,9 +77,9 @@ export default function Kontakt() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Kontakt Sanierung München | Tel. 0152 122 740 43"
-        description="Brauchen Sie einen Handwerker in München? Kostenlose Beratung, Antwort in 24h. Rufen Sie an: 0152 122 740 43 oder schreiben Sie uns!"
-        keywords="Sanierung München Kontakt, Handwerker München anrufen, Renovierung Beratung München, Sanierung Angebot München"
+        title="Sanierung München Anfrage | Kostenlose Beratung 24h"
+        description="Sanierung München anfragen: Kostenlose Beratung, Antwort in 24h, Festpreis-Angebot. Tel: 0152 122 740 43. Jetzt unverbindlich Projekt besprechen!"
+        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos"
         canonicalPath="/kontakt"
       />
       <SiteHeader />

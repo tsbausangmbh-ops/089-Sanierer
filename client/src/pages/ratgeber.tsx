@@ -12,9 +12,9 @@ export default function Ratgeber() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Sanierung Ratgeber München | Kosten, Förderung, Tipps"
-        description="Wie viel kostet eine Haussanierung? Kernsanierung ab 400€/m², KfW-Förderung bis 45%. Experten-Tipps zu Altbau, Dämmung, Fassade aus 268+ Projekten."
-        keywords="Haussanierung München Kosten, Kernsanierung Preis, Altbausanierung Tipps, KfW Förderung Sanierung, Badsanierung Ratgeber, Dämmung Kosten München"
+        title="Haussanierung München Kosten 2024 | KfW Förderung 45%"
+        description="Was kostet Haussanierung München? Kernsanierung ab 400€/m², KfW-Förderung bis 45%, Altbau-Tipps. Erfahrung aus 268+ Projekten. Jetzt informieren!"
+        keywords="Haussanierung München Kosten, Kernsanierung Preis qm, Altbausanierung München, KfW Förderung Sanierung 2024, Sanierung Förderung Bayern"
         canonicalPath="/ratgeber"
       />
       <SiteHeader />

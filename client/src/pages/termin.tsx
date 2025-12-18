@@ -8,9 +8,9 @@ export default function TerminPage() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Beratungstermin Sanierung München | Kostenlos buchen"
-        description="Wann passt es Ihnen? Buchen Sie jetzt Ihren kostenlosen Beratungstermin online. Persönliche Beratung vor Ort, unverbindliches Festpreis-Angebot."
-        keywords="Sanierung Beratungstermin München, kostenlose Bauberatung, Renovierung Termin buchen, Handwerker Termin München"
+        title="Sanierung München Termin | Kostenlose Beratung vor Ort"
+        description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8-17 Uhr."
+        keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos"
         canonicalPath="/termin"
       />
       

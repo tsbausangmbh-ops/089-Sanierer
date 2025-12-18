@@ -325,9 +325,9 @@ export default function GewerkeFunnel() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Handwerker München finden | Maler, Elektriker, Sanitär"
-        description="Suchen Sie einen zuverlässigen Handwerker in München? Maler, Elektriker, Sanitär, Fliesenleger. Kostenlose Vermittlung, faire Preise, Antwort in 48h."
-        keywords="Handwerker München, Maler München finden, Elektriker München günstig, Sanitär Notdienst München, Fliesenleger gesucht, Handwerker Empfehlung München"
+        title="Handwerker München gesucht? | Maler Elektriker Sanitär"
+        description="Handwerker München finden: Maler, Elektriker, Sanitär, Fliesenleger, Schreiner. Geprüfte Fachbetriebe, kostenlose Vermittlung, Angebot in 48h."
+        keywords="Handwerker München gesucht, Maler München günstig, Elektriker München schnell, Sanitär München Notdienst, Fliesenleger München Empfehlung"
         canonicalPath="/gewerke"
       />
       <SiteHeader />
