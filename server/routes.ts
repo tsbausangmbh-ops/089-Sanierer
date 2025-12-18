@@ -559,11 +559,13 @@ BADSANIERUNG - je nach Umfang:
 - Luxus-Bad (8m²+): ca. 35.000-50.000€
 - Barrierefreies Bad: +3.000-5.000€ Aufpreis
 
-KÜCHENSANIERUNG - je nach Umfang:
-- Küchenfronten erneuern: ca. 3.500-6.500€
-- Standard-Küche komplett: ca. 13.000-20.000€
-- Gehobene Küche: ca. 20.000-35.000€
-- Luxus-Küche mit Insel: ca. 40.000-65.000€
+KÜCHENSANIERUNG (nur Bauarbeiten - OHNE Küchenmöbel!):
+Wir machen: Fliesen (Boden + Wand), Elektro, Wasserumbau nach Kundenwunsch
+- Kleine Küche (bis 10m²): ca. 6.500-10.000€
+- Mittlere Küche (10-15m²): ca. 10.000-15.000€
+- Große Küche (15m²+): ca. 15.000-22.000€
+- Mit aufwendigem Wasserumbau: +3.000-6.000€
+WICHTIG: Küchenmöbel/Einbauküche sind NICHT enthalten! Wenn Küche gewünscht: Vermittlung an Partnerfirmen möglich.
 
 ELEKTROSANIERUNG:
 - Teilsanierung: ca. 85-130€/m²
