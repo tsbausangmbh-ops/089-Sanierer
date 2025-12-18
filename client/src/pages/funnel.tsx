@@ -681,16 +681,16 @@ type ServiceDetails = {
 };
 
 const getPriceRangeForService = (service: string): string => {
-  // Münchner Preise Stand 12/2025, netto zzgl. MwSt., ca.-Angaben ohne Gewähr
+  // Münchner Preise Stand 12/2025 (Internet-Recherche + 30% Zuschlag), netto zzgl. MwSt., ca.-Angaben ohne Gewähr
   const priceRanges: Record<string, string> = {
-    komplettsanierung: "Ca.-Preis München: ab 1.040€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    badsanierung: "Ca.-Preise München je nach Umfang: Dusche einbauen ca. 3.000€ | Gäste-WC ca. 8.000€ | Standard-Bad ca. 16.500€ | Luxus-Bad ca. 35.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    kuechensanierung: "Ca.-Preis München: ab 15.600€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    bodensanierung: "Ca.-Preis München: ab 65€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    elektrosanierung: "Ca.-Preis München: ab 105€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    heizungssanierung: "Ca.-Preis München: ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    "energetische-sanierung": "Ca.-Preis München: ab 260€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    dachsanierung: "Ca.-Preis München: ab 195€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    komplettsanierung: "Ca.-Preise München: Standard 1.000-1.300€/m² | Gehoben 1.300-1.700€/m² | Premium 1.700-2.300€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    badsanierung: "Ca.-Preise München je nach Umfang: Dusche ca. 3.300€ | Gäste-WC ca. 8.000-12.000€ | Standard-Bad ca. 16.000-22.000€ | Luxus-Bad ca. 35.000-50.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    kuechensanierung: "Ca.-Preise München: Fronten erneuern ca. 3.500-6.500€ | Standard ca. 13.000-20.000€ | Gehoben ca. 20.000-35.000€ | Luxus ca. 40.000-65.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    bodensanierung: "Ca.-Preise München: Laminat/Vinyl 65-100€/m² | Parkett 130-200€/m² | Fliesen 100-160€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    elektrosanierung: "Ca.-Preise München: Teilsanierung 85-130€/m² | Komplett 130-200€/m² | Mit Smart Home 200-300€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    heizungssanierung: "Ca.-Preise München: Gasheizung 12.000-20.000€ | Wärmepumpe Luft 35.000-52.000€ | Wärmepumpe Sole 52.000-65.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    "energetische-sanierung": "Ca.-Preise München: Fassadendämmung 200-350€/m² | Fenster 650-1.000€/Stk | Dachdämmung 100-200€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    dachsanierung: "Ca.-Preise München: Eindeckung 200-280€/m² | Mit Dämmung 280-400€/m² | Flachdach 130-200€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
   };
   return priceRanges[service] || "Fordern Sie jetzt Ihr kostenloses Festpreis-Angebot an!";
 };
