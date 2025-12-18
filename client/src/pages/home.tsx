@@ -139,6 +139,8 @@ const painPointSolutions: Record<string, string> = {
 
 function MiniLeadFunnel() {
   const [step, setStep] = useState(1);
+  const [postalCode, setPostalCode] = useState("");
+  const [city, setCity] = useState("");
   const [problem, setProblem] = useState("");
   const [urgency, setUrgency] = useState("");
   const [name, setName] = useState("");
@@ -147,10 +149,12 @@ function MiniLeadFunnel() {
   const { toast } = useToast();
 
   const handleSubmit = () => {
-    if (!problem || !urgency || !name || !contact) return;
+    if (!postalCode || !city || !problem || !urgency || !name || !contact) return;
     
     const isEmail = contact.includes("@");
     const params = new URLSearchParams({
+      postalCode,
+      city,
       problem,
       urgency,
       name,
@@ -192,6 +196,29 @@ function MiniLeadFunnel() {
             <div className="space-y-6">
               <div className="text-center">
                 <h3 className="text-lg font-semibold mb-2">
+                  Wo befindet sich Ihr Objekt?
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Ihr Standort hilft uns bei der Kostenschätzung
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <Input
+                  placeholder="PLZ (z.B. 80331)"
+                  value={postalCode}
+                  onChange={(e) => setPostalCode(e.target.value)}
+                  maxLength={5}
+                  data-testid="input-mini-postal-code"
+                />
+                <Input
+                  placeholder="Stadt (z.B. München)"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  data-testid="input-mini-city"
+                />
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="text-lg font-semibold mb-2">
                   Was bereitet Ihnen aktuell die größten Sorgen?
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -231,7 +258,7 @@ function MiniLeadFunnel() {
               </div>
               <Button
                 onClick={() => setStep(2)}
-                disabled={!problem}
+                disabled={!problem || !postalCode || !city}
                 className="w-full"
                 size="lg"
                 data-testid="button-funnel-step1"
