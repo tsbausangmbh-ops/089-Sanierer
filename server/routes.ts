@@ -494,11 +494,16 @@ export async function registerRoutes(
 - Servicegebiet: München und gesamter Großraum (ca. 50km Umkreis)
 - Vorteile: Festpreisgarantie, ein Ansprechpartner, 5 Jahre Gewährleistung
 
-## PREISRICHTLINIEN
-- Badsanierung: ab 8.000€
-- Küchensanierung: ab 12.000€
-- Komplettsanierung: ab 800€/m²
-- Genaue Preise erst nach persönlicher Beratung
+## PREISRICHTLINIEN (München Stand 12/2025, netto zzgl. MwSt., ca.-Angaben ohne Gewähr)
+- Komplettsanierung: ab ca. 1.040€/m² netto zzgl. MwSt.
+- Badsanierung: ab ca. 10.400€ netto zzgl. MwSt.
+- Küchensanierung: ab ca. 15.600€ netto zzgl. MwSt.
+- Bodensanierung: ab ca. 65€/m² netto zzgl. MwSt.
+- Elektrosanierung: ab ca. 105€/m² netto zzgl. MwSt.
+- Heizungssanierung: ab ca. 10.400€ netto zzgl. MwSt.
+- Energetische Sanierung: ab ca. 260€/m² netto zzgl. MwSt.
+- Dachsanierung: ab ca. 195€/m² netto zzgl. MwSt.
+- WICHTIG: Alle Preise sind ca.-Angaben ohne Gewähr! Genaue Preise erst nach persönlicher Beratung
 
 ## TERMINBUCHUNG - WICHTIG!
 Du kannst Termine direkt buchen! Wenn der Kunde einen Termin möchte:
