@@ -50,7 +50,6 @@ import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
-import { ServiceChatbot } from "@/components/service-chatbot";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -2345,12 +2344,6 @@ export default function FunnelPage() {
         <main id="main-content" className="pb-16 flex-1">
         {renderSeoIntro()}
         </main>
-
-        <ServiceChatbot
-          serviceName={content.headline.split("|")[0].trim()}
-          serviceDescription={content.intro.substring(0, 200)}
-          priceRange={getPriceRangeForService(preSelectedService)}
-        />
 
         <footer className="pt-12 pb-6 bg-[hsl(220,75%,22%)] text-white">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
