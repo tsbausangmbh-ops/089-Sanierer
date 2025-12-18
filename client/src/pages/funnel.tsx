@@ -681,16 +681,16 @@ type ServiceDetails = {
 };
 
 const getPriceRangeForService = (service: string): string => {
-  // Preise München Stand 12/2025 inkl. 30% München-Zuschlag, Netto zzgl. MwSt.
+  // Münchner Preise Stand 12/2025, netto zzgl. MwSt., ca.-Angaben ohne Gewähr
   const priceRanges: Record<string, string> = {
-    komplettsanierung: "Richtpreis: ab 1.040€/m² netto zzgl. MwSt. für eine Komplettsanierung in München (Stand 12/2025)",
-    badsanierung: "Richtpreis: ab 10.400€ netto zzgl. MwSt. für eine Badsanierung in München (Stand 12/2025)",
-    kuechensanierung: "Richtpreis: ab 15.600€ netto zzgl. MwSt. für eine Küchensanierung in München (Stand 12/2025)",
-    bodensanierung: "Richtpreis: ab 65€/m² netto zzgl. MwSt. für eine Bodensanierung in München (Stand 12/2025)",
-    elektrosanierung: "Richtpreis: ab 105€/m² netto zzgl. MwSt. für eine Elektrosanierung in München (Stand 12/2025)",
-    heizungssanierung: "Richtpreis: ab 10.400€ netto zzgl. MwSt. für eine Heizungssanierung in München (Stand 12/2025)",
-    "energetische-sanierung": "Richtpreis: ab 260€/m² netto zzgl. MwSt. für eine energetische Sanierung in München (Stand 12/2025)",
-    dachsanierung: "Richtpreis: ab 195€/m² netto zzgl. MwSt. für eine Dachsanierung in München (Stand 12/2025)",
+    komplettsanierung: "Ca.-Preis München: ab 1.040€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    badsanierung: "Ca.-Preis München: ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    kuechensanierung: "Ca.-Preis München: ab 15.600€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    bodensanierung: "Ca.-Preis München: ab 65€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    elektrosanierung: "Ca.-Preis München: ab 105€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    heizungssanierung: "Ca.-Preis München: ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    "energetische-sanierung": "Ca.-Preis München: ab 260€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    dachsanierung: "Ca.-Preis München: ab 195€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
   };
   return priceRanges[service] || "Fordern Sie jetzt Ihr kostenloses Festpreis-Angebot an!";
 };
