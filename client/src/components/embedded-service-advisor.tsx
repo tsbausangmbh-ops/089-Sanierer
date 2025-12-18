@@ -88,7 +88,7 @@ export function EmbeddedServiceAdvisor({
     setHasStarted(true);
     const welcomeMessage: Message = {
       role: "assistant",
-      content: `Willkommen beim ${serviceName}-Berater!\n\nIch helfe Ihnen gerne mit Informationen zu:\n- Kosten und Preisgestaltung\n- Zeitplanung und Ablauf\n- Materialien und Qualität\n- Förderungen und Finanzierung\n\n${priceRange}\n\nWie kann ich Ihnen helfen?`,
+      content: `Willkommen beim ${serviceName}-Berater!\n\nIch helfe Ihnen gerne mit Informationen zu:\n- Kosten und Preisgestaltung\n- Zeitplanung und Ablauf\n- Materialien und Qualität\n- Förderungen und Finanzierung\n\nUm Ihnen eine realistische Einschätzung geben zu können, würde ich gerne ein paar Fragen zu Ihrem Projekt stellen. Was genau möchten Sie sanieren lassen?`,
     };
     setMessages([welcomeMessage]);
 
