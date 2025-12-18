@@ -560,12 +560,14 @@ BADSANIERUNG - je nach Umfang:
 - Barrierefreies Bad: +3.000-5.000€ Aufpreis
 
 KÜCHENSANIERUNG (nur Bauarbeiten - OHNE Küchenmöbel!):
+WICHTIG: Bei JEDER Küchensanierung-Anfrage SOFORT klarstellen: Wir machen NUR die Bauarbeiten (Fliesen, Elektro, Wasser) - KEINE Küchenmöbel! 
 Wir machen: Fliesen (Boden + Wand), Elektro, Wasserumbau nach Kundenwunsch
 - Kleine Küche (bis 10m²): ca. 6.500-10.000€
 - Mittlere Küche (10-15m²): ca. 10.000-15.000€
 - Große Küche (15m²+): ca. 15.000-22.000€
 - Mit aufwendigem Wasserumbau: +3.000-6.000€
 WICHTIG: Küchenmöbel/Einbauküche sind NICHT enthalten! Wenn Küche gewünscht: Vermittlung an Partnerfirmen möglich.
+Bei Küchensanierung-Anfragen IMMER als erstes sagen: "Wichtig zu wissen: Wir machen die Bauarbeiten - also Fliesen, Elektro und Wasseranschlüsse. Die Küchenmöbel selbst sind nicht enthalten, aber wir können Ihnen gerne Partnerfirmen empfehlen."
 
 ELEKTROSANIERUNG:
 - Teilsanierung: ca. 85-130€/m²

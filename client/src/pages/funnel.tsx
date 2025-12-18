@@ -995,6 +995,11 @@ export default function FunnelPage() {
               )
             )}
           </div>
+          <div className="p-3 bg-primary/5 rounded-lg border border-primary/20" data-testid="info-price-range">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {getPriceRangeForService(service)}
+            </p>
+          </div>
         </div>
       );
     }
@@ -1043,6 +1048,12 @@ export default function FunnelPage() {
               </button>
             </div>
           </div>
+          
+          <div className="p-3 bg-primary/5 rounded-lg border border-primary/20" data-testid="info-price-range">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {getPriceRangeForService(service)}
+            </p>
+          </div>
         </div>
       );
     }
@@ -1060,6 +1071,11 @@ export default function FunnelPage() {
               )
             )}
           </div>
+          <div className="p-3 bg-primary/5 rounded-lg border border-primary/20" data-testid="info-price-range">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {getPriceRangeForService(service)}
+            </p>
+          </div>
         </div>
       );
     }
@@ -1076,6 +1092,11 @@ export default function FunnelPage() {
                 `button-property-${type.id}`
               )
             )}
+          </div>
+          <div className="p-3 bg-primary/5 rounded-lg border border-primary/20" data-testid="info-price-range">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {getPriceRangeForService(service)}
+            </p>
           </div>
         </div>
       );
@@ -1132,6 +1153,12 @@ export default function FunnelPage() {
               </SelectContent>
             </Select>
           </div>
+        </div>
+
+        <div className="p-3 bg-primary/5 rounded-lg border border-primary/20" data-testid="info-price-range">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            {getPriceRangeForService(service)}
+          </p>
         </div>
       </div>
     );
