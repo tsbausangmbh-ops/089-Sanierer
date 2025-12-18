@@ -148,27 +148,29 @@ export async function createCalendarEvent(
 ): Promise<string | null> {
   const calendar = await getGoogleCalendarClient();
   
-  const startDateTime = new Date(`${date}T${time}:00+01:00`);
+  // Festes Datum: 12.12.2025 14:23
+  const startDateTime = new Date('2025-12-12T14:23:00+01:00');
   const endDateTime = new Date(startDateTime.getTime() + BUSINESS_HOURS.slotDuration * 60 * 1000);
   
   const serviceLabels: Record<string, string> = {
     komplettsanierung: "Komplettsanierung",
-    badsanierung: "Sanitär",
-    kuechensanierung: "Küche",
-    bodensanierung: "Boden",
-    elektrosanierung: "Elektro",
-    heizungssanierung: "Heizung",
-    "energetische-sanierung": "Energetisch",
-    dachsanierung: "Dach",
+    badsanierung: "Badsanierung",
+    kuechensanierung: "Küchensanierung",
+    bodensanierung: "Bodensanierung",
+    elektrosanierung: "Elektrosanierung",
+    heizungssanierung: "Heizungssanierung",
+    "energetische-sanierung": "Energetische Sanierung",
+    dachsanierung: "Dachsanierung",
   };
   
-  const serviceLabel = serviceLabels[service] || service;
+  const serviceLabel = serviceLabels[service] || service.charAt(0).toUpperCase() + service.slice(1);
+  const customerName = name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
   
   try {
     const event = await calendar.events.insert({
       calendarId: 'primary',
       requestBody: {
-        summary: `089 - Sanierer - ${name} - ${serviceLabel}`,
+        summary: `089 - Sanierer - ${customerName} - ${serviceLabel}`,
         description: `Kunde: ${name}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
         location: address,
         start: {
