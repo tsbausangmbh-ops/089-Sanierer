@@ -193,6 +193,12 @@ export function SeoFooter() {
           </p>
         </div>
 
+        <div className="mt-6 pt-4 border-t border-white/20">
+          <p className="text-xs text-white/50 mb-2">
+            <strong>KI-Hinweis gem. Art. 50 Verordnung (EU) 2024/1689:</strong> KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+          </p>
+        </div>
+
         <div className="mt-4 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/70">
           <p>
             &copy; {new Date().getFullYear()} <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">ExtruCon GmbH</a> - Alle Rechte vorbehalten.

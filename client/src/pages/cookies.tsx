@@ -191,6 +191,19 @@ export default function Cookies() {
 
             <Card>
               <CardContent className="p-6">
+                <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Hinweis)</h2>
+                <p className="text-sm text-muted-foreground mb-4">Transparenzhinweis gemäß Art. 50 Verordnung (EU) 2024/1689</p>
+                <p className="text-muted-foreground bg-muted/30 p-4 rounded-lg border">
+                  KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+                </p>
+                <p className="text-muted-foreground mt-4">
+                  <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
                 <h2 className="text-xl font-bold mb-4">Kontakt</h2>
                 <p className="text-muted-foreground">
                   Bei Fragen zu unserer Cookie-Richtlinie können Sie uns kontaktieren:
