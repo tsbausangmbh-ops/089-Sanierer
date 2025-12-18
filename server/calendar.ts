@@ -136,6 +136,21 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
   }
 }
 
+// Hilfsfunktion für deutsches Datumsformat DD.MM.YYYY
+function formatDateDE(date: Date): string {
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}.${month}.${year}`;
+}
+
+// Hilfsfunktion für Zeitformat HH:MM
+function formatTimeDE(date: Date): string {
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}
+
 export async function createCalendarEvent(
   service: string,
   name: string,
@@ -148,9 +163,13 @@ export async function createCalendarEvent(
 ): Promise<string | null> {
   const calendar = await getGoogleCalendarClient();
   
-  // Festes Datum: 12.12.2025 14:23
-  const startDateTime = new Date('2025-12-12T14:23:00+01:00');
+  // Vom Kunden gewähltes Datum und Uhrzeit verwenden
+  const startDateTime = new Date(`${date}T${time}:00+01:00`);
   const endDateTime = new Date(startDateTime.getTime() + BUSINESS_HOURS.slotDuration * 60 * 1000);
+  
+  // Deutsches Format für Anzeige: DD.MM.YYYY und HH:MM
+  const formattedDate = formatDateDE(startDateTime);
+  const formattedTime = formatTimeDE(startDateTime);
   
   const serviceLabels: Record<string, string> = {
     komplettsanierung: "Komplettsanierung",
@@ -171,7 +190,7 @@ export async function createCalendarEvent(
       calendarId: 'primary',
       requestBody: {
         summary: `089 - Sanierer - ${customerName} - ${serviceLabel}`,
-        description: `Kunde: ${name}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
+        description: `Termin: ${formattedDate} um ${formattedTime} Uhr\nKunde: ${customerName}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
         location: address,
         start: {
           dateTime: startDateTime.toISOString(),

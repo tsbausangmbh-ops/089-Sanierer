@@ -19,6 +19,34 @@ const serviceLabels: Record<string, string> = {
   dachsanierung: "Dachsanierung",
 };
 
+// Hilfsfunktionen für deutsches Datums-/Zeitformat
+function formatDateDE(dateStr: string | Date): string {
+  const date = typeof dateStr === 'string' ? new Date(dateStr) : dateStr;
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}.${month}.${year}`;
+}
+
+function formatTimeDE(timeStr: string): string {
+  // Stellt sicher, dass Zeit im Format HH:MM ist
+  const parts = timeStr.split(':');
+  if (parts.length >= 2) {
+    return `${parts[0].padStart(2, '0')}:${parts[1].padStart(2, '0')}`;
+  }
+  return timeStr;
+}
+
+function formatDateTimeDE(dateStr: string | Date): string {
+  const date = typeof dateStr === 'string' ? new Date(dateStr) : dateStr;
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${day}.${month}.${year} ${hours}:${minutes}`;
+}
+
 const smtpPort = parseInt(process.env.SMTP_PORT || "587");
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -159,7 +187,7 @@ async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
     </div>
     <div class="footer">
       <p>Lead-ID: ${lead.id}</p>
-      <p>Eingegangen am: ${new Date(lead.createdAt!).toLocaleString('de-DE')}</p>
+      <p>Eingegangen am: ${formatDateTimeDE(lead.createdAt!)}</p>
     </div>
   </div>
 </body>
@@ -210,8 +238,8 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
         <strong>Ihre Terminanfrage:</strong><br>
         Service: ${serviceLabel}<br>
         Adresse: ${appointment.address || "Nicht angegeben"}<br>
-        Wunschtermin: ${appointment.preferredDate}<br>
-        Uhrzeit: ${appointment.preferredTime}<br>
+        Wunschtermin: ${formatDateDE(appointment.preferredDate)}<br>
+        Uhrzeit: ${formatTimeDE(appointment.preferredTime)} Uhr<br>
         ${appointment.message ? `Nachricht: ${appointment.message}` : ""}
       </div>
       
@@ -264,8 +292,8 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
       <div class="info-box">
         <strong>Termindetails:</strong><br>
         Service: ${serviceLabel}<br>
-        Wunschtermin: ${appointment.preferredDate}<br>
-        Uhrzeit: ${appointment.preferredTime}
+        Wunschtermin: ${formatDateDE(appointment.preferredDate)}<br>
+        Uhrzeit: ${formatTimeDE(appointment.preferredTime)} Uhr
       </div>
       
       ${appointment.message ? `
