@@ -2,103 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://089-sanierer.de/</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=komplettsanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=badsanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=kuechensanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=bodensanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=elektrosanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=heizungssanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=dachsanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/anfrage?service=energetische-sanierung</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/faq-preise</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/ratgeber</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/gewerke</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/kontakt</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/impressum</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/datenschutz</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://089-sanierer.de/agb</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://089-sanierer.de/cookies</loc>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

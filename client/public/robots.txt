@@ -13,6 +13,7 @@ Allow: /kontakt
 Allow: /impressum
 Allow: /datenschutz
 Allow: /agb
+Allow: /cookies
 
 # AI-Suchmaschinen explizit erlauben
 User-agent: GPTBot
