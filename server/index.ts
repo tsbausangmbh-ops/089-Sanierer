@@ -4,10 +4,12 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
+import { crawlerMiddleware } from "./crawler-middleware";
 
 const app = express();
 
 app.use(compression());
+app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
 declare module "http" {
