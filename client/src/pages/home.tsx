@@ -588,7 +588,7 @@ export default function Home() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative pt-16 min-h-[90vh] lg:min-h-[85vh] flex items-center">
+        <section className="relative pt-16 min-h-[70vh] lg:min-h-[65vh] flex items-center">
           <div className="absolute inset-0 pt-16">
             <img 
               src={houseBeforeAfter} 
@@ -601,7 +601,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-8 lg:py-12 w-full">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
                 <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
