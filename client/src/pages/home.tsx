@@ -611,7 +611,7 @@ export default function Home() {
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Sanierung München
                 <br />
-                <span className="text-primary">ohne Stress & Chaos</span>
+                <span className="text-orange-400">ohne Stress & Chaos</span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
