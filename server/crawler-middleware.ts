@@ -1,5 +1,80 @@
 import type { Request, Response, NextFunction } from "express";
 
+const PRERENDER_TOKEN = process.env.PRERENDER_TOKEN;
+const PRERENDER_SERVICE_URL = "https://service.prerender.io/";
+
+const PRERENDER_CRAWLER_USER_AGENTS = [
+  "googlebot",
+  "yahoo",
+  "bingbot",
+  "yandex",
+  "baiduspider",
+  "facebookexternalhit",
+  "twitterbot",
+  "rogerbot",
+  "linkedinbot",
+  "embedly",
+  "quora link preview",
+  "showyoubot",
+  "outbrain",
+  "pinterest/0.",
+  "developers.google.com/+/web/snippet",
+  "slackbot",
+  "vkShare",
+  "W3C_Validator",
+  "redditbot",
+  "Applebot",
+  "WhatsApp",
+  "flipboard",
+  "tumblr",
+  "bitlybot",
+  "SkypeUriPreview",
+  "nuzzel",
+  "Discordbot",
+  "Google Page Speed",
+  "Qwantify",
+  "pinterestbot",
+  "Bitrix link preview",
+  "XING-contenttabreceiver",
+  "Chrome-Lighthouse",
+  "TelegramBot",
+  "SeznamBot",
+  "gptbot",
+  "chatgpt-user",
+  "claude-web",
+  "perplexitybot",
+  "anthropic-ai",
+  "cohere-ai",
+];
+
+async function fetchFromPrerender(url: string): Promise<string | null> {
+  if (!PRERENDER_TOKEN) return null;
+  
+  try {
+    const prerenderUrl = `${PRERENDER_SERVICE_URL}${url}`;
+    const response = await fetch(prerenderUrl, {
+      headers: {
+        "X-Prerender-Token": PRERENDER_TOKEN,
+      },
+      signal: AbortSignal.timeout(10000),
+    });
+    
+    if (response.ok) {
+      return await response.text();
+    }
+    console.error(`Prerender.io error: ${response.status}`);
+    return null;
+  } catch (error) {
+    console.error("Prerender.io fetch error:", error);
+    return null;
+  }
+}
+
+function isPrerenderCrawler(userAgent: string): boolean {
+  const ua = userAgent.toLowerCase();
+  return PRERENDER_CRAWLER_USER_AGENTS.some((crawler) => ua.toLowerCase().includes(crawler.toLowerCase()));
+}
+
 const CRAWLER_USER_AGENTS = [
   "googlebot",
   "bingbot",
@@ -362,7 +437,7 @@ function generateFullPageHTML(path: string, query: Record<string, string>, isDev
 </html>`;
 }
 
-export function crawlerMiddleware(req: Request, res: Response, next: NextFunction): void {
+export async function crawlerMiddleware(req: Request, res: Response, next: NextFunction): Promise<void> {
   const userAgent = req.headers["user-agent"] || "";
   const path = req.path;
   const query = req.query as Record<string, string>;
@@ -371,10 +446,22 @@ export function crawlerMiddleware(req: Request, res: Response, next: NextFunctio
     return next();
   }
 
-  const isCrawlerRequest = isCrawler(userAgent);
+  const isCrawlerRequest = isPrerenderCrawler(userAgent) || isCrawler(userAgent);
   const forceSSR = query.ssr === "1";
 
   if (isCrawlerRequest || forceSSR) {
+    if (PRERENDER_TOKEN && !forceSSR) {
+      const fullUrl = `${req.protocol}://${req.get("host")}${req.originalUrl}`;
+      const prerenderHtml = await fetchFromPrerender(fullUrl);
+      if (prerenderHtml) {
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.setHeader("X-Robots-Tag", "index, follow");
+        res.setHeader("X-Prerender", "1");
+        res.send(prerenderHtml);
+        return;
+      }
+    }
+    
     const staticHTML = generateStaticHTML(path, query);
     if (staticHTML) {
       res.setHeader("Content-Type", "text/html; charset=utf-8");
