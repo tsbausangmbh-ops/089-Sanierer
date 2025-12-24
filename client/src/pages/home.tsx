@@ -302,7 +302,7 @@ function MiniLeadFunnel() {
   const progressPercent = (step / 3) * 100;
 
   return (
-    <section id="anfrage-form" className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
+    <section id="anfrage-form" className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
@@ -668,7 +668,7 @@ export default function Home() {
         </section>
 
         {/* Pain Points Section */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-6 lg:py-8 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-2 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 rounded-full text-sm font-medium mb-4">
@@ -703,7 +703,7 @@ export default function Home() {
         </section>
 
         {/* Solution Section */}
-        <section className="py-16 lg:py-24 bg-primary/5">
+        <section className="py-6 lg:py-8 bg-primary/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-2 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full text-sm font-medium mb-4">
@@ -738,7 +738,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-6 lg:py-8 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -788,7 +788,7 @@ export default function Home() {
         </section>
 
         {/* Process Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -820,7 +820,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-6 lg:py-8 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -855,7 +855,7 @@ export default function Home() {
         <MiniLeadFunnel />
 
         {/* FAQ Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -882,7 +882,7 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-16 lg:py-24 bg-primary text-white">
+        <section className="py-6 lg:py-8 bg-primary text-white">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Bereit für Ihre stressfreie Sanierung?
