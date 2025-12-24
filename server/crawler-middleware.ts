@@ -3,7 +3,7 @@ import type { Request, Response, NextFunction } from "express";
 const PRERENDER_TOKEN = process.env.PRERENDER_TOKEN;
 const PRERENDER_SERVICE_URL = "https://service.prerender.io/";
 
-const PRERENDER_IP_RANGES = [
+const PRERENDER_IPV4_RANGES = [
   "103.207.40.",
   "103.207.41.",
   "103.207.42.",
@@ -14,10 +14,21 @@ const PRERENDER_IP_RANGES = [
   "104.224.15.",
 ];
 
+const PRERENDER_IPV6_PREFIX = "2602:2dd:";
+
 function isPrerenderIP(ip: string): boolean {
   if (!ip) return false;
   const cleanIP = ip.replace("::ffff:", "");
-  return PRERENDER_IP_RANGES.some((range) => cleanIP.startsWith(range));
+  
+  if (PRERENDER_IPV4_RANGES.some((range) => cleanIP.startsWith(range))) {
+    return true;
+  }
+  
+  if (cleanIP.toLowerCase().startsWith(PRERENDER_IPV6_PREFIX)) {
+    return true;
+  }
+  
+  return false;
 }
 
 const PRERENDER_CRAWLER_USER_AGENTS = [
