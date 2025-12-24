@@ -3,6 +3,23 @@ import type { Request, Response, NextFunction } from "express";
 const PRERENDER_TOKEN = process.env.PRERENDER_TOKEN;
 const PRERENDER_SERVICE_URL = "https://service.prerender.io/";
 
+const PRERENDER_IP_RANGES = [
+  "103.207.40.",
+  "103.207.41.",
+  "103.207.42.",
+  "103.207.43.",
+  "104.224.12.",
+  "104.224.13.",
+  "104.224.14.",
+  "104.224.15.",
+];
+
+function isPrerenderIP(ip: string): boolean {
+  if (!ip) return false;
+  const cleanIP = ip.replace("::ffff:", "");
+  return PRERENDER_IP_RANGES.some((range) => cleanIP.startsWith(range));
+}
+
 const PRERENDER_CRAWLER_USER_AGENTS = [
   "googlebot",
   "yahoo",
@@ -439,10 +456,15 @@ function generateFullPageHTML(path: string, query: Record<string, string>, isDev
 
 export async function crawlerMiddleware(req: Request, res: Response, next: NextFunction): Promise<void> {
   const userAgent = req.headers["user-agent"] || "";
+  const clientIP = req.ip || req.headers["x-forwarded-for"]?.toString().split(",")[0] || "";
   const path = req.path;
   const query = req.query as Record<string, string>;
 
   if (path.startsWith("/api/") || path.startsWith("/@") || path.includes(".")) {
+    return next();
+  }
+
+  if (isPrerenderIP(clientIP)) {
     return next();
   }
 
