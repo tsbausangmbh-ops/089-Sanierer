@@ -477,6 +477,12 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
   }
 
   if (isPrerenderIP(clientIP)) {
+    console.log(`[Prerender] Allowing Prerender.io crawler from IP: ${clientIP}`);
+    return next();
+  }
+  
+  if (userAgent.toLowerCase().includes("prerender")) {
+    console.log(`[Prerender] Allowing Prerender UA: ${userAgent}`);
     return next();
   }
 
