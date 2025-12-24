@@ -904,9 +904,6 @@ export default function Home() {
                 </Button>
               </a>
             </div>
-            <p className="mt-8 text-sm opacity-70">
-              Mo-Fr: 8:00-16:30 Uhr | Zielstattstr. 9, 81379 München
-            </p>
           </div>
         </section>
       </main>
