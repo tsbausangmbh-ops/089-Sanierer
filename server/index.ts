@@ -13,17 +13,10 @@ app.use(compression());
 
 // Prerender.io middleware for SEO - renders pages for search engine crawlers
 if (process.env.PRERENDER_TOKEN) {
-  prerender.set("prerenderToken", process.env.PRERENDER_TOKEN);
+  const token = process.env.PRERENDER_TOKEN.trim();
+  console.log(`[Prerender] Token loaded (length: ${token.length}, starts with: ${token.substring(0, 4)}...)`);
+  prerender.set("prerenderToken", token);
   prerender.set("protocol", "https");
-  // Whitelist only the pages that exist
-  prerender.whitelisted([
-    "/",
-    "/anfrage",
-    "/bestaetigung",
-    "/impressum",
-    "/datenschutz",
-    "/admin"
-  ]);
   app.use(prerender);
   console.log("[Prerender] Prerender.io middleware enabled");
 } else {
