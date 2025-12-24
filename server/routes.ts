@@ -337,6 +337,11 @@ export async function registerRoutes(
 ): Promise<Server> {
   setupAuth(app);
 
+  // Health check endpoint
+  app.get("/health", (req, res) => {
+    res.status(200).send("ok");
+  });
+
   app.post("/api/leads", async (req, res) => {
     const result = insertLeadSchema.safeParse(req.body);
     if (!result.success) {
