@@ -5,26 +5,26 @@ import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead, generateFaqSchema } from "@/components/seo-head";
 import { useToast } from "@/hooks/use-toast";
-
-const headerServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung" },
-  { id: "badsanierung", title: "Badsanierung" },
-  { id: "dachsanierung", title: "Dachsanierung" },
-  { id: "energetische-sanierung", title: "Energetische Sanierung" },
-];
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
+import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
+import kitchenImg from "@assets/generated_images/modern_kitchen_renovation.png";
+import floorImg from "@assets/generated_images/floor_renovation_parquet.png";
+import electricImg from "@assets/generated_images/electrical_renovation_work.png";
+import heatingImg from "@assets/generated_images/heating_system_installation.png";
+import completeImg from "@assets/generated_images/complete_home_renovation.png";
+
 import { 
   Bath, 
   UtensilsCrossed, 
@@ -45,83 +45,217 @@ import {
   Hammer,
   Euro,
   Handshake,
-  PaintBucket,
-  Plug,
-  Droplets,
-  Thermometer,
-  Calendar,
-  Wrench,
-  AlertCircle,
   Users,
-  ArrowRight
+  ArrowRight,
+  AlertTriangle,
+  XCircle,
+  Award,
+  ThumbsUp,
+  Calendar,
+  FileCheck,
+  HeartHandshake,
+  Building,
+  Wrench
 } from "lucide-react";
 
 const allServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung", icon: HomeIcon, description: "Rundum-Sanierung mit Festpreisgarantie – ein Ansprechpartner für Ihr gesamtes Projekt in München." },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath, description: "Ihr Traumbad in 2-3 Wochen – barrierefrei, modern & mit 5 Jahren Gewährleistung." },
-  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, description: "Professionelle Küchenplanung & Montage – alles aus einer Hand, termingerecht." },
-  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, description: "Parkett, Fliesen oder Vinyl – fachgerechte Verlegung durch erfahrene Handwerker." },
-  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, description: "VDE-konforme Elektroinstallation – Sicherheit für Ihre Familie in München." },
-  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, description: "Bis zu 40% Heizkosten sparen – mit Wärmepumpe, Gas oder Fernwärme." },
-  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Flame, description: "KfW-Förderung nutzen – wir beraten Sie zu allen Fördermöglichkeiten." },
-  { id: "dachsanierung", title: "Dachsanierung", icon: HomeIcon, description: "Dämmung & Neueindeckung – Werterhalt und Energieeinsparung für Ihr Haus." },
+  { 
+    id: "komplettsanierung", 
+    title: "Komplettsanierung", 
+    icon: HomeIcon, 
+    image: completeImg,
+    description: "Rundum-Sanierung aus einer Hand",
+    price: "ab 920€/m²",
+    features: ["Alle Gewerke koordiniert", "Festpreisgarantie", "Ein Ansprechpartner"]
+  },
+  { 
+    id: "badsanierung", 
+    title: "Badsanierung", 
+    icon: Bath, 
+    image: bathroomImg,
+    description: "Ihr Traumbad in 2-3 Wochen",
+    price: "ab 9.200€",
+    features: ["Barrierefreie Optionen", "Moderne Designs", "Sanitär & Fliesen"]
+  },
+  { 
+    id: "kuechensanierung", 
+    title: "Küchensanierung", 
+    icon: UtensilsCrossed, 
+    image: kitchenImg,
+    description: "Bauarbeiten für Ihre Traumküche",
+    price: "ab 6.500€",
+    features: ["Fliesen & Elektrik", "Wasser & Abfluss", "Wanddurchbrüche"]
+  },
+  { 
+    id: "bodensanierung", 
+    title: "Bodensanierung", 
+    icon: Layers, 
+    image: floorImg,
+    description: "Parkett, Fliesen oder Vinyl",
+    price: "ab 65€/m²",
+    features: ["Fachgerechte Verlegung", "Untergrundvorbereitung", "Fußbodenheizung"]
+  },
+  { 
+    id: "elektrosanierung", 
+    title: "Elektrosanierung", 
+    icon: Zap, 
+    image: electricImg,
+    description: "VDE-konforme Installation",
+    price: "ab 85€/m²",
+    features: ["Neue Leitungen", "Smart-Home ready", "Sicherheitstechnik"]
+  },
+  { 
+    id: "heizungssanierung", 
+    title: "Heizungssanierung", 
+    icon: Flame, 
+    image: heatingImg,
+    description: "Bis zu 40% Heizkosten sparen",
+    price: "ab 12.000€",
+    features: ["Wärmepumpen", "Fußbodenheizung", "Fördermittelberatung"]
+  },
+];
+
+const painPoints = [
+  { 
+    icon: Users, 
+    title: "Handwerker sind unauffindbar",
+    description: "Wochenlange Suche, keine Rückmeldungen, endlose Absagen. Jeder kennt das Gefühl der Frustration."
+  },
+  { 
+    icon: Euro, 
+    title: "Kostenexplosion befürchtet",
+    description: "Angebote, die plötzlich doppelt so teuer werden. Nachforderungen ohne Ende. Die Angst vor dem Ruin."
+  },
+  { 
+    icon: Clock, 
+    title: "Chaos bei der Koordination",
+    description: "Elektriker wartet auf den Fliesenleger, der Maler kann nicht anfangen. Wer behält den Überblick?"
+  },
+  { 
+    icon: AlertTriangle, 
+    title: "Qualität ist Glückssache",
+    description: "Pfusch am Bau, mangelnde Sorgfalt, fehlende Gewährleistung. Und Sie bleiben auf den Problemen sitzen."
+  },
+];
+
+const solutions = [
+  {
+    icon: Handshake,
+    title: "Ein Ansprechpartner für alles",
+    description: "Ihr persönlicher Projektleiter koordiniert alle Gewerke. Sie haben nur einen Anruf zu machen, wenn Fragen auftauchen."
+  },
+  {
+    icon: FileCheck,
+    title: "Festpreisgarantie",
+    description: "Der Preis, den wir Ihnen nennen, ist der Preis, den Sie zahlen. Keine versteckten Kosten, keine bösen Überraschungen am Ende."
+  },
+  {
+    icon: Calendar,
+    title: "Termingarantie",
+    description: "Wir nennen Ihnen einen verbindlichen Fertigstellungstermin und halten ihn. Planungssicherheit für Ihr Leben."
+  },
+  {
+    icon: Shield,
+    title: "5 Jahre Gewährleistung",
+    description: "Alle Arbeiten mit voller Gewährleistung. Sollte etwas nicht stimmen, sind wir sofort für Sie da."
+  },
+];
+
+const stats = [
+  { value: "268+", label: "Abgeschlossene Projekte", icon: Building },
+  { value: "20+", label: "Jahre Erfahrung", icon: Award },
+  { value: "98%", label: "Weiterempfehlungsrate", icon: ThumbsUp },
+  { value: "40+", label: "Fachbetriebe im Netzwerk", icon: Wrench },
 ];
 
 const processSteps = [
   {
     number: 1,
-    title: "Kostenlose Anfrage stellen",
-    description: "In nur 2 Minuten ausgefüllt – Sie erhalten eine unverbindliche Kostenschätzung basierend auf 268+ Projekten in München.",
+    title: "Kostenlose Anfrage",
+    description: "Füllen Sie unser kurzes Formular aus. In nur 2 Minuten erfahren wir, was Sie brauchen. Keine Verpflichtungen, kein Spam.",
     icon: Calculator,
+    duration: "2 Minuten"
   },
   {
     number: 2,
     title: "Persönliche Beratung",
-    description: "Innerhalb von 24 Stunden meldet sich Ihr persönlicher Ansprechpartner – keine Callcenter, keine Wartezeiten.",
+    description: "Innerhalb von 24 Stunden meldet sich Ihr persönlicher Projektleiter. Er besucht Sie vor Ort und bespricht alle Details.",
     icon: MessageSquare,
+    duration: "Innerhalb 24h"
   },
   {
     number: 3,
+    title: "Festpreis-Angebot",
+    description: "Sie erhalten ein detailliertes Angebot mit garantiertem Festpreis und verbindlichem Fertigstellungstermin.",
+    icon: FileCheck,
+    duration: "Innerhalb 48h"
+  },
+  {
+    number: 4,
     title: "Sorgenfrei sanieren",
-    description: "Festpreis, fester Termin, volle Gewährleistung – Sie lehnen sich zurück, wir koordinieren alles.",
+    description: "Wir koordinieren alle Handwerker, Sie lehnen sich zurück. Ein Ansprechpartner für alle Fragen.",
     icon: Hammer,
+    duration: "Nach Vereinbarung"
   },
 ];
 
-const benefits = [
+const testimonials = [
   {
-    icon: Clock,
-    title: "Keine Handwerkersuche mehr",
-    description: "Vergessen Sie wochenlanges Telefonieren – wir haben geprüfte Partner für jedes Gewerk sofort verfügbar.",
+    name: "Familie Huber",
+    location: "München-Schwabing",
+    project: "Komplettsanierung 85m² Altbauwohnung",
+    text: "Wir haben jahrelang gezögert, weil wir Angst vor dem Chaos hatten. Mit KSHW war alles durchorganisiert. Der Projektleiter hat sich um alles gekümmert, wir mussten uns um nichts sorgen.",
+    rating: 5
   },
   {
-    icon: Euro,
-    title: "Festpreisgarantie",
-    description: "Der Preis, den wir nennen, ist der Preis, den Sie zahlen. Keine versteckten Kosten, keine bösen Überraschungen.",
+    name: "Dr. Thomas Meier",
+    location: "München-Bogenhausen",
+    project: "Badsanierung + Gäste-WC",
+    text: "Professionell, pünktlich, sauber. Das Festpreis-Angebot stimmte am Ende exakt. So stelle ich mir deutsche Handwerksarbeit vor. Würde ich jederzeit wieder machen.",
+    rating: 5
   },
   {
-    icon: Shield,
-    title: "5 Jahre Gewährleistung",
-    description: "Alle Arbeiten mit voller Gewährleistung – wir stehen zu unserer Qualität, auch nach Projektabschluss.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Ein Ansprechpartner",
-    description: "Sie haben einen festen Projektleiter – bei Fragen sind wir direkt erreichbar, nicht über ein Callcenter.",
+    name: "Immobilienverwaltung Schmidt",
+    location: "München-Sendling",
+    project: "3 Wohnungen saniert",
+    text: "Als Hausverwaltung haben wir schon viel erlebt. KSHW ist unser zuverlässiger Partner für alle Sanierungsprojekte. Die Kommunikation ist vorbildlich.",
+    rating: 5
   },
 ];
 
-const stats = [
-  { value: "268+", label: "Abgeschlossene Projekte" },
-  { value: "20+", label: "Jahre Erfahrung" },
-  { value: "98%", label: "Zufriedene Kunden" },
-];
-
-const painPoints = [
-  { id: "handwerkersuche", label: "Zuverlässige Handwerker sind schwer zu finden", icon: Users },
-  { id: "kosten", label: "Angst vor Kostenexplosion", icon: Euro },
-  { id: "zeit", label: "Keine Zeit für die Koordination", icon: Clock },
-  { id: "qualitaet", label: "Sorge um Qualität der Arbeit", icon: AlertCircle },
+const faqs = [
+  {
+    question: "Was kostet eine Komplettsanierung in München?",
+    answer: "Aus unserer Erfahrung mit 268+ Projekten: Eine Komplettsanierung in München kostet zwischen 920€ und 2.300€ pro Quadratmeter, abhängig von Ausstattungsniveau und Umfang. Eine 80m² Wohnung liegt damit zwischen 73.600€ und 184.000€. Wir erstellen Ihnen eine kostenlose, unverbindliche Kostenschätzung innerhalb von 24 Stunden."
+  },
+  {
+    question: "Was kostet eine Badsanierung in München?",
+    answer: "Eine Badsanierung in München beginnt bei etwa 9.200€ für ein kleines Bad (4m²) mit Standardausstattung. Ein mittelgroßes Bad (6-8m²) mit gehobener Ausstattung liegt bei 15.000-25.000€. Luxusbäder mit Wellness-Elementen können 35.000€ und mehr kosten. Der genaue Preis hängt von Ihren Wünschen ab."
+  },
+  {
+    question: "Wie lange dauert eine Sanierung?",
+    answer: "Die Dauer hängt vom Umfang ab: Badsanierung 2-3 Wochen, Küchenbauarbeiten 1-2 Wochen, Komplettsanierung 6-12 Wochen je nach Größe. Dank unseres eingespielten Handwerkernetzwerks arbeiten wir schneller als Einzelhandwerker. Wir nennen Ihnen einen verbindlichen Endtermin."
+  },
+  {
+    question: "Was bedeutet Festpreisgarantie?",
+    answer: "Festpreisgarantie bedeutet: Der Preis in unserem Angebot ist der Preis, den Sie am Ende zahlen. Keine versteckten Kosten, keine Nachforderungen, keine bösen Überraschungen. Ausgenommen sind nur Änderungswünsche Ihrerseits oder unvorhersehbare Bausubstanzprobleme, die wir vorher dokumentieren."
+  },
+  {
+    question: "Sind Ihre Handwerker qualifiziert?",
+    answer: "Ja, alle unsere Partnerfirmen sind geprüfte Fachbetriebe aus München und Umgebung. Meisterpflichtige Gewerke werden ausschließlich von qualifizierten Meisterbetrieben ausgeführt. Wir arbeiten nur mit Partnern zusammen, die unsere strengen Qualitätsstandards erfüllen."
+  },
+  {
+    question: "In welchen Stadtteilen sind Sie tätig?",
+    answer: "Wir sind in ganz München und Umgebung tätig: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Neuperlach, Solln, Hadern und alle anderen Stadtteile. Im Umland: Dachau, Starnberg, Germering, Fürstenfeldbruck, Freising, Garching und weitere Gemeinden."
+  },
+  {
+    question: "Gibt es Fördermittel für Sanierungen?",
+    answer: "Ja! Für energetische Sanierungen gibt es attraktive Fördermittel: KfW-Förderung bis zu 45.000€ pro Wohneinheit, BAFA-Zuschüsse für Heizungsaustausch, Münchner Förderprogramm Klimaneutrale Gebäude. Wir beraten Sie kostenlos zu allen Fördermöglichkeiten."
+  },
+  {
+    question: "Kann ich während der Sanierung wohnen bleiben?",
+    answer: "Das hängt vom Umfang ab. Bei einer Badsanierung können Sie meist wohnen bleiben - wir richten ein Provisorium ein. Bei Komplettsanierungen empfehlen wir oft einen temporären Auszug, um die Arbeiten schneller und effizienter durchzuführen. Wir beraten Sie individuell."
+  },
 ];
 
 const urgencyOptions = [
@@ -130,18 +264,11 @@ const urgencyOptions = [
   { id: "planung", label: "Ich plane erst mal", sublabel: "Mehr als 3 Monate" },
 ];
 
-const painPointSolutions: Record<string, string> = {
-  handwerkersuche: "Wir haben ein Netzwerk aus 40+ geprüften Fachbetrieben in München. Kein Telefonieren mehr für Sie.",
-  kosten: "Festpreisgarantie: Der Preis, den wir nennen, ist der Preis, den Sie zahlen. Keine versteckten Kosten.",
-  zeit: "Ein Ansprechpartner koordiniert alles. Sie lehnen sich zurück, wir kümmern uns um den Rest.",
-  qualitaet: "5 Jahre Gewährleistung auf alle Arbeiten. 98% unserer Kunden empfehlen uns weiter.",
-};
-
 function MiniLeadFunnel() {
   const [step, setStep] = useState(1);
   const [postalCode, setPostalCode] = useState("");
   const [city, setCity] = useState("");
-  const [problem, setProblem] = useState("");
+  const [selectedService, setSelectedService] = useState("");
   const [urgency, setUrgency] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -151,14 +278,14 @@ function MiniLeadFunnel() {
   const { toast } = useToast();
 
   const handleSubmit = () => {
-    if (!postalCode || !city || !problem || !urgency || !firstName || !lastName || !contact || !address) return;
+    if (!postalCode || !city || !selectedService || !urgency || !firstName || !lastName || !contact || !address) return;
     
     const isEmail = contact.includes("@");
     const params = new URLSearchParams({
       postalCode,
       city,
       address,
-      problem,
+      service: selectedService,
       urgency,
       name: `${firstName} ${lastName}`,
       ...(isEmail ? { email: contact } : { phone: contact }),
@@ -175,93 +302,95 @@ function MiniLeadFunnel() {
   const progressPercent = (step / 3) * 100;
 
   return (
-    <section className="py-4 lg:py-6 bg-gradient-to-b from-primary/5 to-background">
+    <section id="anfrage-form" className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-            Starten Sie jetzt Ihre Sanierung
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+            Kostenlos & Unverbindlich
+          </span>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            Jetzt Ihre kostenlose Beratung sichern
           </h2>
-          <p className="text-muted-foreground">
-            3 kurze Fragen, dann erhalten Sie Ihre persönliche Beratung
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            In nur 3 Schritten zur persönlichen Beratung. Innerhalb von 24 Stunden meldet sich Ihr Ansprechpartner.
           </p>
         </div>
 
-        <Card className="p-6 lg:p-8">
-          <div className="mb-6">
-            <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
-              <span>Schritt {step} von 3</span>
-              <span>{Math.round(progressPercent)}%</span>
+        <Card className="p-6 lg:p-10 shadow-lg">
+          <div className="mb-8">
+            <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
+              <span className="font-medium">Schritt {step} von 3</span>
+              <span>{Math.round(progressPercent)}% abgeschlossen</span>
             </div>
-            <Progress value={progressPercent} className="h-2" />
+            <Progress value={progressPercent} className="h-3" />
           </div>
 
           {step === 1 && (
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-center">
-                <h3 className="text-lg font-semibold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   Wo befindet sich Ihr Objekt?
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  Ihr Standort hilft uns bei der Kostenschätzung
+                <p className="text-muted-foreground">
+                  Ihr Standort hilft uns, die richtigen Handwerker zu finden
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                <Input
-                  placeholder="PLZ (z.B. 80331)"
-                  value={postalCode}
-                  onChange={(e) => setPostalCode(e.target.value)}
-                  maxLength={5}
-                  data-testid="input-mini-postal-code"
-                />
-                <Input
-                  placeholder="Stadt (z.B. München)"
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                  data-testid="input-mini-city"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="postal-code" className="text-sm font-medium">Postleitzahl</Label>
+                  <Input
+                    id="postal-code"
+                    placeholder="z.B. 80331"
+                    value={postalCode}
+                    onChange={(e) => setPostalCode(e.target.value)}
+                    maxLength={5}
+                    className="mt-1"
+                    data-testid="input-mini-postal-code"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="city" className="text-sm font-medium">Stadt</Label>
+                  <Input
+                    id="city"
+                    placeholder="z.B. München"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="mt-1"
+                    data-testid="input-mini-city"
+                  />
+                </div>
               </div>
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-semibold mb-2">
-                  Was bereitet Ihnen aktuell die größten Sorgen?
+              
+              <div className="text-center">
+                <h3 className="text-xl font-bold mb-2">
+                  Welche Sanierung planen Sie?
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  Wählen Sie Ihre größte Herausforderung
+                <p className="text-muted-foreground">
+                  Wählen Sie den passenden Service
                 </p>
               </div>
-              <RadioGroup value={problem} onValueChange={setProblem} className="space-y-3">
-                {painPoints.map((point) => (
+              <RadioGroup value={selectedService} onValueChange={setSelectedService} className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+                {allServices.map((service) => (
                   <Label
-                    key={point.id}
-                    htmlFor={`pain-${point.id}`}
-                    className={`flex items-center gap-4 p-4 rounded-md border cursor-pointer transition-colors ${
-                      problem === point.id
-                        ? "border-primary bg-primary/5"
+                    key={service.id}
+                    htmlFor={`service-${service.id}`}
+                    className={`flex flex-col items-center gap-2 p-4 rounded-lg border cursor-pointer transition-all ${
+                      selectedService === service.id
+                        ? "border-primary bg-primary/5 shadow-md"
                         : "border-border hover-elevate"
                     }`}
-                    data-testid={`radio-pain-${point.id}`}
+                    data-testid={`radio-service-${service.id}`}
                   >
-                    <RadioGroupItem value={point.id} id={`pain-${point.id}`} />
-                    <point.icon className="w-5 h-5 text-primary" />
-                    <span className="font-medium">{point.label}</span>
+                    <RadioGroupItem value={service.id} id={`service-${service.id}`} className="sr-only" />
+                    <service.icon className={`w-8 h-8 ${selectedService === service.id ? 'text-primary' : 'text-muted-foreground'}`} />
+                    <span className="font-medium text-center text-sm">{service.title}</span>
                   </Label>
                 ))}
               </RadioGroup>
-              {problem && (
-                <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-md border border-primary/20">
-                  <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-primary">Unsere Lösung für Sie:</p>
-                    <p className="text-sm text-muted-foreground">{painPointSolutions[problem]}</p>
-                  </div>
-                </div>
-              )}
-              <div className="text-center text-sm text-muted-foreground">
-                <Users className="w-4 h-4 inline mr-1" />
-                Sie sind nicht allein: <strong>268+ Münchner</strong> hatten dieselben Sorgen
-              </div>
+              
               <Button
                 onClick={() => setStep(2)}
-                disabled={!problem || !postalCode || !city}
+                disabled={!selectedService || !postalCode || !city}
                 className="w-full"
                 size="lg"
                 data-testid="button-funnel-step1"
@@ -273,48 +402,49 @@ function MiniLeadFunnel() {
           )}
 
           {step === 2 && (
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-center">
-                <h3 className="text-lg font-semibold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   Wie dringend ist Ihr Projekt?
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground">
                   Je früher Sie anfragen, desto schneller können wir Ihnen helfen
                 </p>
               </div>
-              <RadioGroup value={urgency} onValueChange={setUrgency} className="space-y-3">
+              <RadioGroup value={urgency} onValueChange={setUrgency} className="space-y-4">
                 {urgencyOptions.map((option) => (
                   <Label
                     key={option.id}
                     htmlFor={`urgency-${option.id}`}
-                    className={`flex items-center gap-4 p-4 rounded-md border cursor-pointer transition-colors ${
+                    className={`flex items-center gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
                       urgency === option.id
-                        ? "border-primary bg-primary/5"
+                        ? "border-primary bg-primary/5 shadow-md"
                         : "border-border hover-elevate"
                     }`}
                     data-testid={`radio-urgency-${option.id}`}
                   >
                     <RadioGroupItem value={option.id} id={`urgency-${option.id}`} />
                     <div>
-                      <span className="font-medium block">{option.label}</span>
+                      <span className="font-semibold block">{option.label}</span>
                       <span className="text-sm text-muted-foreground">{option.sublabel}</span>
                     </div>
                   </Label>
                 ))}
               </RadioGroup>
               {urgency === "sofort" && (
-                <div className="flex items-start gap-3 p-4 bg-orange-500/10 rounded-md border border-orange-500/20">
-                  <Clock className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-4 bg-orange-500/10 rounded-lg border border-orange-500/20">
+                  <Clock className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
                   <p className="text-sm">
-                    <strong>Eilig?</strong> Wir haben aktuell Kapazitäten frei und können sofort starten.
+                    <strong>Gute Nachricht:</strong> Wir haben aktuell freie Kapazitäten und können zeitnah mit Ihrem Projekt starten.
                   </p>
                 </div>
               )}
-              <div className="flex gap-3">
+              <div className="flex gap-4">
                 <Button
                   variant="outline"
                   onClick={() => setStep(1)}
                   className="flex-1"
+                  size="lg"
                   data-testid="button-funnel-back2"
                 >
                   Zurück
@@ -334,17 +464,17 @@ function MiniLeadFunnel() {
           )}
 
           {step === 3 && (
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-center">
-                <h3 className="text-lg font-semibold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   Wie können wir Sie erreichen?
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground">
                   In 24 Stunden meldet sich Ihr persönlicher Ansprechpartner
                 </p>
               </div>
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-5">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="funnel-firstname" className="text-sm font-medium">Vorname</Label>
                     <Input
@@ -380,7 +510,7 @@ function MiniLeadFunnel() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="funnel-address" className="text-sm font-medium">Adresse der Baustelle</Label>
+                  <Label htmlFor="funnel-address" className="text-sm font-medium">Adresse des Objekts</Label>
                   <Input
                     id="funnel-address"
                     placeholder="z.B. Marienplatz 1"
@@ -394,17 +524,18 @@ function MiniLeadFunnel() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-md border border-primary/20">
+              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
                 <Shield className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
-                  Ihre Daten sind bei uns sicher. Kein Spam, kein Weiterverkauf.
+                  <strong>Ihre Daten sind sicher:</strong> Kein Spam, kein Weiterverkauf. Wir nutzen Ihre Daten ausschließlich zur Kontaktaufnahme.
                 </p>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-4">
                 <Button
                   variant="outline"
                   onClick={() => setStep(2)}
                   className="flex-1"
+                  size="lg"
                   data-testid="button-funnel-back3"
                 >
                   Zurück
@@ -423,68 +554,32 @@ function MiniLeadFunnel() {
             </div>
           )}
         </Card>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-600" />
+            <span>100% kostenlos</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-600" />
+            <span>Unverbindlich</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-600" />
+            <span>Antwort in 24h</span>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
-const faqs = [
-  {
-    question: "Was kostet eine Komplettsanierung in München?",
-    answer: "Aus unserer Erfahrung mit 268+ Projekten in München: Eine Badsanierung beginnt ab ca. 8.000€, eine Küchensanierung ab ca. 12.000€ und eine Komplettsanierung ab ca. 800€/m². Der genaue Preis hängt von Ihren Wünschen ab – wir erstellen Ihnen eine kostenlose, unverbindliche Kostenschätzung innerhalb von 24 Stunden.",
-  },
-  {
-    question: "Wie lange dauert eine Sanierung in München?",
-    answer: "Dank unseres eingespielten Handwerkernetzwerks arbeiten wir schneller als Einzelhandwerker: Badsanierung 2-3 Wochen, Küchensanierung 1-2 Wochen, Komplettsanierung 6-12 Wochen je nach Größe. Wir nennen Ihnen einen verbindlichen Endtermin – und halten ihn.",
-  },
-  {
-    question: "Warum sollte ich KSHW München beauftragen statt einzelne Handwerker?",
-    answer: "Sie sparen Zeit, Nerven und oft auch Geld: Statt 5-8 verschiedene Handwerker zu koordinieren, haben Sie einen Ansprechpartner. Wir übernehmen Terminkoordination, Qualitätskontrolle und Gewährleistung. 98% unserer Kunden empfehlen uns weiter – weil alles einfach funktioniert.",
-  },
-  {
-    question: "Sind die Handwerker von KSHW qualifiziert?",
-    answer: "Ja, alle unsere Partnerfirmen sind geprüfte Fachbetriebe aus München und Umgebung. Meisterpflichtige Gewerke werden von qualifizierten Handwerkern ausgeführt. Wir arbeiten nur mit Partnern zusammen, die unsere Qualitätsstandards erfüllen – das ist unsere Garantie an Sie.",
-  },
-  {
-    question: "Gibt es eine Garantie auf die Sanierungsarbeiten?",
-    answer: "Selbstverständlich: Alle Arbeiten werden mit mindestens 5 Jahren Gewährleistung ausgeführt. Bei Materialien wie Sanitärkeramik, Armaturen oder Heizsystemen gelten zusätzlich die Herstellergarantien. Sollte nach der Sanierung etwas nicht stimmen, sind wir sofort für Sie da.",
-  },
-  {
-    question: "In welchen Stadtteilen von München sind Sie tätig?",
-    answer: "Wir sind in ganz München und Umgebung tätig: Pasing, Laim, Sendling, Schwabing, Bogenhausen, Trudering, Neuperlach, Solln, Hadern und alle anderen Stadtteile. Im Umland bedienen wir Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching und weitere Gemeinden.",
-  },
-  {
-    question: "Welche Fördermittel gibt es für Sanierungen in München?",
-    answer: "Für energetische Sanierungen in München gibt es attraktive Fördermittel: KfW-Förderung bis zu 45.000€ pro Wohneinheit, BAFA-Zuschüsse für Heizungsaustausch, und das Münchner Förderprogramm Klimaneutrale Gebäude. Wir beraten Sie kostenlos zu allen Fördermöglichkeiten und helfen bei der Antragstellung.",
-  },
-  {
-    question: "Kann ich während der Sanierung in meiner Wohnung wohnen bleiben?",
-    answer: "Das hängt vom Umfang der Sanierung ab. Bei einer Badsanierung können Sie meist wohnen bleiben – wir richten ein Provisorium ein. Bei Komplettsanierungen empfehlen wir oft einen temporären Auszug, um die Arbeiten schneller und effizienter durchzuführen. Wir beraten Sie individuell.",
-  },
-  {
-    question: "Was ist der Unterschied zwischen Renovierung und Sanierung?",
-    answer: "Eine Renovierung umfasst meist optische Verbesserungen wie Streichen, Tapezieren oder neue Böden. Eine Sanierung geht tiefer: Sie beinhaltet die Erneuerung von Installationen (Elektrik, Sanitär, Heizung), Bausubstanzverbesserung und oft energetische Maßnahmen. KSHW München ist Ihr Spezialist für beides.",
-  },
-  {
-    question: "Arbeitet KSHW München auch an Altbauten?",
-    answer: "Ja, Altbausanierung ist eine unserer Kernkompetenzen! München hat viele wunderschöne Altbauten, die besondere Expertise erfordern. Wir kennen die typischen Herausforderungen: Stuck erhalten, Kastenfenster aufarbeiten, alte Elektrik erneuern, Bäder modernisieren – alles mit Respekt für den historischen Charakter.",
-  },
-  {
-    question: "Wie läuft die Erstberatung bei KSHW München ab?",
-    answer: "Die Erstberatung ist kostenlos und unverbindlich. Ein Projektleiter kommt zu Ihnen nach Hause, besichtigt die Räumlichkeiten, bespricht Ihre Wünsche und macht sich ein Bild vom Aufwand. Innerhalb von 48 Stunden erhalten Sie ein detailliertes Festpreis-Angebot – ohne versteckte Kosten.",
-  },
-  {
-    question: "Bietet KSHW München auch Notfall-Reparaturen an?",
-    answer: "Für unsere Bestandskunden bieten wir einen schnellen Reparaturservice bei Notfällen wie Rohrbrüchen, Heizungsausfällen oder Elektroproblemen. Neue Kunden können über unsere Handwerkervermittlung schnell einen zuverlässigen Fachbetrieb finden.",
-  },
-];
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Sanierung München Kosten 2024 | Ab 920€/m² Festpreis"
-        description="Was kostet Sanierung München? Badsanierung ab 9.200€, Komplettsanierung ab 920€/m², Altbau ab 400€/m². Festpreis-Garantie. Kostenlose Beratung in 24h!"
+        title="Sanierung München | Festpreis ab 920€/m² | KSHW München"
+        description="Was kostet Sanierung München? Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ Projekte, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h!"
         keywords="Sanierung München Kosten, Badsanierung München Preis, Komplettsanierung München, Haussanierung München, Wohnungssanierung, Küchensanierung, Altbausanierung, Kernsanierung München"
         canonicalPath="/"
         schema={generateFaqSchema(faqs)}
@@ -492,416 +587,331 @@ export default function Home() {
       <SiteHeader />
 
       <main id="main-content">
-      <section className="relative pt-16 min-h-[85vh] lg:min-h-[75vh] flex items-center">
-        <div className="absolute inset-0 pt-16">
-          <img 
-            src={houseBeforeAfter} 
-            alt="Haussanierung Vorher-Nachher: Links alt und renovierungsbedürftig, rechts komplett saniert"
-            className="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-            data-testid="img-hero-bathroom"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30 lg:to-transparent" />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-20 w-full">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
-              <Shield className="w-4 h-4 text-yellow-400" />
-              <span className="text-sm font-medium text-white">Im Partnernetzwerk</span>
+        {/* Hero Section */}
+        <section className="relative pt-16 min-h-[90vh] lg:min-h-[85vh] flex items-center">
+          <div className="absolute inset-0 pt-16">
+            <img 
+              src={houseBeforeAfter} 
+              alt="Professionelle Haussanierung: Links unsaniert, rechts komplett renoviert - KSHW München"
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              data-testid="img-hero-main"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+          </div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24 w-full">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                <span className="text-white text-sm font-medium">268+ zufriedene Kunden in München</span>
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Sanierung München
+                <br />
+                <span className="text-primary">ohne Stress & Chaos</span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
+                Schluss mit wochenlanger Handwerkersuche, Kostenexplosionen und Koordinationschaos. 
+                <strong className="text-white"> Ein Ansprechpartner. Festpreisgarantie. Termingarantie.</strong>
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <a href="#anfrage-form">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8 py-6 w-full sm:w-auto" data-testid="button-hero-cta">
+                    Kostenlose Beratung sichern
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </a>
+                <a href="tel:+4915212274043">
+                  <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 w-full sm:w-auto backdrop-blur-sm" data-testid="button-hero-phone">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 122 740 43
+                  </Button>
+                </a>
+              </div>
+              
+              <div className="flex flex-wrap gap-6 text-white/80">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Festpreisgarantie</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>5 Jahre Gewährleistung</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Beratung in 24h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-12 bg-primary text-white">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-sm lg:text-base opacity-80">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pain Points Section */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 rounded-full text-sm font-medium mb-4">
+                Kennen Sie das?
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Sanierung in München - ein Albtraum?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Sie sind nicht allein. Diese Probleme kennen wir von hunderten Kunden.
+              </p>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-              Sanierung München
-              <span className="block text-2xl lg:text-3xl font-normal mt-2 text-white/90">
-                Ihr Zuhause in sicheren Händen
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+              {painPoints.map((point, index) => (
+                <Card key={index} className="p-6 border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-900/10">
+                  <div className="flex gap-4">
+                    <div className="shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                        <point.icon className="w-6 h-6 text-red-600 dark:text-red-400" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold mb-2 text-red-900 dark:text-red-300">{point.title}</h3>
+                      <p className="text-muted-foreground">{point.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Solution Section */}
+        <section className="py-16 lg:py-24 bg-primary/5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full text-sm font-medium mb-4">
+                Die Lösung
               </span>
-            </h1>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                KSHW München macht Sanierung einfach
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Ein Ansprechpartner koordiniert alles. Sie lehnen sich zurück.
+              </p>
+            </div>
             
-            <p className="text-lg lg:text-xl text-white/85 mb-8 leading-relaxed">
-              Schluss mit Handwerkersuche und Terminproblemen. <strong className="text-white">Festpreisgarantie</strong>, ein persönlicher Ansprechpartner und <strong className="text-white">5 Jahre Gewährleistung</strong> – das ist KSHW München.
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+              {solutions.map((solution, index) => (
+                <Card key={index} className="p-6 border-green-200 dark:border-green-900/50 bg-white dark:bg-card">
+                  <div className="flex gap-4">
+                    <div className="shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                        <solution.icon className="w-6 h-6 text-green-600 dark:text-green-400" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold mb-2">{solution.title}</h3>
+                      <p className="text-muted-foreground">{solution.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Unsere Sanierungsleistungen
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Von der Badsanierung bis zur Komplettsanierung - alles aus einer Hand.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allServices.map((service) => (
+                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                  <Card className="overflow-hidden hover-elevate cursor-pointer h-full" data-testid={`card-service-${service.id}`}>
+                    <div className="aspect-video relative">
+                      <img 
+                        src={service.image} 
+                        alt={`${service.title} München - KSHW`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="flex items-center gap-2 text-white">
+                          <service.icon className="w-5 h-5" />
+                          <span className="font-bold text-lg">{service.title}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <CardContent className="p-5">
+                      <p className="text-muted-foreground mb-3">{service.description}</p>
+                      <div className="text-xl font-bold text-primary mb-3">{service.price}</div>
+                      <ul className="space-y-1">
+                        {service.features.map((feature, i) => (
+                          <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <CheckCircle className="w-4 h-4 text-green-600" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                So einfach funktioniert's
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                In 4 Schritten von der Anfrage zur fertigen Sanierung
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {processSteps.map((step) => (
+                <Card key={step.number} className="p-6 relative">
+                  <div className="absolute -top-4 left-6 w-8 h-8 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">
+                    {step.number}
+                  </div>
+                  <div className="pt-4">
+                    <step.icon className="w-10 h-10 text-primary mb-4" />
+                    <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{step.description}</p>
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                      {step.duration}
+                    </span>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Das sagen unsere Kunden
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                268+ zufriedene Kunden in München und Umgebung
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
+                  <div className="border-t pt-4">
+                    <p className="font-bold">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                    <p className="text-xs text-primary mt-1">{testimonial.project}</p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section with Funnel Form */}
+        <MiniLeadFunnel />
+
+        {/* FAQ Section */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Häufige Fragen zur Sanierung
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Antworten auf die wichtigsten Fragen unserer Kunden
+              </p>
+            </div>
+            
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`} className="bg-card border rounded-lg px-6">
+                  <AccordionTrigger className="text-left font-semibold hover:no-underline py-5">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="py-16 lg:py-24 bg-primary text-white">
+          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+              Bereit für Ihre stressfreie Sanierung?
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              Lassen Sie sich jetzt kostenlos beraten. Ihr persönlicher Ansprechpartner meldet sich innerhalb von 24 Stunden.
             </p>
-            
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-10">
-              <Link href="/anfrage">
-                <Button size="lg" className="text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500 shadow-lg" data-testid="button-hero-cta">
-                  Kostenlos anfragen
-                  <ChevronRight className="w-5 h-5 ml-2" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#anfrage-form">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" data-testid="button-final-cta">
+                  Jetzt kostenlos anfragen
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-              </Link>
+              </a>
               <a href="tel:+4915212274043">
-                <Button size="lg" variant="outline" className="text-lg w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6" data-testid="button-final-phone">
                   <Phone className="w-5 h-5 mr-2" />
                   0152 122 740 43
                 </Button>
               </a>
             </div>
-            
-            <div className="grid grid-cols-3 gap-4 lg:gap-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center lg:text-left">
-                  <p className="text-2xl lg:text-3xl font-bold text-white">{stat.value}</p>
-                  <p className="text-xs lg:text-sm text-white/70">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent h-16 lg:h-24" />
-      </section>
-
-      <section className="py-8 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 text-sm">
-            <span className="font-medium text-white">Unsere Markenpartner:</span>
-            <span className="text-white/80">Villeroy & Boch</span>
-            <span className="text-white/80">Hansgrohe</span>
-            <span className="text-white/80">Dornbracht</span>
-            <span className="text-white/80">Gira</span>
-            <span className="text-white/80">Geberit</span>
-            <span className="text-white/80">Duravit</span>
-            <span className="text-white/80">Ideal Standard</span>
-          </div>
-        </div>
-      </section>
-
-      <MiniLeadFunnel />
-
-      <section className="py-4 lg:py-6">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Was möchten Sie in München sanieren lassen?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Von der <strong>Badsanierung</strong> bis zur <strong>Komplettsanierung</strong> – <strong>268+ Münchner Familien</strong> haben uns bereits vertraut. <strong>Festpreis-Garantie, fester Termin, 5 Jahre Gewährleistung.</strong>
+            <p className="mt-8 text-sm opacity-70">
+              Mo-Fr: 8:00-16:30 Uhr | Zielstattstr. 9, 81379 München
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {allServices.map((service) => (
-              <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                <Card 
-                  className="p-6 text-center cursor-pointer hover-elevate transition-transform hover:-translate-y-1 h-full"
-                  data-testid={`card-service-${service.id}`}
-                >
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-sm mb-2">{service.title}</h3>
-                  <p className="text-xs text-muted-foreground">{service.description}</p>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-card">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Wie läuft eine Sanierung mit KSHW München ab?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              <strong>Transparent, planbar, sicher:</strong> Während andere Anbieter wochenlang auf Angebote warten lassen, erhalten Sie bei uns <strong>innerhalb von 24 Stunden</strong> Ihre persönliche Kostenschätzung.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            {processSteps.map((step) => (
-              <div key={step.number} className="text-center">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <step.icon className="w-10 h-10 text-primary" />
-                </div>
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center">
-                    {step.number}
-                  </span>
-                  <h3 className="text-xl font-bold">{step.title}</h3>
-                </div>
-                <p className="text-muted-foreground">{step.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/termin">
-              <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-process-booking">
-                <Calendar className="w-5 h-5 mr-2" />
-                24 Std. Online Termin
-              </Button>
-            </Link>
-            <Link href="/anfrage">
-              <Button size="lg" className="text-lg" data-testid="button-process-cta">
-                Zum Anfrageformular
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Was macht KSHW München so vertrauenswürdig?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              <strong>268+ erfolgreiche Projekte, 98% Weiterempfehlung, 20+ Jahre Erfahrung</strong> – wir geben Ihnen schriftliche Garantien, die andere nicht bieten:
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-card">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Handshake className="w-8 h-8 text-primary" />
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Brauchen Sie nur einen <strong>Handwerker in München</strong>?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Sie brauchen nur einen <strong>Maler, Elektriker oder Fliesenleger</strong>? Kein Problem – wir vermitteln Ihnen <strong>geprüfte Fachbetriebe</strong> aus München. Alle Partner sind von uns persönlich ausgewählt und liefern nachweislich Qualitätsarbeit.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <Link href="/gewerke?trade=maler">
-              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-maler">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                  <PaintBucket className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-sm font-medium">Maler</p>
-              </Card>
-            </Link>
-            <Link href="/gewerke?trade=elektriker">
-              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-elektriker">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                  <Plug className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-sm font-medium">Elektriker</p>
-              </Card>
-            </Link>
-            <Link href="/gewerke?trade=sanitaer">
-              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-sanitaer">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                  <Droplets className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-sm font-medium">Sanitär</p>
-              </Card>
-            </Link>
-            <Link href="/gewerke?trade=heizung">
-              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-heizung">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                  <Thermometer className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-sm font-medium">Heizung</p>
-              </Card>
-            </Link>
-            <Link href="/gewerke?trade=fliesenleger">
-              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-fliesenleger">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                  <Layers className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-sm font-medium">Fliesenleger</p>
-              </Card>
-            </Link>
-            <Link href="/gewerke?trade=schreiner">
-              <Card className="p-4 text-center hover-elevate cursor-pointer" data-testid="card-trade-schreiner">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                  <Wrench className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-sm font-medium">Schreiner</p>
-              </Card>
-            </Link>
-          </div>
-          <div className="text-center mt-8">
-            <p className="text-muted-foreground mb-4">
-              Alle unsere Partnerfirmen sind geprüfte Handwerker aus München und Umgebung mit nachgewiesener Qualität und Zuverlässigkeit.
-            </p>
-            <Link href="/gewerke">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white border-orange-500" data-testid="button-partner-cta">
-                Handwerker-Vermittlung anfragen
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Unsere Bilanz: 268+ zufriedene Kunden in München
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-5xl lg:text-6xl font-bold mb-2">{stat.value}</p>
-                <p className="text-xl opacity-90">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6">
-        <div className="max-w-6xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ihre Fragen – unsere ehrlichen Antworten
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              <strong>Was kostet eine Sanierung in München wirklich?</strong> Wie lange dauert es? Aus 268+ Projekten teilen wir echte Erfahrungswerte:
-            </p>
-          </div>
-          <Accordion type="single" collapsible className="w-full space-y-1">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b-0 bg-card rounded-md px-4">
-                <AccordionTrigger className="text-left font-semibold py-3">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-3">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-card">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Bereit für Ihre Sanierung in München?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            <strong>Kostenlose Erstberatung</strong>, unverbindliches Festpreis-Angebot, <strong>Antwort in 24 Stunden</strong>. Wir sind vor Ort in München, Pasing, Schwabing, Sendling, Dachau, Starnberg und Umgebung.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/termin">
-              <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
-                <Calendar className="w-5 h-5 mr-2" />
-                24 Std. Online Termin
-              </Button>
-            </Link>
-            <Link href="/anfrage">
-              <Button size="lg" className="text-lg px-8" data-testid="button-cta-section">
-                Kostenlose Anfrage starten
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-6 lg:py-8">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
-            Komplettsanierung München – von Altbau bis Neubau, alles aus einer Hand
-          </h2>
-          
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-            <p>
-              <strong>KSHW München</strong> – Ihr Partner für <strong>Komplettsanierungen in München</strong>. Badsanierung, Küchensanierung, Haussanierung, Dachsanierung und energetische Sanierung aus einer Hand. Kostenlose Beratung, faire Festpreise, Termingarantie.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-4 my-6">
-              <div className="bg-muted/30 p-4 rounded-md">
-                <h3 className="text-lg font-bold text-foreground mb-2">Das bekommen Sie bei uns</h3>
-                <ul className="text-sm space-y-1">
-                  <li>Komplettsanierung Haus & Wohnung</li>
-                  <li>Badsanierung & Badumbau</li>
-                  <li>Küchensanierung & Küchenumbau</li>
-                  <li>Dachsanierung & Dachreparatur</li>
-                  <li>Energetische Sanierung</li>
-                  <li>Bodensanierung & Fliesen</li>
-                </ul>
-              </div>
-              <div className="bg-muted/30 p-4 rounded-md">
-                <h3 className="text-lg font-bold text-foreground mb-2">Darum vertrauen uns Münchner</h3>
-                <ul className="text-sm space-y-1">
-                  <li>Festpreis-Garantie</li>
-                  <li>Alle Gewerke aus einer Hand</li>
-                  <li>Lokale Münchner Handwerker</li>
-                  <li>Schnelle Terminvergabe</li>
-                  <li>Kostenlose Vor-Ort-Beratung</li>
-                  <li>5 Jahre Gewährleistung</li>
-                </ul>
-              </div>
-            </div>
-
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Sanierung in München: Warum jetzt der richtige Zeitpunkt ist</h3>
-            <p>
-              München wächst stetig und die Immobilienpreise bleiben auf hohem Niveau. Eine professionelle Sanierung steigert den Wert Ihrer Immobilie erheblich – ob für den Eigenbedarf oder als Kapitalanlage. Mit den aktuellen <strong>Förderprogrammen für energetische Sanierung</strong> (KfW, BAFA, Münchner Klimaschutzprogramm) war der Zeitpunkt für eine Sanierung nie günstiger.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Badsanierung München: Ihr Traumbad in 2-3 Wochen</h3>
-            <p>
-              Das Bad ist einer der wichtigsten Räume im Haus. Eine moderne <strong>Badsanierung in München</strong> umfasst: neue Fliesen, Walk-in-Dusche, bodengleiche Dusche, barrierefreie Gestaltung, Wellness-Oase mit Regendusche, hochwertige Sanitärkeramik von Marken wie Villeroy & Boch, Duravit und Geberit. Wir planen und realisieren Ihr neues Bad schlüsselfertig – von der Demontage bis zur Endreinigung.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Küchensanierung München: Die Küche als Herzstück des Hauses</h3>
-            <p>
-              Eine neue Küche verändert Ihr Leben. Unsere <strong>Küchensanierung in München</strong> beinhaltet: professionelle Küchenplanung, Elektroinstallation, Wasseranschlüsse, Fliesenspiegel, Montage Ihrer Traumküche. Wir arbeiten mit allen führenden Küchenherstellern zusammen und koordinieren alle Gewerke, damit Sie stressfrei zu Ihrer neuen Küche kommen.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Energetische Sanierung München: Heizkosten senken, Wert steigern</h3>
-            <p>
-              Mit einer <strong>energetischen Sanierung</strong> sparen Sie langfristig Heizkosten und steigern den Wert Ihrer Immobilie. Unsere Leistungen: Wärmedämmung, neue Fenster, Heizungsaustausch (Wärmepumpe, Gas-Brennwert, Pelletheizung), Photovoltaik-Vorbereitung, Lüftungsanlagen mit Wärmerückgewinnung. Wir beraten Sie zu allen Fördermitteln und übernehmen die Antragstellung.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Altbausanierung München: Charme erhalten, Komfort schaffen</h3>
-            <p>
-              Münchens Altbauten sind architektonische Schätze. Unsere <strong>Altbausanierung</strong> verbindet historischen Charme mit modernem Wohnkomfort: Stuck restaurieren, Kastenfenster aufarbeiten oder erneuern, Parkettböden schleifen, Elektrik erneuern, Bäder modernisieren, Küchen einbauen – alles mit Respekt für die Bausubstanz und den Denkmalschutz.
-            </p>
-            
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unsere Einsatzgebiete in München und Umgebung</h3>
-            <p>
-              Wir sind in ganz München und dem Umland für Sie da: <strong>Pasing, Laim, Sendling, Schwabing, Bogenhausen, Trudering, Riem, Neuperlach, Solln, Hadern, Giesing, Au-Haidhausen, Maxvorstadt, Ludwigsvorstadt, Altstadt-Lehel, Moosach, Milbertshofen, Feldmoching</strong> und allen weiteren Stadtteilen. Im Münchner Umland bedienen wir <strong>Dachau, Karlsfeld, Germering, Olching, Gröbenzell, Puchheim, Fürstenfeldbruck, Freising, Garching, Unterschleißheim, Oberschleißheim, Neubiberg, Ottobrunn, Unterhaching, Taufkirchen, Haar, Grasbrunn, Vaterstetten, Baldham, Starnberg, Gauting, Planegg, Gräfelfing, Unterföhring, Ismaning</strong> und viele weitere Gemeinden.
-            </p>
-
-            </div>
-
-          <div className="text-center mt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/termin">
-                <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-content-booking">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  24 Std. Online Termin
-                </Button>
-              </Link>
-              <Link href="/anfrage">
-                <Button size="lg" className="text-lg" data-testid="button-content-cta">
-                  Kostenlose Anfrage starten
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-            </div>
-            <p className="text-sm text-muted-foreground mt-3">
-              Antwort innerhalb von 48 Stunden
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <SeoFooter />
-      </main>
     </div>
   );
 }
