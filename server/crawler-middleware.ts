@@ -289,27 +289,99 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 </html>`;
 }
 
-export function crawlerMiddleware(req: Request, res: Response, next: NextFunction): void {
-  const userAgent = req.headers["user-agent"] || "";
+function generateFullPageHTML(path: string, query: Record<string, string>, isDev: boolean): string {
+  const baseURL = "https://089-sanierer.de";
+  const service = query.service || "";
+  const serviceInfo = servicePages[service];
 
-  if (!isCrawler(userAgent)) {
-    return next();
+  let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | KSHW";
+  let description = "Was kostet eine Sanierung in München? KSHW München: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
+  let mainContent = "";
+
+  if (path === "/" || path === "") {
+    mainContent = `
+      <section class="ssr-content">
+        <h1>Sanierung München - KSHW Komplettsanierungen</h1>
+        <p>Ihr zuverlässiger Partner für professionelle Sanierungen in München und Umgebung.</p>
+        <h2>Unsere Leistungen</h2>
+        <ul>
+          <li><strong>Komplettsanierung</strong> - Schlüsselfertige Sanierung ab 1.000 €/m²</li>
+          <li><strong>Badsanierung</strong> - Komplettbad ab 8.000 €</li>
+          <li><strong>Küchensanierung</strong> - Bauarbeiten ab 6.500 €</li>
+          <li><strong>Bodensanierung</strong> - Alle Bodenbeläge ab 65 €/m²</li>
+          <li><strong>Elektrosanierung</strong> - VDE-konforme Installation ab 85 €/m²</li>
+          <li><strong>Heizungssanierung</strong> - Moderne Heizsysteme ab 12.000 €</li>
+        </ul>
+        <p>Telefon: 0152 122 740 43 | E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
+      </section>
+    `;
+  } else if (path === "/anfrage" && serviceInfo) {
+    title = `${serviceInfo.title} | Kosten & Preise | KSHW München`;
+    description = serviceInfo.description;
+    mainContent = `
+      <section class="ssr-content">
+        <h1>${serviceInfo.title}</h1>
+        <p>${serviceInfo.description}</p>
+        <p><strong>Preisspanne:</strong> ${serviceInfo.price}</p>
+      </section>
+    `;
+  } else if (path === "/anfrage") {
+    title = "Sanierungsanfrage | KSHW München";
+    description = "Stellen Sie jetzt Ihre Sanierungsanfrage. Kostenlose Beratung innerhalb von 24 Stunden.";
+    mainContent = `<section class="ssr-content"><h1>Sanierungsanfrage</h1><p>Laden...</p></section>`;
+  } else if (path === "/faq-preise") {
+    title = "FAQ & Preise | Sanierung München | KSHW";
+    description = "Häufige Fragen und Preisübersicht für Sanierungen in München.";
+    mainContent = `<section class="ssr-content"><h1>FAQ & Preise</h1><p>Laden...</p></section>`;
+  } else {
+    return "";
   }
 
+  const scripts = isDev 
+    ? `<script type="module" src="/@vite/client"></script><script type="module" src="/src/main.tsx"></script>`
+    : `<script type="module" src="/assets/index.js"></script><link rel="stylesheet" href="/assets/index.css">`;
+
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <meta name="description" content="${description}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${description}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <style>.ssr-content{display:none}</style>
+</head>
+<body>
+  <div id="root">${mainContent}</div>
+  ${scripts}
+</body>
+</html>`;
+}
+
+export function crawlerMiddleware(req: Request, res: Response, next: NextFunction): void {
+  const userAgent = req.headers["user-agent"] || "";
   const path = req.path;
   const query = req.query as Record<string, string>;
 
-  if (path.startsWith("/api/")) {
+  if (path.startsWith("/api/") || path.startsWith("/@") || path.includes(".")) {
     return next();
   }
 
-  const staticHTML = generateStaticHTML(path, query);
+  const isCrawlerRequest = isCrawler(userAgent);
 
-  if (staticHTML) {
-    res.setHeader("Content-Type", "text/html; charset=utf-8");
-    res.setHeader("X-Robots-Tag", "index, follow");
-    res.send(staticHTML);
-    return;
+  if (isCrawlerRequest) {
+    const staticHTML = generateStaticHTML(path, query);
+    if (staticHTML) {
+      res.setHeader("Content-Type", "text/html; charset=utf-8");
+      res.setHeader("X-Robots-Tag", "index, follow");
+      res.send(staticHTML);
+      return;
+    }
   }
 
   next();
