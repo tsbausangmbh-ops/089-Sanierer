@@ -653,14 +653,14 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-12 bg-primary text-white">
+        <section className="py-3 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
-                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-sm lg:text-base opacity-80">{stat.label}</div>
+                  <stat.icon className="w-5 h-5 mx-auto mb-1 opacity-80" />
+                  <div className="text-xl lg:text-2xl font-bold">{stat.value}</div>
+                  <div className="text-xs opacity-80">{stat.label}</div>
                 </div>
               ))}
             </div>
