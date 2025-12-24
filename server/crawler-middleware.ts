@@ -12,6 +12,7 @@ const PRERENDER_IPV4_RANGES = [
   "104.224.13.",
   "104.224.14.",
   "104.224.15.",
+  "5.161.",
 ];
 
 const PRERENDER_IPV6_PREFIX = "2602:2dd:";
