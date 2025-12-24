@@ -11,19 +11,24 @@ const app = express();
 
 app.use(compression());
 
-// Prerender.io middleware for SEO - renders pages for search engine crawlers
-if (process.env.PRERENDER_TOKEN) {
+// SEO: Use built-in crawler middleware for server-side rendering
+// This generates static HTML for search engine crawlers (Google, Bing, etc.)
+// Prerender.io can be enabled later by setting ENABLE_PRERENDER=true
+if (process.env.ENABLE_PRERENDER === "true" && process.env.PRERENDER_TOKEN) {
   const token = process.env.PRERENDER_TOKEN.trim();
-  console.log(`[Prerender] Token loaded (length: ${token.length}, starts with: ${token.substring(0, 4)}...)`);
-  prerender.set("prerenderToken", token);
-  prerender.set("protocol", "https");
-  app.use(prerender);
-  console.log("[Prerender] Prerender.io middleware enabled");
+  if (token.startsWith("gDBZ")) {
+    prerender.set("prerenderToken", token);
+    prerender.set("protocol", "https");
+    app.use(prerender);
+    console.log("[Prerender] Prerender.io middleware enabled");
+  } else {
+    console.log("[Prerender] Token mismatch, using built-in SSR");
+  }
 } else {
-  console.log("[Prerender] No PRERENDER_TOKEN found, using fallback SSR");
+  console.log("[SSR] Using built-in crawler middleware for SEO");
 }
 
-// Fallback crawler middleware for SSR testing and basic crawler support
+// Built-in crawler middleware - generates static HTML for search engines
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
