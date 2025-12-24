@@ -111,6 +111,10 @@ app.use((req, res, next) => {
         log(`serving on port ${port}`);
       },
     );
+
+    // Server timeout settings
+    httpServer.keepAliveTimeout = 120000;
+    httpServer.headersTimeout = 120000;
   } catch (error) {
     console.error("Failed to start server:", error);
     process.exit(1);
