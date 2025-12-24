@@ -598,7 +598,7 @@ export default function Home() {
               decoding="async"
               data-testid="img-hero-main"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-8 lg:py-12 w-full">
