@@ -114,7 +114,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Zielstattstr. 9, 81379 München</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
-        <p>Öffnungszeiten: Mo-Fr 08:00-17:00, Sa 09:00-13:00</p>
+        <p>Öffnungszeiten: Mo-Fr 08:00-16:30 Uhr</p>
       </section>
     `;
   } else if (path === "/anfrage" && serviceInfo) {
@@ -241,8 +241,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Telefon: 0152 122 740 43</p>
         <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         <h3>Öffnungszeiten</h3>
-        <p>Montag - Freitag: 08:00 - 17:00 Uhr</p>
-        <p>Samstag: 09:00 - 13:00 Uhr</p>
+        <p>Montag - Freitag: 08:00 - 16:30 Uhr</p>
       </section>
     `;
   } else {

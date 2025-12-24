@@ -630,7 +630,7 @@ export default function FaqPreise() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  Mo-Fr: 8:00-17:00 Uhr
+                  Mo-Fr: 8:00-16:30 Uhr
                 </div>
               </div>
             </div>

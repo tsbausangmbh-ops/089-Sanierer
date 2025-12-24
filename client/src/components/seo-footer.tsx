@@ -86,7 +86,7 @@ export function SeoFooter() {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" aria-hidden="true" />
-                <span>Mo-Fr: 8:00-17:00 Uhr</span>
+                <span>Mo-Fr: 8:00-16:30 Uhr</span>
               </div>
             </div>
           </div>

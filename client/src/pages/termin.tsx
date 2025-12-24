@@ -9,7 +9,7 @@ export default function TerminPage() {
     <div className="min-h-screen bg-background">
       <SeoHead
         title="Sanierung München Termin | Kostenlose Beratung vor Ort"
-        description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8-17 Uhr."
+        description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8:00-16:30 Uhr."
         keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos"
         canonicalPath="/termin"
       />
@@ -59,7 +59,7 @@ export default function TerminPage() {
             <Phone className="w-4 h-4" />
             0152 122 740 43
           </a>
-          <p className="mt-1">Mo-Fr 08:00-17:00 Uhr</p>
+          <p className="mt-1">Mo-Fr 08:00-16:30 Uhr</p>
         </div>
       </main>
 

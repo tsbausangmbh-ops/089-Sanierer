@@ -168,7 +168,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
               />
             </div>
             <p className="text-xs text-muted-foreground text-center mt-3">
-              Termine verfügbar: Mo-Fr, 08:00-17:00 Uhr
+              Termine verfügbar: Mo-Fr, 08:00-16:30 Uhr
             </p>
           </div>
         )}

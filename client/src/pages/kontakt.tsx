@@ -250,7 +250,7 @@ export default function Kontakt() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Öffnungszeiten</p>
-                        <p className="font-medium">Mo-Fr: 8:00-17:00 Uhr</p>
+                        <p className="font-medium">Mo-Fr: 8:00-16:30 Uhr</p>
                       </div>
                     </div>
                   </div>
