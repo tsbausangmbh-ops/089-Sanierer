@@ -372,8 +372,9 @@ export function crawlerMiddleware(req: Request, res: Response, next: NextFunctio
   }
 
   const isCrawlerRequest = isCrawler(userAgent);
+  const forceSSR = query.ssr === "1";
 
-  if (isCrawlerRequest) {
+  if (isCrawlerRequest || forceSSR) {
     const staticHTML = generateStaticHTML(path, query);
     if (staticHTML) {
       res.setHeader("Content-Type", "text/html; charset=utf-8");
