@@ -5,26 +5,12 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
-import prerender from "prerender-node";
 
 const app = express();
 
 app.use(compression());
 
-// SEO: Use Prerender.io or built-in crawler middleware
-// Set ENABLE_PRERENDER=true and PRERENDER_TOKEN to use Prerender.io
-if (process.env.ENABLE_PRERENDER === "true" && process.env.PRERENDER_TOKEN) {
-  const token = process.env.PRERENDER_TOKEN.trim();
-  console.log(`[Prerender] Token loaded`);
-  prerender.set("prerenderToken", token);
-  prerender.set("protocol", "https");
-  app.use(prerender);
-  console.log("[Prerender] Prerender.io middleware enabled");
-} else {
-  console.log("[SSR] Using built-in crawler middleware for SEO");
-}
-
-// Built-in crawler middleware - generates static HTML for search engines
+// SEO: Built-in crawler middleware generates static HTML for search engines
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
