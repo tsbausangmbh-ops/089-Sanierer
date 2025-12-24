@@ -1,109 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
 
-const PRERENDER_TOKEN = process.env.PRERENDER_TOKEN;
-const PRERENDER_SERVICE_URL = "https://service.prerender.io/";
-
-const PRERENDER_IPV4_RANGES = [
-  "103.207.40.",
-  "103.207.41.",
-  "103.207.42.",
-  "103.207.43.",
-  "104.224.12.",
-  "104.224.13.",
-  "104.224.14.",
-  "104.224.15.",
-  "5.161.",
-];
-
-const PRERENDER_IPV6_PREFIX = "2602:2dd:";
-
-function isPrerenderIP(ip: string): boolean {
-  if (!ip) return false;
-  const cleanIP = ip.replace("::ffff:", "");
-  
-  if (PRERENDER_IPV4_RANGES.some((range) => cleanIP.startsWith(range))) {
-    return true;
-  }
-  
-  if (cleanIP.toLowerCase().startsWith(PRERENDER_IPV6_PREFIX)) {
-    return true;
-  }
-  
-  return false;
-}
-
-const PRERENDER_CRAWLER_USER_AGENTS = [
-  "googlebot",
-  "yahoo",
-  "bingbot",
-  "yandex",
-  "baiduspider",
-  "facebookexternalhit",
-  "twitterbot",
-  "rogerbot",
-  "linkedinbot",
-  "embedly",
-  "quora link preview",
-  "showyoubot",
-  "outbrain",
-  "pinterest/0.",
-  "developers.google.com/+/web/snippet",
-  "slackbot",
-  "vkShare",
-  "W3C_Validator",
-  "redditbot",
-  "Applebot",
-  "WhatsApp",
-  "flipboard",
-  "tumblr",
-  "bitlybot",
-  "SkypeUriPreview",
-  "nuzzel",
-  "Discordbot",
-  "Google Page Speed",
-  "Qwantify",
-  "pinterestbot",
-  "Bitrix link preview",
-  "XING-contenttabreceiver",
-  "Chrome-Lighthouse",
-  "TelegramBot",
-  "SeznamBot",
-  "gptbot",
-  "chatgpt-user",
-  "claude-web",
-  "perplexitybot",
-  "anthropic-ai",
-  "cohere-ai",
-];
-
-async function fetchFromPrerender(url: string): Promise<string | null> {
-  if (!PRERENDER_TOKEN) return null;
-  
-  try {
-    const prerenderUrl = `${PRERENDER_SERVICE_URL}${url}`;
-    const response = await fetch(prerenderUrl, {
-      headers: {
-        "X-Prerender-Token": PRERENDER_TOKEN,
-      },
-      signal: AbortSignal.timeout(10000),
-    });
-    
-    if (response.ok) {
-      return await response.text();
-    }
-    console.error(`Prerender.io error: ${response.status}`);
-    return null;
-  } catch (error) {
-    console.error("Prerender.io fetch error:", error);
-    return null;
-  }
-}
-
-function isPrerenderCrawler(userAgent: string): boolean {
-  const ua = userAgent.toLowerCase();
-  return PRERENDER_CRAWLER_USER_AGENTS.some((crawler) => ua.toLowerCase().includes(crawler.toLowerCase()));
-}
-
 const CRAWLER_USER_AGENTS = [
   "googlebot",
   "bingbot",
@@ -123,11 +19,33 @@ const CRAWLER_USER_AGENTS = [
   "perplexitybot",
   "anthropic-ai",
   "cohere-ai",
+  "rogerbot",
+  "embedly",
+  "quora link preview",
+  "showyoubot",
+  "outbrain",
+  "pinterest",
+  "slackbot",
+  "vkShare",
+  "W3C_Validator",
+  "redditbot",
+  "flipboard",
+  "tumblr",
+  "bitlybot",
+  "SkypeUriPreview",
+  "nuzzel",
+  "Discordbot",
+  "Google Page Speed",
+  "Qwantify",
+  "Bitrix link preview",
+  "XING-contenttabreceiver",
+  "Chrome-Lighthouse",
+  "SeznamBot",
 ];
 
 function isCrawler(userAgent: string): boolean {
   const ua = userAgent.toLowerCase();
-  return CRAWLER_USER_AGENTS.some((crawler) => ua.includes(crawler));
+  return CRAWLER_USER_AGENTS.some((crawler) => ua.includes(crawler.toLowerCase()));
 }
 
 const servicePages: Record<string, { title: string; description: string; price: string }> = {
@@ -392,83 +310,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 </html>`;
 }
 
-function generateFullPageHTML(path: string, query: Record<string, string>, isDev: boolean): string {
-  const baseURL = "https://089-sanierer.de";
-  const service = query.service || "";
-  const serviceInfo = servicePages[service];
-
-  let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | KSHW";
-  let description = "Was kostet eine Sanierung in München? KSHW München: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
-  let mainContent = "";
-
-  if (path === "/" || path === "") {
-    mainContent = `
-      <section class="ssr-content">
-        <h1>Sanierung München - KSHW Komplettsanierungen</h1>
-        <p>Ihr zuverlässiger Partner für professionelle Sanierungen in München und Umgebung.</p>
-        <h2>Unsere Leistungen</h2>
-        <ul>
-          <li><strong>Komplettsanierung</strong> - Schlüsselfertige Sanierung ab 1.000 €/m²</li>
-          <li><strong>Badsanierung</strong> - Komplettbad ab 8.000 €</li>
-          <li><strong>Küchensanierung</strong> - Bauarbeiten ab 6.500 €</li>
-          <li><strong>Bodensanierung</strong> - Alle Bodenbeläge ab 65 €/m²</li>
-          <li><strong>Elektrosanierung</strong> - VDE-konforme Installation ab 85 €/m²</li>
-          <li><strong>Heizungssanierung</strong> - Moderne Heizsysteme ab 12.000 €</li>
-        </ul>
-        <p>Telefon: 0152 122 740 43 | E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
-      </section>
-    `;
-  } else if (path === "/anfrage" && serviceInfo) {
-    title = `${serviceInfo.title} | Kosten & Preise | KSHW München`;
-    description = serviceInfo.description;
-    mainContent = `
-      <section class="ssr-content">
-        <h1>${serviceInfo.title}</h1>
-        <p>${serviceInfo.description}</p>
-        <p><strong>Preisspanne:</strong> ${serviceInfo.price}</p>
-      </section>
-    `;
-  } else if (path === "/anfrage") {
-    title = "Sanierungsanfrage | KSHW München";
-    description = "Stellen Sie jetzt Ihre Sanierungsanfrage. Kostenlose Beratung innerhalb von 24 Stunden.";
-    mainContent = `<section class="ssr-content"><h1>Sanierungsanfrage</h1><p>Laden...</p></section>`;
-  } else if (path === "/faq-preise") {
-    title = "FAQ & Preise | Sanierung München | KSHW";
-    description = "Häufige Fragen und Preisübersicht für Sanierungen in München.";
-    mainContent = `<section class="ssr-content"><h1>FAQ & Preise</h1><p>Laden...</p></section>`;
-  } else {
-    return "";
-  }
-
-  const scripts = isDev 
-    ? `<script type="module" src="/@vite/client"></script><script type="module" src="/src/main.tsx"></script>`
-    : `<script type="module" src="/assets/index.js"></script><link rel="stylesheet" href="/assets/index.css">`;
-
-  return `<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title}</title>
-  <meta name="description" content="${description}">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
-  <meta property="og:title" content="${title}">
-  <meta property="og:description" content="${description}">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
-  <style>.ssr-content{display:none}</style>
-</head>
-<body>
-  <div id="root">${mainContent}</div>
-  ${scripts}
-</body>
-</html>`;
-}
-
 export async function crawlerMiddleware(req: Request, res: Response, next: NextFunction): Promise<void> {
   const userAgent = req.headers["user-agent"] || "";
-  const clientIP = req.ip || req.headers["x-forwarded-for"]?.toString().split(",")[0] || "";
   const path = req.path;
   const query = req.query as Record<string, string>;
 
@@ -476,36 +319,15 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
     return next();
   }
 
-  if (isPrerenderIP(clientIP)) {
-    console.log(`[Prerender] Allowing Prerender.io crawler from IP: ${clientIP}`);
-    return next();
-  }
-  
-  if (userAgent.toLowerCase().includes("prerender")) {
-    console.log(`[Prerender] Allowing Prerender UA: ${userAgent}`);
-    return next();
-  }
-
-  const isCrawlerRequest = isPrerenderCrawler(userAgent) || isCrawler(userAgent);
+  const isCrawlerRequest = isCrawler(userAgent);
   const forceSSR = query.ssr === "1";
 
   if (isCrawlerRequest || forceSSR) {
-    if (PRERENDER_TOKEN && !forceSSR) {
-      const publicUrl = `https://089-sanierer.de${req.originalUrl}`;
-      const prerenderHtml = await fetchFromPrerender(publicUrl);
-      if (prerenderHtml) {
-        res.setHeader("Content-Type", "text/html; charset=utf-8");
-        res.setHeader("X-Robots-Tag", "index, follow");
-        res.setHeader("X-Prerender", "1");
-        res.send(prerenderHtml);
-        return;
-      }
-    }
-    
     const staticHTML = generateStaticHTML(path, query);
     if (staticHTML) {
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       res.setHeader("X-Robots-Tag", "index, follow");
+      res.setHeader("X-SSR", "1");
       res.send(staticHTML);
       return;
     }
