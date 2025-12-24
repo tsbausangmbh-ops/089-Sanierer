@@ -15,7 +15,7 @@ app.use(compression());
 // Set ENABLE_PRERENDER=true and PRERENDER_TOKEN to use Prerender.io
 if (process.env.ENABLE_PRERENDER === "true" && process.env.PRERENDER_TOKEN) {
   const token = process.env.PRERENDER_TOKEN.trim();
-  console.log(`[Prerender] Token loaded (length: ${token.length})`);
+  console.log(`[Prerender] Token loaded`);
   prerender.set("prerenderToken", token);
   prerender.set("protocol", "https");
   app.use(prerender);
