@@ -1,21 +1,64 @@
 # robots.txt für KSHW München - 089-sanierer.de
-# Optimiert für Google, Bing, und AI-Suchmaschinen
+# Optimiert für Suchmaschinen und KI-Assistenten
 
+# Allgemeine Regeln
 User-agent: *
 Allow: /
-Allow: /anfrage
-Allow: /faq-preise
-Allow: /ratgeber
-Allow: /gewerke
-Allow: /kontakt
+Disallow: /api/
+Disallow: /admin
+Disallow: /_
+Disallow: /*.json$
+Crawl-delay: 1
 
-# Rechtliche Seiten erlauben
-Allow: /impressum
-Allow: /datenschutz
-Allow: /agb
-Allow: /cookies
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
 
-# AI-Suchmaschinen explizit erlauben
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: msnbot
+Allow: /
+
+# Weitere Suchmaschinen
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Social Media Bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# KI-Assistenten (explizit erlaubt für AI-Suche)
 User-agent: GPTBot
 Allow: /
 
@@ -25,23 +68,23 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: Anthropic-AI
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Cohere-AI
 Allow: /
 
-User-agent: Googlebot
+User-agent: YouBot
 Allow: /
 
-User-agent: Bingbot
+User-agent: CCBot
 Allow: /
 
 # Sitemap
 Sitemap: https://089-sanierer.de/sitemap.xml
-
-# llms.txt für AI-Suchmaschinen
-# https://089-sanierer.de/llms.txt
 
 # Host
 Host: https://089-sanierer.de
