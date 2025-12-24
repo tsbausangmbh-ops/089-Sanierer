@@ -5,11 +5,32 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
+import prerender from "prerender-node";
 
 const app = express();
 
 app.use(compression());
 
+// Prerender.io middleware for SEO - renders pages for search engine crawlers
+if (process.env.PRERENDER_TOKEN) {
+  prerender.set("prerenderToken", process.env.PRERENDER_TOKEN);
+  prerender.set("protocol", "https");
+  // Whitelist only the pages that exist
+  prerender.whitelisted([
+    "/",
+    "/anfrage",
+    "/bestaetigung",
+    "/impressum",
+    "/datenschutz",
+    "/admin"
+  ]);
+  app.use(prerender);
+  console.log("[Prerender] Prerender.io middleware enabled");
+} else {
+  console.log("[Prerender] No PRERENDER_TOKEN found, using fallback SSR");
+}
+
+// Fallback crawler middleware for SSR testing and basic crawler support
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
