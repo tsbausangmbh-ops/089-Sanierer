@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
+import kshwLogo from "@assets/generated_images/kshw_renovation_company_favicon.png";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -27,7 +27,7 @@ export function SiteHeader() {
           <Link href="/" aria-label="KSHW München Startseite">
             <div className="flex items-center gap-2 cursor-pointer">
               <img 
-                src={kshwLogoWhiteBg} 
+                src={kshwLogo} 
                 alt="KSHW München Logo" 
                 className="h-10 w-auto rounded"
                 width="40"

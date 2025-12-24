@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
+import kshwLogo from "@assets/generated_images/kshw_renovation_company_favicon.png";
 
 const allServices = [
   { id: "komplettsanierung", title: "Komplettsanierung München", shortTitle: "Komplettsanierung" },
@@ -51,7 +51,7 @@ export function SeoFooter() {
             <Link href="/" aria-label="KSHW München Startseite">
               <div className="flex items-center gap-2 mb-4 cursor-pointer" data-testid="link-footer-logo">
                 <img 
-                  src={kshwLogoWhiteBg} 
+                  src={kshwLogo} 
                   alt="KSHW München Logo" 
                   className="h-10 w-auto rounded"
                   width="40"
