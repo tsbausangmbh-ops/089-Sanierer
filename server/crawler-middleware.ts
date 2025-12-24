@@ -484,8 +484,8 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
 
   if (isCrawlerRequest || forceSSR) {
     if (PRERENDER_TOKEN && !forceSSR) {
-      const fullUrl = `${req.protocol}://${req.get("host")}${req.originalUrl}`;
-      const prerenderHtml = await fetchFromPrerender(fullUrl);
+      const publicUrl = `https://089-sanierer.de${req.originalUrl}`;
+      const prerenderHtml = await fetchFromPrerender(publicUrl);
       if (prerenderHtml) {
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.setHeader("X-Robots-Tag", "index, follow");

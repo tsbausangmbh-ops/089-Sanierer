@@ -9,6 +9,7 @@ import { crawlerMiddleware } from "./crawler-middleware";
 const app = express();
 
 app.use(compression());
+
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
