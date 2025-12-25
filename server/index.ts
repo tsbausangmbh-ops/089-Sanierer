@@ -5,13 +5,62 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
+import prerender from "prerender-node";
 
 const app = express();
 
 app.use(compression());
 
-// SEO: Built-in crawler middleware for search engine crawlers
-// This provides static HTML to bots without needing external services
+// Prerender.io for SEO - always active
+if (process.env.PRERENDER_TOKEN) {
+  app.use(
+    prerender
+      .set('prerenderToken', process.env.PRERENDER_TOKEN)
+      .set('crawlerUserAgents', [
+        'googlebot',
+        'bingbot',
+        'yandex',
+        'baiduspider',
+        'facebookexternalhit',
+        'twitterbot',
+        'rogerbot',
+        'linkedinbot',
+        'embedly',
+        'quora link preview',
+        'showyoubot',
+        'outbrain',
+        'pinterest/0.',
+        'developers.google.com/+/web/snippet',
+        'slackbot',
+        'vkShare',
+        'W3C_Validator',
+        'redditbot',
+        'Applebot',
+        'WhatsApp',
+        'flipboard',
+        'tumblr',
+        'bitlybot',
+        'SkypeUriPreview',
+        'nuzzel',
+        'Discordbot',
+        'Google Page Speed',
+        'Qwantify',
+        'pinterestbot',
+        'Bitrix link preview',
+        'XING-contenttabreceiver',
+        'Chrome-Lighthouse',
+        'TelegramBot',
+        'SeznamBot',
+        'GPTBot',
+        'ChatGPT-User',
+        'Claude-Web',
+        'PerplexityBot',
+        'Anthropic-AI'
+      ])
+  );
+}
+
+// SEO: Built-in crawler middleware as fallback
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
