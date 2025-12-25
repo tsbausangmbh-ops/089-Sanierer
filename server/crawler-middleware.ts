@@ -270,24 +270,146 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     return "";
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${baseURL}/#organization`,
+    "name": "KSHW München - Komplettsanierungen Haus & Wohnung",
+    "alternateName": "089-Sanierer",
+    "description": "Professionelle Sanierungen in München: Badsanierung, Küchensanierung, Komplettsanierung, Elektrosanierung und mehr. Festpreisgarantie, 5 Jahre Gewährleistung.",
+    "url": baseURL,
+    "telephone": "+4915212274043",
+    "email": "info@089-sanierer.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zielstattstr. 9",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE",
+      "addressRegion": "Bayern"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.1042,
+      "longitude": 11.5349
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "16:30"
+    },
+    "priceRange": "€€€",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1351,
+        "longitude": 11.5820
+      },
+      "geoRadius": "50000"
+    },
+    "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "268",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sanierungsleistungen",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Badsanierung",
+            "description": "Komplette Badsanierung in München inkl. Fliesen, Sanitär, Elektro"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Küchensanierung",
+            "description": "Küchensanierung in München: Fliesen, Elektro, Wasseranschlüsse"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Komplettsanierung",
+            "description": "Schlüsselfertige Komplettsanierung von Haus und Wohnung"
+          }
+        }
+      ]
+    }
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": baseURL
+      },
+      ...(path !== "/" ? [{
+        "@type": "ListItem",
+        "position": 2,
+        "name": title.split(" | ")[0],
+        "item": `${baseURL}${path}`
+      }] : [])
+    ]
+  };
+
   return `<!DOCTYPE html>
-<html lang="de">
+<html lang="de" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
   <meta name="description" content="${description}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow">
   <link rel="canonical" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KSHW München">
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
-  <meta property="og:type" content="website">
   <meta property="og:url" content="${baseURL}${path}">
   <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="${baseURL}/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${title}">
+  <meta name="twitter:description" content="${description}">
+  
+  <!-- Additional SEO -->
+  <meta name="author" content="KSHW München">
+  <meta name="geo.region" content="DE-BY">
+  <meta name="geo.placename" content="München">
+  <meta name="geo.position" content="48.1351;11.5820">
+  <meta name="ICBM" content="48.1351, 11.5820">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Hauptnavigation">
       <a href="/">KSHW München - Sanierung</a>
       <a href="/anfrage">Anfrage</a>
       <a href="/faq-preise">FAQ & Preise</a>
@@ -299,12 +421,13 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   </main>
   <footer>
     <p>© 2025 KSHW München - Komplettsanierungen Haus & Wohnung</p>
-    <nav>
+    <nav aria-label="Rechtliche Links">
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
-      <a href="/agb">AGB</a>
-      <a href="/cookies">Cookies</a>
     </nav>
+    <address>
+      KSHW München, Zielstattstr. 9, 81379 München | Tel: 0152 122 740 43
+    </address>
   </footer>
 </body>
 </html>`;

@@ -11,11 +11,15 @@ const app = express();
 
 app.use(compression());
 
-// Prerender.io for SEO - always active
-if (process.env.PRERENDER_TOKEN) {
+// SEO: Built-in crawler middleware (primary - always works)
+app.use(crawlerMiddleware);
+
+// Prerender.io for SEO - production only (requires external service)
+if (process.env.PRERENDER_TOKEN && process.env.NODE_ENV === 'production') {
   app.use(
     prerender
       .set('prerenderToken', process.env.PRERENDER_TOKEN)
+      .set('protocol', 'https')
       .set('crawlerUserAgents', [
         'googlebot',
         'bingbot',
@@ -59,9 +63,6 @@ if (process.env.PRERENDER_TOKEN) {
       ])
   );
 }
-
-// SEO: Built-in crawler middleware as fallback
-app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
 declare module "http" {
