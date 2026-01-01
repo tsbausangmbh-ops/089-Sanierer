@@ -14,6 +14,7 @@ import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead, generateFaqSchema } from "@/components/seo-head";
+import pricingHeroImage from "@assets/generated_images/renovation_pricing_workspace.png";
 import { 
   Phone, 
   Mail, 
@@ -376,6 +377,8 @@ export default function FaqPreise() {
         subtitle="Sanierungskosten München"
         description="Keine versteckten Kosten, keine bösen Überraschungen. Transparente Preise aus 268+ Projekten in München."
         compact={true}
+        image={pricingHeroImage}
+        imageAlt="Kostenplanung und Kalkulation"
       />
       <Breadcrumb items={[{ label: "FAQ & Preise" }]} />
 

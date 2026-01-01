@@ -51,6 +51,7 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
 import { EmbeddedServiceAdvisor } from "@/components/embedded-service-advisor";
+import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.png";
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -2382,6 +2383,8 @@ export default function FunnelPage() {
           showCta={true}
           showStats={false}
           compact={true}
+          image={consultationHeroImage}
+          imageAlt="Beratungsgespräch zur Sanierung"
         />
 
         <main id="main-content" className="pb-16 flex-1">

@@ -7,6 +7,7 @@ import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
+import ratgeberHeroImage from "@assets/generated_images/expert_renovation_advisor.png";
 
 export default function Ratgeber() {
   return (
@@ -24,6 +25,8 @@ export default function Ratgeber() {
         description="Aus 268+ Projekten in München teilen wir unser Wissen mit Ihnen"
         showCta={true}
         compact={true}
+        image={ratgeberHeroImage}
+        imageAlt="Sanierungsexperte mit Beratungsunterlagen"
       />
       <Breadcrumb items={[{ label: "Ratgeber" }]} />
 

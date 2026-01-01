@@ -16,6 +16,7 @@ import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
+import contactHeroImage from "@assets/generated_images/customer_service_contact.png";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
@@ -91,6 +92,8 @@ export default function Kontakt() {
         badge="Ihr direkter Draht zu uns"
         showCta={false}
         compact={true}
+        image={contactHeroImage}
+        imageAlt="Kundenservice und Beratung"
       />
       <Breadcrumb items={[{ label: "Kontakt" }]} />
 

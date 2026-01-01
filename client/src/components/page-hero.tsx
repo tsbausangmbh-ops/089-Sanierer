@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Shield, ChevronRight, Phone } from "lucide-react";
-import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
+import defaultHeroImage from "@assets/generated_images/modern_renovated_home_interior.png";
 
 interface PageHeroProps {
   title: string;
@@ -39,7 +39,7 @@ export function PageHero({
     <section className={`relative pt-16 ${minHeight} flex items-center`}>
       <div className="absolute inset-0 pt-16">
         <img 
-          src={image || houseBeforeAfter} 
+          src={image || defaultHeroImage} 
           alt={imageAlt || "Haussanierung Vorher-Nachher"}
           className="w-full h-full object-cover"
           loading="eager"
