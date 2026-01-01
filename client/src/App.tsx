@@ -7,7 +7,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/hooks/use-auth";
 import { ProtectedRoute } from "@/lib/protected-route";
 import { CookieConsent } from "@/components/cookie-consent";
-import { ChatBot } from "@/components/chat-bot";
 import ChristmasPopup from "@/components/christmas-popup";
 import NewYearPopup from "@/components/newyear-popup";
 import { Loader2 } from "lucide-react";
@@ -87,7 +86,6 @@ export default function App() {
           <Router />
           <Toaster />
           <CookieConsent />
-          <ChatBot />
           <ChristmasPopup />
           <NewYearPopup />
         </AuthProvider>
