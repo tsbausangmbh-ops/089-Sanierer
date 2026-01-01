@@ -19,9 +19,9 @@ import {
 
 import heroImage from "@assets/generated_images/modern_renovated_home_interior.png";
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
-import kitchenImg from "@assets/generated_images/modern_kitchen_renovation.png";
-import floorImg from "@assets/generated_images/floor_renovation_parquet.png";
-import electricImg from "@assets/generated_images/electrical_renovation_work.png";
+import kitchenImg from "@assets/generated_images/kitchen_renovation_work.png";
+import floorImg from "@assets/generated_images/parquet_floor_renovation.png";
+import electricImg from "@assets/generated_images/electrical_renovation_installation.png";
 import heatingImg from "@assets/generated_images/heating_system_installation.png";
 import completeImg from "@assets/generated_images/complete_home_renovation.png";
 
