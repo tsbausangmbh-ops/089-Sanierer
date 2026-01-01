@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
+import agbHeroImage from "@assets/generated_images/business_contract_agb.png";
 
 export default function AGB() {
   return (
@@ -20,6 +21,8 @@ export default function AGB() {
         subtitle="Allgemeine Geschäftsbedingungen"
         showCta={false}
         compact={true}
+        image={agbHeroImage}
+        imageAlt="Geschäftsbedingungen und Vertrag"
       />
       <Breadcrumb items={[{ label: "AGB" }]} />
 

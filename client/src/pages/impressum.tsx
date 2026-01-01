@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
+import impressumHeroImage from "@assets/generated_images/legal_documents_impressum.png";
 
 export default function Impressum() {
   return (
@@ -20,6 +21,8 @@ export default function Impressum() {
         subtitle="KSHW München"
         showCta={false}
         compact={true}
+        image={impressumHeroImage}
+        imageAlt="Rechtliche Dokumente"
       />
       <Breadcrumb items={[{ label: "Impressum" }]} />
 

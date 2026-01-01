@@ -7,6 +7,7 @@ import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
+import cookiesHeroImage from "@assets/generated_images/website_cookies_settings.png";
 
 export default function Cookies() {
   return (
@@ -23,6 +24,8 @@ export default function Cookies() {
         subtitle="Transparenz über Cookies"
         showCta={false}
         compact={true}
+        image={cookiesHeroImage}
+        imageAlt="Cookie-Einstellungen"
       />
       <Breadcrumb items={[{ label: "Cookie-Richtlinie" }]} />
 
