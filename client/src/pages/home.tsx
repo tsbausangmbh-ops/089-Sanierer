@@ -23,7 +23,7 @@ import kitchenImg from "@assets/generated_images/kitchen_renovation_work.png";
 import floorImg from "@assets/generated_images/parquet_floor_renovation.png";
 import electricImg from "@assets/generated_images/electrical_renovation_installation.png";
 import heatingImg from "@assets/generated_images/heating_system_installation.png";
-import completeImg from "@assets/generated_images/complete_home_renovation.png";
+import completeImg from "@assets/generated_images/complete_home_renovation_result.png";
 
 import { 
   Bath, 
