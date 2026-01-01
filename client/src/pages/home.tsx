@@ -55,7 +55,17 @@ import {
   FileCheck,
   HeartHandshake,
   Building,
-  Wrench
+  Wrench,
+  Download,
+  Gift,
+  Target,
+  Heart,
+  Sparkles,
+  TrendingUp,
+  BadgeCheck,
+  Timer,
+  FileText,
+  ChevronDown
 } from "lucide-react";
 
 const allServices = [
@@ -117,85 +127,85 @@ const allServices = [
 
 const painPoints = [
   { 
-    icon: Users, 
-    title: "Handwerker sind unauffindbar",
-    description: "Wochenlange Suche, keine Rückmeldungen, endlose Absagen. Jeder kennt das Gefühl der Frustration."
+    icon: XCircle, 
+    title: "Endlose Suche nach Handwerkern",
+    description: "Sie rufen an, niemand meldet sich zurück. Wochen vergehen. Die Frustration wächst."
   },
   { 
     icon: Euro, 
-    title: "Kostenexplosion befürchtet",
-    description: "Angebote, die plötzlich doppelt so teuer werden. Nachforderungen ohne Ende. Die Angst vor dem Ruin."
-  },
-  { 
-    icon: Clock, 
-    title: "Chaos bei der Koordination",
-    description: "Elektriker wartet auf den Fliesenleger, der Maler kann nicht anfangen. Wer behält den Überblick?"
+    title: "Angst vor Kostenexplosion",
+    description: "Ihr Budget wird gesprengt. Nachforderungen kommen. Das Projekt wird zum finanziellen Albtraum."
   },
   { 
     icon: AlertTriangle, 
-    title: "Qualität ist Glückssache",
-    description: "Pfusch am Bau, mangelnde Sorgfalt, fehlende Gewährleistung. Und Sie bleiben auf den Problemen sitzen."
+    title: "Chaos ohne Ende",
+    description: "Handwerker kommen nicht, Material fehlt, keiner koordiniert. Ihr Leben steht still."
+  },
+  { 
+    icon: Timer, 
+    title: "Monate statt Wochen",
+    description: "Die Sanierung zieht sich. Kein Ende in Sicht. Sie fragen sich: War das richtig?"
   },
 ];
 
-const solutions = [
+const transformations = [
   {
     icon: Handshake,
-    title: "Ein Ansprechpartner für alles",
-    description: "Ihr persönlicher Projektleiter koordiniert alle Gewerke. Sie haben nur einen Anruf zu machen, wenn Fragen auftauchen."
+    title: "Ein Partner, der alles regelt",
+    description: "Stellen Sie sich vor: Sie haben einen einzigen Ansprechpartner, der alle Handwerker koordiniert. Sie lehnen sich zurück."
   },
   {
     icon: FileCheck,
-    title: "Festpreisgarantie",
-    description: "Der Preis, den wir Ihnen nennen, ist der Preis, den Sie zahlen. Keine versteckten Kosten, keine bösen Überraschungen am Ende."
+    title: "Ihr Budget bleibt sicher",
+    description: "Der Preis, den wir nennen, ist der Preis, den Sie zahlen. Punkt. Keine Überraschungen, keine Nachforderungen."
   },
   {
     icon: Calendar,
-    title: "Termingarantie",
-    description: "Wir nennen Ihnen einen verbindlichen Fertigstellungstermin und halten ihn. Planungssicherheit für Ihr Leben."
+    title: "Ihr Termin steht",
+    description: "Wir nennen Ihnen den Fertigstellungstermin. Und halten ihn. Sie können planen."
   },
   {
     icon: Shield,
-    title: "5 Jahre Gewährleistung",
-    description: "Alle Arbeiten mit voller Gewährleistung. Sollte etwas nicht stimmen, sind wir sofort für Sie da."
+    title: "5 Jahre Sicherheit",
+    description: "Wenn etwas nicht stimmt, sind wir da. 5 Jahre lang. Das ist unser Versprechen."
   },
 ];
 
 const stats = [
-  { value: "268+", label: "Abgeschlossene Projekte", icon: Building },
-  { value: "20+", label: "Jahre Erfahrung", icon: Award },
-  { value: "98%", label: "Weiterempfehlungsrate", icon: ThumbsUp },
-  { value: "40+", label: "Fachbetriebe im Netzwerk", icon: Wrench },
+  { value: "268+", label: "zufriedene Familien", icon: Heart },
+  { value: "20", label: "Jahre Meistererfahrung", icon: Award },
+  { value: "98%", label: "empfehlen uns weiter", icon: ThumbsUp },
+  { value: "0€", label: "versteckte Kosten", icon: BadgeCheck },
 ];
 
 const processSteps = [
   {
     number: 1,
-    title: "Kostenlose Anfrage",
-    description: "Füllen Sie unser kurzes Formular aus. In nur 2 Minuten erfahren wir, was Sie brauchen. Keine Verpflichtungen, kein Spam.",
-    icon: Calculator,
-    duration: "2 Minuten"
+    title: "Sie beschreiben Ihren Traum",
+    description: "2 Minuten genügen. Erzählen Sie uns, was Sie sich wünschen. Wir hören zu.",
+    icon: MessageSquare,
+    duration: "2 Min"
   },
   {
     number: 2,
-    title: "Persönliche Beratung",
-    description: "Innerhalb von 24 Stunden meldet sich Ihr persönlicher Projektleiter. Er besucht Sie vor Ort und bespricht alle Details.",
-    icon: MessageSquare,
-    duration: "Innerhalb 24h"
+    title: "Wir kommen zu Ihnen",
+    description: "Innerhalb von 24 Stunden. Kostenlos. Wir schauen uns alles an und beraten Sie.",
+    icon: Users,
+    duration: "24h"
   },
   {
     number: 3,
-    title: "Festpreis-Angebot",
-    description: "Sie erhalten ein detailliertes Angebot mit garantiertem Festpreis und verbindlichem Fertigstellungstermin.",
+    title: "Ihr Festpreis-Angebot",
+    description: "Transparent, detailliert, verbindlich. Sie wissen genau, was Sie bekommen.",
     icon: FileCheck,
-    duration: "Innerhalb 48h"
+    duration: "48h"
   },
   {
     number: 4,
-    title: "Sorgenfrei sanieren",
-    description: "Wir koordinieren alle Handwerker, Sie lehnen sich zurück. Ein Ansprechpartner für alle Fragen.",
-    icon: Hammer,
-    duration: "Nach Vereinbarung"
+    title: "Sie genießen das Ergebnis",
+    description: "Wir arbeiten. Sie entspannen. Und am Ende: Ihr Traumzuhause.",
+    icon: Sparkles,
+    duration: "Ihr Termin"
   },
 ];
 
@@ -203,68 +213,201 @@ const testimonials = [
   {
     name: "Familie Huber",
     location: "München-Schwabing",
-    project: "Komplettsanierung 85m² Altbauwohnung",
-    text: "Wir haben jahrelang gezögert, weil wir Angst vor dem Chaos hatten. Mit KSHW war alles durchorganisiert. Der Projektleiter hat sich um alles gekümmert, wir mussten uns um nichts sorgen.",
-    rating: 5
+    project: "Komplettsanierung",
+    text: "Wir hatten Jahre lang gezögert. Zu viel Angst vor dem Chaos. Aber mit KSHW war es anders: Ein Anruf, ein Ansprechpartner, null Stress. Heute sitzen wir in unserer Traumwohnung und können es noch immer nicht glauben.",
+    rating: 5,
+    highlight: "null Stress"
   },
   {
-    name: "Dr. Thomas Meier",
-    location: "München-Bogenhausen",
-    project: "Badsanierung + Gäste-WC",
-    text: "Professionell, pünktlich, sauber. Das Festpreis-Angebot stimmte am Ende exakt. So stelle ich mir deutsche Handwerksarbeit vor. Würde ich jederzeit wieder machen.",
-    rating: 5
+    name: "Dr. Thomas M.",
+    location: "Bogenhausen",
+    project: "Luxus-Badsanierung",
+    text: "Als Chirurg bin ich Präzision gewöhnt. Diese Handwerker haben mich beeindruckt: Pünktlich, sauber, auf den Cent genau wie angeboten. So muss Handwerk sein.",
+    rating: 5,
+    highlight: "Präzision"
   },
   {
-    name: "Immobilienverwaltung Schmidt",
-    location: "München-Sendling",
-    project: "3 Wohnungen saniert",
-    text: "Als Hausverwaltung haben wir schon viel erlebt. KSHW ist unser zuverlässiger Partner für alle Sanierungsprojekte. Die Kommunikation ist vorbildlich.",
-    rating: 5
+    name: "Hausverwaltung Schmidt",
+    location: "Sendling",
+    project: "3 Wohnungen",
+    text: "Wir verwalten 200 Wohnungen. Seit 4 Jahren arbeiten wir nur noch mit KSHW. Warum? Weil die Mieter danach glücklich sind. Und wir auch.",
+    rating: 5,
+    highlight: "seit 4 Jahren"
   },
 ];
 
 const faqs = [
   {
     question: "Was kostet eine Komplettsanierung in München?",
-    answer: "Aus unserer Erfahrung mit 268+ Projekten: Eine Komplettsanierung in München kostet zwischen 920€ und 2.300€ pro Quadratmeter, abhängig von Ausstattungsniveau und Umfang. Eine 80m² Wohnung liegt damit zwischen 73.600€ und 184.000€. Wir erstellen Ihnen eine kostenlose, unverbindliche Kostenschätzung innerhalb von 24 Stunden."
+    answer: "Aus unserer Erfahrung mit 268+ Projekten: Eine Komplettsanierung in München kostet zwischen 920€ und 2.300€ pro Quadratmeter. Eine 80m² Wohnung liegt damit zwischen 73.600€ und 184.000€. In Ihrer kostenlosen Beratung erhalten Sie eine genaue Schätzung für Ihr Projekt."
   },
   {
     question: "Was kostet eine Badsanierung in München?",
-    answer: "Eine Badsanierung in München beginnt bei etwa 9.200€ für ein kleines Bad (4m²) mit Standardausstattung. Ein mittelgroßes Bad (6-8m²) mit gehobener Ausstattung liegt bei 15.000-25.000€. Luxusbäder mit Wellness-Elementen können 35.000€ und mehr kosten. Der genaue Preis hängt von Ihren Wünschen ab."
+    answer: "Eine Badsanierung startet bei etwa 9.200€ für ein kleines Bad mit Standardausstattung. Mittelgroße Bäder liegen bei 15.000-25.000€, Luxusbäder bei 35.000€+. Wir erstellen Ihnen ein verbindliches Festpreis-Angebot."
   },
   {
     question: "Wie lange dauert eine Sanierung?",
-    answer: "Die Dauer hängt vom Umfang ab: Badsanierung 2-3 Wochen, Küchenbauarbeiten 1-2 Wochen, Komplettsanierung 6-12 Wochen je nach Größe. Dank unseres eingespielten Handwerkernetzwerks arbeiten wir schneller als Einzelhandwerker. Wir nennen Ihnen einen verbindlichen Endtermin."
+    answer: "Badsanierung: 2-3 Wochen. Küchenbauarbeiten: 1-2 Wochen. Komplettsanierung: 6-12 Wochen. Wir nennen Ihnen einen verbindlichen Endtermin und halten ihn."
   },
   {
     question: "Was bedeutet Festpreisgarantie?",
-    answer: "Festpreisgarantie bedeutet: Der Preis in unserem Angebot ist der Preis, den Sie am Ende zahlen. Keine versteckten Kosten, keine Nachforderungen, keine bösen Überraschungen. Ausgenommen sind nur Änderungswünsche Ihrerseits oder unvorhersehbare Bausubstanzprobleme, die wir vorher dokumentieren."
-  },
-  {
-    question: "Sind Ihre Handwerker qualifiziert?",
-    answer: "Ja, alle unsere Partnerfirmen sind geprüfte Fachbetriebe aus München und Umgebung. Meisterpflichtige Gewerke werden ausschließlich von qualifizierten Meisterbetrieben ausgeführt. Wir arbeiten nur mit Partnern zusammen, die unsere strengen Qualitätsstandards erfüllen."
+    answer: "Der Preis in unserem Angebot ist der Preis, den Sie zahlen. Keine versteckten Kosten, keine Nachforderungen. Ausgenommen sind nur Änderungswünsche Ihrerseits oder dokumentierte Bausubstanzprobleme."
   },
   {
     question: "In welchen Stadtteilen sind Sie tätig?",
-    answer: "Wir sind in ganz München und Umgebung tätig: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Neuperlach, Solln, Hadern und alle anderen Stadtteile. Im Umland: Dachau, Starnberg, Germering, Fürstenfeldbruck, Freising, Garching und weitere Gemeinden."
+    answer: "Wir sind in ganz München und Umgebung tätig: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen und alle anderen Stadtteile. Im Umland: Dachau, Starnberg, Germering, Freising und weitere."
   },
   {
     question: "Gibt es Fördermittel für Sanierungen?",
-    answer: "Ja! Für energetische Sanierungen gibt es attraktive Fördermittel: KfW-Förderung bis zu 45.000€ pro Wohneinheit, BAFA-Zuschüsse für Heizungsaustausch, Münchner Förderprogramm Klimaneutrale Gebäude. Wir beraten Sie kostenlos zu allen Fördermöglichkeiten."
-  },
-  {
-    question: "Kann ich während der Sanierung wohnen bleiben?",
-    answer: "Das hängt vom Umfang ab. Bei einer Badsanierung können Sie meist wohnen bleiben - wir richten ein Provisorium ein. Bei Komplettsanierungen empfehlen wir oft einen temporären Auszug, um die Arbeiten schneller und effizienter durchzuführen. Wir beraten Sie individuell."
+    answer: "Ja! KfW-Förderung bis 45.000€ pro Wohneinheit, BAFA-Zuschüsse für Heizungsaustausch, Münchner Förderprogramm. Wir beraten Sie kostenlos zu allen Fördermöglichkeiten."
   },
 ];
 
 const urgencyOptions = [
-  { id: "sofort", label: "So schnell wie möglich", sublabel: "Innerhalb der nächsten 4 Wochen" },
-  { id: "bald", label: "In den nächsten 1-3 Monaten", sublabel: "Gute Planungszeit" },
-  { id: "planung", label: "Ich plane erst mal", sublabel: "Mehr als 3 Monate" },
+  { id: "sofort", label: "So schnell wie möglich", sublabel: "In den nächsten 4 Wochen" },
+  { id: "bald", label: "In 1-3 Monaten", sublabel: "Gute Planungszeit" },
+  { id: "planung", label: "Ich plane erst", sublabel: "Mehr als 3 Monate" },
 ];
 
-function MiniLeadFunnel() {
+function LeadMagnetSection() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    toast({
+      title: "Ratgeber wird gesendet!",
+      description: "Prüfen Sie Ihr E-Mail-Postfach.",
+    });
+  };
+
+  return (
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb),0.08),transparent_50%)]" />
+      
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 relative">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-medium mb-6">
+              <Gift className="w-4 h-4" />
+              <span>Kostenloses Geschenk</span>
+            </div>
+            
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+              Der Ratgeber, der Ihnen <span className="text-primary">tausende Euro</span> spart
+            </h2>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <p className="text-muted-foreground">
+                  <strong className="text-foreground">Die 7 teuersten Fehler</strong> bei Sanierungen und wie Sie sie vermeiden
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <p className="text-muted-foreground">
+                  <strong className="text-foreground">Realistische Kostenübersicht</strong> für alle Sanierungsarten in München
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <p className="text-muted-foreground">
+                  <strong className="text-foreground">Checkliste Handwerkerauswahl</strong>: Woran Sie seriöse Betriebe erkennen
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <p className="text-muted-foreground">
+                  <strong className="text-foreground">Fördermittel-Guide 2025</strong>: Bis zu 70% Zuschüsse sichern
+                </p>
+              </div>
+            </div>
+
+            <p className="text-sm text-muted-foreground italic">
+              Über 1.200 Münchner haben diesen Ratgeber bereits heruntergeladen.
+            </p>
+          </div>
+
+          <Card className="p-8 shadow-xl border-2 border-primary/20">
+            {!isSubmitted ? (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FileText className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Kostenloser Sanierungs-Ratgeber</h3>
+                  <p className="text-muted-foreground text-sm mt-1">32 Seiten geballtes Expertenwissen</p>
+                </div>
+
+                <div>
+                  <Label htmlFor="lead-email" className="sr-only">E-Mail</Label>
+                  <Input
+                    id="lead-email"
+                    type="email"
+                    placeholder="Ihre E-Mail-Adresse"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="h-12"
+                    data-testid="input-lead-email"
+                  />
+                </div>
+
+                <Button 
+                  type="submit" 
+                  className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold"
+                  disabled={isSubmitting}
+                  data-testid="button-download-guide"
+                >
+                  {isSubmitting ? (
+                    "Wird gesendet..."
+                  ) : (
+                    <>
+                      <Download className="w-5 h-5 mr-2" />
+                      Jetzt kostenlos herunterladen
+                    </>
+                  )}
+                </Button>
+
+                <p className="text-xs text-center text-muted-foreground">
+                  Kein Spam. Sie können sich jederzeit abmelden.
+                </p>
+              </form>
+            ) : (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Geschafft!</h3>
+                <p className="text-muted-foreground mb-6">
+                  Der Ratgeber ist auf dem Weg zu Ihnen. Prüfen Sie Ihr Postfach.
+                </p>
+                <Link href="/anfrage">
+                  <Button className="bg-primary hover:bg-primary/90" data-testid="button-after-download-cta">
+                    Oder: Jetzt kostenlose Beratung anfragen
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            )}
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FunnelForm() {
   const [step, setStep] = useState(1);
   const [postalCode, setPostalCode] = useState("");
   const [city, setCity] = useState("");
@@ -302,25 +445,23 @@ function MiniLeadFunnel() {
   const progressPercent = (step / 3) * 100;
 
   return (
-    <section id="anfrage-form" className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
+    <section id="anfrage-form" className="py-16 lg:py-24 bg-background">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Kostenlos & Unverbindlich
-          </span>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Jetzt Ihre kostenlose Beratung sichern
+            Starten Sie jetzt. <span className="text-primary">Kostenlos.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            In nur 3 Schritten zur persönlichen Beratung. Innerhalb von 24 Stunden meldet sich Ihr Ansprechpartner.
+            In nur 2 Minuten zu Ihrer persönlichen Beratung. 
+            Keine Verpflichtungen. Keine versteckten Kosten.
           </p>
         </div>
 
-        <Card className="p-6 lg:p-10 shadow-lg">
+        <Card className="p-6 lg:p-10 shadow-xl border-2">
           <div className="mb-8">
             <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
               <span className="font-medium">Schritt {step} von 3</span>
-              <span>{Math.round(progressPercent)}% abgeschlossen</span>
+              <span>{Math.round(progressPercent)}%</span>
             </div>
             <Progress value={progressPercent} className="h-3" />
           </div>
@@ -329,23 +470,23 @@ function MiniLeadFunnel() {
             <div className="space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
-                  Wo befindet sich Ihr Objekt?
+                  Wo dürfen wir Ihnen helfen?
                 </h3>
                 <p className="text-muted-foreground">
-                  Ihr Standort hilft uns, die richtigen Handwerker zu finden
+                  Ihr Standort hilft uns, das beste Team für Sie zu finden
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="postal-code" className="text-sm font-medium">Postleitzahl</Label>
+                  <Label htmlFor="postal-code" className="text-sm font-medium">PLZ</Label>
                   <Input
                     id="postal-code"
                     placeholder="z.B. 80331"
                     value={postalCode}
                     onChange={(e) => setPostalCode(e.target.value)}
                     maxLength={5}
-                    className="mt-1"
-                    data-testid="input-mini-postal-code"
+                    className="mt-1 h-12"
+                    data-testid="input-funnel-plz"
                   />
                 </div>
                 <div>
@@ -355,28 +496,25 @@ function MiniLeadFunnel() {
                     placeholder="z.B. München"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="mt-1"
-                    data-testid="input-mini-city"
+                    className="mt-1 h-12"
+                    data-testid="input-funnel-city"
                   />
                 </div>
               </div>
               
-              <div className="text-center">
+              <div className="text-center pt-4">
                 <h3 className="text-xl font-bold mb-2">
-                  Welche Sanierung planen Sie?
+                  Was möchten Sie sanieren?
                 </h3>
-                <p className="text-muted-foreground">
-                  Wählen Sie den passenden Service
-                </p>
               </div>
               <RadioGroup value={selectedService} onValueChange={setSelectedService} className="grid grid-cols-2 lg:grid-cols-3 gap-3">
                 {allServices.map((service) => (
                   <Label
                     key={service.id}
                     htmlFor={`service-${service.id}`}
-                    className={`flex flex-col items-center gap-2 p-4 rounded-lg border cursor-pointer transition-all ${
+                    className={`flex flex-col items-center gap-2 p-4 rounded-lg border-2 cursor-pointer transition-all ${
                       selectedService === service.id
-                        ? "border-primary bg-primary/5 shadow-md"
+                        ? "border-primary bg-primary/5"
                         : "border-border hover-elevate"
                     }`}
                     data-testid={`radio-service-${service.id}`}
@@ -391,8 +529,7 @@ function MiniLeadFunnel() {
               <Button
                 onClick={() => setStep(2)}
                 disabled={!selectedService || !postalCode || !city}
-                className="w-full"
-                size="lg"
+                className="w-full h-12"
                 data-testid="button-funnel-step1"
               >
                 Weiter
@@ -405,10 +542,10 @@ function MiniLeadFunnel() {
             <div className="space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
-                  Wie dringend ist Ihr Projekt?
+                  Wann soll es losgehen?
                 </h3>
                 <p className="text-muted-foreground">
-                  Je früher Sie anfragen, desto schneller können wir Ihnen helfen
+                  Je früher wir wissen, desto besser können wir planen
                 </p>
               </div>
               <RadioGroup value={urgency} onValueChange={setUrgency} className="space-y-4">
@@ -416,9 +553,9 @@ function MiniLeadFunnel() {
                   <Label
                     key={option.id}
                     htmlFor={`urgency-${option.id}`}
-                    className={`flex items-center gap-4 p-5 rounded-lg border cursor-pointer transition-all ${
+                    className={`flex items-center gap-4 p-5 rounded-lg border-2 cursor-pointer transition-all ${
                       urgency === option.id
-                        ? "border-primary bg-primary/5 shadow-md"
+                        ? "border-primary bg-primary/5"
                         : "border-border hover-elevate"
                     }`}
                     data-testid={`radio-urgency-${option.id}`}
@@ -431,20 +568,21 @@ function MiniLeadFunnel() {
                   </Label>
                 ))}
               </RadioGroup>
+              
               {urgency === "sofort" && (
-                <div className="flex items-start gap-3 p-4 bg-orange-500/10 rounded-lg border border-orange-500/20">
-                  <Clock className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-4 bg-green-500/10 rounded-lg border border-green-500/20">
+                  <Sparkles className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                   <p className="text-sm">
-                    <strong>Gute Nachricht:</strong> Wir haben aktuell freie Kapazitäten und können zeitnah mit Ihrem Projekt starten.
+                    <strong>Gute Nachricht:</strong> Wir haben aktuell freie Kapazitäten und können zeitnah starten.
                   </p>
                 </div>
               )}
+              
               <div className="flex gap-4">
                 <Button
                   variant="outline"
                   onClick={() => setStep(1)}
-                  className="flex-1"
-                  size="lg"
+                  className="flex-1 h-12"
                   data-testid="button-funnel-back2"
                 >
                   Zurück
@@ -452,8 +590,7 @@ function MiniLeadFunnel() {
                 <Button
                   onClick={() => setStep(3)}
                   disabled={!urgency}
-                  className="flex-1"
-                  size="lg"
+                  className="flex-1 h-12"
                   data-testid="button-funnel-step2"
                 >
                   Weiter
@@ -467,10 +604,10 @@ function MiniLeadFunnel() {
             <div className="space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
-                  Wie können wir Sie erreichen?
+                  Wie erreichen wir Sie?
                 </h3>
                 <p className="text-muted-foreground">
-                  In 24 Stunden meldet sich Ihr persönlicher Ansprechpartner
+                  Morgen meldet sich Ihr persönlicher Berater
                 </p>
               </div>
               <div className="space-y-5">
@@ -482,7 +619,7 @@ function MiniLeadFunnel() {
                       placeholder="z.B. Thomas"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      className="mt-1"
+                      className="mt-1 h-12"
                       data-testid="input-funnel-firstname"
                     />
                   </div>
@@ -493,7 +630,7 @@ function MiniLeadFunnel() {
                       placeholder="z.B. Müller"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
-                      className="mt-1"
+                      className="mt-1 h-12"
                       data-testid="input-funnel-lastname"
                     />
                   </div>
@@ -502,40 +639,41 @@ function MiniLeadFunnel() {
                   <Label htmlFor="funnel-contact" className="text-sm font-medium">Telefon oder E-Mail</Label>
                   <Input
                     id="funnel-contact"
-                    placeholder="z.B. 0170 1234567 oder name@email.de"
+                    placeholder="z.B. 0170 1234567"
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
-                    className="mt-1"
+                    className="mt-1 h-12"
                     data-testid="input-funnel-contact"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="funnel-address" className="text-sm font-medium">Adresse des Objekts</Label>
+                  <Label htmlFor="funnel-address" className="text-sm font-medium">Straße & Hausnummer</Label>
                   <Input
                     id="funnel-address"
                     placeholder="z.B. Marienplatz 1"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    className="mt-1"
+                    className="mt-1 h-12"
                     data-testid="input-funnel-address"
                   />
                   <p className="text-xs text-muted-foreground mt-1">
-                    PLZ/Stadt: {postalCode} {city}
+                    PLZ/Ort: {postalCode} {city}
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
                 <Shield className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
-                  <strong>Ihre Daten sind sicher:</strong> Kein Spam, kein Weiterverkauf. Wir nutzen Ihre Daten ausschließlich zur Kontaktaufnahme.
+                  <strong className="text-foreground">Ihre Daten sind sicher.</strong> Kein Spam. Kein Weiterverkauf. Versprochen.
                 </p>
               </div>
+              
               <div className="flex gap-4">
                 <Button
                   variant="outline"
                   onClick={() => setStep(2)}
-                  className="flex-1"
-                  size="lg"
+                  className="flex-1 h-12"
                   data-testid="button-funnel-back3"
                 >
                   Zurück
@@ -543,11 +681,10 @@ function MiniLeadFunnel() {
                 <Button
                   onClick={handleSubmit}
                   disabled={!firstName || !lastName || !contact || !address}
-                  className="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
-                  size="lg"
+                  className="flex-1 h-12 bg-orange-500 hover:bg-orange-600"
                   data-testid="button-funnel-submit"
                 >
-                  Jetzt Beratung sichern
+                  Kostenlose Beratung sichern
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -555,7 +692,7 @@ function MiniLeadFunnel() {
           )}
         </Card>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+        <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-600" />
             <span>100% kostenlos</span>
@@ -575,66 +712,75 @@ function MiniLeadFunnel() {
 }
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-background">
-      <SeoHead
-        title="Sanierung München | Festpreis ab 920€/m² | KSHW München"
-        description="Was kostet Sanierung München? Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ Projekte, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h!"
-        keywords="Sanierung München Kosten, Badsanierung München Preis, Komplettsanierung München, Haussanierung München, Wohnungssanierung, Küchensanierung, Altbausanierung, Kernsanierung München"
-        canonicalPath="/"
-        schema={generateFaqSchema(faqs)}
-      />
-      <SiteHeader />
+  const faqSchema = generateFaqSchema(faqs);
+  
+  const scrollToForm = () => {
+    document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-      <main id="main-content">
-        {/* Hero Section */}
-        <section className="relative pt-16 min-h-[70vh] lg:min-h-[65vh] flex items-center">
-          <div className="absolute inset-0 pt-16">
-            <img 
-              src={houseBeforeAfter} 
-              alt="Professionelle Haussanierung: Links unsaniert, rechts komplett renoviert - KSHW München"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-              data-testid="img-hero-main"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+  return (
+    <>
+      <SeoHead
+        title="Sanierung München | Festpreis & 5 Jahre Garantie | KSHW München"
+        description="Ihre Sanierung ohne Stress: Ein Ansprechpartner, Festpreisgarantie, verbindlicher Termin. 268+ zufriedene Familien in München. Kostenlose Beratung in 24h."
+        canonicalPath="/"
+        schema={faqSchema}
+      />
+      
+      <div className="min-h-screen bg-background">
+        <SiteHeader />
+
+        {/* Hero Section - NLP: Future Pacing + Pain-Pleasure */}
+        <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${houseBeforeAfter})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-8 lg:py-12 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-20 lg:py-32">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <span className="text-white text-sm font-medium">268+ zufriedene Kunden in München</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
+                <BadgeCheck className="w-4 h-4" />
+                <span>268+ zufriedene Familien in München</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Sanierung München
-                <br />
-                <span className="text-orange-400">ohne Stress & Chaos</span>
+                Stellen Sie sich vor: <br className="hidden lg:block" />
+                <span className="text-primary">Ihre Sanierung läuft. <br className="hidden lg:block" />Und Sie entspannen.</span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
-                Schluss mit wochenlanger Handwerkersuche, Kostenexplosionen und Koordinationschaos. 
-                <strong className="text-white"> Ein Ansprechpartner. Festpreisgarantie. Termingarantie.</strong>
+                Ein Ansprechpartner. Ein Festpreis. Ein verbindlicher Termin.
+                <br className="hidden lg:block" />
+                <strong>Keine Überraschungen. Kein Chaos. Kein Stress.</strong>
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <a href="#anfrage-form">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8 py-6 w-full sm:w-auto" data-testid="button-hero-cta">
-                    Kostenlose Beratung sichern
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </a>
-                <a href="tel:+4915212274043">
-                  <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 w-full sm:w-auto backdrop-blur-sm" data-testid="button-hero-phone">
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Button 
+                  size="lg" 
+                  onClick={scrollToForm}
+                  className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold"
+                  data-testid="button-hero-cta"
+                >
+                  Kostenlose Beratung sichern
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Link href="tel:+4915212274043">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="h-14 px-8 text-lg border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                    data-testid="button-hero-phone"
+                  >
                     <Phone className="w-5 h-5 mr-2" />
-                    0152 122 740 43
+                    Sofort anrufen
                   </Button>
-                </a>
+                </Link>
               </div>
-              
-              <div className="flex flex-wrap gap-6 text-white/80">
+
+              <div className="flex flex-wrap gap-6 text-white/80 text-sm">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>Festpreisgarantie</span>
@@ -645,189 +791,136 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Beratung in 24h</span>
+                  <span>Antwort in 24h</span>
                 </div>
               </div>
+            </div>
+          </div>
+          
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <ChevronDown className="w-8 h-8 text-white/60" />
+          </div>
+        </section>
+
+        {/* Pain Points Section - NLP: Problem-Agitation */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Kennen Sie das Gefühl?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Eine Sanierung planen, aber nur an Probleme denken?
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {painPoints.map((point, index) => (
+                <Card key={index} className="p-6 bg-background border-destructive/20 hover-elevate">
+                  <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-4">
+                    <point.icon className="w-6 h-6 text-destructive" />
+                  </div>
+                  <h3 className="font-bold mb-2">{point.title}</h3>
+                  <p className="text-sm text-muted-foreground">{point.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Solution Section - NLP: Future Pacing + Transformation */}
+        <section className="py-16 lg:py-24 bg-background">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
+                <Target className="w-4 h-4" />
+                <span>Die Lösung</span>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                So fühlt sich Sanierung <span className="text-primary">wirklich</span> an
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Mit uns an Ihrer Seite wird Ihre Sanierung zum entspannten Erlebnis.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {transformations.map((item, index) => (
+                <Card key={index} className="p-6 border-primary/20 hover-elevate">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="py-3 bg-primary text-white">
+        <section className="py-12 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <stat.icon className="w-5 h-5 mx-auto mb-1 opacity-80" />
-                  <div className="text-xl lg:text-2xl font-bold">{stat.value}</div>
-                  <div className="text-xs opacity-80">{stat.label}</div>
+                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-sm opacity-80">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Pain Points Section */}
-        <section className="py-6 lg:py-8 bg-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-2 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 rounded-full text-sm font-medium mb-4">
-                Kennen Sie das?
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Sanierung in München - ein Albtraum?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Sie sind nicht allein. Diese Probleme kennen wir von hunderten Kunden.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {painPoints.map((point, index) => (
-                <Card key={index} className="p-6 border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-900/10">
-                  <div className="flex gap-4">
-                    <div className="shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-                        <point.icon className="w-6 h-6 text-red-600 dark:text-red-400" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold mb-2 text-red-900 dark:text-red-300">{point.title}</h3>
-                      <p className="text-muted-foreground">{point.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Solution Section */}
-        <section className="py-6 lg:py-8 bg-primary/5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-2 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full text-sm font-medium mb-4">
-                Die Lösung
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                KSHW München macht Sanierung einfach
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Ein Ansprechpartner koordiniert alles. Sie lehnen sich zurück.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {solutions.map((solution, index) => (
-                <Card key={index} className="p-6 border-green-200 dark:border-green-900/50 bg-white dark:bg-card">
-                  <div className="flex gap-4">
-                    <div className="shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                        <solution.icon className="w-6 h-6 text-green-600 dark:text-green-400" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold mb-2">{solution.title}</h3>
-                      <p className="text-muted-foreground">{solution.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-6 lg:py-8 bg-background">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Unsere Sanierungsleistungen
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Von der Badsanierung bis zur Komplettsanierung - alles aus einer Hand.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allServices.map((service) => (
-                <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                  <Card className="overflow-hidden hover-elevate cursor-pointer h-full" data-testid={`card-service-${service.id}`}>
-                    <div className="aspect-video relative">
-                      <img 
-                        src={service.image} 
-                        alt={`${service.title} München - KSHW`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <div className="flex items-center gap-2 text-white">
-                          <service.icon className="w-5 h-5" />
-                          <span className="font-bold text-lg">{service.title}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <CardContent className="p-5">
-                      <p className="text-muted-foreground mb-3">{service.description}</p>
-                      <div className="text-xl font-bold text-primary mb-3">{service.price}</div>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <CheckCircle className="w-4 h-4 text-green-600" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Lead Magnet Section */}
+        <LeadMagnetSection />
 
         {/* Process Section */}
-        <section className="py-6 lg:py-8 bg-muted/30">
+        <section className="py-16 lg:py-24 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                So einfach funktioniert's
+                Ihr Weg zum <span className="text-primary">Traumzuhause</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                In 4 Schritten von der Anfrage zur fertigen Sanierung
+                In 4 einfachen Schritten von der Idee zur fertigen Sanierung.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {processSteps.map((step) => (
-                <Card key={step.number} className="p-6 relative">
-                  <div className="absolute -top-4 left-6 w-8 h-8 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">
-                    {step.number}
-                  </div>
-                  <div className="pt-4">
-                    <step.icon className="w-10 h-10 text-primary mb-4" />
-                    <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{step.description}</p>
-                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                      {step.duration}
-                    </span>
-                  </div>
-                </Card>
+              {processSteps.map((step, index) => (
+                <div key={index} className="relative">
+                  <Card className="p-6 h-full">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
+                        {step.number}
+                      </div>
+                      <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">
+                        {step.duration}
+                      </span>
+                    </div>
+                    <h3 className="font-bold mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                  </Card>
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border" />
+                  )}
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-6 lg:py-8 bg-background">
+        {/* Testimonials Section - NLP: Social Proof + Emotional Language */}
+        <section className="py-16 lg:py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Das sagen unsere Kunden
+                Das sagen unsere <span className="text-primary">Kunden</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                268+ zufriedene Kunden in München und Umgebung
+              <p className="text-lg text-muted-foreground">
+                Echte Erfahrungen. Echte Ergebnisse.
               </p>
             </div>
             
@@ -836,14 +929,20 @@ export default function Home() {
                 <Card key={index} className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-6 italic">"{testimonial.text}"</p>
-                  <div className="border-t pt-4">
-                    <p className="font-bold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                    <p className="text-xs text-primary mt-1">{testimonial.project}</p>
+                  <p className="text-muted-foreground mb-6 italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                    </div>
+                    <span className="text-xs font-medium bg-primary/10 text-primary px-2 py-1 rounded">
+                      {testimonial.project}
+                    </span>
                   </div>
                 </Card>
               ))}
@@ -851,28 +950,72 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section with Funnel Form */}
-        <MiniLeadFunnel />
+        {/* Services Preview */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Unsere <span className="text-primary">Leistungen</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Von der kleinen Badrenovierung bis zur kompletten Haussanierung.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allServices.map((service) => (
+                <Card key={service.id} className="overflow-hidden group hover-elevate">
+                  <div className="relative h-48">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                      <p className="text-white/80 text-sm">{service.description}</p>
+                    </div>
+                  </div>
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-primary">{service.price}</span>
+                      <Link href={`/anfrage?service=${service.id}`}>
+                        <Button variant="ghost" size="sm" data-testid={`button-service-${service.id}`}>
+                          Anfragen
+                          <ChevronRight className="w-4 h-4 ml-1" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Funnel Form */}
+        <FunnelForm />
 
         {/* FAQ Section */}
-        <section className="py-6 lg:py-8 bg-muted/30">
+        <section className="py-16 lg:py-24 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Häufige Fragen zur Sanierung
+                Häufige <span className="text-primary">Fragen</span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                Antworten auf die wichtigsten Fragen unserer Kunden
+                Alles, was Sie wissen müssen.
               </p>
             </div>
             
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`faq-${index}`} className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-semibold hover:no-underline py-5">
+                <AccordionItem key={index} value={`faq-${index}`} className="bg-background rounded-lg border px-6">
+                  <AccordionTrigger className="text-left font-semibold hover:no-underline py-4" data-testid={`accordion-faq-${index}`}>
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5">
+                  <AccordionContent className="text-muted-foreground pb-4">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -881,34 +1024,36 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section className="py-6 lg:py-8 bg-primary text-white">
+        {/* Final CTA - NLP: Urgency + Future Pacing */}
+        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Bereit für Ihre stressfreie Sanierung?
+              In 3 Monaten könnten Sie in Ihrem <br className="hidden lg:block" />
+              frisch sanierten Zuhause sitzen.
             </h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Lassen Sie sich jetzt kostenlos beraten. Ihr persönlicher Ansprechpartner meldet sich innerhalb von 24 Stunden.
+              Der erste Schritt ist kostenlos. Unverbindlich. 
+              Und er dauert nur 2 Minuten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#anfrage-form">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" data-testid="button-final-cta">
-                  Jetzt kostenlos anfragen
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </a>
-              <a href="tel:+4915212274043">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6" data-testid="button-final-phone">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0152 122 740 43
-                </Button>
-              </a>
+              <Button 
+                size="lg" 
+                onClick={scrollToForm}
+                className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold"
+                data-testid="button-final-cta"
+              >
+                Jetzt kostenlose Beratung starten
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
             </div>
+            <p className="mt-6 text-sm opacity-70">
+              Keine Verpflichtungen. Kein Spam. Nur Klarheit.
+            </p>
           </div>
         </section>
-      </main>
 
-      <SeoFooter />
-    </div>
+        <SeoFooter />
+      </div>
+    </>
   );
 }
