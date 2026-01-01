@@ -29,7 +29,7 @@ export default function Datenschutz() {
       <main className="pb-16 flex-1">
         <div className="max-w-3xl mx-auto px-4 lg:px-8">
 
-          <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
+          <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
             
             <section>
               <p className="text-muted-foreground">

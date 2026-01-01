@@ -32,7 +32,7 @@ export default function Cookies() {
       <main className="pb-16 flex-1">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
 
-          <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
+          <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
             <Card>
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold mb-4 flex items-center gap-2">

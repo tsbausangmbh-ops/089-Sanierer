@@ -347,7 +347,7 @@ export default function GewerkeFunnel() {
       <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-4xl mx-auto px-4">
 
-          <div className="mb-8">
+          <div className="mb-4">
             <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
               <span>Schritt {step} von {totalSteps}</span>
               <span>{Math.round(progress)}% abgeschlossen</span>

@@ -383,9 +383,9 @@ export default function FaqPreise() {
       <Breadcrumb items={[{ label: "FAQ & Preise" }]} />
 
       <main id="main-content" className="flex-1">
-        <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1">
                 <Euro className="w-6 h-6 text-primary" />
                 Sanierungspreise München – Kostenübersicht
@@ -456,9 +456,9 @@ export default function FaqPreise() {
           </div>
         </section>
 
-        <section className="py-12 lg:py-16 bg-muted/30">
+        <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
                 <Handshake className="w-6 h-6 text-green-600" />
               </div>
@@ -468,7 +468,7 @@ export default function FaqPreise() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               {tradePrices.map((item) => (
                 <Card key={item.trade} className="overflow-hidden" data-testid={`card-trade-price-${item.trade.toLowerCase().replace(/\s+/g, '-')}`}>
                   <CardHeader className="pb-3">
@@ -499,7 +499,7 @@ export default function FaqPreise() {
               ))}
             </div>
 
-            <div className="bg-muted/50 rounded-lg p-4 mb-8">
+            <div className="bg-muted/50 rounded-lg p-4 mb-4">
               <p className="text-sm text-muted-foreground">
                 <strong>Hinweis:</strong> Die angegebenen Stundensätze und Preise sind Durchschnittswerte für München und können variieren. 
                 Jeder Handwerksbetrieb erstellt seine eigene Kalkulation. Auf Wunsch übernehmen wir auch die <strong>Koordination, Bauleitung und Bauüberwachung</strong> gegen Aufpreis.
@@ -525,9 +525,9 @@ export default function FaqPreise() {
           </div>
         </section>
 
-        <section className="py-12 lg:py-16">
+        <section className="py-6 lg:py-8">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <HelpCircle className="w-6 h-6 text-primary" />
               </div>

@@ -45,12 +45,12 @@ export default function Confirmation() {
 
       <main className="flex-1 pb-16">
         <div className="max-w-2xl mx-auto px-4 py-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />
             </div>
             
-            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Clock className="w-4 h-4" />
               Erwartete Rückmeldung: Innerhalb von 48 Stunden
             </div>

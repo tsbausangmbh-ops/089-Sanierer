@@ -290,7 +290,7 @@ function LeadMagnetSection() {
   };
 
   return (
-    <section className="py-8 lg:py-12 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
+    <section className="py-4 lg:py-6 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb),0.08),transparent_50%)]" />
       
       <div className="max-w-6xl mx-auto px-4 lg:px-8 relative">
@@ -444,7 +444,7 @@ function FunnelForm() {
   const progressPercent = (step / 3) * 100;
 
   return (
-    <section id="anfrage-form" className="py-8 lg:py-12 bg-background">
+    <section id="anfrage-form" className="py-4 lg:py-6 bg-background">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -466,7 +466,7 @@ function FunnelForm() {
           </div>
 
           {step === 1 && (
-            <div className="space-y-8">
+            <div className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
                   Wo dürfen wir Ihnen helfen?
@@ -538,7 +538,7 @@ function FunnelForm() {
           )}
 
           {step === 2 && (
-            <div className="space-y-8">
+            <div className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
                   Wann soll es losgehen?
@@ -600,7 +600,7 @@ function FunnelForm() {
           )}
 
           {step === 3 && (
-            <div className="space-y-8">
+            <div className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
                   Wie erreichen wir Sie?
@@ -797,7 +797,7 @@ export default function Home() {
         </section>
 
         {/* Pain Points Section - NLP: Problem-Agitation */}
-        <section className="py-8 lg:py-12 bg-muted/30">
+        <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -823,7 +823,7 @@ export default function Home() {
         </section>
 
         {/* Solution Section - NLP: Future Pacing + Transformation */}
-        <section className="py-8 lg:py-12 bg-background">
+        <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
@@ -853,7 +853,7 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-12 bg-primary text-primary-foreground">
+        <section className="py-6 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
@@ -871,7 +871,7 @@ export default function Home() {
         <LeadMagnetSection />
 
         {/* Process Section */}
-        <section className="py-8 lg:py-12 bg-muted/30">
+        <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -907,7 +907,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section - NLP: Social Proof + Emotional Language */}
-        <section className="py-8 lg:py-12 bg-background">
+        <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -945,7 +945,7 @@ export default function Home() {
         </section>
 
         {/* Services Preview */}
-        <section className="py-8 lg:py-12 bg-muted/30">
+        <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -992,7 +992,7 @@ export default function Home() {
         <FunnelForm />
 
         {/* FAQ Section */}
-        <section className="py-8 lg:py-12 bg-muted/30">
+        <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -1019,7 +1019,7 @@ export default function Home() {
         </section>
 
         {/* Final CTA - NLP: Urgency + Future Pacing */}
-        <section className="py-8 lg:py-12 bg-primary text-primary-foreground">
+        <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               In 3 Monaten könnten Sie in Ihrem <br className="hidden lg:block" />

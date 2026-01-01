@@ -32,7 +32,7 @@ export default function Ratgeber() {
 
       <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
-          <Card className="mb-12 bg-gradient-to-r from-primary/10 via-primary/5 to-accent/10 border-primary/20">
+          <Card className="mb-6 bg-gradient-to-r from-primary/10 via-primary/5 to-accent/10 border-primary/20">
             <CardContent className="pt-6">
               <div className="flex flex-col md:flex-row items-center gap-6">
                 <div className="flex-shrink-0">
@@ -67,7 +67,7 @@ export default function Ratgeber() {
             </CardContent>
           </Card>
 
-          <nav className="mb-12 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
+          <nav className="mb-6 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
             <h2 className="font-semibold mb-3">Welches Thema interessiert Sie?</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
               <a href="#haus-sanieren" className="text-primary hover:underline flex items-center gap-1"><Home className="w-4 h-4" /> Haus sanieren</a>
@@ -91,14 +91,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Haussanierung in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Haussanierung in München? Wie teuer ist eine Kernsanierung? Lohnt sich die Sanierung eines alten Hauses? 
                   Diese Fragen beschäftigen viele Immobilienbesitzer in der Region München.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -197,14 +197,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Was kostet Fassade streichen in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet Fassade streichen in München? Wo finde ich gute Malerarbeiten in meiner Nähe? 
                   Hier finden Sie alle Informationen zu Fassadensanierung und Malerarbeiten.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -303,14 +303,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Wie teuer ist eine Dachsanierung in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Dachsanierung in München? Wie teuer ist ein Dachausbau? Welche Kosten fallen beim Dachboden ausbauen an? 
                   Alle wichtigen Informationen zu Dacharbeiten und Kosten.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -424,14 +424,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Badsanierung in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Badsanierung in München? Welche Kosten fallen bei einem neuen Badezimmer an? 
                   Alle Informationen zu Badsanierungen mit Preisbeispielen.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -530,14 +530,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Kellersanierung in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Kellersanierung? Wie wird ein feuchter Keller trockengelegt? 
                   Informationen zu Kellerabdichtung, Kellersanierung und Kosten.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -617,14 +617,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Lohnt sich Wärmedämmung in München? Kosten & Förderung</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Dachdämmung? Wie teuer ist eine Innendämmung? 
                   Alle Informationen zu Dämmmaßnahmen, Kosten und Fördermöglichkeiten.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -735,14 +735,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Wohnungssanierung in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Wohnungssanierung in München? Wie teuer ist die Renovierung einer Altbauwohnung? 
                   Alle Informationen zu Kosten und Ablauf.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-4">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -837,14 +837,14 @@ export default function Ratgeber() {
                 <h2 className="text-2xl lg:text-3xl font-bold">Welche Förderung gibt es für energetische Sanierung in München?</h2>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine energetische Sanierung? Welche Förderungen gibt es von BAFA und KfW? 
                   Welche Vorteile hat die energetische Sanierung für den Kunden?
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-4">
                 <Card className="border-green-200 dark:border-green-800">
                   <CardHeader className="bg-green-50 dark:bg-green-900/20">
                     <CardTitle className="flex items-center gap-2 text-green-700 dark:text-green-300">
@@ -910,7 +910,7 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 mb-8">
+              <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 mb-4">
                 <CardContent className="pt-6">
                   <h3 className="font-semibold mb-4 text-green-700 dark:text-green-300">Das bringt Ihnen die energetische Sanierung:</h3>
                   <div className="grid md:grid-cols-2 gap-4">

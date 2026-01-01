@@ -2287,11 +2287,11 @@ export default function FunnelPage() {
     
     return (
       <div className="container mx-auto px-4 py-8 max-w-5xl flex-1">
-        <div className="prose prose-lg max-w-none mb-8">
+        <div className="prose prose-lg max-w-none mb-4">
           <p className="text-foreground leading-relaxed">{content.intro}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4">
           <Card>
             <CardHeader className="pb-4">
               <CardTitle className="text-lg flex items-center gap-2">
@@ -2331,7 +2331,7 @@ export default function FunnelPage() {
           </Card>
         </div>
 
-        <Card className="mb-8 border-primary/20 bg-primary/5">
+        <Card className="mb-4 border-primary/20 bg-primary/5">
           <CardHeader className="pb-4">
             <CardTitle className="text-lg flex items-center gap-2">
               <Star className="w-5 h-5 text-primary" />
@@ -2352,7 +2352,7 @@ export default function FunnelPage() {
 
         {/* Image Gallery - Realistic renovation process images */}
         {preSelectedService && serviceNlpImages[preSelectedService] && (
-          <div className="mb-8">
+          <div className="mb-4">
             <h3 className="text-lg font-semibold mb-4 text-center">So arbeiten wir für Sie</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {serviceNlpImages[preSelectedService].map((image, index) => (
@@ -2372,7 +2372,7 @@ export default function FunnelPage() {
           </div>
         )}
 
-        <Card className="mb-8">
+        <Card className="mb-4">
           <CardContent className="pt-6">
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -2386,7 +2386,7 @@ export default function FunnelPage() {
 
         {/* FAQ Section - Optimized for AI Search (ChatGPT, Perplexity, Gemini) */}
         {content.faq && content.faq.length > 0 && (
-          <Card className="mb-8">
+          <Card className="mb-4">
             <CardHeader className="pb-4">
               <CardTitle className="text-lg flex items-center gap-2">
                 <HelpCircle className="w-5 h-5 text-primary" />

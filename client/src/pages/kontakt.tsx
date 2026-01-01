@@ -97,7 +97,7 @@ export default function Kontakt() {
       />
       <Breadcrumb items={[{ label: "Kontakt" }]} />
 
-      <main id="main-content" className="py-12 flex-1">
+      <main id="main-content" className="py-6 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
