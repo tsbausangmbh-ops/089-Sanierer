@@ -7,7 +7,6 @@ import {
   Phone, 
   Mail, 
   Clock,
-  Home as HomeIcon,
   ChevronRight,
   Star,
   Shield,
@@ -17,51 +16,44 @@ import {
 } from "lucide-react";
 import { SeoHead } from "@/components/seo-head";
 import { AppointmentBooking } from "@/components/appointment-booking";
+import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
+import { SeoFooter } from "@/components/seo-footer";
+import { Breadcrumb } from "@/components/breadcrumb";
+import confirmationHeroImage from "@assets/generated_images/success_confirmation_checkmark.png";
 
 export default function Confirmation() {
   const [showBooking, setShowBooking] = useState(false);
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
         title="Anfrage erhalten | KSHW München"
         description="Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24-48 Stunden bei Ihnen."
         noIndex={true}
       />
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2">
-            <HomeIcon className="w-5 h-5 text-primary" />
-            <span className="font-bold">KSHW München</span>
-          </Link>
-          <a 
-            href="tel:+4915212274043"
-            className="flex items-center gap-2 bg-green-500 text-white px-3 py-1.5 rounded-md text-sm font-medium"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">0152 122 740 43</span>
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
+      <PageHero 
+        title="Anfrage erfolgreich gesendet" 
+        subtitle="Wir haben Ihr Problem verstanden und arbeiten bereits an Ihrer Lösung"
+        showCta={false}
+        compact={true}
+        image={confirmationHeroImage}
+        imageAlt="Erfolgreiche Bestätigung"
+      />
+      <Breadcrumb items={[{ label: "Bestätigung" }]} />
 
-      <main className="max-w-2xl mx-auto px-4 py-12 lg:py-16">
-        <div className="text-center">
-          <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6 animate-pulse">
-            <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />
-          </div>
-          
-          <h1 className="text-2xl lg:text-3xl font-bold mb-3" data-testid="text-confirmation-title">
-            Wir haben Ihr Problem verstanden!
-          </h1>
-          
-          <p className="text-lg text-muted-foreground mb-6">
-            Unser Expertenteam arbeitet bereits an Ihrer Lösung. 
-            Wir melden uns schnellstmöglich bei Ihnen.
-          </p>
-
-          <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
-            <Clock className="w-4 h-4" />
-            Erwartete Rückmeldung: Innerhalb von 48 Stunden
+      <main className="flex-1 pb-16">
+        <div className="max-w-2xl mx-auto px-4 py-8">
+          <div className="text-center mb-8">
+            <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />
+            </div>
+            
+            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
+              <Clock className="w-4 h-4" />
+              Erwartete Rückmeldung: Innerhalb von 48 Stunden
+            </div>
           </div>
 
           <Card className="p-5 lg:p-6 text-left mb-6">
@@ -152,7 +144,7 @@ export default function Confirmation() {
           </div>
 
           <Card className="p-5 bg-primary/5 border-primary/20 mb-6">
-            <p className="font-medium mb-3">
+            <p className="font-medium mb-3 text-center">
               Sie haben Fragen? Rufen Sie uns direkt an:
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
@@ -173,21 +165,18 @@ export default function Confirmation() {
             </div>
           </Card>
 
-          <Link href="/">
-            <Button variant="outline" data-testid="button-back-home">
-              Zurück zur Startseite
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
+          <div className="text-center">
+            <Link href="/">
+              <Button variant="outline" data-testid="button-back-home">
+                Zurück zur Startseite
+                <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </main>
 
-      <footer className="border-t py-4 mt-8">
-        <div className="max-w-4xl mx-auto px-4 flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
-          <span>KSHW München - Ali Kemal Kurt</span>
-          <span>Zielstattstr. 9, 81379 München</span>
-        </div>
-      </footer>
+      <SeoFooter />
     </div>
   );
 }

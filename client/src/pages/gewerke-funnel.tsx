@@ -12,8 +12,11 @@ import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
+import { PageHero } from "@/components/page-hero";
+import { Breadcrumb } from "@/components/breadcrumb";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SeoHead } from "@/components/seo-head";
+import gewerkeHeroImage from "@assets/generated_images/skilled_trades_craftsmen.png";
 import { 
   ArrowRight,
   ArrowLeft,
@@ -331,18 +334,18 @@ export default function GewerkeFunnel() {
         canonicalPath="/gewerke"
       />
       <SiteHeader />
+      <PageHero 
+        title="Geprüfte Handwerker in München" 
+        subtitle="Schnell und kostenlos vermittelt – Wir finden den richtigen Fachbetrieb für Sie"
+        showCta={false}
+        compact={true}
+        image={gewerkeHeroImage}
+        imageAlt="Professionelle Handwerker bei der Arbeit"
+      />
+      <Breadcrumb items={[{ label: "Handwerker finden" }]} />
 
-      <main id="main-content" className="pt-20 pb-16 flex-1">
+      <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-8">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Handshake className="w-8 h-8 text-primary" />
-            </div>
-            <h1 className="text-2xl lg:text-3xl font-bold mb-2">Geprüfte Handwerker in München – schnell und kostenlos vermittelt</h1>
-            <p className="text-muted-foreground">
-              Kein langes Suchen mehr: Wir finden den richtigen Fachbetrieb für Sie
-            </p>
-          </div>
 
           <div className="mb-8">
             <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
