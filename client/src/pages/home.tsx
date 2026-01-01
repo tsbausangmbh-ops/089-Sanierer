@@ -17,7 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import houseBeforeAfter from "@assets/generated_images/house_old_vs_new_clear_split.png";
+import heroImage from "@assets/generated_images/modern_renovated_home_interior.png";
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
 import kitchenImg from "@assets/generated_images/modern_kitchen_renovation.png";
 import floorImg from "@assets/generated_images/floor_renovation_parquet.png";
@@ -64,8 +64,7 @@ import {
   TrendingUp,
   BadgeCheck,
   Timer,
-  FileText,
-  ChevronDown
+  FileText
 } from "lucide-react";
 
 const allServices = [
@@ -730,75 +729,70 @@ export default function Home() {
       <div className="min-h-screen bg-background">
         <SiteHeader />
 
-        {/* Hero Section - NLP: Future Pacing + Pain-Pleasure */}
-        <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center">
+        {/* Hero Section - Clean & Professional */}
+        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${houseBeforeAfter})` }}
+            className="absolute inset-0 bg-cover bg-center scale-105"
+            style={{ backgroundImage: `url(${heroImage})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-20">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
-                <BadgeCheck className="w-4 h-4" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-10 lg:py-16 w-full">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
+                <BadgeCheck className="w-4 h-4 text-green-400" />
                 <span>268+ zufriedene Familien in München</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Stellen Sie sich vor: <br className="hidden lg:block" />
-                <span className="text-primary">Ihre Sanierung läuft. <br className="hidden lg:block" />Und Sie entspannen.</span>
+              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                Ihre Sanierung. <br />
+                <span className="text-orange-400">Stressfrei & zum Festpreis.</span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-white/90 mb-4 leading-relaxed">
-                Ein Ansprechpartner. Ein Festpreis. Ein verbindlicher Termin.
-                <br className="hidden lg:block" />
-                <strong>Keine Überraschungen. Kein Chaos. Kein Stress.</strong>
+              <p className="text-lg lg:text-xl text-white/90 mb-5 leading-relaxed max-w-lg">
+                Ein Ansprechpartner. Ein verbindlicher Termin. 
+                <strong className="text-white"> Keine Überraschungen.</strong>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row gap-3 mb-5">
                 <Button 
                   size="lg" 
                   onClick={scrollToForm}
-                  className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold"
+                  className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg"
                   data-testid="button-hero-cta"
                 >
-                  Kostenlose Beratung sichern
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  Kostenlose Beratung
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Link href="tel:+4915212274043">
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="h-14 px-8 text-lg border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
                     data-testid="button-hero-phone"
                   >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Sofort anrufen
+                    <Phone className="w-4 h-4 mr-2" />
+                    089 - Anrufen
                   </Button>
                 </Link>
               </div>
 
-              <div className="flex flex-wrap gap-6 text-white/80 text-sm">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="flex flex-wrap gap-4 text-white/90 text-sm">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>Festpreisgarantie</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>5 Jahre Gewährleistung</span>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>5 Jahre Garantie</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span>Antwort in 24h</span>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>24h Antwort</span>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <ChevronDown className="w-8 h-8 text-white/60" />
           </div>
         </section>
 
