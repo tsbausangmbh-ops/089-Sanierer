@@ -60,6 +60,39 @@ import heizungssanierungHeroImage from "@assets/generated_images/modern_heating_
 import dachsanierungHeroImage from "@assets/generated_images/renovated_german_tile_roof.png";
 import energetischeSanierungHeroImage from "@assets/generated_images/energy_efficient_home_renovation.png";
 
+// NLP Section Images - 3 per service showing: work-in-progress, expertise, and results
+import komplettsanierungNlp1 from "@assets/generated_images/professional_renovation_team_coordinating.png";
+import komplettsanierungNlp2 from "@assets/generated_images/quality_inspection_during_renovation.png";
+import komplettsanierungNlp3 from "@assets/generated_images/renovated_luxury_apartment_interior.png";
+
+import badsanierungNlp1 from "@assets/generated_images/tiler_installing_bathroom_tiles.png";
+import badsanierungNlp2 from "@assets/generated_images/plumber_installing_bathroom_fixtures.png";
+import badsanierungNlp3 from "@assets/generated_images/luxury_renovated_spa_bathroom.png";
+
+import kuechensanierungNlp1 from "@assets/generated_images/electrician_preparing_kitchen_electrics.png";
+import kuechensanierungNlp2 from "@assets/generated_images/plumber_preparing_kitchen_connections.png";
+import kuechensanierungNlp3 from "@assets/generated_images/kitchen_renovation_construction_completed.png";
+
+import bodensanierungNlp1 from "@assets/generated_images/craftsman_installing_parquet_floor.png";
+import bodensanierungNlp2 from "@assets/generated_images/floor_sanding_and_restoration.png";
+import bodensanierungNlp3 from "@assets/generated_images/finished_herringbone_parquet_floor.png";
+
+import elektrosanierungNlp1 from "@assets/generated_images/electrician_installing_new_cables.png";
+import elektrosanierungNlp2 from "@assets/generated_images/electrician_installing_electrical_panel.png";
+import elektrosanierungNlp3 from "@assets/generated_images/modern_electrical_outlets_installed.png";
+
+import heizungssanierungNlp1 from "@assets/generated_images/technician_installing_heat_pump.png";
+import heizungssanierungNlp2 from "@assets/generated_images/plumber_connecting_heating_radiator.png";
+import heizungssanierungNlp3 from "@assets/generated_images/modern_heating_boiler_installed.png";
+
+import energetischeSanierungNlp1 from "@assets/generated_images/workers_installing_facade_insulation.png";
+import energetischeSanierungNlp2 from "@assets/generated_images/installing_energy_efficient_windows.png";
+import energetischeSanierungNlp3 from "@assets/generated_images/energy_efficient_renovated_house.png";
+
+import dachsanierungNlp1 from "@assets/generated_images/roofer_installing_roof_tiles.png";
+import dachsanierungNlp2 from "@assets/generated_images/installing_roof_attic_insulation.png";
+import dachsanierungNlp3 from "@assets/generated_images/completed_renovated_house_roof.png";
+
 const serviceHeroImages: Record<string, string> = {
   komplettsanierung: komplettsanierungHeroImage,
   badsanierung: badsanierungHeroImage,
@@ -69,6 +102,50 @@ const serviceHeroImages: Record<string, string> = {
   heizungssanierung: heizungssanierungHeroImage,
   "energetische-sanierung": energetischeSanierungHeroImage,
   dachsanierung: dachsanierungHeroImage,
+};
+
+// NLP section images mapping with captions for each service
+const serviceNlpImages: Record<string, { src: string; alt: string }[]> = {
+  komplettsanierung: [
+    { src: komplettsanierungNlp1, alt: "Professionelles Sanierungsteam bei der Koordination" },
+    { src: komplettsanierungNlp2, alt: "Qualitätskontrolle während der Sanierung" },
+    { src: komplettsanierungNlp3, alt: "Luxuriös sanierte Wohnung - Endergebnis" },
+  ],
+  badsanierung: [
+    { src: badsanierungNlp1, alt: "Fliesenleger bei der Verlegung von Badfliesen" },
+    { src: badsanierungNlp2, alt: "Sanitärinstallateur montiert Badarmatur" },
+    { src: badsanierungNlp3, alt: "Fertig saniertes Luxus-Badezimmer" },
+  ],
+  kuechensanierung: [
+    { src: kuechensanierungNlp1, alt: "Elektriker bei der Küchenelektrik-Installation" },
+    { src: kuechensanierungNlp2, alt: "Sanitärinstallateur verlegt Wasseranschlüsse" },
+    { src: kuechensanierungNlp3, alt: "Fertig renovierte moderne Küche" },
+  ],
+  bodensanierung: [
+    { src: bodensanierungNlp1, alt: "Handwerker verlegt Parkettboden" },
+    { src: bodensanierungNlp2, alt: "Parkettboden wird geschliffen und restauriert" },
+    { src: bodensanierungNlp3, alt: "Fertig verlegter Fischgrät-Parkettboden" },
+  ],
+  elektrosanierung: [
+    { src: elektrosanierungNlp1, alt: "Elektriker verlegt neue Elektroleitungen" },
+    { src: elektrosanierungNlp2, alt: "Installation eines modernen Sicherungskastens" },
+    { src: elektrosanierungNlp3, alt: "Modern installierte Steckdosen und Schalter" },
+  ],
+  heizungssanierung: [
+    { src: heizungssanierungNlp1, alt: "Techniker installiert Wärmepumpe" },
+    { src: heizungssanierungNlp2, alt: "Heizungsinstallateur schließt Heizkörper an" },
+    { src: heizungssanierungNlp3, alt: "Moderne Heizungsanlage - Brennwertkessel installiert" },
+  ],
+  "energetische-sanierung": [
+    { src: energetischeSanierungNlp1, alt: "Handwerker montieren Fassadendämmung" },
+    { src: energetischeSanierungNlp2, alt: "Installation energieeffizienter Fenster" },
+    { src: energetischeSanierungNlp3, alt: "Energetisch saniertes Haus - Endergebnis" },
+  ],
+  dachsanierung: [
+    { src: dachsanierungNlp1, alt: "Dachdecker verlegt neue Dachziegel" },
+    { src: dachsanierungNlp2, alt: "Installation der Dachdämmung" },
+    { src: dachsanierungNlp3, alt: "Fertig saniertes Dach mit neuen Ziegeln" },
+  ],
 };
 
 const headerServices = [
@@ -2272,6 +2349,28 @@ export default function FunnelPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Image Gallery - Realistic renovation process images */}
+        {preSelectedService && serviceNlpImages[preSelectedService] && (
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4 text-center">So arbeiten wir für Sie</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {serviceNlpImages[preSelectedService].map((image, index) => (
+                <div key={index} className="relative group overflow-hidden rounded-lg">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p className="text-white text-sm font-medium">{image.alt}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <Card className="mb-8">
           <CardContent className="pt-6">
