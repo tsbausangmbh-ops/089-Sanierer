@@ -51,6 +51,19 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
 import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.png";
+import komplettsanierungHeroImage from "@assets/generated_images/complete_renovation_before-after_split.png";
+import badsanierungHeroImage from "@assets/generated_images/modern_luxury_bathroom_renovation.png";
+
+const serviceHeroImages: Record<string, string> = {
+  komplettsanierung: komplettsanierungHeroImage,
+  badsanierung: badsanierungHeroImage,
+  kuechensanierung: consultationHeroImage,
+  bodensanierung: consultationHeroImage,
+  elektrosanierung: consultationHeroImage,
+  heizungssanierung: consultationHeroImage,
+  "energetische-sanierung": consultationHeroImage,
+  dachsanierung: consultationHeroImage,
+};
 
 const headerServices = [
   { id: "komplettsanierung", title: "Komplettsanierung" },
@@ -2368,8 +2381,8 @@ export default function FunnelPage() {
           showCta={true}
           showStats={false}
           compact={true}
-          image={consultationHeroImage}
-          imageAlt="Beratungsgespräch zur Sanierung"
+          image={serviceHeroImages[preSelectedService] || consultationHeroImage}
+          imageAlt={`${content.headline.split("|")[0].trim()} in München`}
         />
 
         <main id="main-content" className="pb-16 flex-1">
