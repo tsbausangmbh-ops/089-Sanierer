@@ -291,11 +291,11 @@ function LeadMagnetSection() {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
+    <section className="py-8 lg:py-12 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb),0.08),transparent_50%)]" />
       
       <div className="max-w-6xl mx-auto px-4 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-medium mb-6">
               <Gift className="w-4 h-4" />
@@ -306,7 +306,7 @@ function LeadMagnetSection() {
               Der Ratgeber, der Ihnen <span className="text-primary">tausende Euro</span> spart
             </h2>
             
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-4">
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <p className="text-muted-foreground">
@@ -445,9 +445,9 @@ function FunnelForm() {
   const progressPercent = (step / 3) * 100;
 
   return (
-    <section id="anfrage-form" className="py-16 lg:py-24 bg-background">
+    <section id="anfrage-form" className="py-8 lg:py-12 bg-background">
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Starten Sie jetzt. <span className="text-primary">Kostenlos.</span>
           </h2>
@@ -458,7 +458,7 @@ function FunnelForm() {
         </div>
 
         <Card className="p-6 lg:p-10 shadow-xl border-2">
-          <div className="mb-8">
+          <div className="mb-4">
             <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
               <span className="font-medium">Schritt {step} von 3</span>
               <span>{Math.round(progressPercent)}%</span>
@@ -731,7 +731,7 @@ export default function Home() {
         <SiteHeader />
 
         {/* Hero Section - NLP: Future Pacing + Pain-Pleasure */}
-        <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center">
+        <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${houseBeforeAfter})` }}
@@ -739,7 +739,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-20 lg:py-32">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-20">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
                 <BadgeCheck className="w-4 h-4" />
@@ -751,13 +751,13 @@ export default function Home() {
                 <span className="text-primary">Ihre Sanierung läuft. <br className="hidden lg:block" />Und Sie entspannen.</span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
+              <p className="text-xl lg:text-2xl text-white/90 mb-4 leading-relaxed">
                 Ein Ansprechpartner. Ein Festpreis. Ein verbindlicher Termin.
                 <br className="hidden lg:block" />
                 <strong>Keine Überraschungen. Kein Chaos. Kein Stress.</strong>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button 
                   size="lg" 
                   onClick={scrollToForm}
@@ -803,9 +803,9 @@ export default function Home() {
         </section>
 
         {/* Pain Points Section - NLP: Problem-Agitation */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-8 lg:py-12 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Kennen Sie das Gefühl?
               </h2>
@@ -829,9 +829,9 @@ export default function Home() {
         </section>
 
         {/* Solution Section - NLP: Future Pacing + Transformation */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-8 lg:py-12 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
                 <Target className="w-4 h-4" />
                 <span>Die Lösung</span>
@@ -861,7 +861,7 @@ export default function Home() {
         {/* Stats Section */}
         <section className="py-12 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
@@ -877,9 +877,9 @@ export default function Home() {
         <LeadMagnetSection />
 
         {/* Process Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-8 lg:py-12 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Ihr Weg zum <span className="text-primary">Traumzuhause</span>
               </h2>
@@ -913,9 +913,9 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section - NLP: Social Proof + Emotional Language */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-8 lg:py-12 bg-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Das sagen unsere <span className="text-primary">Kunden</span>
               </h2>
@@ -951,9 +951,9 @@ export default function Home() {
         </section>
 
         {/* Services Preview */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-8 lg:py-12 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Unsere <span className="text-primary">Leistungen</span>
               </h2>
@@ -998,9 +998,9 @@ export default function Home() {
         <FunnelForm />
 
         {/* FAQ Section */}
-        <section className="py-16 lg:py-24 bg-muted/30">
+        <section className="py-8 lg:py-12 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Häufige <span className="text-primary">Fragen</span>
               </h2>
@@ -1025,13 +1025,13 @@ export default function Home() {
         </section>
 
         {/* Final CTA - NLP: Urgency + Future Pacing */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
+        <section className="py-8 lg:py-12 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               In 3 Monaten könnten Sie in Ihrem <br className="hidden lg:block" />
               frisch sanierten Zuhause sitzen.
             </h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl opacity-90 mb-4 max-w-2xl mx-auto">
               Der erste Schritt ist kostenlos. Unverbindlich. 
               Und er dauert nur 2 Minuten.
             </p>
