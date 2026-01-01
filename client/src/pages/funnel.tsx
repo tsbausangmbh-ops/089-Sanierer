@@ -53,16 +53,22 @@ import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/
 import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.png";
 import komplettsanierungHeroImage from "@assets/generated_images/complete_renovation_before-after_split.png";
 import badsanierungHeroImage from "@assets/generated_images/modern_luxury_bathroom_renovation.png";
+import kuechensanierungHeroImage from "@assets/generated_images/modern_kitchen_renovation_result.png";
+import bodensanierungHeroImage from "@assets/generated_images/parquet_floor_renovation_result.png";
+import elektrosanierungHeroImage from "@assets/generated_images/modern_electrical_installation_work.png";
+import heizungssanierungHeroImage from "@assets/generated_images/modern_heating_system_installation.png";
+import dachsanierungHeroImage from "@assets/generated_images/renovated_german_tile_roof.png";
+import energetischeSanierungHeroImage from "@assets/generated_images/energy_efficient_home_renovation.png";
 
 const serviceHeroImages: Record<string, string> = {
   komplettsanierung: komplettsanierungHeroImage,
   badsanierung: badsanierungHeroImage,
-  kuechensanierung: consultationHeroImage,
-  bodensanierung: consultationHeroImage,
-  elektrosanierung: consultationHeroImage,
-  heizungssanierung: consultationHeroImage,
-  "energetische-sanierung": consultationHeroImage,
-  dachsanierung: consultationHeroImage,
+  kuechensanierung: kuechensanierungHeroImage,
+  bodensanierung: bodensanierungHeroImage,
+  elektrosanierung: elektrosanierungHeroImage,
+  heizungssanierung: heizungssanierungHeroImage,
+  "energetische-sanierung": energetischeSanierungHeroImage,
+  dachsanierung: dachsanierungHeroImage,
 };
 
 const headerServices = [
