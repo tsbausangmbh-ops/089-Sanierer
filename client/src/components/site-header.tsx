@@ -88,6 +88,16 @@ export function SiteHeader() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            <Link href="/anfrage?service=badsanierung">
+              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                Badsanierung
+              </Button>
+            </Link>
+            <Link href="/anfrage?service=energetische-sanierung">
+              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                Energetische Sanierung
+              </Button>
+            </Link>
             <Link href="/ratgeber">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                 Ratgeber
