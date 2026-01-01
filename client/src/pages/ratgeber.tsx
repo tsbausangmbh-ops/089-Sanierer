@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Building, Thermometer, DoorOpen, Zap, Triangle } from "lucide-react";
+import { Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Building, Thermometer, DoorOpen, Zap, Triangle, Download, FileText, BookOpen } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
@@ -32,6 +32,41 @@ export default function Ratgeber() {
 
       <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-5xl mx-auto px-4 lg:px-8">
+          <Card className="mb-12 bg-gradient-to-r from-primary/10 via-primary/5 to-accent/10 border-primary/20">
+            <CardContent className="pt-6">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-24 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-10 h-10 text-primary" />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="text-xl font-bold mb-2">Kostenloser Sanierungs-Ratgeber 2025</h2>
+                  <p className="text-muted-foreground mb-3">
+                    32 Seiten Expertenwissen: Kosten, Tipps, Checklisten und Förderungen für Ihre erfolgreiche Sanierung in München.
+                  </p>
+                  <div className="flex flex-wrap gap-3 text-sm text-muted-foreground justify-center md:justify-start">
+                    <span className="flex items-center gap-1"><FileText className="w-4 h-4" /> 32 Seiten</span>
+                    <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> 16 Kapitel</span>
+                    <span className="flex items-center gap-1"><Euro className="w-4 h-4" /> Kostenübersichten</span>
+                  </div>
+                </div>
+                <div className="flex-shrink-0">
+                  <a 
+                    href="/downloads/sanierungs-ratgeber-2025.pdf" 
+                    download
+                    data-testid="button-download-ratgeber-pdf"
+                  >
+                    <Button size="lg" className="gap-2">
+                      <Download className="w-5 h-5" />
+                      PDF herunterladen
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <nav className="mb-12 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
             <h2 className="font-semibold mb-3">Welches Thema interessiert Sie?</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
