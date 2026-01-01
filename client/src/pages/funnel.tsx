@@ -196,7 +196,7 @@ const serviceSeoContent: Record<string, {
   badsanierung: {
     headline: "Badsanierung München | Bad renovieren & neu gestalten lassen",
     subheadline: "Komplette Badrenovierung in 10-15 Werktagen – Festpreis ab 8.000€, alle Gewerke inklusive",
-    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei KSHW München erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 50.000€ für Wellness-Bad (netto zzgl. MwSt., Stand 12/2025). Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 300+ Bäder in München erfolgreich saniert.",
+    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei KSHW München erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 50.000€ für Wellness-Bad (netto zzgl. MwSt., Stand 12/2025). Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 80+ Bäder in München erfolgreich saniert.",
     problems: [
       "Schimmel im Bad München: Gesundheitsrisiko durch schwarze Fugen und feuchte Wände",
       "Alte Badezimmer: 70er/80er Jahre Fliesen, verkalkte Armaturen, vergilbte Wannen",
