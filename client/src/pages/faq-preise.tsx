@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { SiteHeader } from "@/components/site-header";
+import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -386,7 +387,7 @@ export default function FaqPreise() {
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-4">
-              <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1">
+              <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1"><span className="text-accent">Preisübersicht</span> –
                 <Euro className="w-6 h-6 text-primary" />
                 Sanierungspreise München – Kostenübersicht
               </h2>
@@ -463,7 +464,7 @@ export default function FaqPreise() {
                 <Handshake className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">Handwerker Stundenlohn München –<br />Preise für Maler, Elektriker & Sanitär</h2>
+                <h2 className="text-2xl font-bold"><span className="text-accent">Handwerker Stundenlohn München</span> –<br />Preise für Maler, Elektriker & Sanitär</h2>
                 <p className="text-muted-foreground">Geprüfte Handwerker aus München – faire Stundensätze</p>
               </div>
             </div>
@@ -532,7 +533,7 @@ export default function FaqPreise() {
                 <HelpCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">FAQ Sanierung München –<br />Häufige Fragen & Antworten</h2>
+                <h2 className="text-2xl font-bold">FAQ <span className="text-accent">Sanierung München</span> –<br />Häufige Fragen & Antworten</h2>
                 <p className="text-muted-foreground">Das wollen Münchner über Sanierung wissen</p>
               </div>
             </div>

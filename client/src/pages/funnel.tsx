@@ -48,6 +48,7 @@ import {
 import { Link } from "wouter";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
+import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { PageHero } from "@/components/page-hero";
 import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
 import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.png";
@@ -2284,11 +2285,12 @@ export default function FunnelPage() {
   const renderSeoIntro = () => {
     if (!preSelectedService || !serviceSeoContent[preSelectedService]) return null;
     const content = serviceSeoContent[preSelectedService];
+    const keywords = serviceKeywords[preSelectedService] || { primary: [], secondary: [] };
     
     return (
       <div className="container mx-auto px-4 py-8 max-w-5xl flex-1">
         <div className="prose prose-lg max-w-none mb-4">
-          <p className="text-foreground leading-relaxed">{content.intro}</p>
+          <p className="text-foreground leading-relaxed">{highlightKeywords(content.intro, keywords)}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4">
@@ -2323,7 +2325,7 @@ export default function FunnelPage() {
                 {content.solutions.map((solution, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{solution}</span>
+                    <span className="text-foreground">{highlightKeywords(solution, keywords)}</span>
                   </li>
                 ))}
               </ul>
@@ -2343,7 +2345,7 @@ export default function FunnelPage() {
               {content.benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-2">
                   <Award className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-sm text-foreground">{benefit}</span>
+                  <span className="text-sm text-foreground">{highlightKeywords(benefit, keywords)}</span>
                 </div>
               ))}
             </div>

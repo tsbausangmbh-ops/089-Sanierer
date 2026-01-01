@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
+import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { SeoHead, generateFaqSchema } from "@/components/seo-head";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -448,7 +449,7 @@ function FunnelForm() {
       <div className="max-w-4xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-6">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Starten Sie jetzt. <span className="text-primary">Kostenlos.</span>
+            Starten Sie jetzt. <span className="text-accent">Kostenlos.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             In nur 2 Minuten zu Ihrer persönlichen Beratung. 
@@ -831,7 +832,7 @@ export default function Home() {
                 <span>Die Lösung</span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                So fühlt sich Sanierung <span className="text-primary">wirklich</span> an
+                So fühlt sich <span className="text-accent">Sanierung</span> wirklich an
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Mit uns an Ihrer Seite wird Ihre Sanierung zum entspannten Erlebnis.
@@ -875,7 +876,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Ihr Weg zum <span className="text-primary">Traumzuhause</span>
+                Ihr Weg zum <span className="text-accent">Traumzuhause</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 In 4 einfachen Schritten von der Idee zur fertigen Sanierung.
@@ -911,7 +912,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Das sagen unsere <span className="text-primary">Kunden</span>
+                Das sagen unsere <span className="text-accent">Kunden</span>
               </h2>
               <p className="text-lg text-muted-foreground">
                 Echte Erfahrungen. Echte Ergebnisse.
@@ -949,7 +950,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Unsere <span className="text-primary">Leistungen</span>
+                Unsere <span className="text-accent">Leistungen</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Von der kleinen Badrenovierung bis zur kompletten Haussanierung.
@@ -996,7 +997,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Häufige <span className="text-primary">Fragen</span>
+                Häufige <span className="text-accent">Fragen</span>
               </h2>
               <p className="text-lg text-muted-foreground">
                 Alles, was Sie wissen müssen.

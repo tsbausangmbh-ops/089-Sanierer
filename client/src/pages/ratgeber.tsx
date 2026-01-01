@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Building, Thermometer, DoorOpen, Zap, Triangle, Download, FileText, BookOpen } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { PageHero } from "@/components/page-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -88,7 +89,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Home className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Haussanierung in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine <span className="text-accent">Haussanierung</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -194,7 +195,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Paintbrush className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet Fassade streichen in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet <span className="text-accent">Fassade streichen</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -300,7 +301,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Triangle className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Wie teuer ist eine Dachsanierung in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Wie teuer ist eine <span className="text-accent">Dachsanierung</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -421,7 +422,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Bath className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Badsanierung in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine <span className="text-accent">Badsanierung</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -527,7 +528,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Building className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Kellersanierung in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine <span className="text-accent">Kellersanierung</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -614,7 +615,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Thermometer className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Lohnt sich Wärmedämmung in München? Kosten & Förderung</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Lohnt sich <span className="text-accent">Wärmedämmung</span> in <span className="text-accent">München</span>? <span className="text-accent">Kosten</span> & <span className="text-accent">Förderung</span></h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -732,7 +733,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <DoorOpen className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine Wohnungssanierung in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Was kostet eine <span className="text-accent">Wohnungssanierung</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -834,7 +835,7 @@ export default function Ratgeber() {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Zap className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold">Welche Förderung gibt es für energetische Sanierung in München?</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">Welche <span className="text-accent">Förderung</span> gibt es für <span className="text-accent">energetische Sanierung</span> in <span className="text-accent">München</span>?</h2>
               </div>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
@@ -972,7 +973,7 @@ export default function Ratgeber() {
           <div className="mt-16 text-center">
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="pt-8 pb-8">
-                <h2 className="text-2xl font-bold mb-4">Bereit für Ihre Sanierung in München?</h2>
+                <h2 className="text-2xl font-bold mb-4">Bereit für Ihre <span className="text-accent">Sanierung</span> in <span className="text-accent">München</span>?</h2>
                 <p className="mb-6 opacity-90">
                   Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
                 </p>
