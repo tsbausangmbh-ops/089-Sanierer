@@ -1,14 +1,24 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, Home, Bath, UtensilsCrossed, Layers, Zap, Flame, Triangle, Leaf } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import kshwLogo from "@assets/generated_images/kshw_renovation_company_favicon.png";
 
-const headerServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung" },
-  { id: "badsanierung", title: "Badsanierung" },
-  { id: "dachsanierung", title: "Dachsanierung" },
-  { id: "energetische-sanierung", title: "Energetische Sanierung" },
+const allServices = [
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: Home },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath },
+  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame },
+  { id: "dachsanierung", title: "Dachsanierung", icon: Triangle },
+  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Leaf },
 ];
 
 export function SiteHeader() {
@@ -60,13 +70,24 @@ export function SiteHeader() {
             </a>
           </div>
           <nav className="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
-            {headerServices.map((service) => (
-              <Link key={service.id} href={`/anfrage?service=${service.id}`}>
-                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                  {service.title}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10" data-testid="dropdown-leistungen">
+                  Leistungen
+                  <ChevronDown className="w-4 h-4 ml-1" />
                 </Button>
-              </Link>
-            ))}
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                {allServices.map((service) => (
+                  <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                    <DropdownMenuItem className="cursor-pointer" data-testid={`dropdown-item-${service.id}`}>
+                      <service.icon className="w-4 h-4 mr-2" />
+                      {service.title}
+                    </DropdownMenuItem>
+                  </Link>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link href="/ratgeber">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                 Ratgeber
@@ -93,13 +114,15 @@ export function SiteHeader() {
           aria-label="Mobile Navigation"
         >
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
-            {headerServices.map((service) => (
+            <p className="text-xs text-white/50 uppercase tracking-wider px-4 py-1">Leistungen</p>
+            {allServices.map((service) => (
               <Link key={service.id} href={`/anfrage?service=${service.id}`}>
                 <Button 
                   variant="ghost" 
                   className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
+                  <service.icon className="w-4 h-4 mr-2" />
                   {service.title}
                 </Button>
               </Link>
