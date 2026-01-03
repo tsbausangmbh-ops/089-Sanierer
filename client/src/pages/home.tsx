@@ -26,7 +26,7 @@ import electricImg from "@assets/generated_images/electrical_renovation_installa
 import heatingImg from "@assets/generated_images/heating_system_installation.png";
 import completeImg from "@assets/generated_images/complete_home_renovation_result.png";
 import craftsmenFinishingImg from "@assets/stock_images/craftsmen_workers_sa_e7690865.jpg";
-import happyCoupleImg from "@assets/stock_images/happy_couple_smiling_4f20828a.jpg";
+import realCoupleImg from "@assets/stock_images/real_people_couple_r_439d40a1.jpg";
 
 import { 
   Bath, 
@@ -895,9 +895,9 @@ export default function Home() {
               <div className="lg:col-span-2 hidden lg:block">
                 <div className="relative">
                   <img 
-                    src={happyCoupleImg} 
+                    src={realCoupleImg} 
                     alt="Zufriedene Kunden in ihrer renovierten Wohnung" 
-                    className="rounded-xl shadow-lg w-full h-72 object-cover"
+                    className="rounded-xl shadow-lg w-full h-72 object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl" />
                 </div>
