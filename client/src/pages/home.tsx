@@ -908,7 +908,7 @@ export default function Home() {
 
         {/* Problem-Solution FAQ Section - NLP: Question-based targeting */}
         <section className="py-6 lg:py-8 bg-background">
-          <div className="max-w-5xl mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
                 <HelpCircle className="w-4 h-4" />
