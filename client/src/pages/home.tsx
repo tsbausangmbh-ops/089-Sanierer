@@ -965,8 +965,8 @@ export default function Home() {
                         </div>
                         
                         <div className="mt-3">
-                          <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
-                            {item.keyword}
+                          <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            <strong>{item.keyword}</strong>
                           </span>
                         </div>
                       </div>
