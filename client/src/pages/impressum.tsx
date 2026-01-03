@@ -12,7 +12,7 @@ export default function Impressum() {
       <SeoHead
         title="Impressum | 089-sanierer.de | Sanierung München"
         description="Impressum und Kontaktdaten. Verantwortlich: Ali Kemal Kurt, Zielstattstr. 9, 81379 München. Telefon: 0152 122 740 43. USt-IdNr: DE356852204."
-        keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum"
+        keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum, KSHW München Adresse, Sanierung München Anbieter, Renovierung München Firma, Handwerker München Verantwortlicher, 089 Sanierer Telefonnummer, Komplettsanierung München Unternehmen, Badsanierung München Ansprechpartner, Sanierung München USt-IdNr, KSHW München Öffnungszeiten, Handwerker München seriös, Renovierung München rechtliche Angaben, Sanierung München Betreiber"
         canonicalPath="/impressum"
       />
       <SiteHeader />

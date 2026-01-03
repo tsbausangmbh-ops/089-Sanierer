@@ -48,46 +48,54 @@ function isCrawler(userAgent: string): boolean {
   return CRAWLER_USER_AGENTS.some((crawler) => ua.includes(crawler.toLowerCase()));
 }
 
-const servicePages: Record<string, { title: string; description: string; price: string }> = {
+const servicePages: Record<string, { title: string; description: string; price: string; keywords: string }> = {
   komplettsanierung: {
     title: "Komplettsanierung München",
     description: "Schlüsselfertige Komplettsanierung von Haus und Wohnung in München. Alle Gewerke aus einer Hand mit Festpreisgarantie.",
     price: "1.000 - 2.300 €/m²",
+    keywords: "Komplettsanierung München, Haus sanieren München, Wohnung renovieren München, Kernsanierung München Kosten, Altbausanierung München, Sanierung aus einer Hand München, was kostet Komplettsanierung pro qm München, Haussanierung München Festpreis, Wohnungssanierung München Erfahrungen, Altbau komplett sanieren München, Sanierung schlüsselfertig München, Kernsanierung Haus München Dauer, Komplettsanierung München günstig, Sanierung Einfamilienhaus München, Renovierung komplett München Anbieter",
   },
   badsanierung: {
     title: "Badsanierung München",
     description: "Professionelle Badsanierung in München. Komplettbad inkl. Fliesen, Sanitär, Elektro. Barrierefreie Lösungen möglich.",
     price: "8.000 - 50.000 €",
+    keywords: "Badsanierung München, Bad renovieren München, Badezimmer sanieren München Kosten, Badsanierung München Festpreis, Badrenovierung München, Bad komplett sanieren München, was kostet Badsanierung München 2024, Bad neu machen München Preise, Badumbau München barrierefrei, kleine Badsanierung München, Gäste WC sanieren München Kosten, Bad fliesen München Preis, Dusche einbauen München, Badezimmer modernisieren München, Badsanierung München Dauer Wochen",
   },
   kuechensanierung: {
     title: "Küchensanierung München",
     description: "Küchensanierung in München: Fliesen, Elektro, Wasseranschlüsse. Bauarbeiten ohne Küchenmöbel.",
     price: "6.500 - 22.000 €",
+    keywords: "Küchensanierung München, Küche renovieren München, Küchenumbau München Kosten, Küche umbauen München, Küchenanschlüsse verlegen München, Küche neu gestalten München, Küche modernisieren München Preise, Elektrik Küche verlegen München, Wasseranschluss Küche München, Fliesenspiegel Küche München, Küchenmontage München Kosten, Küchenrenovierung München Dauer, neue Küche einbauen München, Küche komplett erneuern München, Kücheninstallation München Festpreis",
   },
   bodensanierung: {
     title: "Bodensanierung München",
     description: "Bodensanierung in München: Parkett, Fliesen, Vinyl, Teppich. Estricharbeiten und Fußbodenheizung.",
     price: "65 - 200 €/m²",
+    keywords: "Bodensanierung München, Parkett verlegen München, Vinylboden München, Boden erneuern München Kosten, Laminat verlegen München, Fliesen verlegen München, Parkett schleifen München Preis, Designboden verlegen München, Bodenbelag erneuern München, Fußboden sanieren München Kosten, Parkett abschleifen München, Vinyl Klick verlegen München, neuer Boden Wohnung München, Bodenleger München Festpreis, Estrich sanieren München Kosten",
   },
   elektrosanierung: {
     title: "Elektrosanierung München",
     description: "Elektroinstallation und Elektrosanierung in München. Sicherungskasten, Leitungen nach VDE-Norm.",
     price: "85 - 300 €/m²",
+    keywords: "Elektrosanierung München, Elektrik erneuern München, Elektriker München Altbau, Elektroinstallation München Kosten, Steckdosen nachrüsten München, Sicherungskasten erneuern München, Elektrik komplett erneuern München Preis, Unterputz Kabel verlegen München, FI Schutzschalter nachrüsten München, Wallbox Installation München, E-Check München Kosten, Altbau Elektrik modernisieren München, Zählerkasten erneuern München, Smart Home Elektrik München, Elektriker Notdienst München schnell",
   },
   heizungssanierung: {
     title: "Heizungssanierung München",
     description: "Heizungssanierung in München: Gasheizung, Wärmepumpe, Fußbodenheizung. KfW-Förderung möglich.",
     price: "12.000 - 65.000 €",
+    keywords: "Heizungssanierung München, Neue Heizung München, Wärmepumpe München Kosten, Heizung austauschen München, Heizungsförderung München, Gas Brennwert München, Heizung erneuern München Förderung 2024, Wärmepumpe nachrüsten München, Ölheizung tauschen München Kosten, Pelletheizung München Preise, Heizungstausch München Dauer, BEG Förderung Heizung München, hydraulischer Abgleich München, Heizungsinstallateur München, Gasheizung erneuern München Kosten",
   },
   dachsanierung: {
     title: "Dachsanierung München",
     description: "Dachsanierung in München: Dachdämmung, Dacheindeckung, Dachfenster. BAFA- und KfW-Förderung.",
     price: "150 - 350 €/m²",
+    keywords: "Dachsanierung München, Dachdecker München, Dach neu eindecken München Kosten, Dachreparatur München, Dachdämmung München, Dachziegel erneuern München, Dachstuhl sanieren München, Flachdach abdichten München, Dachrinne erneuern München Kosten, Dach undicht München Notdienst, Dachsanierung München Förderung, Steildach sanieren München Preise, Marderabwehr Dach München, Dachfenster einbauen München, Dachdecker München Angebot kostenlos",
   },
   "energetische-sanierung": {
     title: "Energetische Sanierung München",
     description: "Energetische Sanierung in München: Wärmedämmung, Fensteraustausch, Heizungsmodernisierung. Förderberatung inklusive.",
     price: "200 - 500 €/m²",
+    keywords: "Energetische Sanierung München, Dämmung München, Fenster tauschen München, Fassadendämmung München Kosten, Wärmedämmung München, iSFP München, Dachdämmung München Preise, Kellerdecke dämmen München, WDVS München Kosten, Fenster Förderung München 2024, Sanierungsfahrplan München erstellen, energetisch sanieren München Zuschuss, Hausdämmung München Preise, Außendämmung München Kosten pro qm, Wärmeschutz München Altbau",
   },
 };
 
@@ -98,6 +106,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 
   let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | KSHW";
   let description = "Was kostet eine Sanierung in München? KSHW München: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
+  let keywords = "Sanierung München, Komplettsanierung München Festpreis, Badsanierung München Kosten, Küchensanierung München, Handwerker München geprüft, Renovierung München aus einer Hand, Altbausanierung München Erfahrungen, Haussanierung München Angebot, Wohnungssanierung München günstig, Elektrosanierung München Preise, Heizungssanierung München Förderung, Bodensanierung München Parkett, Sanierung München 5 Jahre Garantie, KSHW München Bewertungen, 089 Sanierer Komplettsanierung";
   let mainContent = "";
 
   if (path === "/" || path === "") {
@@ -142,6 +151,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/anfrage" && serviceInfo) {
     title = `${serviceInfo.title} | Kosten & Preise | KSHW München`;
     description = serviceInfo.description;
+    keywords = servicePages[service]?.keywords || keywords;
     mainContent = `
       <section>
         <h1>${serviceInfo.title}</h1>
@@ -179,6 +189,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/faq-preise") {
     title = "FAQ & Preise | Sanierung München | KSHW";
     description = "Häufige Fragen und Preisübersicht für Sanierungen in München. Transparente Kosten für Bad, Küche, Elektro und mehr.";
+    keywords = "Sanierung München Kosten, Badsanierung München Preise, Küchensanierung München Kosten, Elektrosanierung München Preise, was kostet Komplettsanierung München, Haussanierung München Preisliste, Renovierung München Festpreis, Sanierung München FAQ, häufige Fragen Badsanierung München, Preise Bodensanierung München, Kosten Heizungssanierung München, Sanierungspreise München 2025, Handwerkerkosten München, Renovierungskosten pro qm München, Sanierung München Angebot einholen";
     mainContent = `
       <section>
         <h1>FAQ & Preise - Sanierung München</h1>
@@ -218,6 +229,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/impressum") {
     title = "Impressum | KSHW München";
     description = "Impressum und rechtliche Informationen zu KSHW München.";
+    keywords = "KSHW München Impressum, 089 Sanierer Kontaktdaten, Komplettsanierungen Haus Wohnung München, Sanierungsfirma München Adresse, Handwerksbetrieb München Impressum, Renovierungsfirma München rechtlich, Bausanierung München Anbieter Info, Sanierung München Unternehmen, Renovierung München Firma, Handwerker München Firmendaten, Sanierungsdienstleister München, Bauunternehmen München Impressum, KSHW Zielstattstraße München, Sanierungsbetrieb München Info, Renovierungsservice München legal";
     mainContent = `
       <section>
         <h1>Impressum</h1>
@@ -236,6 +248,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/datenschutz") {
     title = "Datenschutzerklärung | KSHW München";
     description = "Datenschutzerklärung von KSHW München gemäß DSGVO.";
+    keywords = "KSHW München Datenschutz, 089 Sanierer DSGVO, Datenschutzerklärung Sanierungsfirma München, DSGVO Handwerksbetrieb München, Datenschutz Renovierungsfirma München, personenbezogene Daten Sanierung München, Cookie Richtlinie Handwerker München, Datenschutzrechte Bauunternehmen München, KSHW München Datensicherheit, Sanierung München Datenschutzinfo, Renovierung München Privatsphäre, Handwerker München Datenschutzerklärung, DSGVO konform Sanierung München, Datenschutz Bausanierung München, KSHW Datenschutzbeauftragter";
     mainContent = `
       <section>
         <h1>Datenschutzerklärung</h1>
@@ -255,6 +268,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/kontakt") {
     title = "Kontakt | KSHW München";
     description = "Kontaktieren Sie KSHW München für Ihre Sanierungsanfrage.";
+    keywords = "Kontakt Sanierung München, KSHW München Telefon, 089 Sanierer erreichen, Sanierungsanfrage München stellen, Handwerker München anrufen, Renovierungsfirma München kontaktieren, Badsanierung München anfragen, Kostenvoranschlag Sanierung München, Beratungstermin Renovierung München, Sanierungsfirma München E-Mail, Handwerker München Öffnungszeiten, Komplettsanierung München Termin, Sanierung München Rückruf, Renovierungsberatung München gratis, KSHW München Anfahrt";
     mainContent = `
       <section>
         <h1>Kontakt</h1>
@@ -269,6 +283,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/bestaetigung") {
     title = "Anfrage gesendet | KSHW München";
     description = "Vielen Dank für Ihre Sanierungsanfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.";
+    keywords = "Sanierungsanfrage gesendet München, Anfrage Bestätigung KSHW München, Renovierungsanfrage erfolgreich München, nächste Schritte Sanierung München, Beratungstermin bestätigt München, Rückmeldung Sanierungsfirma München, Kontaktaufnahme bestätigt Handwerker München, Angebotsanfrage Renovierung München, Sanierung München Terminbestätigung, Projektanfrage München Sanierung, KSHW Anfrage bestätigt, Kostenvoranschlag angefordert München, Sanierungsberatung angefragt München, Renovierung München Anfrage Status, Handwerkeranfrage München erfolgreich";
     mainContent = `
       <section>
         <h1>Vielen Dank für Ihre Anfrage!</h1>
@@ -290,6 +305,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/ratgeber") {
     title = "Sanierungskosten München - Ratgeber & Preisübersicht | KSHW";
     description = "Was kostet eine Sanierung in München? Detaillierter Ratgeber mit Preisen für Haussanierung, Badsanierung, Dachsanierung, Kellersanierung und mehr. Inklusive Förderungsmöglichkeiten.";
+    keywords = "Sanierungskosten München Ratgeber, was kostet Haussanierung pro qm München, Badsanierung Kosten München 2025, Dachsanierung Preise München, Kellersanierung München Kosten, Wärmedämmung München Förderung, energetische Sanierung Zuschuss München, Fassade streichen München Preise, Wohnungssanierung München Kosten Rechner, KfW Förderung Sanierung München, BAFA Zuschuss München, Sanierungsratgeber München, Renovierungskosten München aktuell, Altbausanierung München was beachten, Förderung energetische Sanierung Bayern";
     mainContent = `
       <section>
         <h1>Sanierungskosten München - Ihr Ratgeber für faire Preise</h1>
@@ -568,6 +584,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
   <meta name="description" content="${description}">
+  <meta name="keywords" content="${keywords}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="bingbot" content="index, follow">

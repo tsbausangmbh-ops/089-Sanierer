@@ -15,7 +15,7 @@ export default function Cookies() {
       <SeoHead
         title="Cookie-Richtlinie | 089-sanierer.de"
         description="Welche Cookies nutzen wir? So können Sie Ihre Cookie-Einstellungen anpassen und Ihre Privatsphäre auf unserer Website schützen."
-        keywords="Cookie Einstellungen Sanierung, Cookie-Richtlinie München, Datenschutz Cookies Website"
+        keywords="Cookie Einstellungen Sanierung, Cookie-Richtlinie München, Datenschutz Cookies Website, welche Cookies nutzt 089 Sanierer, Cookie Consent Handwerker Website, notwendige Cookies Sanierung, Analyse Cookies Renovierung München, Marketing Cookies Handwerker, Cookie Präferenzen ändern, Cookies ablehnen Sanierung Website, DSGVO Cookies München, Cookie Banner Einstellungen, Tracking Cookies Handwerker, Third-Party Cookies Renovierung, Cookie-Richtlinie KSHW München"
         canonicalPath="/cookies"
       />
       <SiteHeader />

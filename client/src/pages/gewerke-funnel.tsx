@@ -330,7 +330,7 @@ export default function GewerkeFunnel() {
       <SeoHead
         title="Handwerker München gesucht? | Maler Elektriker Sanitär"
         description="Handwerker München finden: Maler, Elektriker, Sanitär, Fliesenleger, Schreiner. Geprüfte Fachbetriebe, kostenlose Vermittlung, Angebot in 48h."
-        keywords="Handwerker München gesucht, Maler München günstig, Elektriker München schnell, Sanitär München Notdienst, Fliesenleger München Empfehlung"
+        keywords="Handwerker München gesucht, Maler München günstig, Elektriker München schnell, Sanitär München Notdienst, Fliesenleger München Empfehlung, Schreiner München finden, Trockenbauer München Angebot, Parkettleger München Kosten, Dachdecker München zuverlässig, Handwerker München kostenlos vermittelt, Maler München Wohnung streichen Kosten, Elektriker München Altbau Sanierung, Sanitär München Bad renovieren, Fliesenleger München Bad Preise, Handwerker München geprüft empfohlen"
         canonicalPath="/gewerke"
       />
       <SiteHeader />

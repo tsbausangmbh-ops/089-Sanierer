@@ -12,7 +12,7 @@ export default function AGB() {
       <SeoHead
         title="AGB | 089-sanierer.de | Allgemeine Geschäftsbedingungen"
         description="Allgemeine Geschäftsbedingungen für Sanierungsleistungen. Informationen zu Leistungen, Haftung und Gewährleistung bei Renovierungsprojekten."
-        keywords="AGB Sanierung München, Handwerker Vertragsbedingungen, Renovierung AGB, Sanierung Gewährleistung"
+        keywords="AGB Sanierung München, Handwerker Vertragsbedingungen, Renovierung AGB, Sanierung Gewährleistung, Allgemeine Geschäftsbedingungen Handwerker, Renovierung Vertrag München, Sanierung Zahlungsbedingungen, Handwerker München Haftung, Sanierung München Garantie, Renovierung Stornierung Bedingungen, Badsanierung München Vertrag, Komplettsanierung AGB lesen, Handwerker Gewährleistung 5 Jahre, KSHW München Geschäftsbedingungen, Sanierung München Rechte Pflichten"
         canonicalPath="/agb"
       />
       <SiteHeader />

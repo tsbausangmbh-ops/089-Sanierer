@@ -269,7 +269,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie lange dauert eine Komplettsanierung?", answer: "Eine Komplettsanierung einer 80m² Wohnung dauert ca. 6-8 Wochen, ein Einfamilienhaus 10-16 Wochen – abhängig vom Sanierungsumfang." },
       { question: "Kann ich während der Sanierung in der Wohnung bleiben?", answer: "Ja, wir bieten Sanierung bei bewohnter Immobilie an – mit Staubschutz, Lärmschutzzeiten und täglicher Reinigung." }
     ],
-    keywords: ["Komplettsanierung München", "Haus sanieren München", "Wohnung renovieren München", "Kernsanierung München Kosten", "Altbausanierung München", "Sanierung aus einer Hand München"]
+    keywords: ["Komplettsanierung München", "Haus sanieren München", "Wohnung renovieren München", "Kernsanierung München Kosten", "Altbausanierung München", "Sanierung aus einer Hand München", "was kostet Komplettsanierung pro qm München", "Haussanierung München Festpreis", "Wohnungssanierung München Erfahrungen", "Altbau komplett sanieren München", "Sanierung schlüsselfertig München", "Kernsanierung Haus München Dauer", "Komplettsanierung München günstig", "Sanierung Einfamilienhaus München", "Renovierung komplett München Anbieter"]
   },
   badsanierung: {
     headline: "Badsanierung München | Bad renovieren & neu gestalten lassen",
@@ -303,7 +303,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie lange dauert eine Badsanierung?", answer: "Eine komplette Badsanierung dauert 10-15 Werktage. Ein Gäste-WC ist in 5-7 Tagen fertig. Während der Bauzeit organisieren wir Ersatz-WC-Nutzung." },
       { question: "Muss ich während der Badsanierung ausziehen?", answer: "Nein, Sie können in Ihrer Wohnung bleiben. Wir installieren Staubschutzwände und organisieren die Nutzung eines Ersatz-WCs." }
     ],
-    keywords: ["Badsanierung München", "Bad renovieren München", "Badezimmer sanieren München Kosten", "Badsanierung München Festpreis", "Badrenovierung München", "Bad komplett sanieren München"]
+    keywords: ["Badsanierung München", "Bad renovieren München", "Badezimmer sanieren München Kosten", "Badsanierung München Festpreis", "Badrenovierung München", "Bad komplett sanieren München", "was kostet Badsanierung München 2024", "Bad neu machen München Preise", "Badumbau München barrierefrei", "kleine Badsanierung München", "Gäste WC sanieren München Kosten", "Bad fliesen München Preis", "Dusche einbauen München", "Badezimmer modernisieren München", "Badsanierung München Dauer Wochen"]
   },
   kuechensanierung: {
     headline: "Küchensanierung München | Küche renovieren & umbauen lassen",
@@ -337,7 +337,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie lange dauert eine Küchenrenovierung?", answer: "Ein Küchenumbau mit neuen Anschlüssen dauert 5-10 Werktage. Die reine Küchenmontage ohne Umbauarbeiten ist in 1-2 Tagen erledigt." },
       { question: "Können Sie auch nur die Anschlüsse verlegen?", answer: "Ja, wir bieten auch einzelne Leistungen an: Elektroinstallation, Wasseranschlüsse oder Fliesenarbeiten – ganz nach Ihrem Bedarf." }
     ],
-    keywords: ["Küchensanierung München", "Küche renovieren München", "Küchenumbau München Kosten", "Küche umbauen München", "Küchenanschlüsse verlegen München", "Küche neu gestalten München"]
+    keywords: ["Küchensanierung München", "Küche renovieren München", "Küchenumbau München Kosten", "Küche umbauen München", "Küchenanschlüsse verlegen München", "Küche neu gestalten München", "Küche modernisieren München Preise", "Elektrik Küche verlegen München", "Wasseranschluss Küche München", "Fliesenspiegel Küche München", "Küchenmontage München Kosten", "Küchenrenovierung München Dauer", "neue Küche einbauen München", "Küche komplett erneuern München", "Kücheninstallation München Festpreis"]
   },
   bodensanierung: {
     headline: "Bodensanierung München | Parkett, Fliesen & Vinylboden verlegen",
@@ -371,7 +371,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie lange dauert eine Bodenrenovierung?", answer: "Eine 50m² Wohnung ist in 2-3 Tagen fertig, ein 100m² Haus in 4-5 Tagen. Parkett schleifen dauert 1-2 Tage pro Raum." },
       { question: "Können Sie auch altes Parkett aufarbeiten?", answer: "Ja, Parkett schleifen und versiegeln kostet 25-40€/m² und macht Ihren Boden wie neu. Wir prüfen, ob Aufarbeiten oder Austausch sinnvoller ist." }
     ],
-    keywords: ["Bodensanierung München", "Parkett verlegen München", "Vinylboden München", "Boden erneuern München Kosten", "Laminat verlegen München", "Fliesen verlegen München"]
+    keywords: ["Bodensanierung München", "Parkett verlegen München", "Vinylboden München", "Boden erneuern München Kosten", "Laminat verlegen München", "Fliesen verlegen München", "Parkett schleifen München Preis", "Designboden verlegen München", "Bodenbelag erneuern München", "Fußboden sanieren München Kosten", "Parkett abschleifen München", "Vinyl Klick verlegen München", "neuer Boden Wohnung München", "Bodenleger München Festpreis", "Estrich sanieren München Kosten"]
   },
   elektrosanierung: {
     headline: "Elektrosanierung München | Elektrik erneuern & modernisieren",
@@ -405,7 +405,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie erkenne ich, ob meine Elektrik veraltet ist?", answer: "Warnsignale: Schmelzsicherungen statt Automaten, fehlender FI-Schalter, zu wenige Steckdosen, flackerndes Licht, Sicherungen fliegen oft raus. Wir machen einen kostenlosen E-Check." },
       { question: "Wie lange dauert eine Elektrosanierung?", answer: "Eine Wohnung ist in 3-5 Tagen fertig, ein Einfamilienhaus in 5-10 Tagen – abhängig davon, ob die Leitungen über oder unter Putz verlegt werden." }
     ],
-    keywords: ["Elektrosanierung München", "Elektrik erneuern München", "Elektriker München Altbau", "Elektroinstallation München Kosten", "Steckdosen nachrüsten München", "Sicherungskasten erneuern München"]
+    keywords: ["Elektrosanierung München", "Elektrik erneuern München", "Elektriker München Altbau", "Elektroinstallation München Kosten", "Steckdosen nachrüsten München", "Sicherungskasten erneuern München", "Elektrik komplett erneuern München Preis", "Unterputz Kabel verlegen München", "FI Schutzschalter nachrüsten München", "Wallbox Installation München", "E-Check München Kosten", "Altbau Elektrik modernisieren München", "Zählerkasten erneuern München", "Smart Home Elektrik München", "Elektriker Notdienst München schnell"]
   },
   heizungssanierung: {
     headline: "Heizungssanierung München | Neue Heizung mit bis zu 70% Förderung",
@@ -439,7 +439,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie viel Förderung bekomme ich für eine neue Heizung?", answer: "BEG-Förderung 2024: 30% Basis + 20% Klimabonus + 20% Einkommensbonus = bis zu 70%. Wärmepumpe mit max. Förderung: Von 20.000€ Kosten zahlen Sie nur 6.000€." },
       { question: "Wie lange dauert ein Heizungstausch?", answer: "Ein Heizungstausch dauert 1-3 Tage. In dieser Zeit stellen wir eine mobile Heizung, damit Sie nicht frieren. Bei Wärmepumpen kann die Außeneinheit manchmal länger dauern." }
     ],
-    keywords: ["Heizungssanierung München", "Neue Heizung München", "Wärmepumpe München Kosten", "Heizung austauschen München", "Heizungsförderung München", "Gas Brennwert München"]
+    keywords: ["Heizungssanierung München", "Neue Heizung München", "Wärmepumpe München Kosten", "Heizung austauschen München", "Heizungsförderung München", "Gas Brennwert München", "Heizung erneuern München Förderung 2024", "Wärmepumpe nachrüsten München", "Ölheizung tauschen München Kosten", "Pelletheizung München Preise", "Heizungstausch München Dauer", "BEG Förderung Heizung München", "hydraulischer Abgleich München", "Heizungsinstallateur München", "Gasheizung erneuern München Kosten"]
   },
   "energetische-sanierung": {
     headline: "Energetische Sanierung München | Dämmung, Fenster & Förderung",
@@ -473,7 +473,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie viel Heizkosten spare ich durch Dämmung?", answer: "Typische Ersparnis: Fassadendämmung 20-40%, Dachdämmung 15-30%, neue Fenster 10-15%, Kellerdecke 5-10%. Komplett saniert: 50-70% Ersparnis möglich." },
       { question: "Welche Förderung gibt es für energetische Sanierung?", answer: "BEG EM 2024: 15% Zuschuss auf Dämmung, Fenster, Türen. Mit iSFP (individueller Sanierungsfahrplan): +5% Bonus = 20% Förderung. Steuerliche Förderung alternativ: 20% über 3 Jahre." }
     ],
-    keywords: ["Energetische Sanierung München", "Dämmung München", "Fenster tauschen München", "Fassadendämmung München Kosten", "Wärmedämmung München", "iSFP München"]
+    keywords: ["Energetische Sanierung München", "Dämmung München", "Fenster tauschen München", "Fassadendämmung München Kosten", "Wärmedämmung München", "iSFP München", "Dachdämmung München Preise", "Kellerdecke dämmen München", "WDVS München Kosten", "Fenster Förderung München 2024", "Sanierungsfahrplan München erstellen", "energetisch sanieren München Zuschuss", "Hausdämmung München Preise", "Außendämmung München Kosten pro qm", "Wärmeschutz München Altbau"]
   },
   dachsanierung: {
     headline: "Dachsanierung München | Dachdecker für Neueindeckung & Dämmung",
@@ -507,7 +507,7 @@ const serviceSeoContent: Record<string, {
       { question: "Wie lange hält ein neues Dach?", answer: "Lebensdauer nach Material: Tonziegel 60-100 Jahre, Betondachsteine 40-60 Jahre, Schiefer 100+ Jahre, Flachdach-Bitumen 20-30 Jahre, Flachdach-EPDM 40-50 Jahre." },
       { question: "Wann sollte ich mein Dach sanieren lassen?", answer: "Warnsignale: Ziegel gebrochen/bemooste Flächen, Wasserspuren am Dachboden, Zugluft unter dem Dach, Dachrinnen undicht. Nach 30-40 Jahren ist meist eine Sanierung sinnvoll." }
     ],
-    keywords: ["Dachsanierung München", "Dachdecker München", "Dach neu eindecken München Kosten", "Dachreparatur München", "Dachdämmung München", "Dachziegel erneuern München"]
+    keywords: ["Dachsanierung München", "Dachdecker München", "Dach neu eindecken München Kosten", "Dachreparatur München", "Dachdämmung München", "Dachziegel erneuern München", "Dachstuhl sanieren München", "Flachdach abdichten München", "Dachrinne erneuern München Kosten", "Dach undicht München Notdienst", "Dachsanierung München Förderung", "Steildach sanieren München Preise", "Marderabwehr Dach München", "Dachfenster einbauen München", "Dachdecker München Angebot kostenlos"]
   }
 };
 

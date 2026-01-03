@@ -12,7 +12,7 @@ export default function Datenschutz() {
       <SeoHead
         title="Datenschutz | 089-sanierer.de | DSGVO-konform"
         description="Datenschutzerklärung: So schützen wir Ihre Daten. DSGVO-konform, Ihre Rechte, Cookies und Datenverarbeitung bei Sanierungsanfragen erklärt."
-        keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung"
+        keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung, Datenverarbeitung Sanierungsanfrage, Cookie Nutzung Handwerker Website, DSGVO konforme Renovierung München, Datenschutz Anfrage Formular, Ihre Rechte DSGVO Sanierung, personenbezogene Daten Handwerker, Datenlöschung Sanierung München, Datenschutzbeauftragter Renovierung, Google Analytics Datenschutz Handwerker, Cookies Sanierung Website München, Datensicherheit Handwerker München, KSHW München Datenschutz"
         canonicalPath="/datenschutz"
       />
       <SiteHeader />

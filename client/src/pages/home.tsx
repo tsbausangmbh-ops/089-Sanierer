@@ -723,6 +723,7 @@ export default function Home() {
       <SeoHead
         title="Sanierung München | Festpreis & 5 Jahre Garantie | KSHW München"
         description="Ihre Sanierung ohne Stress: Ein Ansprechpartner, Festpreisgarantie, verbindlicher Termin. 268+ zufriedene Familien in München. Kostenlose Beratung in 24h."
+        keywords="Sanierung München, Komplettsanierung München Festpreis, Badsanierung München Kosten, Küchensanierung München, Handwerker München geprüft, Renovierung München aus einer Hand, Altbausanierung München Erfahrungen, Haussanierung München Angebot, Wohnungssanierung München günstig, Elektrosanierung München Preise, Heizungssanierung München Förderung, Bodensanierung München Parkett, Sanierung München 5 Jahre Garantie, KSHW München Bewertungen, 089 Sanierer Komplettsanierung"
         canonicalPath="/"
         schema={faqSchema}
       />

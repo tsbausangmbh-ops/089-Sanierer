@@ -80,7 +80,7 @@ export default function Kontakt() {
       <SeoHead
         title="Sanierung München Anfrage | Kostenlose Beratung 24h"
         description="Sanierung München anfragen: Kostenlose Beratung, Antwort in 24h, Festpreis-Angebot. Tel: 0152 122 740 43. Jetzt unverbindlich Projekt besprechen!"
-        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos"
+        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos, Badsanierung München Termin vereinbaren, Komplettsanierung Anfrage stellen München, Handwerker München schnell verfügbar, Renovierung München kostenlose Besichtigung, Sanierung Angebot einholen München, Altbausanierung München Beratung buchen, Elektrosanierung München Angebot anfordern, Heizungssanierung München Kontakt aufnehmen, 089 Sanierer Telefon Öffnungszeiten, KSHW München erreichbar, Sanierung München Rückruf Service"
         canonicalPath="/kontakt"
       />
       <SiteHeader />
