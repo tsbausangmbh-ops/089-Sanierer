@@ -106,7 +106,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 
   let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | KSHW";
   let description = "Was kostet eine Sanierung in München? KSHW München: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
-  let keywords = "Sanierung München, Komplettsanierung München Festpreis, Badsanierung München Kosten, Küchensanierung München, Handwerker München geprüft, Renovierung München aus einer Hand, Altbausanierung München Erfahrungen, Haussanierung München Angebot, Wohnungssanierung München günstig, Elektrosanierung München Preise, Heizungssanierung München Förderung, Bodensanierung München Parkett, Sanierung München 5 Jahre Garantie, KSHW München Bewertungen, 089 Sanierer Komplettsanierung";
+  let keywords = "Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, KSHW München, 089 Sanierer";
   let mainContent = "";
 
   if (path === "/" || path === "") {
@@ -189,7 +189,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/faq-preise") {
     title = "FAQ & Preise | Sanierung München | KSHW";
     description = "Häufige Fragen und Preisübersicht für Sanierungen in München. Transparente Kosten für Bad, Küche, Elektro und mehr.";
-    keywords = "Sanierung München Kosten, Badsanierung München Preise, Küchensanierung München Kosten, Elektrosanierung München Preise, was kostet Komplettsanierung München, Haussanierung München Preisliste, Renovierung München Festpreis, Sanierung München FAQ, häufige Fragen Badsanierung München, Preise Bodensanierung München, Kosten Heizungssanierung München, Sanierungspreise München 2025, Handwerkerkosten München, Renovierungskosten pro qm München, Sanierung München Angebot einholen";
+    keywords = "Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, KSHW München, 089 Sanierer";
     mainContent = `
       <section>
         <h1>FAQ & Preise - Sanierung München</h1>
@@ -305,7 +305,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   } else if (path === "/ratgeber") {
     title = "Sanierungskosten München - Ratgeber & Preisübersicht | KSHW";
     description = "Was kostet eine Sanierung in München? Detaillierter Ratgeber mit Preisen für Haussanierung, Badsanierung, Dachsanierung, Kellersanierung und mehr. Inklusive Förderungsmöglichkeiten.";
-    keywords = "Sanierungskosten München Ratgeber, was kostet Haussanierung pro qm München, Badsanierung Kosten München 2025, Dachsanierung Preise München, Kellersanierung München Kosten, Wärmedämmung München Förderung, energetische Sanierung Zuschuss München, Fassade streichen München Preise, Wohnungssanierung München Kosten Rechner, KfW Förderung Sanierung München, BAFA Zuschuss München, Sanierungsratgeber München, Renovierungskosten München aktuell, Altbausanierung München was beachten, Förderung energetische Sanierung Bayern";
+    keywords = "Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München, KSHW München Ratgeber, 089 Sanierer Tipps";
     mainContent = `
       <section>
         <h1>Sanierungskosten München - Ihr Ratgeber für faire Preise</h1>
