@@ -65,7 +65,9 @@ import {
   TrendingUp,
   BadgeCheck,
   Timer,
-  FileText
+  FileText,
+  HelpCircle,
+  CircleCheck
 } from "lucide-react";
 
 const allServices = [
@@ -145,6 +147,45 @@ const painPoints = [
     icon: Timer, 
     title: "Monate statt Wochen",
     description: "Die Sanierung zieht sich. Kein Ende in Sicht. Sie fragen sich: War das richtig?"
+  },
+];
+
+const problemSolutions = [
+  {
+    question: "Wer koordiniert all die verschiedenen Handwerker?",
+    problem: "Sie müssten selbst 5-8 verschiedene Gewerke abstimmen: Elektriker, Fliesenleger, Sanitär, Maler... Wer hat dafür Zeit?",
+    solution: "Als Ihr Generalunternehmer übernehmen wir die komplette Koordination. Sie haben einen Ansprechpartner - wir regeln den Rest.",
+    keyword: "Generalunternehmer"
+  },
+  {
+    question: "Was passiert, wenn die Kosten explodieren?",
+    problem: "Die größte Angst: Am Ende zahlen Sie das Doppelte. Versteckte Kosten, Nachträge, böse Überraschungen.",
+    solution: "Unser Festpreisangebot ist verbindlich. Der genannte Preis ist der Endpreis. Punkt. Keine Nachforderungen.",
+    keyword: "Festpreis"
+  },
+  {
+    question: "Wie lange dauert eine Badsanierung wirklich?",
+    problem: "Ihr Badezimmer ist wochenlang nicht nutzbar. Handwerker kommen und gehen. Kein Ende in Sicht.",
+    solution: "Wir nennen Ihnen den genauen Zeitrahmen vorher. Ein Standard-Bad: 2-3 Wochen. Wir halten den Termin.",
+    keyword: "Badsanierung"
+  },
+  {
+    question: "Kann ich während der Sanierung wohnen bleiben?",
+    problem: "Sie haben Angst vor monatelangem Chaos in Ihrer Wohnung. Staub überall, kein normaler Alltag möglich.",
+    solution: "Bei Teilsanierungen: ja. Bei Komplettsanierungen beraten wir Sie individuell. Wir minimieren die Belastung.",
+    keyword: "Wohnungssanierung"
+  },
+  {
+    question: "Was ist, wenn nach der Sanierung Mängel auftreten?",
+    problem: "Der Albtraum: Die Handwerker sind weg, aber Probleme tauchen auf. Keiner fühlt sich zuständig.",
+    solution: "5 Jahre Gewährleistung auf alle Arbeiten. Wir stehen zu unserem Wort - auch Jahre später.",
+    keyword: "Garantie"
+  },
+  {
+    question: "Wie finde ich einen seriösen Handwerker in München?",
+    problem: "Bewertungen lesen, Angebote vergleichen, Referenzen prüfen... Woher wissen Sie, wem Sie vertrauen können?",
+    solution: "268+ zufriedene Familien in München. 98% Weiterempfehlungsrate. Über 20 Jahre Erfahrung. Prüfbar.",
+    keyword: "Handwerker München"
   },
 ];
 
@@ -806,7 +847,7 @@ export default function Home() {
                 Kennen Sie das Gefühl?
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Eine Sanierung planen, aber nur an Probleme denken?
+                Eine <span className="text-accent font-semibold">Sanierung</span> planen, aber nur an Probleme denken?
               </p>
             </div>
             
@@ -820,6 +861,89 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">{point.description}</p>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Problem-Solution FAQ Section - NLP: Question-based targeting */}
+        <section className="py-6 lg:py-8 bg-background">
+          <div className="max-w-5xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
+                <HelpCircle className="w-4 h-4" />
+                <span>Ihre Fragen - Unsere Antworten</span>
+              </div>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Das fragen uns Kunden am häufigsten
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Wir verstehen Ihre Bedenken. Hier sind die ehrlichen Antworten auf die Fragen, 
+                die Sie sich bei einer <span className="text-accent font-medium">Renovierung in München</span> stellen.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {problemSolutions.map((item, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <div className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <HelpCircle className="w-5 h-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-lg mb-3">{item.question}</h3>
+                        
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div className="bg-destructive/5 rounded-lg p-4 border-l-4 border-destructive/30">
+                            <div className="flex items-center gap-2 text-destructive font-medium text-sm mb-2">
+                              <XCircle className="w-4 h-4" />
+                              Das Problem
+                            </div>
+                            <p className="text-sm text-muted-foreground">{item.problem}</p>
+                          </div>
+                          
+                          <div className="bg-green-500/5 rounded-lg p-4 border-l-4 border-green-500/50">
+                            <div className="flex items-center gap-2 text-green-600 font-medium text-sm mb-2">
+                              <CircleCheck className="w-4 h-4" />
+                              Unsere Lösung
+                            </div>
+                            <p className="text-sm text-muted-foreground">{item.solution}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-3 flex items-center gap-2">
+                          <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full font-medium">
+                            {item.keyword}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-muted-foreground mb-4">
+                Noch Fragen? Wir beraten Sie persönlich - kostenlos und unverbindlich.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button 
+                  size="lg" 
+                  onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-accent hover:bg-accent/90"
+                  data-testid="button-faq-cta"
+                >
+                  Jetzt Beratung anfragen
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Link href="tel:+4915212274043">
+                  <Button size="lg" variant="outline" data-testid="button-faq-phone">
+                    <Phone className="w-4 h-4 mr-2" />
+                    0152 122 740 43
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
