@@ -882,32 +882,32 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {problemSolutions.map((item, index) => (
                 <Card key={index} className="overflow-hidden">
-                  <div className="p-5">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <HelpCircle className="w-4 h-4 text-accent" />
+                  <div className="p-4">
+                    <div className="flex items-start gap-2">
+                      <div className="w-7 h-7 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <HelpCircle className="w-3.5 h-3.5 text-accent" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-bold text-base mb-3">{item.question}</h3>
+                        <h3 className="font-bold text-sm mb-2">{item.question}</h3>
                         
-                        <div className="space-y-3">
-                          <div className="bg-destructive/5 rounded-lg p-3 border-l-3 border-destructive/30">
-                            <div className="flex items-center gap-2 text-destructive font-medium text-xs mb-1">
+                        <div className="space-y-2">
+                          <div className="bg-destructive/5 rounded-lg p-2.5 border-l-2 border-destructive/30">
+                            <div className="flex items-center gap-1.5 text-destructive font-medium text-xs mb-1">
                               <XCircle className="w-3 h-3" />
-                              Das Problem
+                              Problem
                             </div>
-                            <p className="text-sm text-muted-foreground">{item.problem}</p>
+                            <p className="text-xs text-muted-foreground">{item.problem}</p>
                           </div>
                           
-                          <div className="bg-green-500/5 rounded-lg p-3 border-l-3 border-green-500/50">
-                            <div className="flex items-center gap-2 text-green-600 font-medium text-xs mb-1">
+                          <div className="bg-green-500/5 rounded-lg p-2.5 border-l-2 border-green-500/50">
+                            <div className="flex items-center gap-1.5 text-green-600 font-medium text-xs mb-1">
                               <CircleCheck className="w-3 h-3" />
-                              Unsere Lösung
+                              Lösung
                             </div>
-                            <p className="text-sm text-muted-foreground">{item.solution}</p>
+                            <p className="text-xs text-muted-foreground">{item.solution}</p>
                           </div>
                         </div>
                         
