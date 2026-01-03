@@ -60,6 +60,11 @@ export function SeoHead({
       let canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
         canonical.setAttribute("href", canonicalUrl);
+      } else {
+        canonical = document.createElement("link");
+        canonical.setAttribute("rel", "canonical");
+        canonical.setAttribute("href", canonicalUrl);
+        document.head.appendChild(canonical);
       }
     }
 
