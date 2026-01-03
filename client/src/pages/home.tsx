@@ -25,8 +25,6 @@ import floorImg from "@assets/generated_images/parquet_floor_renovation.png";
 import electricImg from "@assets/generated_images/electrical_renovation_installation.png";
 import heatingImg from "@assets/generated_images/heating_system_installation.png";
 import completeImg from "@assets/generated_images/complete_home_renovation_result.png";
-import craftsmenFinishingImg from "@assets/stock_images/craftsmen_workers_sa_e7690865.jpg";
-import realCoupleImg from "@assets/stock_images/real_people_couple_r_439d40a1.jpg";
 
 import { 
   Bath, 
@@ -829,34 +827,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Section with Image */}
+        {/* Stats Section */}
         <section className="py-8 lg:py-10 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-5 gap-8 items-center">
-              <div className="lg:col-span-2 hidden lg:block">
-                <div className="relative">
-                  <img 
-                    src={craftsmenFinishingImg} 
-                    alt="Handwerker beim Feinschliff in heller Wohnung" 
-                    className="rounded-xl shadow-lg w-full h-72 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-xl" />
+            <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8">
+              Warum Münchner uns vertrauen
+            </h2>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-sm opacity-80">{stat.label}</div>
                 </div>
-              </div>
-              <div className="lg:col-span-3">
-                <h2 className="text-2xl lg:text-3xl font-bold text-center lg:text-left mb-6">
-                  Warum Münchner uns vertrauen
-                </h2>
-                <div className="grid grid-cols-2 gap-6">
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center lg:text-left">
-                      <stat.icon className="w-8 h-8 mx-auto lg:mx-0 mb-3 opacity-80" />
-                      <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
-                      <div className="text-sm opacity-80">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -864,44 +848,29 @@ export default function Home() {
         {/* Pain Points Section - NLP: Problem-Agitation */}
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-5 gap-8 items-center">
-              <div className="lg:col-span-3">
-                <div className="text-center lg:text-left mb-6">
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                    Kennen Sie das Gefühl?
-                  </h2>
-                  <p className="text-lg text-muted-foreground max-w-2xl">
-                    Eine <span className="text-accent font-semibold">Sanierung</span> planen, aber nur an Probleme denken?
-                  </p>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  {painPoints.map((point, index) => (
-                    <Card key={index} className="p-5 bg-background border-destructive/20 hover-elevate">
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <point.icon className="w-5 h-5 text-destructive" />
-                        </div>
-                        <div>
-                          <h3 className="font-bold mb-1">{point.title}</h3>
-                          <p className="text-sm text-muted-foreground">{point.description}</p>
-                        </div>
-                      </div>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="lg:col-span-2 hidden lg:block">
-                <div className="relative">
-                  <img 
-                    src={realCoupleImg} 
-                    alt="Zufriedene Kunden in ihrer renovierten Wohnung" 
-                    className="rounded-xl shadow-lg w-full h-72 object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl" />
-                </div>
-              </div>
+            <div className="text-center mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                Kennen Sie das Gefühl?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Eine <span className="text-accent font-semibold">Sanierung</span> planen, aber nur an Probleme denken?
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {painPoints.map((point, index) => (
+                <Card key={index} className="p-5 bg-background border-destructive/20 hover-elevate">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <point.icon className="w-5 h-5 text-destructive" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold mb-1">{point.title}</h3>
+                      <p className="text-sm text-muted-foreground">{point.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
