@@ -172,22 +172,10 @@ const problemSolutions = [
     keyword: "Badsanierung"
   },
   {
-    question: "Kann ich während der Sanierung wohnen bleiben?",
-    problem: "Sie haben Angst vor monatelangem Chaos in Ihrer Wohnung. Staub überall, kein normaler Alltag möglich.",
-    solution: "Bei Teilsanierungen: ja. Bei Komplettsanierungen beraten wir Sie individuell. Wir minimieren die Belastung.",
-    keyword: "Wohnungssanierung"
-  },
-  {
     question: "Was ist, wenn nach der Sanierung Mängel auftreten?",
     problem: "Der Albtraum: Die Handwerker sind weg, aber Probleme tauchen auf. Keiner fühlt sich zuständig.",
     solution: "5 Jahre Gewährleistung auf alle Arbeiten. Wir stehen zu unserem Wort - auch Jahre später.",
     keyword: "Garantie"
-  },
-  {
-    question: "Wie finde ich einen seriösen Handwerker in München?",
-    problem: "Bewertungen lesen, Angebote vergleichen, Referenzen prüfen... Woher wissen Sie, wem Sie vertrauen können?",
-    solution: "268+ zufriedene Familien in München. 98% Weiterempfehlungsrate. Über 20 Jahre Erfahrung. Prüfbar.",
-    keyword: "Handwerker München"
   },
 ];
 
@@ -935,7 +923,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               {problemSolutions.map((item, index) => (
                 <Card key={index} className="overflow-hidden">
                   <div className="p-5">
