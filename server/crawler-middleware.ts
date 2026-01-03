@@ -266,6 +266,110 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Montag - Freitag: 08:00 - 16:30 Uhr</p>
       </section>
     `;
+  } else if (path === "/bestaetigung") {
+    title = "Anfrage gesendet | KSHW München";
+    description = "Vielen Dank für Ihre Sanierungsanfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.";
+    mainContent = `
+      <section>
+        <h1>Vielen Dank für Ihre Anfrage!</h1>
+        <p>Ihre Sanierungsanfrage wurde erfolgreich übermittelt.</p>
+        
+        <h2>Nächste Schritte</h2>
+        <ul>
+          <li>Wir prüfen Ihre Anfrage und melden uns innerhalb von 24 Stunden</li>
+          <li>Sie erhalten eine Bestätigung per E-Mail</li>
+          <li>Bei Fragen erreichen Sie uns unter 0152 122 740 43</li>
+        </ul>
+        
+        <h2>Kontakt</h2>
+        <p>KSHW München - Komplettsanierungen Haus & Wohnung</p>
+        <p>Telefon: 0152 122 740 43</p>
+        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
+      </section>
+    `;
+  } else if (path === "/ratgeber") {
+    title = "Sanierungskosten München - Ratgeber & Preisübersicht | KSHW";
+    description = "Was kostet eine Sanierung in München? Detaillierter Ratgeber mit Preisen für Haussanierung, Badsanierung, Dachsanierung, Kellersanierung und mehr. Inklusive Förderungsmöglichkeiten.";
+    mainContent = `
+      <section>
+        <h1>Sanierungskosten München - Ihr Ratgeber für faire Preise</h1>
+        <p>Alle Preisangaben auf dieser Seite sind unverbindliche Richtwerte. Stand: Dezember 2025, Preise netto zzgl. 19% MwSt.</p>
+        
+        <h2>Was kostet eine Haussanierung in München?</h2>
+        <p>Eine Haussanierung in München kostet je nach Umfang und Zustand:</p>
+        <ul>
+          <li><strong>Teilsanierung:</strong> 400 - 800 €/m²</li>
+          <li><strong>Komplettsanierung Standard:</strong> 1.000 - 1.500 €/m²</li>
+          <li><strong>Komplettsanierung Gehoben:</strong> 1.500 - 2.300 €/m²</li>
+        </ul>
+        <p>Die tatsächlichen Kosten hängen von Faktoren wie Baujahr, Gebäudezustand, Energiestandard und gewünschter Ausstattung ab.</p>
+        
+        <h2>Was kostet Fassade streichen in München?</h2>
+        <p>Fassadenanstrich und Fassadensanierung in München:</p>
+        <ul>
+          <li><strong>Einfacher Anstrich:</strong> 25 - 40 €/m²</li>
+          <li><strong>Mit Grundierung & Ausbesserung:</strong> 40 - 60 €/m²</li>
+          <li><strong>Vollwärmeschutz (WDVS):</strong> 120 - 200 €/m²</li>
+        </ul>
+        
+        <h2>Wie teuer ist eine Dachsanierung in München?</h2>
+        <p>Dachsanierung und Dachdämmung in München:</p>
+        <ul>
+          <li><strong>Dacheindeckung:</strong> 80 - 150 €/m²</li>
+          <li><strong>Dachdämmung (Aufsparren):</strong> 150 - 250 €/m²</li>
+          <li><strong>Komplettsanierung:</strong> 200 - 350 €/m²</li>
+        </ul>
+        <p>BAFA- und KfW-Förderung für energetische Dachsanierung möglich.</p>
+        
+        <h2>Was kostet eine Badsanierung in München?</h2>
+        <p>Badsanierung München - Preisübersicht:</p>
+        <ul>
+          <li><strong>Gäste-WC (bis 3m²):</strong> 8.000 - 12.000 €</li>
+          <li><strong>Standard-Bad (5-6m²):</strong> 16.000 - 22.000 €</li>
+          <li><strong>Komfort-Bad (6-8m²):</strong> 22.000 - 32.000 €</li>
+          <li><strong>Luxus-Bad (ab 8m²):</strong> 35.000 - 50.000 €</li>
+        </ul>
+        
+        <h2>Was kostet eine Kellersanierung in München?</h2>
+        <p>Kellersanierung und Kellerabdichtung:</p>
+        <ul>
+          <li><strong>Innendämmung:</strong> 50 - 100 €/m²</li>
+          <li><strong>Kellerabdichtung (innen):</strong> 150 - 250 €/m²</li>
+          <li><strong>Kellerabdichtung (außen):</strong> 300 - 500 €/m²</li>
+        </ul>
+        
+        <h2>Lohnt sich Wärmedämmung in München? Kosten & Förderung</h2>
+        <p>Wärmedämmung München - Preise und Fördermöglichkeiten:</p>
+        <ul>
+          <li><strong>Fassadendämmung WDVS:</strong> 120 - 200 €/m²</li>
+          <li><strong>Dachdämmung:</strong> 150 - 250 €/m²</li>
+          <li><strong>Kellerdeckendämmung:</strong> 40 - 80 €/m²</li>
+        </ul>
+        <p>BAFA-Förderung: 15-20% Zuschuss möglich. KfW-Kredit: vergünstigte Konditionen.</p>
+        
+        <h2>Was kostet eine Wohnungssanierung in München?</h2>
+        <p>Wohnungssanierung München:</p>
+        <ul>
+          <li><strong>Renovierung (Böden, Wände, Decken):</strong> 300 - 600 €/m²</li>
+          <li><strong>Teilsanierung (inkl. Bad/Küche):</strong> 600 - 1.000 €/m²</li>
+          <li><strong>Komplettsanierung:</strong> 1.000 - 1.800 €/m²</li>
+        </ul>
+        
+        <h2>Welche Förderung gibt es für energetische Sanierung in München?</h2>
+        <p>Förderprogramme für energetische Sanierung:</p>
+        <ul>
+          <li><strong>KfW-Kredit 261/262:</strong> Zinsgünstige Kredite bis 150.000 €</li>
+          <li><strong>BAFA Heizungsförderung:</strong> 30-70% Zuschuss für Wärmepumpe</li>
+          <li><strong>BAFA Gebäudehülle:</strong> 15-20% für Dämmung & Fenster</li>
+          <li><strong>Förderprogramm Energieberatung:</strong> 80% Zuschuss</li>
+        </ul>
+        
+        <h2>Kontakt</h2>
+        <p>KSHW München - Komplettsanierungen Haus & Wohnung</p>
+        <p>Telefon: 0152 122 740 43</p>
+        <p>Kostenlose Erstberatung - Wir melden uns innerhalb von 24 Stunden!</p>
+      </section>
+    `;
   } else {
     return "";
   }
