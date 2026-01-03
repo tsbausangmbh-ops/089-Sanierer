@@ -828,17 +828,17 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-8 lg:py-10 bg-primary text-primary-foreground">
+        <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8">
+            <h2 className="text-xl lg:text-2xl font-bold text-center mb-4">
               Warum Münchner uns vertrauen
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
-                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-sm opacity-80">{stat.label}</div>
+                  <stat.icon className="w-6 h-6 mx-auto mb-2 opacity-80" />
+                  <div className="text-2xl lg:text-3xl font-bold mb-0.5">{stat.value}</div>
+                  <div className="text-xs opacity-80">{stat.label}</div>
                 </div>
               ))}
             </div>
