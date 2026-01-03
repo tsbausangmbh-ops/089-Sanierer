@@ -477,12 +477,18 @@ function FunnelForm() {
     <section id="anfrage-form" className="py-4 lg:py-6 bg-background">
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
+            <CheckCircle className="w-4 h-4" />
+            <span>Über 268 Münchner Familien vertrauen uns bereits</span>
+          </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Starten Sie jetzt. <span className="text-accent">Kostenlos.</span>
+            <span className="text-accent">Stellen Sie sich vor:</span> In 8 Wochen ist Ihre Sanierung abgeschlossen.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            In nur 2 Minuten zu Ihrer persönlichen Beratung. 
-            Keine Verpflichtungen. Keine versteckten Kosten.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
+            <strong>Kein Handwerker-Chaos.</strong> Kein Budget-Albtraum. Nur Ihr traumhaftes neues Zuhause.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            In nur 2 Minuten erfahren Sie, wie wir das für Sie möglich machen.
           </p>
         </div>
 
@@ -499,10 +505,10 @@ function FunnelForm() {
             <div className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
-                  Wo dürfen wir Ihnen helfen?
+                  Wo entsteht Ihr <span className="text-accent">neues Zuhause</span>?
                 </h3>
                 <p className="text-muted-foreground">
-                  Ihr Standort hilft uns, das beste Team für Sie zu finden
+                  Wir finden das perfekte Handwerker-Team in Ihrer Nähe
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -533,7 +539,7 @@ function FunnelForm() {
               
               <div className="text-center pt-4">
                 <h3 className="text-xl font-bold mb-2">
-                  Was möchten Sie sanieren?
+                  Was wird sich <span className="text-accent">verändern</span>?
                 </h3>
               </div>
               <RadioGroup value={selectedService} onValueChange={setSelectedService} className="grid grid-cols-2 lg:grid-cols-3 gap-3">
@@ -571,10 +577,10 @@ function FunnelForm() {
             <div className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
-                  Wann soll es losgehen?
+                  Wann möchten Sie <span className="text-accent">einziehen</span>?
                 </h3>
                 <p className="text-muted-foreground">
-                  Je früher wir wissen, desto besser können wir planen
+                  Je früher Sie starten, desto schneller genießen Sie Ihr neues Zuhause
                 </p>
               </div>
               <RadioGroup value={urgency} onValueChange={setUrgency} className="space-y-4">
@@ -633,10 +639,10 @@ function FunnelForm() {
             <div className="space-y-4">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">
-                  Wie erreichen wir Sie?
+                  Fast geschafft! <span className="text-accent">Wer darf sich freuen?</span>
                 </h3>
                 <p className="text-muted-foreground">
-                  Morgen meldet sich Ihr persönlicher Berater
+                  Innerhalb von 24 Stunden meldet sich Ihr persönlicher Sanierungsexperte
                 </p>
               </div>
               <div className="space-y-5">
