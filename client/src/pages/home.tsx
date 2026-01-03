@@ -839,6 +839,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Stats Section */}
+        <section className="py-6 bg-primary text-primary-foreground">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
+                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-sm opacity-80">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Pain Points Section - NLP: Problem-Agitation */}
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -973,21 +988,6 @@ export default function Home() {
                   <h3 className="font-bold mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-6 bg-primary text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <stat.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
-                  <div className="text-3xl lg:text-4xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-sm opacity-80">{stat.label}</div>
-                </div>
               ))}
             </div>
           </div>
