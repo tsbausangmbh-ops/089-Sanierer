@@ -26,7 +26,7 @@ import electricImg from "@assets/generated_images/electrical_renovation_installa
 import heatingImg from "@assets/generated_images/heating_system_installation.png";
 import completeImg from "@assets/generated_images/complete_home_renovation_result.png";
 import craftsmanWorkImg from "@assets/stock_images/professional_constru_28d3eadb.jpg";
-import renovatedLivingImg from "@assets/stock_images/modern_renovated_liv_acd0aef9.jpg";
+import craftsmenFinishingImg from "@assets/stock_images/craftsmen_workers_sa_e7690865.jpg";
 
 import { 
   Bath, 
@@ -848,8 +848,8 @@ export default function Home() {
               <div className="lg:col-span-2 hidden lg:block">
                 <div className="relative">
                   <img 
-                    src={renovatedLivingImg} 
-                    alt="Modern renoviertes Wohnzimmer in München" 
+                    src={craftsmenFinishingImg} 
+                    alt="Handwerker beim Feinschliff in heller Wohnung" 
                     className="rounded-xl shadow-lg w-full h-auto object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-xl" />
