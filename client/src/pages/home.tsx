@@ -892,7 +892,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid md:grid-cols-2 gap-5">
               {problemSolutions.map((item, index) => (
                 <Card key={index} className="overflow-hidden">
                   <div className="p-5">
