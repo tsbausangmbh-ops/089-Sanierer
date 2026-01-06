@@ -26,6 +26,11 @@ const GewerkeFunnel = lazy(() => import("@/pages/gewerke-funnel"));
 const FaqPreise = lazy(() => import("@/pages/faq-preise"));
 const Cookies = lazy(() => import("@/pages/cookies"));
 const Termin = lazy(() => import("@/pages/termin"));
+const Kosten = lazy(() => import("@/pages/kosten"));
+const Badsanierung = lazy(() => import("@/pages/badsanierung"));
+const Wohnungssanierung = lazy(() => import("@/pages/wohnungssanierung"));
+const Haussanierung = lazy(() => import("@/pages/haussanierung"));
+const Kernsanierung = lazy(() => import("@/pages/kernsanierung"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 declare global {
@@ -71,6 +76,11 @@ function Router() {
         <Route path="/faq-preise" component={FaqPreise} />
         <Route path="/cookies" component={Cookies} />
         <Route path="/termin" component={Termin} />
+        <Route path="/kosten" component={Kosten} />
+        <Route path="/badsanierung" component={Badsanierung} />
+        <Route path="/wohnungssanierung" component={Wohnungssanierung} />
+        <Route path="/haussanierung" component={Haussanierung} />
+        <Route path="/kernsanierung" component={Kernsanierung} />
         <Route path="/danke" component={Confirmation} />
         <Route component={NotFound} />
       </Switch>

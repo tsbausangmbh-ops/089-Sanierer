@@ -1,0 +1,221 @@
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { SiteHeader } from "@/components/site-header";
+import { SeoFooter } from "@/components/seo-footer";
+import { SeoHead } from "@/components/seo-head";
+import {
+  Hammer,
+  CheckCircle,
+  Phone,
+  ArrowRight,
+  Clock,
+  Euro,
+  Shield,
+  Zap,
+  Droplets,
+  Flame,
+  Building2,
+  HardHat
+} from "lucide-react";
+
+const kernsanierungPhasen = [
+  { 
+    phase: 1, 
+    title: "Entkernung", 
+    description: "Rückbau bis auf den Rohbau. Alle alten Installationen werden entfernt." 
+  },
+  { 
+    phase: 2, 
+    title: "Rohbauarbeiten", 
+    description: "Statische Anpassungen, neue Grundrisse, Wanddurchbrüche." 
+  },
+  { 
+    phase: 3, 
+    title: "Haustechnik", 
+    description: "Komplett neue Elektrik, Sanitär und Heizung nach aktuellen Standards." 
+  },
+  { 
+    phase: 4, 
+    title: "Ausbau", 
+    description: "Trockenbau, Estrich, Dämmung, Fenster und Türen." 
+  },
+  { 
+    phase: 5, 
+    title: "Innenausbau", 
+    description: "Fliesen, Böden, Malerarbeiten, Sanitärobjekte, Küche." 
+  }
+];
+
+const wasIstInklusive = [
+  "Entkernung und Entsorgung",
+  "Neue Elektroinstallation komplett",
+  "Neue Sanitärleitungen",
+  "Neue Heizungsanlage",
+  "Dämmung nach EnEV",
+  "Neue Fenster und Türen",
+  "Fußbodenaufbau mit Estrich",
+  "Bodenbeläge nach Wahl",
+  "Komplette Bäder",
+  "Malerarbeiten",
+  "Bauleitung und Koordination",
+  "5 Jahre Gewährleistung"
+];
+
+export default function Kernsanierung() {
+  return (
+    <div className="min-h-screen bg-background">
+      <SeoHead
+        title="Kernsanierung München ab 1.200€/m² | Festpreis | KSHW"
+        description="Kernsanierung München: Komplettsanierung bis auf den Rohbau ab 1.200€/m². Neue Elektrik, Sanitär, Heizung. Festpreisgarantie, 5 Jahre Gewährleistung."
+        canonicalPath="/kernsanierung"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Kernsanierung München",
+          "provider": {"@id": "https://089-sanierer.de/#organization"},
+          "areaServed": "München",
+          "description": "Professionelle Kernsanierung in München"
+        }}
+      />
+      <SiteHeader />
+
+      <main>
+        <section className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Kernsanierung München
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-6">
+                Komplettsanierung bis auf den Rohbau. 
+                Ihr Altbau wird wie neu - mit modernster Technik.
+              </p>
+              <div className="flex items-baseline justify-center gap-2 mb-8">
+                <span className="text-4xl font-bold text-primary">ab 1.200€/m²</span>
+                <span className="text-muted-foreground">Festpreis</span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/anfrage?service=komplettsanierung">
+                  <Button size="lg" data-testid="button-anfrage-kern">
+                    <Hammer className="w-5 h-5 mr-2" />
+                    Jetzt Angebot anfordern
+                  </Button>
+                </Link>
+                <a href="tel:+4915212274043">
+                  <Button variant="outline" size="lg" data-testid="button-phone-kern">
+                    <Phone className="w-5 h-5 mr-2" />
+                    0152 1227 4043
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+              Was ist eine Kernsanierung?
+            </h2>
+            <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
+              Bei einer Kernsanierung wird das Gebäude bis auf die tragenden Wände zurückgebaut. 
+              Alle Installationen, Böden, Wände und Decken werden erneuert. 
+              Das Ergebnis: Ein Altbau mit dem Komfort eines Neubaus.
+            </p>
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6">
+                {kernsanierungPhasen.map((item) => (
+                  <div key={item.phase} className="flex gap-6 items-start">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
+                      {item.phase}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
+                      <p className="text-muted-foreground">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-accent/30">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+              Was ist inklusive?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              {wasIstInklusive.map((item) => (
+                <div key={item} className="flex items-center gap-3 p-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+                Wann lohnt sich eine Kernsanierung?
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                      <Building2 className="w-5 h-5 text-primary" />
+                      Altbau vor 1980
+                    </h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>Veraltete Elektrik (keine FI-Schalter)</li>
+                      <li>Blei- oder Stahlleitungen</li>
+                      <li>Keine/schlechte Dämmung</li>
+                      <li>Ineffiziente Heizung</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                      <HardHat className="w-5 h-5 text-primary" />
+                      Grundrissänderung gewünscht
+                    </h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>Wände sollen versetzt werden</li>
+                      <li>Offene Küche gewünscht</li>
+                      <li>Zusätzliches Badezimmer</li>
+                      <li>Raumaufteilung optimieren</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Jetzt Kernsanierung planen
+            </h2>
+            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+              Kostenlose Erstberatung vor Ort. Wir prüfen, ob eine Kernsanierung sinnvoll ist.
+            </p>
+            <Link href="/anfrage?service=komplettsanierung">
+              <Button size="lg" variant="secondary" data-testid="button-anfrage-kern-cta">
+                Angebot anfordern
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <SeoFooter />
+    </div>
+  );
+}
