@@ -1,6 +1,7 @@
-import express, { type Express } from "express";
+import express, { type Express, type Request, type Response } from "express";
 import fs from "fs";
 import path from "path";
+import { renderHtmlWithMeta } from "./ssr-renderer";
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
@@ -15,6 +16,7 @@ export function serveStatic(app: Express) {
     immutable: true,
     etag: true,
     lastModified: true,
+    index: false,
     setHeaders: (res, filePath) => {
       if (filePath.endsWith('.html')) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
@@ -28,8 +30,10 @@ export function serveStatic(app: Express) {
     }
   }));
 
-  app.use("*", (_req, res) => {
+  app.use("*", (req: Request, res: Response) => {
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    res.sendFile(path.resolve(distPath, "index.html"));
+    res.setHeader('Content-Type', 'text/html');
+    const html = renderHtmlWithMeta(req.originalUrl, false);
+    res.send(html);
   });
 }
