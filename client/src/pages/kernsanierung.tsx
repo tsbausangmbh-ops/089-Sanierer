@@ -5,6 +5,12 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead } from "@/components/seo-head";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Hammer,
   CheckCircle,
   Phone,
@@ -16,7 +22,8 @@ import {
   Droplets,
   Flame,
   Building2,
-  HardHat
+  HardHat,
+  HelpCircle
 } from "lucide-react";
 
 const kernsanierungPhasen = [
@@ -60,6 +67,29 @@ const wasIstInklusive = [
   "Malerarbeiten",
   "Bauleitung und Koordination",
   "5 Jahre Gewährleistung"
+];
+
+const kernFaqs = [
+  {
+    frage: "Was ist der Unterschied zwischen Kernsanierung und Komplettsanierung?",
+    antwort: "Bei einer Kernsanierung wird das Gebäude bis auf die tragenden Wände zurückgebaut - alle Installationen, Böden, nicht-tragenden Wände werden entfernt. Eine Komplettsanierung kann auch bedeuten, dass bestehende Elemente erhalten bleiben. Die Kernsanierung ist umfassender und teurer, aber das Ergebnis entspricht einem Neubau."
+  },
+  {
+    frage: "Wie lange dauert eine Kernsanierung?",
+    antwort: "Je nach Größe und Umfang 12-24 Wochen. Eine 100m² Wohnung: ca. 12-14 Wochen. Ein Einfamilienhaus: 16-24 Wochen. Wir nennen Ihnen im Angebot den verbindlichen Zeitrahmen."
+  },
+  {
+    frage: "Bleibt bei einer Kernsanierung wirklich nur der Rohbau?",
+    antwort: "Ja, wir entfernen: alle Leitungen (Elektro, Wasser, Heizung), Böden inkl. Estrich, nicht-tragende Wände, Deckenverkleidungen, Fenster und Türen. Erhalten bleiben: tragende Wände, Decken, das Dach. Danach bauen wir komplett neu auf."
+  },
+  {
+    frage: "Ist eine Kernsanierung günstiger als ein Neubau?",
+    antwort: "In der Regel ja: Kernsanierung kostet 1.200-2.000€/m², Neubau 3.000-4.000€/m². Außerdem: Bei Bestandsgebäuden gilt oft Bestandsschutz, während für einen Neubau aktuelle Bauvorschriften gelten, die teurer umzusetzen sind."
+  },
+  {
+    frage: "Welche Genehmigungen brauche ich für eine Kernsanierung?",
+    antwort: "Für reine Innenarbeiten meist keine. Bei Änderungen an tragenden Wänden, Fenstern oder Fassade ist eine Baugenehmigung nötig. Wir klären das im Vorfeld und übernehmen bei Bedarf die komplette Antragsstellung."
+  }
 ];
 
 export default function Kernsanierung() {
@@ -193,6 +223,29 @@ export default function Kernsanierung() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-accent/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                <HelpCircle className="w-8 h-8 text-primary" />
+                Häufige Fragen zur Kernsanierung
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {kernFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left" data-testid={`faq-kern-${index}`}>
+                      {faq.frage}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.antwort}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

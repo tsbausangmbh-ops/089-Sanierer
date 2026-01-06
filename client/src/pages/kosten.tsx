@@ -5,6 +5,12 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead } from "@/components/seo-head";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Bath,
   HomeIcon,
   Building,
@@ -15,8 +21,32 @@ import {
   ArrowRight,
   Calculator,
   Shield,
-  Clock
+  Clock,
+  HelpCircle
 } from "lucide-react";
+
+const kostenFaqs = [
+  {
+    frage: "Wie setzt sich der Preis für eine Sanierung zusammen?",
+    antwort: "Der Preis hängt von mehreren Faktoren ab: Größe der Fläche, Umfang der Arbeiten, gewählte Materialien und Ausstattungsqualität. Bei uns erhalten Sie nach der kostenlosen Erstberatung ein detailliertes Festpreisangebot, das alle Kosten transparent aufschlüsselt."
+  },
+  {
+    frage: "Was bedeutet Festpreisgarantie?",
+    antwort: "Der im Angebot genannte Preis ist der Endpreis. Es gibt keine versteckten Kosten oder Nachforderungen. Sollten während der Sanierung unvorhergesehene Probleme auftreten (z.B. Wasserschaden hinter den Fliesen), besprechen wir das mit Ihnen, bevor zusätzliche Kosten entstehen."
+  },
+  {
+    frage: "Wann muss ich bezahlen?",
+    antwort: "Wir arbeiten mit einem fairen Zahlungsplan: 30% bei Auftragserteilung, 40% bei Halbzeit und 30% nach Abnahme. So haben Sie Sicherheit während der gesamten Bauphase."
+  },
+  {
+    frage: "Gibt es Fördermittel für Sanierungen in München?",
+    antwort: "Ja, besonders für energetische Sanierungen gibt es attraktive Förderprogramme der KfW und BAFA. Auch die Stadt München bietet Zuschüsse für bestimmte Maßnahmen. Wir beraten Sie gerne zu den aktuellen Fördermöglichkeiten."
+  },
+  {
+    frage: "Warum sind Ihre Preise günstiger als bei Einzelhandwerkern?",
+    antwort: "Als Generalunternehmer koordinieren wir alle Gewerke effizient. Dadurch gibt es keine Wartezeiten, keine doppelte Anfahrt und optimierte Materialbestellung. Diese Einsparungen geben wir an Sie weiter."
+  }
+];
 
 const kostenuebersicht = [
   {
@@ -172,6 +202,29 @@ export default function Kosten() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                <HelpCircle className="w-8 h-8 text-primary" />
+                Häufige Fragen zu Kosten
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {kostenFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left" data-testid={`faq-kosten-${index}`}>
+                      {faq.frage}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.antwort}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

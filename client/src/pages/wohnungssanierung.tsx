@@ -5,6 +5,12 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead } from "@/components/seo-head";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Building,
   CheckCircle,
   Phone,
@@ -16,7 +22,8 @@ import {
   Zap,
   Droplets,
   Layers,
-  Paintbrush
+  Paintbrush,
+  HelpCircle
 } from "lucide-react";
 
 const leistungen = [
@@ -30,6 +37,29 @@ const wohnungstypen = [
   { typ: "1-2 Zimmer Wohnung", groesse: "30-50 m²", preis: "ab 32.000€", dauer: "4-5 Wochen" },
   { typ: "3 Zimmer Wohnung", groesse: "60-80 m²", preis: "ab 56.000€", dauer: "6-8 Wochen" },
   { typ: "4-5 Zimmer Wohnung", groesse: "90-120 m²", preis: "ab 85.000€", dauer: "8-10 Wochen" }
+];
+
+const wohnungFaqs = [
+  {
+    frage: "Muss ich während der Sanierung ausziehen?",
+    antwort: "Bei einer Komplettsanierung empfehlen wir den vorübergehenden Auszug. Die Wohnung ist während der Arbeiten nicht bewohnbar. Bei Teilsanierungen (z.B. nur Bad) können Sie oft bleiben."
+  },
+  {
+    frage: "Was ist der Unterschied zwischen Sanierung und Renovierung?",
+    antwort: "Eine Renovierung umfasst meist nur oberflächliche Arbeiten (Streichen, Tapezieren). Bei einer Sanierung erneuern wir auch die Substanz: Elektrik, Leitungen, Böden, teils Wände. Das Ergebnis ist nachhaltiger."
+  },
+  {
+    frage: "Brauche ich eine Genehmigung für die Wohnungssanierung?",
+    antwort: "Für Innenarbeiten in der Regel nicht. Bei tragenden Wänden oder Fassadenänderungen kann eine Genehmigung nötig sein. Wir klären das im Vorfeld und übernehmen bei Bedarf die Anträge."
+  },
+  {
+    frage: "Wie koordinieren Sie die verschiedenen Handwerker?",
+    antwort: "Als Generalunternehmer übernehmen wir die komplette Koordination. Sie haben einen festen Ansprechpartner. Alle Gewerke - Elektriker, Sanitär, Fliesenleger, Maler - werden von uns terminiert und überwacht."
+  },
+  {
+    frage: "Kann ich die Wohnung nach der Sanierung teurer vermieten?",
+    antwort: "Ja, eine Komplettsanierung rechtfertigt in München deutlich höhere Mieten. Nach Modernisierung können Sie bis zu 3€/m² mehr verlangen. Die Sanierung refinanziert sich oft innerhalb von 5-8 Jahren."
+  }
 ];
 
 export default function Wohnungssanierung() {
@@ -167,6 +197,29 @@ export default function Wohnungssanierung() {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-accent/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                <HelpCircle className="w-8 h-8 text-primary" />
+                Häufige Fragen zur Wohnungssanierung
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {wohnungFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left" data-testid={`faq-wohnung-${index}`}>
+                      {faq.frage}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.antwort}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

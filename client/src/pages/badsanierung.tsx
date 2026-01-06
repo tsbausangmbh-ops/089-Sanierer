@@ -5,6 +5,12 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead } from "@/components/seo-head";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Bath,
   CheckCircle,
   Phone,
@@ -14,7 +20,8 @@ import {
   Shield,
   Droplets,
   Sparkles,
-  Users
+  Users,
+  HelpCircle
 } from "lucide-react";
 
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
@@ -33,6 +40,29 @@ const prozessSteps = [
   { step: 2, title: "Planung", description: "3D-Visualisierung Ihres neuen Bades" },
   { step: 3, title: "Festpreis", description: "Verbindliches Angebot ohne Nachforderungen" },
   { step: 4, title: "Umsetzung", description: "Ihr neues Bad in 2-3 Wochen" }
+];
+
+const badFaqs = [
+  {
+    frage: "Wie lange dauert eine Badsanierung?",
+    antwort: "Ein Standard-Bad (6-8 m²) sanieren wir in 2-3 Wochen komplett. Bei größeren Bädern oder aufwendigen Umbauten kann es etwas länger dauern. Den genauen Zeitrahmen nennen wir Ihnen im Angebot."
+  },
+  {
+    frage: "Kann ich während der Badsanierung in der Wohnung bleiben?",
+    antwort: "Ja, in den meisten Fällen ist das möglich. Wir richten bei Bedarf eine provisorische Dusche ein. Nur bei sehr umfangreichen Arbeiten empfehlen wir, vorübergehend auszuziehen."
+  },
+  {
+    frage: "Was kostet eine bodengleiche Dusche?",
+    antwort: "Eine bodengleiche Dusche ist in unseren Standardpaketen ab 9.200€ bereits enthalten. Sie ist nicht nur optisch ansprechend, sondern auch barrierefrei und pflegeleicht."
+  },
+  {
+    frage: "Welche Fliesen empfehlen Sie für das Bad?",
+    antwort: "Wir empfehlen großformatige Fliesen (60x60 oder 60x120 cm) für ein modernes, großzügiges Raumgefühl. Bei der Auswahl beraten wir Sie gerne - wir arbeiten mit allen namhaften Herstellern."
+  },
+  {
+    frage: "Ist eine Fußbodenheizung im Bad möglich?",
+    antwort: "Ja, wir können eine elektrische Fußbodenheizung nachrüsten. Die Kosten liegen bei ca. 80-120€ pro m². Sie sorgt für warme Füße und hilft, das Bad schneller zu trocknen."
+  }
 ];
 
 export default function Badsanierung() {
@@ -168,6 +198,29 @@ export default function Badsanierung() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-accent/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                <HelpCircle className="w-8 h-8 text-primary" />
+                Häufige Fragen zur Badsanierung
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {badFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left" data-testid={`faq-bad-${index}`}>
+                      {faq.frage}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.antwort}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

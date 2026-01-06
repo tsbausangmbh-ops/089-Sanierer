@@ -31,6 +31,7 @@ const Badsanierung = lazy(() => import("@/pages/badsanierung"));
 const Wohnungssanierung = lazy(() => import("@/pages/wohnungssanierung"));
 const Haussanierung = lazy(() => import("@/pages/haussanierung"));
 const Kernsanierung = lazy(() => import("@/pages/kernsanierung"));
+const StadtteilPage = lazy(() => import("@/pages/stadtteil"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 declare global {
@@ -81,6 +82,16 @@ function Router() {
         <Route path="/wohnungssanierung" component={Wohnungssanierung} />
         <Route path="/haussanierung" component={Haussanierung} />
         <Route path="/kernsanierung" component={Kernsanierung} />
+        <Route path="/muenchen-schwabing" component={StadtteilPage} />
+        <Route path="/muenchen-bogenhausen" component={StadtteilPage} />
+        <Route path="/muenchen-maxvorstadt" component={StadtteilPage} />
+        <Route path="/muenchen-haidhausen" component={StadtteilPage} />
+        <Route path="/muenchen-sendling" component={StadtteilPage} />
+        <Route path="/muenchen-neuhausen" component={StadtteilPage} />
+        <Route path="/muenchen-pasing" component={StadtteilPage} />
+        <Route path="/muenchen-giesing" component={StadtteilPage} />
+        <Route path="/muenchen-lehel" component={StadtteilPage} />
+        <Route path="/muenchen-trudering" component={StadtteilPage} />
         <Route path="/danke" component={Confirmation} />
         <Route component={NotFound} />
       </Switch>

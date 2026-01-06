@@ -5,6 +5,12 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { SeoHead } from "@/components/seo-head";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Home as HomeIcon,
   CheckCircle,
   Phone,
@@ -16,7 +22,8 @@ import {
   Droplets,
   Flame,
   Layers,
-  Hammer
+  Hammer,
+  HelpCircle
 } from "lucide-react";
 
 const hausLeistungen = [
@@ -32,6 +39,29 @@ const haustypen = [
   { typ: "Reihenhaus", groesse: "100-140 m²", preis: "ab 120.000€", dauer: "10-12 Wochen" },
   { typ: "Doppelhaushälfte", groesse: "120-180 m²", preis: "ab 145.000€", dauer: "12-14 Wochen" },
   { typ: "Einfamilienhaus", groesse: "150-250 m²", preis: "ab 180.000€", dauer: "14-18 Wochen" }
+];
+
+const hausFaqs = [
+  {
+    frage: "Lohnt sich eine Sanierung oder besser Abriss und Neubau?",
+    antwort: "In München lohnt sich die Sanierung meist mehr: Grundstückspreise sind extrem hoch, Baurecht oft eingeschränkt. Eine Kernsanierung kostet ca. 1.200-2.000€/m², ein Neubau 3.000-4.000€/m². Wir beraten Sie ehrlich, was in Ihrem Fall sinnvoller ist."
+  },
+  {
+    frage: "Welche Fördermittel gibt es für die Haussanierung?",
+    antwort: "Die KfW fördert energetische Sanierungen mit günstigen Krediten und Tilgungszuschüssen bis 150.000€. BAFA bezuschusst Heizungstausch mit bis zu 70%. Wir helfen bei der Antragstellung und maximieren Ihre Förderung."
+  },
+  {
+    frage: "Können wir während der Sanierung im Haus wohnen?",
+    antwort: "Bei einer Komplett- oder Kernsanierung ist das nicht möglich. Bei Teilsanierungen (z.B. nur Dach oder nur Bad) kann oft ein Teil des Hauses bewohnt bleiben. Wir besprechen das individuell."
+  },
+  {
+    frage: "Wie gehen Sie mit Altlasten um (Asbest, Blei)?",
+    antwort: "Wir lassen vor Beginn eine Schadstoffuntersuchung durchführen. Asbest, Bleirohre oder andere Schadstoffe werden von zertifizierten Fachbetrieben fachgerecht entsorgt. Die Kosten sind im Festpreis enthalten, wenn wir sie vorher identifizieren."
+  },
+  {
+    frage: "Was passiert mit dem Garten während der Bauphase?",
+    antwort: "Wir schützen bestehende Bepflanzung so gut wie möglich. Für Materialanlieferung brauchen wir Zufahrt, planen aber gemeinsam mit Ihnen den schonendsten Weg. Nach Abschluss stellen wir beschädigte Rasenflächen wieder her."
+  }
 ];
 
 export default function Haussanierung() {
@@ -165,6 +195,29 @@ export default function Haussanierung() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-accent/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                <HelpCircle className="w-8 h-8 text-primary" />
+                Häufige Fragen zur Haussanierung
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {hausFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left" data-testid={`faq-haus-${index}`}>
+                      {faq.frage}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.antwort}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
