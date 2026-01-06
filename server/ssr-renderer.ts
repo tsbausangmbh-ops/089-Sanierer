@@ -4,38 +4,41 @@ import { getSeoMeta, type SeoMeta } from "../shared/seo-meta";
 
 let templateCache: string | null = null;
 
-function escapeHtml(text: string): string {
+function escapeForAttribute(text: string): string {
   return text
     .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
+    .replace(/"/g, "&quot;");
 }
 
-function getTemplate(isDev: boolean): string {
-  if (templateCache && !isDev) {
-    return templateCache;
-  }
-
+function loadTemplate(isDev: boolean): string {
   const templatePath = isDev
     ? path.resolve(process.cwd(), "client", "index.html")
     : path.resolve(process.cwd(), "dist", "public", "index.html");
 
-  templateCache = fs.readFileSync(templatePath, "utf-8");
+  return fs.readFileSync(templatePath, "utf-8");
+}
+
+function getTemplate(isDev: boolean): string {
+  if (isDev) {
+    return loadTemplate(true);
+  }
+  
+  if (!templateCache) {
+    templateCache = loadTemplate(false);
+  }
   return templateCache;
 }
 
 function replacePlaceholder(html: string, tag: string, value: string): string {
-  const regex = new RegExp(`<!--${tag}-->[^<]*<!--\\/${tag}-->`, "g");
-  return html.replace(regex, escapeHtml(value));
+  const regex = new RegExp(`<!--${tag}-->[^]*?<!--\\/${tag}-->`, "g");
+  return html.replace(regex, escapeForAttribute(value));
 }
 
 export function renderHtmlWithMeta(requestPath: string, isDev: boolean = false): string {
-  const template = getTemplate(isDev);
+  const baseTemplate = getTemplate(isDev);
   const meta: SeoMeta = getSeoMeta(requestPath);
 
-  let html = template;
+  let html = baseTemplate;
   html = replacePlaceholder(html, "SSR_TITLE", meta.title);
   html = replacePlaceholder(html, "SSR_META_TITLE", meta.title);
   html = replacePlaceholder(html, "SSR_DESCRIPTION", meta.description);
