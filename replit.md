@@ -126,6 +126,31 @@ Preferred communication style: Simple, everyday language (German).
 - `/datenschutz` - Privacy policy
 - `/kontakt` - Contact page
 
+### SEO & SSR Architecture
+
+**Server-Side Meta Tag Injection:**
+- `shared/seo-meta.ts` - Central registry for route-specific SEO metadata (title, description, keywords, canonical, OG tags)
+- `server/ssr-renderer.ts` - Template renderer that injects meta tags into index.html before serving
+- `client/index.html` - Contains placeholder markers (<!--SSR_TITLE-->, <!--SSR_DESCRIPTION-->, etc.) replaced at runtime
+
+**How SSR Works:**
+1. Server receives request for any route
+2. SSR renderer loads index.html template (cached in production)
+3. Route-specific metadata is fetched from seo-meta.ts
+4. Placeholder markers are replaced with actual values
+5. Complete HTML with correct meta tags is sent to browser/crawler
+
+**Crawler Support:**
+- `server/crawler-middleware.ts` - Serves full static HTML to search engine bots
+- Prerender.io integration for production (PRERENDER_TOKEN env var)
+- Internal linking via footer components for PageRank distribution
+
+**Files for adding new pages with SEO:**
+1. Add route metadata to `shared/seo-meta.ts`
+2. Add static HTML content to `server/crawler-middleware.ts` (for crawler fallback)
+3. Create React component in `client/src/pages/`
+4. Register route in `client/src/App.tsx`
+
 ### Build & Deployment
 
 **Build Process:**
