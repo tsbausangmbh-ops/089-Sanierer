@@ -386,6 +386,165 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Kostenlose Erstberatung - Wir melden uns innerhalb von 24 Stunden!</p>
       </section>
     `;
+  } else if (path === "/kosten") {
+    title = "Was kostet Sanierung München? Preise 2025 | KSHW";
+    description = "Sanierung München Kosten: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung.";
+    keywords = "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München";
+    mainContent = `
+      <section>
+        <h1>Was kostet eine Sanierung in München?</h1>
+        <p>Transparente Festpreise für Ihre Sanierung. Alle Preise netto zzgl. MwSt., Stand 01/2025.</p>
+        
+        <h2>Preisübersicht Sanierung München</h2>
+        <ul>
+          <li><strong>Komplettsanierung:</strong> ab 920 €/m²</li>
+          <li><strong>Badsanierung:</strong> ab 9.200 €</li>
+          <li><strong>Wohnungssanierung:</strong> ab 800 €/m²</li>
+          <li><strong>Kernsanierung:</strong> ab 1.200 €/m²</li>
+        </ul>
+        
+        <h2>Unsere Vorteile</h2>
+        <ul>
+          <li>Festpreisgarantie - keine versteckten Kosten</li>
+          <li>5 Jahre Gewährleistung</li>
+          <li>Kostenlose Beratung vor Ort</li>
+          <li>268+ zufriedene Kunden in München</li>
+        </ul>
+        
+        <h2>Jetzt Angebot anfordern</h2>
+        <p><a href="/anfrage">Kostenlose Beratung</a> | Telefon: 0152 1227 4043</p>
+      </section>
+    `;
+  } else if (path === "/badsanierung") {
+    title = "Badsanierung München ab 9.200€ | Festpreis | KSHW";
+    description = "Badsanierung München: Komplett-Badsanierung ab 9.200€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.";
+    keywords = "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München";
+    mainContent = `
+      <section>
+        <h1>Badsanierung München - Komplett ab 9.200€</h1>
+        <p>Ihr Bad in neuen Händen. Alles aus einer Hand mit Festpreisgarantie.</p>
+        
+        <h2>Unsere Badsanierung beinhaltet</h2>
+        <ul>
+          <li>Komplette Fliesenarbeiten</li>
+          <li>Sanitärinstallation</li>
+          <li>Elektroinstallation</li>
+          <li>Malerarbeiten</li>
+        </ul>
+        
+        <h2>Preise Badsanierung München</h2>
+        <ul>
+          <li>Gäste-WC: 8.000 - 12.000 €</li>
+          <li>Standard-Bad (6-8 m²): 16.000 - 22.000 €</li>
+          <li>Komfort-Bad: 22.000 - 32.000 €</li>
+        </ul>
+        
+        <p><a href="/anfrage?service=badsanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/wohnungssanierung") {
+    title = "Wohnungssanierung München ab 800€/m² | KSHW";
+    description = "Wohnungssanierung München zum Festpreis ab 800€/m². Komplettsanierung aus einer Hand. 268+ zufriedene Kunden, 5 Jahre Gewährleistung.";
+    keywords = "Wohnungssanierung München, Wohnung sanieren München, Wohnung renovieren München, Altbauwohnung sanieren München";
+    mainContent = `
+      <section>
+        <h1>Wohnungssanierung München - ab 800€/m²</h1>
+        <p>Komplette Wohnungssanierung aus einer Hand mit Festpreisgarantie.</p>
+        
+        <h2>Leistungen</h2>
+        <ul>
+          <li>Badsanierung</li>
+          <li>Küchensanierung</li>
+          <li>Bodensanierung</li>
+          <li>Elektrosanierung</li>
+          <li>Malerarbeiten</li>
+        </ul>
+        
+        <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/haussanierung") {
+    title = "Haussanierung München | Komplett ab 920€/m² | KSHW";
+    description = "Haussanierung München: Komplette Haussanierung ab 920€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.";
+    keywords = "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München";
+    mainContent = `
+      <section>
+        <h1>Haussanierung München - ab 920€/m²</h1>
+        <p>Ihr Haus in neuen Händen. Komplette Sanierung aus einer Hand.</p>
+        
+        <h2>Wir sanieren</h2>
+        <ul>
+          <li>Einfamilienhäuser</li>
+          <li>Mehrfamilienhäuser</li>
+          <li>Doppelhaushälften</li>
+          <li>Reihenhäuser</li>
+        </ul>
+        
+        <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/kernsanierung") {
+    title = "Kernsanierung München ab 1.200€/m² | KSHW";
+    description = "Kernsanierung München: Professionelle Kernsanierung ab 1.200€/m². Bis auf die Grundsubstanz und komplett neu aufbauen. Festpreisgarantie.";
+    keywords = "Kernsanierung München, Kernsanierung Kosten München, Altbau Kernsanierung München, Haus entkernen München";
+    mainContent = `
+      <section>
+        <h1>Kernsanierung München - ab 1.200€/m²</h1>
+        <p>Zurück zum Kern, neu aufgebaut. Professionelle Kernsanierung in München.</p>
+        
+        <h2>Kernsanierung beinhaltet</h2>
+        <ul>
+          <li>Rückbau bis zur Grundsubstanz</li>
+          <li>Neue Elektroinstallation</li>
+          <li>Neue Sanitärinstallation</li>
+          <li>Neue Heizung</li>
+          <li>Kompletter Innenausbau</li>
+        </ul>
+        
+        <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path.startsWith("/muenchen-")) {
+    const district = path.replace("/muenchen-", "").replace("/", "");
+    const districtNames: Record<string, string> = {
+      "schwabing": "Schwabing",
+      "bogenhausen": "Bogenhausen",
+      "maxvorstadt": "Maxvorstadt",
+      "haidhausen": "Haidhausen",
+      "sendling": "Sendling",
+      "neuhausen": "Neuhausen-Nymphenburg",
+      "pasing": "Pasing",
+      "giesing": "Giesing",
+      "lehel": "Lehel",
+      "trudering": "Trudering-Riem"
+    };
+    const districtName = districtNames[district] || district;
+    title = `Sanierung ${districtName} München | Festpreis | KSHW`;
+    description = `Sanierung in ${districtName}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. Lokaler Anbieter mit 5 Jahren Gewährleistung.`;
+    keywords = `Sanierung ${districtName} München, ${districtName} Sanierung, Badsanierung ${districtName}, Renovierung ${districtName}`;
+    mainContent = `
+      <section>
+        <h1>Sanierung in ${districtName}</h1>
+        <p>Ihr lokaler Partner für Sanierungen in München ${districtName}.</p>
+        
+        <h2>Unsere Leistungen in ${districtName}</h2>
+        <ul>
+          <li>Badsanierung ab 9.200€</li>
+          <li>Komplettsanierung ab 920€/m²</li>
+          <li>Wohnungssanierung ab 800€/m²</li>
+          <li>Kernsanierung ab 1.200€/m²</li>
+        </ul>
+        
+        <h2>Vorteile</h2>
+        <ul>
+          <li>Festpreisgarantie</li>
+          <li>5 Jahre Gewährleistung</li>
+          <li>Lokale Expertise in ${districtName}</li>
+        </ul>
+        
+        <p><a href="/anfrage">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
   } else {
     return "";
   }

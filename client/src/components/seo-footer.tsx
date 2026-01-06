@@ -14,10 +14,30 @@ const allServices = [
 ];
 
 const informationLinks = [
+  { href: "/kosten", title: "Sanierung Kosten", description: "Was kostet Sanierung München" },
   { href: "/faq-preise", title: "FAQ & Preise", description: "Sanierungskosten München" },
   { href: "/ratgeber", title: "Ratgeber", description: "Tipps zur Sanierung" },
-  { href: "/gewerke", title: "Handwerker-Vermittlung", description: "Einzelgewerke München" },
   { href: "/kontakt", title: "Kontakt", description: "Beratung München" },
+];
+
+const serviceLandingPages = [
+  { href: "/badsanierung", title: "Badsanierung" },
+  { href: "/wohnungssanierung", title: "Wohnungssanierung" },
+  { href: "/haussanierung", title: "Haussanierung" },
+  { href: "/kernsanierung", title: "Kernsanierung" },
+];
+
+const districtPages = [
+  { href: "/muenchen-schwabing", title: "Schwabing" },
+  { href: "/muenchen-bogenhausen", title: "Bogenhausen" },
+  { href: "/muenchen-maxvorstadt", title: "Maxvorstadt" },
+  { href: "/muenchen-haidhausen", title: "Haidhausen" },
+  { href: "/muenchen-sendling", title: "Sendling" },
+  { href: "/muenchen-neuhausen", title: "Neuhausen" },
+  { href: "/muenchen-pasing", title: "Pasing" },
+  { href: "/muenchen-giesing", title: "Giesing" },
+  { href: "/muenchen-lehel", title: "Lehel" },
+  { href: "/muenchen-trudering", title: "Trudering" },
 ];
 
 const legalLinks = [
@@ -184,6 +204,38 @@ export function SeoFooter() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <nav aria-label="Sanierungsarten">
+              <h4 className="font-bold mb-2 text-sm">Sanierungsarten</h4>
+              <div className="flex flex-wrap gap-2">
+                {serviceLandingPages.map((page) => (
+                  <Link 
+                    key={page.href}
+                    href={page.href}
+                    className="text-xs text-white/70 hover:text-white px-2 py-1 bg-white/5 rounded"
+                    data-testid={`link-footer-landing-${page.href.slice(1)}`}
+                  >
+                    {page.title}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+            <nav aria-label="Stadtteile">
+              <h4 className="font-bold mb-2 text-sm">Sanierung nach Stadtteil</h4>
+              <div className="flex flex-wrap gap-2">
+                {districtPages.map((page) => (
+                  <Link 
+                    key={page.href}
+                    href={page.href}
+                    className="text-xs text-white/70 hover:text-white px-2 py-1 bg-white/5 rounded"
+                    data-testid={`link-footer-district-${page.href.slice(10)}`}
+                  >
+                    {page.title}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+          </div>
           <h4 className="font-bold mb-2 text-sm">Sanierung in München – Wir sind vor Ort in allen Stadtteilen</h4>
           <p className="text-xs text-white/60 mb-2">
             <strong>München:</strong> {muenchnerStadtteile.join(" · ")}
