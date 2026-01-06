@@ -96,10 +96,35 @@ Preferred communication style: Simple, everyday language (German).
 
 ### Routes
 
+**Main Pages:**
 - `/` - Landing page with hero section and service cards
 - `/anfrage` - Multi-step funnel form
-- `/bestaetigung` - Confirmation page after form submission
+- `/danke` - Confirmation page after form submission
 - `/admin` - Admin dashboard for viewing leads
+
+**SEO Landing Pages (Intent-Based):**
+- `/kosten` - Price-focused landing page (targets "Sanierung Kosten")
+- `/badsanierung` - Bathroom renovation landing page
+- `/wohnungssanierung` - Apartment renovation landing page
+- `/haussanierung` - House renovation landing page
+- `/kernsanierung` - Core renovation landing page
+
+**District Landing Pages (Local SEO):**
+- `/muenchen-schwabing` - Schwabing district page
+- `/muenchen-bogenhausen` - Bogenhausen district page
+- `/muenchen-maxvorstadt` - Maxvorstadt district page
+- `/muenchen-haidhausen` - Haidhausen district page
+- `/muenchen-sendling` - Sendling district page
+- `/muenchen-neuhausen` - Neuhausen-Nymphenburg district page
+- `/muenchen-pasing` - Pasing district page
+- `/muenchen-giesing` - Giesing district page
+- `/muenchen-lehel` - Lehel district page
+- `/muenchen-trudering` - Trudering-Riem district page
+
+**Legal/Info Pages:**
+- `/impressum` - Legal notice
+- `/datenschutz` - Privacy policy
+- `/kontakt` - Contact page
 
 ### Build & Deployment
 
