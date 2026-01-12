@@ -40,120 +40,122 @@ interface ServiceOption {
   foerderungProzent?: number;
 }
 
+// Münchner Preise 2026 - Netto zzgl. 19% MwSt.
 const serviceOptions: ServiceOption[] = [
   { 
     id: "komplett", 
     label: "Komplettsanierung", 
     icon: HomeIcon,
-    basePrice: { wohnung: 12000, haus: 55000, foerderung: 65000 },
-    perSqm: { wohnung: 850, haus: 2800, foerderung: 3200 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 1200, haus: 2800, foerderung: 3200 },
     foerderungProzent: 20
   },
   { 
     id: "bad", 
     label: "Badsanierung", 
     icon: Bath,
-    basePrice: { wohnung: 16000, haus: 28000, foerderung: 32000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 2200, haus: 2800, foerderung: 3000 },
     foerderungProzent: 15
   },
   { 
     id: "kueche", 
     label: "Küchensanierung", 
     icon: ChefHat,
-    basePrice: { wohnung: 12000, haus: 22000, foerderung: 25000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 1800, haus: 2400, foerderung: 2600 },
     foerderungProzent: 10
   },
   { 
     id: "elektro", 
     label: "Elektrosanierung", 
     icon: Zap,
-    basePrice: { wohnung: 2500, haus: 12000, foerderung: 14000 },
-    perSqm: { wohnung: 65, haus: 180, foerderung: 200 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 85, haus: 120, foerderung: 140 },
     foerderungProzent: 15
   },
   { 
     id: "sanitaer", 
     label: "Sanitärsanierung", 
     icon: Droplets,
-    basePrice: { wohnung: 3500, haus: 15000, foerderung: 18000 },
-    perSqm: { wohnung: 55, haus: 150, foerderung: 180 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 75, haus: 110, foerderung: 130 },
     foerderungProzent: 15
   },
   { 
     id: "boden", 
     label: "Bodensanierung", 
     icon: Layers,
-    basePrice: { wohnung: 1800, haus: 8000, foerderung: 10000 },
-    perSqm: { wohnung: 75, haus: 160, foerderung: 180 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 95, haus: 140, foerderung: 160 },
     foerderungProzent: 10
   },
   { 
     id: "heizung", 
     label: "Heizungssanierung", 
     icon: Flame,
-    basePrice: { wohnung: 4500, haus: 25000, foerderung: 35000 },
-    perSqm: { wohnung: 35, haus: 120, foerderung: 150 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 65, haus: 95, foerderung: 110 },
     foerderungProzent: 30
   },
   { 
     id: "maler", 
     label: "Malerarbeiten", 
     icon: Paintbrush,
-    basePrice: { wohnung: 1200, haus: 5000, foerderung: 6000 },
-    perSqm: { wohnung: 22, haus: 48, foerderung: 55 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 28, haus: 38, foerderung: 45 },
     foerderungProzent: 5
   }
 ];
 
+// Münchner Preise 2026 für Fördermaßnahmen - Netto zzgl. 19% MwSt.
 const foerderungServices: ServiceOption[] = [
   { 
     id: "waermepumpe", 
     label: "Wärmepumpe", 
     icon: ThermometerSun,
-    basePrice: { wohnung: 22000, haus: 45000, foerderung: 45000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 280, haus: 320, foerderung: 320 },
     foerderungProzent: 35
   },
   { 
     id: "daemmung", 
     label: "Fassadendämmung", 
     icon: HomeIcon,
-    basePrice: { wohnung: 8000, haus: 15000, foerderung: 15000 },
-    perSqm: { wohnung: 160, haus: 200, foerderung: 200 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 180, haus: 220, foerderung: 220 },
     foerderungProzent: 20
   },
   { 
     id: "fenster", 
     label: "Fensteraustausch", 
     icon: Wind,
-    basePrice: { wohnung: 12000, haus: 45000, foerderung: 45000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 180, haus: 280, foerderung: 280 },
     foerderungProzent: 20
   },
   { 
     id: "solar", 
     label: "Solarthermie", 
     icon: Sun,
-    basePrice: { wohnung: 12000, haus: 25000, foerderung: 25000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 120, haus: 160, foerderung: 160 },
     foerderungProzent: 25
   },
   { 
     id: "photovoltaik", 
     label: "Photovoltaik", 
     icon: Zap,
-    basePrice: { wohnung: 15000, haus: 35000, foerderung: 35000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 150, haus: 220, foerderung: 220 },
     foerderungProzent: 0
   },
   { 
     id: "heizung_foerder", 
     label: "Heizungstausch (förderfähig)", 
     icon: Flame,
-    basePrice: { wohnung: 15000, haus: 38000, foerderung: 38000 },
-    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 150, haus: 250, foerderung: 250 },
     foerderungProzent: 30
   }
 ];
@@ -490,6 +492,9 @@ export default function RechnerPage() {
                         </div>
                         <p className="text-muted-foreground">
                           Geschätzte Kosten inkl. Material und Arbeit
+                        </p>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          Alle Preise netto zzgl. 19% MwSt. | Münchner Marktpreise 2026
                         </p>
                         
                         {propertyType === "foerderung" && price.foerderung > 0 && (
