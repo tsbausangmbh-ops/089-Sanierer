@@ -36,11 +36,11 @@ export default function TerminPage() {
           <div className="mt-8 text-center text-sm text-muted-foreground">
             <p className="mb-2">Alternativ erreichen Sie uns auch telefonisch:</p>
             <a 
-              href="tel:+4915212274043"
+              href="tel:+498944438872"
               className="inline-flex items-center gap-2 text-primary font-medium"
             >
               <Phone className="w-4 h-4" />
-              0152 122 740 43
+              089 444438872
             </a>
             <p className="mt-1">Mo-Fr 08:00-16:30 Uhr</p>
           </div>

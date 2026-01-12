@@ -89,9 +89,9 @@ export function SeoFooter() {
             </p>
             <div className="space-y-2 text-sm text-white/70" itemScope itemType="https://schema.org/LocalBusiness">
               <meta itemProp="name" content="089-Sanierer - Komplettsanierungen Haus & Wohnung" />
-              <a href="tel:+4915212274043" className="flex items-center gap-2 hover:text-white" itemProp="telephone" data-testid="link-footer-phone">
+              <a href="tel:+498944438872" className="flex items-center gap-2 hover:text-white" itemProp="telephone" data-testid="link-footer-phone">
                 <Phone className="w-4 h-4" aria-hidden="true" />
-                0152 122 740 43
+                089 444438872
               </a>
               <a href="mailto:info@089-sanierer.de" className="flex items-center gap-2 hover:text-white" itemProp="email" data-testid="link-footer-email">
                 <Mail className="w-4 h-4" aria-hidden="true" />

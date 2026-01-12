@@ -121,7 +121,7 @@ export default function Kosten() {
                     Kostenloses Angebot
                   </Button>
                 </Link>
-                <a href="tel:+4915212274043">
+                <a href="tel:+498944438872">
                   <Button variant="outline" size="lg" data-testid="button-phone-hero">
                     <Phone className="w-5 h-5 mr-2" />
                     0152 1227 4043

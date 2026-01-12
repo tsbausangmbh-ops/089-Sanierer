@@ -126,7 +126,7 @@ export function EmbeddedServiceAdvisor({
         ...prev,
         {
           role: "assistant",
-          content: "Entschuldigung, ich konnte Ihre Anfrage nicht verarbeiten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch unter 0152 122 740 43.",
+          content: "Entschuldigung, ich konnte Ihre Anfrage nicht verarbeiten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch unter 089 444438872.",
         },
       ]);
     } finally {

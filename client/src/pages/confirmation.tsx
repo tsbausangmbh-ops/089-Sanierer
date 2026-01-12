@@ -149,11 +149,11 @@ export default function Confirmation() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <a 
-                href="tel:+4915212274043" 
+                href="tel:+498944438872" 
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-2 rounded-md font-medium"
               >
                 <Phone className="w-4 h-4" />
-                0152 122 740 43
+                089 444438872
               </a>
               <a 
                 href="mailto:info@089-sanierer.de" 

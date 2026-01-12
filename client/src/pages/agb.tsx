@@ -302,7 +302,7 @@ export default function AGB() {
                 Mustafa Sakar<br />
                 Hardenbergstr. 4<br />
                 80992 München<br /><br />
-                Telefon: 0152 122 740 43
+                Telefon: 089 444438872
               </p>
             </section>
 

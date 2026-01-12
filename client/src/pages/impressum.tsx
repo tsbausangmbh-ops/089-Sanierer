@@ -11,7 +11,7 @@ export default function Impressum() {
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
         title="Impressum | 089-sanierer.de | Sanierung München"
-        description="Impressum und Kontaktdaten. Verantwortlich: Mustafa Sakar, Hardenbergstr. 4, 80992 München. Telefon: 0152 122 740 43."
+        description="Impressum und Kontaktdaten. Verantwortlich: Mustafa Sakar, Hardenbergstr. 4, 80992 München. Telefon: 089 444438872."
         keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum, 089-Sanierer Adresse, Sanierung München Anbieter, Renovierung München Firma, Handwerker München Verantwortlicher, 089 Sanierer Telefonnummer, Komplettsanierung München Unternehmen, Badsanierung München Ansprechpartner, Sanierung München USt-IdNr, 089-Sanierer Öffnungszeiten, Handwerker München seriös, Renovierung München rechtliche Angaben, Sanierung München Betreiber"
         canonicalPath="/impressum"
       />

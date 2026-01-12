@@ -215,7 +215,7 @@ export default function Cookies() {
                   <p><strong>089-Sanierer</strong></p>
                   <p>Komplettsanierungen Haus & Wohnung</p>
                   <p>E-Mail: info@089-sanierer.de</p>
-                  <p>Telefon: 0152 122 740 43</p>
+                  <p>Telefon: 089 444438872</p>
                 </div>
               </CardContent>
             </Card>

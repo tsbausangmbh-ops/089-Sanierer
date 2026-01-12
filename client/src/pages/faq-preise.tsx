@@ -588,7 +588,7 @@ export default function FaqPreise() {
                     Jetzt Problem lösen lassen
                   </Button>
                 </Link>
-                <a href="tel:+4915212274043">
+                <a href="tel:+498944438872">
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" data-testid="button-call-faq">
                     <Phone className="w-4 h-4 mr-2" />
                     Sofort anrufen

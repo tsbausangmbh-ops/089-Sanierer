@@ -63,7 +63,7 @@ export function SiteHeader() {
             >
               {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
             </Button>
-            <a href="tel:+4915212274043" aria-label="Anrufen: 0152 122 740 43">
+            <a href="tel:+498944438872" aria-label="Anrufen: 089 444438872">
               <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
                 <Phone className="w-4 h-4" aria-hidden="true" />
               </Button>
@@ -108,10 +108,10 @@ export function SiteHeader() {
                 FAQ & Preise
               </Button>
             </Link>
-            <a href="tel:+4915212274043" className="ml-3" aria-label="Anrufen: 0152 122 740 43">
+            <a href="tel:+498944438872" className="ml-3" aria-label="Anrufen: 089 444438872">
               <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
                 <Phone className="w-4 h-4 mr-1" aria-hidden="true" />
-                0152 122 740 43
+                089 444438872
               </Button>
             </a>
           </nav>

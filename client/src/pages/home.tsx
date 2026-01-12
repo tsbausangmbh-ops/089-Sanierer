@@ -807,7 +807,7 @@ export default function Home() {
                   Jetzt Problem lösen lassen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
-                <Link href="tel:+4915212274043">
+                <Link href="tel:+498944438872">
                   <Button 
                     size="lg" 
                     variant="outline" 
@@ -982,10 +982,10 @@ export default function Home() {
                   Ja, ich will mein Problem lösen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
-                <Link href="tel:+4915212274043">
+                <Link href="tel:+498944438872">
                   <Button size="lg" variant="outline" data-testid="button-faq-phone">
                     <Phone className="w-4 h-4 mr-2" />
-                    0152 122 740 43
+                    089 444438872
                   </Button>
                 </Link>
               </div>
