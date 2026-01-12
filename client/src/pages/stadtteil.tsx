@@ -175,30 +175,37 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden bg-primary">
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
           
-          <div className="relative z-10 max-w-7xl mx-auto px-24 py-16 lg:py-24 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <MapPin className="w-4 h-4 text-orange-400" />
-                <span>München {data.name}</span>
+                <MapPin className="w-4 h-4 text-green-400" />
+                <span>Sanierung in München {data.name}</span>
               </div>
               
               <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Sanierung in {data.name}
+                Sanierung {data.name}. <br />
+                <span className="text-orange-400">Ihr lokaler Partner.</span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-white/90 mb-6 max-w-lg">
-                {data.beschreibung}
+              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
+                <span>{data.beschreibung.split('.')[0]}.</span>
+                <span>Alle Gewerke aus einer Hand.</span>
+                <strong className="text-white">Festpreisgarantie.</strong>
+              </div>
+
+              <p className="text-white/90 text-sm mb-3 font-medium">
+                Ihr Sanierungspartner direkt vor Ort in {data.name}.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
                 <Link href="/anfrage">
                   <Button 
                     size="lg" 
-                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg"
+                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                     data-testid={`button-anfrage-${data.slug}`}
                   >
-                    <HomeIcon className="w-5 h-5 mr-2" />
                     Kostenloses Angebot
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
                 <a href="tel:+498944438872">
@@ -217,11 +224,15 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
               <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Lokaler Anbieter</span>
+                  <span>Festpreisgarantie</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
+                  <span>5 Jahre Garantie</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>24h Antwort</span>
                 </div>
               </div>
             </div>

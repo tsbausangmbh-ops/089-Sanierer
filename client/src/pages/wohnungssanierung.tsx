@@ -85,36 +85,37 @@ export default function Wohnungssanierung() {
         <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden bg-primary">
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
           
-          <div className="relative z-10 max-w-7xl mx-auto px-24 py-16 lg:py-24 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>Festpreisgarantie</span>
+                <Building className="w-4 h-4 text-green-400" />
+                <span>Wohnungssanierung zum Festpreis</span>
               </div>
               
               <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Wohnungssanierung München
+                Wohnungssanierung München. <br />
+                <span className="text-orange-400">ab 800€/m² Festpreis.</span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg">
-                Komplettsanierung Ihrer Wohnung zum Festpreis. 
-                Alle Gewerke koordiniert aus einer Hand.
-              </p>
-              
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold text-orange-400">ab 800€/m²</span>
-                <span className="text-white/80">Festpreis</span>
+              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
+                <span>Alle Gewerke aus einer Hand.</span>
+                <span>Koordiniert und stressfrei.</span>
+                <strong className="text-white">5 Jahre Gewährleistung.</strong>
               </div>
+
+              <p className="text-white/90 text-sm mb-3 font-medium">
+                Komplettsanierung Ihrer Wohnung - wir kümmern uns um alles.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
                 <Link href="/anfrage?service=komplettsanierung">
                   <Button 
                     size="lg" 
-                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg"
+                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                     data-testid="button-anfrage-wohnung"
                   >
-                    <Building className="w-5 h-5 mr-2" />
                     Jetzt Angebot anfordern
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
                 <a href="tel:+498944438872">
@@ -133,11 +134,15 @@ export default function Wohnungssanierung() {
               <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Alle Gewerke aus einer Hand</span>
+                  <span>Festpreisgarantie</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>5 Jahre Garantie</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>24h Antwort</span>
                 </div>
               </div>
             </div>
