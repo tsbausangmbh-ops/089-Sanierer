@@ -53,16 +53,16 @@ const serviceOptions: ServiceOption[] = [
     id: "bad", 
     label: "Badsanierung", 
     icon: Bath,
-    basePrice: { wohnung: 8000, haus: 18000, foerderung: 20000 },
-    perSqm: { wohnung: 1800, haus: 2800, foerderung: 3000 },
+    basePrice: { wohnung: 16000, haus: 28000, foerderung: 32000 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 15
   },
   { 
     id: "kueche", 
     label: "Küchensanierung", 
     icon: ChefHat,
-    basePrice: { wohnung: 5000, haus: 12000, foerderung: 14000 },
-    perSqm: { wohnung: 650, haus: 1200, foerderung: 1400 },
+    basePrice: { wohnung: 12000, haus: 22000, foerderung: 25000 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 10
   },
   { 
