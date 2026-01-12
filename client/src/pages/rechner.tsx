@@ -276,7 +276,7 @@ export default function RechnerPage() {
       />
       <SiteHeader />
 
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         <section className="py-6 lg:py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto text-center mb-8">
