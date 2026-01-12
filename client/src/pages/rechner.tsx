@@ -41,6 +41,8 @@ interface ServiceOption {
 }
 
 // Münchner Preise 2026 - Netto zzgl. 19% MwSt.
+// Bad/Küche = Festpreise (Raumgröße, nicht Wohnfläche)
+// Andere = qm-Preise (Gesamtfläche)
 const serviceOptions: ServiceOption[] = [
   { 
     id: "komplett", 
@@ -54,16 +56,16 @@ const serviceOptions: ServiceOption[] = [
     id: "bad", 
     label: "Badsanierung", 
     icon: Bath,
-    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
-    perSqm: { wohnung: 2200, haus: 2800, foerderung: 3000 },
+    basePrice: { wohnung: 18000, haus: 28000, foerderung: 32000 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 15
   },
   { 
     id: "kueche", 
     label: "Küchensanierung", 
     icon: ChefHat,
-    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
-    perSqm: { wohnung: 1800, haus: 2400, foerderung: 2600 },
+    basePrice: { wohnung: 15000, haus: 25000, foerderung: 28000 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 10
   },
   { 
@@ -94,8 +96,8 @@ const serviceOptions: ServiceOption[] = [
     id: "heizung", 
     label: "Heizungssanierung", 
     icon: Flame,
-    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
-    perSqm: { wohnung: 65, haus: 95, foerderung: 110 },
+    basePrice: { wohnung: 12000, haus: 28000, foerderung: 35000 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 30
   },
   { 
@@ -221,6 +223,7 @@ export default function RechnerPage() {
   const calculatePrice = () => {
     if (!propertyType || customSqm <= 0 || selectedServices.length === 0) return { min: 0, max: 0, foerderung: 0 };
     
+    let totalBase = 0;
     let totalPerSqm = 0;
     let totalFoerderung = 0;
     
@@ -229,7 +232,8 @@ export default function RechnerPage() {
     selectedServices.forEach(serviceId => {
       const service = services.find(s => s.id === serviceId);
       if (service) {
-        const serviceTotal = service.perSqm[propertyType] * customSqm;
+        const serviceTotal = service.basePrice[propertyType] + (service.perSqm[propertyType] * customSqm);
+        totalBase += service.basePrice[propertyType];
         totalPerSqm += service.perSqm[propertyType];
         if (propertyType === "foerderung" && service.foerderungProzent) {
           totalFoerderung += Math.round(serviceTotal * (service.foerderungProzent / 100));
@@ -237,7 +241,7 @@ export default function RechnerPage() {
       }
     });
     
-    const total = totalPerSqm * customSqm;
+    const total = totalBase + (totalPerSqm * customSqm);
     
     return {
       min: Math.round(total * 0.85 / 1000) * 1000,
