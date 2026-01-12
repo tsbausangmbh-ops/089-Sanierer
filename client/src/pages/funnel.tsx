@@ -263,7 +263,7 @@ const serviceSeoContent: Record<string, {
       "Flexibilität: Sanierung bei bewohnter Immobilie möglich – Staubschutz, Lärmschutz, Reinigung inklusive"
     ],
     geoText: "089-Sanierer – Ihr Sanierungspartner vor Ort. Wir sanieren in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Au, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Obermenzing, Allach, Moosach, Milbertshofen, Freimann, Trudering, Riem, Berg am Laim, Ramersdorf, Perlach, Neuperlach, Solln, Obersendling, Thalkirchen, Fürstenried, Forstenried, Großhadern und Hadern. Ebenso im Münchner Umland: Landkreis München, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald, Pullach, Gräfelfing und Planegg.",
-    ctaText: "Kostenloses Angebot in 24h",
+    ctaText: "Jetzt Sanierungsproblem lösen",
     faq: [
       { question: "Was kostet eine Komplettsanierung in München pro m²?", answer: "Eine Komplettsanierung in München kostet ca. 1.000-2.300€/m² (netto zzgl. MwSt., Stand 12/2025), abhängig von Zustand, Ausstattungswunsch und Umfang der Arbeiten." },
       { question: "Wie lange dauert eine Komplettsanierung?", answer: "Eine Komplettsanierung einer 80m² Wohnung dauert ca. 6-8 Wochen, ein Einfamilienhaus 10-16 Wochen – abhängig vom Sanierungsumfang." },
@@ -297,7 +297,7 @@ const serviceSeoContent: Record<string, {
       "Sauber: Staubschutz, tägliche Reinigung, Nutzung von Ersatz-WC organisiert"
     ],
     geoText: "Badsanierung in München und Umgebung – Ihr lokaler Badexperte. Wir sanieren Badezimmer in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Trudering, Riem, Berg am Laim, Perlach, Neuperlach, Solln, Großhadern und allen weiteren Stadtteilen. Auch im Münchner Umland: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald und Pullach.",
-    ctaText: "Traumbad planen lassen",
+    ctaText: "Jetzt Badproblem lösen",
     faq: [
       { question: "Was kostet eine komplette Badsanierung in München?", answer: "Eine Badsanierung in München kostet (netto zzgl. MwSt., Stand 12/2025): Gäste-WC 8.000-12.000€, Standard-Bad 16.000-22.000€, Komfort-Bad 22.000-32.000€, Luxus-Bad 35.000-50.000€. Barrierefreier Umbau: +3.000-5.000€." },
       { question: "Wie lange dauert eine Badsanierung?", answer: "Eine komplette Badsanierung dauert 10-15 Werktage. Ein Gäste-WC ist in 5-7 Tagen fertig. Während der Bauzeit organisieren wir Ersatz-WC-Nutzung." },
@@ -331,7 +331,7 @@ const serviceSeoContent: Record<string, {
       "Garantie: 5 Jahre Gewährleistung auf alle Installations- und Handwerksarbeiten"
     ],
     geoText: "Küchensanierung in München und Umgebung – Ihr Partner für den Küchenumbau. Wir arbeiten in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen weiteren. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
-    ctaText: "Küchenumbau planen",
+    ctaText: "Jetzt Küchenproblem lösen",
     faq: [
       { question: "Was kostet ein kompletter Küchenumbau in München?", answer: "Die Handwerkerarbeiten für einen Küchenumbau (Elektro, Wasser, Fliesen, Montage) kosten in München 3.500-8.000€ – abhängig von Umfang und Anpassungen. Die Küchenmöbel kommen separat dazu." },
       { question: "Wie lange dauert eine Küchenrenovierung?", answer: "Ein Küchenumbau mit neuen Anschlüssen dauert 5-10 Werktage. Die reine Küchenmontage ohne Umbauarbeiten ist in 1-2 Tagen erledigt." },
@@ -365,7 +365,7 @@ const serviceSeoContent: Record<string, {
       "Garantie: 5 Jahre Gewährleistung auf Verlegung und Material"
     ],
     geoText: "Bodensanierung in München und Umgebung – Ihr Bodenleger-Fachbetrieb. Wir verlegen neue Böden in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
-    ctaText: "Bodenangebot anfordern",
+    ctaText: "Jetzt Bodenproblem lösen",
     faq: [
       { question: "Was kostet ein neuer Boden pro m² in München?", answer: "Bodenpreise in München: Vinyl ab 35€/m², Laminat ab 40€/m², Parkett ab 45€/m², Fliesen ab 55€/m² – jeweils inkl. Verlegung, Trittschalldämmung und Sockelleisten." },
       { question: "Wie lange dauert eine Bodenrenovierung?", answer: "Eine 50m² Wohnung ist in 2-3 Tagen fertig, ein 100m² Haus in 4-5 Tagen. Parkett schleifen dauert 1-2 Tage pro Raum." },
@@ -399,7 +399,7 @@ const serviceSeoContent: Record<string, {
       "Garantie: 5 Jahre Gewährleistung auf alle Elektroarbeiten"
     ],
     geoText: "Elektrosanierung in München und Umgebung – Ihr Elektrofachbetrieb im Partnernetzwerk. Wir modernisieren Elektrik in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
-    ctaText: "Elektrik-Check anfordern",
+    ctaText: "Jetzt Elektroproblem lösen",
     faq: [
       { question: "Was kostet eine komplette Elektrosanierung in München?", answer: "Eine Elektrosanierung kostet in München: 2-Zimmer-Wohnung 3.500-5.500€, 4-Zimmer-Wohnung 5.500-8.000€, Einfamilienhaus 8.000-15.000€ – abhängig von Zustand und Umfang." },
       { question: "Wie erkenne ich, ob meine Elektrik veraltet ist?", answer: "Warnsignale: Schmelzsicherungen statt Automaten, fehlender FI-Schalter, zu wenige Steckdosen, flackerndes Licht, Sicherungen fliegen oft raus. Wir machen einen kostenlosen E-Check." },
@@ -433,7 +433,7 @@ const serviceSeoContent: Record<string, {
       "Garantie: 5 Jahre Gewährleistung plus Herstellergarantie bis 10 Jahre"
     ],
     geoText: "Heizungssanierung in München und Umgebung – Ihr zertifizierter Heizungsfachbetrieb. Wir installieren neue Heizungen in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
-    ctaText: "Förderung & Angebot sichern",
+    ctaText: "Jetzt Heizkosten senken",
     faq: [
       { question: "Was kostet eine neue Heizung in München?", answer: "Heizungskosten München (netto zzgl. MwSt., Stand 12/2025): Gas-Brennwert 12.000-20.000€, Luft-Wärmepumpe 35.000-52.000€, Sole-Wärmepumpe 52.000-65.000€ – minus bis zu 70% Förderung möglich." },
       { question: "Wie viel Förderung bekomme ich für eine neue Heizung?", answer: "BEG-Förderung 2024: 30% Basis + 20% Klimabonus + 20% Einkommensbonus = bis zu 70%. Wärmepumpe mit max. Förderung: Von 20.000€ Kosten zahlen Sie nur 6.000€." },
@@ -467,7 +467,7 @@ const serviceSeoContent: Record<string, {
       "Garantie: 5 Jahre Gewährleistung auf alle Dämmarbeiten"
     ],
     geoText: "Energetische Sanierung in München und Umgebung – Ihr Partner für Wärmedämmung und Fenstertausch. Wir sanieren energetisch in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
-    ctaText: "Energieberatung anfordern",
+    ctaText: "Jetzt Energieproblem lösen",
     faq: [
       { question: "Was kostet eine energetische Sanierung in München?", answer: "Kosten pro Maßnahme: Fassadendämmung 120-180€/m², Dachdämmung 80-150€/m², neue Fenster 400-800€/Stück, Kellerdeckendämmung 30-50€/m² – minus 20% BEG-Förderung." },
       { question: "Wie viel Heizkosten spare ich durch Dämmung?", answer: "Typische Ersparnis: Fassadendämmung 20-40%, Dachdämmung 15-30%, neue Fenster 10-15%, Kellerdecke 5-10%. Komplett saniert: 50-70% Ersparnis möglich." },
@@ -501,7 +501,7 @@ const serviceSeoContent: Record<string, {
       "Festpreis: Verbindliches Angebot nach kostenloser Dachinspektion"
     ],
     geoText: "Dachsanierung in München und Umgebung – Ihr Dachdeckerbetrieb im Partnernetzwerk. Wir arbeiten an Dächern in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
-    ctaText: "Kostenlose Dachinspektion",
+    ctaText: "Jetzt Dachproblem lösen",
     faq: [
       { question: "Was kostet eine Dachsanierung in München?", answer: "Dachkosten in München: Reparatur 500-3.000€, Neueindeckung 100-180€/m², Dachdämmung 80-150€/m², Dachrinnen 30-60€/lfm. Ein 100m² Dach komplett: 15.000-25.000€." },
       { question: "Wie lange hält ein neues Dach?", answer: "Lebensdauer nach Material: Tonziegel 60-100 Jahre, Betondachsteine 40-60 Jahre, Schiefer 100+ Jahre, Flachdach-Bitumen 20-30 Jahre, Flachdach-EPDM 40-50 Jahre." },

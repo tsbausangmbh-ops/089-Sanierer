@@ -575,28 +575,29 @@ export default function FaqPreise() {
               ))}
             </Accordion>
 
-            <div className="mt-12 text-center">
-              <p className="text-muted-foreground mb-4">Haben Sie weitere Fragen?</p>
+            <div className="mt-12 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-8 text-center border border-primary/20">
+              <h3 className="text-xl font-bold mb-2">Genug recherchiert. Zeit zu handeln.</h3>
+              <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+                Sie haben die Fragen gelesen - wir haben die Antworten UND die Lösung für Ihr Sanierungsproblem. 
+                <strong className="text-foreground"> Lassen Sie uns reden.</strong>
+              </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
-                <Link href="/termin">
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-booking-faq">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    24 Std. Online Termin
+                <Link href="/anfrage">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white" data-testid="button-booking-faq">
+                    <Handshake className="w-4 h-4 mr-2" />
+                    Jetzt Problem lösen lassen
                   </Button>
                 </Link>
                 <a href="tel:+4915212274043">
-                  <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white border-green-500" data-testid="button-call-faq">
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" data-testid="button-call-faq">
                     <Phone className="w-4 h-4 mr-2" />
-                    Anrufen
+                    Sofort anrufen
                   </Button>
                 </a>
-                <Link href="/kontakt">
-                  <Button size="lg" data-testid="button-contact-faq">
-                    Kontakt aufnehmen
-                    <ChevronRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
               </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Kostenlos. Unverbindlich. Antwort in 24 Stunden garantiert.
+              </p>
             </div>
           </div>
         </section>

@@ -792,14 +792,18 @@ export default function Home() {
                 <strong className="text-white"> Keine Überraschungen.</strong>
               </p>
 
+              <p className="text-white/90 text-sm mb-3 font-medium">
+                Schluss mit der endlosen Handwerkersuche. Wir lösen Ihr Problem - jetzt.
+              </p>
+
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
                 <Button 
                   size="lg" 
                   onClick={scrollToForm}
-                  className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                   data-testid="button-hero-cta"
                 >
-                  Kostenlose Beratung
+                  Jetzt Problem lösen lassen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Link href="tel:+4915212274043">
@@ -878,6 +882,26 @@ export default function Home() {
                 </Card>
               ))}
             </div>
+
+            {/* NLP: Problem-Solver CTA after Pain Points */}
+            <div className="mt-8 bg-gradient-to-r from-primary to-primary/80 rounded-xl p-6 lg:p-8 text-center">
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
+                Das muss nicht so sein. Wir sind Ihre Problemlöser.
+              </h3>
+              <p className="text-white/90 mb-4 max-w-xl mx-auto">
+                Seit 20 Jahren lösen wir genau diese Probleme für Münchner Familien. 
+                <strong> Jeden Tag. Zuverlässig. Zum Festpreis.</strong>
+              </p>
+              <Button 
+                size="lg" 
+                onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white text-primary hover:bg-white/90 font-semibold"
+                data-testid="button-pain-points-cta"
+              >
+                Jetzt Lösung anfragen - kostenlos
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -939,18 +963,22 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center mt-8">
-              <p className="text-muted-foreground mb-4">
-                Noch Fragen? Wir beraten Sie persönlich - kostenlos und unverbindlich.
+            <div className="text-center mt-8 bg-green-500/10 rounded-xl p-6 border border-green-500/20">
+              <p className="text-lg font-semibold text-foreground mb-2">
+                Genug gelesen? Handeln Sie jetzt.
+              </p>
+              <p className="text-muted-foreground mb-4 max-w-lg mx-auto">
+                Jede Woche, die Sie warten, kostet Sie Zeit und Nerven. Wir lösen Ihr Problem - 
+                <strong className="text-foreground"> heute noch.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button 
                   size="lg" 
                   onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-accent hover:bg-accent/90"
+                  className="bg-green-600 hover:bg-green-700 text-white"
                   data-testid="button-faq-cta"
                 >
-                  Jetzt Beratung anfragen
+                  Ja, ich will mein Problem lösen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Link href="tel:+4915212274043">
@@ -990,6 +1018,22 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </Card>
               ))}
+            </div>
+
+            {/* NLP: Urgency CTA after Transformation */}
+            <div className="mt-8 text-center">
+              <p className="text-lg text-muted-foreground mb-4">
+                So könnte Ihre Sanierung auch aussehen. Der erste Schritt?
+              </p>
+              <Button 
+                size="lg" 
+                onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-accent hover:bg-accent/90"
+                data-testid="button-transformation-cta"
+              >
+                Jetzt Ihr Problem schildern - wir haben die Lösung
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
             </div>
           </div>
         </section>
@@ -1102,8 +1146,8 @@ export default function Home() {
                     <div className="flex items-center justify-between">
                       <span className="font-semibold text-primary">{service.price}</span>
                       <Link href={`/anfrage?service=${service.id}`}>
-                        <Button variant="ghost" size="sm" data-testid={`button-service-${service.id}`}>
-                          Anfragen
+                        <Button variant="default" size="sm" className="bg-accent hover:bg-accent/90" data-testid={`button-service-${service.id}`}>
+                          Jetzt anfragen
                           <ChevronRight className="w-4 h-4 ml-1" />
                         </Button>
                       </Link>
@@ -1145,30 +1189,38 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Final CTA - NLP: Urgency + Future Pacing */}
-        <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
+        {/* Final CTA - NLP: Urgency + Future Pacing + Problem-Solver */}
+        <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              In 3 Monaten könnten Sie in Ihrem <br className="hidden lg:block" />
-              frisch sanierten Zuhause sitzen.
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
+              <Clock className="w-4 h-4" />
+              <span>Handeln Sie heute - nicht morgen</span>
+            </div>
+            
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Wie lange wollen Sie noch mit <br className="hidden lg:block" />
+              Ihrem Sanierungsproblem leben?
             </h2>
-            <p className="text-xl opacity-90 mb-4 max-w-2xl mx-auto">
-              Der erste Schritt ist kostenlos. Unverbindlich. 
-              Und er dauert nur 2 Minuten.
+            <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
+              <strong>In 3 Monaten</strong> könnten Sie in Ihrem frisch sanierten Zuhause sitzen. 
+              Oder Sie schieben es wieder auf.
+            </p>
+            <p className="text-lg opacity-80 mb-6 max-w-xl mx-auto">
+              Wir sind die Problemlöser, die Sie suchen. Der erste Schritt dauert nur 2 Minuten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 onClick={scrollToForm}
-                className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold"
+                className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl"
                 data-testid="button-final-cta"
               >
-                Jetzt kostenlose Beratung starten
+                Ja, ich will mein Problem endlich lösen
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
             <p className="mt-6 text-sm opacity-70">
-              Keine Verpflichtungen. Kein Spam. Nur Klarheit.
+              100% kostenlos. Unverbindlich. Antwort garantiert in 24 Stunden.
             </p>
           </div>
         </section>
