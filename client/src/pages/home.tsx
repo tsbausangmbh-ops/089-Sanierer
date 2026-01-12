@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
-import { SeoHead, generateFaqSchema } from "@/components/seo-head";
+import { SeoHead, generateFaqSchema, generateCombinedSchema } from "@/components/seo-head";
 import { useToast } from "@/hooks/use-toast";
 import {
   Accordion,
@@ -748,6 +748,7 @@ function FunnelForm() {
 
 export default function Home() {
   const faqSchema = generateFaqSchema(faqs);
+  const combinedSchema = generateCombinedSchema([faqSchema]);
   
   const scrollToForm = () => {
     document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' });
@@ -760,7 +761,7 @@ export default function Home() {
         description="Ihre Sanierung ohne Stress: Ein Ansprechpartner, Festpreisgarantie, verbindlicher Termin. 268+ zufriedene Familien in München. Kostenlose Beratung in 24h."
         keywords="Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer"
         canonicalPath="/"
-        schema={faqSchema}
+        schema={combinedSchema}
       />
       
       <div className="min-h-screen bg-background">
