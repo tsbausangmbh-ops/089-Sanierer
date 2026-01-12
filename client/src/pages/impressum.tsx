@@ -45,7 +45,7 @@ export default function Impressum() {
               <p className="text-muted-foreground mt-4">
                 Steuernummer: folgt<br />
                 Tel: 089 444438872<br />
-                E-Mail: <a href="mailto:info@aquapro24.de" className="text-primary hover:underline">info@aquapro24.de</a>
+                E-Mail: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
               </p>
             </section>
 
