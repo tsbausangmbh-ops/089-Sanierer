@@ -486,11 +486,11 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         <GlobalHero content={stadtteilHeroContent} />
 
         <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Unsere Leistungen in {data.name}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {allgemeineLeistungen.map((item) => (
                 <Card key={item.title}>
                   <CardContent className="p-6 text-center">
@@ -505,101 +505,95 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-24">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-                Besonderheiten in {data.name}
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Stadtteil-Charakteristik</h3>
-                  <ul className="space-y-3">
-                    {data.besonderheiten.map((item) => (
-                      <li key={item} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                    <li className="flex items-center gap-3">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              Besonderheiten in {data.name}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 justify-center">
+              <div className="flex flex-col items-center md:items-start">
+                <h3 className="font-semibold text-lg mb-4">Stadtteil-Charakteristik</h3>
+                <ul className="space-y-3">
+                  {data.besonderheiten.map((item) => (
+                    <li key={item} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                      <span>Altbauanteil: {data.altbauAnteil}</span>
+                      <span>{item}</span>
                     </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Typische Objekte</h3>
-                  <ul className="space-y-3">
-                    {data.typischeObjekte.map((item) => (
-                      <li key={item} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  ))}
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <span>Altbauanteil: {data.altbauAnteil}</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col items-center md:items-start">
+                <h3 className="font-semibold text-lg mb-4">Typische Objekte</h3>
+                <ul className="space-y-3">
+                  {data.typischeObjekte.map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
         <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-                Ihre Vorteile
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-6">
-                  <Euro className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Festpreisgarantie</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Der genannte Preis ist der Endpreis.
-                  </p>
-                </div>
-                <div className="text-center p-6">
-                  <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Lokal in München</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Wir kennen {data.name} und seine Besonderheiten.
-                  </p>
-                </div>
-                <div className="text-center p-6">
-                  <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">5 Jahre Garantie</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Langfristige Gewährleistung auf alle Arbeiten.
-                  </p>
-                </div>
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              Ihre Vorteile
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-6">
+                <Euro className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="font-semibold mb-2">Festpreisgarantie</h3>
+                <p className="text-muted-foreground text-sm">
+                  Der genannte Preis ist der Endpreis.
+                </p>
+              </div>
+              <div className="text-center p-6">
+                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="font-semibold mb-2">Lokal in München</h3>
+                <p className="text-muted-foreground text-sm">
+                  Wir kennen {data.name} und seine Besonderheiten.
+                </p>
+              </div>
+              <div className="text-center p-6">
+                <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="font-semibold mb-2">5 Jahre Garantie</h3>
+                <p className="text-muted-foreground text-sm">
+                  Langfristige Gewährleistung auf alle Arbeiten.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-24">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
-                <HelpCircle className="w-8 h-8 text-primary" />
-                Häufige Fragen
-              </h2>
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`faq-${index}`}>
-                    <AccordionTrigger className="text-left" data-testid={`faq-${data.slug}-${index}`}>
-                      {faq.frage}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {faq.antwort}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+              <HelpCircle className="w-8 h-8 text-primary" />
+              Häufige Fragen
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`}>
+                  <AccordionTrigger className="text-left" data-testid={`faq-${data.slug}-${index}`}>
+                    {faq.frage}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.antwort}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-24 text-center max-w-7xl">
+          <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {data.name} verdient nur die beste Sanierung!
             </h2>
