@@ -297,6 +297,23 @@ export default function RechnerPage() {
     
     const services = getCurrentServices();
     
+    // Check if Komplettsanierung is selected
+    const hasKomplett = selectedServices.includes("komplett");
+    
+    // Define core trades that together should match Komplettsanierung pricing
+    const coreTradesHaus = ["elektro", "sanitaer", "boden", "heizung", "maler"];
+    const coreTradesWohnung = ["elektro", "sanitaer", "boden", "heizkoerper", "maler"];
+    const coreTrades = propertyType === "haus" ? coreTradesHaus : coreTradesWohnung;
+    
+    // Count how many core trades are selected
+    const selectedCoreTrades = selectedServices.filter(s => coreTrades.includes(s));
+    const coreTradeCount = selectedCoreTrades.length;
+    
+    // Minimum per-sqm rates based on Komplettsanierung baseline
+    // When 3+ core trades are selected without Komplett, apply minimum floor
+    const minPerSqmHaus = 2800; // Komplettsanierung Haus rate
+    const minPerSqmWohnung = 1600; // Komplettsanierung Wohnung rate
+    
     selectedServices.forEach(serviceId => {
       const service = services.find(s => s.id === serviceId);
       if (service) {
@@ -308,6 +325,17 @@ export default function RechnerPage() {
         }
       }
     });
+    
+    // Apply bundling floor: if 3+ core trades selected without Komplett,
+    // ensure minimum per-sqm rate matches Komplettsanierung baseline
+    if (!hasKomplett && coreTradeCount >= 3 && propertyType !== "foerderung") {
+      const minPerSqm = propertyType === "haus" ? minPerSqmHaus : minPerSqmWohnung;
+      // Apply 85% of the Komplettsanierung rate as floor (since individual trades should still be slightly cheaper)
+      const floorPerSqm = Math.round(minPerSqm * 0.85);
+      if (totalPerSqm < floorPerSqm) {
+        totalPerSqm = floorPerSqm;
+      }
+    }
     
     const total = totalBase + (totalPerSqm * customSqm);
     
