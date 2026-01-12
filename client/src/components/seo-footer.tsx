@@ -253,7 +253,7 @@ export function SeoFooter() {
 
         <div className="mt-4 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/70">
           <p>
-            &copy; 2026 089-Sanierer. Alle Rechte vorbehalten. | Website by <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white underline" data-testid="link-footer-extrucon">Extrucon GmbH</a>
+            &copy; 2026 <Link href="/" className="hover:text-white underline" data-testid="link-footer-089sanierer">089-Sanierer</Link>. Alle Rechte vorbehalten. | Website by <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-white underline" data-testid="link-footer-extrucon">Extrucon GmbH</a>
           </p>
           <nav aria-label="Schnelllinks" className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/" className="hover:text-white" data-testid="link-footer-home">Startseite</Link>
