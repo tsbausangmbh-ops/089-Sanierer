@@ -111,23 +111,23 @@ export default function Kosten() {
           <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <Euro className="w-4 h-4 text-green-400" />
-                <span>Transparente Festpreise</span>
+                <BadgeCheck className="w-4 h-4 text-green-400" />
+                <span>Münchner Marktpreise 2026</span>
               </div>
               
               <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Sanierung München. <br />
-                <span className="text-orange-400">Was kostet das?</span>
+                Was kostet eine Sanierung? <br />
+                <span className="text-orange-400">Alle Preise transparent.</span>
               </h1>
               
               <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Transparente Festpreise.</span>
-                <span>Keine versteckten Kosten.</span>
-                <strong className="text-white">Alle Preise auf einen Blick.</strong>
+                <span>Badsanierung ab 9.200€.</span>
+                <span>Komplettsanierung ab 800€/m².</span>
+                <strong className="text-white">Garantierter Endpreis.</strong>
               </div>
 
               <p className="text-white/90 text-sm mb-3 font-medium">
-                Hier finden Sie alle aktuellen Preise für Ihre Sanierung in München.
+                Keine versteckten Kosten. Keine bösen Überraschungen nach Projektstart.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
@@ -137,7 +137,7 @@ export default function Kosten() {
                     className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                     data-testid="button-anfrage-hero"
                   >
-                    Kostenloses Angebot
+                    Individuelles Angebot
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -157,15 +157,15 @@ export default function Kosten() {
               <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
+                  <span>Preise inkl. Material & Arbeit</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Garantie</span>
+                  <span>Kostenlose Erstberatung</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24h Antwort</span>
+                  <span>Angebot in 48h</span>
                 </div>
               </div>
             </div>
