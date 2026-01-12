@@ -100,6 +100,36 @@ export default function Badsanierung() {
       <main>
         <GlobalHero content={badHeroContent} />
 
+        <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Ihr altes Bad raubt Ihnen jeden Morgen die Freude?
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
+              <p className="text-lg text-muted-foreground">
+                <strong>Kennen Sie das?</strong> Schimmel in den Fugen. Eine Duschwanne mit hohem Einstieg. Fliesen aus den 80ern, die Sie jeden Tag an "damals" erinnern. Ein Bad, in dem Sie sich nicht wohlfühlen – obwohl Sie dort jeden Tag Zeit verbringen.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                <strong>Die größte Angst:</strong> "Was, wenn das alles viel teurer wird als geplant? Was, wenn die Handwerker mitten in der Arbeit aufhören? Was, wenn ich wochenlang ohne Bad dastehe?"
+              </p>
+              <p className="text-lg font-semibold text-foreground">
+                <strong>Die Lösung:</strong> Bei uns bekommen Sie einen Festpreis – bevor wir anfangen. Keine Nachforderungen. Keine bösen Überraschungen. In 2-3 Wochen haben Sie Ihr Traumbad. Und wenn etwas schiefgeht? Dann haben Sie 5 Jahre Gewährleistung. Wir stehen zu unserer Arbeit.
+              </p>
+              <p className="text-lg text-primary font-semibold">
+                <strong>Stellen Sie sich vor:</strong> In nur 3 Wochen betreten Sie morgens ein Bad, das sich anfühlt wie im Wellness-Hotel. Bodengleiche Dusche, moderne Fliesen, perfekte Beleuchtung. Das ist keine Fantasie – das ist das, was unsere 120+ Kunden in München schon erleben.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Link href="/anfrage?service=badsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-bad-nlp-cta">
+                  Ja, ich will mein Traumbad
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">

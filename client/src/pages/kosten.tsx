@@ -122,10 +122,40 @@ export default function Kosten() {
       <main>
         <GlobalHero content={kostenHeroContent} />
 
+        <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Haben Sie Angst vor der Kostenfalle Sanierung?
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
+              <p className="text-lg text-muted-foreground">
+                <strong>Kennen Sie diese Geschichten?</strong> "Der Handwerker hat am Ende das Doppelte verlangt." "Nach drei Wochen kamen immer neue Rechnungen." "Die Sanierung hat mein Budget komplett gesprengt." – Diese Horrorgeschichten machen vielen Eigentümern zu Recht Angst.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                <strong>Das Grundproblem:</strong> Bei den meisten Handwerkern bekommen Sie einen Kostenvoranschlag. Der kann "um bis zu 20%" überschritten werden – legal! Und bei unvorhergesehenen Problemen kommen weitere Nachforderungen. Am Ende wissen Sie nie, was Sie wirklich zahlen.
+              </p>
+              <p className="text-lg font-semibold text-foreground">
+                <strong>Unser Versprechen:</strong> Bei uns gibt es keine Kostenvoranschläge. Sie bekommen einen verbindlichen Festpreis – bevor wir anfangen. Dieser Preis gilt. Punkt. Wenn wir einen versteckten Wasserschaden finden, klären wir das mit Ihnen, bevor zusätzliche Kosten entstehen.
+              </p>
+              <p className="text-lg text-primary font-semibold">
+                <strong>Ihre Sicherheit:</strong> Sie wissen vom ersten Tag an, was Sie zahlen. Sie können planen. Sie können finanzieren. Sie können ruhig schlafen. Und falls doch etwas schiefgeht: 5 Jahre Gewährleistung auf alles.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Link href="/anfrage">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-kosten-nlp-cta">
+                  Ja, ich will meinen Festpreis erfahren
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              Aktuelle Preise 2025
+              Aktuelle Preise 2026
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto">
               {kostenuebersicht.map((item) => (

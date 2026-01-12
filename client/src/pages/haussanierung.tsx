@@ -101,6 +101,36 @@ export default function Haussanierung() {
       <main>
         <GlobalHero content={hausHeroContent} />
 
+        <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Ihr Haus frisst Heizkosten und braucht ständig Reparaturen?
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
+              <p className="text-lg text-muted-foreground">
+                <strong>Kennen Sie das?</strong> Jedes Jahr eine neue Überraschung: Mal die Heizung, mal das Dach, mal die Fenster. Die Gasrechnung ist ein Alptraum. Im Winter frieren Sie, im Sommer schwitzen Sie. Und bei jedem Problem denken Sie: "Wäre ein Neubau nicht einfacher?"
+              </p>
+              <p className="text-lg text-muted-foreground">
+                <strong>Die bittere Wahrheit:</strong> Ein Neubau in München? 3.500-4.500€ pro Quadratmeter. Dazu Abrisskosten. Dazu monatelange Baugenehmigungsverfahren. Und am Ende haben Sie ein neues Haus – aber keines mit dem Charakter Ihres Altbaus.
+              </p>
+              <p className="text-lg font-semibold text-foreground">
+                <strong>Der klügere Weg:</strong> Eine professionelle Haussanierung für 920-1.500€/m². Sie behalten Ihr Grundstück, Ihren Bestandsschutz, Ihren Charakter. Aber Sie bekommen moderne Technik, niedrige Heizkosten und ein Haus, das wieder Wert hat. Und: Sie können oft KfW-Förderung bis 150.000€ bekommen.
+              </p>
+              <p className="text-lg text-primary font-semibold">
+                <strong>Stellen Sie sich vor:</strong> Nächsten Winter sitzen Sie in Ihrem komplett sanierten Haus. Die Heizkosten sind um 60% gesunken. Keine kalten Wände mehr. Keine Zugluft. Ein Haus, das Ihre Enkel noch erben werden.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Link href="/anfrage?service=komplettsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-haus-nlp-cta">
+                  Ja, ich will mein Haus sanieren lassen
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">

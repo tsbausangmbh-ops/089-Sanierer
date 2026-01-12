@@ -98,6 +98,36 @@ export default function Wohnungssanierung() {
       <main>
         <GlobalHero content={wohnungHeroContent} />
 
+        <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Ihre Wohnung verdient endlich eine Rundumerneuerung?
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
+              <p className="text-lg text-muted-foreground">
+                <strong>Kennen Sie das?</strong> Die Elektrik ist von 1975 – Sie trauen sich nicht, mehr als drei Geräte gleichzeitig anzuschließen. Die Rohre gluckern nachts. Der Parkettboden ist so abgelaufen, dass Gäste komisch schauen. Und bei jedem Problem müssen Sie einen anderen Handwerker rufen.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                <strong>Das eigentliche Problem:</strong> Wer koordiniert das alles? Der Elektriker wartet auf den Maler, der Fliesenleger braucht erst den Sanitär – und Sie stehen mittendrin und verlieren Wochen, Nerven und Geld.
+              </p>
+              <p className="text-lg font-semibold text-foreground">
+                <strong>Unsere Lösung:</strong> Ein Ansprechpartner. Ein Festpreis. Ein Termin. Wir übernehmen die komplette Koordination aller Gewerke. Sie entspannen sich – und ziehen in eine Wohnung ein, die sich anfühlt wie neu gekauft.
+              </p>
+              <p className="text-lg text-primary font-semibold">
+                <strong>Das Ergebnis:</strong> Eine Wohnung mit moderner Elektrik, neuen Leitungen, frischen Böden und gestrichenen Wänden. Keine versteckten Mängel mehr. Keine Angst vor der nächsten Stromrechnung oder dem nächsten Wasserrohrbruch. Dafür stehen wir mit 5 Jahren Gewährleistung.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Link href="/anfrage?service=komplettsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-wohnung-nlp-cta">
+                  Ja, meine Wohnung soll wie neu werden
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">

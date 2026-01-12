@@ -129,6 +129,36 @@ export default function Kernsanierung() {
       <main>
         <GlobalHero content={kernHeroContent} />
 
+        <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              Ihr Altbau hat so viele Probleme, dass Flickwerk nicht mehr hilft?
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
+              <p className="text-lg text-muted-foreground">
+                <strong>Kennen Sie das?</strong> Die Elektrik ist aus den 60ern – Sie haben Angst vor einem Brand. Die Wasserleitungen sind aus Blei oder so verkalkt, dass kaum noch Druck kommt. Der Grundriss passt nicht mehr zum heutigen Leben. Und jede einzelne Reparatur scheint das Problem nur zu verschieben.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                <strong>Das Dilemma:</strong> Verkaufen? Dann bekommen Sie weniger, als das Grundstück wert ist. Abreißen und neu bauen? Extrem teuer und zeitaufwendig. Weiter flicken? Dann wird es jedes Jahr schlimmer.
+              </p>
+              <p className="text-lg font-semibold text-foreground">
+                <strong>Die radikale Lösung:</strong> Kernsanierung. Wir nehmen alles raus – bis auf die tragenden Wände. Dann bauen wir komplett neu auf. Neue Elektrik. Neue Leitungen. Neue Böden. Neuer Grundriss. Das Ergebnis: Neubau-Qualität zum halben Preis eines Neubaus.
+              </p>
+              <p className="text-lg text-primary font-semibold">
+                <strong>Das Ergebnis:</strong> Ein Haus, das aussieht und funktioniert wie ein Neubau – aber den Charakter Ihres Altbaus behält. Energieeffizient. Modern. Sicher. Mit einem komplett neuen Lebensgefühl. Und Sie behalten Ihren Bestandsschutz und oft auch die Möglichkeit auf KfW-Förderung.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Link href="/anfrage?service=komplettsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-kern-nlp-cta">
+                  Ja, mein Altbau soll wie neu werden
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
