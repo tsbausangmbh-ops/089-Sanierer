@@ -96,6 +96,7 @@ function Router() {
         <Route path="/haussanierung" component={Haussanierung} />
         <Route path="/kernsanierung" component={Kernsanierung} />
         <Route path="/rechner" component={Rechner} />
+        {/* München Stadtteile */}
         <Route path="/muenchen-schwabing" component={StadtteilPage} />
         <Route path="/muenchen-bogenhausen" component={StadtteilPage} />
         <Route path="/muenchen-maxvorstadt" component={StadtteilPage} />
@@ -106,6 +107,44 @@ function Router() {
         <Route path="/muenchen-giesing" component={StadtteilPage} />
         <Route path="/muenchen-lehel" component={StadtteilPage} />
         <Route path="/muenchen-trudering" component={StadtteilPage} />
+        <Route path="/muenchen-allach" component={StadtteilPage} />
+        <Route path="/muenchen-untermenzing" component={StadtteilPage} />
+        <Route path="/muenchen-obermenzing" component={StadtteilPage} />
+        <Route path="/muenchen-aubing" component={StadtteilPage} />
+        <Route path="/muenchen-moosach" component={StadtteilPage} />
+        <Route path="/muenchen-feldmoching" component={StadtteilPage} />
+        <Route path="/muenchen-laim" component={StadtteilPage} />
+        <Route path="/muenchen-nymphenburg" component={StadtteilPage} />
+        <Route path="/muenchen-berg-am-laim" component={StadtteilPage} />
+        <Route path="/muenchen-riem" component={StadtteilPage} />
+        <Route path="/muenchen-milbertshofen" component={StadtteilPage} />
+        <Route path="/muenchen-freimann" component={StadtteilPage} />
+        <Route path="/muenchen-solln" component={StadtteilPage} />
+        <Route path="/muenchen-grosshadern" component={StadtteilPage} />
+        <Route path="/muenchen-hadern" component={StadtteilPage} />
+        <Route path="/muenchen-fuerstenried" component={StadtteilPage} />
+        <Route path="/muenchen-forstenried" component={StadtteilPage} />
+        <Route path="/muenchen-thalkirchen" component={StadtteilPage} />
+        <Route path="/muenchen-obersendling" component={StadtteilPage} />
+        <Route path="/muenchen-ramersdorf" component={StadtteilPage} />
+        <Route path="/muenchen-perlach" component={StadtteilPage} />
+        <Route path="/muenchen-neuperlach" component={StadtteilPage} />
+        {/* Umland */}
+        <Route path="/dachau" component={StadtteilPage} />
+        <Route path="/karlsfeld" component={StadtteilPage} />
+        <Route path="/germering" component={StadtteilPage} />
+        <Route path="/fuerstenfeldbruck" component={StadtteilPage} />
+        <Route path="/freising" component={StadtteilPage} />
+        <Route path="/starnberg" component={StadtteilPage} />
+        <Route path="/garching" component={StadtteilPage} />
+        <Route path="/unterschleissheim" component={StadtteilPage} />
+        <Route path="/oberschleissheim" component={StadtteilPage} />
+        <Route path="/ottobrunn" component={StadtteilPage} />
+        <Route path="/haar" component={StadtteilPage} />
+        <Route path="/graefelfing" component={StadtteilPage} />
+        <Route path="/planegg" component={StadtteilPage} />
+        <Route path="/pullach" component={StadtteilPage} />
+        <Route path="/gruenwald" component={StadtteilPage} />
         <Route path="/danke" component={Confirmation} />
         <Route component={NotFound} />
       </Switch>
