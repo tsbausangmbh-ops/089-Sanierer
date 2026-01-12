@@ -116,6 +116,302 @@ const stadtteile: Record<string, StadtteilData> = {
     besonderheiten: ["Familienfreundlich", "Viel Grün", "Nachkriegsbestand"],
     altbauAnteil: "ca. 25%",
     typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Doppelhaushälften"]
+  },
+  "allach": {
+    name: "Allach-Untermenzing",
+    slug: "allach",
+    beschreibung: "Allach-Untermenzing ist ein ruhiges Wohnviertel im Nordwesten Münchens mit vielen Einfamilienhäusern und dörflichem Charakter.",
+    besonderheiten: ["Ruhige Wohnlage", "Dörflicher Charakter", "Gute Anbindung"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Einfamilienhäuser", "Doppelhaushälften", "Bauernhäuser"]
+  },
+  "untermenzing": {
+    name: "Untermenzing",
+    slug: "untermenzing",
+    beschreibung: "Untermenzing bietet eine Mischung aus historischen Gebäuden und modernen Wohnanlagen mit guter Infrastruktur.",
+    besonderheiten: ["Historischer Ortskern", "Familienfreundlich", "Grünflächen"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Eigentumswohnungen"]
+  },
+  "obermenzing": {
+    name: "Obermenzing",
+    slug: "obermenzing",
+    beschreibung: "Obermenzing ist ein gehobenes Wohnviertel mit vielen Villen und großzügigen Grundstücken nahe dem Schloss Blutenburg.",
+    besonderheiten: ["Villenviertel", "Schlossnähe", "Exklusive Lage"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Villen", "Einfamilienhäuser", "Herrschaftliche Anwesen"]
+  },
+  "aubing": {
+    name: "Aubing-Lochhausen",
+    slug: "aubing",
+    beschreibung: "Aubing ist ein familienfreundlicher Stadtteil mit guter S-Bahn-Anbindung und vielen Neubaugebieten neben älterem Bestand.",
+    besonderheiten: ["Gute Verkehrsanbindung", "Neubaugebiete", "Bezahlbare Lagen"],
+    altbauAnteil: "ca. 25%",
+    typischeObjekte: ["Reihenhäuser", "Doppelhaushälften", "Eigentumswohnungen"]
+  },
+  "moosach": {
+    name: "Moosach",
+    slug: "moosach",
+    beschreibung: "Moosach verbindet urbanes Leben mit grünen Oasen. Das Olympia-Einkaufszentrum sorgt für gute Infrastruktur.",
+    besonderheiten: ["Zentrale Lage", "Gute Infrastruktur", "Olympiapark-Nähe"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Mehrfamilienhäuser", "Eigentumswohnungen", "Reihenhäuser"]
+  },
+  "feldmoching": {
+    name: "Feldmoching-Hasenbergl",
+    slug: "feldmoching",
+    beschreibung: "Feldmoching bietet im Norden noch dörfliche Strukturen mit Bauernhöfen und Einfamilienhäusern.",
+    besonderheiten: ["Dörflicher Charakter", "Viel Natur", "Entwicklungspotential"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Bauernhäuser", "Einfamilienhäuser", "Reihenhäuser"]
+  },
+  "laim": {
+    name: "Laim",
+    slug: "laim",
+    beschreibung: "Laim ist ein beliebtes Wohnviertel mit guter Verkehrsanbindung und Mischung aus Alt- und Neubau.",
+    besonderheiten: ["Zentrale Lage", "Gute U-Bahn-Anbindung", "Lebendiges Viertel"],
+    altbauAnteil: "ca. 45%",
+    typischeObjekte: ["Altbauwohnungen", "Mehrfamilienhäuser", "Reihenhäuser"]
+  },
+  "nymphenburg": {
+    name: "Nymphenburg",
+    slug: "nymphenburg",
+    beschreibung: "Nymphenburg ist geprägt vom berühmten Schloss und seinen Parks. Exklusive Wohnlagen mit historischen Villen.",
+    besonderheiten: ["Schlosspark", "Exklusive Villen", "Historisches Ambiente"],
+    altbauAnteil: "ca. 55%",
+    typischeObjekte: ["Villen", "Historische Stadtvillen", "Luxuswohnungen"]
+  },
+  "berg-am-laim": {
+    name: "Berg am Laim",
+    slug: "berg-am-laim",
+    beschreibung: "Berg am Laim ist ein aufstrebendes Viertel mit guter Anbindung und vielen Sanierungsprojekten.",
+    besonderheiten: ["Gute Anbindung", "Aufstrebend", "Bezahlbare Lagen"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Mehrfamilienhäuser", "Eigentumswohnungen", "Reihenhäuser"]
+  },
+  "riem": {
+    name: "Riem",
+    slug: "riem",
+    beschreibung: "Riem bietet moderne Wohnanlagen rund um die Messestadt und den Riemer Park mit viel Grün.",
+    besonderheiten: ["Messestadt", "Moderne Architektur", "Riemer Park"],
+    altbauAnteil: "ca. 15%",
+    typischeObjekte: ["Neubauwohnungen", "Reihenhäuser", "Townhouses"]
+  },
+  "milbertshofen": {
+    name: "Milbertshofen-Am Hart",
+    slug: "milbertshofen",
+    beschreibung: "Milbertshofen ist geprägt von BMW und dem Olympiagelände. Vielfältige Wohnlagen vom Arbeiterviertel bis zur gehobenen Lage.",
+    besonderheiten: ["BMW-Nähe", "Olympiapark", "Vielfältig"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Mehrfamilienhäuser", "Eigentumswohnungen", "Reihenhäuser"]
+  },
+  "freimann": {
+    name: "Freimann",
+    slug: "freimann",
+    beschreibung: "Freimann verbindet Wohnen mit Natur an der Isar und bietet durch die Allianz Arena besondere Infrastruktur.",
+    besonderheiten: ["Isarnähe", "Allianz Arena", "Grüne Oase"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Eigentumswohnungen"]
+  },
+  "solln": {
+    name: "Solln",
+    slug: "solln",
+    beschreibung: "Solln ist ein exklusives Villenviertel im Süden Münchens mit viel Grün und gehobener Wohnqualität.",
+    besonderheiten: ["Villenviertel", "Exklusive Lage", "Viel Grün"],
+    altbauAnteil: "ca. 50%",
+    typischeObjekte: ["Villen", "Einfamilienhäuser", "Luxuswohnungen"]
+  },
+  "grosshadern": {
+    name: "Großhadern",
+    slug: "grosshadern",
+    beschreibung: "Großhadern ist bekannt für die Uni-Klinik und bietet ruhiges Wohnen mit guter Infrastruktur.",
+    besonderheiten: ["Klinikum-Nähe", "Ruhige Wohnlage", "Gute Anbindung"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Mehrfamilienhäuser"]
+  },
+  "hadern": {
+    name: "Hadern",
+    slug: "hadern",
+    beschreibung: "Hadern bietet familienfreundliches Wohnen mit vielen Einfamilienhäusern und grünen Straßen.",
+    besonderheiten: ["Familienfreundlich", "Ruhig", "Gewachsene Struktur"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Einfamilienhäuser", "Doppelhaushälften", "Reihenhäuser"]
+  },
+  "fuerstenried": {
+    name: "Fürstenried",
+    slug: "fuerstenried",
+    beschreibung: "Fürstenried liegt am südlichen Stadtrand und bietet eine Mischung aus Einfamilienhäusern und Wohnanlagen.",
+    besonderheiten: ["Stadtrandlage", "Naherholung", "Bezahlbar"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Eigentumswohnungen"]
+  },
+  "forstenried": {
+    name: "Forstenried",
+    slug: "forstenried",
+    beschreibung: "Forstenried grenzt an den Forstenrieder Park und bietet naturnahes Wohnen mit guter Infrastruktur.",
+    besonderheiten: ["Waldnähe", "Naturnahes Wohnen", "Familienfreundlich"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Doppelhaushälften"]
+  },
+  "thalkirchen": {
+    name: "Thalkirchen-Obersendling",
+    slug: "thalkirchen",
+    beschreibung: "Thalkirchen liegt direkt an der Isar mit dem beliebten Tierpark und bietet attraktive Wohnlagen.",
+    besonderheiten: ["Isarnähe", "Tierpark", "Beliebte Wohnlage"],
+    altbauAnteil: "ca. 45%",
+    typischeObjekte: ["Altbauwohnungen", "Villen", "Einfamilienhäuser"]
+  },
+  "obersendling": {
+    name: "Obersendling",
+    slug: "obersendling",
+    beschreibung: "Obersendling ist ein aufstrebendes Viertel mit vielen Gewerbeflächen und neuen Wohnprojekten.",
+    besonderheiten: ["Aufstrebend", "Gute Anbindung", "Entwicklungspotential"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Mehrfamilienhäuser", "Eigentumswohnungen", "Lofts"]
+  },
+  "ramersdorf": {
+    name: "Ramersdorf-Perlach",
+    slug: "ramersdorf",
+    beschreibung: "Ramersdorf bietet bezahlbares Wohnen mit guter U-Bahn-Anbindung und vielfältiger Bebauung.",
+    besonderheiten: ["Bezahlbar", "Gute Anbindung", "Vielfältig"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Mehrfamilienhäuser", "Eigentumswohnungen", "Reihenhäuser"]
+  },
+  "perlach": {
+    name: "Perlach",
+    slug: "perlach",
+    beschreibung: "Perlach hat einen historischen Ortskern und moderne Wohnanlagen. Beliebtes Familienviertel.",
+    besonderheiten: ["Historischer Kern", "Familienfreundlich", "Gute Infrastruktur"],
+    altbauAnteil: "ca. 25%",
+    typischeObjekte: ["Reihenhäuser", "Doppelhaushälften", "Eigentumswohnungen"]
+  },
+  "neuperlach": {
+    name: "Neuperlach",
+    slug: "neuperlach",
+    beschreibung: "Neuperlach ist eine der größten Satellitenstädte Europas mit vielen Hochhäusern aus den 1970ern.",
+    besonderheiten: ["Großsiedlung", "Gute Anbindung", "Sanierungsbedarf"],
+    altbauAnteil: "ca. 5%",
+    typischeObjekte: ["Hochhauswohnungen", "Eigentumswohnungen", "Reihenhäuser"]
+  },
+  "dachau": {
+    name: "Dachau",
+    slug: "dachau",
+    beschreibung: "Dachau ist eine historische Stadt im Münchner Umland mit malerischer Altstadt und vielen sanierungsbedürftigen Altbauten.",
+    besonderheiten: ["Historische Altstadt", "S-Bahn-Anbindung", "Bezahlbarer als München"],
+    altbauAnteil: "ca. 45%",
+    typischeObjekte: ["Einfamilienhäuser", "Altbauwohnungen", "Reihenhäuser"]
+  },
+  "karlsfeld": {
+    name: "Karlsfeld",
+    slug: "karlsfeld",
+    beschreibung: "Karlsfeld liegt zwischen München und Dachau und bietet familienfreundliches Wohnen mit guter Anbindung.",
+    besonderheiten: ["München-Nähe", "Familienfreundlich", "Gute Infrastruktur"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Doppelhaushälften"]
+  },
+  "germering": {
+    name: "Germering",
+    slug: "germering",
+    beschreibung: "Germering ist die zweitgrößte Stadt im Landkreis und bietet vielfältige Wohnmöglichkeiten.",
+    besonderheiten: ["Große Stadt", "Gute Infrastruktur", "S-Bahn-Anbindung"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Eigentumswohnungen", "Reihenhäuser"]
+  },
+  "fuerstenfeldbruck": {
+    name: "Fürstenfeldbruck",
+    slug: "fuerstenfeldbruck",
+    beschreibung: "Fürstenfeldbruck ist Kreisstadt mit historischem Kloster und charmantem Stadtzentrum.",
+    besonderheiten: ["Historisches Kloster", "Kreisstadt", "Amper-Nähe"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Altbauwohnungen", "Einfamilienhäuser", "Historische Gebäude"]
+  },
+  "freising": {
+    name: "Freising",
+    slug: "freising",
+    beschreibung: "Freising ist Domstadt mit historischer Bedeutung und liegt nahe dem Flughafen München.",
+    besonderheiten: ["Domstadt", "Flughafennähe", "Universitätsstadt"],
+    altbauAnteil: "ca. 50%",
+    typischeObjekte: ["Historische Stadthäuser", "Altbauwohnungen", "Einfamilienhäuser"]
+  },
+  "starnberg": {
+    name: "Starnberg",
+    slug: "starnberg",
+    beschreibung: "Starnberg am Starnberger See ist eine der exklusivsten Wohnlagen im Münchner Umland.",
+    besonderheiten: ["Seelage", "Exklusiv", "Höchste Immobilienpreise"],
+    altbauAnteil: "ca. 45%",
+    typischeObjekte: ["Villen", "Seevillen", "Luxuswohnungen"]
+  },
+  "garching": {
+    name: "Garching",
+    slug: "garching",
+    beschreibung: "Garching ist Universitätsstadt mit TU-Campus und moderner Infrastruktur.",
+    besonderheiten: ["TU München", "Forschungszentren", "U-Bahn-Anbindung"],
+    altbauAnteil: "ca. 25%",
+    typischeObjekte: ["Neubauwohnungen", "Einfamilienhäuser", "Reihenhäuser"]
+  },
+  "unterschleissheim": {
+    name: "Unterschleißheim",
+    slug: "unterschleissheim",
+    beschreibung: "Unterschleißheim liegt nördlich von München mit guter S-Bahn-Anbindung und vielen Gewerbegebieten.",
+    besonderheiten: ["Gute Anbindung", "Gewerbezentren", "Familienfreundlich"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Reihenhäuser", "Einfamilienhäuser", "Eigentumswohnungen"]
+  },
+  "oberschleissheim": {
+    name: "Oberschleißheim",
+    slug: "oberschleissheim",
+    beschreibung: "Oberschleißheim ist bekannt für das Schloss Schleißheim und bietet ruhiges Wohnen im Grünen.",
+    besonderheiten: ["Schloss Schleißheim", "Flugwerft", "Grüne Lage"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Historische Gebäude"]
+  },
+  "ottobrunn": {
+    name: "Ottobrunn",
+    slug: "ottobrunn",
+    beschreibung: "Ottobrunn ist eine moderne Gemeinde südöstlich von München mit vielen Forschungseinrichtungen.",
+    besonderheiten: ["High-Tech-Standort", "Gute Infrastruktur", "Moderne Bebauung"],
+    altbauAnteil: "ca. 20%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Eigentumswohnungen"]
+  },
+  "haar": {
+    name: "Haar",
+    slug: "haar",
+    beschreibung: "Haar liegt östlich von München und bietet familienfreundliches Wohnen mit S-Bahn-Anbindung.",
+    besonderheiten: ["S-Bahn-Anbindung", "Familienfreundlich", "Klinikum"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Einfamilienhäuser", "Doppelhaushälften", "Reihenhäuser"]
+  },
+  "graefelfing": {
+    name: "Gräfelfing",
+    slug: "graefelfing",
+    beschreibung: "Gräfelfing ist eine exklusive Villengemeinde westlich von München mit viel Grün.",
+    besonderheiten: ["Villengemeinde", "Waldnähe", "Exklusiv"],
+    altbauAnteil: "ca. 50%",
+    typischeObjekte: ["Villen", "Einfamilienhäuser", "Luxuswohnungen"]
+  },
+  "planegg": {
+    name: "Planegg",
+    slug: "planegg",
+    beschreibung: "Planegg liegt westlich von München und bietet gehobenes Wohnen nahe dem Forstenrieder Park.",
+    besonderheiten: ["Waldnähe", "Gehoben", "Gute Anbindung"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Einfamilienhäuser", "Villen", "Reihenhäuser"]
+  },
+  "pullach": {
+    name: "Pullach",
+    slug: "pullach",
+    beschreibung: "Pullach im Isartal ist eine exklusive Gemeinde mit vielen Villen und direktem Isarzugang.",
+    besonderheiten: ["Isartal", "Exklusiv", "Naturnahes Wohnen"],
+    altbauAnteil: "ca. 45%",
+    typischeObjekte: ["Villen", "Einfamilienhäuser", "Luxusanwesen"]
+  },
+  "gruenwald": {
+    name: "Grünwald",
+    slug: "gruenwald",
+    beschreibung: "Grünwald ist die exklusivste Gemeinde im Münchner Süden mit Villen und Prominenz.",
+    besonderheiten: ["Höchste Grundstückspreise", "Prominentenwohnort", "Bavaria Filmstadt"],
+    altbauAnteil: "ca. 50%",
+    typischeObjekte: ["Villen", "Luxusanwesen", "Herrschaftliche Häuser"]
   }
 };
 
@@ -344,10 +640,11 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 export default function StadtteilPage() {
   const [location] = useLocation();
   
-  // Extract slug safely: remove /muenchen- prefix, trailing slashes, and query params
+  // Extract slug safely: remove /muenchen- prefix or just /, trailing slashes, and query params
   let stadtteil = location
     .split('?')[0]           // Remove query parameters
     .replace(/^\/muenchen-/, '')  // Remove /muenchen- prefix
+    .replace(/^\//, '')      // Remove leading slash (for Umland cities like /graefelfing)
     .replace(/\/$/, '')      // Remove trailing slash
     .toLowerCase()           // Normalize to lowercase
     .trim();
