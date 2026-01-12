@@ -277,7 +277,15 @@ export default function RechnerPage() {
   };
 
   const getCurrentServices = () => {
-    return propertyType === "foerderung" ? foerderungServices : serviceOptions;
+    if (propertyType === "foerderung") {
+      return foerderungServices;
+    }
+    // Filter services that have non-zero price for the selected property type
+    return serviceOptions.filter(service => {
+      const hasBasePrice = service.basePrice[propertyType!] > 0;
+      const hasPerSqm = service.perSqm[propertyType!] > 0;
+      return hasBasePrice || hasPerSqm;
+    });
   };
 
   const calculatePrice = () => {
