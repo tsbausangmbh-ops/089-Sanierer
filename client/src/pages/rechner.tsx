@@ -25,7 +25,9 @@ import {
   BadgePercent,
   Sun,
   Wind,
-  ThermometerSun
+  ThermometerSun,
+  Hammer,
+  Trash2
 } from "lucide-react";
 
 type PropertyType = "wohnung" | "haus" | "foerderung" | null;
@@ -93,10 +95,18 @@ const serviceOptions: ServiceOption[] = [
     foerderungProzent: 10
   },
   { 
+    id: "heizkoerper", 
+    label: "Heizkörperaustausch", 
+    icon: ThermometerSun,
+    basePrice: { wohnung: 8000, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    foerderungProzent: 0
+  },
+  { 
     id: "heizung", 
     label: "Heizungssanierung", 
     icon: Flame,
-    basePrice: { wohnung: 12000, haus: 28000, foerderung: 35000 },
+    basePrice: { wohnung: 0, haus: 28000, foerderung: 35000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 30
   },
@@ -107,6 +117,30 @@ const serviceOptions: ServiceOption[] = [
     basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
     perSqm: { wohnung: 28, haus: 38, foerderung: 45 },
     foerderungProzent: 5
+  },
+  { 
+    id: "entkernung", 
+    label: "Entkernung", 
+    icon: Trash2,
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 45, haus: 65, foerderung: 0 },
+    foerderungProzent: 0
+  },
+  { 
+    id: "abbruch_nichttragend", 
+    label: "Abbruch Wände (nichttragend)", 
+    icon: Hammer,
+    basePrice: { wohnung: 1500, haus: 2500, foerderung: 0 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    foerderungProzent: 0
+  },
+  { 
+    id: "abbruch_tragend", 
+    label: "Abbruch Wände (tragend)", 
+    icon: Hammer,
+    basePrice: { wohnung: 4500, haus: 8000, foerderung: 0 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    foerderungProzent: 0
   }
 ];
 
