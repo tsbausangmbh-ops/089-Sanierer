@@ -27,7 +27,9 @@ import {
   Wind,
   ThermometerSun,
   Hammer,
-  Trash2
+  Trash2,
+  PanelTop,
+  Warehouse
 } from "lucide-react";
 
 type PropertyType = "wohnung" | "haus" | "foerderung" | null;
@@ -141,6 +143,30 @@ const serviceOptions: ServiceOption[] = [
     basePrice: { wohnung: 4500, haus: 8000, foerderung: 0 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 0
+  },
+  { 
+    id: "fenster_rolladen", 
+    label: "Fenster und Rolladen", 
+    icon: PanelTop,
+    basePrice: { wohnung: 0, haus: 45000, foerderung: 0 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
+    foerderungProzent: 0
+  },
+  { 
+    id: "keller", 
+    label: "Kellersanierung", 
+    icon: Warehouse,
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 0, haus: 280, foerderung: 0 },
+    foerderungProzent: 0
+  },
+  { 
+    id: "daemmung_haus", 
+    label: "Dämmung", 
+    icon: HomeIcon,
+    basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
+    perSqm: { wohnung: 0, haus: 220, foerderung: 0 },
+    foerderungProzent: 20
   }
 ];
 
