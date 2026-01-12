@@ -236,7 +236,11 @@ export function SeoFooter() {
               </div>
             </nav>
           </div>
-          <h4 className="font-bold mb-2 text-sm">Sanierung in München – Wir sind vor Ort in allen Stadtteilen</h4>
+          <h4 className="font-bold mb-2 text-sm">
+              <Link href="/kontakt" className="hover:text-white/80 hover:underline" data-testid="link-footer-stadtteile-heading">
+                Sanierung in München – Wir sind vor Ort in allen Stadtteilen
+              </Link>
+            </h4>
           <p className="text-xs text-white/60 mb-2">
             <strong>München:</strong> {muenchnerStadtteile.join(" · ")}
           </p>
