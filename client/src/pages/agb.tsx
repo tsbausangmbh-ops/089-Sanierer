@@ -27,7 +27,7 @@ export default function AGB() {
       <Breadcrumb items={[{ label: "AGB" }]} />
 
       <main className="pb-16 flex-1">
-        <div className="max-w-7xl mx-auto px-48">
+        <div className="max-w-7xl mx-auto px-24">
 
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
 
