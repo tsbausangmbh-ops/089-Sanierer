@@ -181,18 +181,29 @@ const sizeOptions = {
 export default function RechnerPage() {
   const [step, setStep] = useState(1);
   const [propertyType, setPropertyType] = useState<PropertyType>(null);
-  const [size, setSize] = useState<RoomSize>(null);
+  const [customSqm, setCustomSqm] = useState<number>(0);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   const handlePropertySelect = (type: PropertyType) => {
     setPropertyType(type);
     setSelectedServices([]);
+    // Set default sqm based on property type
+    if (type === "wohnung") {
+      setCustomSqm(65);
+    } else {
+      setCustomSqm(150);
+    }
     setStep(2);
   };
 
-  const handleSizeSelect = (selectedSize: RoomSize) => {
-    setSize(selectedSize);
-    setStep(3);
+  const handleSqmChange = (value: number) => {
+    setCustomSqm(value);
+  };
+
+  const handleSqmConfirm = () => {
+    if (customSqm > 0) {
+      setStep(3);
+    }
   };
 
   const toggleService = (serviceId: string) => {
@@ -208,12 +219,8 @@ export default function RechnerPage() {
   };
 
   const calculatePrice = () => {
-    if (!propertyType || !size || selectedServices.length === 0) return { min: 0, max: 0, foerderung: 0 };
+    if (!propertyType || customSqm <= 0 || selectedServices.length === 0) return { min: 0, max: 0, foerderung: 0 };
     
-    const sizeData = sizeOptions[propertyType].find(s => s.id === size);
-    if (!sizeData) return { min: 0, max: 0, foerderung: 0 };
-    
-    let totalBase = 0;
     let totalPerSqm = 0;
     let totalFoerderung = 0;
     
@@ -222,8 +229,7 @@ export default function RechnerPage() {
     selectedServices.forEach(serviceId => {
       const service = services.find(s => s.id === serviceId);
       if (service) {
-        const serviceTotal = service.basePrice[propertyType] + (service.perSqm[propertyType] * sizeData.avgSqm);
-        totalBase += service.basePrice[propertyType];
+        const serviceTotal = service.perSqm[propertyType] * customSqm;
         totalPerSqm += service.perSqm[propertyType];
         if (propertyType === "foerderung" && service.foerderungProzent) {
           totalFoerderung += Math.round(serviceTotal * (service.foerderungProzent / 100));
@@ -231,8 +237,7 @@ export default function RechnerPage() {
       }
     });
     
-    const sqmPrice = totalPerSqm * sizeData.avgSqm;
-    const total = totalBase + sqmPrice;
+    const total = totalPerSqm * customSqm;
     
     return {
       min: Math.round(total * 0.85 / 1000) * 1000,
@@ -245,9 +250,9 @@ export default function RechnerPage() {
     if (step === 2) {
       setStep(1);
       setPropertyType(null);
+      setCustomSqm(0);
     } else if (step === 3) {
       setStep(2);
-      setSize(null);
     } else if (step === 4) {
       setStep(3);
     }
@@ -262,12 +267,11 @@ export default function RechnerPage() {
   const resetCalculator = () => {
     setStep(1);
     setPropertyType(null);
-    setSize(null);
+    setCustomSqm(0);
     setSelectedServices([]);
   };
 
   const price = calculatePrice();
-  const selectedSizeData = propertyType && size ? sizeOptions[propertyType].find(s => s.id === size) : null;
   const currentServices = getCurrentServices();
 
   return (
@@ -376,21 +380,43 @@ export default function RechnerPage() {
                       : `Wie groß ist ${propertyType === "wohnung" ? "Ihre Wohnung" : "Ihr Haus"}?`
                     }
                   </h2>
-                  <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    {sizeOptions[propertyType].map((option) => (
-                      <Card 
-                        key={option.id}
-                        className="cursor-pointer transition-all hover:border-primary hover:shadow-lg"
-                        onClick={() => handleSizeSelect(option.id as RoomSize)}
-                        data-testid={`select-size-${option.id}`}
+                  <Card className="max-w-md mx-auto">
+                    <CardContent className="p-8">
+                      <div className="mb-6">
+                        <label className="block text-lg font-medium mb-3">
+                          Wohnfläche in m²
+                        </label>
+                        <div className="flex items-center gap-4">
+                          <input
+                            type="number"
+                            min="10"
+                            max="500"
+                            value={customSqm}
+                            onChange={(e) => handleSqmChange(Number(e.target.value))}
+                            className="w-full text-center text-3xl font-bold p-4 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                            data-testid="input-sqm"
+                          />
+                          <span className="text-2xl font-medium text-muted-foreground">m²</span>
+                        </div>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          {propertyType === "wohnung" 
+                            ? "Typische Wohnungen: 30-120 m²" 
+                            : "Typische Häuser: 80-250 m²"
+                          }
+                        </p>
+                      </div>
+                      <Button 
+                        onClick={handleSqmConfirm}
+                        disabled={customSqm < 10}
+                        className="w-full"
+                        size="lg"
+                        data-testid="button-confirm-sqm"
                       >
-                        <CardContent className="p-6 text-center">
-                          <div className="text-4xl font-bold text-primary mb-2">{option.label}</div>
-                          <p className="text-lg text-muted-foreground">{option.sqm}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
+                        Weiter
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
                 </div>
               )}
 
@@ -520,8 +546,8 @@ export default function RechnerPage() {
                           </span>
                         </div>
                         <div className="flex justify-between py-2 border-b">
-                          <span className="text-muted-foreground">Größe:</span>
-                          <span className="font-medium">{selectedSizeData?.sqm}</span>
+                          <span className="text-muted-foreground">Wohnfläche:</span>
+                          <span className="font-medium">{customSqm} m²</span>
                         </div>
                         <div className="flex justify-between py-2 border-b">
                           <span className="text-muted-foreground">Leistungen:</span>
