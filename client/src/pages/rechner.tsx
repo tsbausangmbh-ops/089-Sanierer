@@ -45,64 +45,64 @@ const serviceOptions: ServiceOption[] = [
     id: "komplett", 
     label: "Komplettsanierung", 
     icon: HomeIcon,
-    basePrice: { wohnung: 15000, haus: 35000, foerderung: 40000 },
-    perSqm: { wohnung: 850, haus: 1200, foerderung: 1400 },
+    basePrice: { wohnung: 12000, haus: 55000, foerderung: 65000 },
+    perSqm: { wohnung: 850, haus: 2800, foerderung: 3200 },
     foerderungProzent: 20
   },
   { 
     id: "bad", 
     label: "Badsanierung", 
     icon: Bath,
-    basePrice: { wohnung: 8000, haus: 12000, foerderung: 14000 },
-    perSqm: { wohnung: 1800, haus: 2000, foerderung: 2200 },
+    basePrice: { wohnung: 8000, haus: 18000, foerderung: 20000 },
+    perSqm: { wohnung: 1800, haus: 2800, foerderung: 3000 },
     foerderungProzent: 15
   },
   { 
     id: "kueche", 
     label: "Küchensanierung", 
     icon: ChefHat,
-    basePrice: { wohnung: 6000, haus: 8000, foerderung: 10000 },
-    perSqm: { wohnung: 800, haus: 900, foerderung: 1000 },
+    basePrice: { wohnung: 5000, haus: 12000, foerderung: 14000 },
+    perSqm: { wohnung: 650, haus: 1200, foerderung: 1400 },
     foerderungProzent: 10
   },
   { 
     id: "elektro", 
     label: "Elektrosanierung", 
     icon: Zap,
-    basePrice: { wohnung: 3000, haus: 6000, foerderung: 8000 },
-    perSqm: { wohnung: 80, haus: 100, foerderung: 120 },
+    basePrice: { wohnung: 2500, haus: 12000, foerderung: 14000 },
+    perSqm: { wohnung: 65, haus: 180, foerderung: 200 },
     foerderungProzent: 15
   },
   { 
     id: "sanitaer", 
     label: "Sanitärsanierung", 
     icon: Droplets,
-    basePrice: { wohnung: 4000, haus: 8000, foerderung: 10000 },
-    perSqm: { wohnung: 60, haus: 80, foerderung: 100 },
+    basePrice: { wohnung: 3500, haus: 15000, foerderung: 18000 },
+    perSqm: { wohnung: 55, haus: 150, foerderung: 180 },
     foerderungProzent: 15
   },
   { 
     id: "boden", 
     label: "Bodensanierung", 
     icon: Layers,
-    basePrice: { wohnung: 2000, haus: 4000, foerderung: 5000 },
-    perSqm: { wohnung: 80, haus: 90, foerderung: 100 },
+    basePrice: { wohnung: 1800, haus: 8000, foerderung: 10000 },
+    perSqm: { wohnung: 75, haus: 160, foerderung: 180 },
     foerderungProzent: 10
   },
   { 
     id: "heizung", 
     label: "Heizungssanierung", 
     icon: Flame,
-    basePrice: { wohnung: 5000, haus: 15000, foerderung: 25000 },
-    perSqm: { wohnung: 40, haus: 60, foerderung: 80 },
+    basePrice: { wohnung: 4500, haus: 25000, foerderung: 35000 },
+    perSqm: { wohnung: 35, haus: 120, foerderung: 150 },
     foerderungProzent: 30
   },
   { 
     id: "maler", 
     label: "Malerarbeiten", 
     icon: Paintbrush,
-    basePrice: { wohnung: 1500, haus: 3000, foerderung: 4000 },
-    perSqm: { wohnung: 25, haus: 30, foerderung: 35 },
+    basePrice: { wohnung: 1200, haus: 5000, foerderung: 6000 },
+    perSqm: { wohnung: 22, haus: 48, foerderung: 55 },
     foerderungProzent: 5
   }
 ];
@@ -112,7 +112,7 @@ const foerderungServices: ServiceOption[] = [
     id: "waermepumpe", 
     label: "Wärmepumpe", 
     icon: ThermometerSun,
-    basePrice: { wohnung: 12000, haus: 25000, foerderung: 25000 },
+    basePrice: { wohnung: 15000, haus: 35000, foerderung: 35000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 35
   },
@@ -120,23 +120,23 @@ const foerderungServices: ServiceOption[] = [
     id: "daemmung", 
     label: "Fassadendämmung", 
     icon: HomeIcon,
-    basePrice: { wohnung: 8000, haus: 20000, foerderung: 20000 },
-    perSqm: { wohnung: 120, haus: 150, foerderung: 150 },
+    basePrice: { wohnung: 10000, haus: 35000, foerderung: 35000 },
+    perSqm: { wohnung: 140, haus: 280, foerderung: 280 },
     foerderungProzent: 20
   },
   { 
     id: "fenster", 
     label: "Fensteraustausch", 
     icon: Wind,
-    basePrice: { wohnung: 5000, haus: 12000, foerderung: 12000 },
-    perSqm: { wohnung: 80, haus: 100, foerderung: 100 },
+    basePrice: { wohnung: 6000, haus: 22000, foerderung: 22000 },
+    perSqm: { wohnung: 90, haus: 180, foerderung: 180 },
     foerderungProzent: 20
   },
   { 
     id: "solar", 
     label: "Solarthermie", 
     icon: Sun,
-    basePrice: { wohnung: 6000, haus: 10000, foerderung: 10000 },
+    basePrice: { wohnung: 8000, haus: 18000, foerderung: 18000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 25
   },
@@ -144,7 +144,7 @@ const foerderungServices: ServiceOption[] = [
     id: "photovoltaik", 
     label: "Photovoltaik", 
     icon: Zap,
-    basePrice: { wohnung: 8000, haus: 15000, foerderung: 15000 },
+    basePrice: { wohnung: 10000, haus: 28000, foerderung: 28000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 0
   },
@@ -152,7 +152,7 @@ const foerderungServices: ServiceOption[] = [
     id: "heizung_foerder", 
     label: "Heizungstausch (förderfähig)", 
     icon: Flame,
-    basePrice: { wohnung: 8000, haus: 18000, foerderung: 18000 },
+    basePrice: { wohnung: 10000, haus: 28000, foerderung: 28000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 30
   }
