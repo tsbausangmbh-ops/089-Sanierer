@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, ChevronDown, Home, Bath, UtensilsCrossed, Layers, Zap, Flame, Triangle, Leaf } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, Home, Bath, UtensilsCrossed, Layers, Zap, Flame, Triangle, Leaf, Calculator } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -108,6 +108,12 @@ export function SiteHeader() {
                 FAQ & Preise
               </Button>
             </Link>
+            <Link href="/rechner">
+              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
+                <Calculator className="w-4 h-4 mr-1" />
+                Kostenrechner
+              </Button>
+            </Link>
             <a href="tel:+498944438872" className="ml-3" aria-label="Anrufen: 089 444438872">
               <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
                 <Phone className="w-4 h-4 mr-1" aria-hidden="true" />
@@ -154,6 +160,16 @@ export function SiteHeader() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 FAQ & Preise
+              </Button>
+            </Link>
+            <Link href="/rechner">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Calculator className="w-4 h-4 mr-2" />
+                Kostenrechner
               </Button>
             </Link>
             <Link href="/kontakt">
