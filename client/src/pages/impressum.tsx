@@ -44,7 +44,8 @@ export default function Impressum() {
               </p>
               <p className="text-muted-foreground mt-4">
                 Steuernummer: folgt<br />
-                Tel: 0152 122 740 43
+                Tel: 0152 122 740 43<br />
+                E-Mail: <a href="mailto:info@aquapro24.de" className="text-primary hover:underline">info@aquapro24.de</a>
               </p>
             </section>
 
