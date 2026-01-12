@@ -100,7 +100,7 @@ const muenchnerUmland = [
 
 export function SeoFooter() {
   return (
-    <footer className="pt-12 pb-6 mx-12 bg-[hsl(220,80%,10%)] text-white rounded-t-lg" role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
+    <footer className="pt-12 pb-6 bg-[hsl(220,80%,10%)] text-white" role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-1">
