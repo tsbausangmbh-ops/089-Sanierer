@@ -23,7 +23,8 @@ import {
   Flame,
   Building2,
   HardHat,
-  HelpCircle
+  HelpCircle,
+  BadgeCheck
 } from "lucide-react";
 
 const kernsanierungPhasen = [
@@ -118,23 +119,23 @@ export default function Kernsanierung() {
           <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <Hammer className="w-4 h-4 text-green-400" />
-                <span>Kernsanierung zum Festpreis</span>
+                <BadgeCheck className="w-4 h-4 text-green-400" />
+                <span>20+ Kernsanierungen in München</span>
               </div>
               
               <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Kernsanierung München. <br />
-                <span className="text-orange-400">ab 1.200€/m² Festpreis.</span>
+                Altbau wird Neubau. <br />
+                <span className="text-orange-400">Komplett bis auf Rohbau.</span>
               </h1>
               
               <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Komplettsanierung bis auf den Rohbau.</span>
-                <span>Ihr Altbau wird wie neu.</span>
-                <strong className="text-white">Mit modernster Technik.</strong>
+                <span>Alles raus, alles neu.</span>
+                <span>Modernste Haustechnik.</span>
+                <strong className="text-white">Ab 1.200€/m² Festpreis.</strong>
               </div>
 
               <p className="text-white/90 text-sm mb-3 font-medium">
-                Wie ein Neubau, aber günstiger - wir machen es möglich.
+                Günstiger als Neubau, besser als vorher. Ihr Altbau wird zum Traumobjekt.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
@@ -144,7 +145,7 @@ export default function Kernsanierung() {
                     className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                     data-testid="button-anfrage-kern"
                   >
-                    Jetzt Angebot anfordern
+                    Jetzt Kernsanierung planen
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -164,15 +165,15 @@ export default function Kernsanierung() {
               <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
+                  <span>Neubau-Qualität garantiert</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Garantie</span>
+                  <span>5 Jahre Gewährleistung</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24h Antwort</span>
+                  <span>KfW-Förderung möglich</span>
                 </div>
               </div>
             </div>

@@ -23,7 +23,8 @@ import {
   Droplets,
   Layers,
   Paintbrush,
-  HelpCircle
+  HelpCircle,
+  BadgeCheck
 } from "lucide-react";
 
 const leistungen = [
@@ -88,23 +89,23 @@ export default function Wohnungssanierung() {
           <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <Building className="w-4 h-4 text-green-400" />
-                <span>Wohnungssanierung zum Festpreis</span>
+                <BadgeCheck className="w-4 h-4 text-green-400" />
+                <span>85+ Wohnungen in München saniert</span>
               </div>
               
               <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Wohnungssanierung München. <br />
-                <span className="text-orange-400">ab 800€/m² Festpreis.</span>
+                Ihre Wohnung wie neu. <br />
+                <span className="text-orange-400">Komplett aus einer Hand.</span>
               </h1>
               
               <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Alle Gewerke aus einer Hand.</span>
-                <span>Koordiniert und stressfrei.</span>
-                <strong className="text-white">5 Jahre Gewährleistung.</strong>
+                <span>Elektrik, Sanitär, Böden, Wände.</span>
+                <span>Alles koordiniert von uns.</span>
+                <strong className="text-white">Ab 800€/m² Festpreis.</strong>
               </div>
 
               <p className="text-white/90 text-sm mb-3 font-medium">
-                Komplettsanierung Ihrer Wohnung - wir kümmern uns um alles.
+                Kein Handwerker-Chaos mehr. Ein Ansprechpartner für alles.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
@@ -114,7 +115,7 @@ export default function Wohnungssanierung() {
                     className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                     data-testid="button-anfrage-wohnung"
                   >
-                    Jetzt Angebot anfordern
+                    Jetzt Wohnung sanieren
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -134,15 +135,15 @@ export default function Wohnungssanierung() {
               <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
+                  <span>Alle Gewerke koordiniert</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Garantie</span>
+                  <span>5 Jahre Gewährleistung</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24h Antwort</span>
+                  <span>Beratung in 24h</span>
                 </div>
               </div>
             </div>

@@ -21,7 +21,8 @@ import {
   Droplets,
   Sparkles,
   Users,
-  HelpCircle
+  HelpCircle,
+  BadgeCheck
 } from "lucide-react";
 
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";

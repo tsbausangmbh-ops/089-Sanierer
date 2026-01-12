@@ -22,7 +22,8 @@ import {
   Calculator,
   Shield,
   Clock,
-  HelpCircle
+  HelpCircle,
+  BadgeCheck
 } from "lucide-react";
 
 const kostenFaqs = [

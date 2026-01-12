@@ -23,7 +23,8 @@ import {
   Flame,
   Layers,
   Hammer,
-  HelpCircle
+  HelpCircle,
+  BadgeCheck
 } from "lucide-react";
 
 const hausLeistungen = [
@@ -90,23 +91,23 @@ export default function Haussanierung() {
           <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <HomeIcon className="w-4 h-4 text-green-400" />
-                <span>Haussanierung zum Festpreis</span>
+                <BadgeCheck className="w-4 h-4 text-green-400" />
+                <span>45+ Häuser in München saniert</span>
               </div>
               
               <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Haussanierung München. <br />
-                <span className="text-orange-400">ab 920€/m² Festpreis.</span>
+                Ihr Haus komplett saniert. <br />
+                <span className="text-orange-400">Wie neu, aber günstiger.</span>
               </h1>
               
               <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Von Kernsanierung bis Modernisierung.</span>
-                <span>Alle Gewerke aus einer Hand.</span>
-                <strong className="text-white">5 Jahre Gewährleistung.</strong>
+                <span>Kernsanierung bis Modernisierung.</span>
+                <span>Energetisch auf neuesten Stand.</span>
+                <strong className="text-white">Ab 920€/m² Festpreis.</strong>
               </div>
 
               <p className="text-white/90 text-sm mb-3 font-medium">
-                Ihr Haus komplett saniert - wir kümmern uns um alles.
+                Vom Altbau zum Traumhaus. Alles aus einer Hand.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5">
@@ -116,7 +117,7 @@ export default function Haussanierung() {
                     className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                     data-testid="button-anfrage-haus"
                   >
-                    Jetzt Angebot anfordern
+                    Jetzt Haus sanieren
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -136,15 +137,15 @@ export default function Haussanierung() {
               <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
+                  <span>Energetische Modernisierung</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Garantie</span>
+                  <span>5 Jahre Gewährleistung</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24h Antwort</span>
+                  <span>Fördermittel-Beratung</span>
                 </div>
               </div>
             </div>
