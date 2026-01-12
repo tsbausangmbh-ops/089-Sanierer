@@ -787,10 +787,11 @@ export default function Home() {
                 <span className="text-orange-400">Stressfrei & zum Festpreis.</span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-white/90 mb-5 leading-relaxed max-w-lg">
-                Ein Ansprechpartner. Ein verbindlicher Termin. 
-                <strong className="text-white"> Keine Überraschungen.</strong>
-              </p>
+              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
+                <span>Ein Ansprechpartner.</span>
+                <span>Ein verbindlicher Termin.</span>
+                <strong className="text-white">Keine Überraschungen.</strong>
+              </div>
 
               <p className="text-white/90 text-sm mb-3 font-medium">
                 Schluss mit der endlosen Handwerkersuche. Wir lösen Ihr Problem - jetzt.
