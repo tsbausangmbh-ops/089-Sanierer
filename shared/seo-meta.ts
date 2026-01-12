@@ -113,6 +113,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/rechner") {
+    return {
+      title: "Sanierungsrechner München | Kosten berechnen | 089-Sanierer",
+      description: "Berechnen Sie die Kosten für Ihre Wohnungs- oder Haussanierung in München. Online-Rechner für Komplettsanierung, Badsanierung, Elektro und mehr. Unverbindlich.",
+      keywords: "Sanierungsrechner München, Sanierung Kosten Rechner, Badsanierung Rechner, Renovierungskosten berechnen München",
+      canonical: `${BASE_URL}/rechner`,
+      ogTitle: "Sanierungsrechner - Kosten online berechnen",
+      ogDescription: "Berechnen Sie jetzt die ungefähren Kosten für Ihre Sanierung in München. Schnell und unverbindlich.",
+    };
+  }
+
   if (normalizedPath === "/kontakt") {
     return {
       title: "Kontakt | 089-Sanierer | Sanierung Beratung",
