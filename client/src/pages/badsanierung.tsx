@@ -85,7 +85,7 @@ export default function Badsanierung() {
 
       <main>
         {/* Hero Section - matching homepage style */}
-        <section className="relative min-h-[50vh] lg:min-h-[55vh] flex items-center overflow-hidden">
+        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center scale-105"
             style={{ backgroundImage: `url(${bathroomImg})` }}
