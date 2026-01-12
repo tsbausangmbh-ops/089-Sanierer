@@ -17,16 +17,29 @@ import {
   Hammer,
   Euro,
   CheckCircle,
-  Phone,
-  ArrowRight,
   Calculator,
   Shield,
   Clock,
   HelpCircle,
-  BadgeCheck
+  Phone,
+  ArrowRight
 } from "lucide-react";
-
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import kostenImg from "@assets/generated_images/complete_home_renovation_result.png";
+
+const kostenHeroContent: HeroContent = {
+  backgroundImage: kostenImg,
+  badge: "Münchner Marktpreise 2026",
+  titleLine1: "Was kostet eine Sanierung?",
+  titleLine2: "Alle Preise transparent.",
+  descriptions: ["Badsanierung ab 9.200€.", "Komplettsanierung ab 800€/m²."],
+  strongText: "Garantierter Endpreis.",
+  subText: "Keine versteckten Kosten. Keine bösen Überraschungen nach Projektstart.",
+  ctaText: "Individuelles Angebot",
+  ctaLink: "/anfrage",
+  checkmarks: ["Preise inkl. Material & Arbeit", "Kostenlose Erstberatung", "Angebot in 48h"],
+  dataTestIdPrefix: "kosten"
+};
 
 const kostenFaqs = [
   {
@@ -107,78 +120,7 @@ export default function Kosten() {
       <SiteHeader />
 
       <main>
-        {/* Hero Section - matching homepage style */}
-        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: `url(${kostenImg})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-          </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <BadgeCheck className="w-4 h-4 text-green-400" />
-                <span>Münchner Marktpreise 2026</span>
-              </div>
-              
-              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Was kostet eine Sanierung? <br />
-                <span className="text-orange-400">Alle Preise transparent.</span>
-              </h1>
-              
-              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Badsanierung ab 9.200€.</span>
-                <span>Komplettsanierung ab 800€/m².</span>
-                <strong className="text-white">Garantierter Endpreis.</strong>
-              </div>
-
-              <p className="text-white/90 text-sm mb-3 font-medium">
-                Keine versteckten Kosten. Keine bösen Überraschungen nach Projektstart.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-5">
-                <Link href="/anfrage">
-                  <Button 
-                    size="lg" 
-                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
-                    data-testid="button-anfrage-hero"
-                  >
-                    Individuelles Angebot
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-                <a href="tel:+498944438872">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
-                    data-testid="button-phone-hero"
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 - Anrufen
-                  </Button>
-                </a>
-              </div>
-
-              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Preise inkl. Material & Arbeit</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Kostenlose Erstberatung</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Angebot in 48h</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <GlobalHero content={kostenHeroContent} />
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">

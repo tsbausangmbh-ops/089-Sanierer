@@ -59,11 +59,23 @@ function usePageTracking() {
   }, [location]);
 }
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [location]);
+  
+  return null;
+}
+
 function Router() {
   usePageTracking();
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Switch>
+    <>
+      <ScrollToTop />
+      <Suspense fallback={<PageLoader />}>
+        <Switch>
         <Route path="/" component={Home} />
         <Route path="/anfrage" component={Funnel} />
         <Route path="/bestaetigung" component={Confirmation} />
@@ -97,7 +109,8 @@ function Router() {
         <Route path="/danke" component={Confirmation} />
         <Route component={NotFound} />
       </Switch>
-    </Suspense>
+      </Suspense>
+    </>
   );
 }
 

@@ -19,6 +19,20 @@ import {
 } from "@/components/ui/accordion";
 
 import heroImage from "@assets/generated_images/modern_renovated_home_interior.png";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
+
+const homeHeroContent: HeroContent = {
+  backgroundImage: heroImage,
+  badge: "268+ zufriedene Familien in München",
+  titleLine1: "Ihre Sanierung.",
+  titleLine2: "Stressfrei & zum Festpreis.",
+  descriptions: ["Ein Ansprechpartner.", "Ein verbindlicher Termin."],
+  strongText: "Keine Überraschungen.",
+  subText: "Schluss mit der endlosen Handwerkersuche. Wir lösen Ihr Problem - jetzt.",
+  ctaText: "Jetzt Problem lösen lassen",
+  checkmarks: ["Festpreisgarantie", "5 Jahre Garantie", "24h Antwort"],
+  dataTestIdPrefix: "hero"
+};
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
 import kitchenImg from "@assets/generated_images/kitchen_renovation_work.png";
 import floorImg from "@assets/generated_images/parquet_floor_renovation.png";
@@ -768,76 +782,7 @@ export default function Home() {
         <SiteHeader />
 
         {/* Hero Section - Clean & Professional */}
-        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: `url(${heroImage})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-          </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <BadgeCheck className="w-4 h-4 text-green-400" />
-                <span>268+ zufriedene Familien in München</span>
-              </div>
-              
-              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Ihre Sanierung. <br />
-                <span className="text-orange-400">Stressfrei & zum Festpreis.</span>
-              </h1>
-              
-              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Ein Ansprechpartner.</span>
-                <span>Ein verbindlicher Termin.</span>
-                <strong className="text-white">Keine Überraschungen.</strong>
-              </div>
-
-              <p className="text-white/90 text-sm mb-3 font-medium">
-                Schluss mit der endlosen Handwerkersuche. Wir lösen Ihr Problem - jetzt.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-5">
-                <Button 
-                  size="lg" 
-                  onClick={scrollToForm}
-                  className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
-                  data-testid="button-hero-cta"
-                >
-                  Jetzt Problem lösen lassen
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <a href="tel:+498944438872">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
-                    data-testid="button-hero-phone"
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 - Anrufen
-                  </Button>
-                </a>
-              </div>
-
-              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Festpreisgarantie</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Garantie</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24h Antwort</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <GlobalHero content={homeHeroContent} scrollToElement={scrollToForm} />
 
         {/* Stats Section */}
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">

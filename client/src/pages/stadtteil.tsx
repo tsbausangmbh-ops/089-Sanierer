@@ -13,8 +13,6 @@ import {
 import {
   MapPin,
   CheckCircle,
-  Phone,
-  ArrowRight,
   Clock,
   Euro,
   Shield,
@@ -23,9 +21,10 @@ import {
   Building,
   Hammer,
   HelpCircle,
-  BadgeCheck
+  Phone,
+  ArrowRight
 } from "lucide-react";
-
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import stadtteilImg from "@assets/generated_images/modern_renovated_home_interior.png";
 
 interface StadtteilData {
@@ -138,6 +137,20 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
     return null;
   }
 
+  const stadtteilHeroContent: HeroContent = {
+    backgroundImage: stadtteilImg,
+    badge: `Ihr Sanierungspartner in ${data.name}`,
+    titleLine1: `Sanierung in ${data.name}.`,
+    titleLine2: "Lokal & zum Festpreis.",
+    descriptions: [`Wir kennen ${data.name} und seine Gebäude.`, "Altbau-Spezialisten vor Ort."],
+    strongText: "Festpreisgarantie.",
+    subText: `${data.beschreibung.split('.')[0]}.`,
+    ctaText: `Jetzt Angebot für ${data.name}`,
+    ctaLink: "/anfrage",
+    checkmarks: [`Lokale Expertise ${data.name}`, "5 Jahre Gewährleistung", "Beratung in 24h"],
+    dataTestIdPrefix: data.slug
+  };
+
   const faqs = [
     {
       frage: `Wie lange dauert eine Sanierung in ${data.name}?`,
@@ -174,78 +187,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
       <SiteHeader />
 
       <main>
-        {/* Hero Section - matching homepage style */}
-        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: `url(${stadtteilImg})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-          </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <BadgeCheck className="w-4 h-4 text-green-400" />
-                <span>Ihr Sanierungspartner in {data.name}</span>
-              </div>
-              
-              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Sanierung in {data.name}. <br />
-                <span className="text-orange-400">Lokal & zum Festpreis.</span>
-              </h1>
-              
-              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Wir kennen {data.name} und seine Gebäude.</span>
-                <span>Altbau-Spezialisten vor Ort.</span>
-                <strong className="text-white">Festpreisgarantie.</strong>
-              </div>
-
-              <p className="text-white/90 text-sm mb-3 font-medium">
-                {data.beschreibung.split('.')[0]}.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-5">
-                <Link href="/anfrage">
-                  <Button 
-                    size="lg" 
-                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
-                    data-testid={`button-anfrage-${data.slug}`}
-                  >
-                    Jetzt Angebot für {data.name}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-                <a href="tel:+498944438872">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
-                    data-testid={`button-phone-${data.slug}`}
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 - Anrufen
-                  </Button>
-                </a>
-              </div>
-
-              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Lokale Expertise {data.name}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Gewährleistung</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Beratung in 24h</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <GlobalHero content={stadtteilHeroContent} />
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">

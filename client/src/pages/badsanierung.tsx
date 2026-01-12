@@ -13,8 +13,6 @@ import {
 import {
   Bath,
   CheckCircle,
-  Phone,
-  ArrowRight,
   Clock,
   Euro,
   Shield,
@@ -22,10 +20,25 @@ import {
   Sparkles,
   Users,
   HelpCircle,
-  BadgeCheck
+  Phone,
+  ArrowRight
 } from "lucide-react";
-
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
+
+const badHeroContent: HeroContent = {
+  backgroundImage: bathroomImg,
+  badge: "120+ Bäder in München saniert",
+  titleLine1: "Ihr Traumbad.",
+  titleLine2: "In 2-3 Wochen fertig.",
+  descriptions: ["Ein Ansprechpartner für alles.", "Bodengleiche Dusche inklusive."],
+  strongText: "Ab 9.200€ Festpreis.",
+  subText: "Kein Koordinationsstress mit verschiedenen Handwerkern. Wir machen alles.",
+  ctaText: "Jetzt Traumbad planen",
+  ctaLink: "/anfrage?service=badsanierung",
+  checkmarks: ["Komplettpreis ohne Nachzahlung", "5 Jahre Gewährleistung", "Beratung innerhalb 24h"],
+  dataTestIdPrefix: "bad"
+};
 
 const badFeatures = [
   { title: "Bodengleiche Dusche", description: "Modernes Design, barrierefrei" },
@@ -85,78 +98,7 @@ export default function Badsanierung() {
       <SiteHeader />
 
       <main>
-        {/* Hero Section - matching homepage style */}
-        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center scale-105"
-            style={{ backgroundImage: `url(${bathroomImg})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-          </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-                <BadgeCheck className="w-4 h-4 text-green-400" />
-                <span>120+ Bäder in München saniert</span>
-              </div>
-              
-              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Ihr Traumbad. <br />
-                <span className="text-orange-400">In 2-3 Wochen fertig.</span>
-              </h1>
-              
-              <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
-                <span>Ein Ansprechpartner für alles.</span>
-                <span>Bodengleiche Dusche inklusive.</span>
-                <strong className="text-white">Ab 9.200€ Festpreis.</strong>
-              </div>
-
-              <p className="text-white/90 text-sm mb-3 font-medium">
-                Kein Koordinationsstress mit verschiedenen Handwerkern. Wir machen alles.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-5">
-                <Link href="/anfrage?service=badsanierung">
-                  <Button 
-                    size="lg" 
-                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
-                    data-testid="button-anfrage-bad"
-                  >
-                    Jetzt Traumbad planen
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-                <a href="tel:+498944438872">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
-                    data-testid="button-phone-bad"
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    089 - Anrufen
-                  </Button>
-                </a>
-              </div>
-
-              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Komplettpreis ohne Nachzahlung</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>5 Jahre Gewährleistung</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Beratung innerhalb 24h</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <GlobalHero content={badHeroContent} />
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-24">
