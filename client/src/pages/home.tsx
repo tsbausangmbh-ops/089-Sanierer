@@ -820,7 +820,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="flex flex-wrap gap-4 text-white/90 text-sm">
+              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>Festpreisgarantie</span>
@@ -1085,9 +1085,10 @@ export default function Home() {
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Das sagen unsere <span className="text-accent">Kunden</span>
               </h2>
-              <p className="text-lg text-muted-foreground">
-                Echte Erfahrungen. Echte Ergebnisse.
-              </p>
+              <div className="text-lg text-muted-foreground flex flex-col gap-0.5">
+                <span>Echte Erfahrungen.</span>
+                <span>Echte Ergebnisse.</span>
+              </div>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
@@ -1202,13 +1203,14 @@ export default function Home() {
               Wie lange wollen Sie noch mit <br className="hidden lg:block" />
               Ihrem Sanierungsproblem leben?
             </h2>
-            <p className="text-xl opacity-90 mb-2 max-w-2xl mx-auto">
-              <strong>In 3 Monaten</strong> könnten Sie in Ihrem frisch sanierten Zuhause sitzen. 
-              Oder Sie schieben es wieder auf.
-            </p>
-            <p className="text-lg opacity-80 mb-6 max-w-xl mx-auto">
-              Wir sind die Problemlöser, die Sie suchen. Der erste Schritt dauert nur 2 Minuten.
-            </p>
+            <div className="text-xl opacity-90 mb-4 max-w-2xl mx-auto flex flex-col gap-1">
+              <span><strong>In 3 Monaten</strong> könnten Sie in Ihrem frisch sanierten Zuhause sitzen.</span>
+              <span>Oder Sie schieben es wieder auf.</span>
+            </div>
+            <div className="text-lg opacity-80 mb-6 max-w-xl mx-auto flex flex-col gap-0.5">
+              <span>Wir sind die Problemlöser, die Sie suchen.</span>
+              <span>Der erste Schritt dauert nur 2 Minuten.</span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
