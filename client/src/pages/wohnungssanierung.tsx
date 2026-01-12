@@ -21,7 +21,8 @@ import {
   Droplets,
   Layers,
   Paintbrush,
-  HelpCircle
+  HelpCircle,
+  ArrowRight
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import wohnungImg from "@assets/generated_images/renovated_luxury_apartment_interior.png";
