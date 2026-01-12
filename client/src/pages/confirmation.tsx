@@ -156,11 +156,11 @@ export default function Confirmation() {
                 0152 122 740 43
               </a>
               <a 
-                href="mailto:info@komplettsanierungen-haus-wohnung.de" 
+                href="mailto:info@089-sanierer.de" 
                 className="inline-flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-foreground"
               >
                 <Mail className="w-4 h-4" />
-                info@komplettsanierungen-haus-wohnung.de
+                info@089-sanierer.de
               </a>
             </div>
           </Card>

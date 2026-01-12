@@ -93,9 +93,9 @@ export function SeoFooter() {
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 0152 122 740 43
               </a>
-              <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center gap-2 hover:text-white" itemProp="email" data-testid="link-footer-email">
+              <a href="mailto:info@089-sanierer.de" className="flex items-center gap-2 hover:text-white" itemProp="email" data-testid="link-footer-email">
                 <Mail className="w-4 h-4" aria-hidden="true" />
-                info@komplettsanierungen-haus-wohnung.de
+                info@089-sanierer.de
               </a>
               <div className="flex items-start gap-2" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />

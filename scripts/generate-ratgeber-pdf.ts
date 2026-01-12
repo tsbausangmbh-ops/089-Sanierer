@@ -749,7 +749,7 @@ function createPDF() {
   doc.text("KSHW München – Komplettsanierungen Haus & Wohnung", { align: "center" });
   doc.text("Zielstattstr. 9, 81379 München", { align: "center" });
   doc.text("Telefon: 0152 122 740 43", { align: "center" });
-  doc.text("E-Mail: info@komplettsanierungen-haus-wohnung.de", { align: "center" });
+  doc.text("E-Mail: info@089-sanierer.de", { align: "center" });
   doc.text("Web: www.komplettsanierungen-haus-wohnung.de", { align: "center" });
   doc.moveDown(1);
   doc.fontSize(11).fillColor(ACCENT_COLOR).font("Helvetica-Bold");

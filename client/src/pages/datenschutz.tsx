@@ -103,7 +103,7 @@ export default function Datenschutz() {
                 <li>sowie den Eintrag „Einwilligung erteilt" in unserem internen CRM-System.</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                Die Einwilligung kann jederzeit widerrufen werden, per E-Mail an <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>. Der Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
+                Die Einwilligung kann jederzeit widerrufen werden, per E-Mail an <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>. Der Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
               </p>
               <p className="text-muted-foreground mt-4">
                 Die Einwilligungsdaten werden für die Dauer der gesetzlichen Nachweispflicht (gemäß Art. 5 Abs. 2 DSGVO) gespeichert und anschließend gelöscht, sofern keine längeren gesetzlichen Aufbewahrungsfristen bestehen.
@@ -123,7 +123,7 @@ export default function Datenschutz() {
             <section>
               <h2 className="text-xl font-bold mb-4">Widerruf der Einwilligung</h2>
               <p className="text-muted-foreground">
-                Sie haben jederzeit das Recht, Ihre Einwilligung zur Verarbeitung und Weitergabe Ihrer Daten an Partnerunternehmen zu widerrufen. Der Widerruf kann per E-Mail an <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a> erfolgen. Ein Widerruf hat keine Auswirkungen auf die Rechtmäßigkeit der vor dem Widerruf erfolgten Verarbeitung.
+                Sie haben jederzeit das Recht, Ihre Einwilligung zur Verarbeitung und Weitergabe Ihrer Daten an Partnerunternehmen zu widerrufen. Der Widerruf kann per E-Mail an <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a> erfolgen. Ein Widerruf hat keine Auswirkungen auf die Rechtmäßigkeit der vor dem Widerruf erfolgten Verarbeitung.
               </p>
             </section>
 
@@ -243,7 +243,7 @@ export default function Datenschutz() {
                 <strong>Einsatzbereiche:</strong> Wir nutzen KI-Technologien ausschließlich zur Verbesserung unserer Servicequalität, beispielsweise für die Analyse von Anfragen, Terminplanung oder Kommunikationsunterstützung. Es erfolgt keine automatisierte Entscheidungsfindung mit rechtlicher oder ähnlich erheblicher Wirkung für Sie.
               </p>
               <p className="text-muted-foreground mt-4">
-                <strong>Ihre Rechte:</strong> Sie haben das Recht, Auskunft über den Einsatz von KI-Systemen bei der Verarbeitung Ihrer Daten zu erhalten. Bei Fragen wenden Sie sich bitte an: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>
+                <strong>Ihre Rechte:</strong> Sie haben das Recht, Auskunft über den Einsatz von KI-Systemen bei der Verarbeitung Ihrer Daten zu erhalten. Bei Fragen wenden Sie sich bitte an: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
               </p>
             </section>
 
@@ -257,7 +257,7 @@ export default function Datenschutz() {
             <section>
               <h2 className="text-xl font-bold mb-4">Fragen an den Datenschutzbeauftragten</h2>
               <p className="text-muted-foreground">
-                Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>
+                Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
               </p>
             </section>
 

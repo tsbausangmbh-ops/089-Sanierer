@@ -2518,9 +2518,9 @@ export default function FunnelPage() {
                     <Phone className="w-4 h-4" />
                     0152 122 740 43
                   </a>
-                  <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center gap-2 hover:text-white">
+                  <a href="mailto:info@089-sanierer.de" className="flex items-center gap-2 hover:text-white">
                     <Mail className="w-4 h-4" />
-                    info@komplettsanierungen-haus-wohnung.de
+                    info@089-sanierer.de
                   </a>
                   <div className="flex items-start gap-2">
                     <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -2660,9 +2660,9 @@ export default function FunnelPage() {
                   <Phone className="w-4 h-4" />
                   0152 122 740 43
                 </a>
-                <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="flex items-center gap-2 hover:text-white">
+                <a href="mailto:info@089-sanierer.de" className="flex items-center gap-2 hover:text-white">
                   <Mail className="w-4 h-4" />
-                  info@komplettsanierungen-haus-wohnung.de
+                  info@089-sanierer.de
                 </a>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />

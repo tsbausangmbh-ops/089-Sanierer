@@ -239,7 +239,7 @@ export default function AGB() {
                 Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.
               </p>
               <p className="text-muted-foreground mt-4">
-                Kündigungen bedürfen zu ihrer Wirksamkeit der Textform (E-Mail oder Brief) und sind an folgende Adresse zu richten: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>
+                Kündigungen bedürfen zu ihrer Wirksamkeit der Textform (E-Mail oder Brief) und sind an folgende Adresse zu richten: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
               </p>
             </section>
 
