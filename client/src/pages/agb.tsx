@@ -1,10 +1,23 @@
 import { Link } from "wouter";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 import agbHeroImage from "@assets/generated_images/business_contract_agb.png";
+
+const agbHeroContent: HeroContent = {
+  backgroundImage: agbHeroImage,
+  badge: "Rechtliche Informationen",
+  titleLine1: "AGB.",
+  titleLine2: "Allgemeine Geschäftsbedingungen.",
+  descriptions: ["Transparente Vertragsbedingungen.", "Faire Konditionen für alle."],
+  strongText: "Ihre Sicherheit ist uns wichtig.",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "Faire Bedingungen"],
+  dataTestIdPrefix: "agb"
+};
 
 export default function AGB() {
   return (
@@ -16,14 +29,7 @@ export default function AGB() {
         canonicalPath="/agb"
       />
       <SiteHeader />
-      <PageHero 
-        title="AGB" 
-        subtitle="Allgemeine Geschäftsbedingungen"
-        showCta={false}
-        compact={true}
-        image={agbHeroImage}
-        imageAlt="Geschäftsbedingungen und Vertrag"
-      />
+      <GlobalHero content={agbHeroContent} />
       <Breadcrumb items={[{ label: "AGB" }]} />
 
       <main className="pb-16 flex-1">

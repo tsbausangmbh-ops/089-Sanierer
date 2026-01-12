@@ -4,10 +4,22 @@ import { Phone, ArrowLeft } from "lucide-react";
 import { SeoHead } from "@/components/seo-head";
 import { AppointmentBooking } from "@/components/appointment-booking";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import terminHeroImage from "@assets/generated_images/appointment_booking_calendar.png";
+
+const terminHeroContent: HeroContent = {
+  backgroundImage: terminHeroImage,
+  badge: "Kostenlose Beratung",
+  titleLine1: "Termin buchen.",
+  titleLine2: "Wir kommen zu Ihnen.",
+  descriptions: ["Persönliche Vor-Ort-Beratung.", "Festpreis-Angebot in 48h."],
+  strongText: "100% kostenlos & unverbindlich.",
+  ctaText: "Jetzt Termin wählen",
+  checkmarks: ["Flexible Termine Mo-Fr", "Experte vor Ort", "Angebot in 48h"],
+  dataTestIdPrefix: "termin"
+};
 
 export default function TerminPage() {
   return (
@@ -19,14 +31,7 @@ export default function TerminPage() {
         canonicalPath="/termin"
       />
       <SiteHeader />
-      <PageHero 
-        title="Kostenloser Beratungstermin" 
-        subtitle="Wählen Sie einen passenden Termin für Ihre persönliche Beratung"
-        showCta={false}
-        compact={true}
-        image={terminHeroImage}
-        imageAlt="Terminbuchung und Kalender"
-      />
+      <GlobalHero content={terminHeroContent} />
       <Breadcrumb items={[{ label: "Termin buchen" }]} />
 
       <main className="flex-1 pb-16">

@@ -12,11 +12,24 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 import contactHeroImage from "@assets/generated_images/customer_service_contact.png";
+
+const kontaktHeroContent: HeroContent = {
+  backgroundImage: contactHeroImage,
+  badge: "Wir sind für Sie da",
+  titleLine1: "Kontakt.",
+  titleLine2: "Sprechen Sie mit uns.",
+  descriptions: ["Telefon: 089 444438872.", "E-Mail: info@089-sanierer.de."],
+  strongText: "Antwort innerhalb 24h.",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["Mo-Fr 08:00-16:30 Uhr", "Kostenlose Beratung", "Vor Ort in München"],
+  dataTestIdPrefix: "kontakt"
+};
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein"),
@@ -85,16 +98,7 @@ export default function Kontakt() {
       />
       <SiteHeader />
 
-      <PageHero
-        title="Kontakt"
-        subtitle="Wir sind für Sie da"
-        description="Kostenlose Erstberatung, unverbindliches Angebot, persönlicher Ansprechpartner. Wir antworten innerhalb von 24 Stunden."
-        badge="Ihr direkter Draht zu uns"
-        showCta={false}
-        compact={true}
-        image={contactHeroImage}
-        imageAlt="Kundenservice und Beratung"
-      />
+      <GlobalHero content={kontaktHeroContent} />
       <Breadcrumb items={[{ label: "Kontakt" }]} />
 
       <main id="main-content" className="py-6 flex-1">

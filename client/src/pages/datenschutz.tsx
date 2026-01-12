@@ -1,10 +1,23 @@
 import { Link } from "wouter";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 import datenschutzHeroImage from "@assets/generated_images/data_privacy_protection.png";
+
+const datenschutzHeroContent: HeroContent = {
+  backgroundImage: datenschutzHeroImage,
+  badge: "DSGVO-konform",
+  titleLine1: "Datenschutz.",
+  titleLine2: "Ihre Daten sind sicher.",
+  descriptions: ["Transparente Datenverarbeitung.", "Ihre Rechte im Überblick."],
+  strongText: "100% DSGVO-konform.",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["Keine Datenweitergabe ohne Zustimmung", "Sichere Verschlüsselung", "Löschung auf Anfrage"],
+  dataTestIdPrefix: "datenschutz"
+};
 
 export default function Datenschutz() {
   return (
@@ -16,14 +29,7 @@ export default function Datenschutz() {
         canonicalPath="/datenschutz"
       />
       <SiteHeader />
-      <PageHero 
-        title="Datenschutz" 
-        subtitle="Ihre Daten sind sicher"
-        showCta={false}
-        compact={true}
-        image={datenschutzHeroImage}
-        imageAlt="Datenschutz und Sicherheit"
-      />
+      <GlobalHero content={datenschutzHeroContent} />
       <Breadcrumb items={[{ label: "Datenschutz" }]} />
 
       <main className="pb-16 flex-1">

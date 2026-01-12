@@ -4,11 +4,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, Paintbrush, Bath, ArrowRight, Euro, Calendar, CheckCircle, Building, Thermometer, DoorOpen, Zap, Triangle, Download, FileText, BookOpen } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 import ratgeberHeroImage from "@assets/generated_images/expert_renovation_advisor.png";
+
+const ratgeberHeroContent: HeroContent = {
+  backgroundImage: ratgeberHeroImage,
+  badge: "268+ Projekte Erfahrung",
+  titleLine1: "Sanierungs-Ratgeber.",
+  titleLine2: "Kosten, Förderung & Tipps.",
+  descriptions: ["Aus 268+ Projekten in München.", "Unser Wissen für Sie."],
+  strongText: "Kostenloser PDF-Download.",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["KfW-Förderung bis 45%", "Preisübersichten 2025", "Expertentipps"],
+  dataTestIdPrefix: "ratgeber"
+};
 
 export default function Ratgeber() {
   return (
@@ -20,15 +33,7 @@ export default function Ratgeber() {
         canonicalPath="/ratgeber"
       />
       <SiteHeader />
-      <PageHero 
-        title="Sanierung München Ratgeber" 
-        subtitle="Kosten, Förderung & Expertentipps"
-        description="Aus 268+ Projekten in München teilen wir unser Wissen mit Ihnen"
-        showCta={true}
-        compact={true}
-        image={ratgeberHeroImage}
-        imageAlt="Sanierungsexperte mit Beratungsunterlagen"
-      />
+      <GlobalHero content={ratgeberHeroContent} />
       <Breadcrumb items={[{ label: "Ratgeber" }]} />
 
       <main id="main-content" className="pb-16 flex-1">

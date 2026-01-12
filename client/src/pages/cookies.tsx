@@ -3,11 +3,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Cookie, Shield, BarChart3, Megaphone, Settings } from "lucide-react";
 import { CookieSettingsButton } from "@/components/cookie-consent";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 import cookiesHeroImage from "@assets/generated_images/website_cookies_settings.png";
+
+const cookiesHeroContent: HeroContent = {
+  backgroundImage: cookiesHeroImage,
+  badge: "Datenschutz",
+  titleLine1: "Cookie-Richtlinie.",
+  titleLine2: "Transparenz für Sie.",
+  descriptions: ["Welche Cookies nutzen wir?", "Ihre Einstellungen, Ihre Wahl."],
+  strongText: "DSGVO-konform.",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["Nur notwendige Cookies", "Keine Weitergabe an Dritte", "Jederzeit anpassbar"],
+  dataTestIdPrefix: "cookies"
+};
 
 export default function Cookies() {
   return (
@@ -19,14 +32,7 @@ export default function Cookies() {
         canonicalPath="/cookies"
       />
       <SiteHeader />
-      <PageHero 
-        title="Cookie-Richtlinie" 
-        subtitle="Transparenz über Cookies"
-        showCta={false}
-        compact={true}
-        image={cookiesHeroImage}
-        imageAlt="Cookie-Einstellungen"
-      />
+      <GlobalHero content={cookiesHeroContent} />
       <Breadcrumb items={[{ label: "Cookie-Richtlinie" }]} />
 
       <main className="pb-16 flex-1">

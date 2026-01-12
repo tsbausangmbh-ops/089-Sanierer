@@ -11,11 +11,24 @@ import {
 } from "@/components/ui/accordion";
 import { SiteHeader } from "@/components/site-header";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead, generateFaqSchema } from "@/components/seo-head";
 import pricingHeroImage from "@assets/generated_images/renovation_pricing_workspace.png";
+
+const faqHeroContent: HeroContent = {
+  backgroundImage: pricingHeroImage,
+  badge: "Häufige Fragen & Preise",
+  titleLine1: "FAQ & Preise.",
+  titleLine2: "Alle Antworten auf einen Blick.",
+  descriptions: ["Was kostet eine Sanierung?", "Wie lange dauert es?"],
+  strongText: "Transparente Preise ab 800€/m².",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "Kostenlose Beratung"],
+  dataTestIdPrefix: "faq"
+};
 import { 
   Phone, 
   Mail, 
@@ -373,14 +386,7 @@ export default function FaqPreise() {
       />
       <SiteHeader />
 
-      <PageHero
-        title="FAQ & Preise"
-        subtitle="Sanierungskosten München"
-        description="Keine versteckten Kosten, keine bösen Überraschungen. Transparente Preise aus 268+ Projekten in München."
-        compact={true}
-        image={pricingHeroImage}
-        imageAlt="Kostenplanung und Kalkulation"
-      />
+      <GlobalHero content={faqHeroContent} />
       <Breadcrumb items={[{ label: "FAQ & Preise" }]} />
 
       <main id="main-content" className="flex-1">

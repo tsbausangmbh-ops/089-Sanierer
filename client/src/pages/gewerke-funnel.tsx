@@ -13,11 +13,23 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { Breadcrumb } from "@/components/breadcrumb";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SeoHead } from "@/components/seo-head";
 import gewerkeHeroImage from "@assets/generated_images/skilled_trades_craftsmen.png";
+
+const gewerkeHeroContent: HeroContent = {
+  backgroundImage: gewerkeHeroImage,
+  badge: "Einzelne Gewerke",
+  titleLine1: "Handwerker gesucht?",
+  titleLine2: "Wir vermitteln Profis.",
+  descriptions: ["Maler, Elektriker, Sanitär.", "Alle Gewerke aus einer Hand."],
+  strongText: "Geprüfte Fachbetriebe.",
+  ctaText: "Jetzt Handwerker finden",
+  checkmarks: ["Meisterbetriebe", "Faire Preise", "Schnelle Verfügbarkeit"],
+  dataTestIdPrefix: "gewerke"
+};
 import { 
   ArrowRight,
   ArrowLeft,
@@ -335,14 +347,7 @@ export default function GewerkeFunnel() {
         canonicalPath="/gewerke"
       />
       <SiteHeader />
-      <PageHero 
-        title="Geprüfte Handwerker in München" 
-        subtitle="Schnell und kostenlos vermittelt – Wir finden den richtigen Fachbetrieb für Sie"
-        showCta={false}
-        compact={true}
-        image={gewerkeHeroImage}
-        imageAlt="Professionelle Handwerker bei der Arbeit"
-      />
+      <GlobalHero content={gewerkeHeroContent} />
       <Breadcrumb items={[{ label: "Handwerker finden" }]} />
 
       <main id="main-content" className="pb-16 flex-1">

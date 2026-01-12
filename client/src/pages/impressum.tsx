@@ -1,10 +1,23 @@
 import { Link } from "wouter";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 import impressumHeroImage from "@assets/generated_images/legal_documents_impressum.png";
+
+const impressumHeroContent: HeroContent = {
+  backgroundImage: impressumHeroImage,
+  badge: "Rechtliche Angaben",
+  titleLine1: "Impressum.",
+  titleLine2: "089-Sanierer München.",
+  descriptions: ["Mustafa Sakar.", "Hardenbergstr. 4, 80992 München."],
+  strongText: "Ihr lokaler Ansprechpartner.",
+  ctaText: "Jetzt anfragen",
+  ctaLink: "/anfrage",
+  checkmarks: ["Meisterbetrieb", "Vor Ort in München", "Persönliche Beratung"],
+  dataTestIdPrefix: "impressum"
+};
 
 export default function Impressum() {
   return (
@@ -16,14 +29,7 @@ export default function Impressum() {
         canonicalPath="/impressum"
       />
       <SiteHeader />
-      <PageHero 
-        title="Impressum" 
-        subtitle="089-Sanierer"
-        showCta={false}
-        compact={true}
-        image={impressumHeroImage}
-        imageAlt="Rechtliche Dokumente"
-      />
+      <GlobalHero content={impressumHeroContent} />
       <Breadcrumb items={[{ label: "Impressum" }]} />
 
       <main className="pb-16 flex-1">

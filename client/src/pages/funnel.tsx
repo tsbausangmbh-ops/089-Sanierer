@@ -50,7 +50,7 @@ import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
 import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.png";
 import komplettsanierungHeroImage from "@assets/generated_images/complete_renovation_before-after_split.png";
@@ -104,6 +104,105 @@ const serviceHeroImages: Record<string, string> = {
   heizungssanierung: heizungssanierungHeroImage,
   "energetische-sanierung": energetischeSanierungHeroImage,
   dachsanierung: dachsanierungHeroImage,
+};
+
+const serviceHeroContents: Record<string, HeroContent> = {
+  komplettsanierung: {
+    backgroundImage: komplettsanierungHeroImage,
+    badge: "268+ Projekte in München",
+    titleLine1: "Komplettsanierung München.",
+    titleLine2: "Alles aus einer Hand.",
+    descriptions: ["Alle Gewerke koordiniert.", "Ein fester Ansprechpartner."],
+    strongText: "Ab 1.000€/m² Festpreis.",
+    subText: "Schluss mit Handwerker-Chaos. Wir lösen Ihr Sanierungsproblem.",
+    ctaText: "Jetzt Anfrage starten",
+    checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "Termingarantie"],
+    dataTestIdPrefix: "funnel-komplett"
+  },
+  badsanierung: {
+    backgroundImage: badsanierungHeroImage,
+    badge: "80+ Bäder in München saniert",
+    titleLine1: "Badsanierung München.",
+    titleLine2: "In 10-15 Werktagen fertig.",
+    descriptions: ["Fliesenleger, Sanitär, Elektriker.", "Alles perfekt koordiniert."],
+    strongText: "Ab 8.000€ Festpreis.",
+    subText: "Ihr neues Traumbad ohne Stress. Ein Ansprechpartner für alles.",
+    ctaText: "Jetzt Bad planen",
+    checkmarks: ["Komplettpreis ohne Nachzahlung", "5 Jahre Gewährleistung", "Ersatz-WC organisiert"],
+    dataTestIdPrefix: "funnel-bad"
+  },
+  kuechensanierung: {
+    backgroundImage: kuechensanierungHeroImage,
+    badge: "Küchenumbau-Experten",
+    titleLine1: "Küchensanierung München.",
+    titleLine2: "Elektrik, Wasser, Fliesen.",
+    descriptions: ["Alle Anschlüsse fachgerecht verlegt.", "Montage aus einer Hand."],
+    strongText: "Ab 3.500€ Festpreis.",
+    subText: "Neue Küche? Wir kümmern uns um die komplette Installation.",
+    ctaText: "Jetzt Küche planen",
+    checkmarks: ["Starkstrom für Induktion", "Wasseranschlüsse verlegt", "Schnelle Umsetzung"],
+    dataTestIdPrefix: "funnel-kueche"
+  },
+  bodensanierung: {
+    backgroundImage: bodensanierungHeroImage,
+    badge: "Boden-Profis München",
+    titleLine1: "Bodensanierung München.",
+    titleLine2: "Parkett, Fliesen, Vinyl.",
+    descriptions: ["Professionelle Verlegung.", "Inklusive Untergrundvorbereitung."],
+    strongText: "Ab 35€/m² Festpreis.",
+    subText: "Neuer Boden in 2-5 Tagen. Sauber und termingerecht.",
+    ctaText: "Jetzt Boden planen",
+    checkmarks: ["Trittschalldämmung inklusive", "Sockelleisten montiert", "5 Jahre Gewährleistung"],
+    dataTestIdPrefix: "funnel-boden"
+  },
+  elektrosanierung: {
+    backgroundImage: elektrosanierungHeroImage,
+    badge: "Elektro-Meisterbetrieb",
+    titleLine1: "Elektrosanierung München.",
+    titleLine2: "Sicher & normgerecht.",
+    descriptions: ["Neue Leitungen nach VDE.", "Moderne Sicherungstechnik."],
+    strongText: "Ab 80€/m² Festpreis.",
+    subText: "Ihre Elektrik auf dem neuesten Stand. Sicher und zuverlässig.",
+    ctaText: "Jetzt Elektrik planen",
+    checkmarks: ["VDE-konforme Installation", "Starkstrom & Schwachstrom", "E-Check inklusive"],
+    dataTestIdPrefix: "funnel-elektro"
+  },
+  heizungssanierung: {
+    backgroundImage: heizungssanierungHeroImage,
+    badge: "Heizungs-Experten",
+    titleLine1: "Heizungssanierung München.",
+    titleLine2: "Effizient & förderfähig.",
+    descriptions: ["Wärmepumpe, Gas, Fernwärme.", "Fachgerechte Installation."],
+    strongText: "Mit Förderberatung.",
+    subText: "Moderne Heiztechnik spart bis zu 40% Heizkosten.",
+    ctaText: "Jetzt Heizung planen",
+    checkmarks: ["KfW/BAFA Förderung", "Alle Heizsysteme", "Wartungsvertrag möglich"],
+    dataTestIdPrefix: "funnel-heizung"
+  },
+  "energetische-sanierung": {
+    backgroundImage: energetischeSanierungHeroImage,
+    badge: "Energieberater im Team",
+    titleLine1: "Energetische Sanierung.",
+    titleLine2: "Bis zu 50% Heizkosten sparen.",
+    descriptions: ["Dämmung, Fenster, Heizung.", "Ganzheitliches Konzept."],
+    strongText: "Mit Förderberatung.",
+    subText: "Weniger Energiekosten, mehr Wohnkomfort, höherer Immobilienwert.",
+    ctaText: "Jetzt Energie sparen",
+    checkmarks: ["Bis zu 45% Förderung", "Energieausweis inklusive", "iSFP-Beratung"],
+    dataTestIdPrefix: "funnel-energie"
+  },
+  dachsanierung: {
+    backgroundImage: dachsanierungHeroImage,
+    badge: "Dach-Profis München",
+    titleLine1: "Dachsanierung München.",
+    titleLine2: "Dicht, gedämmt, langlebig.",
+    descriptions: ["Neueindeckung & Dämmung.", "Alle Dachformen."],
+    strongText: "Mit Förderberatung.",
+    subText: "Ihr Dach in Profi-Händen. 10 Jahre Dichtheitsgarantie.",
+    ctaText: "Jetzt Dach planen",
+    checkmarks: ["Alle Dachziegel-Arten", "Aufsparrendämmung", "Dachfenster-Einbau"],
+    dataTestIdPrefix: "funnel-dach"
+  }
 };
 
 // NLP section images mapping with captions for each service
@@ -2517,14 +2616,18 @@ export default function FunnelPage() {
           schema={combinedSchema}
         />
         <SiteHeader />
-        <PageHero 
-          title={content.headline}
-          subtitle={content.subheadline}
-          showCta={true}
-          showStats={false}
-          compact={true}
-          image={serviceHeroImages[preSelectedService] || consultationHeroImage}
-          imageAlt={`${content.headline.split("|")[0].trim()} in München`}
+        <GlobalHero 
+          content={serviceHeroContents[preSelectedService] || {
+            backgroundImage: consultationHeroImage,
+            badge: "089 Sanierer München",
+            titleLine1: "Ihre Sanierung.",
+            titleLine2: "Professionell & stressfrei.",
+            descriptions: ["Ein Ansprechpartner für alles.", "Festpreis ohne Überraschungen."],
+            strongText: "Jetzt anfragen.",
+            ctaText: "Anfrage starten",
+            checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "24h Antwort"],
+            dataTestIdPrefix: "funnel-default"
+          }}
         />
 
         <main id="main-content" className="pb-16 flex-1">

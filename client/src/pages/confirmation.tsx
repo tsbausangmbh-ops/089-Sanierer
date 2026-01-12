@@ -17,10 +17,23 @@ import {
 import { SeoHead } from "@/components/seo-head";
 import { AppointmentBooking } from "@/components/appointment-booking";
 import { SiteHeader } from "@/components/site-header";
-import { PageHero } from "@/components/page-hero";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import confirmationHeroImage from "@assets/generated_images/success_confirmation_checkmark.png";
+
+const confirmationHeroContent: HeroContent = {
+  backgroundImage: confirmationHeroImage,
+  badge: "Anfrage erfolgreich",
+  titleLine1: "Vielen Dank!",
+  titleLine2: "Wir haben Ihre Anfrage erhalten.",
+  descriptions: ["Wir prüfen Ihr Projekt.", "Ein Experte meldet sich bei Ihnen."],
+  strongText: "Rückmeldung innerhalb 48h.",
+  ctaText: "Termin buchen",
+  ctaLink: "/termin",
+  checkmarks: ["Kostenlose Erstberatung", "Festpreisangebot", "Persönlicher Ansprechpartner"],
+  dataTestIdPrefix: "confirmation"
+};
 
 export default function Confirmation() {
   const [showBooking, setShowBooking] = useState(false);
@@ -33,14 +46,7 @@ export default function Confirmation() {
         noIndex={true}
       />
       <SiteHeader />
-      <PageHero 
-        title="Anfrage erfolgreich gesendet" 
-        subtitle="Wir haben Ihr Problem verstanden und arbeiten bereits an Ihrer Lösung"
-        showCta={false}
-        compact={true}
-        image={confirmationHeroImage}
-        imageAlt="Erfolgreiche Bestätigung"
-      />
+      <GlobalHero content={confirmationHeroContent} />
       <Breadcrumb items={[{ label: "Bestätigung" }]} />
 
       <main className="flex-1 pb-16">
