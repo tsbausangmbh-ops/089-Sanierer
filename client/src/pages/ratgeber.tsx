@@ -32,7 +32,7 @@ export default function Ratgeber() {
       <Breadcrumb items={[{ label: "Ratgeber" }]} />
 
       <main id="main-content" className="pb-16 flex-1">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="max-w-7xl mx-auto px-2 lg:px-4">
           <Card className="mb-6 bg-gradient-to-r from-primary/10 via-primary/5 to-accent/10 border-primary/20">
             <CardContent className="pt-6">
               <div className="flex flex-col md:flex-row items-center gap-6">
