@@ -300,19 +300,10 @@ export default function RechnerPage() {
     // Check if Komplettsanierung is selected
     const hasKomplett = selectedServices.includes("komplett");
     
-    // Define core trades that together should match Komplettsanierung pricing
-    const coreTradesHaus = ["elektro", "sanitaer", "boden", "heizung", "maler"];
-    const coreTradesWohnung = ["elektro", "sanitaer", "boden", "heizkoerper", "maler"];
-    const coreTrades = propertyType === "haus" ? coreTradesHaus : coreTradesWohnung;
-    
-    // Count how many core trades are selected
-    const selectedCoreTrades = selectedServices.filter(s => coreTrades.includes(s));
-    const coreTradeCount = selectedCoreTrades.length;
-    
-    // Minimum per-sqm rates based on Komplettsanierung baseline
-    // When 3+ core trades are selected without Komplett, apply minimum floor
-    const minPerSqmHaus = 2800; // Komplettsanierung Haus rate
-    const minPerSqmWohnung = 1600; // Komplettsanierung Wohnung rate
+    // Maximum per-sqm rates based on Komplettsanierung baseline
+    // Individual services should always be cheaper than Komplettsanierung
+    const maxPerSqmHaus = 2800; // Komplettsanierung Haus rate
+    const maxPerSqmWohnung = 1600; // Komplettsanierung Wohnung rate
     
     selectedServices.forEach(serviceId => {
       const service = services.find(s => s.id === serviceId);
@@ -326,14 +317,14 @@ export default function RechnerPage() {
       }
     });
     
-    // Apply bundling floor: if 3+ core trades selected without Komplett,
-    // ensure minimum per-sqm rate matches Komplettsanierung baseline
-    if (!hasKomplett && coreTradeCount >= 3 && propertyType !== "foerderung") {
-      const minPerSqm = propertyType === "haus" ? minPerSqmHaus : minPerSqmWohnung;
-      // Apply 85% of the Komplettsanierung rate as floor (since individual trades should still be slightly cheaper)
-      const floorPerSqm = Math.round(minPerSqm * 0.85);
-      if (totalPerSqm < floorPerSqm) {
-        totalPerSqm = floorPerSqm;
+    // Apply bundling cap: individual services should always be cheaper than Komplettsanierung
+    // Cap combined per-sqm rate at 95% of Komplettsanierung baseline
+    if (!hasKomplett && propertyType !== "foerderung") {
+      const komplettsanierungRate = propertyType === "haus" ? maxPerSqmHaus : maxPerSqmWohnung;
+      // Cap at 95% of Komplettsanierung rate (individual trades should be cheaper)
+      const capPerSqm = Math.round(komplettsanierungRate * 0.95);
+      if (totalPerSqm > capPerSqm) {
+        totalPerSqm = capPerSqm;
       }
     }
     
