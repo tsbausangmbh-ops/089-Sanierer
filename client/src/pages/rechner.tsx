@@ -372,20 +372,30 @@ export default function RechnerPage() {
       "daemmung_haus": "energetische-sanierung",
     };
     
-    // Add service param based on selected services (prioritize main services)
+    // Add service param based on selected services (prioritize main services, then any other)
     if (propertyType === "foerderung") {
       params.set("service", "energetische-sanierung");
     } else {
-      // Find the most relevant service from selected ones
+      // Priority order for main services
       const priorityOrder = ["komplett", "bad", "kueche", "boden", "elektro", "heizung"];
-      let selectedService = "komplettsanierung";
+      let selectedService = "";
+      
+      // First check priority order
       for (const id of priorityOrder) {
         if (selectedServices.includes(id)) {
           selectedService = serviceIdMap[id] || "komplettsanierung";
           break;
         }
       }
-      params.set("service", selectedService);
+      
+      // If no priority service found, use first selected service's mapping
+      if (!selectedService && selectedServices.length > 0) {
+        const firstService = selectedServices[0];
+        selectedService = serviceIdMap[firstService] || "komplettsanierung";
+      }
+      
+      // Fallback to komplettsanierung if nothing selected
+      params.set("service", selectedService || "komplettsanierung");
     }
     
     // Add calculator data
