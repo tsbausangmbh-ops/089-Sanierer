@@ -250,20 +250,36 @@ export default function Kernsanierung() {
           </div>
         </section>
 
-        <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Jetzt Kernsanierung planen
+              Ihr Gebäude hat eine Rundum-Erneuerung verdient!
             </h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Kostenlose Erstberatung vor Ort. Wir prüfen, ob eine Kernsanierung sinnvoll ist.
+            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+              <span>Marode Leitungen, veraltete Heizung, undichte Fenster?</span>
+              <span><strong>Mit einer Kernsanierung starten Sie komplett neu.</strong></span>
+            </div>
+            <div className="text-base opacity-80 mb-6 flex flex-col gap-0.5">
+              <span>Wir koordinieren alle Gewerke - Sie haben nur einen Ansprechpartner.</span>
+              <span>Festpreis. Fester Termin. Qualitätsgarantie.</span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/anfrage?service=komplettsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-kern-cta">
+                  Ja, ich will komplett neu starten
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="tel:+498944438872">
+                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Erstberatung anfordern
+                </Button>
+              </a>
+            </div>
+            <p className="mt-6 text-sm opacity-70">
+              100% kostenlos. Wir prüfen vor Ort, ob eine Kernsanierung sinnvoll ist.
             </p>
-            <Link href="/anfrage?service=komplettsanierung">
-              <Button size="lg" variant="secondary" data-testid="button-anfrage-kern-cta">
-                Angebot anfordern
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
           </div>
         </section>
       </main>

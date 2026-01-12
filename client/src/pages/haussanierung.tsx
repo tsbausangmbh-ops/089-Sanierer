@@ -222,20 +222,36 @@ export default function Haussanierung() {
           </div>
         </section>
 
-        <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Jetzt Haussanierung planen
+              Ihr Haus verdient eine Komplettsanierung - Sie auch!
             </h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Kostenlose Erstberatung vor Ort. Festpreisangebot innerhalb von 48 Stunden.
+            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+              <span>Hohe Heizkosten, veraltete Technik, Sanierungsstau?</span>
+              <span><strong>Wir lösen alle Probleme - aus einer Hand.</strong></span>
+            </div>
+            <div className="text-base opacity-80 mb-6 flex flex-col gap-0.5">
+              <span>In wenigen Monaten wohnen Sie in Ihrem frisch sanierten Traumhaus.</span>
+              <span>Ein Ansprechpartner. Ein Festpreis. Keine Überraschungen.</span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/anfrage?service=komplettsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-haus-cta">
+                  Ja, ich will mein Haus sanieren lassen
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="tel:+498944438872">
+                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Jetzt beraten lassen
+                </Button>
+              </a>
+            </div>
+            <p className="mt-6 text-sm opacity-70">
+              100% kostenlos. Unverbindlich. Festpreisangebot in 48 Stunden.
             </p>
-            <Link href="/anfrage?service=komplettsanierung">
-              <Button size="lg" variant="secondary" data-testid="button-anfrage-haus-cta">
-                Angebot anfordern
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
           </div>
         </section>
       </main>

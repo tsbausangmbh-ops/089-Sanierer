@@ -229,20 +229,36 @@ export default function Kosten() {
           </div>
         </section>
 
-        <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Jetzt kostenloses Angebot anfordern
+              Schluss mit der Unsicherheit bei Sanierungskosten!
             </h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Beschreiben Sie Ihr Projekt und erhalten Sie innerhalb von 24 Stunden ein verbindliches Festpreisangebot.
+            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+              <span>Angst vor versteckten Kosten und bösen Überraschungen?</span>
+              <span><strong>Bei uns bekommen Sie einen Festpreis - garantiert.</strong></span>
+            </div>
+            <div className="text-base opacity-80 mb-6 flex flex-col gap-0.5">
+              <span>Der Preis im Angebot ist der Endpreis. Ohne Wenn und Aber.</span>
+              <span>Transparent. Verbindlich. Fair.</span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/anfrage">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-cta">
+                  Ja, ich will einen Festpreis
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="tel:+498944438872">
+                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Kosten klären - Jetzt anrufen
+                </Button>
+              </a>
+            </div>
+            <p className="mt-6 text-sm opacity-70">
+              100% kostenlos. Festpreisangebot in 24 Stunden. Keine versteckten Kosten.
             </p>
-            <Link href="/anfrage">
-              <Button size="lg" variant="secondary" data-testid="button-anfrage-cta">
-                Angebot anfordern
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
           </div>
         </section>
       </main>

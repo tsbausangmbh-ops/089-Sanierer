@@ -224,20 +224,36 @@ export default function Wohnungssanierung() {
           </div>
         </section>
 
-        <section className="py-4 lg:py-6 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Jetzt Wohnungssanierung planen
+              Schluss mit der alten Wohnung - Zeit für Ihr neues Zuhause!
             </h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Kostenlose Beratung und Festpreisangebot innerhalb von 24 Stunden.
+            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+              <span>Abgenutzte Böden, veraltete Küche, renovierungsbedürftiges Bad?</span>
+              <span><strong>Wir verwandeln Ihre Wohnung komplett.</strong></span>
+            </div>
+            <div className="text-base opacity-80 mb-6 flex flex-col gap-0.5">
+              <span>Ob Eigentümer oder Vermieter - wir haben die passende Lösung.</span>
+              <span>Festpreis. Fester Termin. Fertig.</span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/anfrage?service=komplettsanierung">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-wohnung-cta">
+                  Ja, Wohnung jetzt sanieren lassen
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="tel:+498944438872">
+                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Kostenlos beraten lassen
+                </Button>
+              </a>
+            </div>
+            <p className="mt-6 text-sm opacity-70">
+              100% kostenlos. Unverbindlich. Antwort in 24 Stunden garantiert.
             </p>
-            <Link href="/anfrage?service=komplettsanierung">
-              <Button size="lg" variant="secondary" data-testid="button-anfrage-wohnung-cta">
-                Angebot anfordern
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
           </div>
         </section>
       </main>
