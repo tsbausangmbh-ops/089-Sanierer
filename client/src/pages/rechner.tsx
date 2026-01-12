@@ -112,7 +112,7 @@ const foerderungServices: ServiceOption[] = [
     id: "waermepumpe", 
     label: "Wärmepumpe", 
     icon: ThermometerSun,
-    basePrice: { wohnung: 15000, haus: 35000, foerderung: 35000 },
+    basePrice: { wohnung: 22000, haus: 45000, foerderung: 45000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 35
   },
@@ -120,23 +120,23 @@ const foerderungServices: ServiceOption[] = [
     id: "daemmung", 
     label: "Fassadendämmung", 
     icon: HomeIcon,
-    basePrice: { wohnung: 10000, haus: 35000, foerderung: 35000 },
-    perSqm: { wohnung: 140, haus: 280, foerderung: 280 },
+    basePrice: { wohnung: 8000, haus: 15000, foerderung: 15000 },
+    perSqm: { wohnung: 160, haus: 200, foerderung: 200 },
     foerderungProzent: 20
   },
   { 
     id: "fenster", 
     label: "Fensteraustausch", 
     icon: Wind,
-    basePrice: { wohnung: 6000, haus: 22000, foerderung: 22000 },
-    perSqm: { wohnung: 90, haus: 180, foerderung: 180 },
+    basePrice: { wohnung: 12000, haus: 45000, foerderung: 45000 },
+    perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 20
   },
   { 
     id: "solar", 
     label: "Solarthermie", 
     icon: Sun,
-    basePrice: { wohnung: 8000, haus: 18000, foerderung: 18000 },
+    basePrice: { wohnung: 12000, haus: 25000, foerderung: 25000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 25
   },
@@ -144,7 +144,7 @@ const foerderungServices: ServiceOption[] = [
     id: "photovoltaik", 
     label: "Photovoltaik", 
     icon: Zap,
-    basePrice: { wohnung: 10000, haus: 28000, foerderung: 28000 },
+    basePrice: { wohnung: 15000, haus: 35000, foerderung: 35000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 0
   },
@@ -152,7 +152,7 @@ const foerderungServices: ServiceOption[] = [
     id: "heizung_foerder", 
     label: "Heizungstausch (förderfähig)", 
     icon: Flame,
-    basePrice: { wohnung: 10000, haus: 28000, foerderung: 28000 },
+    basePrice: { wohnung: 15000, haus: 38000, foerderung: 38000 },
     perSqm: { wohnung: 0, haus: 0, foerderung: 0 },
     foerderungProzent: 30
   }
