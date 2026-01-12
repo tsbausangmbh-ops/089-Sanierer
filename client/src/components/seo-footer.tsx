@@ -133,17 +133,6 @@ export function SeoFooter() {
                 <Mail className="w-4 h-4" aria-hidden="true" />
                 info@089-sanierer.de
               </a>
-              <div className="flex items-start gap-2" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                <span>
-                  <span itemProp="streetAddress">Hardenbergstr. 4</span><br />
-                  <span itemProp="postalCode">80992</span> <span itemProp="addressLocality">München</span>
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" aria-hidden="true" />
-                <span>Mo-Fr: 8:00-16:30 Uhr</span>
-              </div>
             </div>
           </div>
 
