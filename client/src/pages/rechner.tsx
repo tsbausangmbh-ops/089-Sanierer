@@ -343,6 +343,47 @@ export default function RechnerPage() {
     setSelectedServices([]);
   };
 
+  // Generate URL with calculator data for /anfrage
+  const getAnfrageUrl = () => {
+    const services = getCurrentServices();
+    const selectedServiceLabels = selectedServices
+      .map(id => services.find(s => s.id === id)?.label)
+      .filter(Boolean)
+      .join(', ');
+    
+    const params = new URLSearchParams();
+    
+    // Add service param based on selected services
+    if (propertyType === "foerderung") {
+      params.set("service", "energetische-sanierung");
+    } else if (selectedServices.includes("komplettsanierung")) {
+      params.set("service", "komplettsanierung");
+    } else if (selectedServices.includes("bad")) {
+      params.set("service", "badsanierung");
+    } else if (selectedServices.includes("kueche")) {
+      params.set("service", "kuechensanierung");
+    } else if (selectedServices.includes("boden")) {
+      params.set("service", "bodensanierung");
+    } else if (selectedServices.includes("elektro")) {
+      params.set("service", "elektrosanierung");
+    } else if (selectedServices.includes("heizung")) {
+      params.set("service", "heizungssanierung");
+    }
+    
+    // Add calculator data
+    params.set("rechner", "1");
+    params.set("sqm", customSqm.toString());
+    params.set("objekt", propertyType || "");
+    params.set("leistungen", selectedServiceLabels);
+    params.set("preis_min", price.min.toString());
+    params.set("preis_max", price.max.toString());
+    if (propertyType === "foerderung" && price.foerderung > 0) {
+      params.set("foerderung", price.foerderung.toString());
+    }
+    
+    return `/anfrage?${params.toString()}`;
+  };
+
   const price = calculatePrice();
   const currentServices = getCurrentServices();
 
@@ -665,7 +706,7 @@ export default function RechnerPage() {
                       }
                     </h3>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
-                      <Link href={propertyType === "foerderung" ? "/anfrage?service=energetische-sanierung" : "/anfrage"}>
+                      <Link href={getAnfrageUrl()}>
                         <Button 
                           size="lg" 
                           className={`h-14 px-8 text-lg font-semibold shadow-xl ${
@@ -718,7 +759,7 @@ export default function RechnerPage() {
               )}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={propertyType === "foerderung" ? "/anfrage?service=energetische-sanierung" : "/anfrage"}>
+              <Link href={getAnfrageUrl()}>
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-cta">
                   {propertyType === "foerderung" ? "Ja, ich will die maximale Förderung" : "Ja, ich will einen echten Festpreis"}
                   <ArrowRight className="w-5 h-5 ml-2" />
