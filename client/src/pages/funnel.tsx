@@ -826,9 +826,43 @@ export default function FunnelPage() {
   useEffect(() => {
     const params = new URLSearchParams(searchString);
     const serviceParam = params.get("service");
+    const isFromRechner = params.get("rechner") === "1";
     const validServices = ["komplettsanierung", "badsanierung", "kuechensanierung", "bodensanierung", "elektrosanierung", "heizungssanierung", "energetische-sanierung", "dachsanierung"];
     
-    if (serviceParam && validServices.includes(serviceParam)) {
+    if (isFromRechner) {
+      // Pre-fill form with calculator data
+      const sqm = params.get("sqm") || "";
+      const objekt = params.get("objekt") || "";
+      const leistungen = params.get("leistungen") || "";
+      const preisMin = params.get("preis_min") || "";
+      const preisMax = params.get("preis_max") || "";
+      const foerderung = params.get("foerderung") || "";
+      
+      // Map objekt to propertyType
+      let propertyType = "";
+      if (objekt === "wohnung") {
+        propertyType = "wohnung";
+      } else if (objekt === "haus") {
+        propertyType = "einfamilienhaus";
+      }
+      
+      // Create description with calculator summary
+      const calculatorSummary = `[Rechner-Anfrage]\nObjekttyp: ${objekt === "wohnung" ? "Wohnung" : objekt === "haus" ? "Haus" : "Energetische Sanierung"}\nWohnfläche: ${sqm} m²\nGewünschte Leistungen: ${leistungen}\nGeschätzte Kosten: ${parseInt(preisMin).toLocaleString('de-DE')} - ${parseInt(preisMax).toLocaleString('de-DE')} €${foerderung ? `\nMögliche Förderung: bis zu ${parseInt(foerderung).toLocaleString('de-DE')} €` : ""}`;
+      
+      setFormData(prev => ({
+        ...prev,
+        service: serviceParam && validServices.includes(serviceParam) ? serviceParam : "komplettsanierung",
+        propertyType: propertyType,
+        serviceDetails: {
+          ...prev.serviceDetails,
+          squareMeters: sqm,
+        },
+        description: calculatorSummary,
+      }));
+      
+      // Skip SEO intro and go directly to form
+      setCurrentStep(2);
+    } else if (serviceParam && validServices.includes(serviceParam)) {
       setPreSelectedService(serviceParam);
       // Show SEO intro if content exists for this service
       if (serviceSeoContent[serviceParam]) {

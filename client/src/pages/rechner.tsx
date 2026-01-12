@@ -353,21 +353,39 @@ export default function RechnerPage() {
     
     const params = new URLSearchParams();
     
-    // Add service param based on selected services
+    // Map calculator IDs to funnel service IDs
+    const serviceIdMap: Record<string, string> = {
+      "komplett": "komplettsanierung",
+      "bad": "badsanierung",
+      "kueche": "kuechensanierung",
+      "boden": "bodensanierung",
+      "elektro": "elektrosanierung",
+      "heizung": "heizungssanierung",
+      "sanitaer": "komplettsanierung", // no direct match, use komplett
+      "maler": "komplettsanierung", // no direct match, use komplett
+      "heizkoerper": "heizungssanierung", // related to heating
+      "entkernung": "komplettsanierung", // part of complete renovation
+      "abbruch_nichttragend": "komplettsanierung",
+      "abbruch_tragend": "komplettsanierung",
+      "fenster_rolladen": "komplettsanierung",
+      "keller": "komplettsanierung",
+      "daemmung_haus": "energetische-sanierung",
+    };
+    
+    // Add service param based on selected services (prioritize main services)
     if (propertyType === "foerderung") {
       params.set("service", "energetische-sanierung");
-    } else if (selectedServices.includes("komplettsanierung")) {
-      params.set("service", "komplettsanierung");
-    } else if (selectedServices.includes("bad")) {
-      params.set("service", "badsanierung");
-    } else if (selectedServices.includes("kueche")) {
-      params.set("service", "kuechensanierung");
-    } else if (selectedServices.includes("boden")) {
-      params.set("service", "bodensanierung");
-    } else if (selectedServices.includes("elektro")) {
-      params.set("service", "elektrosanierung");
-    } else if (selectedServices.includes("heizung")) {
-      params.set("service", "heizungssanierung");
+    } else {
+      // Find the most relevant service from selected ones
+      const priorityOrder = ["komplett", "bad", "kueche", "boden", "elektro", "heizung"];
+      let selectedService = "komplettsanierung";
+      for (const id of priorityOrder) {
+        if (selectedServices.includes(id)) {
+          selectedService = serviceIdMap[id] || "komplettsanierung";
+          break;
+        }
+      }
+      params.set("service", selectedService);
     }
     
     // Add calculator data
