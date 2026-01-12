@@ -49,7 +49,7 @@ const serviceOptions: ServiceOption[] = [
     label: "Komplettsanierung", 
     icon: HomeIcon,
     basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
-    perSqm: { wohnung: 1200, haus: 2800, foerderung: 3200 },
+    perSqm: { wohnung: 1600, haus: 2800, foerderung: 3200 },
     foerderungProzent: 20
   },
   { 
@@ -73,7 +73,7 @@ const serviceOptions: ServiceOption[] = [
     label: "Elektrosanierung", 
     icon: Zap,
     basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
-    perSqm: { wohnung: 85, haus: 120, foerderung: 140 },
+    perSqm: { wohnung: 130, haus: 160, foerderung: 180 },
     foerderungProzent: 15
   },
   { 
@@ -81,7 +81,7 @@ const serviceOptions: ServiceOption[] = [
     label: "Sanitärsanierung", 
     icon: Droplets,
     basePrice: { wohnung: 0, haus: 0, foerderung: 0 },
-    perSqm: { wohnung: 75, haus: 110, foerderung: 130 },
+    perSqm: { wohnung: 75, haus: 120, foerderung: 140 },
     foerderungProzent: 15
   },
   { 
