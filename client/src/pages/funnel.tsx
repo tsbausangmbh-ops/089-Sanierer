@@ -2323,7 +2323,7 @@ export default function FunnelPage() {
     const keywords = serviceKeywords[preSelectedService] || { primary: [], secondary: [] };
     
     return (
-      <div className="container mx-auto px-4 py-8 max-w-7xl flex-1">
+      <div className="max-w-7xl mx-auto px-24 py-8 max-w-7xl flex-1">
         <div className="prose prose-lg max-w-none mb-4">
           <p className="text-foreground leading-relaxed">{highlightKeywords(content.intro, keywords)}</p>
         </div>
@@ -2540,7 +2540,7 @@ export default function FunnelPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
 
-      <main id="main-content" className="container mx-auto px-4 py-6 max-w-7xl pt-20 flex-1">
+      <main id="main-content" className="max-w-7xl mx-auto px-24 py-6 max-w-7xl pt-20 flex-1">
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>

@@ -444,7 +444,7 @@ export default function RechnerPage() {
 
       <main className="flex-1 pt-16">
         <section className="py-6 lg:py-10 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-24">
             <div className="max-w-7xl mx-auto text-center mb-8">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Calculator className="w-10 h-10 text-primary" />
@@ -785,7 +785,7 @@ export default function RechnerPage() {
         </section>
 
         <section className={`py-6 lg:py-10 ${propertyType === "foerderung" ? "bg-green-600" : "bg-primary"} text-white`}>
-          <div className="container mx-auto px-4 text-center max-w-4xl">
+          <div className="max-w-7xl mx-auto px-24 text-center max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {propertyType === "foerderung" 
                 ? "Maximale Förderung sichern!"

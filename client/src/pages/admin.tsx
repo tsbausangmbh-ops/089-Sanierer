@@ -183,7 +183,7 @@ export default function AdminPage() {
         noIndex={true}
       />
       <header className="border-b bg-background sticky top-0 z-40">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4 flex-wrap">
+        <div className="max-w-6xl mx-auto px-24 py-4 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-4">
             <Link href="/">
               <Button variant="ghost" size="icon" data-testid="button-back-to-funnel">
@@ -227,7 +227,7 @@ export default function AdminPage() {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-4 py-8">
+      <main className="max-w-6xl mx-auto px-24 py-8">
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((i) => (

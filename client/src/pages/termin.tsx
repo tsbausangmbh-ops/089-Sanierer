@@ -30,7 +30,7 @@ export default function TerminPage() {
       <Breadcrumb items={[{ label: "Termin buchen" }]} />
 
       <main className="flex-1 pb-16">
-        <div className="max-w-xl mx-auto px-4 py-8">
+        <div className="max-w-xl mx-auto px-24 py-8">
           <AppointmentBooking />
 
           <div className="mt-8 text-center text-sm text-muted-foreground">

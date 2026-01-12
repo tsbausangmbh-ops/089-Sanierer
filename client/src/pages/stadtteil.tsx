@@ -172,7 +172,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
       <main>
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-24">
             <div className="max-w-7xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-4 h-4" />
@@ -203,7 +203,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-4 lg:py-6 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-24">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Unsere Leistungen in {data.name}
             </h2>
@@ -222,7 +222,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-24">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Besonderheiten in {data.name}
@@ -260,7 +260,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-4 lg:py-6 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-24">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Ihre Vorteile
@@ -293,7 +293,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-24">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
@@ -316,7 +316,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="container mx-auto px-4 text-center max-w-7xl">
+          <div className="max-w-7xl mx-auto px-24 text-center max-w-7xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {data.name} verdient nur die beste Sanierung!
             </h2>
