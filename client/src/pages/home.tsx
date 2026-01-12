@@ -775,7 +775,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 py-10 lg:py-16 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
                 <BadgeCheck className="w-4 h-4 text-green-400" />
