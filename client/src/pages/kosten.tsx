@@ -106,7 +106,7 @@ export default function Kosten() {
       <main>
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-7xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Was kostet eine Sanierung in München?
               </h1>
@@ -137,7 +137,7 @@ export default function Kosten() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Aktuelle Preise 2025
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto">
               {kostenuebersicht.map((item) => (
                 <Card key={item.service} className="overflow-hidden">
                   <CardContent className="p-6">
@@ -175,7 +175,7 @@ export default function Kosten() {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Warum Festpreise?
               </h2>
@@ -208,7 +208,7 @@ export default function Kosten() {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
                 Häufige Fragen zu Kosten

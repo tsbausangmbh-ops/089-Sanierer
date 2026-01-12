@@ -173,7 +173,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
       <main>
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-7xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-4 h-4" />
                 <span className="text-sm font-medium">München {data.name}</span>
@@ -207,7 +207,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Unsere Leistungen in {data.name}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {allgemeineLeistungen.map((item) => (
                 <Card key={item.title}>
                   <CardContent className="p-6 text-center">
@@ -223,7 +223,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Besonderheiten in {data.name}
               </h2>
@@ -261,7 +261,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Ihre Vorteile
               </h2>
@@ -294,7 +294,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
                 Häufige Fragen

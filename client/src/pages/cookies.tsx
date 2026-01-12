@@ -30,7 +30,7 @@ export default function Cookies() {
       <Breadcrumb items={[{ label: "Cookie-Richtlinie" }]} />
 
       <main className="pb-16 flex-1">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
 
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
             <Card>

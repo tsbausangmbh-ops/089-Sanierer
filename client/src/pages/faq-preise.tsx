@@ -458,7 +458,7 @@ export default function FaqPreise() {
         </section>
 
         <section className="py-6 lg:py-8 bg-muted/30">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
                 <Handshake className="w-6 h-6 text-green-600" />
@@ -527,7 +527,7 @@ export default function FaqPreise() {
         </section>
 
         <section className="py-6 lg:py-8">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <HelpCircle className="w-6 h-6 text-primary" />

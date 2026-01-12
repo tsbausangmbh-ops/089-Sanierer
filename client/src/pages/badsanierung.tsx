@@ -130,7 +130,7 @@ export default function Badsanierung() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Was ist inklusive?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {badFeatures.map((feature) => (
                 <div key={feature.title} className="flex items-start gap-3 p-4">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
@@ -149,7 +149,7 @@ export default function Badsanierung() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               So läuft Ihre Badsanierung ab
             </h2>
-            <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {prozessSteps.map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
@@ -165,7 +165,7 @@ export default function Badsanierung() {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Ihre Vorteile
               </h2>
@@ -204,7 +204,7 @@ export default function Badsanierung() {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
                 Häufige Fragen zur Badsanierung

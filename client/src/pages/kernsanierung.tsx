@@ -113,7 +113,7 @@ export default function Kernsanierung() {
       <main>
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-7xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Kernsanierung München
               </h1>
@@ -153,7 +153,7 @@ export default function Kernsanierung() {
               Alle Installationen, Böden, Wände und Decken werden erneuert. 
               Das Ergebnis: Ein Altbau mit dem Komfort eines Neubaus.
             </p>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="space-y-6">
                 {kernsanierungPhasen.map((item) => (
                   <div key={item.phase} className="flex gap-6 items-start">
@@ -176,7 +176,7 @@ export default function Kernsanierung() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Was ist inklusive?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
               {wasIstInklusive.map((item) => (
                 <div key={item} className="flex items-center gap-3 p-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -189,7 +189,7 @@ export default function Kernsanierung() {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Wann lohnt sich eine Kernsanierung?
               </h2>
@@ -229,7 +229,7 @@ export default function Kernsanierung() {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
                 Häufige Fragen zur Kernsanierung

@@ -85,7 +85,7 @@ export default function Haussanierung() {
       <main>
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-7xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Haussanierung München
               </h1>
@@ -120,7 +120,7 @@ export default function Haussanierung() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Unsere Leistungen
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {hausLeistungen.map((item) => (
                 <Card key={item.title}>
                   <CardContent className="p-6">
@@ -145,7 +145,7 @@ export default function Haussanierung() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Preisübersicht nach Haustyp
             </h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {haustypen.map((item) => (
                 <Card key={item.typ}>
                   <CardContent className="p-6">
@@ -168,7 +168,7 @@ export default function Haussanierung() {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Warum 089-Sanierer für Ihre Haussanierung?
               </h2>
@@ -201,7 +201,7 @@ export default function Haussanierung() {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
                 Häufige Fragen zur Haussanierung
