@@ -11,7 +11,7 @@ export default function Impressum() {
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
         title="Impressum | 089-sanierer.de | Sanierung München"
-        description="Impressum und Kontaktdaten. Verantwortlich: Ali Kemal Kurt, Hardenbergstr. 4, 80992 München. Telefon: 0152 122 740 43. USt-IdNr: DE356852204."
+        description="Impressum und Kontaktdaten. Verantwortlich: Mustafa Sakar, Hardenbergstr. 4, 80992 München. Telefon: 0152 122 740 43."
         keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum, 089-Sanierer Adresse, Sanierung München Anbieter, Renovierung München Firma, Handwerker München Verantwortlicher, 089 Sanierer Telefonnummer, Komplettsanierung München Unternehmen, Badsanierung München Ansprechpartner, Sanierung München USt-IdNr, 089-Sanierer Öffnungszeiten, Handwerker München seriös, Renovierung München rechtliche Angaben, Sanierung München Betreiber"
         canonicalPath="/impressum"
       />
@@ -38,13 +38,12 @@ export default function Impressum() {
                 <a href="https://komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.komplettsanierungen-haus-wohnung.de</a>
               </p>
               <p className="text-muted-foreground mt-4">
-                Ali Kemal Kurt<br />
+                Mustafa Sakar<br />
                 Hardenbergstr. 4<br />
                 80992 München
               </p>
               <p className="text-muted-foreground mt-4">
-                USt-IdNr: DE356852204<br />
-                Email: info@komplettsanierungen-haus-wohnung.de<br />
+                Steuernummer: folgt<br />
                 Tel: 0152 122 740 43
               </p>
             </section>

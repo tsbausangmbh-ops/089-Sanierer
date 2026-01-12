@@ -37,7 +37,7 @@ export default function Datenschutz() {
               </p>
               <p className="text-muted-foreground mt-4">
                 <strong>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</strong><br />
-                Ali Kemal Kurt, Hardenbergstr. 4, 80992 München (im Folgenden: „wir" oder „089-sanierer.de")
+                Mustafa Sakar, Hardenbergstr. 4, 80992 München (im Folgenden: „wir" oder „089-sanierer.de")
               </p>
             </section>
 
@@ -264,10 +264,9 @@ export default function Datenschutz() {
             <section className="border-t pt-8">
               <h2 className="text-xl font-bold mb-4">Standort</h2>
               <p className="text-muted-foreground">
-                Ali Kemal Kurt<br />
+                Mustafa Sakar<br />
                 Hardenbergstr. 4<br />
-                80992 München<br /><br />
-                info@komplettsanierungen-haus-wohnung.de
+                80992 München
               </p>
               <p className="text-muted-foreground mt-4">
                 <strong>Öffnungszeiten:</strong><br />

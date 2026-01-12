@@ -144,7 +144,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
-        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         <p>Öffnungszeiten: Mo-Fr 08:00-16:30 Uhr</p>
       </section>
     `;
@@ -165,7 +164,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Kontakt</h2>
         <p>Telefon: 0152 122 740 43</p>
-        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
       </section>
     `;
   } else if (path === "/anfrage") {
@@ -183,7 +181,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Kontakt</h2>
         <p>Telefon: 0152 122 740 43</p>
-        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
       </section>
     `;
   } else if (path === "/faq-preise") {
@@ -238,7 +235,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Hardenbergstr. 4</p>
         <p>80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
-        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
+        <p>Steuernummer: folgt</p>
         
         <h2>KI-Transparenzhinweis (EU AI Act)</h2>
         <p>089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.</p>
@@ -275,7 +272,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>089-Sanierer - Komplettsanierungen Haus & Wohnung</h2>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
-        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         <h3>Öffnungszeiten</h3>
         <p>Montag - Freitag: 08:00 - 16:30 Uhr</p>
       </section>
@@ -299,7 +295,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Kontakt</h2>
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Telefon: 0152 122 740 43</p>
-        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
       </section>
     `;
   } else if (path === "/ratgeber") {

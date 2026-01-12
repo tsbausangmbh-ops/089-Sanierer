@@ -38,7 +38,7 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">Geltungsbereich</h3>
               <p className="text-muted-foreground">
-                a. Die nachfolgenden Allgemeinen Geschäftsbedingungen („AGB") gelten für die Nutzung des auf der Website 089-sanierer.de bereitgestellten Dienstes. Betreiber dieses Angebots ist Ali Kemal Kurt, Hardenbergstr. 4, 80992 München, im Folgenden „wir" oder „uns" genannt.
+                a. Die nachfolgenden Allgemeinen Geschäftsbedingungen („AGB") gelten für die Nutzung des auf der Website 089-sanierer.de bereitgestellten Dienstes. Betreiber dieses Angebots ist Mustafa Sakar, Hardenbergstr. 4, 80992 München, im Folgenden „wir" oder „uns" genannt.
               </p>
               <p className="text-muted-foreground mt-4">
                 b. Diese AGB regeln das vertragliche Verhältnis zwischen uns und den Nutzern unseres Dienstes, im Folgenden als „Interessenten" bezeichnet.
@@ -118,7 +118,7 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">§ 1 Geltungsbereich und Vertragspartner</h3>
               <p className="text-muted-foreground">
-                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die vertraglichen Beziehungen zwischen Ali Kemal Kurt, Hardenbergstr. 4, 80992 München, handelnd unter der Marke 089-Sanierer (nachfolgend „089-Sanierer" oder „Anbieter") und dem jeweiligen gewerblichen Vertragspartner („Vertragspartner"), der von 089-Sanierer Leads bezieht.
+                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die vertraglichen Beziehungen zwischen Mustafa Sakar, Hardenbergstr. 4, 80992 München, handelnd unter der Marke 089-Sanierer (nachfolgend „089-Sanierer" oder „Anbieter") und dem jeweiligen gewerblichen Vertragspartner („Vertragspartner"), der von 089-Sanierer Leads bezieht.
               </p>
               <p className="text-muted-foreground mt-4">
                 Diese AGB gelten ausschließlich gegenüber Unternehmern im Sinne des § 14 BGB. Der Vertragspartner bestätigt mit Abschluss, dass er nicht als Verbraucher handelt.
@@ -299,10 +299,9 @@ export default function AGB() {
             <section className="border-t pt-8 mt-8">
               <h2 className="text-xl font-bold mb-4">Kontakt</h2>
               <p className="text-muted-foreground">
-                Ali Kemal Kurt<br />
+                Mustafa Sakar<br />
                 Hardenbergstr. 4<br />
                 80992 München<br /><br />
-                E-Mail: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a><br />
                 Telefon: 0152 122 740 43
               </p>
             </section>
