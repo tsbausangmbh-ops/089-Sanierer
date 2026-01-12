@@ -48,18 +48,54 @@ const legalLinks = [
 ];
 
 const muenchnerStadtteile = [
-  "Pasing", "Allach", "Untermenzing", "Obermenzing", "Aubing", "Moosach", 
-  "Feldmoching", "Schwabing", "Sendling", "Bogenhausen", "Haidhausen", 
-  "Neuhausen", "Laim", "Nymphenburg", "Giesing", "Berg am Laim", "Trudering", 
-  "Riem", "Milbertshofen", "Freimann", "Solln", "Großhadern", "Hadern", 
-  "Fürstenried", "Forstenried", "Thalkirchen", "Obersendling", "Ramersdorf", 
-  "Perlach", "Neuperlach"
+  { name: "Pasing", href: "/muenchen-pasing" },
+  { name: "Allach", href: "/muenchen-allach" },
+  { name: "Untermenzing", href: "/muenchen-untermenzing" },
+  { name: "Obermenzing", href: "/muenchen-obermenzing" },
+  { name: "Aubing", href: "/muenchen-aubing" },
+  { name: "Moosach", href: "/muenchen-moosach" },
+  { name: "Feldmoching", href: "/muenchen-feldmoching" },
+  { name: "Schwabing", href: "/muenchen-schwabing" },
+  { name: "Sendling", href: "/muenchen-sendling" },
+  { name: "Bogenhausen", href: "/muenchen-bogenhausen" },
+  { name: "Haidhausen", href: "/muenchen-haidhausen" },
+  { name: "Neuhausen", href: "/muenchen-neuhausen" },
+  { name: "Laim", href: "/muenchen-laim" },
+  { name: "Nymphenburg", href: "/muenchen-nymphenburg" },
+  { name: "Giesing", href: "/muenchen-giesing" },
+  { name: "Berg am Laim", href: "/muenchen-berg-am-laim" },
+  { name: "Trudering", href: "/muenchen-trudering" },
+  { name: "Riem", href: "/muenchen-riem" },
+  { name: "Milbertshofen", href: "/muenchen-milbertshofen" },
+  { name: "Freimann", href: "/muenchen-freimann" },
+  { name: "Solln", href: "/muenchen-solln" },
+  { name: "Großhadern", href: "/muenchen-grosshadern" },
+  { name: "Hadern", href: "/muenchen-hadern" },
+  { name: "Fürstenried", href: "/muenchen-fuerstenried" },
+  { name: "Forstenried", href: "/muenchen-forstenried" },
+  { name: "Thalkirchen", href: "/muenchen-thalkirchen" },
+  { name: "Obersendling", href: "/muenchen-obersendling" },
+  { name: "Ramersdorf", href: "/muenchen-ramersdorf" },
+  { name: "Perlach", href: "/muenchen-perlach" },
+  { name: "Neuperlach", href: "/muenchen-neuperlach" }
 ];
 
 const muenchnerUmland = [
-  "Dachau", "Karlsfeld", "Germering", "Fürstenfeldbruck", "Freising", 
-  "Starnberg", "Garching", "Unterschleißheim", "Oberschleißheim", "Ottobrunn", 
-  "Haar", "Gräfelfing", "Planegg", "Pullach", "Grünwald"
+  { name: "Dachau", href: "/dachau" },
+  { name: "Karlsfeld", href: "/karlsfeld" },
+  { name: "Germering", href: "/germering" },
+  { name: "Fürstenfeldbruck", href: "/fuerstenfeldbruck" },
+  { name: "Freising", href: "/freising" },
+  { name: "Starnberg", href: "/starnberg" },
+  { name: "Garching", href: "/garching" },
+  { name: "Unterschleißheim", href: "/unterschleissheim" },
+  { name: "Oberschleißheim", href: "/oberschleissheim" },
+  { name: "Ottobrunn", href: "/ottobrunn" },
+  { name: "Haar", href: "/haar" },
+  { name: "Gräfelfing", href: "/graefelfing" },
+  { name: "Planegg", href: "/planegg" },
+  { name: "Pullach", href: "/pullach" },
+  { name: "Grünwald", href: "/gruenwald" }
 ];
 
 export function SeoFooter() {
@@ -242,10 +278,34 @@ export function SeoFooter() {
               </Link>
             </h4>
           <p className="text-xs text-white/60 mb-2">
-            <strong>München:</strong> {muenchnerStadtteile.join(" · ")}
+            <strong>München:</strong>{" "}
+            {muenchnerStadtteile.map((stadtteil, index) => (
+              <span key={stadtteil.href}>
+                <Link 
+                  href={stadtteil.href} 
+                  className="hover:text-white hover:underline"
+                  data-testid={`link-footer-stadtteil-${stadtteil.href.slice(10)}`}
+                >
+                  {stadtteil.name}
+                </Link>
+                {index < muenchnerStadtteile.length - 1 && " · "}
+              </span>
+            ))}
           </p>
           <p className="text-xs text-white/60">
-            <strong>Münchner Umland:</strong> {muenchnerUmland.join(" · ")}
+            <strong>Münchner Umland:</strong>{" "}
+            {muenchnerUmland.map((ort, index) => (
+              <span key={ort.href}>
+                <Link 
+                  href={ort.href} 
+                  className="hover:text-white hover:underline"
+                  data-testid={`link-footer-umland-${ort.href.slice(1)}`}
+                >
+                  {ort.name}
+                </Link>
+                {index < muenchnerUmland.length - 1 && " · "}
+              </span>
+            ))}
           </p>
         </div>
 
