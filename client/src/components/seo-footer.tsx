@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import kshwLogo from "@assets/generated_images/kshw_renovation_company_favicon.png";
+import kshwLogo from "@assets/Logo_Universal_1768214901863.png";
 
 const allServices = [
   { id: "komplettsanierung", title: "Komplettsanierung München", shortTitle: "Komplettsanierung" },
