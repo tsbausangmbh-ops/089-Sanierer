@@ -27,6 +27,8 @@ import {
   BadgeCheck
 } from "lucide-react";
 
+import wohnungImg from "@assets/generated_images/renovated_luxury_apartment_interior.png";
+
 const leistungen = [
   { icon: Zap, title: "Elektrosanierung", description: "Neue Leitungen, Sicherungskasten, Steckdosen" },
   { icon: Droplets, title: "Sanitärsanierung", description: "Bad, Küche, Wasserleitungen" },
@@ -83,8 +85,13 @@ export default function Wohnungssanierung() {
 
       <main>
         {/* Hero Section - matching homepage style */}
-        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden bg-primary">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
+        <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center scale-105"
+            style={{ backgroundImage: `url(${wohnungImg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+          </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
             <div className="max-w-2xl">
