@@ -316,7 +316,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="container mx-auto px-4 text-center max-w-4xl">
+          <div className="container mx-auto px-4 text-center max-w-7xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {data.name} verdient nur die beste Sanierung!
             </h2>

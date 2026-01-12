@@ -323,7 +323,7 @@ function LeadMagnetSection() {
     <section className="py-4 lg:py-6 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb),0.08),transparent_50%)]" />
       
-      <div className="max-w-6xl mx-auto px-4 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-medium mb-6">
@@ -475,7 +475,7 @@ function FunnelForm() {
 
   return (
     <section id="anfrage-form" className="py-4 lg:py-6 bg-background">
-      <div className="max-w-6xl mx-auto px-4 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
             <CheckCircle className="w-4 h-4" />
@@ -484,7 +484,7 @@ function FunnelForm() {
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             <span className="text-accent">Stellen Sie sich vor:</span> In 8 Wochen ist Ihre Sanierung abgeschlossen.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
+          <p className="text-xl text-muted-foreground max-w-7xl mx-auto mb-2">
             <strong>Kein Handwerker-Chaos.</strong> Kein Budget-Albtraum. Nur Ihr traumhaftes neues Zuhause.
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -1166,7 +1166,7 @@ export default function Home() {
 
         {/* FAQ Section */}
         <section className="py-4 lg:py-6 bg-muted/30">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Häufige <span className="text-accent">Fragen</span>
@@ -1193,7 +1193,7 @@ export default function Home() {
 
         {/* Final CTA - NLP: Urgency + Future Pacing + Problem-Solver */}
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
               <Clock className="w-4 h-4" />
               <span>Handeln Sie heute - nicht morgen</span>

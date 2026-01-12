@@ -148,7 +148,7 @@ export default function Kernsanierung() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
               Was ist eine Kernsanierung?
             </h2>
-            <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
+            <p className="text-center text-muted-foreground max-w-7xl mx-auto mb-12">
               Bei einer Kernsanierung wird das Gebäude bis auf die tragenden Wände zurückgebaut. 
               Alle Installationen, Böden, Wände und Decken werden erneuert. 
               Das Ergebnis: Ein Altbau mit dem Komfort eines Neubaus.
@@ -251,7 +251,7 @@ export default function Kernsanierung() {
         </section>
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="container mx-auto px-4 text-center max-w-4xl">
+          <div className="container mx-auto px-4 text-center max-w-7xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Ihr Gebäude hat eine Rundum-Erneuerung verdient!
             </h2>
