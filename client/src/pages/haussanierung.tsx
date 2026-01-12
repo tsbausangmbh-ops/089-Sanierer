@@ -83,33 +83,64 @@ export default function Haussanierung() {
       <SiteHeader />
 
       <main>
-        <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
-          <div className="max-w-7xl mx-auto px-24">
-            <div className="max-w-7xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        {/* Hero Section - matching homepage style */}
+        <section className="relative min-h-[50vh] lg:min-h-[55vh] flex items-center overflow-hidden bg-primary">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-24 py-16 lg:py-24 w-full">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>Festpreisgarantie</span>
+              </div>
+              
+              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 Haussanierung München
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              
+              <p className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg">
                 Ihr Haus komplett saniert zum Festpreis. 
                 Von der Kernsanierung bis zur energetischen Modernisierung.
               </p>
-              <div className="flex items-baseline justify-center gap-2 mb-8">
-                <span className="text-4xl font-bold text-primary">ab 920€/m²</span>
-                <span className="text-muted-foreground">Festpreis</span>
+              
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-4xl font-bold text-orange-400">ab 920€/m²</span>
+                <span className="text-white/80">Festpreis</span>
               </div>
-              <div className="flex flex-wrap justify-center gap-4">
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-5">
                 <Link href="/anfrage?service=komplettsanierung">
-                  <Button size="lg" data-testid="button-anfrage-haus">
+                  <Button 
+                    size="lg" 
+                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg"
+                    data-testid="button-anfrage-haus"
+                  >
                     <HomeIcon className="w-5 h-5 mr-2" />
                     Jetzt Angebot anfordern
                   </Button>
                 </Link>
                 <a href="tel:+498944438872">
-                  <Button variant="outline" size="lg" data-testid="button-phone-haus">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0152 1227 4043
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
+                    data-testid="button-phone-haus"
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    089 - Anrufen
                   </Button>
                 </a>
+              </div>
+
+              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Kernsanierung & Modernisierung</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>5 Jahre Garantie</span>
+                </div>
               </div>
             </div>
           </div>

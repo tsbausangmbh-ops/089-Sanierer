@@ -84,42 +84,69 @@ export default function Badsanierung() {
       <SiteHeader />
 
       <main>
-        <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
-          <div className="max-w-7xl mx-auto px-24">
-            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-              <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                  Badsanierung München
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-6">
-                  Ihr Traumbad zum Festpreis. Komplett saniert in 2-3 Wochen, 
-                  inklusive bodengleicher Dusche und 5 Jahren Gewährleistung.
-                </p>
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-4xl font-bold text-primary">ab 9.200€</span>
-                  <span className="text-muted-foreground">Festpreis</span>
-                </div>
-                <div className="flex flex-wrap gap-4">
-                  <Link href="/anfrage?service=badsanierung">
-                    <Button size="lg" data-testid="button-anfrage-bad">
-                      <Bath className="w-5 h-5 mr-2" />
-                      Jetzt Angebot anfordern
-                    </Button>
-                  </Link>
-                  <a href="tel:+498944438872">
-                    <Button variant="outline" size="lg" data-testid="button-phone-bad">
-                      <Phone className="w-5 h-5 mr-2" />
-                      0152 1227 4043
-                    </Button>
-                  </a>
-                </div>
+        {/* Hero Section - matching homepage style */}
+        <section className="relative min-h-[50vh] lg:min-h-[55vh] flex items-center overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center scale-105"
+            style={{ backgroundImage: `url(${bathroomImg})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+          </div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-24 py-16 lg:py-24 w-full">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>Festpreisgarantie</span>
               </div>
-              <div className="relative">
-                <img 
-                  src={bathroomImg} 
-                  alt="Moderne Badsanierung München" 
-                  className="rounded-lg shadow-xl w-full"
-                />
+              
+              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                Badsanierung München
+              </h1>
+              
+              <p className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg">
+                Ihr Traumbad zum Festpreis. Komplett saniert in 2-3 Wochen, 
+                inklusive bodengleicher Dusche und 5 Jahren Gewährleistung.
+              </p>
+              
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-4xl font-bold text-orange-400">ab 9.200€</span>
+                <span className="text-white/80">Festpreis</span>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-5">
+                <Link href="/anfrage?service=badsanierung">
+                  <Button 
+                    size="lg" 
+                    className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg"
+                    data-testid="button-anfrage-bad"
+                  >
+                    <Bath className="w-5 h-5 mr-2" />
+                    Jetzt Angebot anfordern
+                  </Button>
+                </Link>
+                <a href="tel:+498944438872">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
+                    data-testid="button-phone-bad"
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    089 - Anrufen
+                  </Button>
+                </a>
+              </div>
+
+              <div className="flex flex-col gap-1.5 text-white/90 text-sm">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>In 2-3 Wochen fertig</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>5 Jahre Garantie</span>
+                </div>
               </div>
             </div>
           </div>
