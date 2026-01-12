@@ -15,7 +15,7 @@ export default function Cookies() {
       <SeoHead
         title="Cookie-Richtlinie | 089-sanierer.de"
         description="Welche Cookies nutzen wir? So können Sie Ihre Cookie-Einstellungen anpassen und Ihre Privatsphäre auf unserer Website schützen."
-        keywords="Cookie Einstellungen Sanierung, Cookie-Richtlinie München, Datenschutz Cookies Website, welche Cookies nutzt 089 Sanierer, Cookie Consent Handwerker Website, notwendige Cookies Sanierung, Analyse Cookies Renovierung München, Marketing Cookies Handwerker, Cookie Präferenzen ändern, Cookies ablehnen Sanierung Website, DSGVO Cookies München, Cookie Banner Einstellungen, Tracking Cookies Handwerker, Third-Party Cookies Renovierung, Cookie-Richtlinie KSHW München"
+        keywords="Cookie Einstellungen Sanierung, Cookie-Richtlinie München, Datenschutz Cookies Website, welche Cookies nutzt 089-Sanierer, Cookie Consent Handwerker Website, notwendige Cookies Sanierung, Analyse Cookies Renovierung München, Marketing Cookies Handwerker, Cookie Präferenzen ändern, Cookies ablehnen Sanierung Website, DSGVO Cookies München, Cookie Banner Einstellungen, Tracking Cookies Handwerker, Third-Party Cookies Renovierung, Cookie-Richtlinie 089-Sanierer"
         canonicalPath="/cookies"
       />
       <SiteHeader />
@@ -197,7 +197,7 @@ export default function Cookies() {
                 <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Hinweis)</h2>
                 <p className="text-sm text-muted-foreground mb-4">Transparenzhinweis gemäß Art. 50 Verordnung (EU) 2024/1689</p>
                 <p className="text-muted-foreground bg-muted/30 p-4 rounded-lg border">
-                  KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+                  089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
                 </p>
                 <p className="text-muted-foreground mt-4">
                   <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
@@ -212,7 +212,7 @@ export default function Cookies() {
                   Bei Fragen zu unserer Cookie-Richtlinie können Sie uns kontaktieren:
                 </p>
                 <div className="mt-4 text-muted-foreground">
-                  <p><strong>KSHW München</strong></p>
+                  <p><strong>089-Sanierer</strong></p>
                   <p>Komplettsanierungen Haus & Wohnung</p>
                   <p>E-Mail: info@089-sanierer.de</p>
                   <p>Telefon: 0152 122 740 43</p>

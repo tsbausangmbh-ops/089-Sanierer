@@ -131,7 +131,7 @@ export default function NewYearPopup() {
             className="text-7xl md:text-[10rem] font-bold text-white/15 whitespace-nowrap select-none"
             style={{ transform: "rotate(-15deg)" }}
           >
-            KSHW München
+            089-Sanierer
           </p>
         </div>
         
@@ -158,7 +158,7 @@ export default function NewYearPopup() {
             Auf eine weiterhin erfolgreiche Partnerschaft!
           </p>
           <p className="text-base md:text-lg mt-4 font-semibold text-amber-300">
-            Ihr Team von KSHW München
+            Ihr Team von 089-Sanierer
           </p>
         </div>
       </div>

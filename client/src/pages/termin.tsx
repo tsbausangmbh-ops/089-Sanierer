@@ -15,7 +15,7 @@ export default function TerminPage() {
       <SeoHead
         title="Sanierung München Termin | Kostenlose Beratung vor Ort"
         description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8:00-16:30 Uhr."
-        keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos, Badsanierung München Termin online buchen, Komplettsanierung Beratungstermin München, kostenlose Besichtigung Sanierung München, Handwerker München Termin vereinbaren, Renovierung München Vor-Ort-Termin, Sanierung München Kalender online, Altbausanierung München Experte Termin, Elektrosanierung München Termin anfragen, Heizungssanierung München Beratung vor Ort, KSHW München Terminbuchung, Sanierung München 24h Rückmeldung"
+        keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos, Badsanierung München Termin online buchen, Komplettsanierung Beratungstermin München, kostenlose Besichtigung Sanierung München, Handwerker München Termin vereinbaren, Renovierung München Vor-Ort-Termin, Sanierung München Kalender online, Altbausanierung München Experte Termin, Elektrosanierung München Termin anfragen, Heizungssanierung München Beratung vor Ort, 089-Sanierer Terminbuchung, Sanierung München 24h Rückmeldung"
         canonicalPath="/termin"
       />
       <SiteHeader />

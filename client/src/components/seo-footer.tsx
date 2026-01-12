@@ -68,18 +68,18 @@ export function SeoFooter() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-1">
-            <Link href="/" aria-label="KSHW München Startseite">
+            <Link href="/" aria-label="089-Sanierer Startseite">
               <div className="flex items-center gap-2 mb-4 cursor-pointer" data-testid="link-footer-logo">
                 <img 
                   src={kshwLogo} 
-                  alt="KSHW München Logo" 
+                  alt="089-Sanierer Logo" 
                   className="h-10 w-auto rounded"
                   width="40"
                   height="40"
                   loading="lazy"
                 />
                 <div className="flex flex-col">
-                  <span className="font-bold text-base leading-tight">KSHW München</span>
+                  <span className="font-bold text-base leading-tight">089-Sanierer</span>
                   <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export function SeoFooter() {
               Ihr zuverlässiger Partner für <strong>Komplettsanierungen in München</strong> und Umgebung. 268+ Projekte, 5 Jahre Gewährleistung.
             </p>
             <div className="space-y-2 text-sm text-white/70" itemScope itemType="https://schema.org/LocalBusiness">
-              <meta itemProp="name" content="KSHW München - Komplettsanierungen Haus & Wohnung" />
+              <meta itemProp="name" content="089-Sanierer - Komplettsanierungen Haus & Wohnung" />
               <a href="tel:+4915212274043" className="flex items-center gap-2 hover:text-white" itemProp="telephone" data-testid="link-footer-phone">
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 0152 122 740 43
@@ -100,8 +100,8 @@ export function SeoFooter() {
               <div className="flex items-start gap-2" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <span>
-                  <span itemProp="streetAddress">Zielstattstr. 9</span><br />
-                  <span itemProp="postalCode">81379</span> <span itemProp="addressLocality">München</span>
+                  <span itemProp="streetAddress">Hardenbergstr. 4</span><br />
+                  <span itemProp="postalCode">80992</span> <span itemProp="addressLocality">München</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export function SeoFooter() {
 
         <div className="mt-6 pt-4 border-t border-white/20">
           <p className="text-xs text-white/50 mb-2">
-            <strong>KI-Hinweis gem. Art. 50 Verordnung (EU) 2024/1689:</strong> KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+            <strong>KI-Hinweis gem. Art. 50 Verordnung (EU) 2024/1689:</strong> 089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
           </p>
         </div>
 

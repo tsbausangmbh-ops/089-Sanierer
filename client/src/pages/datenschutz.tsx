@@ -12,7 +12,7 @@ export default function Datenschutz() {
       <SeoHead
         title="Datenschutz | 089-sanierer.de | DSGVO-konform"
         description="Datenschutzerklärung: So schützen wir Ihre Daten. DSGVO-konform, Ihre Rechte, Cookies und Datenverarbeitung bei Sanierungsanfragen erklärt."
-        keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung, Datenverarbeitung Sanierungsanfrage, Cookie Nutzung Handwerker Website, DSGVO konforme Renovierung München, Datenschutz Anfrage Formular, Ihre Rechte DSGVO Sanierung, personenbezogene Daten Handwerker, Datenlöschung Sanierung München, Datenschutzbeauftragter Renovierung, Google Analytics Datenschutz Handwerker, Cookies Sanierung Website München, Datensicherheit Handwerker München, KSHW München Datenschutz"
+        keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung, Datenverarbeitung Sanierungsanfrage, Cookie Nutzung Handwerker Website, DSGVO konforme Renovierung München, Datenschutz Anfrage Formular, Ihre Rechte DSGVO Sanierung, personenbezogene Daten Handwerker, Datenlöschung Sanierung München, Datenschutzbeauftragter Renovierung, Google Analytics Datenschutz Handwerker, Cookies Sanierung Website München, Datensicherheit Handwerker München, 089-Sanierer Datenschutz"
         canonicalPath="/datenschutz"
       />
       <SiteHeader />
@@ -37,7 +37,7 @@ export default function Datenschutz() {
               </p>
               <p className="text-muted-foreground mt-4">
                 <strong>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</strong><br />
-                KSHW München, Zielstattstr. 9, 81379 München (im Folgenden: „wir" oder „089-sanierer.de")
+                Ali Kemal Kurt, Hardenbergstr. 4, 80992 München (im Folgenden: „wir" oder „089-sanierer.de")
               </p>
             </section>
 
@@ -234,7 +234,7 @@ export default function Datenschutz() {
               <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Hinweis gem. EU AI Act)</h2>
               <p className="text-sm text-muted-foreground mb-4">Transparenzhinweis gemäß Art. 50 Verordnung (EU) 2024/1689 | Stand: Dezember 2025</p>
               <p className="text-muted-foreground bg-muted/30 p-4 rounded-lg border">
-                KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+                089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
               </p>
               <p className="text-muted-foreground mt-4">
                 <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
@@ -264,9 +264,9 @@ export default function Datenschutz() {
             <section className="border-t pt-8">
               <h2 className="text-xl font-bold mb-4">Standort</h2>
               <p className="text-muted-foreground">
-                KSHW München<br />
-                Zielstattstr. 9<br />
-                81379 München<br /><br />
+                Ali Kemal Kurt<br />
+                Hardenbergstr. 4<br />
+                80992 München<br /><br />
                 info@komplettsanierungen-haus-wohnung.de
               </p>
               <p className="text-muted-foreground mt-4">

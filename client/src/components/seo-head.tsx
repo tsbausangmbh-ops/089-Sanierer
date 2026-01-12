@@ -126,7 +126,7 @@ export function generateServiceSchema(service: {
     "provider": {
       "@type": "LocalBusiness",
       "@id": "https://089-sanierer.de/#organization",
-      "name": "KSHW München"
+      "name": "089-Sanierer"
     },
     "areaServed": {
       "@type": "City",

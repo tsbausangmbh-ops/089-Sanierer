@@ -28,7 +28,7 @@ export default function Confirmation() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Anfrage erhalten | KSHW München"
+        title="Anfrage erhalten | 089-Sanierer"
         description="Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24-48 Stunden bei Ihnen."
         noIndex={true}
       />

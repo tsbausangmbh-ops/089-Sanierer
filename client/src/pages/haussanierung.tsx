@@ -68,7 +68,7 @@ export default function Haussanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Haussanierung München ab 920€/m² | Festpreis | KSHW"
+        title="Haussanierung München ab 920€/m² | Festpreis | 089-Sanierer"
         description="Haussanierung München: Komplettsanierung ab 920€/m² mit Festpreisgarantie. Kernsanierung, Altbausanierung, energetische Sanierung. Alle Gewerke aus einer Hand."
         canonicalPath="/haussanierung"
         schema={{
@@ -170,7 +170,7 @@ export default function Haussanierung() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-                Warum KSHW für Ihre Haussanierung?
+                Warum 089-Sanierer für Ihre Haussanierung?
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-6">

@@ -104,15 +104,15 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   const service = query.service || "";
   const serviceInfo = servicePages[service];
 
-  let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | KSHW";
-  let description = "Was kostet eine Sanierung in München? KSHW München: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
-  let keywords = "Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, KSHW München, 089 Sanierer";
+  let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer";
+  let description = "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
+  let keywords = "Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer";
   let mainContent = "";
 
   if (path === "/" || path === "") {
     mainContent = `
       <section>
-        <h1>Sanierung München - KSHW Komplettsanierungen</h1>
+        <h1>Sanierung München - 089-Sanierer Komplettsanierungen</h1>
         <p>Ihr zuverlässiger Partner für professionelle Sanierungen in München und Umgebung.</p>
         
         <h2>Unsere Leistungen</h2>
@@ -127,7 +127,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li><strong>Energetische Sanierung</strong> - KfW-förderfähig ab 200 €/m²</li>
         </ul>
         
-        <h2>Warum KSHW München?</h2>
+        <h2>Warum 089-Sanierer?</h2>
         <ul>
           <li>268+ erfolgreich abgeschlossene Projekte</li>
           <li>Über 20 Jahre Branchenerfahrung</li>
@@ -141,15 +141,15 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Wir sind in ganz München und dem Großraum für Sie da: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Nymphenburg, sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden im Umkreis von 50 km.</p>
         
         <h2>Kontakt</h2>
-        <p>KSHW München - Komplettsanierungen Haus & Wohnung</p>
-        <p>Zielstattstr. 9, 81379 München</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         <p>Öffnungszeiten: Mo-Fr 08:00-16:30 Uhr</p>
       </section>
     `;
   } else if (path === "/anfrage" && serviceInfo) {
-    title = `${serviceInfo.title} | Kosten & Preise | KSHW München`;
+    title = `${serviceInfo.title} | Kosten & Preise | 089-Sanierer`;
     description = serviceInfo.description;
     keywords = servicePages[service]?.keywords || keywords;
     mainContent = `
@@ -169,7 +169,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/anfrage") {
-    title = "Sanierungsanfrage | KSHW München";
+    title = "Sanierungsanfrage | 089-Sanierer";
     description = "Stellen Sie jetzt Ihre Sanierungsanfrage. Kostenlose Beratung innerhalb von 24 Stunden.";
     mainContent = `
       <section>
@@ -187,9 +187,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/faq-preise") {
-    title = "FAQ & Preise | Sanierung München | KSHW";
+    title = "FAQ & Preise | Sanierung München | 089-Sanierer";
     description = "Häufige Fragen und Preisübersicht für Sanierungen in München. Transparente Kosten für Bad, Küche, Elektro und mehr.";
-    keywords = "Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, KSHW München, 089 Sanierer";
+    keywords = "Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, 089-Sanierer, 089 Sanierer";
     mainContent = `
       <section>
         <h1>FAQ & Preise - Sanierung München</h1>
@@ -227,33 +227,33 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/impressum") {
-    title = "Impressum | KSHW München";
-    description = "Impressum und rechtliche Informationen zu KSHW München.";
-    keywords = "KSHW München Impressum, 089 Sanierer Kontaktdaten, Komplettsanierungen Haus Wohnung München, Sanierungsfirma München Adresse, Handwerksbetrieb München Impressum, Renovierungsfirma München rechtlich, Bausanierung München Anbieter Info, Sanierung München Unternehmen, Renovierung München Firma, Handwerker München Firmendaten, Sanierungsdienstleister München, Bauunternehmen München Impressum, KSHW Zielstattstraße München, Sanierungsbetrieb München Info, Renovierungsservice München legal";
+    title = "Impressum | 089-Sanierer";
+    description = "Impressum und rechtliche Informationen zu 089-Sanierer.";
+    keywords = "089-Sanierer Impressum, 089 Sanierer Kontaktdaten, Komplettsanierungen Haus Wohnung München, Sanierungsfirma München Adresse, Handwerksbetrieb München Impressum, Renovierungsfirma München rechtlich, Bausanierung München Anbieter Info, Sanierung München Unternehmen, Renovierung München Firma, Handwerker München Firmendaten, Sanierungsdienstleister München, Bauunternehmen München Impressum, 089-Sanierer Hardenbergstraße München, Sanierungsbetrieb München Info, Renovierungsservice München legal";
     mainContent = `
       <section>
         <h1>Impressum</h1>
         <h2>Angaben gemäß § 5 TMG</h2>
-        <p>KSHW München - Komplettsanierungen Haus & Wohnung</p>
-        <p>Zielstattstr. 9</p>
-        <p>81379 München</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Hardenbergstr. 4</p>
+        <p>80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         
         <h2>KI-Transparenzhinweis (EU AI Act)</h2>
-        <p>KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.</p>
+        <p>089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.</p>
         <p>Rechtsgrundlage: Verordnung (EU) 2024/1689 (EU AI Act), Art. 50 | DSGVO Art. 22</p>
       </section>
     `;
   } else if (path === "/datenschutz") {
-    title = "Datenschutzerklärung | KSHW München";
-    description = "Datenschutzerklärung von KSHW München gemäß DSGVO.";
-    keywords = "KSHW München Datenschutz, 089 Sanierer DSGVO, Datenschutzerklärung Sanierungsfirma München, DSGVO Handwerksbetrieb München, Datenschutz Renovierungsfirma München, personenbezogene Daten Sanierung München, Cookie Richtlinie Handwerker München, Datenschutzrechte Bauunternehmen München, KSHW München Datensicherheit, Sanierung München Datenschutzinfo, Renovierung München Privatsphäre, Handwerker München Datenschutzerklärung, DSGVO konform Sanierung München, Datenschutz Bausanierung München, KSHW Datenschutzbeauftragter";
+    title = "Datenschutzerklärung | 089-Sanierer";
+    description = "Datenschutzerklärung von 089-Sanierer gemäß DSGVO.";
+    keywords = "089-Sanierer Datenschutz, 089 Sanierer DSGVO, Datenschutzerklärung Sanierungsfirma München, DSGVO Handwerksbetrieb München, Datenschutz Renovierungsfirma München, personenbezogene Daten Sanierung München, Cookie Richtlinie Handwerker München, Datenschutzrechte Bauunternehmen München, 089-Sanierer Datensicherheit, Sanierung München Datenschutzinfo, Renovierung München Privatsphäre, Handwerker München Datenschutzerklärung, DSGVO konform Sanierung München, Datenschutz Bausanierung München, 089-Sanierer Datenschutzbeauftragter";
     mainContent = `
       <section>
         <h1>Datenschutzerklärung</h1>
         <h2>1. Verantwortlicher</h2>
-        <p>KSHW München - Komplettsanierungen Haus & Wohnung, Zielstattstr. 9, 81379 München</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung, Hardenbergstr. 4, 80992 München</p>
         
         <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
         <p>Wir erheben personenbezogene Daten nur, wenn Sie uns diese freiwillig mitteilen.</p>
@@ -262,18 +262,18 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten.</p>
         
         <h2>KI-Transparenzhinweis</h2>
-        <p>KSHW München setzt KI-basierte Systeme ein. Rechtsgrundlage: EU AI Act (Verordnung 2024/1689), Art. 50.</p>
+        <p>089-Sanierer setzt KI-basierte Systeme ein. Rechtsgrundlage: EU AI Act (Verordnung 2024/1689), Art. 50.</p>
       </section>
     `;
   } else if (path === "/kontakt") {
-    title = "Kontakt | KSHW München";
-    description = "Kontaktieren Sie KSHW München für Ihre Sanierungsanfrage.";
-    keywords = "Kontakt Sanierung München, KSHW München Telefon, 089 Sanierer erreichen, Sanierungsanfrage München stellen, Handwerker München anrufen, Renovierungsfirma München kontaktieren, Badsanierung München anfragen, Kostenvoranschlag Sanierung München, Beratungstermin Renovierung München, Sanierungsfirma München E-Mail, Handwerker München Öffnungszeiten, Komplettsanierung München Termin, Sanierung München Rückruf, Renovierungsberatung München gratis, KSHW München Anfahrt";
+    title = "Kontakt | 089-Sanierer";
+    description = "Kontaktieren Sie 089-Sanierer für Ihre Sanierungsanfrage.";
+    keywords = "Kontakt Sanierung München, 089-Sanierer Telefon, 089 Sanierer erreichen, Sanierungsanfrage München stellen, Handwerker München anrufen, Renovierungsfirma München kontaktieren, Badsanierung München anfragen, Kostenvoranschlag Sanierung München, Beratungstermin Renovierung München, Sanierungsfirma München E-Mail, Handwerker München Öffnungszeiten, Komplettsanierung München Termin, Sanierung München Rückruf, Renovierungsberatung München gratis, 089-Sanierer Anfahrt";
     mainContent = `
       <section>
         <h1>Kontakt</h1>
-        <h2>KSHW München - Komplettsanierungen Haus & Wohnung</h2>
-        <p>Zielstattstr. 9, 81379 München</p>
+        <h2>089-Sanierer - Komplettsanierungen Haus & Wohnung</h2>
+        <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         <h3>Öffnungszeiten</h3>
@@ -281,9 +281,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/bestaetigung") {
-    title = "Anfrage gesendet | KSHW München";
+    title = "Anfrage gesendet | 089-Sanierer";
     description = "Vielen Dank für Ihre Sanierungsanfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.";
-    keywords = "Sanierungsanfrage gesendet München, Anfrage Bestätigung KSHW München, Renovierungsanfrage erfolgreich München, nächste Schritte Sanierung München, Beratungstermin bestätigt München, Rückmeldung Sanierungsfirma München, Kontaktaufnahme bestätigt Handwerker München, Angebotsanfrage Renovierung München, Sanierung München Terminbestätigung, Projektanfrage München Sanierung, KSHW Anfrage bestätigt, Kostenvoranschlag angefordert München, Sanierungsberatung angefragt München, Renovierung München Anfrage Status, Handwerkeranfrage München erfolgreich";
+    keywords = "Sanierungsanfrage gesendet München, Anfrage Bestätigung 089-Sanierer, Renovierungsanfrage erfolgreich München, nächste Schritte Sanierung München, Beratungstermin bestätigt München, Rückmeldung Sanierungsfirma München, Kontaktaufnahme bestätigt Handwerker München, Angebotsanfrage Renovierung München, Sanierung München Terminbestätigung, Projektanfrage München Sanierung, 089-Sanierer Anfrage bestätigt, Kostenvoranschlag angefordert München, Sanierungsberatung angefragt München, Renovierung München Anfrage Status, Handwerkeranfrage München erfolgreich";
     mainContent = `
       <section>
         <h1>Vielen Dank für Ihre Anfrage!</h1>
@@ -297,15 +297,15 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         </ul>
         
         <h2>Kontakt</h2>
-        <p>KSHW München - Komplettsanierungen Haus & Wohnung</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
       </section>
     `;
   } else if (path === "/ratgeber") {
-    title = "Sanierungskosten München - Ratgeber & Preisübersicht | KSHW";
+    title = "Sanierungskosten München - Ratgeber & Preisübersicht | 089-Sanierer";
     description = "Was kostet eine Sanierung in München? Detaillierter Ratgeber mit Preisen für Haussanierung, Badsanierung, Dachsanierung, Kellersanierung und mehr. Inklusive Förderungsmöglichkeiten.";
-    keywords = "Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München, KSHW München Ratgeber, 089 Sanierer Tipps";
+    keywords = "Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München, 089-Sanierer Ratgeber, 089 Sanierer Tipps";
     mainContent = `
       <section>
         <h1>Sanierungskosten München - Ihr Ratgeber für faire Preise</h1>
@@ -381,13 +381,13 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         </ul>
         
         <h2>Kontakt</h2>
-        <p>KSHW München - Komplettsanierungen Haus & Wohnung</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>Kostenlose Erstberatung - Wir melden uns innerhalb von 24 Stunden!</p>
       </section>
     `;
   } else if (path === "/kosten") {
-    title = "Was kostet Sanierung München? Preise 2025 | KSHW";
+    title = "Was kostet Sanierung München? Preise 2025 | 089-Sanierer";
     description = "Sanierung München Kosten: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung.";
     keywords = "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München";
     mainContent = `
@@ -416,7 +416,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/badsanierung") {
-    title = "Badsanierung München ab 9.200€ | Festpreis | KSHW";
+    title = "Badsanierung München ab 9.200€ | Festpreis | 089-Sanierer";
     description = "Badsanierung München: Komplett-Badsanierung ab 9.200€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.";
     keywords = "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München";
     mainContent = `
@@ -443,7 +443,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/wohnungssanierung") {
-    title = "Wohnungssanierung München ab 800€/m² | KSHW";
+    title = "Wohnungssanierung München ab 800€/m² | 089-Sanierer";
     description = "Wohnungssanierung München zum Festpreis ab 800€/m². Komplettsanierung aus einer Hand. 268+ zufriedene Kunden, 5 Jahre Gewährleistung.";
     keywords = "Wohnungssanierung München, Wohnung sanieren München, Wohnung renovieren München, Altbauwohnung sanieren München";
     mainContent = `
@@ -464,7 +464,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/haussanierung") {
-    title = "Haussanierung München | Komplett ab 920€/m² | KSHW";
+    title = "Haussanierung München | Komplett ab 920€/m² | 089-Sanierer";
     description = "Haussanierung München: Komplette Haussanierung ab 920€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.";
     keywords = "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München";
     mainContent = `
@@ -484,7 +484,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/kernsanierung") {
-    title = "Kernsanierung München ab 1.200€/m² | KSHW";
+    title = "Kernsanierung München ab 1.200€/m² | 089-Sanierer";
     description = "Kernsanierung München: Professionelle Kernsanierung ab 1.200€/m². Bis auf die Grundsubstanz und komplett neu aufbauen. Festpreisgarantie.";
     keywords = "Kernsanierung München, Kernsanierung Kosten München, Altbau Kernsanierung München, Haus entkernen München";
     mainContent = `
@@ -519,7 +519,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       "trudering": "Trudering-Riem"
     };
     const districtName = districtNames[district] || district;
-    title = `Sanierung ${districtName} München | Festpreis | KSHW`;
+    title = `Sanierung ${districtName} München | Festpreis | 089-Sanierer`;
     description = `Sanierung in ${districtName}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. Lokaler Anbieter mit 5 Jahren Gewährleistung.`;
     keywords = `Sanierung ${districtName} München, ${districtName} Sanierung, Badsanierung ${districtName}, Renovierung ${districtName}`;
     mainContent = `
@@ -553,17 +553,17 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${baseURL}/#organization`,
-    "name": "KSHW München - Komplettsanierungen Haus & Wohnung",
-    "alternateName": "089-Sanierer",
+    "name": "089-Sanierer - Komplettsanierungen Haus & Wohnung",
+    "alternateName": "089 Sanierer",
     "description": "Professionelle Sanierungen in München: Badsanierung, Küchensanierung, Komplettsanierung, Elektrosanierung und mehr. Festpreisgarantie, 5 Jahre Gewährleistung.",
     "url": baseURL,
     "telephone": "+4915212274043",
     "email": "info@089-sanierer.de",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Zielstattstr. 9",
+      "streetAddress": "Hardenbergstr. 4",
       "addressLocality": "München",
-      "postalCode": "81379",
+      "postalCode": "80992",
       "addressCountry": "DE",
       "addressRegion": "Bayern"
     },
@@ -650,8 +650,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "KSHW München - Sanierung",
-    "alternateName": "089-Sanierer",
+    "name": "089-Sanierer - Sanierung München",
+    "alternateName": "089 Sanierer",
     "url": baseURL,
     "potentialAction": {
       "@type": "SearchAction",
@@ -751,7 +751,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="KSHW München">
+  <meta property="og:site_name" content="089-Sanierer">
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
   <meta property="og:url" content="${baseURL}${path}">
@@ -766,7 +766,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta name="twitter:description" content="${description}">
   
   <!-- Additional SEO -->
-  <meta name="author" content="KSHW München">
+  <meta name="author" content="089-Sanierer">
   <meta name="geo.region" content="DE-BY">
   <meta name="geo.placename" content="München">
   <meta name="geo.position" content="48.1351;11.5820">
@@ -780,7 +780,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 <body>
   <header>
     <nav aria-label="Hauptnavigation">
-      <a href="/">KSHW München - Sanierung</a>
+      <a href="/">089-Sanierer - Sanierung München</a>
       <a href="/anfrage">Anfrage</a>
       <a href="/faq-preise">FAQ & Preise</a>
       <a href="/kontakt">Kontakt</a>
@@ -790,13 +790,13 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     ${mainContent}
   </main>
   <footer>
-    <p>© 2025 KSHW München - Komplettsanierungen Haus & Wohnung</p>
+    <p>© 2025 089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
     <nav aria-label="Rechtliche Links">
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
     </nav>
     <address>
-      KSHW München, Zielstattstr. 9, 81379 München | Tel: 0152 122 740 43
+      089-Sanierer, Hardenbergstr. 4, 80992 München | Tel: 0152 122 740 43
     </address>
   </footer>
 </body>

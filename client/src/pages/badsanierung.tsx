@@ -69,7 +69,7 @@ export default function Badsanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Badsanierung München ab 9.200€ | Festpreis | KSHW"
+        title="Badsanierung München ab 9.200€ | Festpreis | 089-Sanierer"
         description="Badsanierung München: Komplett-Bad ab 9.200€ mit Festpreisgarantie. Bodengleiche Dusche, moderne Fliesen, 5 Jahre Gewährleistung. In 2-3 Wochen fertig."
         canonicalPath="/badsanierung"
         schema={{

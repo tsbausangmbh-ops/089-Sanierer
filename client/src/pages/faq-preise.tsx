@@ -368,7 +368,7 @@ export default function FaqPreise() {
       <SeoHead
         title="Sanierung München Preisliste 2024 | Badsanierung ab 8.000€"
         description="Sanierung München Preise: Badsanierung ab 8.000€, Komplettsanierung ab 800€/m², Küche ab 5.000€. Transparente Preisliste, alle FAQ beantwortet."
-        keywords="Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, KSHW München, 089 Sanierer"
+        keywords="Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, 089-Sanierer, 089 Sanierer"
         canonicalPath="/faq-preise"
       />
       <SiteHeader />
@@ -607,7 +607,7 @@ export default function FaqPreise() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                <img src={kshwLogoWhiteBg} alt="089-Sanierer Logo" className="h-10 w-auto rounded" />
                 <div className="flex flex-col">
                   <span className="font-bold text-base leading-tight">Komplettsanierungen</span>
                   <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
@@ -630,7 +630,7 @@ export default function FaqPreise() {
                 </a>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span>Zielstattstr. 9<br />81379 München</span>
+                  <span>Hardenbergstr. 4<br />80992 München</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />

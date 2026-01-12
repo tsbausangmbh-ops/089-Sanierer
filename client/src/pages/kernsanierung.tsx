@@ -96,7 +96,7 @@ export default function Kernsanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Kernsanierung München ab 1.200€/m² | Festpreis | KSHW"
+        title="Kernsanierung München ab 1.200€/m² | Festpreis | 089-Sanierer"
         description="Kernsanierung München: Komplettsanierung bis auf den Rohbau ab 1.200€/m². Neue Elektrik, Sanitär, Heizung. Festpreisgarantie, 5 Jahre Gewährleistung."
         canonicalPath="/kernsanierung"
         schema={{

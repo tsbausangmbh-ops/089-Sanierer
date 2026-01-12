@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
       <SeoHead
-        title="Seite nicht gefunden | KSHW München"
+        title="Seite nicht gefunden | 089-Sanierer"
         description="Die angeforderte Seite wurde nicht gefunden."
         noIndex={true}
       />

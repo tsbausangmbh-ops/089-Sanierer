@@ -11,14 +11,14 @@ export default function Impressum() {
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
         title="Impressum | 089-sanierer.de | Sanierung München"
-        description="Impressum und Kontaktdaten. Verantwortlich: Ali Kemal Kurt, Zielstattstr. 9, 81379 München. Telefon: 0152 122 740 43. USt-IdNr: DE356852204."
-        keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum, KSHW München Adresse, Sanierung München Anbieter, Renovierung München Firma, Handwerker München Verantwortlicher, 089 Sanierer Telefonnummer, Komplettsanierung München Unternehmen, Badsanierung München Ansprechpartner, Sanierung München USt-IdNr, KSHW München Öffnungszeiten, Handwerker München seriös, Renovierung München rechtliche Angaben, Sanierung München Betreiber"
+        description="Impressum und Kontaktdaten. Verantwortlich: Ali Kemal Kurt, Hardenbergstr. 4, 80992 München. Telefon: 0152 122 740 43. USt-IdNr: DE356852204."
+        keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum, 089-Sanierer Adresse, Sanierung München Anbieter, Renovierung München Firma, Handwerker München Verantwortlicher, 089 Sanierer Telefonnummer, Komplettsanierung München Unternehmen, Badsanierung München Ansprechpartner, Sanierung München USt-IdNr, 089-Sanierer Öffnungszeiten, Handwerker München seriös, Renovierung München rechtliche Angaben, Sanierung München Betreiber"
         canonicalPath="/impressum"
       />
       <SiteHeader />
       <PageHero 
         title="Impressum" 
-        subtitle="KSHW München"
+        subtitle="089-Sanierer"
         showCta={false}
         compact={true}
         image={impressumHeroImage}
@@ -38,10 +38,9 @@ export default function Impressum() {
                 <a href="https://komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.komplettsanierungen-haus-wohnung.de</a>
               </p>
               <p className="text-muted-foreground mt-4">
-                KSHW München<br />
                 Ali Kemal Kurt<br />
-                Zielstattstr. 9<br />
-                81379 München
+                Hardenbergstr. 4<br />
+                80992 München
               </p>
               <p className="text-muted-foreground mt-4">
                 USt-IdNr: DE356852204<br />
@@ -75,7 +74,7 @@ export default function Impressum() {
               <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Hinweis gem. EU AI Act)</h2>
               <p className="text-sm text-muted-foreground mb-4">Transparenzhinweis gemäß Art. 50 Verordnung (EU) 2024/1689</p>
               <p className="text-muted-foreground">
-                KSHW München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+                089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
               </p>
               <p className="text-muted-foreground mt-4">
                 <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO

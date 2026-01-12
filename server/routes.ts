@@ -81,7 +81,7 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
 <body>
   <div class="container">
     <div class="header">
-      <h1>KSHW München</h1>
+      <h1>089-Sanierer</h1>
       <p>Komplettsanierungen Haus & Wohnung</p>
     </div>
     <div class="content">
@@ -111,7 +111,7 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
       </p>
     </div>
     <div class="footer">
-      <p>KSHW München | Zielstattstr. 9, 81379 München</p>
+      <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
       <p>www.089-sanierer.de</p>
     </div>
   </div>
@@ -121,9 +121,9 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
 
   try {
     await transporter.sendMail({
-      from: `"KSHW München" <${process.env.SMTP_FROM_EMAIL}>`,
+      from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
       to: lead.email,
-      subject: `Ihre Anfrage bei KSHW München: ${serviceLabel}`,
+      subject: `Ihre Anfrage bei 089-Sanierer: ${serviceLabel}`,
       html: htmlContent,
     });
     console.log(`Confirmation email sent to ${lead.email}`);
@@ -196,7 +196,7 @@ async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
 
   try {
     await transporter.sendMail({
-      from: `"KSHW Lead-Bot" <${process.env.SMTP_FROM_EMAIL}>`,
+      from: `"089-Sanierer Lead-Bot" <${process.env.SMTP_FROM_EMAIL}>`,
       to: process.env.SMTP_FROM_EMAIL,
       subject: `${lead.isUrgent ? '[DRINGEND] ' : ''}Neue Anfrage: ${lead.name} - ${serviceLabel}`,
       html: htmlContent,
@@ -227,7 +227,7 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
 <body>
   <div class="container">
     <div class="header">
-      <h1>KSHW München</h1>
+      <h1>089-Sanierer</h1>
       <p>Terminbestätigung</p>
     </div>
     <div class="content">
@@ -250,7 +250,7 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
       </p>
     </div>
     <div class="footer">
-      <p>KSHW München | Zielstattstr. 9, 81379 München</p>
+      <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
       <p>www.089-sanierer.de</p>
     </div>
   </div>
@@ -313,13 +313,13 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   try {
     await Promise.all([
       transporter.sendMail({
-        from: `"KSHW München" <${process.env.SMTP_FROM_EMAIL}>`,
+        from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
         to: appointment.email,
-        subject: `Terminanfrage bei KSHW München: ${serviceLabel}`,
+        subject: `Terminanfrage bei 089-Sanierer: ${serviceLabel}`,
         html: customerHtml,
       }),
       transporter.sendMail({
-        from: `"KSHW München Bot" <${process.env.SMTP_FROM_EMAIL}>`,
+        from: `"089-Sanierer Bot" <${process.env.SMTP_FROM_EMAIL}>`,
         to: process.env.SMTP_FROM_EMAIL,
         subject: `Neue Terminanfrage: ${appointment.name} - ${serviceLabel}`,
         html: companyHtml,
@@ -462,7 +462,7 @@ export async function registerRoutes(
       type: "function",
       function: {
         name: "create_appointment",
-        description: "Erstellt einen Beratungstermin im Kalender und sendet Bestätigungs-E-Mails an Kunde und KSHW. Nutze diese Funktion NUR wenn du alle erforderlichen Daten hast.",
+        description: "Erstellt einen Beratungstermin im Kalender und sendet Bestätigungs-E-Mails an Kunde und 089-Sanierer. Nutze diese Funktion NUR wenn du alle erforderlichen Daten hast.",
         parameters: {
           type: "object",
           properties: {
@@ -513,10 +513,10 @@ export async function registerRoutes(
         return res.status(400).json({ error: "Nachricht erforderlich" });
       }
 
-      const systemPrompt = `Du bist der professionelle Sanierungsberater von KSHW München. Du kommunizierst IMMER mit "Sie" (formelle Anrede) und wendest NLP-Techniken für empathische, menschliche Kommunikation an.
+      const systemPrompt = `Du bist der professionelle Sanierungsberater von 089-Sanierer. Du kommunizierst IMMER mit "Sie" (formelle Anrede) und wendest NLP-Techniken für empathische, menschliche Kommunikation an.
 
 ## DEINE IDENTITÄT
-- Name: KSHW Sanierungsberater
+- Name: 089-Sanierer Berater
 - Rolle: Empathischer Fachberater für Sanierungsprojekte in München
 - Stil: Professionell, warmherzig, vertrauenswürdig, lösungsorientiert
 - IMMER formelle Anrede mit "Sie", "Ihr", "Ihnen"
@@ -565,7 +565,7 @@ export async function registerRoutes(
 ### Bei Ablaufsfragen:
 "Das Wichtigste für Sie ist sicher ein reibungsloser Ablauf. Bei uns haben Sie einen festen Ansprechpartner, der alles koordiniert. Möchten Sie mehr über unseren Ablauf erfahren?"
 
-## ÜBER KSHW MÜNCHEN
+## ÜBER 089-SANIERER
 - Spezialisierung: Komplettsanierung, Badsanierung, Küchensanierung, Bodensanierung, Elektrosanierung, Heizungssanierung, Dachsanierung, Energetische Sanierung
 - Erfahrung: 268+ erfolgreich abgeschlossene Projekte, über 20 Jahre Branchenerfahrung
 - Servicegebiet: München und gesamter Großraum (ca. 50km Umkreis)
@@ -660,14 +660,14 @@ Sobald alle Daten vorliegen, nutze die create_appointment Funktion.
 - Zeige echtes Interesse und Empathie
 - Stelle am Ende JEDER Antwort eine weiterführende Frage
 - Halte Antworten übersichtlich (3-4 Sätze + Frage)
-- GIB NIEMALS Telefonnummer oder E-Mail von KSHW heraus
+- GIB NIEMALS Telefonnummer oder E-Mail von 089-Sanierer heraus
 - Verwende Zeilenumbrüche für gute Lesbarkeit
 - Bei Aufzählungen: JEDEN Punkt auf eigene Zeile
 
 ## BEISPIEL FÜR GUTE ANTWORT
 "Das kann ich sehr gut verstehen - eine Badsanierung ist eine wichtige Entscheidung.
 
-Bei KSHW München arbeiten wir mit einem transparenten Festpreis, damit Sie von Anfang an Planungssicherheit haben. Der ca.-Preis für eine Badsanierung in München liegt bei ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr).
+Bei 089-Sanierer arbeiten wir mit einem transparenten Festpreis, damit Sie von Anfang an Planungssicherheit haben. Der ca.-Preis für eine Badsanierung in München liegt bei ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr).
 
 Darf ich fragen, wie groß Ihr Bad ungefähr ist?"
 

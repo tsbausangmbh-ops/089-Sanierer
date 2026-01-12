@@ -1017,7 +1017,7 @@ export default function GewerkeFunnel() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src={kshwLogoWhiteBg} alt="KSHW München Logo" className="h-10 w-auto rounded" />
+                <img src={kshwLogoWhiteBg} alt="089-Sanierer Logo" className="h-10 w-auto rounded" />
                 <div className="flex flex-col">
                   <span className="font-bold text-base leading-tight">Komplettsanierungen</span>
                   <span className="text-xs text-white/70 leading-tight">Haus & Wohnung</span>
@@ -1040,7 +1040,7 @@ export default function GewerkeFunnel() {
                 </a>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span>Zielstattstr. 9<br />81379 München</span>
+                  <span>Hardenbergstr. 4<br />80992 München</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />

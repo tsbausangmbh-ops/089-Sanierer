@@ -80,7 +80,7 @@ export default function Kontakt() {
       <SeoHead
         title="Sanierung München Anfrage | Kostenlose Beratung 24h"
         description="Sanierung München anfragen: Kostenlose Beratung, Antwort in 24h, Festpreis-Angebot. Tel: 0152 122 740 43. Jetzt unverbindlich Projekt besprechen!"
-        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos, Badsanierung München Termin vereinbaren, Komplettsanierung Anfrage stellen München, Handwerker München schnell verfügbar, Renovierung München kostenlose Besichtigung, Sanierung Angebot einholen München, Altbausanierung München Beratung buchen, Elektrosanierung München Angebot anfordern, Heizungssanierung München Kontakt aufnehmen, 089 Sanierer Telefon Öffnungszeiten, KSHW München erreichbar, Sanierung München Rückruf Service"
+        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos, Badsanierung München Termin vereinbaren, Komplettsanierung Anfrage stellen München, Handwerker München schnell verfügbar, Renovierung München kostenlose Besichtigung, Sanierung Angebot einholen München, Altbausanierung München Beratung buchen, Elektrosanierung München Angebot anfordern, Heizungssanierung München Kontakt aufnehmen, 089 Sanierer Telefon Öffnungszeiten, 089-Sanierer erreichbar, Sanierung München Rückruf Service"
         canonicalPath="/kontakt"
       />
       <SiteHeader />
@@ -218,7 +218,7 @@ export default function Kontakt() {
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie <strong>KSHW München</strong>?</h2>
+                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie <strong>089-Sanierer</strong>?</h2>
                   <div className="space-y-4">
                     <a href="tel:+4915212274043" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                       <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
@@ -244,7 +244,7 @@ export default function Kontakt() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Adresse</p>
-                        <p className="font-medium">Zielstattstr. 9, 81379 <strong>München-Sendling</strong></p>
+                        <p className="font-medium">Hardenbergstr. 4, 80992 <strong>München-Moosach</strong></p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">

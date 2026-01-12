@@ -243,7 +243,7 @@ const testimonials = [
     name: "Familie Huber",
     location: "München-Schwabing",
     project: "Komplettsanierung",
-    text: "Wir hatten Jahre lang gezögert. Zu viel Angst vor dem Chaos. Aber mit KSHW war es anders: Ein Anruf, ein Ansprechpartner, null Stress. Heute sitzen wir in unserer Traumwohnung und können es noch immer nicht glauben.",
+    text: "Wir hatten Jahre lang gezögert. Zu viel Angst vor dem Chaos. Aber mit 089-Sanierer war es anders: Ein Anruf, ein Ansprechpartner, null Stress. Heute sitzen wir in unserer Traumwohnung und können es noch immer nicht glauben.",
     rating: 5,
     highlight: "null Stress"
   },
@@ -259,7 +259,7 @@ const testimonials = [
     name: "Hausverwaltung Schmidt",
     location: "Sendling",
     project: "3 Wohnungen",
-    text: "Wir verwalten 200 Wohnungen. Seit 4 Jahren arbeiten wir nur noch mit KSHW. Warum? Weil die Mieter danach glücklich sind. Und wir auch.",
+    text: "Wir verwalten 200 Wohnungen. Seit 4 Jahren arbeiten wir nur noch mit 089-Sanierer. Warum? Weil die Mieter danach glücklich sind. Und wir auch.",
     rating: 5,
     highlight: "seit 4 Jahren"
   },
@@ -756,9 +756,9 @@ export default function Home() {
   return (
     <>
       <SeoHead
-        title="Sanierung München | Festpreis & 5 Jahre Garantie | KSHW München"
+        title="Sanierung München | Festpreis & 5 Jahre Garantie | 089-Sanierer"
         description="Ihre Sanierung ohne Stress: Ein Ansprechpartner, Festpreisgarantie, verbindlicher Termin. 268+ zufriedene Familien in München. Kostenlose Beratung in 24h."
-        keywords="Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, KSHW München, 089 Sanierer"
+        keywords="Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer"
         canonicalPath="/"
         schema={faqSchema}
       />

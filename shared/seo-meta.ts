@@ -27,40 +27,40 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/" || normalizedPath === "") {
     return {
-      title: "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | KSHW",
-      description: "Was kostet eine Sanierung in München? KSHW: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
-      keywords: "Sanierung München, Komplettsanierung München, Badsanierung München, Haussanierung München, KSHW",
+      title: "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer",
+      description: "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
+      keywords: "Sanierung München, Komplettsanierung München, Badsanierung München, Haussanierung München, 089-Sanierer",
       canonical: BASE_URL,
-      ogTitle: "Was kostet Sanierung in München? Badsanierung ab 9.200€ | KSHW",
+      ogTitle: "Was kostet Sanierung in München? Badsanierung ab 9.200€ | 089-Sanierer",
       ogDescription: "268+ zufriedene Münchner Kunden: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung.",
     };
   }
 
   if (normalizedPath === "/anfrage") {
     return {
-      title: "Kostenlose Anfrage | Sanierung München | KSHW",
+      title: "Kostenlose Anfrage | Sanierung München | 089-Sanierer",
       description: "Jetzt kostenlose Sanierungsanfrage stellen. Wir melden uns innerhalb von 24 Stunden. Badsanierung, Komplettsanierung, Wohnungssanierung in München.",
       keywords: "Sanierung Anfrage München, Badsanierung Angebot, Komplettsanierung Kosten",
       canonical: `${BASE_URL}/anfrage`,
-      ogTitle: "Kostenlose Sanierungsanfrage - KSHW München",
+      ogTitle: "Kostenlose Sanierungsanfrage - 089-Sanierer",
       ogDescription: "Stellen Sie jetzt Ihre kostenlose Anfrage für Badsanierung, Komplettsanierung oder Wohnungssanierung in München.",
     };
   }
 
   if (normalizedPath === "/danke") {
     return {
-      title: "Vielen Dank für Ihre Anfrage | KSHW München",
+      title: "Vielen Dank für Ihre Anfrage | 089-Sanierer",
       description: "Ihre Sanierungsanfrage wurde erfolgreich übermittelt. Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
       keywords: "Sanierung Anfrage München",
       canonical: `${BASE_URL}/danke`,
-      ogTitle: "Anfrage erhalten - KSHW München",
+      ogTitle: "Anfrage erhalten - 089-Sanierer",
       ogDescription: "Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
     };
   }
 
   if (normalizedPath === "/kosten") {
     return {
-      title: "Was kostet Sanierung München? Preise 2025 | KSHW",
+      title: "Was kostet Sanierung München? Preise 2025 | 089-Sanierer",
       description: "Sanierung München Kosten: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung.",
       keywords: "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München",
       canonical: `${BASE_URL}/kosten`,
@@ -71,7 +71,7 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/badsanierung") {
     return {
-      title: "Badsanierung München ab 9.200€ | Festpreis | KSHW",
+      title: "Badsanierung München ab 9.200€ | Festpreis | 089-Sanierer",
       description: "Badsanierung München: Komplett-Badsanierung ab 9.200€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.",
       keywords: "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München",
       canonical: `${BASE_URL}/badsanierung`,
@@ -82,7 +82,7 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/wohnungssanierung") {
     return {
-      title: "Wohnungssanierung München ab 800€/m² | KSHW",
+      title: "Wohnungssanierung München ab 800€/m² | 089-Sanierer",
       description: "Wohnungssanierung München zum Festpreis ab 800€/m². Komplettsanierung aus einer Hand. 268+ zufriedene Kunden, 5 Jahre Gewährleistung.",
       keywords: "Wohnungssanierung München, Wohnung sanieren München, Wohnung renovieren München, Altbauwohnung sanieren München",
       canonical: `${BASE_URL}/wohnungssanierung`,
@@ -93,7 +93,7 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/haussanierung") {
     return {
-      title: "Haussanierung München | Komplett ab 920€/m² | KSHW",
+      title: "Haussanierung München | Komplett ab 920€/m² | 089-Sanierer",
       description: "Haussanierung München: Komplette Haussanierung ab 920€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.",
       keywords: "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München",
       canonical: `${BASE_URL}/haussanierung`,
@@ -104,7 +104,7 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/kernsanierung") {
     return {
-      title: "Kernsanierung München ab 1.200€/m² | KSHW",
+      title: "Kernsanierung München ab 1.200€/m² | 089-Sanierer",
       description: "Kernsanierung München: Professionelle Kernsanierung ab 1.200€/m². Bis auf die Grundsubstanz und komplett neu aufbauen. Festpreisgarantie.",
       keywords: "Kernsanierung München, Kernsanierung Kosten München, Altbau Kernsanierung München, Haus entkernen München",
       canonical: `${BASE_URL}/kernsanierung`,
@@ -115,41 +115,41 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/kontakt") {
     return {
-      title: "Kontakt | KSHW München | Sanierung Beratung",
-      description: "Kontaktieren Sie KSHW München für Ihre Sanierungsanfrage. Telefon: 0152 122 740 43. Kostenlose Beratung in München und Umgebung.",
-      keywords: "KSHW Kontakt, Sanierung München Beratung, Sanierung Telefon München",
+      title: "Kontakt | 089-Sanierer | Sanierung Beratung",
+      description: "Kontaktieren Sie 089-Sanierer für Ihre Sanierungsanfrage. Telefon: 0152 122 740 43. Kostenlose Beratung in München und Umgebung.",
+      keywords: "089-Sanierer Kontakt, Sanierung München Beratung, Sanierung Telefon München",
       canonical: `${BASE_URL}/kontakt`,
-      ogTitle: "Kontakt - KSHW München",
+      ogTitle: "Kontakt - 089-Sanierer",
       ogDescription: "Kontaktieren Sie uns für Ihre kostenlose Sanierungsberatung. Wir sind für Sie da!",
     };
   }
 
   if (normalizedPath === "/impressum") {
     return {
-      title: "Impressum | KSHW München",
-      description: "Impressum der KSHW München - Komplettsanierungen Haus & Wohnung. Rechtliche Informationen und Kontaktdaten.",
-      keywords: "KSHW Impressum, Sanierung München Impressum",
+      title: "Impressum | 089-Sanierer",
+      description: "Impressum der 089-Sanierer - Komplettsanierungen Haus & Wohnung. Rechtliche Informationen und Kontaktdaten.",
+      keywords: "089-Sanierer Impressum, Sanierung München Impressum",
       canonical: `${BASE_URL}/impressum`,
-      ogTitle: "Impressum - KSHW München",
-      ogDescription: "Rechtliche Informationen zu KSHW München.",
+      ogTitle: "Impressum - 089-Sanierer",
+      ogDescription: "Rechtliche Informationen zu 089-Sanierer.",
     };
   }
 
   if (normalizedPath === "/datenschutz") {
     return {
-      title: "Datenschutz | KSHW München",
-      description: "Datenschutzerklärung der KSHW München. Informationen zum Umgang mit Ihren Daten gemäß DSGVO.",
-      keywords: "KSHW Datenschutz, Sanierung München Datenschutz",
+      title: "Datenschutz | 089-Sanierer",
+      description: "Datenschutzerklärung der 089-Sanierer. Informationen zum Umgang mit Ihren Daten gemäß DSGVO.",
+      keywords: "089-Sanierer Datenschutz, Sanierung München Datenschutz",
       canonical: `${BASE_URL}/datenschutz`,
-      ogTitle: "Datenschutz - KSHW München",
+      ogTitle: "Datenschutz - 089-Sanierer",
       ogDescription: "Unsere Datenschutzerklärung gemäß DSGVO.",
     };
   }
 
   if (normalizedPath === "/faq-preise") {
     return {
-      title: "FAQ & Preise | Sanierung München | KSHW",
-      description: "Häufig gestellte Fragen zu Sanierung in München. Preise, Dauer, Ablauf - alle Antworten von KSHW München.",
+      title: "FAQ & Preise | Sanierung München | 089-Sanierer",
+      description: "Häufig gestellte Fragen zu Sanierung in München. Preise, Dauer, Ablauf - alle Antworten von 089-Sanierer.",
       keywords: "Sanierung FAQ München, Sanierung Preise München, Badsanierung Kosten FAQ",
       canonical: `${BASE_URL}/faq-preise`,
       ogTitle: "FAQ & Preise - Sanierung München",
@@ -162,22 +162,22 @@ export function getSeoMeta(path: string): SeoMeta {
     const meta = districtMeta[district];
     if (meta) {
       return {
-        title: `Sanierung ${meta.name} München | Festpreis | KSHW`,
+        title: `Sanierung ${meta.name} München | Festpreis | 089-Sanierer`,
         description: `Sanierung in ${meta.name}: ${meta.description}. Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. 5 Jahre Gewährleistung.`,
         keywords: `Sanierung ${meta.name} München, ${meta.name} Sanierung, Badsanierung ${meta.name}, Renovierung ${meta.name}`,
         canonical: `${BASE_URL}${normalizedPath}`,
-        ogTitle: `Sanierung ${meta.name} - KSHW München`,
+        ogTitle: `Sanierung ${meta.name} - 089-Sanierer`,
         ogDescription: `${meta.description}. Festpreisgarantie und 5 Jahre Gewährleistung.`,
       };
     }
   }
 
   return {
-    title: "KSHW München | Komplettsanierungen Haus & Wohnung",
-    description: "KSHW München - Ihr Partner für Komplettsanierungen in München. Badsanierung, Wohnungssanierung, Haussanierung mit Festpreisgarantie.",
-    keywords: "KSHW München, Sanierung München, Komplettsanierung",
+    title: "089-Sanierer | Komplettsanierungen Haus & Wohnung",
+    description: "089-Sanierer - Ihr Partner für Komplettsanierungen in München. Badsanierung, Wohnungssanierung, Haussanierung mit Festpreisgarantie.",
+    keywords: "089-Sanierer, Sanierung München, Komplettsanierung",
     canonical: `${BASE_URL}${normalizedPath}`,
-    ogTitle: "KSHW München - Komplettsanierungen",
+    ogTitle: "089-Sanierer - Komplettsanierungen",
     ogDescription: "Ihr Partner für Sanierungen in München mit Festpreisgarantie.",
   };
 }

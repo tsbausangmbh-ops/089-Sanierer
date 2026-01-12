@@ -153,7 +153,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title={`Sanierung ${data.name} München | Festpreis | KSHW`}
+        title={`Sanierung ${data.name} München | Festpreis | 089-Sanierer`}
         description={`Sanierung in ${data.name}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. Lokaler Anbieter mit 5 Jahren Gewährleistung. Kostenlose Beratung.`}
         canonicalPath={`/muenchen-${data.slug}`}
         schema={{

@@ -25,7 +25,7 @@ const quickReplies: QuickReply[] = [
 export function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hallo!\n\nIch bin Ihr digitaler Berater von KSHW München.\n\nWie kann ich Ihnen bei Ihrer Sanierung helfen?" }
+    { role: "assistant", content: "Hallo!\n\nIch bin Ihr digitaler Berater von 089-Sanierer.\n\nWie kann ich Ihnen bei Ihrer Sanierung helfen?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -124,7 +124,7 @@ export function ChatBot() {
                 <Bot className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-semibold text-sm">KSHW KI-Berater</p>
+                <p className="font-semibold text-sm">089-Sanierer KI-Berater</p>
                 <p className="text-xs opacity-80">Rund um die Uhr für Sie da</p>
               </div>
             </div>

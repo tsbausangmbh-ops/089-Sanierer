@@ -178,7 +178,7 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Admin Dashboard | KSHW München"
+        title="Admin Dashboard | 089-Sanierer"
         description="Admin-Bereich zur Lead-Verwaltung"
         noIndex={true}
       />
@@ -195,7 +195,7 @@ export default function AdminPage() {
                 Lead-Übersicht
               </h1>
               <p className="text-sm text-muted-foreground">
-                KSHW München - {filteredLeads?.length ?? 0} Anfragen
+                089-Sanierer - {filteredLeads?.length ?? 0} Anfragen
               </p>
             </div>
           </div>

@@ -12,7 +12,7 @@ export default function AGB() {
       <SeoHead
         title="AGB | 089-sanierer.de | Allgemeine Geschäftsbedingungen"
         description="Allgemeine Geschäftsbedingungen für Sanierungsleistungen. Informationen zu Leistungen, Haftung und Gewährleistung bei Renovierungsprojekten."
-        keywords="AGB Sanierung München, Handwerker Vertragsbedingungen, Renovierung AGB, Sanierung Gewährleistung, Allgemeine Geschäftsbedingungen Handwerker, Renovierung Vertrag München, Sanierung Zahlungsbedingungen, Handwerker München Haftung, Sanierung München Garantie, Renovierung Stornierung Bedingungen, Badsanierung München Vertrag, Komplettsanierung AGB lesen, Handwerker Gewährleistung 5 Jahre, KSHW München Geschäftsbedingungen, Sanierung München Rechte Pflichten"
+        keywords="AGB Sanierung München, Handwerker Vertragsbedingungen, Renovierung AGB, Sanierung Gewährleistung, Allgemeine Geschäftsbedingungen Handwerker, Renovierung Vertrag München, Sanierung Zahlungsbedingungen, Handwerker München Haftung, Sanierung München Garantie, Renovierung Stornierung Bedingungen, Badsanierung München Vertrag, Komplettsanierung AGB lesen, Handwerker Gewährleistung 5 Jahre, 089-Sanierer Geschäftsbedingungen, Sanierung München Rechte Pflichten"
         canonicalPath="/agb"
       />
       <SiteHeader />
@@ -38,7 +38,7 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">Geltungsbereich</h3>
               <p className="text-muted-foreground">
-                a. Die nachfolgenden Allgemeinen Geschäftsbedingungen („AGB") gelten für die Nutzung des auf der Website 089-sanierer.de bereitgestellten Dienstes. Betreiber dieses Angebots ist KSHW München, Zielstattstr. 9, 81379 München, im Folgenden „wir" oder „uns" genannt.
+                a. Die nachfolgenden Allgemeinen Geschäftsbedingungen („AGB") gelten für die Nutzung des auf der Website 089-sanierer.de bereitgestellten Dienstes. Betreiber dieses Angebots ist Ali Kemal Kurt, Hardenbergstr. 4, 80992 München, im Folgenden „wir" oder „uns" genannt.
               </p>
               <p className="text-muted-foreground mt-4">
                 b. Diese AGB regeln das vertragliche Verhältnis zwischen uns und den Nutzern unseres Dienstes, im Folgenden als „Interessenten" bezeichnet.
@@ -110,7 +110,7 @@ export default function AGB() {
             <section className="border-t pt-8 mt-8">
               <h2 className="text-xl font-bold mb-4">Teil B: AGB für Partner (Gewerbliche Vertragspartner)</h2>
               <p className="text-muted-foreground mb-4">
-                der KSHW München – Marke 089-sanierer – für die Lieferung von Sanierungs-Leads an gewerbliche Vertragspartner.
+                der 089-Sanierer für die Lieferung von Sanierungs-Leads an gewerbliche Vertragspartner.
               </p>
               <p className="text-muted-foreground text-sm">Stand: Dezember 2025</p>
             </section>
@@ -118,26 +118,26 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">§ 1 Geltungsbereich und Vertragspartner</h3>
               <p className="text-muted-foreground">
-                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die vertraglichen Beziehungen zwischen der KSHW München, Zielstattstr. 9, 81379 München, handelnd unter der Marke 089-sanierer (nachfolgend „KSHW München" oder „Anbieter") und dem jeweiligen gewerblichen Vertragspartner („Vertragspartner"), der von KSHW München Leads bezieht.
+                Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die vertraglichen Beziehungen zwischen Ali Kemal Kurt, Hardenbergstr. 4, 80992 München, handelnd unter der Marke 089-Sanierer (nachfolgend „089-Sanierer" oder „Anbieter") und dem jeweiligen gewerblichen Vertragspartner („Vertragspartner"), der von 089-Sanierer Leads bezieht.
               </p>
               <p className="text-muted-foreground mt-4">
                 Diese AGB gelten ausschließlich gegenüber Unternehmern im Sinne des § 14 BGB. Der Vertragspartner bestätigt mit Abschluss, dass er nicht als Verbraucher handelt.
               </p>
               <p className="text-muted-foreground mt-4">
-                Abweichende oder entgegenstehende Bedingungen des Vertragspartners werden nicht anerkannt, es sei denn, KSHW München hat deren Geltung ausdrücklich in Textform bestätigt.
+                Abweichende oder entgegenstehende Bedingungen des Vertragspartners werden nicht anerkannt, es sei denn, 089-Sanierer hat deren Geltung ausdrücklich in Textform bestätigt.
               </p>
               <p className="text-muted-foreground mt-4">
-                Mit Absenden des Onlineformulars unter Anerkennung dieser AGB und Betätigung des Abschlussbuttons gibt der Vertragspartner ein verbindliches Angebot auf Abschluss des Vertrages ab. Der Vertrag kommt mit der Annahme durch KSHW München zustande, die ausdrücklich oder konkludent durch die Lieferung der ersten Leads erfolgt.
+                Mit Absenden des Onlineformulars unter Anerkennung dieser AGB und Betätigung des Abschlussbuttons gibt der Vertragspartner ein verbindliches Angebot auf Abschluss des Vertrages ab. Der Vertrag kommt mit der Annahme durch 089-Sanierer zustande, die ausdrücklich oder konkludent durch die Lieferung der ersten Leads erfolgt.
               </p>
             </section>
 
             <section>
               <h3 className="text-lg font-bold mb-4">§ 2 Vertragsgegenstand</h3>
               <p className="text-muted-foreground">
-                Gegenstand des Vertrages ist die Lieferung von Leads durch KSHW München an den Vertragspartner.
+                Gegenstand des Vertrages ist die Lieferung von Leads durch 089-Sanierer an den Vertragspartner.
               </p>
               <p className="text-muted-foreground mt-4">
-                Leads sind Datensätze von Personen, die über Online-Formulare der Marke 089-sanierer oder über sonstige rechtmäßig beauftragte oder eingebundene Partnerkanäle eine unverbindliche Anfrage zu Sanierungs-, Modernisierungs- oder Renovierungsleistungen gestellt und hierbei der Weitergabe ihrer Daten an Partnerunternehmen von KSHW München zugestimmt haben.
+                Leads sind Datensätze von Personen, die über Online-Formulare der Marke 089-Sanierer oder über sonstige rechtmäßig beauftragte oder eingebundene Partnerkanäle eine unverbindliche Anfrage zu Sanierungs-, Modernisierungs- oder Renovierungsleistungen gestellt und hierbei der Weitergabe ihrer Daten an Partnerunternehmen von 089-Sanierer zugestimmt haben.
               </p>
               <p className="text-muted-foreground mt-4">
                 Die Leads werden dem Vertragspartner für das im Onlineformular angegebene Gebiet (Postleitzahl + Umkreis in Luftlinienkilometern) zur Verfügung gestellt. Geringfügige Abweichungen von bis zu 5 Kilometern Luftlinie bezogen auf die jeweilige Ortsgrenze gelten als vertragsgemäß.
@@ -146,7 +146,7 @@ export default function AGB() {
                 Die Leads können an bis zu zwei weitere geeignete Partnerunternehmen zur Verfügung gestellt werden.
               </p>
               <p className="text-muted-foreground mt-4">
-                KSHW München liefert Leads, die auf Selbstauskünften der Interessenten beruhen. Die angegebenen Daten werden technisch auf Plausibilität geprüft und zusätzlich im Rahmen eines telefonischen Kontakts durch Mitarbeiter von KSHW München überprüft.
+                089-Sanierer liefert Leads, die auf Selbstauskünften der Interessenten beruhen. Die angegebenen Daten werden technisch auf Plausibilität geprüft und zusätzlich im Rahmen eines telefonischen Kontakts durch Mitarbeiter von 089-Sanierer überprüft.
               </p>
               <p className="text-muted-foreground mt-4">
                 Im Telefonat wird insbesondere sichergestellt, dass die angegebene Telefonnummer erreichbar ist, die wesentlichen Angaben zum Vorhaben mit dem Interessenten abgestimmt werden und dieser ausdrücklich der Weitergabe seiner Daten an Partnerunternehmen zustimmt. Eine weitergehende persönliche oder wirtschaftliche Prüfung des Interessenten erfolgt nicht. Das tatsächliche Verhalten, die Erreichbarkeit oder das Interesse des Interessenten kann naturgemäß nicht beeinflusst werden.
@@ -156,16 +156,16 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">§ 3 Leistungen des Anbieters</h3>
               <p className="text-muted-foreground">
-                KSHW München liefert dem Vertragspartner die Leads in elektronischer Form, in der Regel per E-Mail.
+                089-Sanierer liefert dem Vertragspartner die Leads in elektronischer Form, in der Regel per E-Mail.
               </p>
               <p className="text-muted-foreground mt-4">
                 Der Anbieter ist nicht verpflichtet, eine bestimmte Anzahl von Leads oder eine Mindestmenge zu liefern. Die tatsächliche Liefermenge richtet sich nach der Verfügbarkeit geeigneter Anfragen innerhalb des vereinbarten Zeitraums.
               </p>
               <p className="text-muted-foreground mt-4">
-                Der Vertragspartner nutzt die übermittelten Leads zur eigenen gewerblichen Kontaktaufnahme. Zwischen KSHW München und den Interessenten besteht kein Vertragsverhältnis.
+                Der Vertragspartner nutzt die übermittelten Leads zur eigenen gewerblichen Kontaktaufnahme. Zwischen 089-Sanierer und den Interessenten besteht kein Vertragsverhältnis.
               </p>
               <p className="text-muted-foreground mt-4">
-                Nach Übermittlung des Leads steht es dem Vertragspartner frei, mit dem Interessenten weitere Gespräche oder Geschäfte zu führen. Etwaige Folgeaufträge oder Vertragsabschlüsse zwischen dem Vertragspartner und dem Interessenten begründen keine zusätzlichen Ansprüche oder Zahlungsverpflichtungen gegenüber KSHW München.
+                Nach Übermittlung des Leads steht es dem Vertragspartner frei, mit dem Interessenten weitere Gespräche oder Geschäfte zu führen. Etwaige Folgeaufträge oder Vertragsabschlüsse zwischen dem Vertragspartner und dem Interessenten begründen keine zusätzlichen Ansprüche oder Zahlungsverpflichtungen gegenüber 089-Sanierer.
               </p>
               <p className="text-muted-foreground mt-4">
                 Sämtliche auf der Website, in Präsentationen oder in sonstigen Informationsmedien enthaltenen Angaben über Art, Umfang und Qualität der Leads oder Leistungen dienen ausschließlich der allgemeinen Beschreibung und stellen keine verbindliche Zusicherung oder Garantie dar.
@@ -175,19 +175,19 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">§ 4 Pflichten des Vertragspartners</h3>
               <p className="text-muted-foreground">
-                Der Vertragspartner verpflichtet sich, alle von KSHW München gelieferten Leads vertraulich zu behandeln und ausschließlich für die eigene gewerbliche Tätigkeit im Rahmen von Sanierungs-, Modernisierungs- oder Renovierungsleistungen zu verwenden.
+                Der Vertragspartner verpflichtet sich, alle von 089-Sanierer gelieferten Leads vertraulich zu behandeln und ausschließlich für die eigene gewerbliche Tätigkeit im Rahmen von Sanierungs-, Modernisierungs- oder Renovierungsleistungen zu verwenden.
               </p>
               <p className="text-muted-foreground mt-4">
-                Eine Weitergabe oder der Verkauf der übermittelten Daten an Dritte ist nur mit vorheriger schriftlicher Zustimmung von KSHW München und unter Beachtung der geltenden Datenschutzvorschriften zulässig.
+                Eine Weitergabe oder der Verkauf der übermittelten Daten an Dritte ist nur mit vorheriger schriftlicher Zustimmung von 089-Sanierer und unter Beachtung der geltenden Datenschutzvorschriften zulässig.
               </p>
               <p className="text-muted-foreground mt-4">
                 Der Vertragspartner hat die übermittelten personenbezogenen Daten gemäß den Vorgaben der Datenschutz-Grundverordnung (DSGVO), insbesondere nach Art. 13, 14 und 32 DSGVO, zu verarbeiten und die jeweiligen Interessenten entsprechend zu informieren.
               </p>
               <p className="text-muted-foreground mt-4">
-                Der Vertragspartner ist verpflichtet, die von KSHW München übermittelten Leads zeitnah zu bearbeiten und die Interessenten in angemessener Form zu kontaktieren. Die Kommunikation hat stets professionell, sachlich und respektvoll zu erfolgen.
+                Der Vertragspartner ist verpflichtet, die von 089-Sanierer übermittelten Leads zeitnah zu bearbeiten und die Interessenten in angemessener Form zu kontaktieren. Die Kommunikation hat stets professionell, sachlich und respektvoll zu erfolgen.
               </p>
               <p className="text-muted-foreground mt-4">
-                Der Vertragspartner ist verpflichtet, KSHW München unverzüglich alle Änderungen seiner Kontaktdaten, insbesondere der E-Mail-Adresse für die Lead-Lieferung und Rechnungsstellung, mitzuteilen. Zustellungen an die zuletzt bekannte E-Mail-Adresse gelten als ordnungsgemäß.
+                Der Vertragspartner ist verpflichtet, 089-Sanierer unverzüglich alle Änderungen seiner Kontaktdaten, insbesondere der E-Mail-Adresse für die Lead-Lieferung und Rechnungsstellung, mitzuteilen. Zustellungen an die zuletzt bekannte E-Mail-Adresse gelten als ordnungsgemäß.
               </p>
               <p className="text-muted-foreground mt-4">
                 Der Vertragspartner ist dafür verantwortlich, alle gesetzlichen Vorschriften im Zusammenhang mit seiner Tätigkeit einzuhalten, insbesondere im Hinblick auf Verbraucherrechte, Wettbewerbsrecht, Datenschutz und steuerrechtliche Pflichten.
@@ -200,10 +200,10 @@ export default function AGB() {
                 Die vom Vertragspartner im Onlineformular angegebene gewünschte Anzahl an Leads – je Produktkategorie und je Woche oder in der dort definierten Frequenz – stellt die vereinbarte Berechnungsgrundlage für die monatliche Gesamtmenge der Lead-Lieferung dar.
               </p>
               <p className="text-muted-foreground mt-4">
-                Der Vertragspartner verpflichtet sich, die tatsächlich gelieferten Leads bis zu dieser Gesamtmenge pro Monat abzunehmen und zu vergüten, soweit KSHW München entsprechende Leads anbietet und liefert.
+                Der Vertragspartner verpflichtet sich, die tatsächlich gelieferten Leads bis zu dieser Gesamtmenge pro Monat abzunehmen und zu vergüten, soweit 089-Sanierer entsprechende Leads anbietet und liefert.
               </p>
               <p className="text-muted-foreground mt-4">
-                KSHW München übernimmt keine Verpflichtung, eine bestimmte Anzahl von Leads pro Woche oder pro Monat zu liefern oder eine durchgehende Lieferbarkeit zu gewährleisten und ist berechtigt, die Liefermenge nach eigenem Ermessen zu variieren.
+                089-Sanierer übernimmt keine Verpflichtung, eine bestimmte Anzahl von Leads pro Woche oder pro Monat zu liefern oder eine durchgehende Lieferbarkeit zu gewährleisten und ist berechtigt, die Liefermenge nach eigenem Ermessen zu variieren.
               </p>
               <p className="text-muted-foreground mt-4">
                 Die Lead-Gebühren werden am Ende eines Monats für alle gelieferten Leads abgerechnet. Die Rechnung wird elektronisch übermittelt; der Rechnungsbetrag ist sofort fällig.
@@ -220,10 +220,10 @@ export default function AGB() {
                 <li>der gelieferte Lead entspricht nicht der im Onlineformular ausgewählten Kategorie.</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                Reklamationen aufgrund fehlenden oder nachträglich entfallenen Projektinteresses, aufgrund nicht erreichbarer, nicht reagierender oder nicht rückrufender Interessenten sind ausgeschlossen, da diese Umstände außerhalb des Einflussbereichs von KSHW München liegen.
+                Reklamationen aufgrund fehlenden oder nachträglich entfallenen Projektinteresses, aufgrund nicht erreichbarer, nicht reagierender oder nicht rückrufender Interessenten sind ausgeschlossen, da diese Umstände außerhalb des Einflussbereichs von 089-Sanierer liegen.
               </p>
               <p className="text-muted-foreground mt-4">
-                Eine entsprechende Mitteilung an KSHW München muss innerhalb von fünf (5) Werktagen nach Zuführung des Leads per E-Mail erfolgen.
+                Eine entsprechende Mitteilung an 089-Sanierer muss innerhalb von fünf (5) Werktagen nach Zuführung des Leads per E-Mail erfolgen.
               </p>
             </section>
 
@@ -259,13 +259,13 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">§ 8 Haftung und Gewährleistung</h3>
               <p className="text-muted-foreground">
-                KSHW München haftet nicht für die Richtigkeit, Vollständigkeit oder Aktualität der von den Interessenten angegebenen Daten.
+                089-Sanierer haftet nicht für die Richtigkeit, Vollständigkeit oder Aktualität der von den Interessenten angegebenen Daten.
               </p>
               <p className="text-muted-foreground mt-4">
                 Für etwaige Schäden oder Ansprüche aus den vom Vertragspartner durchgeführten Beratungen, Besichtigungen, Sanierungsleistungen oder sonstigen Tätigkeiten haftet allein der Vertragspartner.
               </p>
               <p className="text-muted-foreground mt-4">
-                Der Vertragspartner stellt KSHW München von sämtlichen Ansprüchen Dritter frei, die im Zusammenhang mit seiner Tätigkeit gegenüber den Interessenten entstehen.
+                Der Vertragspartner stellt 089-Sanierer von sämtlichen Ansprüchen Dritter frei, die im Zusammenhang mit seiner Tätigkeit gegenüber den Interessenten entstehen.
               </p>
             </section>
 
@@ -279,7 +279,7 @@ export default function AGB() {
             <section>
               <h3 className="text-lg font-bold mb-4">§ 10 Vertraulichkeit und Schutzrechte</h3>
               <p className="text-muted-foreground">
-                Der Vertragspartner verpflichtet sich, alle ihm im Rahmen der Zusammenarbeit bekannt gewordenen Geschäftsgeheimnisse und vertraulichen Informationen von KSHW München vertraulich zu behandeln und nicht an Dritte weiterzugeben.
+                Der Vertragspartner verpflichtet sich, alle ihm im Rahmen der Zusammenarbeit bekannt gewordenen Geschäftsgeheimnisse und vertraulichen Informationen von 089-Sanierer vertraulich zu behandeln und nicht an Dritte weiterzugeben.
               </p>
             </section>
 
@@ -299,9 +299,9 @@ export default function AGB() {
             <section className="border-t pt-8 mt-8">
               <h2 className="text-xl font-bold mb-4">Kontakt</h2>
               <p className="text-muted-foreground">
-                KSHW München<br />
-                Zielstattstr. 9<br />
-                81379 München<br /><br />
+                Ali Kemal Kurt<br />
+                Hardenbergstr. 4<br />
+                80992 München<br /><br />
                 E-Mail: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a><br />
                 Telefon: 0152 122 740 43
               </p>

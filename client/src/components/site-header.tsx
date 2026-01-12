@@ -34,18 +34,18 @@ export function SiteHeader() {
       </a>
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="h-16 flex items-center justify-between gap-4">
-          <Link href="/" aria-label="KSHW München Startseite">
+          <Link href="/" aria-label="089-Sanierer Startseite">
             <div className="flex items-center gap-2 cursor-pointer">
               <img 
                 src={kshwLogo} 
-                alt="KSHW München Logo" 
+                alt="089-Sanierer Logo" 
                 className="h-10 w-auto rounded"
                 width="40"
                 height="40"
                 loading="eager"
               />
               <div className="hidden sm:flex flex-col">
-                <span className="font-bold text-base leading-tight">KSHW München</span>
+                <span className="font-bold text-base leading-tight">089-Sanierer</span>
                 <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
               </div>
             </div>
