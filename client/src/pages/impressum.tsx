@@ -35,7 +35,7 @@ export default function Impressum() {
               <h2 className="text-xl font-bold mb-4">Verantwortlicher</h2>
               <p className="text-muted-foreground">
                 <a href="https://089-sanierer.de/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.089-sanierer.de</a><br />
-                <a href="https://komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.komplettsanierungen-haus-wohnung.de</a>
+                <a href="https://aquapro24.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.aquapro24.de</a>
               </p>
               <p className="text-muted-foreground mt-4">
                 Mustafa Sakar<br />
@@ -59,7 +59,7 @@ export default function Impressum() {
             <section>
               <h2 className="text-xl font-bold mb-4">Urheberrechte</h2>
               <p className="text-muted-foreground">
-                Die durch die Seitenbetreiber erstellten Inhalte auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Rechtsinhabers bzw. des Erstellers. Jede vollständige oder teilweise Reproduktion oder Darstellung der Webseiten, Daten oder eines Bestandteils der Website www.komplettsanierungen-haus-wohnung.de, in welchem Verfahren und auf welchem Datenträger auch immer, ist ohne Zustimmung des Herausgebers untersagt und bedeutet eine Fälschung.
+                Die durch die Seitenbetreiber erstellten Inhalte auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Rechtsinhabers bzw. des Erstellers. Jede vollständige oder teilweise Reproduktion oder Darstellung der Webseiten, Daten oder eines Bestandteils der Website www.089-sanierer.de, in welchem Verfahren und auf welchem Datenträger auch immer, ist ohne Zustimmung des Herausgebers untersagt und bedeutet eine Fälschung.
               </p>
             </section>
 
