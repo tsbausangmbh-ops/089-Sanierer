@@ -2395,9 +2395,18 @@ export default function FunnelPage() {
           data-testid="checkbox-privacy"
         />
         <Label htmlFor="privacy" className="text-sm font-normal leading-relaxed cursor-pointer">
-          Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu. 
+          Ich stimme der Verarbeitung meiner Daten gemäß der <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link> zu. 
           Meine Daten werden ausschließlich zur Bearbeitung meiner Anfrage verwendet und nicht an Dritte weitergegeben.
         </Label>
+      </div>
+
+      <div className="p-4 bg-muted/30 rounded-lg border border-muted text-sm text-muted-foreground">
+        <p className="font-medium mb-1">Hinweis zu Vertragspartnern</p>
+        <p>
+          Vertragspartner dieses Angebots ist der im Angebot namentlich genannte Gewerbebetrieb. 
+          Rechnungsstellung, Gewährleistung und Haftung erfolgen ausschließlich über den jeweiligen Vertragspartner.
+          Weitere Informationen finden Sie in unserem <Link href="/impressum" className="text-primary hover:underline">Impressum</Link> und unseren <Link href="/agb" className="text-primary hover:underline">AGB</Link>.
+        </p>
       </div>
     </div>
   );

@@ -289,6 +289,20 @@ export default function Kontakt() {
                 </CardContent>
               </Card>
 
+              <Card className="bg-muted/30 border-primary/20">
+                <CardContent className="p-6">
+                  <h2 className="text-xl font-bold mb-4">Hinweis zu Vertragspartnern</h2>
+                  <p className="text-muted-foreground text-sm">
+                    Vertragspartner dieses Angebots ist der im Angebot namentlich genannte Gewerbebetrieb. 
+                    Rechnungsstellung, Gewährleistung und Haftung erfolgen ausschließlich über den jeweiligen Vertragspartner. 
+                    Weitere Leistungen können durch rechtlich selbstständige Partnerbetriebe ausgeführt werden.
+                  </p>
+                  <p className="text-muted-foreground text-sm mt-2">
+                    Weitere Informationen finden Sie in unserem <Link href="/impressum" className="text-primary hover:underline">Impressum</Link> und unseren <Link href="/agb" className="text-primary hover:underline">AGB</Link>.
+                  </p>
+                </CardContent>
+              </Card>
+
               <Card>
                 <CardContent className="p-6">
                   <h2 className="text-xl font-bold mb-4">Weiterführende Informationen</h2>
