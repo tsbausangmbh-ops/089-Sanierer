@@ -10,12 +10,12 @@ const datenschutzHeroContent: HeroContent = {
   backgroundImage: datenschutzHeroImage,
   badge: "DSGVO-konform",
   titleLine1: "Datenschutz.",
-  titleLine2: "Ihre Daten sind sicher.",
-  descriptions: ["Transparente Datenverarbeitung.", "Ihre Rechte im Überblick."],
-  strongText: "100% DSGVO-konform.",
+  titleLine2: "Schutz Ihrer Daten.",
+  descriptions: ["KSHW München – Komplettsanierung Haus & Wohnung.", "Transparente Datenverarbeitung."],
+  strongText: "Ihre Daten sind bei uns sicher.",
   ctaText: "Jetzt anfragen",
   ctaLink: "/anfrage",
-  checkmarks: ["Keine Datenweitergabe ohne Zustimmung", "Sichere Verschlüsselung", "Löschung auf Anfrage"],
+  checkmarks: ["SSL-Verschlüsselung", "DSGVO-konform", "Keine Datenweitergabe ohne Zustimmung"],
   dataTestIdPrefix: "datenschutz"
 };
 
@@ -25,7 +25,7 @@ export default function Datenschutz() {
       <SeoHead
         title="Datenschutz | 089-sanierer.de | DSGVO-konform"
         description="Datenschutzerklärung: So schützen wir Ihre Daten. DSGVO-konform, Ihre Rechte, Cookies und Datenverarbeitung bei Sanierungsanfragen erklärt."
-        keywords="Datenschutz Handwerker München, DSGVO Sanierung, Datenschutzerklärung Renovierung, Datenverarbeitung Sanierungsanfrage, Cookie Nutzung Handwerker Website, DSGVO konforme Renovierung München, Datenschutz Anfrage Formular, Ihre Rechte DSGVO Sanierung, personenbezogene Daten Handwerker, Datenlöschung Sanierung München, Datenschutzbeauftragter Renovierung, Google Analytics Datenschutz Handwerker, Cookies Sanierung Website München, Datensicherheit Handwerker München, 089-Sanierer Datenschutz"
+        keywords="Datenschutz Sanierung München, DSGVO Renovierungsfirma, Datenschutzerklärung Handwerker, Privatsphäre Baufirma Bayern, Komplettsanierung Datenschutz, DSGVO konform Bauunternehmen"
         canonicalPath="/datenschutz"
       />
       <SiteHeader />
@@ -33,259 +33,328 @@ export default function Datenschutz() {
       <Breadcrumb items={[{ label: "Datenschutz" }]} />
 
       <main className="pb-16 flex-1">
-        <div className="max-w-7xl mx-auto px-24">
+        <div className="max-w-4xl mx-auto px-6">
 
-          <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
-            
+          <div className="prose prose-lg dark:prose-invert max-w-none space-y-6">
+
             <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">1. Datenschutz auf einen Blick</h2>
+              
+              <h3 className="text-xl font-bold mb-4">Allgemeine Hinweise</h3>
               <p className="text-muted-foreground">
-                Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten im Rahmen unseres Onlineangebotes und der damit verbundenen Dienste der Marke 089-sanierer.de auf.
+                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
               </p>
-              <p className="text-muted-foreground mt-4">
-                <strong>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</strong><br />
-                Mustafa Sakar, Hardenbergstr. 4, 80992 München (im Folgenden: „wir" oder „089-sanierer.de")
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Datenerfassung auf dieser Website</h3>
+              <p className="text-muted-foreground font-bold">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</p>
+              <p className="text-muted-foreground">
+                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem <Link href="/impressum" className="text-primary hover:underline">Impressum</Link> dieser Website entnehmen.
+              </p>
+
+              <p className="text-muted-foreground font-bold mt-4">Wie erfassen wir Ihre Daten?</p>
+              <p className="text-muted-foreground">
+                Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+              </p>
+
+              <p className="text-muted-foreground font-bold mt-4">Wofür nutzen wir Ihre Daten?</p>
+              <p className="text-muted-foreground">
+                Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
+              </p>
+
+              <div className="bg-muted/30 p-4 rounded-lg mt-6">
+                <p className="text-muted-foreground font-bold">Hinweis zu Vertragspartnern</p>
+                <p className="text-muted-foreground mt-2">
+                  Vertragspartner dieses Angebots ist der im Angebot namentlich genannte Gewerbebetrieb. Rechnungsstellung, Gewährleistung und Haftung erfolgen ausschließlich über den jeweiligen Vertragspartner. Weitere Leistungen können durch rechtlich selbstständige Partnerbetriebe ausgeführt werden.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">2. Hosting & Content Delivery Networks (CDN)</h2>
+              <p className="text-muted-foreground">
+                Wir hosten die Inhalte unserer Website bei einem externen Anbieter. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
+              </p>
+              <div className="bg-muted/30 p-4 rounded-lg mt-4">
+                <p className="text-muted-foreground">
+                  <strong>Serverstandort:</strong> EU (Rechenzentren innerhalb der Europäischen Union)<br />
+                  <strong>Auftragsverarbeitung:</strong> Wir haben einen Vertrag über Auftragsverarbeitung (AVV) abgeschlossen. Dieser stellt sicher, dass die Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet werden.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+              
+              <h3 className="text-xl font-bold mb-4">Datenschutz & Datensicherheit</h3>
+              <p className="text-muted-foreground">
+                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Weitergabe von Daten</h3>
+              <p className="text-muted-foreground">
+                Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als den im Folgenden aufgeführten Zwecken findet nicht statt. Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 mt-2">
+                <li>Sie Ihre nach Art. 6 Abs. 1 S. 1 lit. a DSGVO ausdrückliche Einwilligung dazu erteilt haben,</li>
+                <li>die Weitergabe nach Art. 6 Abs. 1 S. 1 lit. f DSGVO zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist,</li>
+                <li>für die Weitergabe nach Art. 6 Abs. 1 S. 1 lit. c DSGVO eine gesetzliche Verpflichtung besteht,</li>
+                <li>dies gesetzlich zulässig und nach Art. 6 Abs. 1 S. 1 lit. b DSGVO für die Abwicklung von Vertragsverhältnissen mit Ihnen erforderlich ist.</li>
+              </ul>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Weitergabe an Handwerker und Subunternehmer</h3>
+              <p className="text-muted-foreground">
+                Zur Erfüllung unseres Auftrags (Komplettsanierung, Koordination verschiedener Gewerke) ist es erforderlich, Ihre Kontaktdaten (Name, Anschrift, Telefonnummer, ggf. E-Mail) an von uns beauftragte Subunternehmer (z. B. Elektriker, Installateure, Maler) und Fachplaner (z. B. Architekten, Statiker) weiterzugeben.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Die Weitergabe erfolgt ausschließlich zum Zweck der Terminvereinbarung, Angebotserstellung für Teilleistungen oder Durchführung der handwerklichen Tätigkeiten bei Ihnen vor Ort. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Maßnahmen). Unsere Partner sind ebenfalls zur Einhaltung der Datenschutzbestimmungen verpflichtet.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">SSL- bzw. TLS-Verschlüsselung</h3>
+              <p className="text-muted-foreground">
+                Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Server-Log-Dateien</h3>
+              <p className="text-muted-foreground">
+                Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 mt-2">
+                <li>Browsertyp und Browserversion</li>
+                <li>Verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
+              </ul>
+              <p className="text-muted-foreground mt-2">
+                Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Cookies</h3>
+              <p className="text-muted-foreground">
+                Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Textdateien und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte Websitefunktionen ohne diese nicht funktionieren würden. Andere Cookies dienen dazu, das Nutzerverhalten auszuwerten oder Werbung anzuzeigen.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Hinweis zur verantwortlichen Stelle</h3>
+              <div className="bg-muted/30 p-4 rounded-lg">
+                <p className="text-muted-foreground">
+                  Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br /><br />
+                  <strong>Ali Kemal Kurt</strong><br />
+                  KSHW München<br />
+                  Zielstattstr. 9<br />
+                  81379 München<br /><br />
+                  E-Mail: <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>
+                </p>
+              </div>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+              <p className="text-muted-foreground">
+                Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+              <p className="text-muted-foreground">
+                Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Recht auf Datenübertragbarkeit</h3>
+              <p className="text-muted-foreground">
+                Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Ihre Betroffenenrechte</h2>
+              <h2 className="text-2xl font-bold mb-6 text-primary">4. Datenerfassung auf dieser Website</h2>
+              
+              <h3 className="text-xl font-bold mb-4">Kontaktformular</h3>
+              <p className="text-muted-foreground">
+                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">5. Soziale Medien & Online-Marketing</h2>
+              
+              <h3 className="text-xl font-bold mb-4">Allgemeine Hinweise zu Social Media</h3>
+              <p className="text-muted-foreground">
+                Wir setzen auf unserer Website Social-Media-Plugins und Verlinkungen ein (z. B. Facebook, Instagram, LinkedIn). Um Ihre Daten zu schützen, nutzen wir datenschutzfreundliche Einbindungsmethoden.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Das bedeutet: Wenn Sie unsere Seite besuchen, werden zunächst keine personenbezogenen Daten an die Anbieter der Social-Media-Plugins weitergegeben. Erst wenn Sie aktiv auf einen der Social-Media-Buttons klicken, wird eine Verbindung zum Server des jeweiligen Anbieters hergestellt.
+              </p>
+
+              <div className="space-y-4 mt-6">
+                <div className="bg-muted/30 p-4 rounded-lg">
+                  <p className="font-bold">Facebook (Meta Platforms Ireland Limited)</p>
+                  <p className="text-muted-foreground text-sm mt-1">
+                    Anbieter: Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland<br />
+                    Datenschutzerklärung: <a href="https://www.facebook.com/privacy/policy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">facebook.com/privacy/policy</a><br />
+                    Drittlandübermittlung: USA (auf Basis von EU-US Data Privacy Framework)
+                  </p>
+                </div>
+
+                <div className="bg-muted/30 p-4 rounded-lg">
+                  <p className="font-bold">Instagram (Meta Platforms Ireland Limited)</p>
+                  <p className="text-muted-foreground text-sm mt-1">
+                    Anbieter: Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland<br />
+                    Datenschutzerklärung: <a href="https://help.instagram.com/519522125107875" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">help.instagram.com</a><br />
+                    Drittlandübermittlung: USA (auf Basis von EU-US Data Privacy Framework)
+                  </p>
+                </div>
+
+                <div className="bg-muted/30 p-4 rounded-lg">
+                  <p className="font-bold">LinkedIn (LinkedIn Ireland Unlimited Company)</p>
+                  <p className="text-muted-foreground text-sm mt-1">
+                    Anbieter: LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland<br />
+                    Datenschutzerklärung: <a href="https://www.linkedin.com/legal/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">linkedin.com/legal/privacy-policy</a><br />
+                    Drittlandübermittlung: USA (auf Basis von Standardvertragsklauseln)
+                  </p>
+                </div>
+
+                <div className="bg-muted/30 p-4 rounded-lg">
+                  <p className="font-bold">TikTok (TikTok Technology Limited)</p>
+                  <p className="text-muted-foreground text-sm mt-1">
+                    Anbieter: TikTok Technology Limited, 10 Earlsfort Terrace, Dublin, D02 T380, Irland<br />
+                    Datenschutzerklärung: <a href="https://www.tiktok.com/legal/privacy-policy-eea" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">tiktok.com/legal/privacy-policy-eea</a><br />
+                    Drittlandübermittlung: Singapur, USA (auf Basis von Standardvertragsklauseln)
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Facebook Pixel & Meta Conversion API</h3>
+              <p className="text-muted-foreground">
+                Wir setzen auf unserer Website das „Facebook Pixel" von Meta ein. Hierdurch kann das Verhalten von Nutzern nachverfolgt werden, nachdem diese durch Klick auf eine Facebook-Werbeanzeige auf unsere Website weitergeleitet wurden.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Die erhobenen Daten sind für uns anonym. Diese Daten werden jedoch von Meta gespeichert und verarbeitet. Rechtsgrundlage: Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können diese jederzeit widerrufen.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Retargeting / Remarketing</h3>
+              <p className="text-muted-foreground">
+                Wir nutzen Retargeting-Technologien, um Ihnen auf anderen Websites personalisierte Werbung anzuzeigen. Die Nutzung dieser Dienste erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">6. Analyse-Tools und Werbung</h2>
+              
+              <h3 className="text-xl font-bold mb-4">Google Analytics</h3>
+              <p className="text-muted-foreground">
+                Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Ireland Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Google Analytics verwendet so genannte „Cookies". Die Speicherung von Google-Analytics-Cookies und die Nutzung dieses Analyse-Tools erfolgen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+              </p>
+
+              <h4 className="text-lg font-bold mb-2 mt-4">IP-Anonymisierung</h4>
+              <p className="text-muted-foreground">
+                Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union vor der Übermittlung in die USA gekürzt.
+              </p>
+
+              <h4 className="text-lg font-bold mb-2 mt-4">Browser Plugin</h4>
+              <p className="text-muted-foreground">
+                Sie können die Erfassung durch Google Analytics verhindern, indem Sie das Browser-Plugin herunterladen: <a href="https://tools.google.com/dlpage/gaoptout?hl=de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">tools.google.com/dlpage/gaoptout</a>
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Google Ads</h3>
+              <p className="text-muted-foreground">
+                Der Websitebetreiber verwendet Google Ads. Google Ads ist ein Online-Werbeprogramm der Google Ireland Limited. Die Nutzung von Google Ads erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Google Tag Manager</h3>
+              <p className="text-muted-foreground">
+                Wir setzen den Google Tag Manager ein. Der Google Tag Manager selbst erstellt keine Nutzerprofile, speichert keine Cookies und nimmt keine eigenständigen Analysen vor. Er dient lediglich der Verwaltung und Ausspielung der über ihn eingebundenen Tools.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Meta Pixel (ehemals Facebook Pixel)</h3>
+              <p className="text-muted-foreground">
+                Diese Website nutzt zur Konversionsmessung der Besucheraktions-Pixel von Facebook/Meta. Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">7. Plugins, Tools und Externe Medien</h2>
+              
+              <h3 className="text-xl font-bold mb-4">Google Web Fonts (lokales Hosting)</h3>
+              <p className="text-muted-foreground">
+                Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">YouTube mit erweitertem Datenschutz</h3>
+              <p className="text-muted-foreground">
+                Diese Website bindet Videos der Website YouTube ein. Wir nutzen YouTube im erweiterten Datenschutzmodus. Dieser Modus bewirkt laut YouTube, dass YouTube keine Informationen über die Besucher auf dieser Website speichert, bevor diese sich das Video ansehen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-6 text-primary">8. Rechte der Betroffenen (Ihre Rechte)</h2>
               <p className="text-muted-foreground mb-4">
-                Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:
+                Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
               </p>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-1">
-                <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),</li>
-                <li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),</li>
-                <li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),</li>
-                <li>Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),</li>
-                <li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und</li>
-                <li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).</li>
+              <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                <li><strong>Auskunft (Art. 15 DSGVO):</strong> Sie können Informationen über Ihre von uns verarbeiteten personenbezogenen Daten verlangen.</li>
+                <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Sie können die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten Daten verlangen.</li>
+                <li><strong>Löschung (Art. 17 DSGVO):</strong> Sie können die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+                <li><strong>Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</li>
+                <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie können Ihre Daten in einem strukturierten, gängigen Format erhalten.</li>
+                <li><strong>Widerspruch (Art. 21 DSGVO):</strong> Sie können der Datenverarbeitung widersprechen, sofern diese auf Grundlage eines berechtigten Interesses erfolgt.</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen. Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde. Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: <a href="https://www.bfdi.bund.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://www.bfdi.bund.de</a>
+                Zur Ausübung dieser Rechte können Sie sich jederzeit unter den im <Link href="/impressum" className="text-primary hover:underline">Impressum</Link> angegebenen Kontaktdaten an uns wenden.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Weitergabe von personenbezogenen Daten an Dritte</h2>
-              
-              <h3 className="text-lg font-semibold mb-2">Art und Zweck der Verarbeitung:</h3>
+              <h2 className="text-2xl font-bold mb-6 text-primary">9. Google Maps</h2>
               <p className="text-muted-foreground">
-                Wir erheben und verarbeiten personenbezogene Daten, die Sie uns über das Anfrageformular auf unserer Website 089-sanierer.de zur Verfügung stellen. Diese initialen Daten dienen der Bearbeitung Ihrer Anfrage und der telefonischen Qualifizierung durch unsere Mitarbeiter. Im Rahmen dieser telefonischen Qualifizierung werden wir Ihre Angaben detailliert besprechen und Ihnen gegebenenfalls weitere Informationen zu Ihrer Anfrage geben.
+                Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
               </p>
-              <p className="text-muted-foreground mt-4">
-                Erst nach Ihrer ausdrücklichen mündlichen Zustimmung im Rahmen dieses Telefonats werden Ihre Daten (Vor- und Nachname, E-Mail-Adresse, Telefonnummer, sowie spezifische Angaben zu Ihrer Anfrage) an unsere Partnerunternehmen weitergegeben. Der Zweck dieser Weitergabe ist es, dass unsere Partnerunternehmen Ihnen auf Ihre Anfrage zugeschnittene Angebote unterbreiten und Sie direkt kontaktieren können.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Ohne Ihre mündliche Zustimmung im Telefonat erfolgt keine Weitergabe Ihrer Daten an Dritte. Eine Vermittlung von Angeboten durch unsere Partner ist in diesem Fall nicht möglich.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Empfänger der Daten:</h3>
-              <p className="text-muted-foreground">
-                Ihre personenbezogenen Daten können nach Ihrer mündlichen Einwilligung an sorgfältig ausgewählte Partnerunternehmen aus dem Bereich Sanierung und Handwerk weitergegeben werden.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Unsere Partnerunternehmen sind unabhängige Dienstleister, mit denen wir Kooperationen zur Vermittlung von Anfragen abgeschlossen haben. Sie sind vertraglich dazu verpflichtet, die erhaltenen Daten ausschließlich zum Zweck der Angebotserstellung zu verwenden und die geltenden Datenschutzbestimmungen einzuhalten.
+              <p className="text-muted-foreground mt-2">
+                Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote (Art. 6 Abs. 1 lit. f DSGVO).
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Telefonische Einwilligung zur Weitergabe von Daten an Partnerunternehmen</h2>
+              <h2 className="text-2xl font-bold mb-6 text-primary">10. Speicherdauer und Löschkonzept</h2>
               <p className="text-muted-foreground">
-                Wenn Sie uns über das Kontaktformular auf unserer Website eine Anfrage übermitteln, verwenden wir Ihre personenbezogenen Daten (z. B. Name, Telefonnummer, E-Mail-Adresse und Angaben zu Ihrem geplanten Vorhaben/ Projekt) zunächst ausschließlich zur Bearbeitung Ihrer Anfrage und zur telefonischen Kontaktaufnahme.
+                Wir speichern Ihre personenbezogenen Daten nur so lange, wie es für die Erreichung der hier genannten Zwecke erforderlich ist oder wie es die vom Gesetzgeber vorgesehenen vielfältigen Speicherfristen vorsehen.
               </p>
-              <p className="text-muted-foreground mt-4">
-                Im Rahmen eines Telefongesprächs erläutert Ihnen unser Mitarbeiter den weiteren Ablauf. Erst wenn Sie im Gespräch ausdrücklich zustimmen, dass wir Ihre Daten zur Angebotserstellung an passende Partnerunternehmen aus dem Bereich Sanierung und Handwerk weitergeben dürfen, erfolgt diese Datenweitergabe. Die Einwilligung erfolgt mündlich und freiwillig.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                <strong>Ohne Ihre Zustimmung erfolgt keine Weitergabe Ihrer Daten an Dritte.</strong>
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Zur Dokumentation Ihrer Einwilligung erfassen wir:
-              </p>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-2">
-                <li>das Datum und die Uhrzeit des Telefonats,</li>
-                <li>die Telefonnummer, unter der Sie kontaktiert wurden,</li>
-                <li>den Namen des Mitarbeiters, der das Gespräch geführt hat,</li>
-                <li>sowie den Eintrag „Einwilligung erteilt" in unserem internen CRM-System.</li>
-              </ul>
-              <p className="text-muted-foreground mt-4">
-                Die Einwilligung kann jederzeit widerrufen werden, per E-Mail an <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>. Der Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Die Einwilligungsdaten werden für die Dauer der gesetzlichen Nachweispflicht (gemäß Art. 5 Abs. 2 DSGVO) gespeichert und anschließend gelöscht, sofern keine längeren gesetzlichen Aufbewahrungsfristen bestehen.
+              <p className="text-muted-foreground mt-2">
+                Nach Fortfall des jeweiligen Zweckes bzw. Ablauf dieser Fristen werden die entsprechenden Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gesperrt oder gelöscht. Für buchhalterische Daten (Rechnungen) beträgt die gesetzliche Aufbewahrungsfrist in Deutschland 10 Jahre (§ 147 AO).
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Rechtsgrundlage</h2>
+              <h2 className="text-2xl font-bold mb-6 text-primary">11. Auftragsverarbeitung</h2>
               <p className="text-muted-foreground">
-                Die Verarbeitung Ihrer Daten zur initialen Bearbeitung und telefonischen Qualifizierung Ihrer Anfrage erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Maßnahmen).
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Die Weitergabe Ihrer Daten an unsere Partnerunternehmen erfolgt ausschließlich auf Grundlage Ihrer ausdrücklichen mündlichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Ohne diese gesonderte mündliche Zustimmung werden Ihre Daten nicht an Dritte weitergegeben.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Widerruf der Einwilligung</h2>
-              <p className="text-muted-foreground">
-                Sie haben jederzeit das Recht, Ihre Einwilligung zur Verarbeitung und Weitergabe Ihrer Daten an Partnerunternehmen zu widerrufen. Der Widerruf kann per E-Mail an <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a> erfolgen. Ein Widerruf hat keine Auswirkungen auf die Rechtmäßigkeit der vor dem Widerruf erfolgten Verarbeitung.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Speicherdauer</h2>
-              <p className="text-muted-foreground">
-                Ihre Daten werden nur solange gespeichert, wie es für die Erfüllung der genannten Zwecke (Bearbeitung Ihrer Anfrage, Vermittlung von Angeboten) erforderlich ist oder bis Sie Ihre Einwilligung widerrufen. Nach Widerruf oder Wegfall des Zwecks werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Bereitstellung vorgeschrieben oder erforderlich</h2>
-              <p className="text-muted-foreground">
-                Die Bereitstellung Ihrer personenbezogenen Daten im Formular erfolgt freiwillig. Ohne die Bereitstellung der für die Kontaktaufnahme erforderlichen Daten können wir Ihre Anfrage nicht bearbeiten und Sie nicht telefonisch qualifizieren.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Die mündliche Einwilligung zur Weitergabe Ihrer Daten an Partner erfolgt ebenfalls freiwillig. Ohne diese Einwilligung können wir Ihnen jedoch keine Angebote von unseren Partnerunternehmen vermitteln.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Erfassung allgemeiner Informationen beim Besuch unserer Website</h2>
-              
-              <h3 className="text-lg font-semibold mb-2">Technische Umsetzung des Formulars:</h3>
-              <p className="text-muted-foreground">
-                Das Formular zur Anforderung einer Anfrage wird technisch so bereitgestellt, dass die Einwilligung zur Datenweitergabe erfasst und gespeichert wird. Dabei wird ausschließlich die Bestätigung der Einwilligung gespeichert, nicht jedoch die IP-Adresse. Die Übermittlung der Formulardaten erfolgt verschlüsselt. Die Verarbeitung der Formulardaten erfolgt auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Art und Zweck der Verarbeitung:</h3>
-              <p className="text-muted-foreground">
-                Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches. Sie werden insbesondere zu folgenden Zwecken verarbeitet:
-              </p>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-2">
-                <li>Sicherstellung eines problemlosen Verbindungsaufbaus der Website,</li>
-                <li>Sicherstellung einer reibungslosen Nutzung unserer Website,</li>
-                <li>Auswertung der Systemsicherheit und -stabilität sowie</li>
-                <li>zu weiteren administrativen Zwecken.</li>
-              </ul>
-              <p className="text-muted-foreground mt-4">
-                Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art werden von uns ggfs. statistisch ausgewertet, um unseren Internetauftritt und die dahinterstehende Technik zu optimieren.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Rechtsgrundlage:</h3>
-              <p className="text-muted-foreground">
-                Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Empfänger:</h3>
-              <p className="text-muted-foreground">
-                Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Speicherdauer:</h3>
-              <p className="text-muted-foreground">
-                Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung nicht mehr erforderlich sind. Dies ist für die Daten, die der Bereitstellung der Webseite dienen, grundsätzlich der Fall, wenn die jeweilige Sitzung beendet ist.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Bereitstellung vorgeschrieben oder erforderlich:</h3>
-              <p className="text-muted-foreground">
-                Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer Website nicht gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein. Aus diesem Grund ist ein Widerspruch ausgeschlossen.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Cookies</h2>
-              
-              <h3 className="text-lg font-semibold mb-2">Art und Zweck der Verarbeitung:</h3>
-              <p className="text-muted-foreground">
-                Wie viele andere Webseiten verwenden wir auch so genannte „Cookies". Bei Cookies handelt es sich um kleine Textdateien, die auf Ihrem Endgerät (Laptop, Tablet, Smartphone o.ä.) gespeichert werden, wenn Sie unsere Webseite besuchen. Hierdurch erhalten wir bestimmte Daten wie z. B. IP-Adresse, verwendeter Browser und Betriebssystem. Cookies können nicht verwendet werden, um Programme zu starten oder Viren auf einen Computer zu übertragen.
-              </p>
-
-              <h3 className="text-lg font-semibold mb-2 mt-6">Speicherdauer und eingesetzte Cookies:</h3>
-              <p className="text-muted-foreground">
-                Soweit Sie uns durch Ihre Browsereinstellungen oder Zustimmung die Verwendung von Cookies erlauben, können folgende Cookies auf unseren Webseiten zum Einsatz kommen.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Soweit diese Cookies (auch) personenbezogene Daten betreffen können, informieren wir Sie darüber in den folgenden Abschnitten. Sie können über Ihre Browsereinstellungen einzelne Cookies oder den gesamten Cookie-Bestand löschen.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                Darüber hinaus erhalten Sie Informationen und Anleitungen, wie diese Cookies gelöscht oder deren Speicherung vorab blockiert werden können. Je nach Anbieter Ihres Browsers finden Sie die notwendigen Informationen unter den nachfolgenden Links:
-              </p>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-2">
-                <li>Mozilla Firefox: <a href="https://support.mozilla.org/de/kb/cookies-loeschen-daten-von-websites-entfernen" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://support.mozilla.org/de/kb/cookies-loeschen-daten-von-websites-entfernen</a></li>
-                <li>Internet Explorer: <a href="https://support.microsoft.com/de-de/help/17442/windows-internet-explorer-delete-manage-cookies" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://support.microsoft.com/de-de/help/17442/windows-internet-explorer-delete-manage-cookies</a></li>
-                <li>Google Chrome: <a href="https://support.google.com/accounts/answer/61416?hl=de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://support.google.com/accounts/answer/61416?hl=de</a></li>
-                <li>Opera: <a href="http://www.opera.com/de/help" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">http://www.opera.com/de/help</a></li>
-                <li>Safari: <a href="https://support.apple.com/kb/PH17191?locale=de_DE" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://support.apple.com/kb/PH17191?locale=de_DE</a></li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Newsletter</h2>
-              
-              <h3 className="text-lg font-semibold mb-2">Art und Zweck der Verarbeitung:</h3>
-              <p className="text-muted-foreground">
-                Ihre Daten werden ausschließlich dazu verwendet, Ihnen den abonnierten Newsletter per E-Mail zuzustellen. Die Angabe Ihres Namens erfolgt, um Sie im Newsletter persönlich ansprechen zu können und ggf. zu identifizieren, falls Sie von Ihren Rechten als Betroffener Gebrauch machen wollen. Für den Empfang des Newsletters ist die Angabe Ihrer E-Mail-Adresse ausreichend. Bei der Anmeldung zum Bezug unseres Newsletters werden die von Ihnen angegebenen Daten ausschließlich für diesen Zweck verwendet.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">SSL-Verschlüsselung</h2>
-              <p className="text-muted-foreground">
-                Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Hinweis gem. EU AI Act)</h2>
-              <p className="text-sm text-muted-foreground mb-4">Transparenzhinweis gemäß Art. 50 Verordnung (EU) 2024/1689 | Stand: Dezember 2025</p>
-              <p className="text-muted-foreground bg-muted/30 p-4 rounded-lg border">
-                089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
-              </p>
-              <p className="text-muted-foreground mt-4">
-                <strong>Einsatzbereiche:</strong> Wir nutzen KI-Technologien ausschließlich zur Verbesserung unserer Servicequalität, beispielsweise für die Analyse von Anfragen, Terminplanung oder Kommunikationsunterstützung. Es erfolgt keine automatisierte Entscheidungsfindung mit rechtlicher oder ähnlich erheblicher Wirkung für Sie.
-              </p>
-              <p className="text-muted-foreground mt-4">
-                <strong>Ihre Rechte:</strong> Sie haben das Recht, Auskunft über den Einsatz von KI-Systemen bei der Verarbeitung Ihrer Daten zu erhalten. Bei Fragen wenden Sie sich bitte an: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Änderung unserer Datenschutzbestimmungen</h2>
-              <p className="text-muted-foreground">
-                Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold mb-4">Fragen an den Datenschutzbeauftragten</h2>
-              <p className="text-muted-foreground">
-                Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
-              </p>
-            </section>
-
-            <section className="border-t pt-8">
-              <h2 className="text-xl font-bold mb-4">Standort</h2>
-              <p className="text-muted-foreground">
-                Mustafa Sakar<br />
-                Hardenbergstr. 4<br />
-                80992 München
-              </p>
-              <p className="text-muted-foreground mt-4">
-                <strong>Öffnungszeiten:</strong><br />
-                Mo - Fr: 08:00 - 16:30 Uhr<br />
-                Sa - So: Geschlossen
+                Wir haben mit unseren externen Dienstleistern (z. B. Webhoster, IT-Service) Verträge zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO abgeschlossen. Dies stellt sicher, dass diese Ihre Daten streng nach unseren Weisungen und unter Einhaltung höchster Sicherheitsstandards verarbeiten.
               </p>
             </section>
 
             <section className="border-t pt-8 mt-8">
+              <p className="text-sm text-muted-foreground">
+                <strong>Stand:</strong> 2026 – Diese Datenschutzerklärung wurde gemäß den aktuellen Anforderungen der DSGVO und des TDDDG erstellt.
+              </p>
+            </section>
+
+            <section className="border-t pt-8">
               <h2 className="text-xl font-bold mb-4">Weitere rechtliche Informationen</h2>
               <ul className="space-y-2 text-muted-foreground">
                 <li><Link href="/impressum" className="text-primary hover:underline">Impressum</Link></li>
                 <li><Link href="/agb" className="text-primary hover:underline">Allgemeine Geschäftsbedingungen (AGB)</Link></li>
+                <li><Link href="/cookies" className="text-primary hover:underline">Cookie-Richtlinie</Link></li>
               </ul>
             </section>
 
