@@ -11,8 +11,8 @@ const impressumHeroContent: HeroContent = {
   badge: "Rechtliche Angaben",
   titleLine1: "Impressum.",
   titleLine2: "089-Sanierer München.",
-  descriptions: ["Mustafa Sakar.", "Hardenbergstr. 4, 80992 München."],
-  strongText: "Ihr lokaler Ansprechpartner.",
+  descriptions: ["KSHW München – Komplettsanierung Haus & Wohnung.", "Ihr lokaler Partner für Sanierungen."],
+  strongText: "Angaben gemäß § 5 TMG.",
   ctaText: "Jetzt anfragen",
   ctaLink: "/anfrage",
   checkmarks: ["Meisterbetrieb", "Vor Ort in München", "Persönliche Beratung"],
@@ -24,8 +24,8 @@ export default function Impressum() {
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
         title="Impressum | 089-sanierer.de | Sanierung München"
-        description="Impressum und Kontaktdaten. Verantwortlich: Mustafa Sakar, Hardenbergstr. 4, 80992 München. Telefon: 089 444438872."
-        keywords="Impressum Sanierung München, 089 Sanierer Kontakt, Handwerker München Impressum, 089-Sanierer Adresse, Sanierung München Anbieter, Renovierung München Firma, Handwerker München Verantwortlicher, 089 Sanierer Telefonnummer, Komplettsanierung München Unternehmen, Badsanierung München Ansprechpartner, Sanierung München USt-IdNr, 089-Sanierer Öffnungszeiten, Handwerker München seriös, Renovierung München rechtliche Angaben, Sanierung München Betreiber"
+        description="Impressum und Kontaktdaten von KSHW München. Verantwortlich: Mustafa Sakar & Ali Kemal Kurt. Telefon: 089 444438872. Komplettsanierung Haus & Wohnung."
+        keywords="Impressum Sanierungsfirma München, Komplettsanierung München Kontakt, Renovierungsfirma Bayern Impressum, Handwerker München Rechtliches, Baufirma München Angaben, Sanierung München Anbieter"
         canonicalPath="/impressum"
       />
       <SiteHeader />
@@ -33,54 +33,176 @@ export default function Impressum() {
       <Breadcrumb items={[{ label: "Impressum" }]} />
 
       <main className="pb-16 flex-1">
-        <div className="max-w-7xl mx-auto px-24">
+        <div className="max-w-4xl mx-auto px-6">
 
-          <div className="prose prose-lg dark:prose-invert max-w-none space-y-4">
+          <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
             
             <section>
-              <h2 className="text-xl font-bold mb-4">Verantwortlicher</h2>
+              <h2 className="text-2xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
               <p className="text-muted-foreground">
-                <a href="https://089-sanierer.de/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.089-sanierer.de</a><br />
-                <a href="https://aquapro24.de" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.aquapro24.de</a>
+                Die Website KSHW München – Komplettsanierung Haus & Wohnung wird gemeinschaftlich betrieben von zwei rechtlich selbstständigen Einzelgewerben:
+              </p>
+            </section>
+
+            <section className="bg-muted/30 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Gewerbebetrieb 1</h3>
+              <p className="text-muted-foreground">
+                <strong>Name:</strong> Mustafa Sakar<br />
+                <strong>Rechtsform:</strong> Einzelunternehmen<br />
+                <strong>Firmenauftritt:</strong> KSHW München
               </p>
               <p className="text-muted-foreground mt-4">
-                Mustafa Sakar<br />
+                <strong>Anschrift:</strong><br />
                 Hardenbergstr. 4<br />
-                80992 München
+                80992 München<br />
+                Deutschland
               </p>
               <p className="text-muted-foreground mt-4">
-                Steuernummer: folgt<br />
-                Tel: 089 444438872<br />
-                E-Mail: <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
+                <strong>Telefon:</strong> <a href="tel:089444438872" className="text-primary hover:underline">089 444438872</a><br />
+                <strong>E-Mail:</strong> <a href="mailto:info@089-sanierer.de" className="text-primary hover:underline">info@089-sanierer.de</a>
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Tätigkeitsbereich:</strong><br />
+                Bauleitung, Projektsteuerung, Kundenberatung, Koordination der Gewerke, Angebots- und Auftragsabwicklung
               </p>
             </section>
 
-            <section>
-              <h2 className="text-xl font-bold mb-4">Technische Informationen</h2>
+            <section className="bg-muted/30 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Gewerbebetrieb 2</h3>
               <p className="text-muted-foreground">
-                Wir weisen Sie darauf hin, dass die Vertraulichkeit im Internet nicht gewährleistet ist. Jeder Benutzer ist daher allein verantwortlich, seine Daten und/oder Softwares vor eventuell im Internet zirkulierenden Viren angemessen zu schützen.
+                <strong>Name:</strong> Ali Kemal Kurt<br />
+                <strong>Rechtsform:</strong> Einzelunternehmen<br />
+                <strong>Firmenauftritt:</strong> KSHW München
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Anschrift:</strong><br />
+                Zielstattstr. 9<br />
+                81379 München<br />
+                Deutschland
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Telefon:</strong> <a href="tel:01521227404" className="text-primary hover:underline">0152 122 740 43</a><br />
+                <strong>E-Mail:</strong> <a href="mailto:info@komplettsanierungen-haus-wohnung.de" className="text-primary hover:underline">info@komplettsanierungen-haus-wohnung.de</a>
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Tätigkeitsbereich:</strong><br />
+                Ausführende Bau-, Sanierungs- und Renovierungsleistungen sowie handwerkliche Tätigkeiten im Rahmen des jeweils erteilten Auftrags
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Urheberrechte</h2>
+              <h2 className="text-xl font-bold mb-4">Umsatzsteuer-ID</h2>
               <p className="text-muted-foreground">
-                Die durch die Seitenbetreiber erstellten Inhalte auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Rechtsinhabers bzw. des Erstellers. Jede vollständige oder teilweise Reproduktion oder Darstellung der Webseiten, Daten oder eines Bestandteils der Website www.089-sanierer.de, in welchem Verfahren und auf welchem Datenträger auch immer, ist ohne Zustimmung des Herausgebers untersagt und bedeutet eine Fälschung.
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                <strong>DE356852204</strong>
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Haftungsausschluss</h2>
+              <h2 className="text-xl font-bold mb-4">Rechtlicher Hinweis zur Gewerbetrennung</h2>
+              <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                <li>Die genannten Gewerbebetriebe sind rechtlich, wirtschaftlich und steuerlich eigenständig.</li>
+                <li>Der jeweilige Vertragspartner, Rechnungssteller und Leistungserbringer wird im Angebot, Auftrag und auf der Rechnung eindeutig benannt.</li>
+                <li>Es besteht keine gemeinsame Haftung.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Vertragspartner je Auftrag</h2>
+              <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                <li>Vertragspartner dieses Angebots ist der im Angebot namentlich genannte Gewerbebetrieb.</li>
+                <li>Rechnungsstellung, Gewährleistung und Haftung erfolgen ausschließlich über den jeweiligen Vertragspartner.</li>
+                <li>Weitere Leistungen können durch rechtlich selbstständige Partnerbetriebe ausgeführt werden.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Verantwortlich für den Inhalt gemäß § 18 MStV</h2>
+              <div className="grid md:grid-cols-2 gap-4 text-muted-foreground">
+                <div>
+                  <strong>Mustafa Sakar</strong><br />
+                  Hardenbergstr. 4<br />
+                  80992 München
+                </div>
+                <div>
+                  <strong>Ali Kemal Kurt</strong><br />
+                  Zielstattstr. 9<br />
+                  81379 München
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
               <p className="text-muted-foreground">
-                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden. Als Diensteanbieter bzw. Herausgeber dieser Website sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter bzw. Herausgeber jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                <strong>Berufsbezeichnung:</strong> Generalübernehmer<br />
+                <strong>Zuständige Kammer:</strong> Handwerkskammer für München und Oberbayern
+              </p>
+              <p className="text-muted-foreground mt-4">
+                Es gelten folgende berufsrechtliche Regelungen: Handwerksordnung (HwO)<br />
+                Regelungen einsehbar unter: <a href="https://www.gesetze-im-internet.de/hwo/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.gesetze-im-internet.de/hwo/</a>
+              </p>
+              <p className="text-muted-foreground mt-4 bg-primary/10 p-4 rounded-lg">
+                <strong>Wichtiger Hinweis:</strong> Alle meisterpflichtigen Gewerke werden durch unser Partnernetzwerk ausgeführt, die als eingetragene Meisterfirmen in der Handwerkskammer gelistet sind.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4">Einsatz von Künstlicher Intelligenz (KI-Hinweis gem. EU AI Act)</h2>
+              <h2 className="text-xl font-bold mb-4">Partnernetzwerk</h2>
+              <p className="text-muted-foreground">
+                Wir arbeiten mit rechtlich selbstständigen Einzelgewerbebetrieben und ausgewählten Partnerfirmen.
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-4">
+                <li>Der jeweilige Vertragspartner wird im Angebot und in der Rechnung eindeutig ausgewiesen.</li>
+                <li>Sämtliche meisterpflichtigen Gewerke (u.a. Elektro, Sanitär, Heizung) werden durch unser Partnernetzwerk ausgeführt.</li>
+                <li>Hierbei handelt es sich ausnahmslos um eingetragene Meisterfirmen der Handwerkskammer München.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Außergerichtliche Streitschlichtung (Handwerk)</h2>
+              <p className="text-sm text-muted-foreground mb-4">Hinweis gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz) für Handwerksbetriebe:</p>
+              <p className="text-muted-foreground">
+                Wir sind bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>Zuständige Schlichtungsstelle:</strong><br />
+                Schlichtungsstelle für den Bereich Handwerk<br />
+                Bayerische Handwerkskammern / ZDH<br />
+                Geschäftsstelle: Max-Joseph-Straße 4, 80333 München<br />
+                Website: <a href="https://www.zdh.de/fachbereiche/recht/schlichtung/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.zdh.de/fachbereiche/recht/schlichtung/</a>
+              </p>
+              <p className="text-muted-foreground mt-4 text-sm">
+                Hinweis: Die EU-Online-Streitbeilegungsplattform (OS) wurde gemäß Verordnung (EU) 2024/3228 zum 20. Juli 2025 eingestellt.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Haftung für Inhalte</h2>
+              <p className="text-muted-foreground">
+                Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Haftung für Links</h2>
+              <p className="text-muted-foreground">
+                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Urheberrecht</h2>
+              <p className="text-muted-foreground">
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">KI-Hinweis gemäß EU AI Act (Art. 50)</h2>
               <p className="text-sm text-muted-foreground mb-4">Transparenzhinweis gemäß Art. 50 Verordnung (EU) 2024/1689</p>
               <p className="text-muted-foreground">
-                089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+                Komplettsanierung München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
               </p>
               <p className="text-muted-foreground mt-4">
                 <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
@@ -88,10 +210,17 @@ export default function Impressum() {
             </section>
 
             <section className="border-t pt-8 mt-8">
+              <p className="text-sm text-muted-foreground">
+                <strong>Stand:</strong> Januar 2026 – Impressum gemäß § 5 DDG und aktuellen Anforderungen für Handwerksbetriebe.
+              </p>
+            </section>
+
+            <section className="border-t pt-8">
               <h2 className="text-xl font-bold mb-4">Weitere rechtliche Informationen</h2>
               <ul className="space-y-2 text-muted-foreground">
                 <li><Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link></li>
                 <li><Link href="/agb" className="text-primary hover:underline">Allgemeine Geschäftsbedingungen (AGB)</Link></li>
+                <li><Link href="/cookies" className="text-primary hover:underline">Cookie-Richtlinie</Link></li>
               </ul>
             </section>
 
