@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
-import { SeoHead, generateFaqSchema, generateCombinedSchema } from "@/components/seo-head";
+import { SeoHead, generateCombinedSchema } from "@/components/seo-head";
 import { useToast } from "@/hooks/use-toast";
 import {
   Accordion,
@@ -761,8 +761,8 @@ function FunnelForm() {
 }
 
 export default function Home() {
-  const faqSchema = generateFaqSchema(faqs);
-  const combinedSchema = generateCombinedSchema([faqSchema]);
+  // FAQPage schema removed - only on /faq-preise page per Google guidelines
+  const combinedSchema = generateCombinedSchema([]);
   
   const scrollToForm = () => {
     document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' });

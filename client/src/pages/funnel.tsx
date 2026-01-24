@@ -51,7 +51,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import { SeoHead, generateServiceSchema, generateFaqSchema } from "@/components/seo-head";
+import { SeoHead, generateServiceSchema } from "@/components/seo-head";
 import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.png";
 import komplettsanierungHeroImage from "@assets/generated_images/complete_renovation_before-after_split.png";
 import badsanierungHeroImage from "@assets/generated_images/modern_luxury_bathroom_renovation.png";
@@ -2609,10 +2609,10 @@ export default function FunnelPage() {
       priceRange: "€€-€€€",
       areaServed: "München"
     });
-    const faqSchema = generateFaqSchema(content.faq);
+    // FAQPage schema removed - only on /faq-preise page per Google guidelines
     const combinedSchema = {
       "@context": "https://schema.org",
-      "@graph": [serviceSchema, faqSchema]
+      "@graph": [serviceSchema]
     };
     
     return (
