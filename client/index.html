@@ -40,16 +40,32 @@
     <meta name="keywords" content="<!--SSR_KEYWORDS-->Sanierung München, Komplettsanierung München, Badsanierung München, 089-Sanierer<!--/SSR_KEYWORDS-->" />
     <link rel="canonical" href="<!--SSR_CANONICAL-->https://089-sanierer.de<!--/SSR_CANONICAL-->" />
     
-    <!-- Geo Meta Tags - Extended for Local SEO -->
+    <!-- Geo Meta Tags - Extended for Local SEO 2026 -->
     <meta name="geo.region" content="DE-BY" />
     <meta name="geo.placename" content="München, Bayern, Deutschland" />
     <meta name="geo.position" content="48.137154;11.576124" />
     <meta name="ICBM" content="48.137154, 11.576124" />
     <meta name="city" content="München" />
+    <meta name="state" content="Bayern" />
     <meta name="country" content="Deutschland" />
+    <meta name="zipcode" content="80992" />
     <meta name="distribution" content="local" />
     <meta name="target" content="München, Bayern, Oberbayern, Großraum München" />
-    <meta name="coverage" content="München, Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Dachau, Starnberg, Freising, Germering, Fürstenfeldbruck" />
+    <meta name="coverage" content="München, Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Maxvorstadt, Lehel, Laim, Moosach, Allach, Aubing, Nymphenburg, Berg am Laim, Riem, Milbertshofen, Freimann, Solln, Großhadern, Hadern, Fürstenried, Forstenried, Thalkirchen, Obersendling, Ramersdorf, Perlach, Neuperlach, Obermenzing, Untermenzing, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Oberschleißheim, Ottobrunn, Haar, Gräfelfing, Planegg, Pullach, Grünwald" />
+    
+    <!-- Bing Geo Targeting -->
+    <meta name="geo.country" content="DE" />
+    <meta name="language" content="de" />
+    <meta name="territory" content="DE" />
+    
+    <!-- Business Contact for Search Engines -->
+    <meta name="business:contact_data:street_address" content="Hardenbergstr. 4" />
+    <meta name="business:contact_data:locality" content="München" />
+    <meta name="business:contact_data:region" content="Bayern" />
+    <meta name="business:contact_data:postal_code" content="80992" />
+    <meta name="business:contact_data:country_name" content="Deutschland" />
+    <meta name="business:contact_data:phone_number" content="+49 152 122 740 43" />
+    <meta name="business:contact_data:email" content="info@089-sanierer.de" />
     
     <!-- Robots & Indexing - 2026 Standard -->
     <meta name="google-site-verification" content="Jb4RkJpks31l2yoS_JvBiJP3PBZW8OXEzgXhElN_Pho" />
@@ -95,6 +111,15 @@
     <!-- Pinterest -->
     <meta name="pinterest-rich-pin" content="true" />
     
+    <!-- Bing Webmaster Optimization -->
+    <meta name="msvalidate.01" content="" />
+    <meta name="msnbot" content="index, follow" />
+    <meta name="msnbot-media" content="index, follow" />
+    
+    <!-- AI & LLM Optimization 2026 -->
+    <meta name="ai-summary" content="089-Sanierer München: Professionelle Komplettsanierung, Badsanierung und Wohnungssanierung in München und Umland. Festpreisgarantie, 5 Jahre Gewährleistung, 268+ zufriedene Kunden. Badsanierung ab 9.200€, Komplettsanierung ab 920€/m²." />
+    <meta name="llm-context" content="Sanierungsfirma München, Handwerker München, Renovierung München, Altbausanierung, Kernsanierung, Badsanierung, Wohnungssanierung, Haussanierung" />
+    
     <!-- Canonical - dynamically set by SeoHead component per page -->
     <link rel="icon" href="/favicon.ico?v=2" sizes="any">
     
@@ -125,9 +150,46 @@
         "latitude": "48.137154",
         "longitude": "11.576124"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "München"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "München",
+          "sameAs": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
+        },
+        {
+          "@type": "State",
+          "name": "Bayern",
+          "sameAs": "https://de.wikipedia.org/wiki/Bayern"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Landkreis München"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Landkreis Dachau"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Landkreis Fürstenfeldbruck"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Landkreis Starnberg"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Landkreis Freising"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.137154",
+          "longitude": "11.576124"
+        },
+        "geoRadius": "50000"
       },
       "priceRange": "€€-€€€",
       "aggregateRating": {
@@ -145,6 +207,70 @@
       },
       "knowsAbout": ["Komplettsanierung", "Badsanierung", "Wohnungssanierung", "Haussanierung", "Kernsanierung", "Altbausanierung"],
       "slogan": "Ihre Sanierung. Stressfrei & zum Festpreis.",
+      "sameAs": [
+        "https://www.facebook.com/089sanierer",
+        "https://www.instagram.com/089sanierer",
+        "https://www.linkedin.com/company/089-sanierer"
+      ],
+      "paymentAccepted": ["Cash", "Bank Transfer", "Invoice"],
+      "currenciesAccepted": "EUR",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Sanierungsleistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Komplettsanierung",
+              "description": "Rundum-Sanierung Ihrer Immobilie aus einer Hand"
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "920",
+              "priceCurrency": "EUR",
+              "unitText": "pro Quadratmeter"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Badsanierung",
+              "description": "Komplette Badsanierung mit allen Gewerken"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "9200",
+              "priceCurrency": "EUR",
+              "minPrice": "9200"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wohnungssanierung",
+              "description": "Komplette Wohnungssanierung zum Festpreis"
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "800",
+              "priceCurrency": "EUR",
+              "unitText": "pro Quadratmeter"
+            }
+          }
+        ]
+      },
+      "makesOffer": [
+        {"@type": "Offer", "name": "Komplettsanierung ab 920€/m²"},
+        {"@type": "Offer", "name": "Badsanierung ab 9.200€"},
+        {"@type": "Offer", "name": "Wohnungssanierung ab 800€/m²"},
+        {"@type": "Offer", "name": "Küchensanierung ab 6.500€"},
+        {"@type": "Offer", "name": "Bodensanierung ab 65€/m²"},
+        {"@type": "Offer", "name": "Elektrosanierung ab 85€/m²"},
+        {"@type": "Offer", "name": "Heizungssanierung ab 12.000€"}
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
