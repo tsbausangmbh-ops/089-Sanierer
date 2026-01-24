@@ -630,13 +630,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         }
       ]
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "268",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "sameAs": [
       "https://www.google.com/maps/place/089-Sanierer"
     ]
