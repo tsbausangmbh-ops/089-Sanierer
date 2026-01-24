@@ -975,7 +975,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-accent hover:bg-accent/90 min-h-12 px-5 sm:px-6 text-sm sm:text-base"
+                className="bg-accent hover:bg-accent/90 min-h-12 px-8 sm:px-10 text-sm sm:text-base"
                 data-testid="button-transformation-cta"
               >
                 Jetzt Ihr Problem schildern
