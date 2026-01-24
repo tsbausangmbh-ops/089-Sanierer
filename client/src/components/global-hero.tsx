@@ -38,7 +38,6 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
         alt=""
         loading="eager"
         decoding="async"
-        fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover scale-105"
         style={{ objectPosition: 'center' }}
       />
