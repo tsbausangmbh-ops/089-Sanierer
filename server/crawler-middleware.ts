@@ -544,53 +544,54 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     return "";
   }
 
+  // IMPORTANT: This schema MUST match seo-head.tsx generateLocalBusinessSchema() exactly
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "HomeAndConstructionBusiness",
     "@id": `${baseURL}/#organization`,
-    "name": "089-Sanierer - Komplettsanierungen Haus & Wohnung",
-    "alternateName": "089 Sanierer",
-    "description": "Professionelle Sanierungen in München: Badsanierung, Küchensanierung, Komplettsanierung, Elektrosanierung und mehr. Festpreisgarantie, 5 Jahre Gewährleistung.",
+    "name": "089-Sanierer",
+    "alternateName": "089-Sanierer - Komplettsanierungen Haus & Wohnung",
+    "description": "Professionelle Komplettsanierungen in München und Umgebung. Badsanierung, Wohnungssanierung, Haussanierung mit Festpreisgarantie und 5 Jahren Gewährleistung.",
     "url": baseURL,
-    "telephone": "+4915212274043",
+    "telephone": "+49-89-444438872",
     "email": "info@089-sanierer.de",
+    "foundingDate": "2019",
+    "priceRange": "€€-€€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Überweisung, Barzahlung",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Hardenbergstr. 4",
       "addressLocality": "München",
       "postalCode": "80992",
-      "addressCountry": "DE",
-      "addressRegion": "Bayern"
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 48.1042,
-      "longitude": 11.5349
+      "latitude": "48.1716",
+      "longitude": "11.5164"
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "16:30"
-    },
-    "priceRange": "€€€",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.1351,
-        "longitude": 11.5820
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "München",
+        "addressCountry": "DE"
       },
-      "geoRadius": "50000"
-    },
-    "sameAs": [],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "268",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Landkreis München",
+        "addressCountry": "DE"
+      }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "16:30"
+      }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Sanierungsleistungen",
@@ -599,28 +600,46 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Badsanierung",
-            "description": "Komplette Badsanierung in München inkl. Fliesen, Sanitär, Elektro"
+            "name": "Komplettsanierung München",
+            "description": "Vollständige Sanierung von Wohnungen und Häusern aus einer Hand"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Küchensanierung",
-            "description": "Küchensanierung in München: Fliesen, Elektro, Wasseranschlüsse"
+            "name": "Badsanierung München",
+            "description": "Komplette Badsanierung mit Fliesen, Sanitär und Elektro"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Komplettsanierung",
-            "description": "Schlüsselfertige Komplettsanierung von Haus und Wohnung"
+            "name": "Wohnungssanierung München",
+            "description": "Professionelle Wohnungssanierung für Altbau und Neubau"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Haussanierung München",
+            "description": "Umfassende Haussanierung für Einfamilien- und Mehrfamilienhäuser"
           }
         }
       ]
-    }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "268",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "sameAs": [
+      "https://www.google.com/maps/place/089-Sanierer"
+    ]
   };
 
   const breadcrumbData = {
