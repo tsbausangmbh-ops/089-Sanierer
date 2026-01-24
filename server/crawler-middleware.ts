@@ -729,7 +729,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     ]
   };
 
-  const additionalSchemas = path === "/faq-preise" ? `\n  <script type="application/ld+json">${JSON.stringify(faqData)}</script>` : "";
+  // FAQPage schema is now handled by the React component to avoid duplication
+  const additionalSchemas = "";
 
   return `<!DOCTYPE html>
 <html lang="de" prefix="og: https://ogp.me/ns#">
