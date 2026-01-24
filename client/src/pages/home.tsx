@@ -337,7 +337,7 @@ function LeadMagnetSection() {
     <section className="py-4 lg:py-6 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb),0.08),transparent_50%)]" />
       
-      <div className="max-w-7xl mx-auto px-24 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-medium mb-6">
@@ -489,7 +489,7 @@ function FunnelForm() {
 
   return (
     <section id="anfrage-form" className="py-4 lg:py-6 bg-background">
-      <div className="max-w-7xl mx-auto px-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
             <CheckCircle className="w-4 h-4" />
@@ -786,7 +786,7 @@ export default function Home() {
 
         {/* Stats Section */}
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-xl lg:text-2xl font-bold text-center mb-4">
               Warum Münchner uns vertrauen
             </h2>
@@ -804,7 +804,7 @@ export default function Home() {
 
         {/* Pain Points Section - NLP: Problem-Agitation */}
         <section className="py-6 lg:py-8 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Kennen Sie das Gefühl?
@@ -854,7 +854,7 @@ export default function Home() {
 
         {/* Problem-Solution FAQ Section - NLP: Question-based targeting */}
         <section className="py-6 lg:py-8 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
                 <HelpCircle className="w-4 h-4" />
@@ -941,7 +941,7 @@ export default function Home() {
 
         {/* Solution Section - NLP: Future Pacing + Transformation */}
         <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-medium mb-4">
                 <Target className="w-4 h-4" />
@@ -990,7 +990,7 @@ export default function Home() {
 
         {/* Process Section */}
         <section className="py-4 lg:py-6 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Ihr Weg zum <span className="text-accent">Traumzuhause</span>
@@ -1026,7 +1026,7 @@ export default function Home() {
 
         {/* Testimonials Section - NLP: Social Proof + Emotional Language */}
         <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Das sagen unsere <span className="text-accent">Kunden</span>
@@ -1065,7 +1065,7 @@ export default function Home() {
 
         {/* Services Preview */}
         <section className="py-4 lg:py-6 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Unsere <span className="text-accent">Leistungen</span>
@@ -1112,7 +1112,7 @@ export default function Home() {
 
         {/* FAQ Section */}
         <section className="py-4 lg:py-6 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Häufige <span className="text-accent">Fragen</span>
@@ -1139,7 +1139,7 @@ export default function Home() {
 
         {/* Final CTA - NLP: Urgency + Future Pacing + Problem-Solver */}
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-24 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
               <Clock className="w-4 h-4" />
               <span>Handeln Sie heute - nicht morgen</span>

@@ -38,12 +38,12 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
         alt=""
         loading="eager"
         decoding="async"
-        className="absolute inset-0 w-full h-full object-cover scale-105"
+        className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: 'center' }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
             <BadgeCheck className="w-4 h-4 text-green-400" />

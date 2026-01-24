@@ -153,7 +153,7 @@ export default function Kosten() {
         </section>
 
         <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Aktuelle Preise 2026
             </h2>
@@ -194,7 +194,7 @@ export default function Kosten() {
         </section>
 
         <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
                 Warum Festpreise?
@@ -227,7 +227,7 @@ export default function Kosten() {
         </section>
 
         <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
@@ -250,7 +250,7 @@ export default function Kosten() {
         </section>
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-24 text-center max-w-7xl">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Schluss mit der Unsicherheit bei Sanierungskosten!
             </h2>

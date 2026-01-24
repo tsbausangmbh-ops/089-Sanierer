@@ -50,7 +50,7 @@ export default function Confirmation() {
       <Breadcrumb items={[{ label: "Bestätigung" }]} />
 
       <main className="flex-1 pb-16">
-        <div className="max-w-2xl mx-auto px-24 py-8">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-4">
             <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />

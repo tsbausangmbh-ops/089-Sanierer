@@ -351,7 +351,7 @@ export default function GewerkeFunnel() {
       <Breadcrumb items={[{ label: "Handwerker finden" }]} />
 
       <main id="main-content" className="pb-16 flex-1">
-        <div className="max-w-7xl mx-auto px-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-4">
             <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
