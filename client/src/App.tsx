@@ -33,7 +33,7 @@ const Haussanierung = lazy(() => import("@/pages/haussanierung"));
 const Kernsanierung = lazy(() => import("@/pages/kernsanierung"));
 const StadtteilPage = lazy(() => import("@/pages/stadtteil"));
 const Rechner = lazy(() => import("@/pages/rechner"));
-const NotFound = lazy(() => import("@/pages/not-found"));
+const NotFound = lazy(() => import("@/pages/404"));
 
 declare global {
   interface Window {
