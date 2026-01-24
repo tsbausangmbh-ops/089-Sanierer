@@ -145,6 +145,15 @@ Preferred communication style: Simple, everyday language (German).
 - Prerender.io integration for production (PRERENDER_TOKEN env var)
 - Internal linking via footer components for PageRank distribution
 
+**Schema Architecture (CRITICAL):**
+- HomeAndConstructionBusiness schema comes from exactly 2 sources that MUST be identical:
+  1. `client/src/components/seo-head.tsx` - generateLocalBusinessSchema() for React client
+  2. `server/crawler-middleware.ts` - inline JSON-LD for SSR/crawlers
+- Service schemas reference the main business via @id only (no duplicate LocalBusiness)
+- FAQPage schema ONLY on /faq-preise page
+- NO LocalBusiness microdata in footer (removed to prevent duplicates)
+- Business data: telephone +49-89-444438872, foundingDate 2019, @id https://089-sanierer.de/#organization
+
 **Files for adding new pages with SEO:**
 1. Add route metadata to `shared/seo-meta.ts`
 2. Add static HTML content to `server/crawler-middleware.ts` (for crawler fallback)

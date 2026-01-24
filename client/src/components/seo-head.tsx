@@ -109,9 +109,7 @@ export function generateServiceSchema(service: {
     "name": service.name,
     "description": service.description,
     "provider": {
-      "@type": "LocalBusiness",
-      "@id": "https://089-sanierer.de/#organization",
-      "name": "089-Sanierer"
+      "@id": "https://089-sanierer.de/#organization"
     },
     "areaServed": {
       "@type": "City",
