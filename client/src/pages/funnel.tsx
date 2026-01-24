@@ -2563,16 +2563,16 @@ export default function FunnelPage() {
           <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
             Kurze Fragen beantworten – Angebot in 48 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
           </p>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
-            <Link href="/termin">
-              <Button size="lg" className="text-sm sm:text-base bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 min-h-12" data-testid="button-seo-booking">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link href="/termin" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 min-h-12" data-testid="button-seo-booking">
                 <Calendar className="w-4 h-4 mr-2" />
                 24 Std. Online Termin
               </Button>
             </Link>
-            <Button size="lg" onClick={handleStartFromSeoIntro} className="text-sm sm:text-base min-h-12" data-testid="button-start-funnel">
+            <Button size="lg" onClick={handleStartFromSeoIntro} className="w-full sm:w-auto text-sm sm:text-base min-h-12" data-testid="button-start-funnel">
               {content.ctaText}
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-4">
