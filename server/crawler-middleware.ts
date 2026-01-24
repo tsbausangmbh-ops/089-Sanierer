@@ -658,79 +658,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     }
   };
 
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was kostet eine Badsanierung in München?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine Badsanierung in München kostet je nach Größe und Ausstattung: Gäste-WC 8.000-12.000€, Standard-Bad (5-6m²) 16.000-22.000€, Komfort-Bad 22.000-32.000€, Luxus-Bad ab 35.000€. Alle Preise netto zzgl. MwSt."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie lange dauert eine Badsanierung?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine Standard-Badsanierung dauert in der Regel 10-14 Arbeitstage. Bei komplexeren Projekten oder Luxus-Bädern kann es 3-4 Wochen dauern."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was kostet eine Komplettsanierung pro m²?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine Komplettsanierung in München kostet 1.000-1.500€/m² für Standard-Ausstattung und 1.500-2.300€/m² für gehobene Ausstattung. Alle Preise netto zzgl. MwSt."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bieten Sie Festpreise an?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, wir arbeiten mit Festpreisgarantie. Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Angebot ohne versteckte Kosten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Gewährleistung gibt es?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wir bieten 5 Jahre Gewährleistung auf alle unsere Arbeiten. Das gibt Ihnen Sicherheit für Ihre Investition."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "In welchem Gebiet sind Sie tätig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wir sind in ganz München und dem Großraum München tätig, einschließlich Dachau, Starnberg, Freising, Germering und weitere Gemeinden im Umkreis von 50 km."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was kostet eine Küchensanierung?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine Küchensanierung (nur Bauarbeiten ohne Küchenmöbel) kostet: kleine Küche 6.500-10.000€, mittlere Küche 10.000-15.000€, große Küche 15.000-22.000€. Wir machen Fliesen, Elektro und Wasseranschlüsse."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Gibt es Fördermöglichkeiten für Sanierungen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, für energetische Sanierungen gibt es KfW- und BAFA-Förderungen. Bei Heizungssanierung (z.B. Wärmepumpe) können Sie bis zu 70% Förderung erhalten. Wir beraten Sie gerne zu den Möglichkeiten."
-        }
-      }
-    ]
-  };
-
-  // FAQPage schema is now handled by the React component to avoid duplication
-  const additionalSchemas = "";
+  // FAQPage schema is handled exclusively by the React faq-preise.tsx component
 
   return `<!DOCTYPE html>
 <html lang="de" prefix="og: https://ogp.me/ns#">
@@ -771,7 +699,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <!-- Structured Data -->
   <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
   <script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>
-  <script type="application/ld+json">${JSON.stringify(websiteData)}</script>${additionalSchemas}
+  <script type="application/ld+json">${JSON.stringify(websiteData)}</script>
 </head>
 <body>
   <header>
