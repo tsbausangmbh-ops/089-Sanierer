@@ -96,21 +96,6 @@ export function SeoHead({
   return null;
 }
 
-export function generateFaqSchema(faqs: { question: string; answer: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-}
-
 export function generateServiceSchema(service: {
   name: string;
   description: string;

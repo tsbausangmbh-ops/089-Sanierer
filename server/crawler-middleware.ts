@@ -658,7 +658,60 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     }
   };
 
-  // FAQPage schema is handled exclusively by the React faq-preise.tsx component
+  // FAQPage schema for /faq-preise (only page with visible FAQ content per Google guidelines)
+  const faqSchema = path === "/faq-preise" ? {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert eine Komplettsanierung in München?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Dauer einer Komplettsanierung in München hängt von der Größe und dem Zustand der Immobilie ab. Eine Wohnung (60-80 m²) dauert in der Regel 6-10 Wochen, ein Einfamilienhaus 3-6 Monate. Wir erstellen Ihnen einen detaillierten Zeitplan vor Projektbeginn."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet eine Badsanierung in München?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine Badsanierung in München kostet je nach Größe und Ausstattung zwischen 8.000 € und 50.000 € (netto zzgl. MwSt., Stand 12/2025). Ein Gäste-WC (3-4m²) liegt bei etwa 8.000-12.000 €, ein Standard-Bad (5-6m²) bei 16.000-22.000 €, ein Komfort-Bad bei 22.000-32.000 €."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Übernehmen Sie die Koordination aller Gewerke in München?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, als Generalunternehmer in München koordinieren wir alle Handwerker und Gewerke für Sie. Sie haben einen einzigen Ansprechpartner und müssen sich um nichts kümmern. Wir übernehmen die komplette Projektleitung von der Planung bis zur Abnahme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Garantie erhalte ich auf Sanierungsarbeiten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir gewähren 5 Jahre Gewährleistung auf alle ausgeführten Arbeiten. Dies geht über die gesetzliche Gewährleistung hinaus und gibt Ihnen zusätzliche Sicherheit. Bei Mängeln reagieren wir schnell und unkompliziert."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie läuft die Kostenplanung für Sanierungen ab?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nach einem kostenlosen Vor-Ort-Termin erstellen wir Ihnen ein detailliertes Angebot mit transparenter Kostenaufstellung. Sie erhalten einen Festpreis ohne versteckte Kosten. Änderungen während der Bauphase werden immer vorher mit Ihnen abgestimmt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "In welchen Münchner Stadtteilen arbeiten Sie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir arbeiten in ganz München und dem Münchner Umland: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden."
+        }
+      }
+    ]
+  } : null;
 
   return `<!DOCTYPE html>
 <html lang="de" prefix="og: https://ogp.me/ns#">
@@ -700,6 +753,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
   <script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>
   <script type="application/ld+json">${JSON.stringify(websiteData)}</script>
+  ${faqSchema ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", ...faqSchema })}</script>` : ''}
 </head>
 <body>
   <header>
