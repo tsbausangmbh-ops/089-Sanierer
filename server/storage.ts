@@ -1,6 +1,5 @@
-import { users, leads, appointments, type User, type InsertUser, type Lead, type InsertLead, type Appointment, type InsertAppointment } from "@shared/schema";
-import { db } from "./db";
-import { eq, desc } from "drizzle-orm";
+import { type User, type InsertUser, type Lead, type InsertLead, type Appointment, type InsertAppointment } from "@shared/schema";
+import { randomUUID } from "crypto";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -16,62 +15,116 @@ export interface IStorage {
   getAppointment(id: string): Promise<Appointment | undefined>;
 }
 
-export class DatabaseStorage implements IStorage {
+export class MemStorage implements IStorage {
+  private users: Map<string, User> = new Map();
+  private leads: Map<string, Lead> = new Map();
+  private appointments: Map<string, Appointment> = new Map();
+
   async getUser(id: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
-    return user || undefined;
+    return this.users.get(id);
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.username, username));
-    return user || undefined;
+    return Array.from(this.users.values()).find(u => u.username === username);
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const [user] = await db.insert(users).values(insertUser).returning();
+    const user: User = {
+      id: randomUUID(),
+      username: insertUser.username,
+      password: insertUser.password,
+    };
+    this.users.set(user.id, user);
     return user;
   }
 
   async updateUserPassword(id: string, password: string): Promise<User | undefined> {
-    const [user] = await db.update(users).set({ password }).where(eq(users.id, id)).returning();
-    return user || undefined;
+    const user = this.users.get(id);
+    if (user) {
+      user.password = password;
+      this.users.set(id, user);
+      return user;
+    }
+    return undefined;
   }
 
   async createLead(insertLead: InsertLead): Promise<Lead> {
-    const [lead] = await db.insert(leads).values(insertLead).returning();
+    const lead: Lead = {
+      id: randomUUID(),
+      service: insertLead.service,
+      propertyType: insertLead.propertyType ?? "wohnung",
+      serviceDetails: insertLead.serviceDetails ?? null,
+      qualityLevel: insertLead.qualityLevel ?? "standard",
+      timeline: insertLead.timeline ?? "flexibel",
+      preferredStartDate: insertLead.preferredStartDate ?? null,
+      budgetRange: insertLead.budgetRange ?? null,
+      additionalNotes: insertLead.additionalNotes ?? "",
+      description: insertLead.description ?? "",
+      isUrgent: insertLead.isUrgent ?? false,
+      name: insertLead.name,
+      phone: insertLead.phone,
+      mobile: insertLead.mobile ?? null,
+      email: insertLead.email,
+      address: insertLead.address ?? "",
+      city: insertLead.city ?? null,
+      postalCode: insertLead.postalCode,
+      createdAt: new Date(),
+    };
+    this.leads.set(lead.id, lead);
     return lead;
   }
 
   async getLeads(): Promise<Lead[]> {
-    return db.select().from(leads).orderBy(desc(leads.createdAt));
+    return Array.from(this.leads.values()).sort((a, b) => {
+      const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return bTime - aTime;
+    });
   }
 
   async getLead(id: string): Promise<Lead | undefined> {
-    const [lead] = await db.select().from(leads).where(eq(leads.id, id));
-    return lead || undefined;
+    return this.leads.get(id);
   }
 
   async getLeadsByService(service: string): Promise<Lead[]> {
-    return db
-      .select()
-      .from(leads)
-      .where(eq(leads.service, service))
-      .orderBy(desc(leads.createdAt));
+    return Array.from(this.leads.values())
+      .filter(lead => lead.service === service)
+      .sort((a, b) => {
+        const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return bTime - aTime;
+      });
   }
 
   async createAppointment(insertAppointment: InsertAppointment): Promise<Appointment> {
-    const [appointment] = await db.insert(appointments).values(insertAppointment).returning();
+    const appointment: Appointment = {
+      id: randomUUID(),
+      name: insertAppointment.name,
+      email: insertAppointment.email,
+      phone: insertAppointment.phone,
+      address: insertAppointment.address,
+      service: insertAppointment.service,
+      preferredDate: insertAppointment.preferredDate,
+      preferredTime: insertAppointment.preferredTime,
+      message: insertAppointment.message ?? "",
+      status: "pending",
+      createdAt: new Date(),
+    };
+    this.appointments.set(appointment.id, appointment);
     return appointment;
   }
 
   async getAppointments(): Promise<Appointment[]> {
-    return db.select().from(appointments).orderBy(desc(appointments.createdAt));
+    return Array.from(this.appointments.values()).sort((a, b) => {
+      const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return bTime - aTime;
+    });
   }
 
   async getAppointment(id: string): Promise<Appointment | undefined> {
-    const [appointment] = await db.select().from(appointments).where(eq(appointments.id, id));
-    return appointment || undefined;
+    return this.appointments.get(id);
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemStorage();
