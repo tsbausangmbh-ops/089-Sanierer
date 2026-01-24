@@ -123,13 +123,12 @@ export function SeoFooter() {
             <p className="text-white/70 text-sm mb-4">
               Ihr zuverlässiger Partner für <strong>Komplettsanierungen in München</strong> und Umgebung. 268+ Projekte, 5 Jahre Gewährleistung.
             </p>
-            <div className="space-y-2 text-sm text-white/70" itemScope itemType="https://schema.org/LocalBusiness">
-              <meta itemProp="name" content="089-Sanierer - Komplettsanierungen Haus & Wohnung" />
-              <a href="tel:+498944438872" className="flex items-center gap-2 hover:text-white" itemProp="telephone" data-testid="link-footer-phone">
+            <div className="space-y-2 text-sm text-white/70">
+              <a href="tel:+4989444438872" className="flex items-center gap-2 hover:text-white" data-testid="link-footer-phone">
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 089 444438872
               </a>
-              <a href="mailto:info@089-sanierer.de" className="flex items-center gap-2 hover:text-white" itemProp="email" data-testid="link-footer-email">
+              <a href="mailto:info@089-sanierer.de" className="flex items-center gap-2 hover:text-white" data-testid="link-footer-email">
                 <Mail className="w-4 h-4" aria-hidden="true" />
                 info@089-sanierer.de
               </a>
