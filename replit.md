@@ -149,10 +149,15 @@ Preferred communication style: Simple, everyday language (German).
 - HomeAndConstructionBusiness schema comes from exactly 2 sources that MUST be identical:
   1. `client/src/components/seo-head.tsx` - generateLocalBusinessSchema() for React client
   2. `server/crawler-middleware.ts` - inline JSON-LD for SSR/crawlers
+- **Duplicate Prevention**: Client-side SeoHead checks for existing SSR-injected LocalBusiness schema before injecting client schema (prevents Google from seeing duplicate LocalBusiness entities)
 - Service schemas reference the main business via @id only (no duplicate LocalBusiness)
 - FAQPage schema ONLY on /faq-preise page
 - NO LocalBusiness microdata in footer (removed to prevent duplicates)
 - Business data: telephone +49-89-444438872, foundingDate 2019, @id https://089-sanierer.de/#organization
+
+**Bug Fixes Applied (Jan 2026):**
+- Removed javascript:history.back() from 404 page (replaced with button onClick)
+- Added schema duplicate detection in seo-head.tsx to prevent SSR + client double injection
 
 **Files for adding new pages with SEO:**
 1. Add route metadata to `shared/seo-meta.ts`

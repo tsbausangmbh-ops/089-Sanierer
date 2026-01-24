@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Home, ArrowLeft, Phone, Search } from "lucide-react";
+import { Home, Phone, Search } from "lucide-react";
 import { Link } from "wouter";
 import { SeoHead } from "@/components/seo-head";
 import { SiteHeader } from "@/components/site-header";
@@ -63,13 +63,14 @@ export default function NotFound() {
           
           <p className="text-muted-foreground">
             Sie können auch{" "}
-            <a 
-              href="javascript:history.back()" 
-              className="text-primary hover:underline"
+            <button 
+              type="button"
+              onClick={() => window.history.back()}
+              className="text-primary hover:underline cursor-pointer"
               data-testid="link-404-back"
             >
               zur vorherigen Seite zurückkehren
-            </a>.
+            </button>.
           </p>
         </div>
       </main>

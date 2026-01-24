@@ -73,16 +73,61 @@ export function SeoHead({
     updateMeta("twitter:image", ogImage);
 
     if (schema) {
-      const existingScript = document.getElementById("dynamic-schema");
-      if (existingScript) {
-        existingScript.remove();
+      // Check if SSR already injected a LocalBusiness schema (to avoid duplicates for crawlers)
+      const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
+      let hasExistingLocalBusiness = false;
+      existingSchemas.forEach(script => {
+        try {
+          const content = JSON.parse(script.textContent || '{}');
+          // Check if it's a LocalBusiness or has LocalBusiness in @graph
+          if (content["@type"]?.includes?.("HomeAndConstructionBusiness") || 
+              content["@type"] === "HomeAndConstructionBusiness" ||
+              content["@graph"]?.some?.((item: Record<string, unknown>) => 
+                item["@type"] === "HomeAndConstructionBusiness")) {
+            hasExistingLocalBusiness = true;
+          }
+        } catch (e) {
+          // Ignore parse errors
+        }
+      });
+      
+      // Process schema - filter out LocalBusiness if SSR already injected it
+      let schemaToInject = schema as Record<string, unknown>;
+      
+      if (hasExistingLocalBusiness && schemaToInject["@graph"]) {
+        // Filter out LocalBusiness from @graph, keep other schemas (Service, FAQ, Breadcrumb, WebSite)
+        const filteredGraph = (schemaToInject["@graph"] as Record<string, unknown>[]).filter(
+          (item: Record<string, unknown>) => item["@type"] !== "HomeAndConstructionBusiness"
+        );
+        
+        // Only inject if there are non-LocalBusiness schemas remaining
+        if (filteredGraph.length > 0) {
+          schemaToInject = {
+            "@context": "https://schema.org",
+            "@graph": filteredGraph
+          };
+        } else {
+          // All schemas were LocalBusiness, skip injection
+          schemaToInject = null as unknown as Record<string, unknown>;
+        }
+      } else if (hasExistingLocalBusiness && schemaToInject["@type"] === "HomeAndConstructionBusiness") {
+        // Single LocalBusiness schema, skip it entirely
+        schemaToInject = null as unknown as Record<string, unknown>;
       }
       
-      const script = document.createElement("script");
-      script.id = "dynamic-schema";
-      script.type = "application/ld+json";
-      script.textContent = JSON.stringify(schema);
-      document.head.appendChild(script);
+      // Inject the (possibly filtered) schema
+      if (schemaToInject) {
+        const existingScript = document.getElementById("dynamic-schema");
+        if (existingScript) {
+          existingScript.remove();
+        }
+        
+        const script = document.createElement("script");
+        script.id = "dynamic-schema";
+        script.type = "application/ld+json";
+        script.textContent = JSON.stringify(schemaToInject);
+        document.head.appendChild(script);
+      }
     }
 
     return () => {
