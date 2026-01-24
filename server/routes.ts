@@ -337,6 +337,83 @@ export async function registerRoutes(
 ): Promise<Server> {
   setupAuth(app);
 
+  // 301 Redirects - SEO-freundliche Weiterleitungen für häufige URLs
+  const redirects: Record<string, string> = {
+    // Service-Kurzformen
+    "/bad": "/badsanierung",
+    "/badsanierung-muenchen": "/badsanierung",
+    "/bathroom": "/badsanierung",
+    "/kueche": "/anfrage",
+    "/kuechensanierung": "/anfrage",
+    "/kitchen": "/anfrage",
+    "/wohnung": "/wohnungssanierung",
+    "/apartment": "/wohnungssanierung",
+    "/haus": "/haussanierung",
+    "/house": "/haussanierung",
+    "/kern": "/kernsanierung",
+    "/komplett": "/anfrage",
+    "/sanierung": "/anfrage",
+    "/renovation": "/anfrage",
+    "/elektro": "/anfrage",
+    "/heizung": "/anfrage",
+    "/boden": "/anfrage",
+    "/floor": "/anfrage",
+    
+    // Info-Seiten
+    "/about": "/impressum",
+    "/ueber-uns": "/impressum",
+    "/privacy": "/datenschutz",
+    "/terms": "/agb",
+    "/contact": "/kontakt",
+    "/faq": "/faq-preise",
+    "/preise": "/faq-preise",
+    "/prices": "/faq-preise",
+    "/kosten-rechner": "/rechner",
+    "/calculator": "/rechner",
+    "/kalkulator": "/rechner",
+    
+    // Anfrage-Varianten
+    "/anfragen": "/anfrage",
+    "/request": "/anfrage",
+    "/quote": "/anfrage",
+    "/angebot": "/anfrage",
+    "/kostenvoranschlag": "/anfrage",
+    "/beratung": "/anfrage",
+    "/termin-buchen": "/termin",
+    "/appointment": "/termin",
+    "/booking": "/termin",
+    
+    // Stadtteile ohne "muenchen-" Prefix
+    "/schwabing": "/muenchen-schwabing",
+    "/bogenhausen": "/muenchen-bogenhausen",
+    "/maxvorstadt": "/muenchen-maxvorstadt",
+    "/haidhausen": "/muenchen-haidhausen",
+    "/sendling": "/muenchen-sendling",
+    "/neuhausen": "/muenchen-neuhausen",
+    "/pasing": "/muenchen-pasing",
+    "/giesing": "/muenchen-giesing",
+    "/lehel": "/muenchen-lehel",
+    "/trudering": "/muenchen-trudering",
+    
+    // Häufige Tippfehler
+    "/badsaneirung": "/badsanierung",
+    "/badsanierun": "/badsanierung",
+    "/wohnungsanierung": "/wohnungssanierung",
+    "/hausanierung": "/haussanierung",
+    "/impresum": "/impressum",
+    "/impressssum": "/impressum",
+    "/datenschuz": "/datenschutz",
+    "/datenshutz": "/datenschutz",
+    "/kontact": "/kontakt",
+  };
+
+  // Register all redirects
+  Object.entries(redirects).forEach(([from, to]) => {
+    app.get(from, (req, res) => {
+      res.redirect(301, to);
+    });
+  });
+
   // Health check endpoint
   app.get("/health", (req, res) => {
     res.status(200).send("ok");
