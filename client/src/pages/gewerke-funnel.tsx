@@ -21,13 +21,13 @@ import gewerkeHeroImage from "@assets/generated_images/skilled_trades_craftsmen.
 
 const gewerkeHeroContent: HeroContent = {
   backgroundImage: gewerkeHeroImage,
-  badge: "Einzelne Gewerke",
-  titleLine1: "Handwerker gesucht?",
-  titleLine2: "Wir vermitteln Profis.",
-  descriptions: ["Maler, Elektriker, Sanitär.", "Alle Gewerke aus einer Hand."],
-  strongText: "Geprüfte Fachbetriebe.",
-  ctaText: "Jetzt Handwerker finden",
-  checkmarks: ["Meisterbetriebe", "Faire Preise", "Schnelle Verfügbarkeit"],
+  badge: "Exklusive Meisterbetriebe für Einzelgewerke",
+  titleLine1: "Zertifizierte Fachbetriebe gesucht?",
+  titleLine2: "Wir kuratieren die Besten.",
+  descriptions: ["Maler, Elektriker, Sanitär.", "Nur geprüfte Meisterbetriebe aus München."],
+  strongText: "Festpreisgarantie für jedes Gewerk.",
+  ctaText: "Jetzt exklusiven Meisterbetrieb anfragen",
+  checkmarks: ["98% Weiterempfehlung", "Zertifizierte Meister", "Festpreisgarantie"],
   dataTestIdPrefix: "gewerke"
 };
 import { 

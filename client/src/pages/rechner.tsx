@@ -36,14 +36,14 @@ import rechnerImg from "@assets/generated_images/expert_renovation_advisor.png";
 
 const rechnerHeroContent: HeroContent = {
   backgroundImage: rechnerImg,
-  badge: "Kostenloser Online-Rechner",
-  titleLine1: "Was kostet Ihre Sanierung?",
-  titleLine2: "Jetzt kostenlos berechnen.",
-  descriptions: ["Wohnung, Haus oder Förderung.", "Alle Leistungen wählbar."],
-  strongText: "Münchner Marktpreise 2026.",
-  subText: "Unverbindlich und in wenigen Klicks - Ihr individueller Kostenvoranschlag.",
-  ctaText: "Jetzt Kosten berechnen",
-  checkmarks: ["Transparente Festpreise", "Unverbindlich & kostenlos", "Sofort Ergebnis"],
+  badge: "Exklusiver Investitions-Kalkulator",
+  titleLine1: "Was investieren Sie in Ihre Immobilie?",
+  titleLine2: "Transparente Kalkulation in Sekunden.",
+  descriptions: ["Wohnung, Haus oder Förderung.", "Detailliertes Leistungsverzeichnis."],
+  strongText: "Münchner Marktpreise 2026 – garantiert.",
+  subText: "Unverbindlich und in wenigen Klicks – Ihr persönliches Festpreis-Konzept.",
+  ctaText: "Jetzt Investition berechnen",
+  checkmarks: ["98% Weiterempfehlung", "Festpreisgarantie", "Meisterbetriebe"],
   dataTestIdPrefix: "rechner"
 };
 

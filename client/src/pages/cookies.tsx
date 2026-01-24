@@ -11,14 +11,14 @@ import cookiesHeroImage from "@assets/generated_images/website_cookies_settings.
 
 const cookiesHeroContent: HeroContent = {
   backgroundImage: cookiesHeroImage,
-  badge: "Datenschutz",
+  badge: "Volle Transparenz",
   titleLine1: "Cookie-Richtlinie.",
-  titleLine2: "Transparenz für Sie.",
-  descriptions: ["KSHW München – Komplettsanierung Haus & Wohnung.", "Ihre Einstellungen, Ihre Wahl."],
+  titleLine2: "Sie behalten die Kontrolle.",
+  descriptions: ["KSHW München – Ihr exklusiver Projekt-Kurator.", "Ihre Einstellungen, Ihre Entscheidung."],
   strongText: "DSGVO & TDDDG konform.",
-  ctaText: "Jetzt anfragen",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["Jederzeit anpassbar", "Transparente Cookies", "Ihre Kontrolle"],
+  checkmarks: ["98% Weiterempfehlung", "Meisterbetriebe", "Festpreisgarantie"],
   dataTestIdPrefix: "cookies"
 };
 

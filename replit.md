@@ -159,6 +159,19 @@ Preferred communication style: Simple, everyday language (German).
 - Removed javascript:history.back() from 404 page (replaced with button onClick)
 - Added schema duplicate detection in seo-head.tsx to prevent SSR + client double injection
 
+**Content Strategy (Jan 2026) - High-End/Concierge Positioning:**
+- All pages optimized with "Projekt-Kurator" and "Concierge-Versprechen" language
+- Target audience: "anspruchsvolle Immobilienbesitzer" (demanding property owners)
+- Key messaging across all Hero sections:
+  - "Ihr exklusiver Projekt-Kurator" / "Wir kuratieren Ihr Projekt"
+  - "Ihr persönlicher Bauleiter" / "Zertifizierte Meisterbetriebe"
+  - "Volle Festpreisgarantie ohne Nachforderungen"
+  - "Detaillierte Leistungsverzeichnisse"
+- Trust metrics: "150+ Projekte", "98% Weiterempfehlung", "5 Jahre Gewährleistung"
+- CTA standardized: "Jetzt exklusives Festpreis-Konzept anfordern"
+- Checkmarks standardized: ["98% Weiterempfehlung", "Meisterbetriebe", "Festpreisgarantie"]
+- Pages updated: home, badsanierung, wohnungssanierung, haussanierung, kernsanierung, kosten, kontakt, funnel (8 services), gewerke-funnel, ratgeber, rechner, stadtteil (32 districts), confirmation, termin, faq-preise, impressum, datenschutz, agb, cookies, 404
+
 **Files for adding new pages with SEO:**
 1. Add route metadata to `shared/seo-meta.ts`
 2. Add static HTML content to `server/crawler-middleware.ts` (for crawler fallback)

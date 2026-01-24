@@ -11,11 +11,11 @@ const impressumHeroContent: HeroContent = {
   badge: "Rechtliche Angaben",
   titleLine1: "Impressum.",
   titleLine2: "089-Sanierer München.",
-  descriptions: ["KSHW München – Komplettsanierung Haus & Wohnung.", "Ihr lokaler Partner für Sanierungen."],
+  descriptions: ["KSHW München – Ihr exklusiver Projekt-Kurator.", "Lokale Meisterbetriebe für anspruchsvolle Eigentümer."],
   strongText: "Angaben gemäß § 5 TMG.",
-  ctaText: "Jetzt anfragen",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["Meisterbetrieb", "Vor Ort in München", "Persönliche Beratung"],
+  checkmarks: ["98% Weiterempfehlung", "Meisterbetriebe", "Festpreisgarantie"],
   dataTestIdPrefix: "impressum"
 };
 

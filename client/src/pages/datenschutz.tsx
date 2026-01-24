@@ -8,14 +8,14 @@ import datenschutzHeroImage from "@assets/generated_images/data_privacy_protecti
 
 const datenschutzHeroContent: HeroContent = {
   backgroundImage: datenschutzHeroImage,
-  badge: "DSGVO-konform",
+  badge: "Höchste Datenschutzstandards",
   titleLine1: "Datenschutz.",
-  titleLine2: "Schutz Ihrer Daten.",
-  descriptions: ["KSHW München – Komplettsanierung Haus & Wohnung.", "Transparente Datenverarbeitung."],
-  strongText: "Ihre Daten sind bei uns sicher.",
-  ctaText: "Jetzt anfragen",
+  titleLine2: "Ihre Daten in sicheren Händen.",
+  descriptions: ["KSHW München – Ihr exklusiver Projekt-Kurator.", "Transparente und sichere Datenverarbeitung."],
+  strongText: "DSGVO-konform. SSL-verschlüsselt.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["SSL-Verschlüsselung", "DSGVO-konform", "Keine Datenweitergabe ohne Zustimmung"],
+  checkmarks: ["98% Weiterempfehlung", "Meisterbetriebe", "Festpreisgarantie"],
   dataTestIdPrefix: "datenschutz"
 };
 

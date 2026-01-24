@@ -12,14 +12,14 @@ import ratgeberHeroImage from "@assets/generated_images/expert_renovation_adviso
 
 const ratgeberHeroContent: HeroContent = {
   backgroundImage: ratgeberHeroImage,
-  badge: "268+ Projekte Erfahrung",
+  badge: "Exklusives Expertenwissen für anspruchsvolle Eigentümer",
   titleLine1: "Sanierungs-Ratgeber.",
-  titleLine2: "Kosten, Förderung & Tipps.",
-  descriptions: ["Aus 268+ Projekten in München.", "Unser Wissen für Sie."],
-  strongText: "Kostenloser PDF-Download.",
-  ctaText: "Jetzt anfragen",
+  titleLine2: "Kosten, Förderung & Insider-Tipps.",
+  descriptions: ["Aus 150+ Projekten in München.", "Unser Expertenwissen für Ihre Entscheidung."],
+  strongText: "Kostenloser Zugang zu Insider-Wissen.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["KfW-Förderung bis 45%", "Preisübersichten 2025", "Expertentipps"],
+  checkmarks: ["98% Weiterempfehlung", "Meisterbetriebe", "Festpreisgarantie"],
   dataTestIdPrefix: "ratgeber"
 };
 

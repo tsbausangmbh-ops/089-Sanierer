@@ -11,12 +11,12 @@ const notFoundHeroContent: HeroContent = {
   backgroundImage: heroImage,
   badge: "Seite nicht gefunden",
   titleLine1: "404.",
-  titleLine2: "Diese Seite existiert nicht.",
-  descriptions: ["Die gesuchte Seite wurde verschoben oder existiert nicht mehr."],
-  strongText: "Wir helfen Ihnen gerne weiter.",
+  titleLine2: "Diese Seite existiert leider nicht.",
+  descriptions: ["Die gesuchte Seite wurde verschoben oder existiert nicht mehr.", "Wir helfen Ihnen gerne persönlich weiter."],
+  strongText: "Ihr Projekt-Kurator ist für Sie da.",
   ctaText: "Zur Startseite",
   ctaLink: "/",
-  checkmarks: ["Kostenlose Beratung", "089 444438872", "Schnelle Hilfe"],
+  checkmarks: ["98% Weiterempfehlung", "Meisterbetriebe", "Festpreisgarantie"],
   dataTestIdPrefix: "notfound"
 };
 

@@ -8,14 +8,14 @@ import agbHeroImage from "@assets/generated_images/business_contract_agb.png";
 
 const agbHeroContent: HeroContent = {
   backgroundImage: agbHeroImage,
-  badge: "Rechtliche Informationen",
+  badge: "Faire Vertragsbedingungen",
   titleLine1: "AGB.",
-  titleLine2: "Allgemeine Geschäftsbedingungen.",
-  descriptions: ["KSHW München – Komplettsanierung Haus & Wohnung.", "Transparente Vertragsbedingungen."],
+  titleLine2: "Transparente Geschäftsbedingungen.",
+  descriptions: ["KSHW München – Ihr exklusiver Projekt-Kurator.", "Klare Verträge ohne versteckte Klauseln."],
   strongText: "Rechtsgrundlagen Stand 2026.",
-  ctaText: "Jetzt anfragen",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "Faire Bedingungen"],
+  checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "98% Weiterempfehlung"],
   dataTestIdPrefix: "agb"
 };
 
