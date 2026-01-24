@@ -30,15 +30,15 @@ import hausImg from "@assets/generated_images/energy_efficient_renovated_house.p
 
 const hausHeroContent: HeroContent = {
   backgroundImage: hausImg,
-  badge: "45+ Häuser in München saniert",
-  titleLine1: "Ihr Haus komplett saniert.",
-  titleLine2: "Wie neu, aber günstiger.",
-  descriptions: ["Kernsanierung bis Modernisierung.", "Energetisch auf neuesten Stand."],
-  strongText: "Ab 920€/m² Festpreis.",
-  subText: "Vom Altbau zum Traumhaus. Alles aus einer Hand.",
-  ctaText: "Jetzt Haus sanieren",
+  badge: "Über 45 erfolgreich sanierte Häuser in München",
+  titleLine1: "Wir kuratieren Ihr neues Lebenskapitel.",
+  titleLine2: "Altbau wird Traumhaus.",
+  descriptions: ["Ihr persönlicher Bauleiter koordiniert bis zu 22 Gewerke.", "Energetische Modernisierung inklusive Fördermittel-Optimierung."],
+  strongText: "Volle Festpreisgarantie ab 920€/m².",
+  subText: "Für anspruchsvolle Immobilienbesitzer, die Qualität schätzen.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage?service=komplettsanierung",
-  checkmarks: ["Energetische Modernisierung", "5 Jahre Gewährleistung", "Fördermittel-Beratung"],
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "KfW-Förderung möglich"],
   dataTestIdPrefix: "haus"
 };
 

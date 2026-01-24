@@ -20,14 +20,14 @@ import contactHeroImage from "@assets/generated_images/customer_service_contact.
 
 const kontaktHeroContent: HeroContent = {
   backgroundImage: contactHeroImage,
-  badge: "Wir sind für Sie da",
-  titleLine1: "Kontakt.",
-  titleLine2: "Sprechen Sie mit uns.",
+  badge: "Ihr direkter Draht zum Projekt-Kurator",
+  titleLine1: "Sprechen Sie mit uns.",
+  titleLine2: "Persönlich. Unverbindlich.",
   descriptions: ["Telefon: 089 444438872.", "E-Mail: info@089-sanierer.de."],
-  strongText: "Antwort innerhalb 24h.",
-  ctaText: "Jetzt anfragen",
+  strongText: "Persönliche Antwort innerhalb 24h.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["Mo-Fr 08:00-16:30 Uhr", "Kostenlose Beratung", "Vor Ort in München"],
+  checkmarks: ["98% Weiterempfehlung", "Kostenlose Beratung", "Meisterbetriebe"],
   dataTestIdPrefix: "kontakt"
 };
 

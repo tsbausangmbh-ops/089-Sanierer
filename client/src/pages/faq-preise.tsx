@@ -19,14 +19,14 @@ import pricingHeroImage from "@assets/generated_images/renovation_pricing_worksp
 
 const faqHeroContent: HeroContent = {
   backgroundImage: pricingHeroImage,
-  badge: "Häufige Fragen & Preise",
+  badge: "Volle Transparenz für anspruchsvolle Eigentümer",
   titleLine1: "FAQ & Preise.",
-  titleLine2: "Alle Antworten auf einen Blick.",
-  descriptions: ["Was kostet eine Sanierung?", "Wie lange dauert es?"],
-  strongText: "Transparente Preise ab 800€/m².",
-  ctaText: "Jetzt anfragen",
+  titleLine2: "Detaillierte Leistungsverzeichnisse.",
+  descriptions: ["Was kostet Ihre Investition?", "Transparente Kalkulation ohne versteckte Posten."],
+  strongText: "Festpreisgarantie ab 800€/m² – garantiert.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "Kostenlose Beratung"],
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "faq"
 };
 import { 

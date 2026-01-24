@@ -22,22 +22,23 @@ import {
   Layers,
   Paintbrush,
   HelpCircle,
-  ArrowRight
+  ArrowRight,
+  Phone
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import wohnungImg from "@assets/generated_images/renovated_luxury_apartment_interior.png";
 
 const wohnungHeroContent: HeroContent = {
   backgroundImage: wohnungImg,
-  badge: "85+ Wohnungen in München saniert",
-  titleLine1: "Ihre Wohnung wie neu.",
-  titleLine2: "Komplett aus einer Hand.",
-  descriptions: ["Elektrik, Sanitär, Böden, Wände.", "Alles koordiniert von uns."],
-  strongText: "Ab 800€/m² Festpreis.",
-  subText: "Kein Handwerker-Chaos mehr. Ein Ansprechpartner für alles.",
-  ctaText: "Jetzt Wohnung sanieren",
+  badge: "Über 85 erfolgreich transformierte Wohnungen",
+  titleLine1: "Wir kuratieren Ihr neues Wohnerlebnis.",
+  titleLine2: "Bis zu 22 Gewerke. Ein Ansprechpartner.",
+  descriptions: ["Ihr persönlicher Projekt-Kurator übernimmt die komplette Verantwortung.", "Elektrik, Sanitär, Böden, Wände – alles aus einer Hand."],
+  strongText: "Volle Festpreisgarantie ab 800€/m².",
+  subText: "Für anspruchsvolle Eigentümer und Investoren in München.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage?service=komplettsanierung",
-  checkmarks: ["Alle Gewerke koordiniert", "5 Jahre Gewährleistung", "Beratung in 24h"],
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Zertifizierte Meisterbetriebe"],
   dataTestIdPrefix: "wohnung"
 };
 

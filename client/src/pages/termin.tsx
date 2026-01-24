@@ -11,13 +11,13 @@ import terminHeroImage from "@assets/generated_images/appointment_booking_calend
 
 const terminHeroContent: HeroContent = {
   backgroundImage: terminHeroImage,
-  badge: "Kostenlose Beratung",
-  titleLine1: "Termin buchen.",
-  titleLine2: "Wir kommen zu Ihnen.",
-  descriptions: ["Persönliche Vor-Ort-Beratung.", "Festpreis-Angebot in 48h."],
-  strongText: "100% kostenlos & unverbindlich.",
-  ctaText: "Jetzt Termin wählen",
-  checkmarks: ["Flexible Termine Mo-Fr", "Experte vor Ort", "Angebot in 48h"],
+  badge: "Ihr persönlicher Beratungstermin",
+  titleLine1: "Lernen Sie Ihren Projekt-Kurator kennen.",
+  titleLine2: "Persönlich. Vor Ort. Unverbindlich.",
+  descriptions: ["Exklusive Vor-Ort-Beratung durch Ihren persönlichen Bauleiter.", "Detailliertes Festpreis-Konzept in 48h."],
+  strongText: "100% kostenlos – ohne Verpflichtung.",
+  ctaText: "Jetzt exklusiven Termin wählen",
+  checkmarks: ["98% Weiterempfehlung", "Meisterbetriebe vor Ort", "Festpreis in 48h"],
   dataTestIdPrefix: "termin"
 };
 

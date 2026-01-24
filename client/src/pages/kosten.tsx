@@ -29,15 +29,15 @@ import kostenImg from "@assets/generated_images/complete_home_renovation_result.
 
 const kostenHeroContent: HeroContent = {
   backgroundImage: kostenImg,
-  badge: "Münchner Marktpreise 2026",
-  titleLine1: "Was kostet eine Sanierung?",
-  titleLine2: "Alle Preise transparent.",
-  descriptions: ["Badsanierung ab 9.200€.", "Komplettsanierung ab 800€/m²."],
-  strongText: "Garantierter Endpreis.",
-  subText: "Keine versteckten Kosten. Keine bösen Überraschungen nach Projektstart.",
-  ctaText: "Individuelles Angebot",
+  badge: "Transparente Münchner Marktpreise 2026",
+  titleLine1: "Investition in Ihre Immobilie.",
+  titleLine2: "Volle Transparenz. Keine Überraschungen.",
+  descriptions: ["Detaillierte Leistungsverzeichnisse für volle Kontrolle.", "Festpreisgarantie ohne versteckte Nachforderungen."],
+  strongText: "Ihr Investment ist bei uns sicher.",
+  subText: "Für anspruchsvolle Eigentümer, die Klarheit schätzen.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage",
-  checkmarks: ["Preise inkl. Material & Arbeit", "Kostenlose Erstberatung", "Angebot in 48h"],
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "kosten"
 };
 

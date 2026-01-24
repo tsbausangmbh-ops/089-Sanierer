@@ -28,15 +28,15 @@ import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png
 
 const badHeroContent: HeroContent = {
   backgroundImage: bathroomImg,
-  badge: "120+ Bäder in München saniert",
-  titleLine1: "Ihr Traumbad.",
-  titleLine2: "In 2-3 Wochen fertig.",
-  descriptions: ["Ein Ansprechpartner für alles.", "Bodengleiche Dusche inklusive."],
-  strongText: "Ab 9.200€ Festpreis.",
-  subText: "Kein Koordinationsstress mit verschiedenen Handwerkern. Wir machen alles.",
-  ctaText: "Jetzt Traumbad planen",
+  badge: "Über 120 realisierte Traumbäder in München",
+  titleLine1: "Wir kuratieren Ihr Wellness-Refugium.",
+  titleLine2: "Fertig in 2-3 Wochen.",
+  descriptions: ["Ihr persönlicher Bauleiter koordiniert alle Gewerke.", "Bodengleiche Dusche, LED-Ambiente, Premium-Armaturen."],
+  strongText: "Volle Festpreisgarantie ab 9.200€.",
+  subText: "Sie entspannen – wir verwandeln Ihr Bad in eine private Wellness-Oase.",
+  ctaText: "Jetzt exklusives Bad-Konzept anfordern",
   ctaLink: "/anfrage?service=badsanierung",
-  checkmarks: ["Komplettpreis ohne Nachzahlung", "5 Jahre Gewährleistung", "Beratung innerhalb 24h"],
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "bad"
 };
 

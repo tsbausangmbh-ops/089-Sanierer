@@ -30,15 +30,15 @@ import kernImg from "@assets/generated_images/house_old_vs_new_clear_split.png";
 
 const kernHeroContent: HeroContent = {
   backgroundImage: kernImg,
-  badge: "20+ Kernsanierungen in München",
-  titleLine1: "Altbau wird Neubau.",
-  titleLine2: "Komplett bis auf Rohbau.",
-  descriptions: ["Alles raus, alles neu.", "Modernste Haustechnik."],
-  strongText: "Ab 1.200€/m² Festpreis.",
-  subText: "Günstiger als Neubau, besser als vorher. Ihr Altbau wird zum Traumobjekt.",
-  ctaText: "Jetzt Kernsanierung planen",
+  badge: "Über 20 exklusive Kernsanierungen realisiert",
+  titleLine1: "Wir transformieren Substanz in Exzellenz.",
+  titleLine2: "Neubau-Qualität. Altbau-Charme.",
+  descriptions: ["Ihr persönlicher Projekt-Kurator übernimmt die komplette Verantwortung.", "Modernste Haustechnik, zertifizierte Meisterbetriebe."],
+  strongText: "Volle Festpreisgarantie ab 1.200€/m².",
+  subText: "Für anspruchsvolle Eigentümer, die keine Kompromisse eingehen.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage?service=komplettsanierung",
-  checkmarks: ["Neubau-Qualität garantiert", "5 Jahre Gewährleistung", "KfW-Förderung möglich"],
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "KfW-Förderung möglich"],
   dataTestIdPrefix: "kern"
 };
 

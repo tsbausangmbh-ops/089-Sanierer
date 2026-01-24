@@ -24,14 +24,14 @@ import confirmationHeroImage from "@assets/generated_images/success_confirmation
 
 const confirmationHeroContent: HeroContent = {
   backgroundImage: confirmationHeroImage,
-  badge: "Anfrage erfolgreich",
-  titleLine1: "Vielen Dank!",
-  titleLine2: "Wir haben Ihre Anfrage erhalten.",
-  descriptions: ["Wir prüfen Ihr Projekt.", "Ein Experte meldet sich bei Ihnen."],
-  strongText: "Rückmeldung innerhalb 48h.",
-  ctaText: "Termin buchen",
+  badge: "Ihre exklusive Anfrage wurde empfangen",
+  titleLine1: "Vielen Dank für Ihr Vertrauen.",
+  titleLine2: "Ihr Projekt-Kurator übernimmt.",
+  descriptions: ["Wir analysieren Ihre Anfrage persönlich.", "Ein erfahrener Experte meldet sich bei Ihnen."],
+  strongText: "Persönliche Rückmeldung innerhalb 48h.",
+  ctaText: "Beratungstermin vorab buchen",
   ctaLink: "/termin",
-  checkmarks: ["Kostenlose Erstberatung", "Festpreisangebot", "Persönlicher Ansprechpartner"],
+  checkmarks: ["98% Weiterempfehlung", "Festpreisgarantie", "Meisterbetriebe"],
   dataTestIdPrefix: "confirmation"
 };
 

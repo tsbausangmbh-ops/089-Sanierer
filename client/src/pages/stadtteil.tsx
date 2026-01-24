@@ -435,15 +435,15 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
   const stadtteilHeroContent: HeroContent = {
     backgroundImage: stadtteilImg,
-    badge: `Ihr Sanierungspartner in ${data.name}`,
-    titleLine1: `Sanierung in ${data.name}.`,
-    titleLine2: "Lokal & zum Festpreis.",
-    descriptions: [`Wir kennen ${data.name} und seine Gebäude.`, "Altbau-Spezialisten vor Ort."],
-    strongText: "Festpreisgarantie.",
+    badge: `Ihr exklusiver Projekt-Kurator in ${data.name}`,
+    titleLine1: `Wir kuratieren Ihre Sanierung in ${data.name}.`,
+    titleLine2: "Lokale Expertise. Meisterqualität.",
+    descriptions: [`Ihr persönlicher Bauleiter kennt ${data.name} und seine Bausubstanz.`, "Zertifizierte Meisterbetriebe aus der Region."],
+    strongText: "Volle Festpreisgarantie ohne Nachforderungen.",
     subText: `${data.beschreibung.split('.')[0]}.`,
-    ctaText: `Jetzt Angebot für ${data.name}`,
+    ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
     ctaLink: "/anfrage",
-    checkmarks: [`Lokale Expertise ${data.name}`, "5 Jahre Gewährleistung", "Beratung in 24h"],
+    checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
     dataTestIdPrefix: data.slug
   };
 
