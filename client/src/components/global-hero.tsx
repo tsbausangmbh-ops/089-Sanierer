@@ -31,13 +31,18 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
   const testIdPrefix = content.dataTestIdPrefix || "hero";
 
   return (
-    <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: `url(${content.backgroundImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-      </div>
+    <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden hero-section">
+      {/* Optimized background image with eager loading for LCP */}
+      <img 
+        src={content.backgroundImage} 
+        alt=""
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
+        style={{ objectPosition: 'center' }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
         <div className="max-w-2xl">

@@ -11,6 +11,21 @@ const app = express();
 
 app.use(compression());
 
+// Performance & Security Headers
+app.use((req, res, next) => {
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(self)');
+  
+  // Performance headers
+  res.setHeader('X-DNS-Prefetch-Control', 'on');
+  
+  next();
+});
+
 // SEO: Built-in crawler middleware (primary - always works)
 app.use(crawlerMiddleware);
 

@@ -33,6 +33,14 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
+    <!-- Performance: Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" crossorigin />
+    <link rel="modulepreload" href="/src/main.tsx" />
+    
+    <!-- Resource Hints for faster navigation -->
+    <link rel="prefetch" href="/anfrage" />
+    <link rel="prefetch" href="/kosten" />
+    
     <!-- Primary Meta Tags - SSR Injected -->
     <title><!--SSR_TITLE-->Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer<!--/SSR_TITLE--></title>
     <meta name="title" content="<!--SSR_META_TITLE-->Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer<!--/SSR_META_TITLE-->" />
@@ -364,26 +372,62 @@
     }
     </script>
 
-    <!-- Performance Optimizations -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="dns-prefetch" href="https://api.openai.com">
+    <!-- Optimized Font Loading - Only Inter for body with display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Optimized Font Loading - Only Inter for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Critical CSS Inline for LCP -->
+    <!-- Critical CSS Inline for LCP & CLS -->
     <style>
-      body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-      #root{min-height:100vh}
+      /* Critical CSS - Inline for fastest LCP */
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.5}
+      #root{min-height:100vh;display:flex;flex-direction:column}
+      
+      /* Prevent CLS - Reserve space for common elements */
+      img,video{max-width:100%;height:auto;display:block}
+      button,input,select,textarea{font:inherit}
+      
+      /* Hero placeholder to prevent CLS */
+      .hero-section{min-height:60vh}
+      
+      /* Loading states */
       .loading-skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
       @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+      
+      /* Reduce motion for accessibility */
+      @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
     </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Performance: Defer non-critical scripts -->
+    <script>
+      // Lazy load images with native loading
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('img[data-src]').forEach(function(img) {
+          img.src = img.dataset.src;
+        });
+      });
+      
+      // Report Web Vitals
+      if ('web-vital' in window || typeof PerformanceObserver !== 'undefined') {
+        try {
+          new PerformanceObserver(function(list) {
+            list.getEntries().forEach(function(entry) {
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', entry.name, {
+                  event_category: 'Web Vitals',
+                  value: Math.round(entry.name === 'CLS' ? entry.value * 1000 : entry.value),
+                  event_label: entry.id,
+                  non_interaction: true
+                });
+              }
+            });
+          }).observe({type: 'largest-contentful-paint', buffered: true});
+        } catch(e) {}
+      }
+    </script>
   </body>
 </html>
