@@ -243,15 +243,15 @@ export default function Badsanierung() {
               <span>In 2-3 Wochen könnten Sie Ihr neues Traumbad genießen.</span>
               <span>Der erste Schritt dauert nur 2 Minuten.</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
-              <Link href="/anfrage?service=badsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-bad-cta">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="/anfrage?service=badsanierung" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-bad-cta">
                   Ja, ich will mein Badproblem lösen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base">
+              <a href="tel:+498944438872" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/40 text-white min-h-12 px-6 text-sm sm:text-base">
                   <Phone className="w-4 h-4 mr-2" />
                   Sofort anrufen
                 </Button>

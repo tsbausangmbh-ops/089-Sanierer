@@ -279,16 +279,16 @@ export default function Kernsanierung() {
               <span>Wir koordinieren alle Gewerke - Sie haben nur einen Ansprechpartner.</span>
               <span>Festpreis. Fester Termin. Qualitätsgarantie.</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
-              <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-kern-cta">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="/anfrage?service=komplettsanierung" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-kern-cta">
                   Ja, ich will komplett neu starten
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base">
-                  <Phone className="w-5 h-5 mr-2" />
+              <a href="tel:+498944438872" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/40 text-white min-h-12 px-6 text-sm sm:text-base">
+                  <Phone className="w-4 h-4 mr-2" />
                   Erstberatung anfordern
                 </Button>
               </a>
