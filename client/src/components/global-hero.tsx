@@ -44,7 +44,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl text-center sm:text-left mx-auto sm:mx-0">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/15 backdrop-blur-md rounded-full text-white text-xs sm:text-sm mb-3 sm:mb-4 border border-white/20">
             <BadgeCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" />
             <span className="line-clamp-1">{content.badge}</span>
@@ -55,7 +55,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
             <span className="text-orange-400">{content.titleLine2}</span>
           </h1>
           
-          <div className="text-sm sm:text-lg lg:text-xl text-white/90 mb-4 sm:mb-5 max-w-lg flex flex-col gap-0.5">
+          <div className="text-sm sm:text-lg lg:text-xl text-white/90 mb-4 sm:mb-5 max-w-lg mx-auto sm:mx-0 flex flex-col gap-0.5">
             {content.descriptions.map((desc, i) => (
               <span key={i}>{desc}</span>
             ))}
@@ -68,7 +68,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
             </p>
           )}
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 mb-4 sm:mb-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 mb-4 sm:mb-5">
             {scrollToElement ? (
               <Button 
                 size="lg" 
