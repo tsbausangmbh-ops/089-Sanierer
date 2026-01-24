@@ -23,14 +23,14 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 
 const homeHeroContent: HeroContent = {
   backgroundImage: heroImage,
-  badge: "268+ zufriedene Familien in München",
-  titleLine1: "Ihre Sanierung.",
-  titleLine2: "Stressfrei & zum Festpreis.",
-  descriptions: ["Ein Ansprechpartner.", "Ein verbindlicher Termin."],
-  strongText: "Keine Überraschungen.",
-  subText: "Schluss mit der endlosen Handwerkersuche. Wir lösen Ihr Problem - jetzt.",
-  ctaText: "Jetzt Problem lösen lassen",
-  checkmarks: ["Festpreisgarantie", "5 Jahre Garantie", "24h Antwort"],
+  badge: "Über 150 erfolgreich realisierte Projekte in München",
+  titleLine1: "Ihr persönlicher Projekt-Kurator.",
+  titleLine2: "Bis zu 22 Gewerke. Ein Ansprechpartner.",
+  descriptions: ["Professionelle Komplettsanierung aus einer Hand.", "Sie entspannen – wir koordinieren."],
+  strongText: "Volle Festpreisgarantie ohne versteckte Nachforderungen.",
+  subText: "Für anspruchsvolle Immobilienbesitzer in München und Umgebung.",
+  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
+  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "hero"
 };
 import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
@@ -194,31 +194,31 @@ const problemSolutions = [
 const transformations = [
   {
     icon: Handshake,
-    title: "Ein Partner, der alles regelt",
-    description: "Stellen Sie sich vor: Sie haben einen einzigen Ansprechpartner, der alle Handwerker koordiniert. Sie lehnen sich zurück."
+    title: "Ihr persönlicher Bauleiter",
+    description: "Ein fester Ansprechpartner hält Ihnen den Rücken frei und übernimmt die komplette Verantwortung für Ihr Projekt."
+  },
+  {
+    icon: Award,
+    title: "Zertifizierte Meisterbetriebe",
+    description: "Wir arbeiten ausschließlich mit einem Netzwerk aus geprüften Meisterbetrieben zusammen – für höchste Qualität."
   },
   {
     icon: FileCheck,
-    title: "Ihr Budget bleibt sicher",
-    description: "Der Preis, den wir nennen, ist der Preis, den Sie zahlen. Punkt. Keine Überraschungen, keine Nachforderungen."
+    title: "Transparenz als Standard",
+    description: "Sie erhalten detaillierte Leistungsverzeichnisse, damit Sie immer die volle Kontrolle über Ihr Investment behalten."
   },
   {
-    icon: Calendar,
-    title: "Ihr Termin steht",
-    description: "Wir nennen Ihnen den Fertigstellungstermin. Und halten ihn. Sie können planen."
-  },
-  {
-    icon: Shield,
-    title: "5 Jahre Sicherheit",
-    description: "Wenn etwas nicht stimmt, sind wir da. 5 Jahre lang. Das ist unser Versprechen."
+    icon: Clock,
+    title: "Wertvolle Lebenszeit zurück",
+    description: "Durch die Koordination aller bis zu 22 Gewerke gewinnen Sie wertvolle Lebenszeit zurück. Sie entspannen – wir arbeiten."
   },
 ];
 
 const stats = [
-  { value: "268+", label: "zufriedene Familien", icon: Heart },
-  { value: "20", label: "Jahre Meistererfahrung", icon: Award },
-  { value: "98%", label: "empfehlen uns weiter", icon: ThumbsUp },
-  { value: "0€", label: "versteckte Kosten", icon: BadgeCheck },
+  { value: "150+", label: "erfolgreich realisierte Projekte", icon: Award },
+  { value: "98%", label: "Weiterempfehlungsquote", icon: ThumbsUp },
+  { value: "100%", label: "Festpreisgarantie", icon: BadgeCheck },
+  { value: "5 Jahre", label: "Gewährleistung", icon: Shield },
 ];
 
 const processSteps = [
