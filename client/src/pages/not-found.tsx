@@ -1,9 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Home, ArrowLeft, Phone } from "lucide-react";
+import { Home, ArrowLeft, Phone, Search } from "lucide-react";
 import { Link } from "wouter";
 import { SeoHead } from "@/components/seo-head";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
+import { GlobalHero, HeroContent } from "@/components/global-hero";
+import heroImage from "@assets/generated_images/expert_renovation_advisor.png";
+
+const notFoundHeroContent: HeroContent = {
+  backgroundImage: heroImage,
+  badge: "Seite nicht gefunden",
+  titleLine1: "404.",
+  titleLine2: "Diese Seite existiert nicht.",
+  descriptions: ["Die gesuchte Seite wurde verschoben oder existiert nicht mehr."],
+  strongText: "Wir helfen Ihnen gerne weiter.",
+  ctaText: "Zur Startseite",
+  ctaLink: "/",
+  checkmarks: ["Kostenlose Beratung", "089 444438872", "Schnelle Hilfe"],
+  dataTestIdPrefix: "notfound"
+};
 
 export default function NotFound() {
   return (
@@ -15,48 +30,47 @@ export default function NotFound() {
       />
       <SiteHeader />
       
-      <main className="flex-1 flex items-center justify-center px-4 py-16">
-        <div className="text-center max-w-lg">
-          <div className="mb-8">
-            <span className="text-8xl font-bold text-primary">404</span>
-          </div>
+      <GlobalHero content={notFoundHeroContent} />
+      
+      <main className="flex-1 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
+            Wie können wir Ihnen helfen?
+          </h2>
           
-          <h1 className="text-3xl font-bold text-foreground mb-4">
-            Seite nicht gefunden
-          </h1>
-          
-          <p className="text-muted-foreground mb-8 text-lg">
-            Die angeforderte Seite existiert leider nicht oder wurde verschoben. 
-            Vielleicht finden Sie auf unserer Startseite, was Sie suchen.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" data-testid="button-404-home">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+            <Button asChild size="lg" className="h-auto py-4 flex-col gap-2" data-testid="button-404-home">
               <Link href="/">
-                <Home className="w-5 h-5 mr-2" />
-                Zur Startseite
+                <Home className="w-6 h-6" />
+                <span>Startseite</span>
               </Link>
             </Button>
             
-            <Button asChild variant="outline" size="lg" data-testid="button-404-back">
-              <a href="javascript:history.back()">
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Zurück
+            <Button asChild size="lg" variant="outline" className="h-auto py-4 flex-col gap-2" data-testid="button-404-anfrage">
+              <Link href="/anfrage">
+                <Search className="w-6 h-6" />
+                <span>Anfrage stellen</span>
+              </Link>
+            </Button>
+            
+            <Button asChild size="lg" variant="secondary" className="h-auto py-4 flex-col gap-2" data-testid="button-404-phone">
+              <a href="tel:+4989444438872">
+                <Phone className="w-6 h-6" />
+                <span>Anrufen</span>
               </a>
             </Button>
           </div>
           
-          <div className="mt-12 pt-8 border-t">
-            <p className="text-muted-foreground mb-4">
-              Sie haben Fragen? Wir helfen Ihnen gerne weiter.
-            </p>
-            <Button asChild variant="secondary" data-testid="button-404-phone">
-              <a href="tel:+4989444438872">
-                <Phone className="w-4 h-4 mr-2" />
-                089 444438872
-              </a>
-            </Button>
-          </div>
+          <p className="text-muted-foreground">
+            Sie können auch{" "}
+            <a 
+              href="javascript:history.back()" 
+              className="text-primary hover:underline"
+              data-testid="link-404-back"
+            >
+              zur vorherigen Seite zurückkehren
+            </a>.
+          </p>
         </div>
       </main>
       
