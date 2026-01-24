@@ -662,8 +662,8 @@ export default function RechnerPage() {
                     onClick={showResult}
                     disabled={selectedServices.length === 0}
                     className={propertyType === "foerderung" 
-                      ? "bg-green-600 hover:bg-green-700 text-white h-14 px-8 text-lg"
-                      : "bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg"
+                      ? "bg-green-600 hover:bg-green-700 text-white min-h-14 w-full sm:w-auto px-6 sm:px-8 text-lg"
+                      : "bg-orange-500 hover:bg-orange-600 text-white min-h-14 w-full sm:w-auto px-6 sm:px-8 text-lg"
                     }
                     data-testid="button-calculate"
                   >
@@ -776,7 +776,7 @@ export default function RechnerPage() {
                       <Link href={getAnfrageUrl()}>
                         <Button 
                           size="lg" 
-                          className={`h-14 px-8 text-lg font-semibold shadow-xl ${
+                          className={`min-h-14 w-full sm:w-auto px-6 sm:px-8 text-lg font-semibold shadow-xl ${
                             propertyType === "foerderung" 
                               ? "bg-green-600 hover:bg-green-700 text-white"
                               : "bg-orange-500 hover:bg-orange-600 text-white"
@@ -788,7 +788,7 @@ export default function RechnerPage() {
                         </Button>
                       </Link>
                       <a href="tel:+498944438872">
-                        <Button size="lg" variant="outline" className="h-14 px-6">
+                        <Button size="lg" variant="outline" className="min-h-14 w-full sm:w-auto px-6">
                           <Phone className="w-5 h-5 mr-2" />
                           089 444438872
                         </Button>
@@ -827,7 +827,7 @@ export default function RechnerPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={getAnfrageUrl()}>
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-14 w-full sm:w-auto px-6 sm:px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-cta">
                   {propertyType === "foerderung" ? "Ja, ich will die maximale Förderung" : "Ja, ich will einen echten Festpreis"}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>

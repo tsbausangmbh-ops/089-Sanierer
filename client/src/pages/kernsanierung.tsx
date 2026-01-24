@@ -135,22 +135,22 @@ export default function Kernsanierung() {
               Ihr Altbau hat so viele Probleme, dass Flickwerk nicht mehr hilft?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Kennen Sie das?</strong> Die Elektrik ist aus den 60ern – Sie haben Angst vor einem Brand. Die Wasserleitungen sind aus Blei oder so verkalkt, dass kaum noch Druck kommt. Der Grundriss passt nicht mehr zum heutigen Leben. Und jede einzelne Reparatur scheint das Problem nur zu verschieben.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Das Dilemma:</strong> Verkaufen? Dann bekommen Sie weniger, als das Grundstück wert ist. Abreißen und neu bauen? Extrem teuer und zeitaufwendig. Weiter flicken? Dann wird es jedes Jahr schlimmer.
               </p>
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-sm sm:text-base font-semibold text-foreground">
                 <strong>Die radikale Lösung:</strong> Kernsanierung. Wir nehmen alles raus – bis auf die tragenden Wände. Dann bauen wir komplett neu auf. Neue Elektrik. Neue Leitungen. Neue Böden. Neuer Grundriss. Das Ergebnis: Neubau-Qualität zum halben Preis eines Neubaus.
               </p>
-              <p className="text-lg text-primary font-semibold">
+              <p className="text-sm sm:text-base text-primary font-semibold">
                 <strong>Das Ergebnis:</strong> Ein Haus, das aussieht und funktioniert wie ein Neubau – aber den Charakter Ihres Altbaus behält. Energieeffizient. Modern. Sicher. Mit einem komplett neuen Lebensgefühl. Und Sie behalten Ihren Bestandsschutz und oft auch die Möglichkeit auf KfW-Förderung.
               </p>
             </div>
             <div className="mt-8">
               <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-kern-nlp-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold" data-testid="button-kern-nlp-cta">
                   Ja, mein Altbau soll wie neu werden
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -271,7 +271,7 @@ export default function Kernsanierung() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Ihr Gebäude hat eine Rundum-Erneuerung verdient!
             </h2>
-            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+            <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
               <span>Marode Leitungen, veraltete Heizung, undichte Fenster?</span>
               <span><strong>Mit einer Kernsanierung starten Sie komplett neu.</strong></span>
             </div>
@@ -279,15 +279,15 @@ export default function Kernsanierung() {
               <span>Wir koordinieren alle Gewerke - Sie haben nur einen Ansprechpartner.</span>
               <span>Festpreis. Fester Termin. Qualitätsgarantie.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-kern-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-kern-cta">
                   Ja, ich will komplett neu starten
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base">
                   <Phone className="w-5 h-5 mr-2" />
                   Erstberatung anfordern
                 </Button>

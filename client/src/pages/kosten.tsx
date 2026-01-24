@@ -128,22 +128,22 @@ export default function Kosten() {
               Haben Sie Angst vor der Kostenfalle Sanierung?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Kennen Sie diese Geschichten?</strong> "Der Handwerker hat am Ende das Doppelte verlangt." "Nach drei Wochen kamen immer neue Rechnungen." "Die Sanierung hat mein Budget komplett gesprengt." – Diese Horrorgeschichten machen vielen Eigentümern zu Recht Angst.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Das Grundproblem:</strong> Bei den meisten Handwerkern bekommen Sie einen Kostenvoranschlag. Der kann "um bis zu 20%" überschritten werden – legal! Und bei unvorhergesehenen Problemen kommen weitere Nachforderungen. Am Ende wissen Sie nie, was Sie wirklich zahlen.
               </p>
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-sm sm:text-base font-semibold text-foreground">
                 <strong>Unser Versprechen:</strong> Bei uns gibt es keine Kostenvoranschläge. Sie bekommen einen verbindlichen Festpreis – bevor wir anfangen. Dieser Preis gilt. Punkt. Wenn wir einen versteckten Wasserschaden finden, klären wir das mit Ihnen, bevor zusätzliche Kosten entstehen.
               </p>
-              <p className="text-lg text-primary font-semibold">
+              <p className="text-sm sm:text-base text-primary font-semibold">
                 <strong>Ihre Sicherheit:</strong> Sie wissen vom ersten Tag an, was Sie zahlen. Sie können planen. Sie können finanzieren. Sie können ruhig schlafen. Und falls doch etwas schiefgeht: 5 Jahre Gewährleistung auf alles.
               </p>
             </div>
             <div className="mt-8">
               <Link href="/anfrage">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-kosten-nlp-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold" data-testid="button-kosten-nlp-cta">
                   Ja, ich will meinen Festpreis erfahren
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -254,7 +254,7 @@ export default function Kosten() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Schluss mit der Unsicherheit bei Sanierungskosten!
             </h2>
-            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+            <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
               <span>Angst vor versteckten Kosten und bösen Überraschungen?</span>
               <span><strong>Bei uns bekommen Sie einen Festpreis - garantiert.</strong></span>
             </div>
@@ -262,15 +262,15 @@ export default function Kosten() {
               <span>Der Preis im Angebot ist der Endpreis. Ohne Wenn und Aber.</span>
               <span>Transparent. Verbindlich. Fair.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Link href="/anfrage">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-cta">
                   Ja, ich will einen Festpreis
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base">
                   <Phone className="w-5 h-5 mr-2" />
                   Kosten klären - Jetzt anrufen
                 </Button>

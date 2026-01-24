@@ -345,7 +345,7 @@ function LeadMagnetSection() {
               <span>Kostenloses Geschenk</span>
             </div>
             
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
               Der Ratgeber, der Ihnen <span className="text-primary">tausende Euro</span> spart
             </h2>
             
@@ -495,13 +495,13 @@ function FunnelForm() {
             <CheckCircle className="w-4 h-4" />
             <span>Über 268 Münchner Familien vertrauen uns bereits</span>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             <span className="text-accent">Stellen Sie sich vor:</span> In 8 Wochen ist Ihre Sanierung abgeschlossen.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-7xl mx-auto mb-2">
+          <p className="text-sm sm:text-lg text-muted-foreground max-w-7xl mx-auto mb-2">
             <strong>Kein Handwerker-Chaos.</strong> Kein Budget-Albtraum. Nur Ihr traumhaftes neues Zuhause.
           </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             In nur 2 Minuten erfahren Sie, wie wir das für Sie möglich machen.
           </p>
         </div>
@@ -806,10 +806,10 @@ export default function Home() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 Kennen Sie das Gefühl?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Eine <span className="text-accent font-semibold">Sanierung</span> planen, aber nur an Probleme denken?
               </p>
             </div>
@@ -947,10 +947,10 @@ export default function Home() {
                 <Target className="w-4 h-4" />
                 <span>Die Lösung</span>
               </div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 So fühlt sich <span className="text-accent">Sanierung</span> wirklich an
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Mit uns an Ihrer Seite wird Ihre Sanierung zum entspannten Erlebnis.
               </p>
             </div>
@@ -969,7 +969,7 @@ export default function Home() {
 
             {/* NLP: Urgency CTA after Transformation */}
             <div className="mt-8 text-center">
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4">
                 So könnte Ihre Sanierung auch aussehen. Der erste Schritt?
               </p>
               <Button 
@@ -992,10 +992,10 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 Ihr Weg zum <span className="text-accent">Traumzuhause</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 In 4 einfachen Schritten von der Idee zur fertigen Sanierung.
               </p>
             </div>
@@ -1028,7 +1028,7 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 Das sagen unsere <span className="text-accent">Kunden</span>
               </h2>
               <div className="text-lg text-muted-foreground flex flex-col gap-0.5">
@@ -1067,10 +1067,10 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 Unsere <span className="text-accent">Leistungen</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Von der kleinen Badrenovierung bis zur kompletten Haussanierung.
               </p>
             </div>
@@ -1114,10 +1114,10 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 Häufige <span className="text-accent">Fragen</span>
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Alles, was Sie wissen müssen.
               </p>
             </div>
@@ -1145,27 +1145,27 @@ export default function Home() {
               <span>Handeln Sie heute - nicht morgen</span>
             </div>
             
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
               Wie lange wollen Sie noch mit <br className="hidden lg:block" />
               Ihrem Sanierungsproblem leben?
             </h2>
-            <div className="text-xl opacity-90 mb-4 max-w-2xl mx-auto flex flex-col gap-1">
+            <div className="text-sm sm:text-lg opacity-90 mb-4 max-w-2xl mx-auto flex flex-col gap-1">
               <span><strong>In 3 Monaten</strong> könnten Sie in Ihrem frisch sanierten Zuhause sitzen.</span>
               <span>Oder Sie schieben es wieder auf.</span>
             </div>
-            <div className="text-lg opacity-80 mb-6 max-w-xl mx-auto flex flex-col gap-0.5">
+            <div className="text-sm sm:text-base opacity-80 mb-6 max-w-xl mx-auto flex flex-col gap-0.5">
               <span>Wir sind die Problemlöser, die Sie suchen.</span>
               <span>Der erste Schritt dauert nur 2 Minuten.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Button 
                 size="lg" 
                 onClick={scrollToForm}
-                className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl"
+                className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl"
                 data-testid="button-final-cta"
               >
                 Ja, ich will mein Problem endlich lösen
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
             <p className="mt-6 text-sm opacity-70">

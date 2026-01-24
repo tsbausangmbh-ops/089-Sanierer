@@ -106,22 +106,22 @@ export default function Badsanierung() {
               Ihr altes Bad raubt Ihnen jeden Morgen die Freude?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Kennen Sie das?</strong> Schimmel in den Fugen. Eine Duschwanne mit hohem Einstieg. Fliesen aus den 80ern, die Sie jeden Tag an "damals" erinnern. Ein Bad, in dem Sie sich nicht wohlfühlen – obwohl Sie dort jeden Tag Zeit verbringen.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Die größte Angst:</strong> "Was, wenn das alles viel teurer wird als geplant? Was, wenn die Handwerker mitten in der Arbeit aufhören? Was, wenn ich wochenlang ohne Bad dastehe?"
               </p>
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-sm sm:text-base font-semibold text-foreground">
                 <strong>Die Lösung:</strong> Bei uns bekommen Sie einen Festpreis – bevor wir anfangen. Keine Nachforderungen. Keine bösen Überraschungen. In 2-3 Wochen haben Sie Ihr Traumbad. Und wenn etwas schiefgeht? Dann haben Sie 5 Jahre Gewährleistung. Wir stehen zu unserer Arbeit.
               </p>
-              <p className="text-lg text-primary font-semibold">
+              <p className="text-sm sm:text-base text-primary font-semibold">
                 <strong>Stellen Sie sich vor:</strong> In nur 3 Wochen betreten Sie morgens ein Bad, das sich anfühlt wie im Wellness-Hotel. Bodengleiche Dusche, moderne Fliesen, perfekte Beleuchtung. Das ist keine Fantasie – das ist das, was unsere 120+ Kunden in München schon erleben.
               </p>
             </div>
             <div className="mt-8">
               <Link href="/anfrage?service=badsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-bad-nlp-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold" data-testid="button-bad-nlp-cta">
                   Ja, ich will mein Traumbad
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -235,7 +235,7 @@ export default function Badsanierung() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Wie lange wollen Sie noch mit Ihrem alten Bad leben?
             </h2>
-            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+            <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
               <span>Schimmel, kaputte Fliesen, veraltete Armaturen?</span>
               <span><strong>Das muss nicht sein.</strong></span>
             </div>
@@ -243,16 +243,16 @@ export default function Badsanierung() {
               <span>In 2-3 Wochen könnten Sie Ihr neues Traumbad genießen.</span>
               <span>Der erste Schritt dauert nur 2 Minuten.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Link href="/anfrage?service=badsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-bad-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-bad-cta">
                   Ja, ich will mein Badproblem lösen
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
-                  <Phone className="w-5 h-5 mr-2" />
+                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base">
+                  <Phone className="w-4 h-4 mr-2" />
                   Sofort anrufen
                 </Button>
               </a>

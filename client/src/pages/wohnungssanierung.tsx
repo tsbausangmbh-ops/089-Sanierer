@@ -105,22 +105,22 @@ export default function Wohnungssanierung() {
               Ihre Wohnung verdient endlich eine Rundumerneuerung?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Kennen Sie das?</strong> Die Elektrik ist von 1975 – Sie trauen sich nicht, mehr als drei Geräte gleichzeitig anzuschließen. Die Rohre gluckern nachts. Der Parkettboden ist so abgelaufen, dass Gäste komisch schauen. Und bei jedem Problem müssen Sie einen anderen Handwerker rufen.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Das eigentliche Problem:</strong> Wer koordiniert das alles? Der Elektriker wartet auf den Maler, der Fliesenleger braucht erst den Sanitär – und Sie stehen mittendrin und verlieren Wochen, Nerven und Geld.
               </p>
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-sm sm:text-base font-semibold text-foreground">
                 <strong>Unsere Lösung:</strong> Ein Ansprechpartner. Ein Festpreis. Ein Termin. Wir übernehmen die komplette Koordination aller Gewerke. Sie entspannen sich – und ziehen in eine Wohnung ein, die sich anfühlt wie neu gekauft.
               </p>
-              <p className="text-lg text-primary font-semibold">
+              <p className="text-sm sm:text-base text-primary font-semibold">
                 <strong>Das Ergebnis:</strong> Eine Wohnung mit moderner Elektrik, neuen Leitungen, frischen Böden und gestrichenen Wänden. Keine versteckten Mängel mehr. Keine Angst vor der nächsten Stromrechnung oder dem nächsten Wasserrohrbruch. Dafür stehen wir mit 5 Jahren Gewährleistung.
               </p>
             </div>
             <div className="mt-8">
               <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-wohnung-nlp-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold" data-testid="button-wohnung-nlp-cta">
                   Ja, meine Wohnung soll wie neu werden
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -245,7 +245,7 @@ export default function Wohnungssanierung() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Schluss mit der alten Wohnung - Zeit für Ihr neues Zuhause!
             </h2>
-            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+            <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
               <span>Abgenutzte Böden, veraltete Küche, renovierungsbedürftiges Bad?</span>
               <span><strong>Wir verwandeln Ihre Wohnung komplett.</strong></span>
             </div>
@@ -253,15 +253,15 @@ export default function Wohnungssanierung() {
               <span>Ob Eigentümer oder Vermieter - wir haben die passende Lösung.</span>
               <span>Festpreis. Fester Termin. Fertig.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-wohnung-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-wohnung-cta">
                   Ja, Wohnung jetzt sanieren lassen
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base">
                   <Phone className="w-5 h-5 mr-2" />
                   Kostenlos beraten lassen
                 </Button>

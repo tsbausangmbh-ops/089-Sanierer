@@ -2559,18 +2559,18 @@ export default function FunnelPage() {
         )}
 
         <div className="text-center py-8 bg-muted/30 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
             Kurze Fragen beantworten – Angebot in 48 Stunden erhalten. Unverbindlich, kostenlos und ohne versteckte Kosten.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
             <Link href="/termin">
-              <Button size="lg" className="text-lg bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-seo-booking">
-                <Calendar className="w-5 h-5 mr-2" />
+              <Button size="lg" className="text-sm sm:text-base bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 min-h-12" data-testid="button-seo-booking">
+                <Calendar className="w-4 h-4 mr-2" />
                 24 Std. Online Termin
               </Button>
             </Link>
-            <Button size="lg" onClick={handleStartFromSeoIntro} className="text-lg" data-testid="button-start-funnel">
+            <Button size="lg" onClick={handleStartFromSeoIntro} className="text-sm sm:text-base min-h-12" data-testid="button-start-funnel">
               {content.ctaText}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

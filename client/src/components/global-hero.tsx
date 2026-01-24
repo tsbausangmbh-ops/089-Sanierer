@@ -45,17 +45,17 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-24 pt-16 lg:pt-24 pb-10 lg:pb-16 w-full">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 backdrop-blur-md rounded-full text-white text-sm mb-4 border border-white/20">
-            <BadgeCheck className="w-4 h-4 text-green-400" />
-            <span>{content.badge}</span>
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/15 backdrop-blur-md rounded-full text-white text-xs sm:text-sm mb-3 sm:mb-4 border border-white/20">
+            <BadgeCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" />
+            <span className="line-clamp-1">{content.badge}</span>
           </div>
           
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
             {content.titleLine1} <br />
             <span className="text-orange-400">{content.titleLine2}</span>
           </h1>
           
-          <div className="text-lg lg:text-xl text-white/90 mb-5 max-w-lg flex flex-col gap-0.5">
+          <div className="text-sm sm:text-lg lg:text-xl text-white/90 mb-4 sm:mb-5 max-w-lg flex flex-col gap-0.5">
             {content.descriptions.map((desc, i) => (
               <span key={i}>{desc}</span>
             ))}
@@ -63,31 +63,31 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
           </div>
 
           {content.subText && (
-            <p className="text-white/90 text-sm mb-3 font-medium">
+            <p className="text-white/90 text-xs sm:text-sm mb-3 font-medium">
               {content.subText}
             </p>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-5">
+          <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 mb-4 sm:mb-5">
             {scrollToElement ? (
               <Button 
                 size="lg" 
                 onClick={handleCTA}
-                className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
+                className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                 data-testid={`button-${testIdPrefix}-cta`}
               >
                 {content.ctaText}
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
               </Button>
             ) : (
               <Link href={content.ctaLink || "/anfrage"}>
                 <Button 
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-white h-12 px-6 text-base font-semibold shadow-lg animate-pulse hover:animate-none"
+                  className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                   data-testid={`button-${testIdPrefix}-cta`}
                 >
                   {content.ctaText}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                 </Button>
               </Link>
             )}
@@ -95,19 +95,19 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="h-12 px-6 text-base border-white/40 text-white backdrop-blur-sm"
+                className="min-h-12 px-4 sm:px-6 text-sm sm:text-base border-white/40 text-white backdrop-blur-sm"
                 data-testid={`button-${testIdPrefix}-phone`}
               >
-                <Phone className="w-4 h-4 mr-2" />
+                <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
                 089 - Anrufen
               </Button>
             </a>
           </div>
 
-          <div className="flex flex-col gap-1.5 text-white/90 text-sm">
+          <div className="flex flex-col gap-1 sm:gap-1.5 text-white/90 text-xs sm:text-sm">
             {content.checkmarks.map((check, i) => (
               <div key={i} className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-green-400" />
+                <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" />
                 <span>{check}</span>
               </div>
             ))}

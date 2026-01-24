@@ -597,7 +597,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {data.name} verdient nur die beste Sanierung!
             </h2>
-            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+            <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
               <span>Wir kennen die Bausubstanz und Besonderheiten in {data.name}.</span>
               <span><strong>Ihr lokaler Partner für hochwertige Sanierungen.</strong></span>
             </div>
@@ -605,15 +605,15 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
               <span>Kurze Wege, schnelle Reaktionszeiten, persönliche Betreuung.</span>
               <span>Festpreis. Fester Termin. Münchner Qualität.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Link href="/anfrage">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid={`button-anfrage-${data.slug}-cta`}>
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid={`button-anfrage-${data.slug}-cta`}>
                   Ja, Projekt in {data.name} starten
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base">
                   <Phone className="w-5 h-5 mr-2" />
                   Lokale Beratung anfordern
                 </Button>

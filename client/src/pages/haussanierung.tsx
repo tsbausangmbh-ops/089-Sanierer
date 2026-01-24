@@ -107,22 +107,22 @@ export default function Haussanierung() {
               Ihr Haus frisst Heizkosten und braucht ständig Reparaturen?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Kennen Sie das?</strong> Jedes Jahr eine neue Überraschung: Mal die Heizung, mal das Dach, mal die Fenster. Die Gasrechnung ist ein Alptraum. Im Winter frieren Sie, im Sommer schwitzen Sie. Und bei jedem Problem denken Sie: "Wäre ein Neubau nicht einfacher?"
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Die bittere Wahrheit:</strong> Ein Neubau in München? 3.500-4.500€ pro Quadratmeter. Dazu Abrisskosten. Dazu monatelange Baugenehmigungsverfahren. Und am Ende haben Sie ein neues Haus – aber keines mit dem Charakter Ihres Altbaus.
               </p>
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-sm sm:text-base font-semibold text-foreground">
                 <strong>Der klügere Weg:</strong> Eine professionelle Haussanierung für 920-1.500€/m². Sie behalten Ihr Grundstück, Ihren Bestandsschutz, Ihren Charakter. Aber Sie bekommen moderne Technik, niedrige Heizkosten und ein Haus, das wieder Wert hat. Und: Sie können oft KfW-Förderung bis 150.000€ bekommen.
               </p>
-              <p className="text-lg text-primary font-semibold">
+              <p className="text-sm sm:text-base text-primary font-semibold">
                 <strong>Stellen Sie sich vor:</strong> Nächsten Winter sitzen Sie in Ihrem komplett sanierten Haus. Die Heizkosten sind um 60% gesunken. Keine kalten Wände mehr. Keine Zugluft. Ein Haus, das Ihre Enkel noch erben werden.
               </p>
             </div>
             <div className="mt-8">
               <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold" data-testid="button-haus-nlp-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold" data-testid="button-haus-nlp-cta">
                   Ja, ich will mein Haus sanieren lassen
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -243,7 +243,7 @@ export default function Haussanierung() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Ihr Haus verdient eine Komplettsanierung - Sie auch!
             </h2>
-            <div className="text-lg opacity-90 mb-4 flex flex-col gap-1">
+            <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
               <span>Hohe Heizkosten, veraltete Technik, Sanierungsstau?</span>
               <span><strong>Wir lösen alle Probleme - aus einer Hand.</strong></span>
             </div>
@@ -251,15 +251,15 @@ export default function Haussanierung() {
               <span>In wenigen Monaten wohnen Sie in Ihrem frisch sanierten Traumhaus.</span>
               <span>Ein Ansprechpartner. Ein Festpreis. Keine Überraschungen.</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
               <Link href="/anfrage?service=komplettsanierung">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white h-14 px-8 text-lg font-semibold shadow-xl" data-testid="button-anfrage-haus-cta">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl" data-testid="button-anfrage-haus-cta">
                   Ja, ich will mein Haus sanieren lassen
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="border-white/40 text-white h-14 px-6">
+                <Button size="lg" variant="outline" className="border-white/40 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base">
                   <Phone className="w-5 h-5 mr-2" />
                   Jetzt beraten lassen
                 </Button>
