@@ -68,22 +68,22 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
             </p>
           )}
 
-          <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 mb-4 sm:mb-5">
+          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 mb-4 sm:mb-5">
             {scrollToElement ? (
               <Button 
                 size="lg" 
                 onClick={handleCTA}
-                className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
+                className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                 data-testid={`button-${testIdPrefix}-cta`}
               >
                 {content.ctaText}
                 <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
               </Button>
             ) : (
-              <Link href={content.ctaLink || "/anfrage"}>
+              <Link href={content.ctaLink || "/anfrage"} className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
+                  className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
                   data-testid={`button-${testIdPrefix}-cta`}
                 >
                   {content.ctaText}
@@ -91,11 +91,11 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
                 </Button>
               </Link>
             )}
-            <a href="tel:+498944438872">
+            <a href="tel:+498944438872" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="min-h-12 px-4 sm:px-6 text-sm sm:text-base border-white/40 text-white backdrop-blur-sm"
+                className="w-full sm:w-auto min-h-12 px-6 text-sm sm:text-base border-white/40 text-white backdrop-blur-sm"
                 data-testid={`button-${testIdPrefix}-phone`}
               >
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
