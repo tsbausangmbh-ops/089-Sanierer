@@ -83,6 +83,34 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Google AI Overviews & SGE 2026
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Microsoft Copilot
+User-agent: Bingbot
+Allow: /
+
+User-agent: MicrosoftPreview
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap
 Sitemap: https://089-sanierer.de/sitemap.xml
 
