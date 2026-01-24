@@ -975,10 +975,10 @@ export default function Home() {
               <Button 
                 size="lg" 
                 onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-accent hover:bg-accent/90"
+                className="bg-accent hover:bg-accent/90 min-h-12 px-5 sm:px-6 text-sm sm:text-base"
                 data-testid="button-transformation-cta"
               >
-                Jetzt Ihr Problem schildern - wir haben die Lösung
+                Jetzt Ihr Problem schildern
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
