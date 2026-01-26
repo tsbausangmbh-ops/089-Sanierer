@@ -337,6 +337,37 @@ export async function registerRoutes(
 ): Promise<Server> {
   setupAuth(app);
 
+  // SMTP Test Endpoint (nur für Admin-Debugging)
+  app.get("/api/test-email", async (req, res) => {
+    try {
+      console.log("Testing SMTP connection...");
+      console.log("SMTP_HOST:", process.env.SMTP_HOST);
+      console.log("SMTP_PORT:", process.env.SMTP_PORT);
+      console.log("SMTP_USER:", process.env.SMTP_USER);
+      console.log("SMTP_PASSWORD exists:", !!process.env.SMTP_PASSWORD);
+      
+      await transporter.verify();
+      console.log("SMTP connection verified successfully!");
+      
+      await transporter.sendMail({
+        from: `"089-Sanierer Test" <${process.env.SMTP_FROM_EMAIL}>`,
+        to: process.env.SMTP_FROM_EMAIL,
+        subject: "Test-E-Mail von 089-Sanierer",
+        text: "Dies ist eine Test-E-Mail. Wenn Sie diese lesen, funktioniert der E-Mail-Versand!",
+      });
+      
+      res.json({ success: true, message: "Test-E-Mail wurde gesendet!" });
+    } catch (error: any) {
+      console.error("SMTP Test failed:", error);
+      res.status(500).json({ 
+        success: false, 
+        error: error.message,
+        code: error.code,
+        details: error.response || error.toString()
+      });
+    }
+  });
+
   // 301 Redirects - SEO-freundliche Weiterleitungen für häufige URLs
   const redirects: Record<string, string> = {
     // Service-Kurzformen
