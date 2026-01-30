@@ -4,7 +4,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
-import datenschutzHeroImage from "@assets/generated_images/data_privacy_protection.png";
+import datenschutzHeroImage from "@assets/generated_images/data_privacy_protection.webp";
 
 const datenschutzHeroContent: HeroContent = {
   backgroundImage: datenschutzHeroImage,

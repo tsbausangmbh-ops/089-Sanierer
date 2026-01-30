@@ -25,7 +25,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import kostenImg from "@assets/generated_images/complete_home_renovation_result.png";
+import kostenImg from "@assets/generated_images/complete_home_renovation_result.webp";
 
 const kostenHeroContent: HeroContent = {
   backgroundImage: kostenImg,

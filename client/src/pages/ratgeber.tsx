@@ -8,7 +8,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
-import ratgeberHeroImage from "@assets/generated_images/expert_renovation_advisor.png";
+import ratgeberHeroImage from "@assets/generated_images/expert_renovation_advisor.webp";
 
 const ratgeberHeroContent: HeroContent = {
   backgroundImage: ratgeberHeroImage,

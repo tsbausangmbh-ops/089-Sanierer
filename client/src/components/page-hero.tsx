@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Shield, ChevronRight, Phone } from "lucide-react";
-import defaultHeroImage from "@assets/generated_images/modern_renovated_home_interior.png";
+import defaultHeroImage from "@assets/generated_images/modern_renovated_home_interior.webp";
 
 interface PageHeroProps {
   title: string;

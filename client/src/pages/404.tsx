@@ -5,7 +5,7 @@ import { SeoHead } from "@/components/seo-head";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import heroImage from "@assets/generated_images/expert_renovation_advisor.png";
+import heroImage from "@assets/generated_images/expert_renovation_advisor.webp";
 
 const notFoundHeroContent: HeroContent = {
   backgroundImage: heroImage,

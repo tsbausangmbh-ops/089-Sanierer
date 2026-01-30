@@ -15,7 +15,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
-import pricingHeroImage from "@assets/generated_images/renovation_pricing_workspace.png";
+import pricingHeroImage from "@assets/generated_images/renovation_pricing_workspace.webp";
 
 const faqHeroContent: HeroContent = {
   backgroundImage: pricingHeroImage,

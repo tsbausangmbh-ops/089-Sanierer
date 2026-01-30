@@ -17,7 +17,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { Breadcrumb } from "@/components/breadcrumb";
 import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SeoHead } from "@/components/seo-head";
-import gewerkeHeroImage from "@assets/generated_images/skilled_trades_craftsmen.png";
+import gewerkeHeroImage from "@assets/generated_images/skilled_trades_craftsmen.webp";
 
 const gewerkeHeroContent: HeroContent = {
   backgroundImage: gewerkeHeroImage,

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
+import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.webp";
 
 const COOKIE_NAME = "kshw_newyear_popup_shown";
 const COOKIE_CONSENT_KEY = "kshw_cookie_consent";

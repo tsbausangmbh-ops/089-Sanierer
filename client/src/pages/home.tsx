@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImage from "@assets/generated_images/modern_renovated_home_interior.png";
+import heroImage from "@assets/generated_images/modern_renovated_home_interior.webp";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 
 const homeHeroContent: HeroContent = {
@@ -33,12 +33,12 @@ const homeHeroContent: HeroContent = {
   checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "hero"
 };
-import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.png";
-import kitchenImg from "@assets/generated_images/kitchen_renovation_work.png";
-import floorImg from "@assets/generated_images/parquet_floor_renovation.png";
-import electricImg from "@assets/generated_images/electrical_renovation_installation.png";
-import heatingImg from "@assets/generated_images/heating_system_installation.png";
-import completeImg from "@assets/generated_images/complete_home_renovation_result.png";
+import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.webp";
+import kitchenImg from "@assets/generated_images/kitchen_renovation_work.webp";
+import floorImg from "@assets/generated_images/parquet_floor_renovation.webp";
+import electricImg from "@assets/generated_images/electrical_renovation_installation.webp";
+import heatingImg from "@assets/generated_images/heating_system_installation.webp";
+import completeImg from "@assets/generated_images/complete_home_renovation_result.webp";
 
 import { 
   Bath, 
