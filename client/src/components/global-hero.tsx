@@ -38,6 +38,9 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
         alt=""
         loading="eager"
         decoding="async"
+        // @ts-ignore - fetchpriority is valid HTML attribute
+        fetchpriority="high"
+        aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: 'center', contentVisibility: 'auto' }}
       />

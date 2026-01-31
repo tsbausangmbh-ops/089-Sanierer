@@ -44,6 +44,9 @@ export function PageHero({
           className="w-full h-full object-cover"
           loading="eager"
           decoding="async"
+          // @ts-ignore - fetchpriority is valid HTML attribute
+          fetchpriority="high"
+          aria-label={imageAlt || "Haussanierung Vorher-Nachher"}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40 lg:to-black/20" />
       </div>
