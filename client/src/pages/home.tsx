@@ -90,6 +90,7 @@ const allServices = [
     title: "Komplettsanierung", 
     icon: HomeIcon, 
     image: completeImg,
+    imageAlt: "Komplettsanierung München - Professionelle Altbausanierung mit Festpreisgarantie",
     description: "Rundum-Sanierung aus einer Hand",
     price: "ab 920€/m²",
     features: ["Alle Gewerke koordiniert", "Festpreisgarantie", "Ein Ansprechpartner"]
@@ -99,6 +100,7 @@ const allServices = [
     title: "Badsanierung", 
     icon: Bath, 
     image: bathroomImg,
+    imageAlt: "Badsanierung München - Modernes Badezimmer nach Komplettrenovierung",
     description: "Ihr Traumbad in 2-3 Wochen",
     price: "ab 9.200€",
     features: ["Barrierefreie Optionen", "Moderne Designs", "Sanitär & Fliesen"]
@@ -108,6 +110,7 @@ const allServices = [
     title: "Küchensanierung", 
     icon: UtensilsCrossed, 
     image: kitchenImg,
+    imageAlt: "Küchensanierung München - Fachgerechte Küchenrenovierung mit Elektrik",
     description: "Bauarbeiten für Ihre Traumküche",
     price: "ab 6.500€",
     features: ["Fliesen & Elektrik", "Wasser & Abfluss", "Wanddurchbrüche"]
@@ -117,6 +120,7 @@ const allServices = [
     title: "Bodensanierung", 
     icon: Layers, 
     image: floorImg,
+    imageAlt: "Bodensanierung München - Parkett verlegen und Fußbodenheizung einbauen",
     description: "Parkett, Fliesen oder Vinyl",
     price: "ab 65€/m²",
     features: ["Fachgerechte Verlegung", "Untergrundvorbereitung", "Fußbodenheizung"]
@@ -126,6 +130,7 @@ const allServices = [
     title: "Elektrosanierung", 
     icon: Zap, 
     image: electricImg,
+    imageAlt: "Elektrosanierung München - VDE-konforme Elektroinstallation vom Meisterbetrieb",
     description: "VDE-konforme Installation",
     price: "ab 85€/m²",
     features: ["Neue Leitungen", "Smart-Home ready", "Sicherheitstechnik"]
@@ -135,6 +140,7 @@ const allServices = [
     title: "Heizungssanierung", 
     icon: Flame, 
     image: heatingImg,
+    imageAlt: "Heizungssanierung München - Wärmepumpe und Fußbodenheizung Installation",
     description: "Bis zu 40% Heizkosten sparen",
     price: "ab 12.000€",
     features: ["Wärmepumpen", "Fußbodenheizung", "Fördermittelberatung"]
@@ -1081,7 +1087,7 @@ export default function Home() {
                   <div className="relative h-48">
                     <img 
                       src={service.image} 
-                      alt={service.title}
+                      alt={service.imageAlt}
                       className="w-full h-full object-cover transition-transform group-hover:scale-105"
                       loading="lazy"
                       decoding="async"
