@@ -111,8 +111,9 @@ export default function ChristmasPopup() {
       >
         <img 
           src={christmasBackground} 
-          alt="Weihnachtsgrüße" 
+          alt="Weihnachtsaktion 089-Sanierer München - Sanierung mit Festpreisgarantie" 
           className="w-full h-auto"
+          loading="lazy"
         />
         
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />

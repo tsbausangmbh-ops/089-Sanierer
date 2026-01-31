@@ -38,7 +38,7 @@ export function SiteHeader() {
             <div className="flex items-center gap-2 cursor-pointer">
               <img 
                 src={kshwLogo} 
-                alt="089-Sanierer Logo" 
+                alt="089-Sanierer München - Sanierungsfirma für Komplettsanierung und Badsanierung" 
                 className="h-10 w-auto rounded"
                 width="40"
                 height="40"

@@ -208,44 +208,44 @@ const serviceHeroContents: Record<string, HeroContent> = {
 // NLP section images mapping with captions for each service
 const serviceNlpImages: Record<string, { src: string; alt: string }[]> = {
   komplettsanierung: [
-    { src: komplettsanierungNlp1, alt: "Professionelles Sanierungsteam bei der Koordination" },
-    { src: komplettsanierungNlp2, alt: "Qualitätskontrolle während der Sanierung" },
-    { src: komplettsanierungNlp3, alt: "Luxuriös sanierte Wohnung - Endergebnis" },
+    { src: komplettsanierungNlp1, alt: "Komplettsanierung München - Professionelles Sanierungsteam koordiniert Altbausanierung" },
+    { src: komplettsanierungNlp2, alt: "Wohnungssanierung München - Qualitätskontrolle durch Bauleiter vor Ort" },
+    { src: komplettsanierungNlp3, alt: "Luxuriös sanierte Altbauwohnung München - Vorher-Nachher Ergebnis" },
   ],
   badsanierung: [
-    { src: badsanierungNlp1, alt: "Fliesenleger bei der Verlegung von Badfliesen" },
-    { src: badsanierungNlp2, alt: "Sanitärinstallateur montiert Badarmatur" },
-    { src: badsanierungNlp3, alt: "Fertig saniertes Luxus-Badezimmer" },
+    { src: badsanierungNlp1, alt: "Badsanierung München - Fliesenleger verlegt großformatige Badfliesen" },
+    { src: badsanierungNlp2, alt: "Badezimmer renovieren München - Sanitärinstallateur montiert Regendusche" },
+    { src: badsanierungNlp3, alt: "Barrierefreies Bad München - Fertig saniertes Luxus-Badezimmer" },
   ],
   kuechensanierung: [
-    { src: kuechensanierungNlp1, alt: "Elektriker bei der Küchenelektrik-Installation" },
-    { src: kuechensanierungNlp2, alt: "Sanitärinstallateur verlegt Wasseranschlüsse" },
-    { src: kuechensanierungNlp3, alt: "Fertig renovierte moderne Küche" },
+    { src: kuechensanierungNlp1, alt: "Küchensanierung München - Elektriker installiert Küchenanschlüsse" },
+    { src: kuechensanierungNlp2, alt: "Küche renovieren München - Sanitärinstallateur verlegt Wasseranschlüsse" },
+    { src: kuechensanierungNlp3, alt: "Moderne Küche nach Sanierung München - Hochwertige Einbauküche" },
   ],
   bodensanierung: [
-    { src: bodensanierungNlp1, alt: "Handwerker verlegt Parkettboden" },
-    { src: bodensanierungNlp2, alt: "Parkettboden wird geschliffen und restauriert" },
-    { src: bodensanierungNlp3, alt: "Fertig verlegter Fischgrät-Parkettboden" },
+    { src: bodensanierungNlp1, alt: "Parkettboden verlegen München - Handwerker bei der Parkettverlegung" },
+    { src: bodensanierungNlp2, alt: "Parkett schleifen München - Fachgerechte Bodenrenovierung" },
+    { src: bodensanierungNlp3, alt: "Fischgrätparkett München - Hochwertiger Eichenparkett verlegt" },
   ],
   elektrosanierung: [
-    { src: elektrosanierungNlp1, alt: "Elektriker verlegt neue Elektroleitungen" },
-    { src: elektrosanierungNlp2, alt: "Installation eines modernen Sicherungskastens" },
-    { src: elektrosanierungNlp3, alt: "Modern installierte Steckdosen und Schalter" },
+    { src: elektrosanierungNlp1, alt: "Elektrosanierung München - Elektriker verlegt VDE-konforme Leitungen" },
+    { src: elektrosanierungNlp2, alt: "Sicherungskasten erneuern München - Moderner Verteilerkasten Installation" },
+    { src: elektrosanierungNlp3, alt: "Smart-Home Elektrik München - Moderne Steckdosen und Schalter" },
   ],
   heizungssanierung: [
-    { src: heizungssanierungNlp1, alt: "Techniker installiert Wärmepumpe" },
-    { src: heizungssanierungNlp2, alt: "Heizungsinstallateur schließt Heizkörper an" },
-    { src: heizungssanierungNlp3, alt: "Moderne Heizungsanlage - Brennwertkessel installiert" },
+    { src: heizungssanierungNlp1, alt: "Wärmepumpe Installation München - Techniker montiert energieeffiziente Heizung" },
+    { src: heizungssanierungNlp2, alt: "Heizung erneuern München - Fachgerechter Heizkörper-Anschluss" },
+    { src: heizungssanierungNlp3, alt: "Brennwertheizung München - Moderne Gas-Brennwerttherme installiert" },
   ],
   "energetische-sanierung": [
-    { src: energetischeSanierungNlp1, alt: "Handwerker montieren Fassadendämmung" },
-    { src: energetischeSanierungNlp2, alt: "Installation energieeffizienter Fenster" },
-    { src: energetischeSanierungNlp3, alt: "Energetisch saniertes Haus - Endergebnis" },
+    { src: energetischeSanierungNlp1, alt: "Fassadendämmung München - WDVS Dämmung für Altbau" },
+    { src: energetischeSanierungNlp2, alt: "Fenster austauschen München - Dreifachverglasung Installation" },
+    { src: energetischeSanierungNlp3, alt: "KfW-Effizienzhaus München - Energetisch saniertes Einfamilienhaus" },
   ],
   dachsanierung: [
-    { src: dachsanierungNlp1, alt: "Dachdecker verlegt neue Dachziegel" },
-    { src: dachsanierungNlp2, alt: "Installation der Dachdämmung" },
-    { src: dachsanierungNlp3, alt: "Fertig saniertes Dach mit neuen Ziegeln" },
+    { src: dachsanierungNlp1, alt: "Dachsanierung München - Dachdecker verlegt neue Tonziegel" },
+    { src: dachsanierungNlp2, alt: "Dachdämmung München - Zwischensparrendämmung Installation" },
+    { src: dachsanierungNlp3, alt: "Neues Dach München - Fertig saniertes Steildach mit Gauben" },
   ],
 };
 

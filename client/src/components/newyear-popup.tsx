@@ -120,8 +120,9 @@ export default function NewYearPopup() {
         </button>
         <img 
           src={fireworksBackground} 
-          alt="Neujahrsgrüße" 
+          alt="Neujahrsangebot 089-Sanierer München - Sanierung zum Festpreis 2026" 
           className="w-full h-auto"
+          loading="lazy"
         />
         
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />
