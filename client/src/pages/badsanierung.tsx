@@ -29,7 +29,7 @@ import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.web
 const badHeroContent: HeroContent = {
   backgroundImage: bathroomImg,
   badge: "Über 120 realisierte Traumbäder in München",
-  titleLine1: "Wir kuratieren Ihr Wellness-Refugium.",
+  titleLine1: "Badsanierung München – Ihr Wellness-Refugium.",
   titleLine2: "Fertig in 2-3 Wochen.",
   descriptions: ["Ihr persönlicher Bauleiter koordiniert alle Gewerke.", "Bodengleiche Dusche, LED-Ambiente, Premium-Armaturen."],
   strongText: "Volle Festpreisgarantie ab 9.200€.",

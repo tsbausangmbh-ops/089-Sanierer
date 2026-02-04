@@ -21,7 +21,7 @@ import contactHeroImage from "@assets/generated_images/customer_service_contact.
 const kontaktHeroContent: HeroContent = {
   backgroundImage: contactHeroImage,
   badge: "Ihr direkter Draht zum Projekt-Kurator",
-  titleLine1: "Sprechen Sie mit uns.",
+  titleLine1: "Sanierung München – Kontakt.",
   titleLine2: "Persönlich. Unverbindlich.",
   descriptions: ["Telefon: 089 444438872.", "E-Mail: info@089-sanierer.de."],
   strongText: "Persönliche Antwort innerhalb 24h.",

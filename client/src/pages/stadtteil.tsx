@@ -436,7 +436,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
   const stadtteilHeroContent: HeroContent = {
     backgroundImage: stadtteilImg,
     badge: `Ihr exklusiver Projekt-Kurator in ${data.name}`,
-    titleLine1: `Wir kuratieren Ihre Sanierung in ${data.name}.`,
+    titleLine1: `Sanierung ${data.name} München.`,
     titleLine2: "Lokale Expertise. Meisterqualität.",
     descriptions: [`Ihr persönlicher Bauleiter kennt ${data.name} und seine Bausubstanz.`, "Zertifizierte Meisterbetriebe aus der Region."],
     strongText: "Volle Festpreisgarantie ohne Nachforderungen.",

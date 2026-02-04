@@ -182,7 +182,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   "energetische-sanierung": {
     backgroundImage: energetischeSanierungHeroImage,
     badge: "Exklusive Energieberatung für Ihre Immobilie",
-    titleLine1: "Energetische Sanierung.",
+    titleLine1: "Energetische Sanierung München.",
     titleLine2: "Bis zu 50% Heizkosten sparen.",
     descriptions: ["Dämmung, Fenster, Heizung – ganzheitliches Konzept.", "Inklusive iSFP und Förderberatung durch Experten."],
     strongText: "Bis zu 45% Förderung – garantiert beantragt.",

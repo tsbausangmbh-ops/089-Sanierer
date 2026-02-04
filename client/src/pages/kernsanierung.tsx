@@ -31,7 +31,7 @@ import kernImg from "@assets/generated_images/house_old_vs_new_clear_split.webp"
 const kernHeroContent: HeroContent = {
   backgroundImage: kernImg,
   badge: "Über 20 exklusive Kernsanierungen realisiert",
-  titleLine1: "Wir transformieren Substanz in Exzellenz.",
+  titleLine1: "Kernsanierung München – Substanz zu Exzellenz.",
   titleLine2: "Neubau-Qualität. Altbau-Charme.",
   descriptions: ["Ihr persönlicher Projekt-Kurator übernimmt die komplette Verantwortung.", "Modernste Haustechnik, zertifizierte Meisterbetriebe."],
   strongText: "Volle Festpreisgarantie ab 1.200€/m².",

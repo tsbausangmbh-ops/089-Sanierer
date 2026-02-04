@@ -37,7 +37,7 @@ import rechnerImg from "@assets/generated_images/expert_renovation_advisor.webp"
 const rechnerHeroContent: HeroContent = {
   backgroundImage: rechnerImg,
   badge: "Exklusiver Investitions-Kalkulator",
-  titleLine1: "Was investieren Sie in Ihre Immobilie?",
+  titleLine1: "Sanierungskosten Rechner München.",
   titleLine2: "Transparente Kalkulation in Sekunden.",
   descriptions: ["Wohnung, Haus oder Förderung.", "Detailliertes Leistungsverzeichnis."],
   strongText: "Münchner Marktpreise 2026 – garantiert.",

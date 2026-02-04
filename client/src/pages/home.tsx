@@ -24,7 +24,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 const homeHeroContent: HeroContent = {
   backgroundImage: heroImage,
   badge: "Über 150 erfolgreich realisierte Projekte in München",
-  titleLine1: "Ihr persönlicher Projekt-Kurator.",
+  titleLine1: "Sanierung München – Ihr Projekt-Kurator.",
   titleLine2: "Bis zu 22 Gewerke. Ein Ansprechpartner.",
   descriptions: ["Professionelle Komplettsanierung aus einer Hand.", "Sie entspannen – wir koordinieren."],
   strongText: "Volle Festpreisgarantie ohne versteckte Nachforderungen.",
