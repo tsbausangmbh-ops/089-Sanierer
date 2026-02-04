@@ -61,11 +61,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/kosten") {
     return {
       title: "Sanierung München Kosten 2026 | Festpreise | 089-Sanierer",
-      description: "Sanierung München Kosten 2026: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Jetzt kostenlos beraten lassen.",
+      description: "Die Kosten für Sanierungsarbeiten variieren je nach Zustand der Immobilie, Umfang der Maßnahmen und Ausstattungswünschen. Zur ersten Orientierung gelten folgende Richtwerte.",
       keywords: "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München, Sanierung Kosten 2026",
       canonical: `${BASE_URL}/kosten`,
       ogTitle: "Sanierung München Kosten 2026 - Transparente Festpreise",
-      ogDescription: "Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Alle Preise mit Festpreisgarantie.",
+      ogDescription: "Die Kosten für Sanierungsarbeiten variieren je nach Zustand, Umfang und Ausstattungswünschen. Richtwerte und Festpreise.",
     };
   }
 
