@@ -459,7 +459,31 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
     {
       frage: `Kommen Sie auch für kleinere Projekte nach ${data.name}?`,
       antwort: `Ja, wir übernehmen auch einzelne Gewerke wie Badsanierungen oder Bodensanierungen in ${data.name}. Ab einem Auftragsvolumen von 5.000€ sind wir Ihr Partner.`
+    },
+    {
+      frage: `Was kostet eine Komplettsanierung in ${data.name}?`,
+      antwort: `Die Kosten für eine Komplettsanierung in ${data.name} beginnen bei ca. 920€ pro Quadratmeter. Je nach Ausstattung und Zustand können die Kosten variieren. Wir erstellen Ihnen ein individuelles Festpreisangebot.`
+    },
+    {
+      frage: `Arbeiten Sie mit lokalen Handwerkern in ${data.name}?`,
+      antwort: `Ja, wir setzen auf zertifizierte Meisterbetriebe aus München und Umgebung. Kurze Anfahrtswege bedeuten schnelle Reaktionszeiten und persönliche Betreuung vor Ort in ${data.name}.`
+    },
+    {
+      frage: `Bieten Sie auch energetische Sanierung in ${data.name} an?`,
+      antwort: `Ja, wir beraten Sie umfassend zu energetischen Maßnahmen wie Dämmung, Fensteraustausch und Heizungserneuerung. Wir unterstützen Sie auch bei der Beantragung von Fördermitteln.`
     }
+  ];
+
+  const nahegelegeneStadtteile = Object.entries(stadtteile)
+    .filter(([key]) => key !== stadtteil)
+    .slice(0, 6)
+    .map(([key, val]) => ({ slug: key, name: val.name }));
+
+  const ablaufSchritte = [
+    { schritt: "1", titel: "Kostenlose Erstberatung", beschreibung: "Wir besichtigen Ihr Objekt in " + data.name + " und besprechen Ihre Wünsche." },
+    { schritt: "2", titel: "Detailliertes Festpreisangebot", beschreibung: "Sie erhalten ein transparentes Angebot mit allen Leistungen und Kosten." },
+    { schritt: "3", titel: "Professionelle Umsetzung", beschreibung: "Unsere Meisterbetriebe führen die Sanierung termingerecht durch." },
+    { schritt: "4", titel: "Qualitätskontrolle & Übergabe", beschreibung: "Nach Abnahme erhalten Sie 5 Jahre Gewährleistung auf alle Arbeiten." }
   ];
 
   return (
@@ -571,11 +595,58 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              Unser Ablauf in {data.name}
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {ablaufSchritte.map((item) => (
+                <div key={item.schritt} className="text-center p-4">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    {item.schritt}
+                  </div>
+                  <h3 className="font-semibold mb-2">{item.titel}</h3>
+                  <p className="text-muted-foreground text-sm">{item.beschreibung}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+              Sanierung in {data.name} – Ihr lokaler Experte
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="mb-4">
+                Als erfahrener Sanierungsbetrieb kennen wir {data.name} und die besonderen Anforderungen der lokalen Bausubstanz. 
+                {data.beschreibung} Ob Renovierung, Modernisierung oder Kernsanierung – wir koordinieren alle Gewerke und 
+                sorgen für eine reibungslose Umsetzung Ihres Projekts.
+              </p>
+              <p className="mb-4">
+                Unsere Leistungen in {data.name} umfassen Badsanierung, Küchensanierung, Bodensanierung, Elektrosanierung 
+                sowie energetische Maßnahmen wie Dämmung und Heizungserneuerung. Als Generalunternehmer übernehmen wir die 
+                komplette Projektsteuerung – von der Planung bis zur Schlüsselübergabe.
+              </p>
+              <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">Warum 089-Sanierer in {data.name}?</h3>
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li>Lokale Expertise: Wir kennen die Bauvorschriften und Genehmigungsverfahren in München</li>
+                <li>Festpreisgarantie: Keine versteckten Kosten, keine Nachforderungen</li>
+                <li>Meisterbetriebe: Alle Arbeiten werden von zertifizierten Fachbetrieben ausgeführt</li>
+                <li>Persönlicher Bauleiter: Ein Ansprechpartner für Ihr gesamtes Projekt</li>
+                <li>5 Jahre Gewährleistung: Langfristige Sicherheit für Ihre Investition</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
               <HelpCircle className="w-8 h-8 text-primary" />
-              Häufige Fragen
+              Häufige Fragen zur Sanierung in {data.name}
             </h2>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
@@ -589,6 +660,83 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+              Unsere Leistungen im Detail
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Wohnungssanierung</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Komplette Wohnungssanierung in {data.name} ab 800€/m². Wir renovieren Ihre Wohnung vom Boden bis zur Decke – 
+                  inklusive Elektrik, Sanitär und Malerarbeiten.
+                </p>
+                <Link href="/wohnungssanierung" className="text-primary hover:underline text-sm">
+                  Mehr zur Wohnungssanierung →
+                </Link>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Badsanierung</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Moderne Badsanierung in {data.name} ab 9.200€. Neue Fliesen, Sanitärobjekte und Armaturen – 
+                  wir gestalten Ihr Traumbad.
+                </p>
+                <Link href="/badsanierung" className="text-primary hover:underline text-sm">
+                  Mehr zur Badsanierung →
+                </Link>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Kernsanierung</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Kernsanierung für Altbauten in {data.name}. Wir erneuern Elektrik, Sanitär, Heizung und Böden – 
+                  für ein rundum modernisiertes Zuhause.
+                </p>
+                <Link href="/kernsanierung" className="text-primary hover:underline text-sm">
+                  Mehr zur Kernsanierung →
+                </Link>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Energetische Sanierung</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Senken Sie Ihre Energiekosten durch Dämmung, neue Fenster und moderne Heizungstechnik. 
+                  Wir beraten Sie zu Fördermöglichkeiten.
+                </p>
+                <Link href="/energetische-sanierung" className="text-primary hover:underline text-sm">
+                  Mehr zur energetischen Sanierung →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+              Weitere Stadtteile in München
+            </h2>
+            <p className="text-center text-muted-foreground mb-6">
+              Wir sind in ganz München für Sie im Einsatz. Entdecken Sie unsere Leistungen in weiteren Stadtteilen:
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {nahegelegeneStadtteile.map((st) => (
+                <Link 
+                  key={st.slug} 
+                  href={`/muenchen-${st.slug}`}
+                  className="p-3 bg-accent/50 rounded-lg text-center hover:bg-accent transition-colors"
+                >
+                  <span className="text-sm font-medium">Sanierung {st.name}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-6">
+              <Link href="/kosten" className="text-primary hover:underline">
+                Alle Preise und Kosten ansehen →
+              </Link>
+            </div>
           </div>
         </section>
 
