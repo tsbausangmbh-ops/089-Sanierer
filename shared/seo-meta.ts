@@ -116,11 +116,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/elektrosanierung") {
     return {
       title: "Wohnungsrenovierung München ✓ Elektrosanierung & Ausbau",
-      description: "Elektrosanierung in München vom erfahrenen Fachbetrieb. Sichere Elektroinstallation, Leitungserneuerung und moderne Ausstattung.",
+      description: "Professionelle Wohnungsrenovierung in München inklusive Elektrosanierung. Erneuerung von Leitungen, Verteilungen und Anschlüssen – fachgerecht und sicher umgesetzt.",
       keywords: "Elektrosanierung München, Elektroinstallation München, Elektrik sanieren München, Leitungen erneuern München",
       canonical: `${BASE_URL}/elektrosanierung`,
       ogTitle: "Wohnungsrenovierung München ✓ Elektrosanierung & Ausbau",
-      ogDescription: "Elektrosanierung in München vom erfahrenen Fachbetrieb. Sichere Elektroinstallation und moderne Ausstattung.",
+      ogDescription: "Professionelle Wohnungsrenovierung in München inklusive Elektrosanierung. Erneuerung von Leitungen, Verteilungen und Anschlüssen.",
     };
   }
 
