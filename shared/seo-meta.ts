@@ -102,6 +102,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/bodensanierung") {
+    return {
+      title: "Wohnungssanierung in München | Böden, Bad & Komplettsanierung",
+      description: "Professionelle Bodensanierung in München. Parkett, Fliesen und Estrich vom erfahrenen Sanierungsbetrieb. Hochwertige Ausführung zum Festpreis.",
+      keywords: "Bodensanierung München, Boden sanieren München, Parkett verlegen München, Fliesen sanieren München",
+      canonical: `${BASE_URL}/bodensanierung`,
+      ogTitle: "Wohnungssanierung in München | Böden, Bad & Komplettsanierung",
+      ogDescription: "Professionelle Bodensanierung in München. Parkett, Fliesen und Estrich vom erfahrenen Sanierungsbetrieb.",
+    };
+  }
+
   if (normalizedPath === "/wohnungssanierung") {
     return {
       title: "Wohnungssanierung München ab 800 €/m² ✓ Komplettsanierung vom Profi",
