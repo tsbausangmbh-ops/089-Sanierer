@@ -113,6 +113,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/elektrosanierung") {
+    return {
+      title: "Wohnungsrenovierung München ✓ Elektrosanierung & Ausbau",
+      description: "Elektrosanierung in München vom erfahrenen Fachbetrieb. Sichere Elektroinstallation, Leitungserneuerung und moderne Ausstattung.",
+      keywords: "Elektrosanierung München, Elektroinstallation München, Elektrik sanieren München, Leitungen erneuern München",
+      canonical: `${BASE_URL}/elektrosanierung`,
+      ogTitle: "Wohnungsrenovierung München ✓ Elektrosanierung & Ausbau",
+      ogDescription: "Elektrosanierung in München vom erfahrenen Fachbetrieb. Sichere Elektroinstallation und moderne Ausstattung.",
+    };
+  }
+
   if (normalizedPath === "/wohnungssanierung") {
     return {
       title: "Wohnungssanierung München ab 800 €/m² ✓ Komplettsanierung vom Profi",
