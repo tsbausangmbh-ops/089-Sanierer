@@ -138,11 +138,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/heizungssanierung") {
     return {
       title: "Haussanierung München | Heizungssanierung mit Wärmepumpe",
-      description: "Heizungssanierung in München vom erfahrenen Fachbetrieb. Wärmepumpe, moderne Heizsysteme und energetische Optimierung.",
+      description: "Professionelle Haussanierung in München inklusive Heizungssanierung mit Wärmepumpe. Energieeffiziente Lösungen, Förderberatung und fachgerechte Umsetzung aus einer Hand.",
       keywords: "Heizungssanierung München, Heizung erneuern München, Wärmepumpe München, Heizungsmodernisierung München",
       canonical: `${BASE_URL}/heizungssanierung`,
       ogTitle: "Haussanierung München | Heizungssanierung mit Wärmepumpe",
-      ogDescription: "Heizungssanierung in München vom erfahrenen Fachbetrieb. Wärmepumpe, moderne Heizsysteme und energetische Optimierung.",
+      ogDescription: "Professionelle Haussanierung in München inklusive Heizungssanierung mit Wärmepumpe. Energieeffiziente Lösungen und Förderberatung.",
     };
   }
 
