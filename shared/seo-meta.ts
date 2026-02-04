@@ -113,6 +113,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/energetische-sanierung") {
+    return {
+      title: "Energetische Sanierung München | Effizienz, Förderung & Fachbetrieb",
+      description: "Energetische Sanierung in München vom Fachbetrieb. Dämmung, Heizung, Fenster - alles aus einer Hand. Förderberatung inklusive. Jetzt beraten lassen.",
+      keywords: "Energetische Sanierung München, energetisch sanieren München, Wärmedämmung München, Heizungssanierung München, KfW Förderung Sanierung",
+      canonical: `${BASE_URL}/energetische-sanierung`,
+      ogTitle: "Energetische Sanierung München | Effizienz, Förderung & Fachbetrieb",
+      ogDescription: "Energetische Sanierung in München vom Fachbetrieb. Dämmung, Heizung, Fenster - alles aus einer Hand. Förderberatung inklusive.",
+    };
+  }
+
   if (normalizedPath === "/rechner") {
     return {
       title: "Sanierungsrechner München | Kosten berechnen | 089-Sanierer",
