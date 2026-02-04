@@ -5,7 +5,6 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
-import prerender from "prerender-node";
 
 const app = express();
 
@@ -26,58 +25,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// SEO: Built-in crawler middleware (primary - always works)
+// SEO: Built-in crawler middleware for all search engines and AI bots
+// Serves pre-rendered static HTML to crawlers without external dependencies
 app.use(crawlerMiddleware);
-
-// Prerender.io for SEO - production only (requires external service)
-if (process.env.PRERENDER_TOKEN && process.env.NODE_ENV === 'production') {
-  app.use(
-    prerender
-      .set('prerenderToken', process.env.PRERENDER_TOKEN)
-      .set('protocol', 'https')
-      .set('crawlerUserAgents', [
-        'googlebot',
-        'bingbot',
-        'yandex',
-        'baiduspider',
-        'facebookexternalhit',
-        'twitterbot',
-        'rogerbot',
-        'linkedinbot',
-        'embedly',
-        'quora link preview',
-        'showyoubot',
-        'outbrain',
-        'pinterest/0.',
-        'developers.google.com/+/web/snippet',
-        'slackbot',
-        'vkShare',
-        'W3C_Validator',
-        'redditbot',
-        'Applebot',
-        'WhatsApp',
-        'flipboard',
-        'tumblr',
-        'bitlybot',
-        'SkypeUriPreview',
-        'nuzzel',
-        'Discordbot',
-        'Google Page Speed',
-        'Qwantify',
-        'pinterestbot',
-        'Bitrix link preview',
-        'XING-contenttabreceiver',
-        'Chrome-Lighthouse',
-        'TelegramBot',
-        'SeznamBot',
-        'GPTBot',
-        'ChatGPT-User',
-        'Claude-Web',
-        'PerplexityBot',
-        'Anthropic-AI'
-      ])
-  );
-}
 const httpServer = createServer(app);
 
 declare module "http" {
