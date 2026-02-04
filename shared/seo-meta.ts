@@ -124,6 +124,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/dachsanierung") {
+    return {
+      title: "Haussanierung München ✓ Dachsanierung & energetische Maßnahmen",
+      description: "Professionelle Dachsanierung in München. Dacherneuerung, Dämmung und energetische Maßnahmen vom erfahrenen Fachbetrieb.",
+      keywords: "Dachsanierung München, Dach sanieren München, Dachdämmung München, Dach erneuern München",
+      canonical: `${BASE_URL}/dachsanierung`,
+      ogTitle: "Haussanierung München ✓ Dachsanierung & energetische Maßnahmen",
+      ogDescription: "Professionelle Dachsanierung in München. Dacherneuerung, Dämmung und energetische Maßnahmen vom erfahrenen Fachbetrieb.",
+    };
+  }
+
   if (normalizedPath === "/wohnungssanierung") {
     return {
       title: "Wohnungssanierung München ab 800 €/m² ✓ Komplettsanierung vom Profi",
