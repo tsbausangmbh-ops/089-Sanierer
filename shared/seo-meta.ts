@@ -179,6 +179,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/faq-sanierung") {
+    return {
+      title: "FAQ Sanierung | Häufige Fragen zu Bad, Wohnung & Energie",
+      description: "Antworten auf häufige Fragen zur Sanierung: Badsanierung, Wohnungssanierung, energetische Modernisierung. Praxiswissen vom erfahrenen Sanierungsbetrieb.",
+      keywords: "FAQ Sanierung, Badsanierung FAQ, Wohnungssanierung Fragen, energetische Sanierung FAQ",
+      canonical: `${BASE_URL}/faq-sanierung`,
+      ogTitle: "FAQ Sanierung | Häufige Fragen zu Bad, Wohnung & Energie",
+      ogDescription: "Antworten auf häufige Fragen zur Sanierung: Badsanierung, Wohnungssanierung, energetische Modernisierung.",
+    };
+  }
+
   if (normalizedPath === "/faq-preise") {
     return {
       title: "FAQ & Preise | Sanierung München | 089-Sanierer",
