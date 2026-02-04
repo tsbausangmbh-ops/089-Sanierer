@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import kshwLogo from "@assets/089-Sanierer_Logo_1770201006020.png";
+import kshwLogo from "@assets/089-Sanierer_Logo.webp";
 
 const allServices = [
   { id: "komplettsanierung", title: "Komplettsanierung", icon: Home },
