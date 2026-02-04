@@ -127,11 +127,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/rechner") {
     return {
       title: "Sanierungskosten Rechner München | Online Kostenschätzung",
-      description: "Berechnen Sie die Kosten für Ihre Wohnungs- oder Haussanierung in München. Online-Rechner für Komplettsanierung, Badsanierung, Elektro und mehr. Unverbindlich.",
+      description: "Online-Kostenrechner für Sanierungen. Schnell, unverbindlich und als erste Orientierung für Ihre Planung. Jetzt Kosten einschätzen.",
       keywords: "Sanierungsrechner München, Sanierung Kosten Rechner, Badsanierung Rechner, Renovierungskosten berechnen München, Online Kostenschätzung",
       canonical: `${BASE_URL}/rechner`,
       ogTitle: "Sanierungskosten Rechner München | Online Kostenschätzung",
-      ogDescription: "Berechnen Sie jetzt die ungefähren Kosten für Ihre Sanierung in München. Schnell und unverbindlich.",
+      ogDescription: "Online-Kostenrechner für Sanierungen. Schnell, unverbindlich und als erste Orientierung für Ihre Planung.",
     };
   }
 
