@@ -72,11 +72,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/komplettsanierung") {
     return {
       title: "Komplettsanierung München ✓ Wohnung & Haus vom Fachbetrieb",
-      description: "Komplettsanierung in München für Wohnung und Haus. Professionelle Ausführung durch erfahrenen Fachbetrieb. Festpreisgarantie und 5 Jahre Gewährleistung.",
+      description: "Professionelle Komplettsanierung in München. Koordination aller Gewerke, klare Abläufe und hochwertige Ausführung – vom Konzept bis zur Fertigstellung.",
       keywords: "Komplettsanierung München, Wohnung komplett sanieren, Haus sanieren München, Komplettrenovierung München",
       canonical: `${BASE_URL}/komplettsanierung`,
       ogTitle: "Komplettsanierung München ✓ Wohnung & Haus vom Fachbetrieb",
-      ogDescription: "Komplettsanierung in München für Wohnung und Haus. Professionelle Ausführung durch erfahrenen Fachbetrieb.",
+      ogDescription: "Professionelle Komplettsanierung in München. Koordination aller Gewerke, klare Abläufe und hochwertige Ausführung.",
     };
   }
 
