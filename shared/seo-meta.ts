@@ -168,6 +168,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/ratgeber") {
+    return {
+      title: "Ratgeber zur Sanierung | Energie, Badsanierung & Modernisierung",
+      description: "Umfassender Ratgeber zu Sanierung in München. Tipps zu Badsanierung, energetischer Modernisierung und Renovierung. Expertenrat von 089-Sanierer.",
+      keywords: "Sanierung Ratgeber, Badsanierung Tipps, Renovierung Ratgeber München, Modernisierung Tipps",
+      canonical: `${BASE_URL}/ratgeber`,
+      ogTitle: "Ratgeber zur Sanierung | Energie, Badsanierung & Modernisierung",
+      ogDescription: "Umfassender Ratgeber zu Sanierung in München. Tipps zu Badsanierung, energetischer Modernisierung und Renovierung.",
+    };
+  }
+
   if (normalizedPath === "/faq-preise") {
     return {
       title: "FAQ & Preise | Sanierung München | 089-Sanierer",
