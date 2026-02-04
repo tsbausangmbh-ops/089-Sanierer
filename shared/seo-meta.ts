@@ -91,6 +91,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/kuechensanierung") {
+    return {
+      title: "Küchensanierung München ✓ Funktional, modern & hochwertig",
+      description: "Ihre Küchensanierung in München vom erfahrenen Sanierungsbetrieb. Modernisieren Sie Ihre Küche effizient und hochwertig.",
+      keywords: "Küchensanierung München, Küche sanieren München, Küche renovieren München, Küchenrenovierung München",
+      canonical: `${BASE_URL}/kuechensanierung`,
+      ogTitle: "Küchensanierung München ✓ Funktional, modern & hochwertig",
+      ogDescription: "Ihre Küchensanierung in München vom erfahrenen Sanierungsbetrieb. Modernisieren Sie Ihre Küche effizient und hochwertig.",
+    };
+  }
+
   if (normalizedPath === "/wohnungssanierung") {
     return {
       title: "Wohnungssanierung München ab 800 €/m² ✓ Komplettsanierung vom Profi",
