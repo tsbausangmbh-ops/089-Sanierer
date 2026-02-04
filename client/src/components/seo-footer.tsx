@@ -45,6 +45,7 @@ const legalLinks = [
   { href: "/datenschutz", title: "Datenschutz" },
   { href: "/agb", title: "AGB" },
   { href: "/cookies", title: "Cookie-Richtlinie" },
+  { href: "/barrierefreiheit", title: "Barrierefreiheit" },
 ];
 
 const muenchnerStadtteile = [

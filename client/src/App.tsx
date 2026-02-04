@@ -34,6 +34,7 @@ const Kernsanierung = lazy(() => import("@/pages/kernsanierung"));
 const StadtteilPage = lazy(() => import("@/pages/stadtteil"));
 const Rechner = lazy(() => import("@/pages/rechner"));
 const NotFound = lazy(() => import("@/pages/404"));
+const Barrierefreiheit = lazy(() => import("@/pages/barrierefreiheit"));
 
 declare global {
   interface Window {
@@ -89,6 +90,7 @@ function Router() {
         <Route path="/gewerke" component={GewerkeFunnel} />
         <Route path="/faq-preise" component={FaqPreise} />
         <Route path="/cookies" component={Cookies} />
+        <Route path="/barrierefreiheit" component={Barrierefreiheit} />
         <Route path="/termin" component={Termin} />
         <Route path="/kosten" component={Kosten} />
         <Route path="/badsanierung" component={Badsanierung} />

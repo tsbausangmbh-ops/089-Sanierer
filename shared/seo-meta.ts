@@ -113,6 +113,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/barrierefreiheit") {
+    return {
+      title: "Barrierefreiheit | Erklärung zur Zugänglichkeit | 089-Sanierer",
+      description: "Erklärung zur Barrierefreiheit von 089-Sanierer.de. Informationen zu WCAG 2.1, BITV 2.0 Konformität und Zugänglichkeitsmaßnahmen unserer Website.",
+      keywords: "Barrierefreiheit, Accessibility, WCAG, BITV, Zugänglichkeit, 089-Sanierer",
+      canonical: `${BASE_URL}/barrierefreiheit`,
+      ogTitle: "Erklärung zur Barrierefreiheit | 089-Sanierer",
+      ogDescription: "Informationen zur Barrierefreiheit und Zugänglichkeit unserer Website gemäß WCAG 2.1 und BITV 2.0.",
+    };
+  }
+
   if (normalizedPath === "/elektrosanierung") {
     return {
       title: "Wohnungsrenovierung München ✓ Elektrosanierung & Ausbau",

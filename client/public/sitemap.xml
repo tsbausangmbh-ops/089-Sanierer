@@ -225,6 +225,13 @@
     <priority>0.3</priority>
   </url>
   
+  <url>
+    <loc>https://089-sanierer.de/barrierefreiheit</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
   <!-- München Stadtteile (32 Seiten) -->
   <url>
     <loc>https://089-sanierer.de/muenchen-schwabing</loc>
