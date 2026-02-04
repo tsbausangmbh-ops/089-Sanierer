@@ -82,11 +82,11 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/wohnungssanierung") {
     return {
-      title: "Wohnungssanierung München ab 800€/m² | 089-Sanierer",
+      title: "Wohnungssanierung München ab 800 €/m² ✓ Komplettsanierung vom Profi",
       description: "Wohnungssanierung München zum Festpreis ab 800€/m². Komplettsanierung aus einer Hand. 268+ zufriedene Kunden, 5 Jahre Gewährleistung.",
       keywords: "Wohnungssanierung München, Wohnung sanieren München, Wohnung renovieren München, Altbauwohnung sanieren München",
       canonical: `${BASE_URL}/wohnungssanierung`,
-      ogTitle: "Wohnungssanierung München - ab 800€/m²",
+      ogTitle: "Wohnungssanierung München ab 800 €/m² ✓ Komplettsanierung vom Profi",
       ogDescription: "Komplette Wohnungssanierung in München mit Festpreisgarantie. 268+ zufriedene Kunden.",
     };
   }
