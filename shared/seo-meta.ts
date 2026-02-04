@@ -127,11 +127,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/dachsanierung") {
     return {
       title: "Haussanierung München ✓ Dachsanierung & energetische Maßnahmen",
-      description: "Professionelle Dachsanierung in München. Dacherneuerung, Dämmung und energetische Maßnahmen vom erfahrenen Fachbetrieb.",
+      description: "Professionelle Haussanierung in München inklusive Dachsanierung. Erneuerung, Instandsetzung und energetische Optimierung – strukturiert aus einer Hand.",
       keywords: "Dachsanierung München, Dach sanieren München, Dachdämmung München, Dach erneuern München",
       canonical: `${BASE_URL}/dachsanierung`,
       ogTitle: "Haussanierung München ✓ Dachsanierung & energetische Maßnahmen",
-      ogDescription: "Professionelle Dachsanierung in München. Dacherneuerung, Dämmung und energetische Maßnahmen vom erfahrenen Fachbetrieb.",
+      ogDescription: "Professionelle Haussanierung in München inklusive Dachsanierung. Erneuerung, Instandsetzung und energetische Optimierung.",
     };
   }
 
