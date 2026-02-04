@@ -69,6 +69,17 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
+  if (normalizedPath === "/komplettsanierung") {
+    return {
+      title: "Komplettsanierung München ✓ Wohnung & Haus vom Fachbetrieb",
+      description: "Komplettsanierung in München für Wohnung und Haus. Professionelle Ausführung durch erfahrenen Fachbetrieb. Festpreisgarantie und 5 Jahre Gewährleistung.",
+      keywords: "Komplettsanierung München, Wohnung komplett sanieren, Haus sanieren München, Komplettrenovierung München",
+      canonical: `${BASE_URL}/komplettsanierung`,
+      ogTitle: "Komplettsanierung München ✓ Wohnung & Haus vom Fachbetrieb",
+      ogDescription: "Komplettsanierung in München für Wohnung und Haus. Professionelle Ausführung durch erfahrenen Fachbetrieb.",
+    };
+  }
+
   if (normalizedPath === "/badsanierung") {
     return {
       title: "Badsanierung München ✓ Modernes Bad aus einer Hand | 089-Sanierer",
