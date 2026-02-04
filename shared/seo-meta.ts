@@ -72,11 +72,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/badsanierung") {
     return {
       title: "Badsanierung München ✓ Modernes Bad aus einer Hand | 089-Sanierer",
-      description: "Badsanierung München: Komplett-Badsanierung ab 9.200€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.",
+      description: "Ihre Badsanierung in München vom erfahrenen Sanierungsbetrieb. Individuelle Planung, saubere Ausführung und persönliche Betreuung. Jetzt beraten lassen.",
       keywords: "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München",
       canonical: `${BASE_URL}/badsanierung`,
       ogTitle: "Badsanierung München ✓ Modernes Bad aus einer Hand | 089-Sanierer",
-      ogDescription: "Komplett-Badsanierung in München mit Festpreisgarantie. Fliesen, Sanitär, Elektro - alles aus einer Hand.",
+      ogDescription: "Ihre Badsanierung in München vom erfahrenen Sanierungsbetrieb. Individuelle Planung, saubere Ausführung und persönliche Betreuung. Jetzt beraten lassen.",
     };
   }
 
