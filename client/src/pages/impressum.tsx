@@ -209,6 +209,21 @@ export default function Impressum() {
               </p>
             </section>
 
+            <section>
+              <h2 className="text-xl font-bold mb-4">Hinweis zum Vertragsabschluss</h2>
+              <p className="text-muted-foreground">
+                Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar.
+                Ein Vertragsabschluss über diese Website findet nicht statt.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                Anfragen über Kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung.
+                Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.
+              </p>
+            </section>
+
             <section className="border-t pt-8 mt-8">
               <p className="text-sm text-muted-foreground">
                 <strong>Stand:</strong> Januar 2026 – Impressum gemäß § 5 DDG und aktuellen Anforderungen für Handwerksbetriebe.

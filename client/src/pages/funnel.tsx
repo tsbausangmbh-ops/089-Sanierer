@@ -2710,6 +2710,9 @@ export default function FunnelPage() {
                       </Button>
                     )}
                   </div>
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    Hinweis zum Vertragsabschluss: Anfragen über Kontaktformulare dienen ausschließlich der unverbindlichen Kontaktaufnahme. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande.
+                  </p>
                 </div>
               </CardContent>
             </Card>
