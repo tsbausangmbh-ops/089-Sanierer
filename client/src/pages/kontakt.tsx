@@ -201,7 +201,7 @@ export default function Kontakt() {
                       <Button 
                         type="submit" 
                         size="lg"
-                        className="w-full min-h-12 bg-orange-500 hover:bg-orange-600 text-white border-orange-500"
+                        className="w-full min-h-12 bg-orange-500 hover:bg-orange-600 text-white border-orange-500 text-xs sm:text-sm"
                         disabled={mutation.isPending}
                         data-testid="button-contact-submit"
                       >
@@ -281,13 +281,13 @@ export default function Kontakt() {
                   </p>
                   <div className="space-y-4">
                     <Link href="/termin">
-                      <Button size="lg" className="w-full min-h-12 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-contact-booking">
+                      <Button size="lg" className="w-full min-h-12 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 text-xs sm:text-sm" data-testid="button-contact-booking">
                         <Calendar className="w-4 h-4 mr-2" />
                         24 Std. Online Termin
                       </Button>
                     </Link>
                     <Link href="/anfrage" className="block mt-4">
-                      <Button size="lg" className="w-full min-h-12" data-testid="button-contact-funnel">
+                      <Button size="lg" className="w-full min-h-12 text-xs sm:text-sm" data-testid="button-contact-funnel">
                         Zur Projektanfrage
                       </Button>
                     </Link>

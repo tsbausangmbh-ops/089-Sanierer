@@ -63,7 +63,7 @@ export default function Ratgeber() {
                     download
                     data-testid="button-download-ratgeber-pdf"
                   >
-                    <Button size="lg" className="gap-2">
+                    <Button size="lg" className="gap-2 text-xs sm:text-sm">
                       <Download className="w-5 h-5" />
                       PDF herunterladen
                     </Button>
@@ -984,13 +984,13 @@ export default function Ratgeber() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
                   <Link href="/termin" className="w-full sm:w-auto">
-                    <Button size="lg" className="w-full sm:w-auto min-h-12 gap-2 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-ratgeber-booking">
+                    <Button size="lg" className="w-full sm:w-auto min-h-12 gap-2 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 text-xs sm:text-sm" data-testid="button-ratgeber-booking">
                       <Calendar className="w-5 h-5 flex-shrink-0" />
                       24 Std. Online Termin
                     </Button>
                   </Link>
                   <Link href="/anfrage" className="w-full sm:w-auto">
-                    <Button size="lg" variant="secondary" className="w-full sm:w-auto min-h-12 gap-2" data-testid="button-ratgeber-cta">
+                    <Button size="lg" variant="secondary" className="w-full sm:w-auto min-h-12 gap-2 text-xs sm:text-sm" data-testid="button-ratgeber-cta">
                       Jetzt kostenlos anfragen
                       <ArrowRight className="w-5 h-5 flex-shrink-0" />
                     </Button>

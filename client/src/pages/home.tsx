@@ -414,7 +414,7 @@ function LeadMagnetSection() {
 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold"
+                  className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs sm:text-sm"
                   disabled={isSubmitting}
                   data-testid="button-download-guide"
                 >
@@ -442,7 +442,7 @@ function LeadMagnetSection() {
                   Der Ratgeber ist auf dem Weg zu Ihnen. Prüfen Sie Ihr Postfach.
                 </p>
                 <Link href="/anfrage">
-                  <Button className="bg-primary hover:bg-primary/90" data-testid="button-after-download-cta">
+                  <Button className="bg-primary hover:bg-primary/90 text-xs sm:text-sm" data-testid="button-after-download-cta">
                     Oder: Jetzt kostenlose Beratung anfragen
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -584,7 +584,7 @@ function FunnelForm() {
               <Button
                 onClick={() => setStep(2)}
                 disabled={!selectedService || !postalCode || !city}
-                className="w-full h-12"
+                className="w-full h-12 text-xs sm:text-sm"
                 data-testid="button-funnel-step1"
               >
                 Weiter
@@ -637,7 +637,7 @@ function FunnelForm() {
                 <Button
                   variant="outline"
                   onClick={() => setStep(1)}
-                  className="flex-1 h-12"
+                  className="flex-1 h-12 text-xs sm:text-sm"
                   data-testid="button-funnel-back2"
                 >
                   Zurück
@@ -645,7 +645,7 @@ function FunnelForm() {
                 <Button
                   onClick={() => setStep(3)}
                   disabled={!urgency}
-                  className="flex-1 h-12"
+                  className="flex-1 h-12 text-xs sm:text-sm"
                   data-testid="button-funnel-step2"
                 >
                   Weiter
@@ -728,7 +728,7 @@ function FunnelForm() {
                 <Button
                   variant="outline"
                   onClick={() => setStep(2)}
-                  className="flex-1 h-12"
+                  className="flex-1 h-12 text-xs sm:text-sm"
                   data-testid="button-funnel-back3"
                 >
                   Zurück
@@ -736,7 +736,7 @@ function FunnelForm() {
                 <Button
                   onClick={handleSubmit}
                   disabled={!firstName || !lastName || !contact || !address}
-                  className="flex-1 h-12 bg-orange-500 hover:bg-orange-600"
+                  className="flex-1 h-12 bg-orange-500 hover:bg-orange-600 text-xs sm:text-sm"
                   data-testid="button-funnel-submit"
                 >
                   Kostenlose Beratung sichern
@@ -848,7 +848,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-primary hover:bg-white/90 font-semibold"
+                className="bg-white text-primary hover:bg-white/90 font-semibold text-xs sm:text-sm"
                 data-testid="button-pain-points-cta"
               >
                 Jetzt Lösung anfragen - kostenlos

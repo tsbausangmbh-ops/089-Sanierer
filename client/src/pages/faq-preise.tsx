@@ -445,13 +445,13 @@ export default function FaqPreise() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                     <Link href="/termin" className="w-full sm:w-auto">
-                      <Button size="lg" className="w-full sm:w-auto min-h-12 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
+                      <Button size="lg" className="w-full sm:w-auto min-h-12 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 text-xs sm:text-sm" data-testid="button-cta-booking">
                         <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
                         24 Std. Online Termin
                       </Button>
                     </Link>
                     <Link href="/anfrage" className="w-full sm:w-auto">
-                      <Button size="lg" className="w-full sm:w-auto min-h-12" data-testid="button-cta-angebot">
+                      <Button size="lg" className="w-full sm:w-auto min-h-12 text-xs sm:text-sm" data-testid="button-cta-angebot">
                         Jetzt Angebot anfordern
                         <ChevronRight className="w-5 h-5 ml-2 flex-shrink-0" />
                       </Button>
@@ -521,7 +521,7 @@ export default function FaqPreise() {
                     <p className="text-sm text-muted-foreground">Kein langes Suchen: Wir finden den passenden Handwerker für Sie</p>
                   </div>
                   <Link href="/gewerke" className="w-full sm:w-auto">
-                    <Button size="lg" className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700" data-testid="button-cta-gewerke">
+                    <Button size="lg" className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700 text-xs sm:text-sm" data-testid="button-cta-gewerke">
                       Jetzt Handwerker finden
                       <ChevronRight className="w-5 h-5 ml-2 flex-shrink-0" />
                     </Button>
@@ -589,13 +589,13 @@ export default function FaqPreise() {
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
                 <Link href="/anfrage" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto min-h-12 bg-orange-500 hover:bg-orange-600 text-white" data-testid="button-booking-faq">
+                  <Button size="lg" className="w-full sm:w-auto min-h-12 bg-orange-500 hover:bg-orange-600 text-white text-xs sm:text-sm" data-testid="button-booking-faq">
                     <Handshake className="w-4 h-4 mr-2 flex-shrink-0" />
                     Jetzt Problem lösen lassen
                   </Button>
                 </Link>
                 <a href="tel:+498944438872" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700 text-white" data-testid="button-call-faq">
+                  <Button size="lg" className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700 text-white text-xs sm:text-sm" data-testid="button-call-faq">
                     <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
                     Sofort anrufen
                   </Button>
