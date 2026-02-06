@@ -41,6 +41,8 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
         // @ts-ignore - fetchpriority is valid HTML attribute
         fetchpriority="high"
         aria-hidden="true"
+        width={1200}
+        height={655}
         className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: 'center', contentVisibility: 'auto' }}
       />

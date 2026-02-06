@@ -46,6 +46,8 @@ export function PageHero({
           decoding="async"
           // @ts-ignore - fetchpriority is valid HTML attribute
           fetchpriority="high"
+          width={1200}
+          height={655}
           aria-label={imageAlt || "Haussanierung Vorher-Nachher"}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40 lg:to-black/20" />
