@@ -12,8 +12,8 @@ import terminHeroImage from "@assets/generated_images/appointment_booking_calend
 const terminHeroContent: HeroContent = {
   backgroundImage: terminHeroImage,
   badge: "Ihr persönlicher Beratungstermin",
-  titleLine1: "Lernen Sie Ihren Projekt-Kurator kennen.",
-  titleLine2: "Persönlich. Vor Ort. Unverbindlich.",
+  titleLine1: "Sanierung München Termin – Kostenlose Beratung & Besichtigung vor Ort.",
+  titleLine2: "Festpreis-Angebot in 48h. Unverbindlich.",
   descriptions: ["Exklusive Vor-Ort-Beratung durch Ihren persönlichen Bauleiter.", "Detailliertes Festpreis-Konzept in 48h."],
   strongText: "100% kostenlos – ohne Verpflichtung.",
   ctaText: "Jetzt exklusiven Termin wählen",

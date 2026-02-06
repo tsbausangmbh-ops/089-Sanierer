@@ -22,8 +22,8 @@ import gewerkeHeroImage from "@assets/generated_images/skilled_trades_craftsmen.
 const gewerkeHeroContent: HeroContent = {
   backgroundImage: gewerkeHeroImage,
   badge: "Exklusive Meisterbetriebe für Einzelgewerke",
-  titleLine1: "Zertifizierte Fachbetriebe gesucht?",
-  titleLine2: "Wir kuratieren die Besten.",
+  titleLine1: "Handwerker München – Maler, Elektriker, Sanitär & Fachbetriebe.",
+  titleLine2: "Zertifizierte Meisterbetriebe zum Festpreis.",
   descriptions: ["Maler, Elektriker, Sanitär.", "Nur geprüfte Meisterbetriebe aus München."],
   strongText: "Festpreisgarantie für jedes Gewerk.",
   ctaText: "Jetzt exklusiven Meisterbetrieb anfragen",

@@ -20,8 +20,8 @@ import pricingHeroImage from "@assets/generated_images/renovation_pricing_worksp
 const faqHeroContent: HeroContent = {
   backgroundImage: pricingHeroImage,
   badge: "Volle Transparenz für anspruchsvolle Eigentümer",
-  titleLine1: "Sanierung München – FAQ & Preise.",
-  titleLine2: "Detaillierte Leistungsverzeichnisse.",
+  titleLine1: "Sanierung München FAQ – Kosten, Preise & häufige Fragen.",
+  titleLine2: "Alle Antworten zu Renovierung, Förderung & Ablauf.",
   descriptions: ["Was kostet Ihre Investition?", "Transparente Kalkulation ohne versteckte Posten."],
   strongText: "Festpreisgarantie ab 800€/m² – garantiert.",
   ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",

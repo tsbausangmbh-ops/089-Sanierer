@@ -13,8 +13,8 @@ import ratgeberHeroImage from "@assets/generated_images/expert_renovation_adviso
 const ratgeberHeroContent: HeroContent = {
   backgroundImage: ratgeberHeroImage,
   badge: "Exklusives Expertenwissen für anspruchsvolle Eigentümer",
-  titleLine1: "Sanierung Ratgeber München.",
-  titleLine2: "Kosten, Förderung & Insider-Tipps.",
+  titleLine1: "Sanierung Ratgeber München – Kosten, Förderung & Tipps vom Experten.",
+  titleLine2: "Haussanierung, Badsanierung & Dämmung im Überblick.",
   descriptions: ["Aus 150+ Projekten in München.", "Unser Expertenwissen für Ihre Entscheidung."],
   strongText: "Kostenloser Zugang zu Insider-Wissen.",
   ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",

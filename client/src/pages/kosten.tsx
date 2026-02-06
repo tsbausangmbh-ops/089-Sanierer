@@ -30,8 +30,8 @@ import kostenImg from "@assets/generated_images/complete_home_renovation_result.
 const kostenHeroContent: HeroContent = {
   backgroundImage: kostenImg,
   badge: "Transparente Münchner Marktpreise 2026",
-  titleLine1: "Sanierung Kosten München – Transparent.",
-  titleLine2: "Volle Transparenz. Keine Überraschungen.",
+  titleLine1: "Sanierung Kosten München – Preise, Kostenübersicht & Kalkulation.",
+  titleLine2: "Transparente Festpreise. Keine versteckten Kosten.",
   descriptions: ["Detaillierte Leistungsverzeichnisse für volle Kontrolle.", "Festpreisgarantie ohne versteckte Nachforderungen."],
   strongText: "Ihr Investment ist bei uns sicher.",
   subText: "Für anspruchsvolle Eigentümer, die Klarheit schätzen.",

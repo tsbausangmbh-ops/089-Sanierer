@@ -31,8 +31,8 @@ import wohnungImg from "@assets/generated_images/renovated_luxury_apartment_inte
 const wohnungHeroContent: HeroContent = {
   backgroundImage: wohnungImg,
   badge: "Über 85 erfolgreich transformierte Wohnungen",
-  titleLine1: "Wohnungssanierung München – Ihr Wohnerlebnis.",
-  titleLine2: "Bis zu 22 Gewerke. Ein Ansprechpartner.",
+  titleLine1: "Wohnungssanierung München – Wohnung renovieren & Altbausanierung.",
+  titleLine2: "Komplett aus einer Hand. Festpreis ab 800€/m².",
   descriptions: ["Ihr persönlicher Projekt-Kurator übernimmt die komplette Verantwortung.", "Elektrik, Sanitär, Böden, Wände – alles aus einer Hand."],
   strongText: "Volle Festpreisgarantie ab 800€/m².",
   subText: "Für anspruchsvolle Eigentümer und Investoren in München.",

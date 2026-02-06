@@ -37,8 +37,8 @@ import rechnerImg from "@assets/generated_images/expert_renovation_advisor.webp"
 const rechnerHeroContent: HeroContent = {
   backgroundImage: rechnerImg,
   badge: "Exklusiver Investitions-Kalkulator",
-  titleLine1: "Sanierungskosten Rechner München.",
-  titleLine2: "Transparente Kalkulation in Sekunden.",
+  titleLine1: "Sanierungskosten Rechner München – Kosten berechnen & Preise kalkulieren.",
+  titleLine2: "Renovierung, Modernisierung & Förderung sofort berechnen.",
   descriptions: ["Wohnung, Haus oder Förderung.", "Detailliertes Leistungsverzeichnis."],
   strongText: "Münchner Marktpreise 2026 – garantiert.",
   subText: "Unverbindlich und in wenigen Klicks – Ihr persönliches Festpreis-Konzept.",

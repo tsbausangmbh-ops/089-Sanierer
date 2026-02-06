@@ -31,8 +31,8 @@ import hausImg from "@assets/generated_images/energy_efficient_renovated_house.w
 const hausHeroContent: HeroContent = {
   backgroundImage: hausImg,
   badge: "Über 45 erfolgreich sanierte Häuser in München",
-  titleLine1: "Haussanierung München – Ihr Lebenskapitel.",
-  titleLine2: "Altbau wird Traumhaus.",
+  titleLine1: "Haussanierung München – Haus renovieren, Altbau sanieren & Modernisierung.",
+  titleLine2: "Energetisch & förderfähig. Festpreis ab 920€/m².",
   descriptions: ["Ihr persönlicher Bauleiter koordiniert bis zu 22 Gewerke.", "Energetische Modernisierung inklusive Fördermittel-Optimierung."],
   strongText: "Volle Festpreisgarantie ab 920€/m².",
   subText: "Für anspruchsvolle Immobilienbesitzer, die Qualität schätzen.",
