@@ -55,12 +55,12 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
             <span className="line-clamp-1">{content.badge}</span>
           </div>
           
-          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+          <h1 className="text-xl sm:text-2xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
             {content.titleLine1} <br />
             <span className="text-orange-400">{content.titleLine2}</span>
           </h1>
           
-          <div className="text-sm sm:text-lg lg:text-xl text-white/90 mb-4 sm:mb-5 max-w-lg mx-auto sm:mx-0 flex flex-col gap-0.5">
+          <div className="text-xs sm:text-base lg:text-xl text-white/90 mb-4 sm:mb-5 max-w-lg mx-auto sm:mx-0 flex flex-col gap-0.5">
             {content.descriptions.map((desc, i) => (
               <span key={i}>{desc}</span>
             ))}

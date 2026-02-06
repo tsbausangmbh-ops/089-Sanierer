@@ -511,7 +511,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
               Unsere Leistungen in {data.name}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -530,7 +530,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
               Besonderheiten in {data.name}
             </h2>
             <div className="grid md:grid-cols-2 gap-8 justify-center">
@@ -566,7 +566,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
               Ihre Vorteile
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -597,7 +597,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
               Unser Ablauf in {data.name}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -616,7 +616,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-6">
               Sanierung in {data.name} – Ihr lokaler Experte
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
@@ -644,7 +644,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
               <HelpCircle className="w-8 h-8 text-primary" />
               Häufige Fragen zur Sanierung in {data.name}
             </h2>
@@ -665,7 +665,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-6">
               Unsere Leistungen im Detail
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -715,7 +715,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-6">
               Weitere Stadtteile in München
             </h2>
             <p className="text-center text-muted-foreground mb-6">
@@ -742,7 +742,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">
               {data.name} verdient nur die beste Sanierung!
             </h2>
             <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">
@@ -795,7 +795,7 @@ export default function StadtteilPage() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Stadtteil nicht gefunden</h1>
+          <h1 className="text-lg sm:text-xl font-bold mb-4">Stadtteil nicht gefunden</h1>
           <Link href="/">
             <Button>Zurück zur Startseite</Button>
           </Link>

@@ -68,7 +68,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">1. Allgemeines und Vertragsschluss</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">1. Allgemeines und Vertragsschluss</h2>
               
               <h3 className="text-xl font-bold mb-4">§ 1 Geltungsbereich</h3>
               <p className="text-muted-foreground">
@@ -128,7 +128,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">2. Besondere Bestimmungen für Verbraucher</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">2. Besondere Bestimmungen für Verbraucher</h2>
               
               <h3 className="text-xl font-bold mb-4">§ 5 Widerrufsrecht bei außerhalb von Geschäftsräumen geschlossenen Verträgen</h3>
               <div className="bg-primary/10 p-4 rounded-lg mb-4">
@@ -178,7 +178,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">3. Ausführung und Vergütung</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">3. Ausführung und Vergütung</h2>
               
               <h3 className="text-xl font-bold mb-4">§ 8 Vergütung & Zahlungsbedingungen</h3>
               <p className="text-muted-foreground">
@@ -238,7 +238,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">4. Abnahme und Gewährleistung</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">4. Abnahme und Gewährleistung</h2>
               
               <h3 className="text-xl font-bold mb-4">§ 12 Abnahme (§ 640 BGB)</h3>
               <p className="text-muted-foreground">
@@ -300,7 +300,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">5. Kündigung und Beendigung</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">5. Kündigung und Beendigung</h2>
               
               <h3 className="text-xl font-bold mb-4">§ 15 Kündigung durch den Auftraggeber (§ 648 BGB)</h3>
               <p className="text-muted-foreground">
@@ -325,7 +325,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">6. Sonstige Bestimmungen</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">6. Sonstige Bestimmungen</h2>
               
               <h3 className="text-xl font-bold mb-4">§ 17 Eigentumsvorbehalt</h3>
               <p className="text-muted-foreground">
@@ -390,7 +390,7 @@ export default function AGB() {
             </section>
 
             <section className="bg-muted/30 p-6 rounded-lg">
-              <h2 className="text-2xl font-bold mb-6 text-primary">7. Wichtige gesetzliche Hinweise</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">7. Wichtige gesetzliche Hinweise</h2>
               <p className="text-muted-foreground font-bold mb-4">Zusammenfassung der relevanten Gesetze (Stand 2026)</p>
               
               <div className="space-y-4 text-muted-foreground">

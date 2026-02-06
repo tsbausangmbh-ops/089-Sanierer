@@ -38,7 +38,7 @@ export default function Impressum() {
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
             
             <section>
-              <h2 className="text-2xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-4">Angaben gemäß § 5 TMG</h2>
               <p className="text-muted-foreground">
                 Die Website KSHW München – Komplettsanierung Haus & Wohnung wird gemeinschaftlich betrieben von zwei rechtlich selbstständigen Einzelgewerben:
               </p>

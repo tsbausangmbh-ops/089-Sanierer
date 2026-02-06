@@ -101,7 +101,7 @@ export default function Wohnungssanierung() {
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-6">
               Ihre Wohnung verdient endlich eine Rundumerneuerung?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
@@ -131,7 +131,7 @@ export default function Wohnungssanierung() {
 
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
               Was wir sanieren
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -150,7 +150,7 @@ export default function Wohnungssanierung() {
 
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
               Preisübersicht nach Wohnungsgröße
             </h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -174,7 +174,7 @@ export default function Wohnungssanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
                 Für Eigentümer und Vermieter
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -220,7 +220,7 @@ export default function Wohnungssanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+              <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
                 <HelpCircle className="w-8 h-8 text-primary" />
                 Häufige Fragen zur Wohnungssanierung
               </h2>
@@ -242,7 +242,7 @@ export default function Wohnungssanierung() {
 
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">
               Schluss mit der alten Wohnung - Zeit für Ihr neues Zuhause!
             </h2>
             <div className="text-sm sm:text-base opacity-90 mb-4 flex flex-col gap-1">

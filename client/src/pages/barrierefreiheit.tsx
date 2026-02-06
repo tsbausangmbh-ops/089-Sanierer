@@ -30,7 +30,7 @@ export default function Barrierefreiheit() {
             
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Stand der Barrierefreiheit</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Stand der Barrierefreiheit</h2>
                 <p className="text-muted-foreground mb-4">
                   Diese Erklärung zur Barrierefreiheit gilt für die Website <strong>089-sanierer.de</strong>.
                 </p>
@@ -50,7 +50,7 @@ export default function Barrierefreiheit() {
 
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Umgesetzte Maßnahmen</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Umgesetzte Maßnahmen</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir haben folgende Maßnahmen ergriffen, um die Barrierefreiheit zu gewährleisten:
                 </p>
@@ -78,7 +78,7 @@ export default function Barrierefreiheit() {
 
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Technische Spezifikationen</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Technische Spezifikationen</h2>
                 <p className="text-muted-foreground mb-4">
                   Die Barrierefreiheit dieser Website basiert auf den folgenden Technologien:
                 </p>
@@ -102,7 +102,7 @@ export default function Barrierefreiheit() {
 
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Bekannte Einschränkungen</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Bekannte Einschränkungen</h2>
                 <p className="text-muted-foreground mb-4">
                   Trotz unserer Bemühungen können einige Bereiche Einschränkungen aufweisen:
                 </p>
@@ -131,7 +131,7 @@ export default function Barrierefreiheit() {
 
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Kompatibilität</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Kompatibilität</h2>
                 <p className="text-muted-foreground mb-4">
                   Diese Website wurde mit folgenden Technologien getestet:
                 </p>
@@ -159,7 +159,7 @@ export default function Barrierefreiheit() {
 
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Feedback und Kontakt</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Feedback und Kontakt</h2>
                 <p className="text-muted-foreground mb-4">
                   Wenn Sie Barrieren auf unserer Website feststellen oder Verbesserungsvorschläge haben, 
                   kontaktieren Sie uns bitte. Wir nehmen Ihr Feedback ernst und arbeiten kontinuierlich 
@@ -184,7 +184,7 @@ export default function Barrierefreiheit() {
 
             <Card className="mb-8">
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Schlichtungsverfahren</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Schlichtungsverfahren</h2>
                 <p className="text-muted-foreground mb-4">
                   Sollten Sie der Meinung sein, dass wir auf Ihre Anfrage nicht oder nicht 
                   ausreichend reagiert haben, können Sie sich an die zuständige Schlichtungsstelle wenden:
@@ -210,7 +210,7 @@ export default function Barrierefreiheit() {
 
             <Card>
               <CardContent className="pt-6">
-                <h2 className="text-2xl font-bold mb-4">Erstellung dieser Erklärung</h2>
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Erstellung dieser Erklärung</h2>
                 <p className="text-muted-foreground mb-2">
                   Diese Erklärung wurde am <strong>4. Februar 2026</strong> erstellt.
                 </p>

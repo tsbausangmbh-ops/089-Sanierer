@@ -393,7 +393,7 @@ export default function FaqPreise() {
         <section className="py-6 lg:py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-4">
-              <h2 className="text-2xl font-bold inline-flex items-center justify-center gap-1"><span className="text-accent">Preisübersicht</span> –
+              <h2 className="text-lg sm:text-xl font-bold inline-flex items-center justify-center gap-1"><span className="text-accent">Preisübersicht</span> –
                 <Euro className="w-6 h-6 text-primary" />
                 Sanierungspreise München – Kostenübersicht
               </h2>
@@ -443,17 +443,17 @@ export default function FaqPreise() {
                     <h3 className="font-semibold mb-1">Ihr persönliches Festpreis-Angebot</h3>
                     <p className="text-sm text-muted-foreground">Kostenlose Beratung vor Ort – ohne Überraschungen am Ende</p>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <Link href="/termin">
-                      <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
-                        <Calendar className="w-5 h-5 mr-2" />
+                  <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                    <Link href="/termin" className="w-full sm:w-auto">
+                      <Button size="lg" className="w-full sm:w-auto min-h-12 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500" data-testid="button-cta-booking">
+                        <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
                         24 Std. Online Termin
                       </Button>
                     </Link>
-                    <Link href="/anfrage">
-                      <Button size="lg" data-testid="button-cta-angebot">
+                    <Link href="/anfrage" className="w-full sm:w-auto">
+                      <Button size="lg" className="w-full sm:w-auto min-h-12" data-testid="button-cta-angebot">
                         Jetzt Angebot anfordern
-                        <ChevronRight className="w-5 h-5 ml-2" />
+                        <ChevronRight className="w-5 h-5 ml-2 flex-shrink-0" />
                       </Button>
                     </Link>
                   </div>
@@ -470,7 +470,7 @@ export default function FaqPreise() {
                 <Handshake className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold"><span className="text-accent">Handwerker Stundenlohn München</span> –<br />Preise für Maler, Elektriker & Sanitär</h2>
+                <h2 className="text-lg sm:text-xl font-bold"><span className="text-accent">Handwerker Stundenlohn München</span> –<br />Preise für Maler, Elektriker & Sanitär</h2>
                 <p className="text-muted-foreground">Geprüfte Handwerker aus München – faire Stundensätze</p>
               </div>
             </div>
@@ -520,10 +520,10 @@ export default function FaqPreise() {
                     <h3 className="font-semibold mb-1">Geprüfte Münchner Handwerker – kostenlos vermittelt</h3>
                     <p className="text-sm text-muted-foreground">Kein langes Suchen: Wir finden den passenden Handwerker für Sie</p>
                   </div>
-                  <Link href="/gewerke">
-                    <Button size="lg" className="bg-green-600 hover:bg-green-700" data-testid="button-cta-gewerke">
+                  <Link href="/gewerke" className="w-full sm:w-auto">
+                    <Button size="lg" className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700" data-testid="button-cta-gewerke">
                       Jetzt Handwerker finden
-                      <ChevronRight className="w-5 h-5 ml-2" />
+                      <ChevronRight className="w-5 h-5 ml-2 flex-shrink-0" />
                     </Button>
                   </Link>
                 </div>
@@ -539,7 +539,7 @@ export default function FaqPreise() {
                 <HelpCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">FAQ <span className="text-accent">Sanierung München</span> –<br />Häufige Fragen & Antworten</h2>
+                <h2 className="text-lg sm:text-xl font-bold">FAQ <span className="text-accent">Sanierung München</span> –<br />Häufige Fragen & Antworten</h2>
                 <p className="text-muted-foreground">Das wollen Münchner über Sanierung wissen</p>
               </div>
             </div>
@@ -587,16 +587,16 @@ export default function FaqPreise() {
                 Sie haben die Fragen gelesen - wir haben die Antworten UND die Lösung für Ihr Sanierungsproblem. 
                 <strong className="text-foreground"> Lassen Sie uns reden.</strong>
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
-                <Link href="/anfrage">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white" data-testid="button-booking-faq">
-                    <Handshake className="w-4 h-4 mr-2" />
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+                <Link href="/anfrage" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto min-h-12 bg-orange-500 hover:bg-orange-600 text-white" data-testid="button-booking-faq">
+                    <Handshake className="w-4 h-4 mr-2 flex-shrink-0" />
                     Jetzt Problem lösen lassen
                   </Button>
                 </Link>
-                <a href="tel:+498944438872">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" data-testid="button-call-faq">
-                    <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+498944438872" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700 text-white" data-testid="button-call-faq">
+                    <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
                     Sofort anrufen
                   </Button>
                 </a>

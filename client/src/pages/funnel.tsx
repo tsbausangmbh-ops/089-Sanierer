@@ -2673,37 +2673,38 @@ export default function FunnelPage() {
               <CardContent>
                 {renderCurrentStep()}
 
-                <div className="flex justify-between gap-4 mt-6 pt-4 border-t">
+                <div className="flex justify-between gap-3 mt-6 pt-4 border-t">
                   {currentStep === 1 ? (
                     <Link href="/">
-                      <Button variant="outline" data-testid="button-back-home">
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        Startseite
+                      <Button variant="outline" className="min-h-11" data-testid="button-back-home">
+                        <ArrowLeft className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <span className="hidden sm:inline">Startseite</span>
+                        <span className="sm:hidden">Zurück</span>
                       </Button>
                     </Link>
                   ) : (
-                    <Button variant="outline" onClick={handleBack} data-testid="button-back">
-                      <ArrowLeft className="w-4 h-4 mr-2" />
+                    <Button variant="outline" className="min-h-11" onClick={handleBack} data-testid="button-back">
+                      <ArrowLeft className="w-4 h-4 mr-2 flex-shrink-0" />
                       Zurück
                     </Button>
                   )}
                   
                   <div className="ml-auto">
                     {currentStep < totalSteps ? (
-                      <Button onClick={handleNext} disabled={!canProceed()} data-testid="button-next">
+                      <Button className="min-h-11" onClick={handleNext} disabled={!canProceed()} data-testid="button-next">
                         Weiter
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                       </Button>
                     ) : (
-                      <Button onClick={handleSubmit} disabled={!canProceed() || createLeadMutation.isPending} data-testid="button-submit">
+                      <Button className="min-h-11 whitespace-normal" onClick={handleSubmit} disabled={!canProceed() || createLeadMutation.isPending} data-testid="button-submit">
                         {createLeadMutation.isPending ? (
                           <>
-                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                            Wird gesendet...
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin flex-shrink-0" />
+                            Senden...
                           </>
                         ) : (
                           <>
-                            <CheckCircle className="w-4 h-4 mr-2" />
+                            <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                             Kostenlos anfragen
                           </>
                         )}

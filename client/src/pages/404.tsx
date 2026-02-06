@@ -34,7 +34,7 @@ export default function NotFound() {
       
       <main className="flex-1 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-6">
+          <h2 className="text-lg sm:text-xl font-bold text-foreground mb-6">
             Wie können wir Ihnen helfen?
           </h2>
           

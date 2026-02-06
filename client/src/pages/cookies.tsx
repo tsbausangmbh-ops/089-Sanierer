@@ -51,7 +51,7 @@ export default function Cookies() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">Was sind Cookies?</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">Was sind Cookies?</h2>
               <p className="text-muted-foreground">
                 Cookies sind kleine Textdateien, die von Webseiten verwendet werden, um die Benutzererfahrung effizienter zu gestalten.
               </p>
@@ -89,7 +89,7 @@ export default function Cookies() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary flex items-center gap-2">
                 <UserCog className="w-6 h-6" />
                 Individuelle Cookie-Konfiguration
               </h2>
@@ -137,7 +137,7 @@ export default function Cookies() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary flex items-center gap-2">
                 <Shield className="w-6 h-6" />
                 Notwendig (2)
               </h2>
@@ -176,7 +176,7 @@ export default function Cookies() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary flex items-center gap-2">
                 <BarChart3 className="w-6 h-6" />
                 Statistiken (3)
               </h2>

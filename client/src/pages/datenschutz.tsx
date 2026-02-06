@@ -38,7 +38,7 @@ export default function Datenschutz() {
           <div className="prose prose-lg dark:prose-invert max-w-none space-y-6">
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">1. Datenschutz auf einen Blick</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">1. Datenschutz auf einen Blick</h2>
               
               <h3 className="text-xl font-bold mb-4">Allgemeine Hinweise</h3>
               <p className="text-muted-foreground">
@@ -73,7 +73,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">2. Hosting & Content Delivery Networks (CDN)</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">2. Hosting & Content Delivery Networks (CDN)</h2>
               <p className="text-muted-foreground">
                 Wir hosten die Inhalte unserer Website bei einem externen Anbieter. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
               </p>
@@ -86,7 +86,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">3. Allgemeine Hinweise und Pflichtinformationen</h2>
               
               <h3 className="text-xl font-bold mb-4">Datenschutz & Datensicherheit</h3>
               <p className="text-muted-foreground">
@@ -170,7 +170,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">4. Datenerfassung auf dieser Website</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">4. Datenerfassung auf dieser Website</h2>
               
               <h3 className="text-xl font-bold mb-4">Kontaktformular</h3>
               <p className="text-muted-foreground">
@@ -185,7 +185,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">5. Soziale Medien & Online-Marketing</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">5. Soziale Medien & Online-Marketing</h2>
               
               <h3 className="text-xl font-bold mb-4">Allgemeine Hinweise zu Social Media</h3>
               <p className="text-muted-foreground">
@@ -248,7 +248,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">6. Analyse-Tools und Werbung</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">6. Analyse-Tools und Werbung</h2>
               
               <h3 className="text-xl font-bold mb-4">Google Analytics</h3>
               <p className="text-muted-foreground">
@@ -285,7 +285,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">7. Plugins, Tools und Externe Medien</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">7. Plugins, Tools und Externe Medien</h2>
               
               <h3 className="text-xl font-bold mb-4">Google Web Fonts (lokales Hosting)</h3>
               <p className="text-muted-foreground">
@@ -299,7 +299,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">8. Rechte der Betroffenen (Ihre Rechte)</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">8. Rechte der Betroffenen (Ihre Rechte)</h2>
               <p className="text-muted-foreground mb-4">
                 Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
               </p>
@@ -317,7 +317,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">9. Google Maps</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">9. Google Maps</h2>
               <p className="text-muted-foreground">
                 Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
               </p>
@@ -327,7 +327,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">10. Speicherdauer und Löschkonzept</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">10. Speicherdauer und Löschkonzept</h2>
               <p className="text-muted-foreground">
                 Wir speichern Ihre personenbezogenen Daten nur so lange, wie es für die Erreichung der hier genannten Zwecke erforderlich ist oder wie es die vom Gesetzgeber vorgesehenen vielfältigen Speicherfristen vorsehen.
               </p>
@@ -337,7 +337,7 @@ export default function Datenschutz() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6 text-primary">11. Auftragsverarbeitung</h2>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">11. Auftragsverarbeitung</h2>
               <p className="text-muted-foreground">
                 Wir haben mit unseren externen Dienstleistern (z. B. Webhoster, IT-Service) Verträge zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO abgeschlossen. Dies stellt sicher, dass diese Ihre Daten streng nach unseren Weisungen und unter Einhaltung höchster Sicherheitsstandards verarbeiten.
               </p>

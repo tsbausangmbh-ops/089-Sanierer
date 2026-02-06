@@ -468,9 +468,9 @@ export default function RechnerPage() {
             <div className="max-w-7xl mx-auto text-center mb-8">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Calculator className="w-10 h-10 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-bold">Sanierungsrechner</h2>
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-bold">Sanierungsrechner</h2>
               </div>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Berechnen Sie in wenigen Klicks die ungefähren Kosten für Ihre Sanierung
               </p>
             </div>
@@ -497,7 +497,7 @@ export default function RechnerPage() {
 
               {step === 1 && (
                 <div className="text-center">
-                  <h2 className="text-2xl font-bold mb-6">Was möchten Sie sanieren?</h2>
+                  <h2 className="text-lg sm:text-xl font-bold mb-6">Was möchten Sie sanieren?</h2>
                   <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                     <Card 
                       className="cursor-pointer transition-all hover:border-primary hover:shadow-lg"
@@ -554,7 +554,7 @@ export default function RechnerPage() {
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Zurück
                   </Button>
-                  <h2 className="text-2xl font-bold mb-6">
+                  <h2 className="text-lg sm:text-xl font-bold mb-6">
                     {propertyType === "foerderung" 
                       ? "Wie groß ist Ihr Gebäude?" 
                       : `Wie groß ist ${propertyType === "wohnung" ? "Ihre Wohnung" : "Ihr Haus"}?`
@@ -606,7 +606,7 @@ export default function RechnerPage() {
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Zurück
                   </Button>
-                  <h2 className="text-2xl font-bold mb-2">
+                  <h2 className="text-lg sm:text-xl font-bold mb-2">
                     {propertyType === "foerderung" 
                       ? "Welche förderfähigen Maßnahmen interessieren Sie?"
                       : "Welche Arbeiten sollen durchgeführt werden?"
@@ -682,7 +682,7 @@ export default function RechnerPage() {
                   
                   <Card className="max-w-2xl mx-auto mb-8">
                     <CardContent className="p-8">
-                      <h2 className="text-2xl font-bold mb-6">
+                      <h2 className="text-lg sm:text-xl font-bold mb-6">
                         {propertyType === "foerderung" 
                           ? "Ihre geschätzten Kosten & Förderungen"
                           : "Ihre geschätzten Sanierungskosten"
@@ -806,7 +806,7 @@ export default function RechnerPage() {
 
         <section className={`py-6 lg:py-10 ${propertyType === "foerderung" ? "bg-green-600" : "bg-primary"} text-white`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">
               {propertyType === "foerderung" 
                 ? "Maximale Förderung sichern!"
                 : "Warum auf Schätzungen verlassen?"

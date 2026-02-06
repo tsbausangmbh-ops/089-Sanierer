@@ -351,7 +351,7 @@ function LeadMagnetSection() {
               <span>Kostenloses Geschenk</span>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+            <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-6 leading-tight">
               Der Ratgeber, der Ihnen <span className="text-primary">tausende Euro</span> spart
             </h2>
             
@@ -501,7 +501,7 @@ function FunnelForm() {
             <CheckCircle className="w-4 h-4" />
             <span>Über 268 Münchner Familien vertrauen uns bereits</span>
           </div>
-          <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
             <span className="text-accent">Stellen Sie sich vor:</span> In 8 Wochen ist Ihre Sanierung abgeschlossen.
           </h2>
           <p className="text-sm sm:text-lg text-muted-foreground max-w-7xl mx-auto mb-2">
@@ -793,14 +793,14 @@ export default function Home() {
         {/* Stats Section */}
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-xl lg:text-2xl font-bold text-center mb-4">
+            <h2 className="text-base sm:text-xl lg:text-2xl font-bold text-center mb-4">
               Warum Münchner uns vertrauen
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <stat.icon className="w-6 h-6 mx-auto mb-2 opacity-80" />
-                  <div className="text-2xl lg:text-3xl font-bold mb-0.5">{stat.value}</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold mb-0.5">{stat.value}</div>
                   <div className="text-xs opacity-80">{stat.label}</div>
                 </div>
               ))}
@@ -812,7 +812,7 @@ export default function Home() {
         <section className="py-6 lg:py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
                 Kennen Sie das Gefühl?
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -838,7 +838,7 @@ export default function Home() {
 
             {/* NLP: Problem-Solver CTA after Pain Points */}
             <div className="mt-8 bg-gradient-to-r from-primary to-primary/80 rounded-xl p-6 lg:p-8 text-center">
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
+              <h3 className="text-base sm:text-xl lg:text-2xl font-bold text-white mb-2">
                 Das muss nicht so sein. Wir sind Ihre Problemlöser.
               </h3>
               <p className="text-white/90 mb-4 max-w-xl mx-auto">
@@ -866,7 +866,7 @@ export default function Home() {
                 <HelpCircle className="w-4 h-4" />
                 <span>Ihre Fragen - Unsere Antworten</span>
               </div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+              <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-3">
                 Das fragen uns Kunden am häufigsten
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -917,7 +917,7 @@ export default function Home() {
             </div>
 
             <div className="text-center mt-8 bg-green-500/10 rounded-xl p-6 border border-green-500/20">
-              <p className="text-lg font-semibold text-foreground mb-2">
+              <p className="text-base sm:text-lg font-semibold text-foreground mb-2">
                 Genug gelesen? Handeln Sie jetzt.
               </p>
               <p className="text-muted-foreground mb-4 max-w-lg mx-auto">
@@ -928,15 +928,15 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-green-600 hover:bg-green-700 text-white"
+                  className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base"
                   data-testid="button-faq-cta"
                 >
                   Ja, ich will mein Problem lösen
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                 </Button>
-                <a href="tel:+498944438872">
-                  <Button size="lg" variant="outline" data-testid="button-faq-phone">
-                    <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+498944438872" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto min-h-12 text-sm sm:text-base" data-testid="button-faq-phone">
+                    <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
                     089 444438872
                   </Button>
                 </a>
@@ -953,7 +953,7 @@ export default function Home() {
                 <Target className="w-4 h-4" />
                 <span>Die Lösung</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
                 So fühlt sich <span className="text-accent">Sanierung</span> wirklich an
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -998,7 +998,7 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
                 Ihr Weg zum <span className="text-accent">Traumzuhause</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -1034,10 +1034,10 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
                 Das sagen unsere <span className="text-accent">Kunden</span>
               </h2>
-              <div className="text-lg text-muted-foreground flex flex-col gap-0.5">
+              <div className="text-sm sm:text-lg text-muted-foreground flex flex-col gap-0.5">
                 <span>Echte Erfahrungen.</span>
                 <span>Echte Ergebnisse.</span>
               </div>
@@ -1073,7 +1073,7 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
                 Unsere <span className="text-accent">Leistungen</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -1124,7 +1124,7 @@ export default function Home() {
         <section className="py-4 lg:py-6 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
                 Häufige <span className="text-accent">Fragen</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground">
@@ -1155,7 +1155,7 @@ export default function Home() {
               <span>Handeln Sie heute - nicht morgen</span>
             </div>
             
-            <h2 className="text-2xl sm:text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
               Wie lange wollen Sie noch mit <br className="hidden lg:block" />
               Ihrem Sanierungsproblem leben?
             </h2>
@@ -1167,15 +1167,15 @@ export default function Home() {
               <span>Wir sind die Problemlöser, die Sie suchen.</span>
               <span>Der erste Schritt dauert nur 2 Minuten.</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-center gap-3">
               <Button 
                 size="lg" 
                 onClick={scrollToForm}
-                className="bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl"
+                className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-5 sm:px-6 text-sm sm:text-base font-semibold shadow-xl whitespace-normal text-center"
                 data-testid="button-final-cta"
               >
                 Ja, ich will mein Problem endlich lösen
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
               </Button>
             </div>
             <p className="mt-6 text-sm opacity-70">
