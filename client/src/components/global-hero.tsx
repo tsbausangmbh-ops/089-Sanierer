@@ -48,7 +48,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-24 pt-28 lg:pt-24 pb-10 lg:pb-16 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-24 pt-32 lg:pt-24 pb-10 lg:pb-16 w-full">
         <div className="max-w-2xl text-center sm:text-left mx-auto sm:mx-0">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/15 backdrop-blur-md rounded-full text-white text-xs sm:text-sm mb-3 sm:mb-4 border border-white/20">
             <BadgeCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" />
