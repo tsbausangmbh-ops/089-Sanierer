@@ -215,9 +215,11 @@ export default function Kontakt() {
                       </Button>
                     </form>
                   </Form>
-                  <p className="text-xs text-muted-foreground mt-4">
-                    Hinweis zum Vertragsabschluss: Anfragen über Kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande. Es erfolgt keine kostenpflichtige Bestellung über diese Website.
-                  </p>
+                  <div className="bg-muted/50 p-4 rounded-md mt-4">
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Hinweis zum Vertragsabschluss:</strong> Anfragen über Kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande. Es erfolgt keine kostenpflichtige Bestellung über diese Website.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
