@@ -380,32 +380,56 @@ export async function registerRoutes(
 
   // SMTP Test Endpoint (nur für Admin-Debugging)
   app.get("/api/test-email", async (req, res) => {
+    const diagnostics = {
+      SMTP_HOST: process.env.SMTP_HOST || "(MISSING)",
+      SMTP_PORT: process.env.SMTP_PORT || "(MISSING)",
+      SMTP_USER: process.env.SMTP_USER || "(MISSING)",
+      SMTP_PASSWORD_SET: !!process.env.SMTP_PASSWORD,
+      SMTP_PASSWORD_LENGTH: (process.env.SMTP_PASSWORD || "").length,
+      SMTP_FROM_EMAIL: process.env.SMTP_FROM_EMAIL || "(MISSING)",
+      NODE_ENV: process.env.NODE_ENV || "(NOT SET)",
+    };
+    console.log("SMTP Diagnostics:", JSON.stringify(diagnostics));
+
     try {
-      console.log("Testing SMTP connection...");
-      console.log("SMTP_HOST:", process.env.SMTP_HOST);
-      console.log("SMTP_PORT:", process.env.SMTP_PORT);
-      console.log("SMTP_USER:", process.env.SMTP_USER);
-      console.log("SMTP_PASSWORD exists:", !!process.env.SMTP_PASSWORD);
-      
-      const smtp = await getTransporter();
-      await smtp.verify();
+      const freshTransporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST || "smtp.ionos.de",
+        port: parseInt(process.env.SMTP_PORT || "587"),
+        secure: false,
+        auth: {
+          user: process.env.SMTP_USER || "info@089-sanierer.de",
+          pass: process.env.SMTP_PASSWORD,
+        },
+        requireTLS: true,
+        connectionTimeout: 10000,
+        greetingTimeout: 10000,
+        socketTimeout: 15000,
+        tls: {
+          rejectUnauthorized: false,
+          minVersion: 'TLSv1.2',
+        },
+      });
+
+      await freshTransporter.verify();
       console.log("SMTP connection verified successfully!");
       
-      await smtp.sendMail({
-        from: `"089-Sanierer Test" <${process.env.SMTP_FROM_EMAIL}>`,
-        to: process.env.SMTP_FROM_EMAIL,
-        subject: "Test-E-Mail von 089-Sanierer",
+      const fromEmail = process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER || "info@089-sanierer.de";
+      await freshTransporter.sendMail({
+        from: `"089-Sanierer Test" <${fromEmail}>`,
+        to: fromEmail,
+        subject: "Test-E-Mail von 089-Sanierer (" + new Date().toISOString() + ")",
         text: "Dies ist eine Test-E-Mail. Wenn Sie diese lesen, funktioniert der E-Mail-Versand!",
       });
       
-      res.json({ success: true, message: "Test-E-Mail wurde gesendet!" });
+      res.json({ success: true, message: "Test-E-Mail wurde gesendet!", diagnostics });
     } catch (error: any) {
       console.error("SMTP Test failed:", error);
       res.status(500).json({ 
         success: false, 
         error: error.message,
         code: error.code,
-        details: error.response || error.toString()
+        details: error.response || error.toString(),
+        diagnostics,
       });
     }
   });
