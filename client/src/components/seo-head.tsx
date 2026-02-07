@@ -6,6 +6,7 @@ interface SeoHeadProps {
   keywords?: string;
   canonicalPath?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: "website" | "article";
   noIndex?: boolean;
   schema?: object;
@@ -18,6 +19,7 @@ export function SeoHead({
   keywords,
   canonicalPath,
   ogImage = "https://089-sanierer.de/og-image.jpg",
+  ogImageAlt,
   ogType = "website",
   noIndex = false,
   schema,
@@ -70,6 +72,9 @@ export function SeoHead({
     updateMeta("og:description", description, true);
     updateMeta("og:type", ogType, true);
     updateMeta("og:image", ogImage, true);
+    if (ogImageAlt) {
+      updateMeta("og:image:alt", ogImageAlt, true);
+    }
     
     if (canonicalPath) {
       const canonicalUrl = `https://089-sanierer.de${canonicalPath}`;
@@ -89,6 +94,9 @@ export function SeoHead({
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
     updateMeta("twitter:image", ogImage);
+    if (ogImageAlt) {
+      updateMeta("twitter:image:alt", ogImageAlt);
+    }
 
     if (schema) {
       // Check if SSR already injected a LocalBusiness schema (to avoid duplicates for crawlers)
@@ -154,7 +162,7 @@ export function SeoHead({
         dynamicSchema.remove();
       }
     };
-  }, [title, description, keywords, canonicalPath, ogImage, ogType, noIndex, schema]);
+  }, [title, description, keywords, canonicalPath, ogImage, ogImageAlt, ogType, noIndex, schema]);
 
   return null;
 }

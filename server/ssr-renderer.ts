@@ -46,6 +46,12 @@ export function renderHtmlWithMeta(requestPath: string, isDev: boolean = false):
   html = replacePlaceholder(html, "SSR_CANONICAL", meta.canonical);
   html = replacePlaceholder(html, "SSR_OG_TITLE", meta.ogTitle);
   html = replacePlaceholder(html, "SSR_OG_DESCRIPTION", meta.ogDescription);
+  if (meta.ogImage) {
+    html = replacePlaceholder(html, "SSR_OG_IMAGE", meta.ogImage);
+  }
+  if (meta.ogImageAlt) {
+    html = replacePlaceholder(html, "SSR_OG_IMAGE_ALT", meta.ogImageAlt);
+  }
 
   return html;
 }

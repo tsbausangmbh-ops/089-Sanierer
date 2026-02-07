@@ -120,6 +120,48 @@ const servicePages: Record<string, { title: string; description: string; price: 
   },
 };
 
+const pageOgImageMap: Record<string, { image: string; alt: string }> = {
+  "/": { image: "/images/komplettsanierung_vorher_nachher.webp", alt: "Komplettsanierung München vorher nachher - professionelle Sanierung aus einer Hand mit Festpreisgarantie" },
+  "/anfrage": { image: "/images/sanierungsberatung_gespraech.webp", alt: "Kostenlose Sanierungsberatung München - persönliches Gespräch für Ihr Renovierungsprojekt" },
+  "/danke": { image: "/images/erfolgsbestaetigung_haekchen.webp", alt: "Sanierungsanfrage erfolgreich gesendet - 089-Sanierer München antwortet in 24 Stunden" },
+  "/kosten": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierung München Kosten 2026 - transparente Preiskalkulation und Festpreisgarantie für alle Gewerke" },
+  "/komplettsanierung": { image: "/images/komplettsanierung_ergebnis.webp", alt: "Komplettsanierung München Ergebnis - schlüsselfertig sanierte Wohnung mit allen Gewerken aus einer Hand" },
+  "/badsanierung": { image: "/images/moderne_badsanierung.webp", alt: "Moderne Badsanierung München - fertig saniertes Badezimmer mit bodengleicher Dusche und hochwertigen Fliesen" },
+  "/kuechensanierung": { image: "/images/moderne_kuechensanierung_ergebnis.webp", alt: "Küchensanierung München Ergebnis - modern sanierte Küche mit neuen Elektro- und Wasseranschlüssen" },
+  "/bodensanierung": { image: "/images/parkettboden_sanierung_ergebnis.webp", alt: "Bodensanierung München - frisch verlegter Parkettboden nach professioneller Sanierung mit Fußbodenheizung" },
+  "/elektrosanierung": { image: "/images/elektrosanierung_installation.webp", alt: "Elektrosanierung München - fachgerechte Elektroinstallation nach VDE-Norm durch zertifizierten Meisterbetrieb" },
+  "/dachsanierung": { image: "/images/fertig_saniertes_hausdach.webp", alt: "Dachsanierung München - fertig saniertes Hausdach mit neuer Dämmung und Dacheindeckung" },
+  "/heizungssanierung": { image: "/images/moderne_heizungsanlage_einbau.webp", alt: "Heizungssanierung München - Einbau einer modernen Heizungsanlage mit Wärmepumpe und Förderberatung" },
+  "/wohnungssanierung": { image: "/images/sanierte_luxuswohnung_interieur.webp", alt: "Wohnungssanierung München Ergebnis - komplett sanierte Wohnung mit modernem Interieur und hochwertiger Ausstattung" },
+  "/haussanierung": { image: "/images/haus_vorher_nachher_zickzack.webp", alt: "Haussanierung München vorher nachher - Einfamilienhaus komplett saniert mit Festpreisgarantie" },
+  "/kernsanierung": { image: "/images/komplettsanierung_haus.webp", alt: "Kernsanierung München - Haus bis auf die Grundsubstanz entkernt und professionell neu aufgebaut" },
+  "/energetische-sanierung": { image: "/images/energieeffizientes_saniertes_haus.webp", alt: "Energetische Sanierung München - energieeffizient saniertes Haus mit Wärmedämmung und modernen Fenstern" },
+  "/rechner": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierungskosten Rechner München - Online-Kalkulator für Badsanierung und Komplettsanierung Kosten" },
+  "/kontakt": { image: "/images/kundenservice_kontakt.webp", alt: "Kontakt 089-Sanierer München - persönliche Sanierungsberatung und kostenloser Vor-Ort-Termin" },
+  "/impressum": { image: "/images/rechtliche_dokumente_impressum.webp", alt: "Impressum 089-Sanierer München - rechtliche Informationen und Kontaktdaten der Sanierungsfirma" },
+  "/datenschutz": { image: "/images/datenschutz_sicherheit.webp", alt: "Datenschutz 089-Sanierer - DSGVO-konforme Verarbeitung Ihrer Sanierungsanfragen" },
+  "/ratgeber": { image: "/images/sanierungsberater_experte.webp", alt: "Sanierung Ratgeber München - Experten-Tipps für Badsanierung, Komplettsanierung und energetische Modernisierung" },
+  "/faq-sanierung": { image: "/images/qualitaetskontrolle_sanierung.webp", alt: "FAQ Sanierung München - Antworten auf häufige Fragen zu Kosten, Dauer und Ablauf der Sanierung" },
+  "/faq-preise": { image: "/images/sanierung_preiskalkulation.webp", alt: "FAQ und Preise Sanierung München - transparente Kostenübersicht für alle Sanierungsleistungen 2026" },
+};
+
+function getPageOgImage(path: string, baseURL: string): string {
+  const entry = pageOgImageMap[path];
+  if (entry) return `${baseURL}${entry.image}`;
+  if (path.startsWith("/muenchen-")) return `${baseURL}/images/fachhandwerker_meisterbetriebe.webp`;
+  return `${baseURL}/images/komplettsanierung_vorher_nachher.webp`;
+}
+
+function getPageOgImageAlt(path: string): string {
+  const entry = pageOgImageMap[path];
+  if (entry) return entry.alt;
+  if (path.startsWith("/muenchen-")) {
+    const district = path.replace("/muenchen-", "").replace(/-/g, " ");
+    return `Sanierung ${district} München - lokaler Meisterbetrieb für Badsanierung und Komplettsanierung mit Festpreisgarantie`;
+  }
+  return "089-Sanierer München - professionelle Komplettsanierung mit Festpreisgarantie und 5 Jahre Gewährleistung";
+}
+
 function generateStaticHTML(path: string, query: Record<string, string>): string {
   const baseURL = "https://089-sanierer.de";
   const service = query.service || "";
@@ -1027,7 +1069,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta property="og:description" content="${description}">
   <meta property="og:url" content="${baseURL}${path}">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:image" content="${baseURL}/og-image.jpg">
+  <meta property="og:image" content="${getPageOgImage(path, baseURL)}">
+  <meta property="og:image:alt" content="${getPageOgImageAlt(path)}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   
@@ -1035,6 +1078,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${description}">
+  <meta name="twitter:image:alt" content="${getPageOgImageAlt(path)}">
   
   <!-- Freshness Signals -->
   <meta property="og:updated_time" content="2026-02-07T00:00:00+01:00">
