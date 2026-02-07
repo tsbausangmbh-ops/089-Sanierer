@@ -68,20 +68,20 @@ function CallbackRequest() {
       return apiRequest("POST", "/api/appointments", {
         ...data,
         preferredDate: format(new Date(), "yyyy-MM-dd"),
-        preferredTime: "R\u00fcckruf erbeten",
+        preferredTime: "Rückruf erbeten",
       });
     },
     onSuccess: () => {
       setSubmitted(true);
       toast({
-        title: "R\u00fcckruf angefordert",
-        description: "Wir rufen Sie schnellstm\u00f6glich zur\u00fcck.",
+        title: "Rückruf angefordert",
+        description: "Wir rufen Sie schnellstmöglich zurück.",
       });
     },
     onError: () => {
       toast({
         title: "Fehler",
-        description: "R\u00fcckruf konnte nicht angefordert werden. Bitte versuchen Sie es erneut.",
+        description: "Rückruf konnte nicht angefordert werden. Bitte versuchen Sie es erneut.",
         variant: "destructive",
       });
     },
@@ -92,7 +92,7 @@ function CallbackRequest() {
     if (!privacyAccepted) {
       toast({
         title: "Datenschutz",
-        description: "Bitte akzeptieren Sie die Datenschutzerkl\u00e4rung.",
+        description: "Bitte akzeptieren Sie die Datenschutzerklärung.",
         variant: "destructive",
       });
       return;
@@ -107,17 +107,17 @@ function CallbackRequest() {
           <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
           </div>
-          <h3 className="text-xl font-bold mb-2">R\u00fcckruf angefordert!</h3>
+          <h3 className="text-xl font-bold mb-2">Rückruf angefordert!</h3>
           <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4" data-testid="text-callback-success-badge">
             <Phone className="w-4 h-4" />
             Wir melden uns bei Ihnen
           </div>
           <p className="text-muted-foreground mb-4">
-            Unser Team ruft Sie <strong>schnellstm\u00f6glich</strong> unter der angegebenen Nummer zur\u00fcck.
+            Unser Team ruft Sie <strong>schnellstmöglich</strong> unter der angegebenen Nummer zurück.
           </p>
           <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
             <Clock className="w-4 h-4" />
-            \u00dcbliche R\u00fcckrufzeit: innerhalb von 2 Stunden (Mo-Fr)
+            Übliche Rückrufzeit: innerhalb von 2 Stunden (Mo-Fr)
           </div>
         </CardContent>
       </Card>
@@ -129,10 +129,10 @@ function CallbackRequest() {
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center gap-2">
           <PhoneCall className="w-5 h-5 text-primary" />
-          R\u00fcckruf anfordern
+          Rückruf anfordern
         </CardTitle>
         <p className="text-sm text-muted-foreground mt-1">
-          Wir rufen Sie kostenlos zur\u00fcck \u2013 schnell und unkompliziert.
+          Wir rufen Sie kostenlos zurück – schnell und unkompliziert.
         </p>
       </CardHeader>
       <CardContent>
@@ -162,7 +162,7 @@ function CallbackRequest() {
               <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 id="cb-name"
-                placeholder="Ihr vollst\u00e4ndiger Name"
+                placeholder="Ihr vollständiger Name"
                 value={formData.name}
                 onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 className="pl-10"
@@ -212,7 +212,7 @@ function CallbackRequest() {
               <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 id="cb-address"
-                placeholder="Stra\u00dfe, PLZ Ort"
+                placeholder="Straße, PLZ Ort"
                 value={formData.address}
                 onChange={(e) => setFormData((prev) => ({ ...prev, address: e.target.value }))}
                 className="pl-10"
@@ -245,7 +245,7 @@ function CallbackRequest() {
               data-testid="checkbox-privacy-callback"
             />
             <Label htmlFor="privacy-callback" className="text-sm font-normal leading-relaxed cursor-pointer">
-              Ich stimme der Verarbeitung meiner Daten gem\u00e4\u00df der <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerkl\u00e4rung</Link> zu. *
+              Ich stimme der Verarbeitung meiner Daten gemäß der <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link> zu. *
             </Label>
           </div>
 
@@ -263,13 +263,13 @@ function CallbackRequest() {
             ) : (
               <>
                 <PhoneCall className="w-4 h-4 mr-2" />
-                Jetzt R\u00fcckruf anfordern
+                Jetzt Rückruf anfordern
               </>
             )}
           </Button>
 
           <p className="text-xs text-muted-foreground text-center">
-            Kostenlos und unverbindlich. R\u00fcckruf i.d.R. innerhalb von 2 Stunden (Mo-Fr).
+            Kostenlos und unverbindlich. Rückruf i.d.R. innerhalb von 2 Stunden (Mo-Fr).
           </p>
         </form>
       </CardContent>
@@ -284,8 +284,8 @@ export default function TerminPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
         title="Sanierung München Termin | Kostenlose Beratung vor Ort"
-        description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen oder R\u00fcckruf anfordern. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8:00-16:30 Uhr."
-        keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos, R\u00fcckruf Sanierung München, Badsanierung München Termin online buchen, Komplettsanierung Beratungstermin München, kostenlose Besichtigung Sanierung München, Handwerker München Termin vereinbaren, Renovierung München Vor-Ort-Termin, Sanierung München Kalender online, 089-Sanierer Terminbuchung, Sanierung München 24h R\u00fcckmeldung"
+        description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen oder Rückruf anfordern. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8:00-16:30 Uhr."
+        keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos, Rückruf Sanierung München, Badsanierung München Termin online buchen, Komplettsanierung Beratungstermin München, kostenlose Besichtigung Sanierung München, Handwerker München Termin vereinbaren, Renovierung München Vor-Ort-Termin, Sanierung München Kalender online, 089-Sanierer Terminbuchung, Sanierung München 24h Rückmeldung"
         canonicalPath="/termin"
       />
       <SiteHeader />
@@ -327,7 +327,7 @@ export default function TerminPage() {
               <Phone className="w-4 h-4" />
               089 444 438 872
             </a>
-            <p className="mt-1">Mo-Fr 08:00\u201316:30 Uhr</p>
+            <p className="mt-1">Mo-Fr 08:00–16:30 Uhr</p>
           </div>
         </div>
       </main>
