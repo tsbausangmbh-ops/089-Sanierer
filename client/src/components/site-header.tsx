@@ -32,7 +32,7 @@ export function SiteHeader() {
       >
         Zum Hauptinhalt springen
       </a>
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div className="w-full px-4 lg:px-8">
         <div className="h-16 flex items-center justify-between gap-4">
           <Link href="/" aria-label="089-Sanierer Startseite">
             <div className="flex items-center gap-2 cursor-pointer">
