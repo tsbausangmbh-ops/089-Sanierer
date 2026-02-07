@@ -44,7 +44,7 @@ export function SiteHeader() {
                 height="40"
                 loading="eager"
               />
-              <div className="hidden sm:flex flex-col">
+              <div className="flex flex-col">
                 <span className="font-bold text-base leading-tight">089-Sanierer</span>
                 <span className="text-xs text-white/70 leading-tight">Komplettsanierungen</span>
               </div>
