@@ -317,14 +317,15 @@ async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
 
 async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   const serviceLabel = serviceLabels[appointment.service] || appointment.service;
-  
+  const isCallback = appointment.preferredTime === "Rückruf erbeten";
+
   const customerHtml = `
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ihre Terminanfrage bei 089-Sanierer</title>
+  <title>${isCallback ? "Ihre Rückruf-Anfrage bei 089-Sanierer" : "Ihre Terminanfrage bei 089-Sanierer"}</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f4f1ec; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
   <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f1ec;">
@@ -344,24 +345,24 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
           <tr>
             <td style="background-color: #ffffff; padding: 40px;">
 
-              <h2 style="margin: 0 0 8px; font-size: 22px; color: #1a2e44; font-weight: 600;">Ihre Terminanfrage, ${appointment.name}!</h2>
-              <p style="margin: 0 0 24px; font-size: 15px; color: #555; line-height: 1.7;">Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen.</p>
+              <h2 style="margin: 0 0 8px; font-size: 22px; color: #1a2e44; font-weight: 600;">${isCallback ? `Wir rufen Sie zur\u00fcck, ${appointment.name}!` : `Ihre Terminanfrage, ${appointment.name}!`}</h2>
+              <p style="margin: 0 0 24px; font-size: 15px; color: #555; line-height: 1.7;">${isCallback ? "Vielen Dank f\u00fcr Ihre R\u00fcckruf-Anfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich schnellstm\u00f6glich bei Ihnen melden \u2013 in der Regel innerhalb von 2 Stunden (Mo\u2013Fr)." : "Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen."}</p>
 
               <!-- Termin-Box -->
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
                 <tr>
                   <td style="background-color: #f8f6f3; border-left: 4px solid #c9944a; padding: 20px 24px; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0 0 4px; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">Ihre Terminanfrage</p>
+                    <p style="margin: 0 0 4px; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">${isCallback ? "Ihre R\u00fcckruf-Anfrage" : "Ihre Terminanfrage"}</p>
                     <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Leistung:</strong> ${serviceLabel}</p>
-                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
-                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>
+                    ${isCallback ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>R\u00fcckruf an:</strong> ${appointment.phone}</p>` : `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
+                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>`}
                     ${appointment.address ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
                     ${appointment.message ? `<p style="margin: 0; font-size: 14px; color: #666; font-style: italic;">\u201e${appointment.message}\u201c</p>` : ""}
                   </td>
                 </tr>
               </table>
 
-              <p style="margin: 0 0 20px; font-size: 15px; color: #555; line-height: 1.7;">Wir best\u00e4tigen Ihren Termin schnellstm\u00f6glich telefonisch oder per E-Mail. Sollten Sie vorher noch Fragen haben, erreichen Sie uns jederzeit.</p>
+              <p style="margin: 0 0 20px; font-size: 15px; color: #555; line-height: 1.7;">${isCallback ? "Halten Sie bitte Ihr Telefon bereit. Sollten Sie uns vorher erreichen wollen, k\u00f6nnen Sie uns jederzeit kontaktieren." : "Wir best\u00e4tigen Ihren Termin schnellstm\u00f6glich telefonisch oder per E-Mail. Sollten Sie vorher noch Fragen haben, erreichen Sie uns jederzeit."}</p>
 
               <!-- Kontakt -->
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: #1a2e44; border-radius: 8px; overflow: hidden;">
@@ -412,7 +413,7 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
       <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
 
         <tr><td style="background:linear-gradient(135deg,#92600a,#c9944a);padding:28px 32px;border-radius:10px 10px 0 0;">
-          <h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">Neue Terminanfrage</h1>
+          <h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">${isCallback ? "R\u00fcckruf-Anfrage" : "Neue Terminanfrage"}</h1>
           <p style="margin:0;font-size:14px;color:#fff9ef;">${serviceLabel} \u2013 ${appointment.name}</p>
         </td></tr>
 
@@ -426,17 +427,17 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
             ${appointment.address ? `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Adresse</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${appointment.address}</td></tr>` : ''}
           </table>
 
-          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Termindetails</p>
+          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">${isCallback ? "R\u00fcckruf-Details" : "Termindetails"}</p>
           <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
             <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;width:35%;">Service</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${serviceLabel}</td></tr>
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Wunschtermin</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatDateDE(appointment.preferredDate)}</td></tr>
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Uhrzeit</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatTimeDE(appointment.preferredTime)} Uhr</td></tr>
+            ${isCallback ? `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Typ</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;color:#c9944a;">R\u00fcckruf erbeten</td></tr>` : `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Wunschtermin</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatDateDE(appointment.preferredDate)}</td></tr>
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Uhrzeit</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatTimeDE(appointment.preferredTime)} Uhr</td></tr>`}
           </table>
 
           ${appointment.message ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Nachricht</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ''}
 
           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
-            <tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">Bitte den Kunden zeitnah kontaktieren, um den Termin zu best\u00e4tigen.</td></tr>
+            <tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">${isCallback ? "Bitte den Kunden schnellstm\u00f6glich zur\u00fcckrufen!" : "Bitte den Kunden zeitnah kontaktieren, um den Termin zu best\u00e4tigen."}</td></tr>
           </table>
 
         </td></tr>
@@ -458,13 +459,13 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
       smtp.sendMail({
         from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
         to: appointment.email,
-        subject: `Ihre Terminanfrage bei 089-Sanierer \u2013 ${serviceLabel}`,
+        subject: isCallback ? `Ihr R\u00fcckruf-Wunsch bei 089-Sanierer \u2013 ${serviceLabel}` : `Ihre Terminanfrage bei 089-Sanierer \u2013 ${serviceLabel}`,
         html: customerHtml,
       }),
       smtp.sendMail({
-        from: `"089-Sanierer Bot" <${process.env.SMTP_FROM_EMAIL}>`,
+        from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
         to: process.env.SMTP_FROM_EMAIL,
-        subject: `Neue Terminanfrage: ${appointment.name} - ${serviceLabel}`,
+        subject: isCallback ? `[R\u00dcCKRUF] ${appointment.name} \u2013 ${serviceLabel}` : `Neue Terminanfrage: ${appointment.name} \u2013 ${serviceLabel}`,
         html: companyHtml,
       })
     ]);
