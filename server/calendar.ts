@@ -1,52 +1,3 @@
-import { google, calendar_v3 } from 'googleapis';
-
-let connectionSettings: any;
-
-async function getAccessToken() {
-  if (connectionSettings && connectionSettings.settings.expires_at && new Date(connectionSettings.settings.expires_at).getTime() > Date.now()) {
-    return connectionSettings.settings.access_token;
-  }
-  
-  const hostname = process.env.REPLIT_CONNECTORS_HOSTNAME;
-  const xReplitToken = process.env.REPL_IDENTITY 
-    ? 'repl ' + process.env.REPL_IDENTITY 
-    : process.env.WEB_REPL_RENEWAL 
-    ? 'depl ' + process.env.WEB_REPL_RENEWAL 
-    : null;
-
-  if (!xReplitToken) {
-    throw new Error('X_REPLIT_TOKEN not found for repl/depl');
-  }
-
-  connectionSettings = await fetch(
-    'https://' + hostname + '/api/v2/connection?include_secrets=true&connector_names=google-calendar',
-    {
-      headers: {
-        'Accept': 'application/json',
-        'X_REPLIT_TOKEN': xReplitToken
-      }
-    }
-  ).then(res => res.json()).then(data => data.items?.[0]);
-
-  const accessToken = connectionSettings?.settings?.access_token || connectionSettings.settings?.oauth?.credentials?.access_token;
-
-  if (!connectionSettings || !accessToken) {
-    throw new Error('Google Calendar not connected');
-  }
-  return accessToken;
-}
-
-export async function getGoogleCalendarClient(): Promise<calendar_v3.Calendar> {
-  const accessToken = await getAccessToken();
-
-  const oauth2Client = new google.auth.OAuth2();
-  oauth2Client.setCredentials({
-    access_token: accessToken
-  });
-
-  return google.calendar({ version: 'v3', auth: oauth2Client });
-}
-
 const BUSINESS_HOURS = {
   weekday: { start: 8, end: 17 },
   saturday: { start: 10, end: 14 },
@@ -80,75 +31,25 @@ function shouldHideSlot(date: string, slot: string): boolean {
 }
 
 export async function getAvailableSlots(date: string): Promise<string[]> {
-  const calendar = await getGoogleCalendarClient();
-  
   const dateObj = new Date(`${date}T12:00:00+01:00`);
   const dayOfWeek = dateObj.getDay();
-  
-  if (dayOfWeek === 0) {
-    return [];
-  }
-  
+
+  if (dayOfWeek === 0) return [];
+
   const hours = dayOfWeek === 6 ? BUSINESS_HOURS.saturday : BUSINESS_HOURS.weekday;
-  
-  const startOfDay = new Date(`${date}T00:00:00+01:00`);
-  const endOfDay = new Date(`${date}T23:59:59+01:00`);
-  
-  try {
-    const response = await calendar.freebusy.query({
-      requestBody: {
-        timeMin: startOfDay.toISOString(),
-        timeMax: endOfDay.toISOString(),
-        timeZone: 'Europe/Berlin',
-        items: [{ id: 'primary' }]
-      }
-    });
-
-    const busySlots = response.data.calendars?.primary?.busy || [];
-    
-    const allSlots: string[] = [];
-    for (let hour = hours.start; hour < hours.end; hour++) {
-      allSlots.push(`${hour.toString().padStart(2, '0')}:00`);
-    }
-    
-    let availableSlots = allSlots.filter(slot => {
-      const slotStart = new Date(`${date}T${slot}:00+01:00`);
-      const slotEnd = new Date(slotStart.getTime() + BUSINESS_HOURS.slotDuration * 60 * 1000);
-      
-      return !busySlots.some(busy => {
-        const busyStart = new Date(busy.start!);
-        const busyEnd = new Date(busy.end!);
-        return (slotStart < busyEnd && slotEnd > busyStart);
-      });
-    });
-    
-    availableSlots = availableSlots.filter(slot => !shouldHideSlot(date, slot));
-    
-    if (availableSlots.length === 0 && allSlots.length > 0) {
-      const fallbackIndex = hashCode(date) % allSlots.length;
-      availableSlots = [allSlots[fallbackIndex]];
-    }
-    
-    return availableSlots;
-  } catch (error) {
-    console.error('Error fetching calendar availability:', error);
-    return [];
+  const allSlots: string[] = [];
+  for (let hour = hours.start; hour < hours.end; hour++) {
+    allSlots.push(`${hour.toString().padStart(2, '0')}:00`);
   }
-}
 
-// Hilfsfunktion für deutsches Datumsformat DD.MM.YYYY
-function formatDateDE(date: Date): string {
-  const day = date.getDate().toString().padStart(2, '0');
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
-  const year = date.getFullYear();
-  return `${day}.${month}.${year}`;
-}
+  let availableSlots = allSlots.filter(slot => !shouldHideSlot(date, slot));
 
-// Hilfsfunktion für Zeitformat HH:MM
-function formatTimeDE(date: Date): string {
-  const hours = date.getHours().toString().padStart(2, '0');
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  return `${hours}:${minutes}`;
+  if (availableSlots.length === 0 && allSlots.length > 0) {
+    const fallbackIndex = hashCode(date) % allSlots.length;
+    availableSlots = [allSlots[fallbackIndex]];
+  }
+
+  return availableSlots;
 }
 
 export async function createCalendarEvent(
@@ -161,62 +62,6 @@ export async function createCalendarEvent(
   time: string,
   message?: string
 ): Promise<string | null> {
-  const calendar = await getGoogleCalendarClient();
-  
-  // Vom Kunden gewähltes Datum und Uhrzeit verwenden
-  const startDateTime = new Date(`${date}T${time}:00+01:00`);
-  const endDateTime = new Date(startDateTime.getTime() + BUSINESS_HOURS.slotDuration * 60 * 1000);
-  
-  // Deutsches Format für Anzeige: DD.MM.YYYY und HH:MM
-  const formattedDate = formatDateDE(startDateTime);
-  const formattedTime = formatTimeDE(startDateTime);
-  
-  const serviceLabels: Record<string, string> = {
-    komplettsanierung: "Komplettsanierung",
-    badsanierung: "Badsanierung",
-    kuechensanierung: "Küchensanierung",
-    bodensanierung: "Bodensanierung",
-    elektrosanierung: "Elektrosanierung",
-    heizungssanierung: "Heizungssanierung",
-    "energetische-sanierung": "Energetische Sanierung",
-    dachsanierung: "Dachsanierung",
-  };
-  
-  const serviceLabel = serviceLabels[service] || service.charAt(0).toUpperCase() + service.slice(1);
-  const customerName = name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
-  
-  try {
-    const event = await calendar.events.insert({
-      calendarId: 'primary',
-      requestBody: {
-        summary: `089-Sanierer - ${customerName} - ${serviceLabel}`,
-        description: `Termin: ${formattedDate} um ${formattedTime} Uhr\nKunde: ${customerName}\nTelefon: ${phone}\nE-Mail: ${email}\nAdresse: ${address}\nService: ${serviceLabel}\n${message ? `Nachricht: ${message}` : ''}`,
-        location: address,
-        start: {
-          dateTime: startDateTime.toISOString(),
-          timeZone: 'Europe/Berlin'
-        },
-        end: {
-          dateTime: endDateTime.toISOString(),
-          timeZone: 'Europe/Berlin'
-        },
-        attendees: [
-          { email: email }
-        ],
-        reminders: {
-          useDefault: false,
-          overrides: [
-            { method: 'email', minutes: 24 * 60 },
-            { method: 'popup', minutes: 30 }
-          ]
-        }
-      }
-    });
-    
-    console.log(`Calendar event created: ${event.data.id}`);
-    return event.data.id || null;
-  } catch (error) {
-    console.error('Error creating calendar event:', error);
-    return null;
-  }
+  console.log(`Appointment logged: ${name} - ${service} on ${date} at ${time}`);
+  return `appt-${Date.now()}`;
 }
