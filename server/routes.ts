@@ -98,7 +98,7 @@ function emailHeader(gradientFrom: string, gradientTo: string) {
 <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
 <tr><td style="background:linear-gradient(135deg,${gradientFrom} 0%,${gradientTo} 100%);padding:40px 40px 32px;border-radius:12px 12px 0 0;text-align:center;">
 <h1 style="margin:0 0 4px;font-size:28px;font-weight:700;color:#ffffff;letter-spacing:1px;">089-Sanierer</h1>
-<p style="margin:0;font-size:13px;color:#b8cce0;letter-spacing:2px;text-transform:uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
+<p style="margin:0;font-size:13px;color:rgba(255,255,255,0.85);letter-spacing:2px;text-transform:uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
 </td></tr>
 <tr><td style="background-color:#ffffff;padding:40px;">`;
 }
