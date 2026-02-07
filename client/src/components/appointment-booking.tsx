@@ -278,7 +278,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                           key={time}
                           variant="ghost"
                           disabled
-                          className="flex items-center gap-1 line-through opacity-40"
+                          className="flex items-center gap-1 line-through bg-red-50 text-red-400 border border-red-200 dark:bg-red-950/20 dark:text-red-400/60 dark:border-red-900/30"
                           data-testid={`button-time-booked-${time.replace(":", "")}`}
                         >
                           <Clock className="w-3 h-3" />
@@ -294,7 +294,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                     <span>Verfügbar</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <div className="w-3 h-3 rounded-sm bg-muted opacity-40 line-through" />
+                    <div className="w-3 h-3 rounded-sm bg-red-50 border border-red-200 dark:bg-red-950/20 dark:border-red-900/30" />
                     <span>Belegt</span>
                   </div>
                 </div>
