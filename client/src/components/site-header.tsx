@@ -51,7 +51,7 @@ export function SiteHeader() {
               </div>
             </div>
           </Link>
-          <div className="flex min-[1100px]:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             <Button 
               size="icon" 
               variant="ghost" 
@@ -70,7 +70,7 @@ export function SiteHeader() {
               </Button>
             </Link>
           </div>
-          <nav className="hidden min-[1100px]:flex items-center gap-1" aria-label="Hauptnavigation">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10" data-testid="dropdown-leistungen">
@@ -133,7 +133,7 @@ export function SiteHeader() {
       {mobileMenuOpen && (
         <nav 
           id="mobile-menu"
-          className="min-[1100px]:hidden bg-[hsl(220,80%,12%)] border-t border-white/10"
+          className="lg:hidden bg-[hsl(220,80%,12%)] border-t border-white/10"
           aria-label="Mobile Navigation"
         >
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
