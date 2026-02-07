@@ -135,12 +135,15 @@ function selectBusySlots(allSlots: string[], date: string): Set<string> {
 }
 
 export async function getAvailableSlots(date: string): Promise<string[]> {
+  const result = await getAllSlots(date);
+  return result.available;
+}
+
+export async function getAllSlots(date: string): Promise<{ available: string[]; booked: string[] }> {
   const dateObj = new Date(`${date}T12:00:00+01:00`);
   const dayOfWeek = dateObj.getDay();
 
-  if (dayOfWeek === 0) return [];
-
-  if (isFullyBookedDay(date)) return [];
+  if (dayOfWeek === 0) return { available: [], booked: [] };
 
   const hours = dayOfWeek === 6 ? BUSINESS_HOURS.saturday : BUSINESS_HOURS.weekday;
   const allSlots: string[] = [];
@@ -148,8 +151,11 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
     allSlots.push(`${hour.toString().padStart(2, '0')}:00`);
   }
 
+  if (isFullyBookedDay(date)) return { available: [], booked: allSlots };
+
   const busySlots = selectBusySlots(allSlots, date);
   let availableSlots = allSlots.filter(slot => !busySlots.has(slot));
+  const bookedSlots = allSlots.filter(slot => busySlots.has(slot));
 
   if (availableSlots.length === 0 && allSlots.length > 0) {
     const fallbackSeed = hashSeed(`fallback-${date}`);
@@ -157,7 +163,7 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
     availableSlots = [allSlots[fallbackIndex]];
   }
 
-  return availableSlots;
+  return { available: availableSlots, booked: bookedSlots };
 }
 
 export async function createCalendarEvent(

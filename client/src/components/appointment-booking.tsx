@@ -84,7 +84,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
     ...(bookedNext?.bookedDays || []),
   ]);
 
-  const { data: availabilityData, isLoading: loadingSlots } = useQuery<{ date: string; slots: string[] }>({
+  const { data: availabilityData, isLoading: loadingSlots } = useQuery<{ date: string; slots: string[]; bookedSlots: string[] }>({
     queryKey: ["/api/calendar/availability", dateString],
     queryFn: async () => {
       const res = await fetch(`/api/calendar/availability?date=${dateString}`);
@@ -254,19 +254,50 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                 <span className="ml-2 text-muted-foreground">Lade verfügbare Zeiten...</span>
               </div>
             ) : availabilityData?.slots && availabilityData.slots.length > 0 ? (
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-                {availabilityData.slots.map((time) => (
-                  <Button
-                    key={time}
-                    variant={selectedTime === time ? "default" : "outline"}
-                    className="flex items-center gap-1"
-                    onClick={() => handleTimeSelect(time)}
-                    data-testid={`button-time-${time.replace(":", "")}`}
-                  >
-                    <Clock className="w-3 h-3" />
-                    {time}
-                  </Button>
-                ))}
+              <div>
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                  {(() => {
+                    const allTimes = [
+                      ...(availabilityData.slots || []).map(t => ({ time: t, available: true })),
+                      ...(availabilityData.bookedSlots || []).map(t => ({ time: t, available: false })),
+                    ].sort((a, b) => a.time.localeCompare(b.time));
+                    return allTimes.map(({ time, available }) =>
+                      available ? (
+                        <Button
+                          key={time}
+                          variant={selectedTime === time ? "default" : "outline"}
+                          className="flex items-center gap-1"
+                          onClick={() => handleTimeSelect(time)}
+                          data-testid={`button-time-${time.replace(":", "")}`}
+                        >
+                          <Clock className="w-3 h-3" />
+                          {time}
+                        </Button>
+                      ) : (
+                        <Button
+                          key={time}
+                          variant="ghost"
+                          disabled
+                          className="flex items-center gap-1 line-through opacity-40"
+                          data-testid={`button-time-booked-${time.replace(":", "")}`}
+                        >
+                          <Clock className="w-3 h-3" />
+                          {time}
+                        </Button>
+                      )
+                    );
+                  })()}
+                </div>
+                <div className="flex items-center justify-center gap-4 mt-3 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3 h-3 rounded-sm border border-primary/30 bg-primary/10" />
+                    <span>Verfügbar</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3 h-3 rounded-sm bg-muted opacity-40 line-through" />
+                    <span>Belegt</span>
+                  </div>
+                </div>
               </div>
             ) : (
               <div className="text-center py-8 text-muted-foreground">

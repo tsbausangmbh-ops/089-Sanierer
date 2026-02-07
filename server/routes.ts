@@ -6,7 +6,7 @@ import { fromZodError } from "zod-validation-error";
 import { setupAuth, requireAuth } from "./auth";
 import OpenAI from "openai";
 import nodemailer from "nodemailer";
-import { getAvailableSlots, createCalendarEvent, getFullyBookedDays } from "./calendar";
+import { getAvailableSlots, getAllSlots, createCalendarEvent, getFullyBookedDays } from "./calendar";
 
 const serviceLabels: Record<string, string> = {
   komplettsanierung: "Komplettsanierung",
@@ -642,8 +642,8 @@ export async function registerRoutes(
         return res.status(400).json({ error: "Ungültiges Datumsformat" });
       }
       
-      const slots = await getAvailableSlots(date);
-      res.json({ date, slots });
+      const { available, booked } = await getAllSlots(date as string);
+      res.json({ date, slots: available, bookedSlots: booked });
     } catch (error) {
       console.error("Calendar availability error:", error);
       res.status(500).json({ error: "Kalender nicht verfügbar" });
