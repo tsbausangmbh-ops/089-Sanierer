@@ -312,7 +312,7 @@ export default function TerminPage() {
               data-testid="button-mode-rueckruf"
             >
               <PhoneCall className="w-4 h-4 mr-2" />
-              R\u00fcckruf erbitten
+              Rückruf anfordern
             </Button>
           </div>
 
