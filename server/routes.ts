@@ -87,150 +87,126 @@ async function getTransporter() {
   }
 }
 
-async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
-  const serviceLabel = serviceLabels[lead.service] || lead.service;
-  
-  const htmlContent = `
+function emailHeader(gradientFrom: string, gradientTo: string) {
+  return `
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ihre Anfrage bei 089-Sanierer</title>
-</head>
-<body style="margin: 0; padding: 0; background-color: #f4f1ec; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
-  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f1ec;">
-    <tr>
-      <td align="center" style="padding: 40px 16px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%;">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background-color:#f4f1ec;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f4f1ec;">
+<tr><td align="center" style="padding:40px 16px;">
+<table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
+<tr><td style="background:linear-gradient(135deg,${gradientFrom} 0%,${gradientTo} 100%);padding:40px 40px 32px;border-radius:12px 12px 0 0;text-align:center;">
+<h1 style="margin:0 0 4px;font-size:28px;font-weight:700;color:#ffffff;letter-spacing:1px;">089-Sanierer</h1>
+<p style="margin:0;font-size:13px;color:#b8cce0;letter-spacing:2px;text-transform:uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
+</td></tr>
+<tr><td style="background-color:#ffffff;padding:40px;">`;
+}
 
-          <!-- Header -->
-          <tr>
-            <td style="background: linear-gradient(135deg, #1a2e44 0%, #2a4a6b 100%); padding: 40px 40px 32px; border-radius: 12px 12px 0 0; text-align: center;">
-              <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">089-Sanierer</h1>
-              <p style="margin: 0; font-size: 13px; color: #b8cce0; letter-spacing: 2px; text-transform: uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
-            </td>
-          </tr>
+function emailContactBlock() {
+  return `<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#1a2e44;border-radius:8px;overflow:hidden;">
+<tr><td style="padding:20px 24px;">
+<p style="margin:0 0 4px;font-size:11px;color:#b8cce0;text-transform:uppercase;letter-spacing:1px;">Direkte Fragen?</p>
+<p style="margin:0 0 4px;font-size:15px;color:#ffffff;">Telefon: <a href="tel:+4915212274043" style="color:#c9944a;text-decoration:none;font-weight:600;">0152 122 740 43</a></p>
+<p style="margin:0;font-size:15px;color:#ffffff;">E-Mail: <a href="mailto:info@089-sanierer.de" style="color:#c9944a;text-decoration:none;font-weight:600;">info@089-sanierer.de</a></p>
+</td></tr></table>`;
+}
 
-          <!-- Body -->
-          <tr>
-            <td style="background-color: #ffffff; padding: 40px;">
+function emailFooter() {
+  return `</td></tr>
+<tr><td style="background-color:#eae6df;padding:24px 40px;border-radius:0 0 12px 12px;text-align:center;">
+<p style="margin:0 0 4px;font-size:13px;color:#777;font-weight:600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
+<p style="margin:0 0 12px;font-size:12px;color:#999;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
+<p style="margin:0;font-size:11px;color:#aaa;line-height:1.6;">
+<a href="https://089-sanierer.de" style="color:#1a2e44;text-decoration:none;">www.089-sanierer.de</a> &nbsp;\u00b7&nbsp;
+<a href="https://089-sanierer.de/datenschutz" style="color:#1a2e44;text-decoration:none;">Datenschutz</a> &nbsp;\u00b7&nbsp;
+<a href="https://089-sanierer.de/impressum" style="color:#1a2e44;text-decoration:none;">Impressum</a>
+</p></td></tr>
+</table></td></tr></table></body></html>`;
+}
 
-              <h2 style="margin: 0 0 8px; font-size: 22px; color: #1a2e44; font-weight: 600;">Guten Tag, ${lead.name}!</h2>
-              <p style="margin: 0 0 24px; font-size: 15px; color: #555; line-height: 1.7;">Vielen Dank f\u00fcr Ihr Vertrauen. Wir haben Ihre Anfrage f\u00fcr <strong style="color: #1a2e44;">${serviceLabel}</strong> erhalten und Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden.</p>
+function emailStep(num: number, text: string) {
+  return `<tr><td style="padding:14px 16px;background:#f8f6f3;border-radius:8px;">
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td width="40" valign="top"><div style="width:32px;height:32px;background:#1a2e44;color:#fff;border-radius:50%;text-align:center;line-height:32px;font-size:14px;font-weight:700;">${num}</div></td>
+<td style="padding-left:12px;font-size:15px;color:#333;line-height:1.5;">${text}</td>
+</tr></table></td></tr><tr><td style="height:8px;"></td></tr>`;
+}
 
-              <!-- Anfrage-Box -->
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
-                <tr>
-                  <td style="background-color: #f8f6f3; border-left: 4px solid #c9944a; padding: 20px 24px; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0 0 4px; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">Ihre Anfrage</p>
-                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Leistung:</strong> ${serviceLabel}</p>
-                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Standort:</strong> ${lead.postalCode}${lead.city ? ` ${lead.city}` : ""}</p>
-                    ${lead.propertyType ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Objekttyp:</strong> ${lead.propertyType === 'wohnung' ? 'Wohnung' : lead.propertyType === 'einfamilienhaus' ? 'Einfamilienhaus' : lead.propertyType === 'mehrfamilienhaus' ? 'Mehrfamilienhaus' : lead.propertyType === 'gewerbe' ? 'Gewerbe' : lead.propertyType}</p>` : ""}
-                    ${lead.isUrgent ? '<p style="margin: 0; font-size: 14px; color: #c9944a; font-weight: 600;">Dringend</p>' : ""}
-                  </td>
-                </tr>
-              </table>
+function emailTrustBadges() {
+  return `<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+<tr><td align="center"><table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="padding:6px 14px;background:#eef3e8;border-radius:20px;font-size:12px;color:#4a7c29;font-weight:600;text-align:center;">98% Weiterempfehlung</td>
+<td style="width:8px;"></td>
+<td style="padding:6px 14px;background:#eef3e8;border-radius:20px;font-size:12px;color:#4a7c29;font-weight:600;text-align:center;">Festpreisgarantie</td>
+<td style="width:8px;"></td>
+<td style="padding:6px 14px;background:#eef3e8;border-radius:20px;font-size:12px;color:#4a7c29;font-weight:600;text-align:center;">5 Jahre Gew\u00e4hrleistung</td>
+</tr></table></td></tr></table>`;
+}
 
-              <!-- Steps -->
-              <h3 style="margin: 0 0 16px; font-size: 17px; color: #1a2e44; font-weight: 600;">So geht es weiter</h3>
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
-                <tr>
-                  <td style="padding: 14px 16px; background: #f8f6f3; border-radius: 8px; margin-bottom: 8px;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td width="40" valign="top"><div style="width: 32px; height: 32px; background: #1a2e44; color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 700;">1</div></td>
-                        <td style="padding-left: 12px; font-size: 15px; color: #333; line-height: 1.5;"><strong style="color: #1a2e44;">Innerhalb von 24 Stunden</strong> meldet sich Ihr pers\u00f6nlicher Projekt-Kurator telefonisch bei Ihnen.</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr><td style="height: 8px;"></td></tr>
-                <tr>
-                  <td style="padding: 14px 16px; background: #f8f6f3; border-radius: 8px;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td width="40" valign="top"><div style="width: 32px; height: 32px; background: #1a2e44; color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 700;">2</div></td>
-                        <td style="padding-left: 12px; font-size: 15px; color: #333; line-height: 1.5;">Gemeinsam besprechen wir Ihr Projekt, Ihre W\u00fcnsche und den <strong style="color: #1a2e44;">optimalen Zeitplan</strong>.</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr><td style="height: 8px;"></td></tr>
-                <tr>
-                  <td style="padding: 14px 16px; background: #f8f6f3; border-radius: 8px;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
-                      <tr>
-                        <td width="40" valign="top"><div style="width: 32px; height: 32px; background: #1a2e44; color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 700;">3</div></td>
-                        <td style="padding-left: 12px; font-size: 15px; color: #333; line-height: 1.5;">Sie erhalten ein <strong style="color: #1a2e44;">detailliertes Festpreis-Angebot</strong> \u2013 transparent, unverbindlich und ohne versteckte Kosten.</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
+async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
+  const serviceLabel = serviceLabels[lead.service] || lead.service;
+  const isContact = lead.service === "kontakt";
 
-              <!-- Trust Badges -->
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
-                <tr>
-                  <td align="center">
-                    <table role="presentation" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td style="padding: 6px 14px; background: #eef3e8; border-radius: 20px; font-size: 12px; color: #4a7c29; font-weight: 600; text-align: center;">98% Weiterempfehlung</td>
-                        <td style="width: 8px;"></td>
-                        <td style="padding: 6px 14px; background: #eef3e8; border-radius: 20px; font-size: 12px; color: #4a7c29; font-weight: 600; text-align: center;">Festpreisgarantie</td>
-                        <td style="width: 8px;"></td>
-                        <td style="padding: 6px 14px; background: #eef3e8; border-radius: 20px; font-size: 12px; color: #4a7c29; font-weight: 600; text-align: center;">5 Jahre Gew\u00e4hrleistung</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
+  let htmlContent: string;
 
-              <!-- Kontakt -->
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: #1a2e44; border-radius: 8px; overflow: hidden;">
-                <tr>
-                  <td style="padding: 20px 24px;">
-                    <p style="margin: 0 0 4px; font-size: 11px; color: #b8cce0; text-transform: uppercase; letter-spacing: 1px;">Direkte Fragen?</p>
-                    <p style="margin: 0 0 4px; font-size: 15px; color: #ffffff;">
-                      Telefon: <a href="tel:+4915212274043" style="color: #c9944a; text-decoration: none; font-weight: 600;">0152 122 740 43</a>
-                    </p>
-                    <p style="margin: 0; font-size: 15px; color: #ffffff;">
-                      E-Mail: <a href="mailto:info@089-sanierer.de" style="color: #c9944a; text-decoration: none; font-weight: 600;">info@089-sanierer.de</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
+  if (isContact) {
+    htmlContent = `${emailHeader("#2d5016", "#4a7c29")}
+<h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Vielen Dank f\u00fcr Ihre Nachricht, ${lead.name}!</h2>
+<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Wir haben Ihre Nachricht \u00fcber unser Kontaktformular erhalten. Unser Team wird sich <strong style="color:#1a2e44;">schnellstm\u00f6glich</strong> bei Ihnen melden \u2013 in der Regel innerhalb von 24 Stunden.</p>
 
-            </td>
-          </tr>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+<tr><td style="background-color:#f8f6f3;border-left:4px solid #4a7c29;padding:20px 24px;border-radius:0 8px 8px 0;">
+<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre Nachricht</p>
+${lead.description ? `<p style="margin:0 0 6px;font-size:14px;color:#333;line-height:1.6;font-style:italic;">\u201e${lead.description}\u201c</p>` : ""}
+${lead.phone ? `<p style="margin:0;font-size:14px;color:#666;">Telefon: ${lead.phone}</p>` : ""}
+</td></tr></table>
 
-          <!-- Footer -->
-          <tr>
-            <td style="background-color: #eae6df; padding: 24px 40px; border-radius: 0 0 12px 12px; text-align: center;">
-              <p style="margin: 0 0 4px; font-size: 13px; color: #777; font-weight: 600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
-              <p style="margin: 0 0 12px; font-size: 12px; color: #999;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
-              <p style="margin: 0; font-size: 11px; color: #aaa; line-height: 1.6;">
-                <a href="https://089-sanierer.de" style="color: #1a2e44; text-decoration: none;">www.089-sanierer.de</a> &nbsp;\u00b7&nbsp;
-                <a href="https://089-sanierer.de/datenschutz" style="color: #1a2e44; text-decoration: none;">Datenschutz</a> &nbsp;\u00b7&nbsp;
-                <a href="https://089-sanierer.de/impressum" style="color: #1a2e44; text-decoration: none;">Impressum</a>
-              </p>
-            </td>
-          </tr>
+<h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+${emailStep(1, "Wir lesen Ihre Nachricht und leiten sie an den richtigen Ansprechpartner weiter.")}
+${emailStep(2, "Unser Team meldet sich <strong style=\"color:#1a2e44;\">innerhalb von 24 Stunden</strong> per E-Mail oder Telefon bei Ihnen.")}
+${emailStep(3, "Bei konkreten Projektw\u00fcnschen vereinbaren wir gerne einen <strong style=\"color:#1a2e44;\">kostenlosen Vor-Ort-Termin</strong>.")}
+</table>
 
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-  `;
+${emailContactBlock()}
+${emailFooter()}`;
+  } else {
+    const propertyLabel = lead.propertyType === 'wohnung' ? 'Wohnung' : lead.propertyType === 'einfamilienhaus' ? 'Einfamilienhaus' : lead.propertyType === 'mehrfamilienhaus' ? 'Mehrfamilienhaus' : lead.propertyType === 'gewerbe' ? 'Gewerbe' : lead.propertyType;
+
+    htmlContent = `${emailHeader("#1a2e44", "#2a4a6b")}
+<h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Guten Tag, ${lead.name}!</h2>
+<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Vielen Dank f\u00fcr Ihr Vertrauen. Wir haben Ihre Sanierungsanfrage f\u00fcr <strong style="color:#1a2e44;">${serviceLabel}</strong> erhalten und Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden.</p>
+
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+<tr><td style="background-color:#f8f6f3;border-left:4px solid #c9944a;padding:20px 24px;border-radius:0 8px 8px 0;">
+<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre Sanierungsanfrage</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Leistung:</strong> ${serviceLabel}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Standort:</strong> ${lead.postalCode}${lead.city ? ` ${lead.city}` : ""}</p>
+${propertyLabel ? `<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Objekttyp:</strong> ${propertyLabel}</p>` : ""}
+${lead.isUrgent ? '<p style="margin:0;font-size:14px;color:#c9944a;font-weight:600;">Dringend</p>' : ""}
+</td></tr></table>
+
+<h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+${emailStep(1, "<strong style=\"color:#1a2e44;\">Innerhalb von 24 Stunden</strong> meldet sich Ihr pers\u00f6nlicher Projekt-Kurator telefonisch bei Ihnen.")}
+${emailStep(2, "Gemeinsam besprechen wir Ihr Projekt, Ihre W\u00fcnsche und den <strong style=\"color:#1a2e44;\">optimalen Zeitplan</strong>.")}
+${emailStep(3, "Sie erhalten ein <strong style=\"color:#1a2e44;\">detailliertes Festpreis-Angebot</strong> \u2013 transparent, unverbindlich und ohne versteckte Kosten.")}
+</table>
+
+${emailTrustBadges()}
+${emailContactBlock()}
+${emailFooter()}`;
+  }
 
   try {
     const smtp = await getTransporter();
     await smtp.sendMail({
       from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
       to: lead.email,
-      subject: `Ihre Anfrage bei 089-Sanierer \u2013 ${serviceLabel}`,
+      subject: isContact
+        ? `Ihre Nachricht an 089-Sanierer \u2013 Wir melden uns!`
+        : `Ihre Sanierungsanfrage bei 089-Sanierer \u2013 ${serviceLabel}`,
       html: htmlContent,
     });
     console.log(`Confirmation email sent to ${lead.email}`);
@@ -239,74 +215,101 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   }
 }
 
-async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
-  const serviceLabel = serviceLabels[lead.service] || lead.service;
-  const propertyLabels: Record<string, string> = { wohnung: "Wohnung", einfamilienhaus: "Einfamilienhaus", mehrfamilienhaus: "Mehrfamilienhaus", gewerbe: "Gewerbe" };
+function companyRow(label: string, value: string | null | undefined) {
+  if (!value) return "";
+  return `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;width:35%;vertical-align:top;">${label}</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${value}</td></tr>`;
+}
 
-  function row(label: string, value: string | null | undefined) {
-    if (!value) return "";
-    return `<tr><td style="padding: 10px 12px; font-size: 13px; color: #888; border-bottom: 1px solid #f0f0f0; width: 35%; vertical-align: top;">${label}</td><td style="padding: 10px 12px; font-size: 14px; color: #222; border-bottom: 1px solid #f0f0f0;">${value}</td></tr>`;
-  }
-
-  const htmlContent = `
+function companyEmailWrapper(headerGradient1: string, headerGradient2: string, urgentBanner: string, title: string, subtitle: string, bodyContent: string, footerInfo: string) {
+  return `
 <!DOCTYPE html>
 <html lang="de">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
 <body style="margin:0;padding:0;background:#f0ede8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#f0ede8;">
-    <tr><td align="center" style="padding:32px 16px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#f0ede8;">
+<tr><td align="center" style="padding:32px 16px;">
+<table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
+<tr><td style="background:linear-gradient(135deg,${headerGradient1},${headerGradient2});padding:28px 32px;border-radius:10px 10px 0 0;">
+${urgentBanner}
+<h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">${title}</h1>
+<p style="margin:0;font-size:14px;color:#fff9ef;">${subtitle}</p>
+</td></tr>
+<tr><td style="background:#fff;padding:28px 32px;">
+${bodyContent}
+</td></tr>
+<tr><td style="background:#eae6df;padding:16px 32px;border-radius:0 0 10px 10px;text-align:center;">
+<p style="margin:0;font-size:11px;color:#999;">${footerInfo}</p>
+</td></tr>
+</table></td></tr></table></body></html>`;
+}
 
-        <tr><td style="background:linear-gradient(135deg,#1a2e44,#2a4a6b);padding:28px 32px;border-radius:10px 10px 0 0;">
-          ${lead.isUrgent ? '<table role="presentation" width="100%" style="margin-bottom:12px;"><tr><td style="background:#dc2626;color:#fff;padding:6px 16px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">DRINGEND</td></tr></table>' : ''}
-          <h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">Neue Anfrage eingegangen</h1>
-          <p style="margin:0;font-size:14px;color:#b8cce0;">${serviceLabel} \u2013 ${lead.name}</p>
-        </td></tr>
+async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
+  const serviceLabel = serviceLabels[lead.service] || lead.service;
+  const propertyLabels: Record<string, string> = { wohnung: "Wohnung", einfamilienhaus: "Einfamilienhaus", mehrfamilienhaus: "Mehrfamilienhaus", gewerbe: "Gewerbe" };
+  const isContact = lead.service === "kontakt";
 
-        <tr><td style="background:#fff;padding:28px 32px;">
+  const urgentBanner = lead.isUrgent ? '<table role="presentation" width="100%" style="margin-bottom:12px;"><tr><td style="background:#dc2626;color:#fff;padding:6px 16px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">DRINGEND</td></tr></table>' : '';
 
-          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Kontaktdaten</p>
-          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
-            ${row("Name", lead.name)}
-            ${row("E-Mail", `<a href="mailto:${lead.email}" style="color:#1a2e44;text-decoration:none;">${lead.email}</a>`)}
-            ${row("Telefon", `<a href="tel:${lead.phone}" style="color:#1a2e44;text-decoration:none;">${lead.phone}</a>`)}
-            ${lead.mobile ? row("Mobil", `<a href="tel:${lead.mobile}" style="color:#1a2e44;text-decoration:none;">${lead.mobile}</a>`) : ''}
-          </table>
+  const contactSection = `<p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Kontaktdaten</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+${companyRow("Name", lead.name)}
+${companyRow("E-Mail", `<a href="mailto:${lead.email}" style="color:#1a2e44;text-decoration:none;">${lead.email}</a>`)}
+${companyRow("Telefon", lead.phone ? `<a href="tel:${lead.phone}" style="color:#1a2e44;text-decoration:none;">${lead.phone}</a>` : null)}
+${lead.mobile ? companyRow("Mobil", `<a href="tel:${lead.mobile}" style="color:#1a2e44;text-decoration:none;">${lead.mobile}</a>`) : ''}
+</table>`;
 
-          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Projektdetails</p>
-          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
-            ${row("Service", serviceLabel)}
-            ${row("Objekttyp", propertyLabels[lead.propertyType || ""] || lead.propertyType)}
-            ${row("PLZ / Stadt", `${lead.postalCode}${lead.city ? `, ${lead.city}` : ""}`)}
-            ${row("Adresse", lead.address)}
-            ${row("Zeitrahmen", lead.timeline)}
-            ${row("Qualit\u00e4t", lead.qualityLevel)}
-            ${row("Budget", lead.budgetRange)}
-          </table>
+  let bodyContent: string;
+  let title: string;
+  let gradient1: string;
+  let gradient2: string;
+  let subject: string;
 
-          ${lead.description ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Beschreibung</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;">${lead.description}</p>` : ''}
-          ${lead.additionalNotes ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Anmerkungen</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;">${lead.additionalNotes}</p>` : ''}
-          ${lead.serviceDetails ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Service-Details</p><pre style="margin:0 0 24px;font-size:12px;color:#333;background:#f8f6f3;padding:14px 16px;border-radius:6px;overflow-x:auto;white-space:pre-wrap;">${JSON.stringify(lead.serviceDetails, null, 2)}</pre>` : ''}
+  if (isContact) {
+    title = "Neue Kontaktanfrage";
+    gradient1 = "#2d5016";
+    gradient2 = "#4a7c29";
+    subject = `[KONTAKT] ${lead.name} \u2013 Nachricht \u00fcber Kontaktformular`;
 
-        </td></tr>
+    bodyContent = `${contactSection}
+${lead.description ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Nachricht des Kunden</p>
+<p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f0f7e8;border-left:4px solid #4a7c29;padding:14px 16px;border-radius:0 6px 6px 0;font-style:italic;">\u201e${lead.description}\u201c</p>` : ''}
+${lead.address ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Adresse</p><p style="margin:0 0 24px;font-size:14px;color:#333;">${lead.address}</p>` : ''}
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="background:#f0f7e8;border-left:4px solid #4a7c29;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#2d5016;font-weight:600;">Bitte dem Kunden innerhalb von 24h antworten.</td></tr>
+</table>`;
+  } else {
+    title = "Neue Sanierungsanfrage";
+    gradient1 = "#1a2e44";
+    gradient2 = "#2a4a6b";
+    subject = `${lead.isUrgent ? '[DRINGEND] ' : ''}Sanierungsanfrage: ${lead.name} \u2013 ${serviceLabel}`;
 
-        <tr><td style="background:#eae6df;padding:16px 32px;border-radius:0 0 10px 10px;text-align:center;">
-          <p style="margin:0;font-size:11px;color:#999;">Lead-ID: ${lead.id} \u00b7 ${formatDateTimeDE(lead.createdAt!)}</p>
-        </td></tr>
+    bodyContent = `${contactSection}
+<p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Projektdetails</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+${companyRow("Service", serviceLabel)}
+${companyRow("Objekttyp", propertyLabels[lead.propertyType || ""] || lead.propertyType)}
+${companyRow("PLZ / Stadt", `${lead.postalCode}${lead.city ? `, ${lead.city}` : ""}`)}
+${companyRow("Adresse", lead.address)}
+${companyRow("Zeitrahmen", lead.timeline)}
+${companyRow("Qualit\u00e4t", lead.qualityLevel)}
+${companyRow("Budget", lead.budgetRange)}
+</table>
+${lead.description ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Beschreibung</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;">${lead.description}</p>` : ''}
+${lead.additionalNotes ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Anmerkungen</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;">${lead.additionalNotes}</p>` : ''}
+${lead.serviceDetails ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Service-Details</p><pre style="margin:0 0 24px;font-size:12px;color:#333;background:#f8f6f3;padding:14px 16px;border-radius:6px;overflow-x:auto;white-space:pre-wrap;">${JSON.stringify(lead.serviceDetails, null, 2)}</pre>` : ''}
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">Bitte den Kunden innerhalb von 24h kontaktieren und Festpreis-Angebot vorbereiten.</td></tr>
+</table>`;
+  }
 
-      </table>
-    </td></tr>
-  </table>
-</body>
-</html>
-  `;
+  const htmlContent = companyEmailWrapper(gradient1, gradient2, urgentBanner, title, `${isContact ? "Kontaktformular" : serviceLabel} \u2013 ${lead.name}`, bodyContent, `Lead-ID: ${lead.id} \u00b7 ${formatDateTimeDE(lead.createdAt!)}`);
 
   try {
     const smtp = await getTransporter();
     await smtp.sendMail({
       from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
       to: process.env.SMTP_FROM_EMAIL,
-      subject: `${lead.isUrgent ? '[DRINGEND] ' : ''}Neue Anfrage: ${lead.name} \u2013 ${serviceLabel}`,
+      subject,
       html: htmlContent,
     });
     console.log(`Company notification email sent for lead ${lead.id}`);
@@ -319,139 +322,94 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   const serviceLabel = serviceLabels[appointment.service] || appointment.service;
   const isCallback = appointment.preferredTime === "Rückruf erbeten";
 
-  const customerHtml = `
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${isCallback ? "Ihre Rückruf-Anfrage bei 089-Sanierer" : "Ihre Terminanfrage bei 089-Sanierer"}</title>
-</head>
-<body style="margin: 0; padding: 0; background-color: #f4f1ec; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
-  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f1ec;">
-    <tr>
-      <td align="center" style="padding: 40px 16px;">
-        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%;">
+  let customerHtml: string;
 
-          <!-- Header -->
-          <tr>
-            <td style="background: linear-gradient(135deg, #1a2e44 0%, #2a4a6b 100%); padding: 40px 40px 32px; border-radius: 12px 12px 0 0; text-align: center;">
-              <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">089-Sanierer</h1>
-              <p style="margin: 0; font-size: 13px; color: #b8cce0; letter-spacing: 2px; text-transform: uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
-            </td>
-          </tr>
+  if (isCallback) {
+    customerHtml = `${emailHeader("#92600a", "#c9944a")}
+<h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Wir rufen Sie zur\u00fcck, ${appointment.name}!</h2>
+<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Vielen Dank f\u00fcr Ihre R\u00fcckruf-Anfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich schnellstm\u00f6glich bei Ihnen melden \u2013 in der Regel innerhalb von 2 Stunden (Mo\u2013Fr).</p>
 
-          <!-- Body -->
-          <tr>
-            <td style="background-color: #ffffff; padding: 40px;">
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+<tr><td style="background-color:#f8f6f3;border-left:4px solid #c9944a;padding:20px 24px;border-radius:0 8px 8px 0;">
+<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre R\u00fcckruf-Anfrage</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Leistung:</strong> ${serviceLabel}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>R\u00fcckruf an:</strong> ${appointment.phone}</p>
+${appointment.address ? `<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
+${appointment.message ? `<p style="margin:0;font-size:14px;color:#666;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ""}
+</td></tr></table>
 
-              <h2 style="margin: 0 0 8px; font-size: 22px; color: #1a2e44; font-weight: 600;">${isCallback ? `Wir rufen Sie zur\u00fcck, ${appointment.name}!` : `Ihre Terminanfrage, ${appointment.name}!`}</h2>
-              <p style="margin: 0 0 24px; font-size: 15px; color: #555; line-height: 1.7;">${isCallback ? "Vielen Dank f\u00fcr Ihre R\u00fcckruf-Anfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich schnellstm\u00f6glich bei Ihnen melden \u2013 in der Regel innerhalb von 2 Stunden (Mo\u2013Fr)." : "Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen."}</p>
+<h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+${emailStep(1, "Ihr Projekt-Kurator ruft Sie <strong style=\"color:#1a2e44;\">innerhalb von 2 Stunden</strong> zur\u00fcck (Mo\u2013Fr, 8\u201316:30 Uhr).")}
+${emailStep(2, "Am Telefon besprechen wir Ihr Vorhaben und kl\u00e4ren <strong style=\"color:#1a2e44;\">erste Fragen</strong>.")}
+${emailStep(3, "Bei Bedarf vereinbaren wir direkt einen <strong style=\"color:#1a2e44;\">kostenlosen Vor-Ort-Termin</strong>.")}
+</table>
 
-              <!-- Termin-Box -->
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
-                <tr>
-                  <td style="background-color: #f8f6f3; border-left: 4px solid #c9944a; padding: 20px 24px; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0 0 4px; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">${isCallback ? "Ihre R\u00fcckruf-Anfrage" : "Ihre Terminanfrage"}</p>
-                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Leistung:</strong> ${serviceLabel}</p>
-                    ${isCallback ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>R\u00fcckruf an:</strong> ${appointment.phone}</p>` : `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
-                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>`}
-                    ${appointment.address ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
-                    ${appointment.message ? `<p style="margin: 0; font-size: 14px; color: #666; font-style: italic;">\u201e${appointment.message}\u201c</p>` : ""}
-                  </td>
-                </tr>
-              </table>
+<p style="margin:0 0 20px;font-size:15px;color:#555;line-height:1.7;">Halten Sie bitte Ihr Telefon bereit. Sollten Sie uns vorher erreichen wollen, k\u00f6nnen Sie uns jederzeit kontaktieren.</p>
 
-              <p style="margin: 0 0 20px; font-size: 15px; color: #555; line-height: 1.7;">${isCallback ? "Halten Sie bitte Ihr Telefon bereit. Sollten Sie uns vorher erreichen wollen, k\u00f6nnen Sie uns jederzeit kontaktieren." : "Wir best\u00e4tigen Ihren Termin schnellstm\u00f6glich telefonisch oder per E-Mail. Sollten Sie vorher noch Fragen haben, erreichen Sie uns jederzeit."}</p>
+${emailContactBlock()}
+${emailFooter()}`;
+  } else {
+    customerHtml = `${emailHeader("#1a2e44", "#2a4a6b")}
+<h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Ihre Terminanfrage, ${appointment.name}!</h2>
+<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen.</p>
 
-              <!-- Kontakt -->
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: #1a2e44; border-radius: 8px; overflow: hidden;">
-                <tr>
-                  <td style="padding: 20px 24px;">
-                    <p style="margin: 0 0 4px; font-size: 11px; color: #b8cce0; text-transform: uppercase; letter-spacing: 1px;">Direkte Fragen?</p>
-                    <p style="margin: 0 0 4px; font-size: 15px; color: #ffffff;">
-                      Telefon: <a href="tel:+4915212274043" style="color: #c9944a; text-decoration: none; font-weight: 600;">0152 122 740 43</a>
-                    </p>
-                    <p style="margin: 0; font-size: 15px; color: #ffffff;">
-                      E-Mail: <a href="mailto:info@089-sanierer.de" style="color: #c9944a; text-decoration: none; font-weight: 600;">info@089-sanierer.de</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+<tr><td style="background-color:#f8f6f3;border-left:4px solid #c9944a;padding:20px 24px;border-radius:0 8px 8px 0;">
+<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre Terminanfrage</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Leistung:</strong> ${serviceLabel}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>
+${appointment.address ? `<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
+${appointment.message ? `<p style="margin:0;font-size:14px;color:#666;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ""}
+</td></tr></table>
 
-            </td>
-          </tr>
+<h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
+${emailStep(1, "Wir best\u00e4tigen Ihren Termin <strong style=\"color:#1a2e44;\">schnellstm\u00f6glich</strong> telefonisch oder per E-Mail.")}
+${emailStep(2, "Unser Experte kommt zum vereinbarten Termin <strong style=\"color:#1a2e44;\">zu Ihnen vor Ort</strong>.")}
+${emailStep(3, "Sie erhalten ein <strong style=\"color:#1a2e44;\">detailliertes Festpreis-Angebot</strong> \u2013 transparent und unverbindlich.")}
+</table>
 
-          <!-- Footer -->
-          <tr>
-            <td style="background-color: #eae6df; padding: 24px 40px; border-radius: 0 0 12px 12px; text-align: center;">
-              <p style="margin: 0 0 4px; font-size: 13px; color: #777; font-weight: 600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
-              <p style="margin: 0 0 12px; font-size: 12px; color: #999;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
-              <p style="margin: 0; font-size: 11px; color: #aaa; line-height: 1.6;">
-                <a href="https://089-sanierer.de" style="color: #1a2e44; text-decoration: none;">www.089-sanierer.de</a> &nbsp;\u00b7&nbsp;
-                <a href="https://089-sanierer.de/datenschutz" style="color: #1a2e44; text-decoration: none;">Datenschutz</a> &nbsp;\u00b7&nbsp;
-                <a href="https://089-sanierer.de/impressum" style="color: #1a2e44; text-decoration: none;">Impressum</a>
-              </p>
-            </td>
-          </tr>
+${emailTrustBadges()}
+${emailContactBlock()}
+${emailFooter()}`;
+  }
 
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-  `;
+  const companyContactRows = `<p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Kundendaten</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+${companyRow("Name", appointment.name)}
+${companyRow("E-Mail", `<a href="mailto:${appointment.email}" style="color:#1a2e44;text-decoration:none;">${appointment.email}</a>`)}
+${companyRow("Telefon", `<a href="tel:${appointment.phone}" style="color:#1a2e44;text-decoration:none;">${appointment.phone}</a>`)}
+${appointment.address ? companyRow("Adresse", appointment.address) : ''}
+</table>`;
 
-  const companyHtml = `
-<!DOCTYPE html>
-<html lang="de">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-<body style="margin:0;padding:0;background:#f0ede8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#f0ede8;">
-    <tr><td align="center" style="padding:32px 16px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
+  const companyDetailsRows = isCallback
+    ? `<p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">R\u00fcckruf-Details</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+${companyRow("Service", serviceLabel)}
+${companyRow("Typ", '<span style="font-weight:600;color:#c9944a;">R\u00fcckruf erbeten</span>')}
+</table>`
+    : `<p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Termindetails</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+${companyRow("Service", serviceLabel)}
+${companyRow("Wunschtermin", `<strong>${formatDateDE(appointment.preferredDate)}</strong>`)}
+${companyRow("Uhrzeit", `<strong>${formatTimeDE(appointment.preferredTime)} Uhr</strong>`)}
+</table>`;
 
-        <tr><td style="background:linear-gradient(135deg,#92600a,#c9944a);padding:28px 32px;border-radius:10px 10px 0 0;">
-          <h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">${isCallback ? "R\u00fcckruf-Anfrage" : "Neue Terminanfrage"}</h1>
-          <p style="margin:0;font-size:14px;color:#fff9ef;">${serviceLabel} \u2013 ${appointment.name}</p>
-        </td></tr>
+  const companyMessage = appointment.message ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Nachricht</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;font-style:italic;">\u201e${appointment.message}\u201c</p>` : '';
 
-        <tr><td style="background:#fff;padding:28px 32px;">
+  const companyAction = isCallback
+    ? `<table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">Bitte den Kunden schnellstm\u00f6glich zur\u00fcckrufen!</td></tr></table>`
+    : `<table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">Bitte den Kunden zeitnah kontaktieren, um den Termin zu best\u00e4tigen.</td></tr></table>`;
 
-          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Kundendaten</p>
-          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;width:35%;">Name</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${appointment.name}</td></tr>
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">E-Mail</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;"><a href="mailto:${appointment.email}" style="color:#1a2e44;text-decoration:none;">${appointment.email}</a></td></tr>
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Telefon</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;"><a href="tel:${appointment.phone}" style="color:#1a2e44;text-decoration:none;">${appointment.phone}</a></td></tr>
-            ${appointment.address ? `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Adresse</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${appointment.address}</td></tr>` : ''}
-          </table>
-
-          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">${isCallback ? "R\u00fcckruf-Details" : "Termindetails"}</p>
-          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;width:35%;">Service</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${serviceLabel}</td></tr>
-            ${isCallback ? `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Typ</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;color:#c9944a;">R\u00fcckruf erbeten</td></tr>` : `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Wunschtermin</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatDateDE(appointment.preferredDate)}</td></tr>
-            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Uhrzeit</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatTimeDE(appointment.preferredTime)} Uhr</td></tr>`}
-          </table>
-
-          ${appointment.message ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Nachricht</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ''}
-
-          <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
-            <tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">${isCallback ? "Bitte den Kunden schnellstm\u00f6glich zur\u00fcckrufen!" : "Bitte den Kunden zeitnah kontaktieren, um den Termin zu best\u00e4tigen."}</td></tr>
-          </table>
-
-        </td></tr>
-
-        <tr><td style="background:#eae6df;padding:16px 32px;border-radius:0 0 10px 10px;text-align:center;">
-          <p style="margin:0;font-size:11px;color:#999;">089-Sanierer Terminverwaltung</p>
-        </td></tr>
-
-      </table>
-    </td></tr>
-  </table>
-</body>
-</html>
-  `;
+  const companyHtml = companyEmailWrapper(
+    "#92600a", "#c9944a", "",
+    isCallback ? "R\u00fcckruf-Anfrage" : "Neue Terminanfrage",
+    `${serviceLabel} \u2013 ${appointment.name}`,
+    `${companyContactRows}${companyDetailsRows}${companyMessage}${companyAction}`,
+    "089-Sanierer Terminverwaltung"
+  );
 
   try {
     const smtp = await getTransporter();
