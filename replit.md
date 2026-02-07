@@ -155,6 +155,17 @@ Preferred communication style: Simple, everyday language (German).
 - NO LocalBusiness microdata in footer (removed to prevent duplicates)
 - Business data: telephone +49-89-444438872, foundingDate 2019, @id https://089-sanierer.de/#organization
 
+**GEO 2026 Optimization (Feb 2026):**
+- llms.txt updated to Version 3.0 (February 2026) with consistent pricing and contact data
+- llms-full.txt created as comprehensive version with all services, FAQs, and full area coverage
+- Schema enhancements: AggregateRating (4.9/5, 268 reviews), inLanguage "de-DE" on LocalBusiness + WebSite
+- Freshness meta tags: og:updated_time, article:modified_time, article:published_time on all pages
+- Crawler HTML: "Zuletzt aktualisiert: Februar 2026" dates + "Kurzantwort" direct-answer summaries
+- Service prices synchronized across llms.txt, crawler-middleware servicePages, serviceSchemaMap
+- Phone number normalized to +49 89 444 438 872 across all SEO surfaces
+- Keywords updated from 2024 to 2026 references
+- Copyright updated to 2026
+
 **Bug Fixes Applied (Jan 2026):**
 - Removed javascript:history.back() from 404 page (replaced with button onClick)
 - Added schema duplicate detection in seo-head.tsx to prevent SSR + client double injection

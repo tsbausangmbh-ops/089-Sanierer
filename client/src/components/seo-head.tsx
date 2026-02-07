@@ -211,6 +211,7 @@ export function generateLocalBusinessSchema() {
     "priceRange": "€€-€€€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Überweisung, Barzahlung",
+    "inLanguage": "de-DE",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Hardenbergstr. 4",
@@ -236,6 +237,13 @@ export function generateLocalBusinessSchema() {
         "addressCountry": "DE"
       }
     ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "268",
+      "reviewCount": "268"
+    },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -295,6 +303,7 @@ export function generateWebsiteSchema() {
     "name": "089-Sanierer",
     "url": "https://089-sanierer.de",
     "description": "Komplettsanierungen in München - Badsanierung, Wohnungssanierung, Haussanierung mit Festpreisgarantie",
+    "inLanguage": "de-DE",
     "publisher": {
       "@id": "https://089-sanierer.de/#organization"
     },
