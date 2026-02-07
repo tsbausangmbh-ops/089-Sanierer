@@ -241,62 +241,62 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
 
 async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
   const serviceLabel = serviceLabels[lead.service] || lead.service;
-  
+  const propertyLabels: Record<string, string> = { wohnung: "Wohnung", einfamilienhaus: "Einfamilienhaus", mehrfamilienhaus: "Mehrfamilienhaus", gewerbe: "Gewerbe" };
+
+  function row(label: string, value: string | null | undefined) {
+    if (!value) return "";
+    return `<tr><td style="padding: 10px 12px; font-size: 13px; color: #888; border-bottom: 1px solid #f0f0f0; width: 35%; vertical-align: top;">${label}</td><td style="padding: 10px 12px; font-size: 14px; color: #222; border-bottom: 1px solid #f0f0f0;">${value}</td></tr>`;
+  }
+
   const htmlContent = `
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background: #1e3a5f; color: white; padding: 20px; text-align: center; }
-    .content { padding: 20px; background: #f9f9f9; }
-    .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; }
-    .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-    .data-table td { padding: 10px; border-bottom: 1px solid #ddd; }
-    .data-table td:first-child { font-weight: bold; width: 40%; background: #fff; }
-    .urgent { background: #fee2e2; color: #dc2626; padding: 10px; text-align: center; font-weight: bold; margin-bottom: 15px; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>Neue Anfrage eingegangen!</h1>
-      <p>${serviceLabel}</p>
-    </div>
-    <div class="content">
-      ${lead.isUrgent ? '<div class="urgent">DRINGEND</div>' : ''}
-      
-      <h3>Kontaktdaten:</h3>
-      <table class="data-table">
-        <tr><td>Name</td><td>${lead.name}</td></tr>
-        <tr><td>E-Mail</td><td><a href="mailto:${lead.email}">${lead.email}</a></td></tr>
-        <tr><td>Telefon</td><td><a href="tel:${lead.phone}">${lead.phone}</a></td></tr>
-        ${lead.mobile ? `<tr><td>Mobil</td><td><a href="tel:${lead.mobile}">${lead.mobile}</a></td></tr>` : ''}
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#f0ede8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#f0ede8;">
+    <tr><td align="center" style="padding:32px 16px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
+
+        <tr><td style="background:linear-gradient(135deg,#1a2e44,#2a4a6b);padding:28px 32px;border-radius:10px 10px 0 0;">
+          ${lead.isUrgent ? '<table role="presentation" width="100%" style="margin-bottom:12px;"><tr><td style="background:#dc2626;color:#fff;padding:6px 16px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">DRINGEND</td></tr></table>' : ''}
+          <h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">Neue Anfrage eingegangen</h1>
+          <p style="margin:0;font-size:14px;color:#b8cce0;">${serviceLabel} \u2013 ${lead.name}</p>
+        </td></tr>
+
+        <tr><td style="background:#fff;padding:28px 32px;">
+
+          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Kontaktdaten</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+            ${row("Name", lead.name)}
+            ${row("E-Mail", `<a href="mailto:${lead.email}" style="color:#1a2e44;text-decoration:none;">${lead.email}</a>`)}
+            ${row("Telefon", `<a href="tel:${lead.phone}" style="color:#1a2e44;text-decoration:none;">${lead.phone}</a>`)}
+            ${lead.mobile ? row("Mobil", `<a href="tel:${lead.mobile}" style="color:#1a2e44;text-decoration:none;">${lead.mobile}</a>`) : ''}
+          </table>
+
+          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Projektdetails</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+            ${row("Service", serviceLabel)}
+            ${row("Objekttyp", propertyLabels[lead.propertyType || ""] || lead.propertyType)}
+            ${row("PLZ / Stadt", `${lead.postalCode}${lead.city ? `, ${lead.city}` : ""}`)}
+            ${row("Adresse", lead.address)}
+            ${row("Zeitrahmen", lead.timeline)}
+            ${row("Qualit\u00e4t", lead.qualityLevel)}
+            ${row("Budget", lead.budgetRange)}
+          </table>
+
+          ${lead.description ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Beschreibung</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;">${lead.description}</p>` : ''}
+          ${lead.additionalNotes ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Anmerkungen</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;">${lead.additionalNotes}</p>` : ''}
+          ${lead.serviceDetails ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Service-Details</p><pre style="margin:0 0 24px;font-size:12px;color:#333;background:#f8f6f3;padding:14px 16px;border-radius:6px;overflow-x:auto;white-space:pre-wrap;">${JSON.stringify(lead.serviceDetails, null, 2)}</pre>` : ''}
+
+        </td></tr>
+
+        <tr><td style="background:#eae6df;padding:16px 32px;border-radius:0 0 10px 10px;text-align:center;">
+          <p style="margin:0;font-size:11px;color:#999;">Lead-ID: ${lead.id} \u00b7 ${formatDateTimeDE(lead.createdAt!)}</p>
+        </td></tr>
+
       </table>
-      
-      <h3>Projektdetails:</h3>
-      <table class="data-table">
-        <tr><td>Service</td><td>${serviceLabel}</td></tr>
-        <tr><td>Objekttyp</td><td>${lead.propertyType || '-'}</td></tr>
-        <tr><td>PLZ / Stadt</td><td>${lead.postalCode}${lead.city ? `, ${lead.city}` : ''}</td></tr>
-        ${lead.address ? `<tr><td>Adresse</td><td>${lead.address}</td></tr>` : ''}
-        ${lead.timeline ? `<tr><td>Zeitrahmen</td><td>${lead.timeline}</td></tr>` : ''}
-        ${lead.qualityLevel ? `<tr><td>Qualitätsstufe</td><td>${lead.qualityLevel}</td></tr>` : ''}
-        ${lead.budgetRange ? `<tr><td>Budget</td><td>${lead.budgetRange}</td></tr>` : ''}
-      </table>
-      
-      ${lead.description ? `<h3>Beschreibung:</h3><p>${lead.description}</p>` : ''}
-      ${lead.additionalNotes ? `<h3>Zusätzliche Anmerkungen:</h3><p>${lead.additionalNotes}</p>` : ''}
-      
-      ${lead.serviceDetails ? `<h3>Service-Details:</h3><pre style="background: #fff; padding: 10px; overflow-x: auto;">${JSON.stringify(lead.serviceDetails, null, 2)}</pre>` : ''}
-    </div>
-    <div class="footer">
-      <p>Lead-ID: ${lead.id}</p>
-      <p>Eingegangen am: ${formatDateTimeDE(lead.createdAt!)}</p>
-    </div>
-  </div>
+    </td></tr>
+  </table>
 </body>
 </html>
   `;
@@ -304,9 +304,9 @@ async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
   try {
     const smtp = await getTransporter();
     await smtp.sendMail({
-      from: `"089-Sanierer Lead-Bot" <${process.env.SMTP_FROM_EMAIL}>`,
+      from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
       to: process.env.SMTP_FROM_EMAIL,
-      subject: `${lead.isUrgent ? '[DRINGEND] ' : ''}Neue Anfrage: ${lead.name} - ${serviceLabel}`,
+      subject: `${lead.isUrgent ? '[DRINGEND] ' : ''}Neue Anfrage: ${lead.name} \u2013 ${serviceLabel}`,
       html: htmlContent,
     });
     console.log(`Company notification email sent for lead ${lead.id}`);
@@ -404,52 +404,50 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
 
   const companyHtml = `
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background: #f59e0b; color: white; padding: 20px; text-align: center; }
-    .content { padding: 20px; background: #f9f9f9; }
-    .info-box { background: #fff; padding: 15px; margin: 15px 0; border: 1px solid #ddd; }
-    .info-box strong { color: #1e3a5f; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>Neue Terminanfrage</h1>
-      <p>Über KI-Bot eingegangen</p>
-    </div>
-    <div class="content">
-      <h2>Neue Terminanfrage eingegangen</h2>
-      
-      <div class="info-box">
-        <strong>Kundendaten:</strong><br>
-        Name: ${appointment.name}<br>
-        E-Mail: ${appointment.email}<br>
-        Telefon: ${appointment.phone}<br>
-        Adresse: ${appointment.address || "Nicht angegeben"}
-      </div>
-      
-      <div class="info-box">
-        <strong>Termindetails:</strong><br>
-        Service: ${serviceLabel}<br>
-        Wunschtermin: ${formatDateDE(appointment.preferredDate)}<br>
-        Uhrzeit: ${formatTimeDE(appointment.preferredTime)} Uhr
-      </div>
-      
-      ${appointment.message ? `
-      <div class="info-box">
-        <strong>Nachricht:</strong><br>
-        ${appointment.message}
-      </div>
-      ` : ""}
-      
-      <p><strong>Bitte kontaktieren Sie den Kunden zeitnah, um den Termin zu bestätigen.</strong></p>
-    </div>
-  </div>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#f0ede8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#f0ede8;">
+    <tr><td align="center" style="padding:32px 16px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%;">
+
+        <tr><td style="background:linear-gradient(135deg,#92600a,#c9944a);padding:28px 32px;border-radius:10px 10px 0 0;">
+          <h1 style="margin:0 0 2px;font-size:20px;color:#fff;font-weight:700;">Neue Terminanfrage</h1>
+          <p style="margin:0;font-size:14px;color:#fff9ef;">${serviceLabel} \u2013 ${appointment.name}</p>
+        </td></tr>
+
+        <tr><td style="background:#fff;padding:28px 32px;">
+
+          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Kundendaten</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;width:35%;">Name</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${appointment.name}</td></tr>
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">E-Mail</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;"><a href="mailto:${appointment.email}" style="color:#1a2e44;text-decoration:none;">${appointment.email}</a></td></tr>
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Telefon</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;"><a href="tel:${appointment.phone}" style="color:#1a2e44;text-decoration:none;">${appointment.phone}</a></td></tr>
+            ${appointment.address ? `<tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Adresse</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${appointment.address}</td></tr>` : ''}
+          </table>
+
+          <p style="margin:0 0 16px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Termindetails</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:24px;">
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;width:35%;">Service</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;">${serviceLabel}</td></tr>
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Wunschtermin</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatDateDE(appointment.preferredDate)}</td></tr>
+            <tr><td style="padding:10px 12px;font-size:13px;color:#888;border-bottom:1px solid #f0f0f0;">Uhrzeit</td><td style="padding:10px 12px;font-size:14px;color:#222;border-bottom:1px solid #f0f0f0;font-weight:600;">${formatTimeDE(appointment.preferredTime)} Uhr</td></tr>
+          </table>
+
+          ${appointment.message ? `<p style="margin:0 0 8px;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;">Nachricht</p><p style="margin:0 0 24px;font-size:14px;color:#333;line-height:1.6;background:#f8f6f3;padding:14px 16px;border-radius:6px;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ''}
+
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td style="background:#fef3c7;border-left:4px solid #c9944a;padding:14px 16px;border-radius:0 6px 6px 0;font-size:14px;color:#92400e;font-weight:600;">Bitte den Kunden zeitnah kontaktieren, um den Termin zu best\u00e4tigen.</td></tr>
+          </table>
+
+        </td></tr>
+
+        <tr><td style="background:#eae6df;padding:16px 32px;border-radius:0 0 10px 10px;text-align:center;">
+          <p style="margin:0;font-size:11px;color:#999;">089-Sanierer Terminverwaltung</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
 </body>
 </html>
   `;
