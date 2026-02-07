@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock, Send, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Calendar, CheckCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -48,6 +48,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 export default function Kontakt() {
   const { toast } = useToast();
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [formSent, setFormSent] = useState(false);
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -74,11 +75,9 @@ export default function Kontakt() {
       });
     },
     onSuccess: () => {
-      toast({
-        title: "Nachricht gesendet",
-        description: "Vielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.",
-      });
+      setFormSent(true);
       form.reset();
+      setPrivacyAccepted(false);
     },
     onError: () => {
       toast({
@@ -118,6 +117,33 @@ export default function Kontakt() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
+              {formSent ? (
+                <Card className="border-green-200 bg-green-50 dark:bg-green-950/20 dark:border-green-800">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2" data-testid="text-contact-success-title">Nachricht gesendet!</h3>
+                    <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                      <Mail className="w-4 h-4" />
+                      Bestätigungs-E-Mail wurde versendet
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Vielen Dank für Ihre Nachricht. Sie haben eine Bestätigung per E-Mail erhalten. Wir melden uns schnellstmöglich bei Ihnen.
+                    </p>
+                    <p className="text-sm text-muted-foreground mb-6">
+                      Erwartete Rückmeldung: Innerhalb von 48 Stunden.
+                    </p>
+                    <Button
+                      variant="outline"
+                      onClick={() => setFormSent(false)}
+                      data-testid="button-contact-new-message"
+                    >
+                      Neue Nachricht senden
+                    </Button>
+                  </CardContent>
+                </Card>
+              ) : (
               <Card>
                 <CardContent className="p-6">
                   <h2 className="text-xl font-bold mb-6">Ihre kostenlose Sanierungsanfrage – 100% unverbindlich</h2>
@@ -247,6 +273,7 @@ export default function Kontakt() {
                   </div>
                 </CardContent>
               </Card>
+              )}
             </div>
 
             <div className="space-y-6">

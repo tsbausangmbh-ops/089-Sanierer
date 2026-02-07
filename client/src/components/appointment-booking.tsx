@@ -133,13 +133,17 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
             <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
           </div>
           <h3 className="text-xl font-bold mb-2">Terminanfrage gesendet!</h3>
+          <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4" data-testid="text-appointment-email-badge">
+            <Mail className="w-4 h-4" />
+            Bestätigungs-E-Mail wurde versendet
+          </div>
           <p className="text-muted-foreground mb-4">
             Wir haben Ihre Anfrage für den{" "}
             <strong>{selectedDate && format(selectedDate, "dd. MMMM yyyy", { locale: de })}</strong> um{" "}
             <strong>{selectedTime} Uhr</strong> erhalten.
           </p>
           <p className="text-sm text-muted-foreground">
-            Sie erhalten in Kürze eine Bestätigung per E-Mail.
+            Sie haben eine Bestätigung per E-Mail erhalten. Bitte prüfen Sie auch Ihren Spam-Ordner.
           </p>
         </CardContent>
       </Card>

@@ -57,7 +57,14 @@ export default function Confirmation() {
               <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />
             </div>
             
-            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-3" data-testid="text-email-confirmation-badge">
+              <Mail className="w-4 h-4" />
+              Bestätigungs-E-Mail wurde versendet
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Sie haben eine Bestätigung per E-Mail erhalten. Bitte prüfen Sie auch Ihren Spam-Ordner.
+            </p>
+            <div className="inline-flex items-center gap-2 bg-muted/50 text-muted-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Clock className="w-4 h-4" />
               Erwartete Rückmeldung: Innerhalb von 48 Stunden
             </div>
