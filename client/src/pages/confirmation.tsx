@@ -24,6 +24,7 @@ import confirmationHeroImage from "@assets/generated_images/erfolgsbestaetigung_
 
 const confirmationHeroContent: HeroContent = {
   backgroundImage: confirmationHeroImage,
+  imageAlt: "Sanierungsanfrage erfolgreich gesendet – 089-Sanierer München meldet sich in 24 Stunden",
   badge: "Ihre exklusive Anfrage wurde empfangen",
   titleLine1: "Vielen Dank für Ihr Vertrauen.",
   titleLine2: "Ihr Projekt-Kurator übernimmt.",

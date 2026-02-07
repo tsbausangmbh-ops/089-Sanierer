@@ -4,6 +4,7 @@ import { Phone, ArrowRight, CheckCircle, BadgeCheck } from "lucide-react";
 
 export interface HeroContent {
   backgroundImage: string;
+  imageAlt?: string;
   badge: string;
   titleLine1: string;
   titleLine2: string;
@@ -35,12 +36,11 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
       {/* Optimized background image with eager loading for LCP */}
       <img 
         src={content.backgroundImage} 
-        alt=""
+        alt={content.imageAlt || ""}
         loading="eager"
         decoding="sync"
         // @ts-ignore - fetchpriority is valid HTML attribute
         fetchpriority="high"
-        aria-hidden="true"
         width={1200}
         height={655}
         className="absolute inset-0 w-full h-full object-cover"

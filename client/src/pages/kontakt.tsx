@@ -20,6 +20,7 @@ import contactHeroImage from "@assets/generated_images/kundenservice_kontakt.web
 
 const kontaktHeroContent: HeroContent = {
   backgroundImage: contactHeroImage,
+  imageAlt: "Kontakt 089-Sanierer München – Kostenlose Sanierungsberatung und Festpreisangebot anfordern",
   badge: "Ihr direkter Draht zum Projekt-Kurator",
   titleLine1: "Sanierung München Kontakt – Beratung, Angebot & Terminvereinbarung.",
   titleLine2: "Kostenlos. Persönlich. Unverbindlich.",

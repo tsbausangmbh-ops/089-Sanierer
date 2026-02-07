@@ -8,6 +8,7 @@ import datenschutzHeroImage from "@assets/generated_images/datenschutz_sicherhei
 
 const datenschutzHeroContent: HeroContent = {
   backgroundImage: datenschutzHeroImage,
+  imageAlt: "Datenschutzerklärung 089-Sanierer München – Schutz Ihrer persönlichen Daten",
   badge: "Höchste Datenschutzstandards",
   titleLine1: "Datenschutz.",
   titleLine2: "Ihre Daten in sicheren Händen.",

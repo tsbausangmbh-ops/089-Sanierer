@@ -9,6 +9,7 @@ import heroImage from "@assets/generated_images/sanierungsberater_experte.webp";
 
 const notFoundHeroContent: HeroContent = {
   backgroundImage: heroImage,
+  imageAlt: "Seite nicht gefunden – 089-Sanierer München Sanierungsfirma",
   badge: "Seite nicht gefunden",
   titleLine1: "404.",
   titleLine2: "Diese Seite existiert leider nicht.",

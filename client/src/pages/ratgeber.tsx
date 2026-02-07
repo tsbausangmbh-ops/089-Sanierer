@@ -12,6 +12,7 @@ import ratgeberHeroImage from "@assets/generated_images/sanierungsberater_expert
 
 const ratgeberHeroContent: HeroContent = {
   backgroundImage: ratgeberHeroImage,
+  imageAlt: "Sanierung Ratgeber München – Expertentipps für Haus und Wohnungsrenovierung",
   badge: "Exklusives Expertenwissen für anspruchsvolle Eigentümer",
   titleLine1: "Sanierung Ratgeber München – Kosten, Förderung & Tipps vom Experten.",
   titleLine2: "Haussanierung, Badsanierung & Dämmung im Überblick.",

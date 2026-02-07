@@ -23,6 +23,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 
 const homeHeroContent: HeroContent = {
   backgroundImage: heroImage,
+  imageAlt: "Haus und Wohnung sanieren München – Vorher-Nachher Komplettsanierung mit Festpreisgarantie",
   badge: "Über 150 erfolgreich realisierte Projekte in München",
   titleLine1: "Sanierung München – Komplettsanierung, Renovierung & Modernisierung.",
   titleLine2: "Bis zu 22 Gewerke. Ein Ansprechpartner. Festpreis.",

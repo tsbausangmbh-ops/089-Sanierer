@@ -21,6 +21,7 @@ export default function Barrierefreiheit() {
           title="Erklärung zur Barrierefreiheit"
           subtitle="Zugänglichkeit für alle Nutzer"
           description="089-Sanierer verpflichtet sich, seine Website barrierefrei zu gestalten – gemäß BITV 2.0 und WCAG 2.1 Richtlinien."
+          imageAlt="Barrierefreiheit 089-Sanierer München – Barrierefreie Sanierung und zugängliche Website"
           showCta={false}
           compact={true}
         />

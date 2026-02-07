@@ -109,6 +109,7 @@ const serviceHeroImages: Record<string, string> = {
 const serviceHeroContents: Record<string, HeroContent> = {
   komplettsanierung: {
     backgroundImage: komplettsanierungHeroImage,
+    imageAlt: "Komplettsanierung anfragen München – Wohnung und Haus komplett sanieren lassen",
     badge: "Ihr exklusiver Projekt-Kurator für Komplettsanierungen",
     titleLine1: "Komplettsanierung München – Wohnung & Haus komplett sanieren.",
     titleLine2: "Ein Ansprechpartner. Ein Festpreis. Alle Gewerke.",
@@ -121,6 +122,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   badsanierung: {
     backgroundImage: badsanierungHeroImage,
+    imageAlt: "Badsanierung anfragen München – Badezimmer renovieren vom zertifizierten Meisterbetrieb",
     badge: "Exklusive Badsanierung für anspruchsvolle Eigentümer",
     titleLine1: "Badsanierung München – Bad renovieren & Badumbau anfragen.",
     titleLine2: "In 10-15 Werktagen zum Traumbad. Festpreis.",
@@ -133,6 +135,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   kuechensanierung: {
     backgroundImage: kuechensanierungHeroImage,
+    imageAlt: "Küchensanierung anfragen München – Küche komplett erneuern mit Festpreisgarantie",
     badge: "Exklusive Küchensanierung mit Meisterqualität",
     titleLine1: "Küchensanierung München – Küche renovieren & Küchenumbau.",
     titleLine2: "Elektrik, Wasser, Fliesen – alles aus einer Hand.",
@@ -145,6 +148,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   bodensanierung: {
     backgroundImage: bodensanierungHeroImage,
+    imageAlt: "Bodensanierung anfragen München – Parkett verlegen und Fußboden erneuern lassen",
     badge: "Exklusive Bodensanierung mit Meisterbetrieben",
     titleLine1: "Bodensanierung München – Parkett, Fliesen & Vinyl verlegen.",
     titleLine2: "Bodenbelag erneuern in Meisterqualität. Festpreis.",
@@ -157,6 +161,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   elektrosanierung: {
     backgroundImage: elektrosanierungHeroImage,
+    imageAlt: "Elektrosanierung anfragen München – VDE-konforme Elektroinstallation vom Elektromeister",
     badge: "Exklusive Elektrosanierung durch Meisterbetriebe",
     titleLine1: "Elektrosanierung München – Elektrik erneuern & Neuinstallation.",
     titleLine2: "Sicher, normgerecht nach VDE. Festpreis.",
@@ -169,6 +174,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   heizungssanierung: {
     backgroundImage: heizungssanierungHeroImage,
+    imageAlt: "Heizungssanierung anfragen München – Wärmepumpe und Heizung erneuern mit Förderung",
     badge: "Exklusive Heizungssanierung mit Förderberatung",
     titleLine1: "Heizungssanierung München – Heizung tauschen & Wärmepumpe.",
     titleLine2: "Effizient, förderfähig & zukunftssicher.",
@@ -181,6 +187,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   "energetische-sanierung": {
     backgroundImage: energetischeSanierungHeroImage,
+    imageAlt: "Energetische Sanierung anfragen München – KfW-Förderung und Energieberatung inklusive",
     badge: "Exklusive Energieberatung für Ihre Immobilie",
     titleLine1: "Energetische Sanierung München – Dämmung, Fenster & Heizung.",
     titleLine2: "Bis zu 50% Heizkosten sparen. KfW & BAFA Förderung.",
@@ -193,6 +200,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   dachsanierung: {
     backgroundImage: dachsanierungHeroImage,
+    imageAlt: "Dachsanierung anfragen München – Dach erneuern und dämmen vom Dachdeckermeister",
     badge: "Exklusive Dachsanierung durch Meisterbetriebe",
     titleLine1: "Dachsanierung München – Dach sanieren, Eindeckung & Dämmung.",
     titleLine2: "Dicht, gedämmt & langlebig. 10 Jahre Garantie.",
@@ -2631,6 +2639,7 @@ export default function FunnelPage() {
         <GlobalHero 
           content={serviceHeroContents[preSelectedService] || {
             backgroundImage: consultationHeroImage,
+            imageAlt: "Sanierungsberatung München – Persönliche Beratung durch erfahrenen Bauleiter",
             badge: "089 Sanierer München",
             titleLine1: "Ihre Sanierung.",
             titleLine2: "Professionell & stressfrei.",

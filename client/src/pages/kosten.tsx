@@ -29,6 +29,7 @@ import kostenImg from "@assets/generated_images/komplettsanierung_ergebnis.webp"
 
 const kostenHeroContent: HeroContent = {
   backgroundImage: kostenImg,
+  imageAlt: "Sanierung Kosten München – Preiskalkulation und Festpreisangebot für Haus und Wohnung",
   badge: "Transparente Münchner Marktpreise 2026",
   titleLine1: "Sanierung Kosten München – Preise, Kostenübersicht & Kalkulation.",
   titleLine2: "Transparente Festpreise. Keine versteckten Kosten.",

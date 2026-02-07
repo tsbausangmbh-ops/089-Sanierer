@@ -28,6 +28,7 @@ import bathroomImg from "@assets/generated_images/moderne_badsanierung.webp";
 
 const badHeroContent: HeroContent = {
   backgroundImage: bathroomImg,
+  imageAlt: "Badsanierung München – Modernes Badezimmer nach professioneller Komplettrenovierung vom Meisterbetrieb",
   badge: "Über 120 realisierte Traumbäder in München",
   titleLine1: "Badsanierung München – Bad renovieren, Badumbau & Badmodernisierung.",
   titleLine2: "Fertig in 2-3 Wochen. Barrierefrei & bodengleich.",

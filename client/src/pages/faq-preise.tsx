@@ -19,6 +19,7 @@ import pricingHeroImage from "@assets/generated_images/sanierung_preiskalkulatio
 
 const faqHeroContent: HeroContent = {
   backgroundImage: pricingHeroImage,
+  imageAlt: "Sanierung FAQ München – Häufige Fragen zu Kosten, Dauer und Ablauf der Renovierung",
   badge: "Volle Transparenz für anspruchsvolle Eigentümer",
   titleLine1: "Sanierung München FAQ – Kosten, Preise & häufige Fragen.",
   titleLine2: "Alle Antworten zu Renovierung, Förderung & Ablauf.",

@@ -11,6 +11,7 @@ import terminHeroImage from "@assets/generated_images/terminbuchung_kalender.web
 
 const terminHeroContent: HeroContent = {
   backgroundImage: terminHeroImage,
+  imageAlt: "Kostenlosen Beratungstermin buchen – Sanierungsberatung vor Ort in München",
   badge: "Ihr persönlicher Beratungstermin",
   titleLine1: "Sanierung München Termin – Kostenlose Beratung & Besichtigung vor Ort.",
   titleLine2: "Festpreis-Angebot in 48h. Unverbindlich.",

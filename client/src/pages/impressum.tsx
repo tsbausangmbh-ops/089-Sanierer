@@ -8,6 +8,7 @@ import impressumHeroImage from "@assets/generated_images/rechtliche_dokumente_im
 
 const impressumHeroContent: HeroContent = {
   backgroundImage: impressumHeroImage,
+  imageAlt: "Impressum 089-Sanierer München – Rechtliche Angaben der Sanierungsfirma",
   badge: "Rechtliche Angaben",
   titleLine1: "Impressum.",
   titleLine2: "089-Sanierer München.",

@@ -435,6 +435,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
   const stadtteilHeroContent: HeroContent = {
     backgroundImage: stadtteilImg,
+    imageAlt: `Sanierung ${data.name} München – Komplettsanierung und Renovierung in ${data.name}`,
     badge: `Ihr exklusiver Projekt-Kurator in ${data.name}`,
     titleLine1: `Sanierung ${data.name} München – Renovierung, Modernisierung & Festpreis.`,
     titleLine2: "Lokale Meisterbetriebe. Komplettsanierung bis Einzelgewerk.",
