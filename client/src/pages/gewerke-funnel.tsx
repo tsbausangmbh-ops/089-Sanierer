@@ -39,6 +39,7 @@ import {
   Phone,
   Loader2,
   Mail,
+  Star,
   PaintBucket,
   Plug,
   Droplets,
@@ -228,6 +229,7 @@ export default function GewerkeFunnel() {
   const [, setLocation] = useLocation();
   const searchString = useSearch();
   const { toast } = useToast();
+  const [formSent, setFormSent] = useState(false);
   
   const [formData, setFormData] = useState<FormData>({
     trade: "",
@@ -284,7 +286,8 @@ export default function GewerkeFunnel() {
       return apiRequest("POST", "/api/leads", leadData);
     },
     onSuccess: () => {
-      setLocation("/danke");
+      setFormSent(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     onError: () => {
       toast({
@@ -354,6 +357,77 @@ export default function GewerkeFunnel() {
       <main id="main-content" className="pb-16 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+          {formSent ? (
+            <Card className="max-w-2xl mx-auto mt-8">
+              <CardContent className="pt-8 pb-8 text-center">
+                <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />
+                </div>
+                <h2 className="text-2xl font-bold mb-3" data-testid="text-gewerke-success-title">Ihre Anfrage wurde erfolgreich gesendet!</h2>
+                <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-3" data-testid="text-gewerke-email-badge">
+                  <Mail className="w-4 h-4" />
+                  Bestätigungs-E-Mail wurde versendet
+                </div>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Sie haben eine Bestätigung per E-Mail erhalten. Bitte prüfen Sie auch Ihren Spam-Ordner.
+                </p>
+
+                <Card className="p-5 text-left mb-6">
+                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                    <Star className="w-5 h-5 text-amber-500" />
+                    So geht es weiter
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-sm font-bold text-primary">1</span>
+                      </div>
+                      <div>
+                        <p className="font-medium">Prüfung Ihrer Anfrage</p>
+                        <p className="text-sm text-muted-foreground">Wir analysieren Ihre Angaben innerhalb von 24 Stunden.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-sm font-bold text-primary">2</span>
+                      </div>
+                      <div>
+                        <p className="font-medium">Persönliche Kontaktaufnahme</p>
+                        <p className="text-sm text-muted-foreground">Ihr Projektberater meldet sich bei Ihnen für ein Erstgespräch.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-sm font-bold text-primary">3</span>
+                      </div>
+                      <div>
+                        <p className="font-medium">Kostenlose Vor-Ort-Beratung</p>
+                        <p className="text-sm text-muted-foreground">Wir besichtigen Ihr Objekt und erstellen ein unverbindliches Festpreis-Angebot.</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+
+                <div className="inline-flex items-center gap-2 bg-muted/50 text-muted-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
+                  <Clock className="w-4 h-4" />
+                  Erwartete Rückmeldung: Innerhalb von 48 Stunden
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <a href="tel:+4989444438872">
+                    <Button variant="outline" className="min-h-11 w-full" data-testid="button-gewerke-call">
+                      <Phone className="w-4 h-4 mr-2" />
+                      089 / 444 438 872
+                    </Button>
+                  </a>
+                  <Button onClick={() => { setFormSent(false); setStep(1); setFormData(prev => ({ ...prev, trade: "", tradeDetails: {}, privacyAccepted: false })); }} variant="outline" className="min-h-11" data-testid="button-gewerke-new-request">
+                    Neue Anfrage stellen
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ) : (
+          <>
           <div className="mb-4">
             <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
               <span>Schritt {step} von {totalSteps}</span>
@@ -1016,6 +1090,8 @@ export default function GewerkeFunnel() {
               </div>
             </div>
           </div>
+          </>
+          )}
         </div>
       </main>
 
