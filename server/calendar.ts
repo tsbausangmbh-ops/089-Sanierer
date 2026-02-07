@@ -87,31 +87,8 @@ function getDayBusyPercentage(date: string): number {
 
   const seed = hashSeed(`day-busy-${date}-kshw2026`);
   const rng = seededRandom(seed);
-  const dayOfWeek = new Date(`${date}T12:00:00+01:00`).getDay();
-
-  const weekSeed = hashSeed(`week-${date.substring(0, 7)}-${Math.floor(new Date(`${date}T12:00:00+01:00`).getDate() / 7)}-kshw`);
-  const weekRng = seededRandom(weekSeed);
-  const weekBase = 0.32 + weekRng() * 0.16;
-
-  let dayVariation: number;
-  const r = rng();
-
-  if (dayOfWeek === 1 || dayOfWeek === 2) {
-    dayVariation = 0.05 + r * 0.18;
-  } else if (dayOfWeek === 3 || dayOfWeek === 4) {
-    dayVariation = -0.05 + r * 0.15;
-  } else if (dayOfWeek === 5) {
-    dayVariation = -0.10 + r * 0.12;
-  } else {
-    dayVariation = -0.08 + r * 0.10;
-  }
-
-  const dateSeed = hashSeed(`scatter-${date}`);
-  const scatterRng = seededRandom(dateSeed);
-  const scatter = (scatterRng() - 0.5) * 0.10;
-
-  const pct = weekBase + dayVariation + scatter;
-  return Math.max(0.15, Math.min(0.65, pct));
+  const variation = (rng() - 0.5) * 0.06;
+  return Math.max(0.34, Math.min(0.45, 0.40 + variation));
 }
 
 function selectBusySlots(allSlots: string[], date: string): Set<string> {
