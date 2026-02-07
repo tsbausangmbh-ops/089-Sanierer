@@ -57,7 +57,7 @@ import komplettsanierungHeroImage from "@assets/generated_images/complete_renova
 import badsanierungHeroImage from "@assets/generated_images/modern_luxury_bathroom_renovation.webp";
 import kuechensanierungHeroImage from "@assets/generated_images/modern_kitchen_renovation_result.webp";
 import bodensanierungHeroImage from "@assets/generated_images/parquet_floor_renovation_result.webp";
-import elektrosanierungHeroImage from "@assets/generated_images/modern_electrical_installation_work.webp";
+import elektrosanierungHeroImage from "@assets/generated_images/german_electrical_installation_vde.webp";
 import heizungssanierungHeroImage from "@assets/generated_images/modern_heating_system_installation.webp";
 import dachsanierungHeroImage from "@assets/generated_images/renovated_german_tile_roof.webp";
 import energetischeSanierungHeroImage from "@assets/generated_images/energy_efficient_home_renovation.webp";
