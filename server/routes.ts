@@ -378,63 +378,6 @@ export async function registerRoutes(
 ): Promise<Server> {
   setupAuth(app);
 
-  // SMTP Test Endpoint (nur für Admin-Debugging)
-  app.get("/api/test-email", async (req, res) => {
-    const diagnostics = {
-      SMTP_HOST: process.env.SMTP_HOST || "(MISSING)",
-      SMTP_PORT: process.env.SMTP_PORT || "(MISSING)",
-      SMTP_USER: process.env.SMTP_USER || "(MISSING)",
-      SMTP_PASSWORD_SET: !!(process.env.SMTP_PASSWORD || process.env.SMTP_PASS),
-      SMTP_PASSWORD_LENGTH: (process.env.SMTP_PASSWORD || process.env.SMTP_PASS || "").length,
-      SMTP_PASS_SET: !!process.env.SMTP_PASS,
-      SMTP_FROM_EMAIL: process.env.SMTP_FROM_EMAIL || "(MISSING)",
-      NODE_ENV: process.env.NODE_ENV || "(NOT SET)",
-    };
-    console.log("SMTP Diagnostics:", JSON.stringify(diagnostics));
-
-    try {
-      const freshTransporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST || "smtp.ionos.de",
-        port: parseInt(process.env.SMTP_PORT || "587"),
-        secure: false,
-        auth: {
-          user: process.env.SMTP_USER || "info@089-sanierer.de",
-          pass: process.env.SMTP_PASSWORD || process.env.SMTP_PASS,
-        },
-        requireTLS: true,
-        connectionTimeout: 10000,
-        greetingTimeout: 10000,
-        socketTimeout: 15000,
-        tls: {
-          rejectUnauthorized: false,
-          minVersion: 'TLSv1.2',
-        },
-      });
-
-      await freshTransporter.verify();
-      console.log("SMTP connection verified successfully!");
-      
-      const fromEmail = process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER || "info@089-sanierer.de";
-      await freshTransporter.sendMail({
-        from: `"089-Sanierer Test" <${fromEmail}>`,
-        to: fromEmail,
-        subject: "Test-E-Mail von 089-Sanierer (" + new Date().toISOString() + ")",
-        text: "Dies ist eine Test-E-Mail. Wenn Sie diese lesen, funktioniert der E-Mail-Versand!",
-      });
-      
-      res.json({ success: true, message: "Test-E-Mail wurde gesendet!", diagnostics });
-    } catch (error: any) {
-      console.error("SMTP Test failed:", error);
-      res.status(500).json({ 
-        success: false, 
-        error: error.message,
-        code: error.code,
-        details: error.response || error.toString(),
-        diagnostics,
-      });
-    }
-  });
-
   // 301 Redirects - SEO-freundliche Weiterleitungen für häufige URLs
   const redirects: Record<string, string> = {
     // Service-Kurzformen
