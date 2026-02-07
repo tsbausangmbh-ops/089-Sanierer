@@ -95,6 +95,7 @@ export default function Haussanierung() {
           "areaServed": "München",
           "description": "Professionelle Haussanierung in München"
         }}
+        preloadImage={hausImg}
       />
       <SiteHeader />
 

@@ -93,6 +93,7 @@ export default function Wohnungssanierung() {
           "areaServed": "München",
           "description": "Professionelle Wohnungssanierung in München"
         }}
+        preloadImage={wohnungImg}
       />
       <SiteHeader />
 

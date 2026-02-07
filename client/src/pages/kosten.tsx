@@ -116,6 +116,7 @@ export default function Kosten() {
           "name": "Sanierung München Kosten",
           "description": "Aktuelle Preise für Sanierungen in München 2025"
         }}
+        preloadImage={kostenImg}
       />
       <SiteHeader />
 

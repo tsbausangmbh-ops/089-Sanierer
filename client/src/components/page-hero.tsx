@@ -43,7 +43,7 @@ export function PageHero({
           alt={imageAlt || "Haussanierung Vorher-Nachher"}
           className="w-full h-full object-cover"
           loading="eager"
-          decoding="async"
+          decoding="sync"
           // @ts-ignore - fetchpriority is valid HTML attribute
           fetchpriority="high"
           width={1200}

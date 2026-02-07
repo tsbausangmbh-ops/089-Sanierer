@@ -94,6 +94,7 @@ export default function Badsanierung() {
           "areaServed": "München",
           "description": "Professionelle Badsanierung in München ab 9.200€"
         }}
+        preloadImage={bathroomImg}
       />
       <SiteHeader />
 

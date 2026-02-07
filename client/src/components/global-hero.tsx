@@ -37,14 +37,14 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
         src={content.backgroundImage} 
         alt=""
         loading="eager"
-        decoding="async"
+        decoding="sync"
         // @ts-ignore - fetchpriority is valid HTML attribute
         fetchpriority="high"
         aria-hidden="true"
         width={1200}
         height={655}
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ objectPosition: 'center', contentVisibility: 'auto' }}
+        style={{ objectPosition: 'center' }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       

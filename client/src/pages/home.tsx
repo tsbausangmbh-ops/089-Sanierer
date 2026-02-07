@@ -782,6 +782,7 @@ export default function Home() {
         keywords="Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer"
         canonicalPath="/"
         schema={combinedSchema}
+        preloadImage={heroImage}
       />
       
       <div className="min-h-screen bg-background">

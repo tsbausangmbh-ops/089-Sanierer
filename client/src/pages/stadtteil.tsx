@@ -503,6 +503,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
           },
           "description": `Professionelle Sanierungsleistungen in München ${data.name}`
         }}
+        preloadImage={stadtteilImg}
       />
       <SiteHeader />
 

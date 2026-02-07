@@ -123,6 +123,7 @@ export default function Kernsanierung() {
           "areaServed": "München",
           "description": "Professionelle Kernsanierung in München"
         }}
+        preloadImage={kernImg}
       />
       <SiteHeader />
 

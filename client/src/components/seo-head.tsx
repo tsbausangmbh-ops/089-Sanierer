@@ -9,6 +9,7 @@ interface SeoHeadProps {
   ogType?: "website" | "article";
   noIndex?: boolean;
   schema?: object;
+  preloadImage?: string;
 }
 
 export function SeoHead({
@@ -19,8 +20,25 @@ export function SeoHead({
   ogImage = "https://089-sanierer.de/og-image.jpg",
   ogType = "website",
   noIndex = false,
-  schema
+  schema,
+  preloadImage
 }: SeoHeadProps) {
+  useEffect(() => {
+    if (preloadImage) {
+      const existingPreload = document.querySelector(`link[rel="preload"][as="image"][href="${preloadImage}"]`);
+      if (!existingPreload) {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.type = "image/webp";
+        link.href = preloadImage;
+        // @ts-ignore
+        link.fetchPriority = "high";
+        document.head.appendChild(link);
+      }
+    }
+  }, [preloadImage]);
+
   useEffect(() => {
     document.title = title;
     
