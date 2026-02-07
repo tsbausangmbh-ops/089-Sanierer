@@ -92,62 +92,135 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   
   const htmlContent = `
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="utf-8">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background: #1e3a5f; color: white; padding: 20px; text-align: center; }
-    .content { padding: 20px; background: #f9f9f9; }
-    .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; }
-    .highlight { background: #fff; padding: 15px; border-left: 4px solid #1e3a5f; margin: 15px 0; }
-    .steps { background: #fff; padding: 15px; margin: 15px 0; }
-    .steps li { margin: 10px 0; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ihre Anfrage bei 089-Sanierer</title>
 </head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>089-Sanierer</h1>
-      <p>Komplettsanierungen Haus & Wohnung</p>
-    </div>
-    <div class="content">
-      <h2>Vielen Dank für Ihre Anfrage, ${lead.name}!</h2>
-      <p>Wir haben Ihre Anfrage für <strong>${serviceLabel}</strong> erhalten und werden uns schnellstmöglich bei Ihnen melden.</p>
-      
-      <div class="highlight">
-        <strong>Ihre Anfrage:</strong><br>
-        Service: ${serviceLabel}<br>
-        PLZ: ${lead.postalCode}${lead.city ? `, ${lead.city}` : ""}<br>
-        ${lead.isUrgent ? "<strong>Dringend</strong>" : ""}
-      </div>
-      
-      <div class="steps">
-        <h3>So geht es weiter:</h3>
-        <ol>
-          <li><strong>Innerhalb von 24 Stunden</strong> meldet sich Ihr persönlicher Ansprechpartner bei Ihnen.</li>
-          <li>Gemeinsam besprechen wir Ihr Projekt und Ihre Wünsche.</li>
-          <li>Sie erhalten ein <strong>unverbindliches Festpreis-Angebot</strong>.</li>
-        </ol>
-      </div>
-      
-      <p>Bei dringenden Fragen erreichen Sie uns unter:</p>
-      <p>
-        <strong>Telefon:</strong> 0152 122 740 43<br>
-        <strong>E-Mail:</strong> info@089-sanierer.de
-      </p>
-    </div>
-    <div class="footer">
-      <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
-      <p>www.089-sanierer.de</p>
-      <p style="margin-top: 15px; font-size: 11px; color: #999;">
-        Informationen zum Umgang mit Ihren personenbezogenen Daten finden Sie in unserer 
-        <a href="https://089-sanierer.de/datenschutz" style="color: #1e3a5f;">Datenschutzerklärung</a>. 
-        Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
-      </p>
-    </div>
-  </div>
+<body style="margin: 0; padding: 0; background-color: #f4f1ec; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f1ec;">
+    <tr>
+      <td align="center" style="padding: 40px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #1a2e44 0%, #2a4a6b 100%); padding: 40px 40px 32px; border-radius: 12px 12px 0 0; text-align: center;">
+              <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">089-Sanierer</h1>
+              <p style="margin: 0; font-size: 13px; color: #b8cce0; letter-spacing: 2px; text-transform: uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="background-color: #ffffff; padding: 40px;">
+
+              <h2 style="margin: 0 0 8px; font-size: 22px; color: #1a2e44; font-weight: 600;">Guten Tag, ${lead.name}!</h2>
+              <p style="margin: 0 0 24px; font-size: 15px; color: #555; line-height: 1.7;">Vielen Dank f\u00fcr Ihr Vertrauen. Wir haben Ihre Anfrage f\u00fcr <strong style="color: #1a2e44;">${serviceLabel}</strong> erhalten und Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden.</p>
+
+              <!-- Anfrage-Box -->
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
+                <tr>
+                  <td style="background-color: #f8f6f3; border-left: 4px solid #c9944a; padding: 20px 24px; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0 0 4px; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">Ihre Anfrage</p>
+                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Leistung:</strong> ${serviceLabel}</p>
+                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Standort:</strong> ${lead.postalCode}${lead.city ? ` ${lead.city}` : ""}</p>
+                    ${lead.propertyType ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Objekttyp:</strong> ${lead.propertyType === 'wohnung' ? 'Wohnung' : lead.propertyType === 'einfamilienhaus' ? 'Einfamilienhaus' : lead.propertyType === 'mehrfamilienhaus' ? 'Mehrfamilienhaus' : lead.propertyType === 'gewerbe' ? 'Gewerbe' : lead.propertyType}</p>` : ""}
+                    ${lead.isUrgent ? '<p style="margin: 0; font-size: 14px; color: #c9944a; font-weight: 600;">Dringend</p>' : ""}
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Steps -->
+              <h3 style="margin: 0 0 16px; font-size: 17px; color: #1a2e44; font-weight: 600;">So geht es weiter</h3>
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
+                <tr>
+                  <td style="padding: 14px 16px; background: #f8f6f3; border-radius: 8px; margin-bottom: 8px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="40" valign="top"><div style="width: 32px; height: 32px; background: #1a2e44; color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 700;">1</div></td>
+                        <td style="padding-left: 12px; font-size: 15px; color: #333; line-height: 1.5;"><strong style="color: #1a2e44;">Innerhalb von 24 Stunden</strong> meldet sich Ihr pers\u00f6nlicher Projekt-Kurator telefonisch bei Ihnen.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="height: 8px;"></td></tr>
+                <tr>
+                  <td style="padding: 14px 16px; background: #f8f6f3; border-radius: 8px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="40" valign="top"><div style="width: 32px; height: 32px; background: #1a2e44; color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 700;">2</div></td>
+                        <td style="padding-left: 12px; font-size: 15px; color: #333; line-height: 1.5;">Gemeinsam besprechen wir Ihr Projekt, Ihre W\u00fcnsche und den <strong style="color: #1a2e44;">optimalen Zeitplan</strong>.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="height: 8px;"></td></tr>
+                <tr>
+                  <td style="padding: 14px 16px; background: #f8f6f3; border-radius: 8px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="40" valign="top"><div style="width: 32px; height: 32px; background: #1a2e44; color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 700;">3</div></td>
+                        <td style="padding-left: 12px; font-size: 15px; color: #333; line-height: 1.5;">Sie erhalten ein <strong style="color: #1a2e44;">detailliertes Festpreis-Angebot</strong> \u2013 transparent, unverbindlich und ohne versteckte Kosten.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Trust Badges -->
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="padding: 6px 14px; background: #eef3e8; border-radius: 20px; font-size: 12px; color: #4a7c29; font-weight: 600; text-align: center;">98% Weiterempfehlung</td>
+                        <td style="width: 8px;"></td>
+                        <td style="padding: 6px 14px; background: #eef3e8; border-radius: 20px; font-size: 12px; color: #4a7c29; font-weight: 600; text-align: center;">Festpreisgarantie</td>
+                        <td style="width: 8px;"></td>
+                        <td style="padding: 6px 14px; background: #eef3e8; border-radius: 20px; font-size: 12px; color: #4a7c29; font-weight: 600; text-align: center;">5 Jahre Gew\u00e4hrleistung</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Kontakt -->
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: #1a2e44; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 20px 24px;">
+                    <p style="margin: 0 0 4px; font-size: 11px; color: #b8cce0; text-transform: uppercase; letter-spacing: 1px;">Direkte Fragen?</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #ffffff;">
+                      Telefon: <a href="tel:+4915212274043" style="color: #c9944a; text-decoration: none; font-weight: 600;">0152 122 740 43</a>
+                    </p>
+                    <p style="margin: 0; font-size: 15px; color: #ffffff;">
+                      E-Mail: <a href="mailto:info@089-sanierer.de" style="color: #c9944a; text-decoration: none; font-weight: 600;">info@089-sanierer.de</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #eae6df; padding: 24px 40px; border-radius: 0 0 12px 12px; text-align: center;">
+              <p style="margin: 0 0 4px; font-size: 13px; color: #777; font-weight: 600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
+              <p style="margin: 0 0 12px; font-size: 12px; color: #999;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
+              <p style="margin: 0; font-size: 11px; color: #aaa; line-height: 1.6;">
+                <a href="https://089-sanierer.de" style="color: #1a2e44; text-decoration: none;">www.089-sanierer.de</a> &nbsp;\u00b7&nbsp;
+                <a href="https://089-sanierer.de/datenschutz" style="color: #1a2e44; text-decoration: none;">Datenschutz</a> &nbsp;\u00b7&nbsp;
+                <a href="https://089-sanierer.de/impressum" style="color: #1a2e44; text-decoration: none;">Impressum</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
   `;
@@ -157,7 +230,7 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
     await smtp.sendMail({
       from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
       to: lead.email,
-      subject: `Ihre Anfrage bei 089-Sanierer: ${serviceLabel}`,
+      subject: `Ihre Anfrage bei 089-Sanierer \u2013 ${serviceLabel}`,
       html: htmlContent,
     });
     console.log(`Confirmation email sent to ${lead.email}`);
@@ -247,53 +320,84 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   
   const customerHtml = `
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="utf-8">
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background: #1e3a5f; color: white; padding: 20px; text-align: center; }
-    .content { padding: 20px; background: #f9f9f9; }
-    .footer { padding: 20px; text-align: center; font-size: 12px; color: #666; }
-    .highlight { background: #fff; padding: 15px; border-left: 4px solid #f59e0b; margin: 15px 0; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ihre Terminanfrage bei 089-Sanierer</title>
 </head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>089-Sanierer</h1>
-      <p>Terminbestätigung</p>
-    </div>
-    <div class="content">
-      <h2>Vielen Dank für Ihre Terminanfrage, ${appointment.name}!</h2>
-      <p>Wir haben Ihre Terminanfrage erhalten und werden uns in Kürze bei Ihnen melden, um den Termin zu bestätigen.</p>
-      
-      <div class="highlight">
-        <strong>Ihre Terminanfrage:</strong><br>
-        Service: ${serviceLabel}<br>
-        Adresse: ${appointment.address || "Nicht angegeben"}<br>
-        Wunschtermin: ${formatDateDE(appointment.preferredDate)}<br>
-        Uhrzeit: ${formatTimeDE(appointment.preferredTime)} Uhr<br>
-        ${appointment.message ? `Nachricht: ${appointment.message}` : ""}
-      </div>
-      
-      <p>Bei Fragen erreichen Sie uns unter:</p>
-      <p>
-        <strong>Telefon:</strong> 0152 122 740 43<br>
-        <strong>E-Mail:</strong> info@089-sanierer.de
-      </p>
-    </div>
-    <div class="footer">
-      <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
-      <p>www.089-sanierer.de</p>
-      <p style="margin-top: 15px; font-size: 11px; color: #999;">
-        Informationen zum Umgang mit Ihren personenbezogenen Daten finden Sie in unserer 
-        <a href="https://089-sanierer.de/datenschutz" style="color: #1e3a5f;">Datenschutzerklärung</a>. 
-        Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
-      </p>
-    </div>
-  </div>
+<body style="margin: 0; padding: 0; background-color: #f4f1ec; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f1ec;">
+    <tr>
+      <td align="center" style="padding: 40px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%;">
+
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #1a2e44 0%, #2a4a6b 100%); padding: 40px 40px 32px; border-radius: 12px 12px 0 0; text-align: center;">
+              <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">089-Sanierer</h1>
+              <p style="margin: 0; font-size: 13px; color: #b8cce0; letter-spacing: 2px; text-transform: uppercase;">Ihr Projekt-Kurator f\u00fcr Sanierungen</p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="background-color: #ffffff; padding: 40px;">
+
+              <h2 style="margin: 0 0 8px; font-size: 22px; color: #1a2e44; font-weight: 600;">Ihre Terminanfrage, ${appointment.name}!</h2>
+              <p style="margin: 0 0 24px; font-size: 15px; color: #555; line-height: 1.7;">Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen.</p>
+
+              <!-- Termin-Box -->
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
+                <tr>
+                  <td style="background-color: #f8f6f3; border-left: 4px solid #c9944a; padding: 20px 24px; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0 0 4px; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">Ihre Terminanfrage</p>
+                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Leistung:</strong> ${serviceLabel}</p>
+                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
+                    <p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>
+                    ${appointment.address ? `<p style="margin: 0 0 6px; font-size: 15px; color: #333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
+                    ${appointment.message ? `<p style="margin: 0; font-size: 14px; color: #666; font-style: italic;">\u201e${appointment.message}\u201c</p>` : ""}
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 0 0 20px; font-size: 15px; color: #555; line-height: 1.7;">Wir best\u00e4tigen Ihren Termin schnellstm\u00f6glich telefonisch oder per E-Mail. Sollten Sie vorher noch Fragen haben, erreichen Sie uns jederzeit.</p>
+
+              <!-- Kontakt -->
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: #1a2e44; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 20px 24px;">
+                    <p style="margin: 0 0 4px; font-size: 11px; color: #b8cce0; text-transform: uppercase; letter-spacing: 1px;">Direkte Fragen?</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #ffffff;">
+                      Telefon: <a href="tel:+4915212274043" style="color: #c9944a; text-decoration: none; font-weight: 600;">0152 122 740 43</a>
+                    </p>
+                    <p style="margin: 0; font-size: 15px; color: #ffffff;">
+                      E-Mail: <a href="mailto:info@089-sanierer.de" style="color: #c9944a; text-decoration: none; font-weight: 600;">info@089-sanierer.de</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #eae6df; padding: 24px 40px; border-radius: 0 0 12px 12px; text-align: center;">
+              <p style="margin: 0 0 4px; font-size: 13px; color: #777; font-weight: 600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
+              <p style="margin: 0 0 12px; font-size: 12px; color: #999;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
+              <p style="margin: 0; font-size: 11px; color: #aaa; line-height: 1.6;">
+                <a href="https://089-sanierer.de" style="color: #1a2e44; text-decoration: none;">www.089-sanierer.de</a> &nbsp;\u00b7&nbsp;
+                <a href="https://089-sanierer.de/datenschutz" style="color: #1a2e44; text-decoration: none;">Datenschutz</a> &nbsp;\u00b7&nbsp;
+                <a href="https://089-sanierer.de/impressum" style="color: #1a2e44; text-decoration: none;">Impressum</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
   `;
@@ -356,7 +460,7 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
       smtp.sendMail({
         from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
         to: appointment.email,
-        subject: `Terminanfrage bei 089-Sanierer: ${serviceLabel}`,
+        subject: `Ihre Terminanfrage bei 089-Sanierer \u2013 ${serviceLabel}`,
         html: customerHtml,
       }),
       smtp.sendMail({
