@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, ChevronDown, Home, Bath, UtensilsCrossed, Layers, Zap, Flame, Triangle, Leaf, Calculator } from "lucide-react";
+import { CalendarClock, Mail, Menu, X, ChevronDown, Home, Bath, UtensilsCrossed, Layers, Zap, Flame, Triangle, Leaf, Calculator } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -64,11 +64,11 @@ export function SiteHeader() {
             >
               {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
             </Button>
-            <a href="tel:+498944438872" aria-label="Anrufen: 089 444438872">
-              <Button size="icon" className="bg-green-500 hover:bg-green-600 text-white border-green-500">
-                <Phone className="w-4 h-4" aria-hidden="true" />
+            <Link href="/termin">
+              <Button size="icon" className="bg-amber-500 text-white border-amber-500">
+                <CalendarClock className="w-4 h-4" aria-hidden="true" />
               </Button>
-            </a>
+            </Link>
           </div>
           <nav className="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
             <DropdownMenu>
@@ -115,12 +115,18 @@ export function SiteHeader() {
                 Kostenrechner
               </Button>
             </Link>
-            <a href="tel:+498944438872" className="ml-3" aria-label="Anrufen: 089 444438872">
-              <Button size="sm" className="text-sm bg-green-500 hover:bg-green-600 text-white border-green-500">
-                <Phone className="w-4 h-4 mr-1" aria-hidden="true" />
-                089 444438872
+            <Link href="/kontakt">
+              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10 ml-2">
+                <Mail className="w-4 h-4 mr-1" aria-hidden="true" />
+                Kontakt
               </Button>
-            </a>
+            </Link>
+            <Link href="/termin">
+              <Button size="sm" className="text-sm bg-amber-500 text-white border-amber-500 ml-1">
+                <CalendarClock className="w-4 h-4 mr-1" aria-hidden="true" />
+                24H Online-Termine
+              </Button>
+            </Link>
           </nav>
         </div>
       </div>
@@ -179,7 +185,17 @@ export function SiteHeader() {
                 className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <Mail className="w-4 h-4 mr-2" />
                 Kontakt
+              </Button>
+            </Link>
+            <Link href="/termin">
+              <Button 
+                className="w-full justify-start bg-amber-500 text-white border-amber-500 mt-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <CalendarClock className="w-4 h-4 mr-2" />
+                24H Online-Termine
               </Button>
             </Link>
           </div>
