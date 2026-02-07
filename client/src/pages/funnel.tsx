@@ -1201,18 +1201,22 @@ export default function FunnelPage() {
         key={type.id}
         type="button"
         onClick={onClick}
-        className={`p-3 rounded-md border text-center transition-all hover-elevate ${
+        className={`p-3 rounded-md border text-left sm:text-center transition-all hover-elevate ${
           isSelected ? "border-primary bg-primary/5" : "border-border"
         }`}
         data-testid={testId}
       >
-        <div className={`w-10 h-10 mx-auto mb-2 rounded-md flex items-center justify-center ${
-          isSelected ? "bg-primary/20" : "bg-muted"
-        }`}>
-          <Icon className={`w-5 h-5 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+        <div className="flex items-center gap-3 sm:flex-col">
+          <div className={`w-10 h-10 sm:mx-auto sm:mb-2 flex-shrink-0 rounded-md flex items-center justify-center ${
+            isSelected ? "bg-primary/20" : "bg-muted"
+          }`}>
+            <Icon className={`w-5 h-5 ${isSelected ? "text-primary" : "text-muted-foreground"}`} />
+          </div>
+          <div>
+            <p className={`font-semibold text-sm truncate ${isSelected ? "text-primary" : ""}`}>{type.label}</p>
+            <p className="text-xs text-muted-foreground mt-0.5 truncate">{type.desc}</p>
+          </div>
         </div>
-        <p className={`font-semibold text-sm truncate ${isSelected ? "text-primary" : ""}`}>{type.label}</p>
-        <p className="text-xs text-muted-foreground mt-0.5 truncate">{type.desc}</p>
         {isSelected && <CheckCircle className="w-4 h-4 text-primary mx-auto mt-2" />}
       </button>
     );
@@ -1224,7 +1228,7 @@ export default function FunnelPage() {
     if (service === "badsanierung") {
       return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {bathroomTypes.map((type) => 
               renderOptionCard(
                 type, 
@@ -1247,7 +1251,7 @@ export default function FunnelPage() {
       return (
         <div className="space-y-5">
           <p className="text-sm text-muted-foreground">Welche Arbeiten sollen durchgeführt werden?</p>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {kitchenWorkTypes.map((type) => 
               renderOptionCard(
                 type, 
@@ -1300,7 +1304,7 @@ export default function FunnelPage() {
     if (service === "bodensanierung") {
       return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {floorRoomTypes.map((type) => 
               renderOptionCard(
                 type, 
@@ -1322,7 +1326,7 @@ export default function FunnelPage() {
     if (service === "dachsanierung") {
       return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {roofPropertyTypes.map((type) => 
               renderOptionCard(
                 type, 
@@ -1343,7 +1347,7 @@ export default function FunnelPage() {
     
     return (
       <div className="space-y-5">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {propertyTypes.map((type) => 
             renderOptionCard(
               type, 
@@ -1948,7 +1952,7 @@ export default function FunnelPage() {
             <div>
               <Label className="text-sm font-medium">Was soll gedämmt werden?</Label>
               <p className="text-sm text-muted-foreground mb-3">Mehrfachauswahl möglich</p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { id: "Fassade", label: "Fassade/Außenwände" },
                   { id: "Dach", label: "Dach/Oberste Decke" },
@@ -2439,8 +2443,8 @@ export default function FunnelPage() {
     const keywords = serviceKeywords[preSelectedService] || { primary: [], secondary: [] };
     
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-7xl flex-1">
-        <div className="prose prose-lg max-w-none mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 overflow-x-hidden">
+        <div className="prose prose-lg max-w-none mb-4 break-words">
           <p className="text-foreground leading-relaxed">{highlightKeywords(content.intro, keywords)}</p>
         </div>
 
@@ -2627,7 +2631,7 @@ export default function FunnelPage() {
     };
     
     return (
-      <div className="min-h-screen bg-background flex flex-col">
+      <div className="min-h-screen bg-background flex flex-col overflow-x-hidden">
         <SeoHead
           title={`${content.headline} | München`}
           description={content.intro.substring(0, 155) + "..."}
@@ -2661,10 +2665,10 @@ export default function FunnelPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col overflow-x-hidden">
       <SiteHeader />
 
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-7xl pt-20 flex-1">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pt-20 flex-1">
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm text-muted-foreground">Schritt {currentStep} von {totalSteps}</span>

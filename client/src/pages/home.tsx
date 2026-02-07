@@ -568,7 +568,7 @@ function FunnelForm() {
                   <Label
                     key={service.id}
                     htmlFor={`service-${service.id}`}
-                    className={`flex flex-col items-center gap-2 p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                    className={`flex flex-col items-center gap-2 p-3 sm:p-4 rounded-lg border-2 cursor-pointer transition-all ${
                       selectedService === service.id
                         ? "border-primary bg-primary/5"
                         : "border-border hover-elevate"

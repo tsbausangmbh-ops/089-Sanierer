@@ -340,7 +340,7 @@ export default function GewerkeFunnel() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col overflow-x-hidden">
       <SeoHead
         title="Handwerker München gesucht? | Maler Elektriker Sanitär"
         description="Handwerker München finden: Maler, Elektriker, Sanitär, Fliesenleger, Schreiner. Geprüfte Fachbetriebe, kostenlose Vermittlung, Angebot in 48h."
@@ -439,7 +439,7 @@ export default function GewerkeFunnel() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {(formData.trade === "fliesenleger" ? [
                   { id: "wohnung", label: "Wohnung", icon: Building2 },
                   { id: "haus", label: "Haus", icon: Home },
