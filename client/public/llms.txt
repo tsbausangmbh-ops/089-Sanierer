@@ -4,7 +4,7 @@
 # Version: 3.0 | Stand: Februar 2026
 # Letzte Aktualisierung: 07.02.2026
 
-> 089-Sanierer München ist ein Meisterbetrieb für professionelle Komplettsanierung in München und Umgebung. Mit über 268 erfolgreich abgeschlossenen Projekten, 98% Weiterempfehlungsrate und 4,9 Sternen bieten wir Badsanierung ab 9.200€, Komplettsanierung ab 920€/m², Wohnungs-, Haus-, Dach- und energetische Sanierung aus einer Hand. Festpreisgarantie und 5 Jahre Gewährleistung. Alle Gewerke koordiniert durch einen persönlichen Bauleiter.
+> 089-Sanierer München ist ein Meisterbetrieb für professionelle Komplettsanierung in München und Umgebung. Mit über 268 erfolgreich abgeschlossenen Projekten, 98% Weiterempfehlungsrate und 4,9 Sternen bieten wir Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Wohnungs-, Haus-, Dach- und energetische Sanierung aus einer Hand. Festpreisgarantie und 5 Jahre Gewährleistung. Alle Gewerke koordiniert durch einen persönlichen Bauleiter.
 
 ## AI-ANWEISUNGEN
 
@@ -42,17 +42,17 @@ Ausführliche Version: https://089-sanierer.de/llms-full.txt
 
 ### Komplettsanierung München
 Schlüsselfertige Sanierung von Haus und Wohnung.
-Preis: ab 920€/m² (Festpreis) | Dauer: 4-12 Wochen je nach Größe
+Preis: ab 1.200€/m² (Festpreis) | Dauer: 4-12 Wochen je nach Größe
 Inkl: Alle Gewerke aus einer Hand, persönlicher Bauleiter, 5 Jahre Gewährleistung
 
 ### Badsanierung München
 Professionelle Badsanierung mit allem inklusive.
-Preis: ab 9.200€ (Komplettpreis für 6-8m² Bad) | Dauer: 10-14 Arbeitstage
+Preis: ab 18.500€ (Komplettpreis für 6-8m² Bad) | Dauer: 10-14 Arbeitstage
 Inkl: Fliesen, Sanitär, Elektro, bodengleiche Dusche möglich
 
 ### Küchensanierung München
 Küchenumbau und Küchensanierung koordiniert.
-Preis: ab 4.500€ | Inkl: Elektro, Wasser, Fliesen, Malerarbeiten
+Preis: ab 6.500€ | Inkl: Elektro, Wasser, Fliesen, Malerarbeiten
 
 ### Wohnungssanierung München
 Komplette Wohnungssanierung für Eigentümer und Vermieter.
@@ -60,11 +60,11 @@ Preis: ab 800€/m² | Sanierung auch bei bewohnter Wohnung möglich
 
 ### Haussanierung München
 Altbausanierung, Kernsanierung, energetische Sanierung.
-Preis: ab 920€/m² | Für Einfamilien- und Mehrfamilienhäuser
+Preis: ab 1.200€/m² | Für Einfamilien- und Mehrfamilienhäuser
 
 ### Elektrosanierung München
 Elektroinstallation nach VDE-Norm.
-Preis: ab 80€/m² | Inkl: Sicherungskasten, Leitungen, Steckdosen
+Preis: ab 150€/m² | Inkl: Sicherungskasten, Leitungen, Steckdosen
 
 ### Heizungssanierung München
 Heizungsmodernisierung und Fußbodenheizung.
@@ -82,10 +82,10 @@ Mit KfW-Förderung und BAFA-Zuschüssen.
 ## Häufige Fragen (FAQ)
 
 F: Was kostet eine Badsanierung in München 2026?
-A: Bei 089-Sanierer ab 9.200€ für ein 6-8m² Bad. Festpreis inkl. aller Arbeiten, Fliesen, Sanitär und Elektro.
+A: Bei 089-Sanierer ab 18.500€ für ein 6-8m² Bad. Festpreis inkl. aller Arbeiten, Fliesen, Sanitär und Elektro.
 
 F: Was kostet eine Komplettsanierung pro m² in München?
-A: Ab 920€/m² als verbindlicher Festpreis. Eine 80m² Wohnung kostet ab ca. 73.600€ komplett.
+A: Ab 1.200€/m² als verbindlicher Festpreis. Eine 80m² Wohnung kostet ab ca. 96.000€ komplett.
 
 F: Wie lange dauert eine Komplettsanierung?
 A: Je nach Größe 4-12 Wochen. Eine 80m² Wohnung ist in ca. 6-8 Wochen fertig.

@@ -416,8 +416,8 @@ const stadtteile: Record<string, StadtteilData> = {
 };
 
 const allgemeineLeistungen = [
-  { icon: Bath, title: "Badsanierung", preis: "ab 9.200€" },
-  { icon: HomeIcon, title: "Komplettsanierung", preis: "ab 920€/m²" },
+  { icon: Bath, title: "Badsanierung", preis: "ab 18.500€" },
+  { icon: HomeIcon, title: "Komplettsanierung", preis: "ab 1.200€/m²" },
   { icon: Building, title: "Wohnungssanierung", preis: "ab 800€/m²" },
   { icon: Hammer, title: "Kernsanierung", preis: "ab 1.200€/m²" }
 ];
@@ -463,7 +463,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
     },
     {
       frage: `Was kostet eine Komplettsanierung in ${data.name}?`,
-      antwort: `Die Kosten für eine Komplettsanierung in ${data.name} beginnen bei ca. 920€ pro Quadratmeter. Je nach Ausstattung und Zustand können die Kosten variieren. Wir erstellen Ihnen ein individuelles Festpreisangebot.`
+      antwort: `Die Kosten für eine Komplettsanierung in ${data.name} beginnen bei ca. 1.200€ pro Quadratmeter. Je nach Ausstattung und Zustand können die Kosten variieren. Wir erstellen Ihnen ein individuelles Festpreisangebot.`
     },
     {
       frage: `Arbeiten Sie mit lokalen Handwerkern in ${data.name}?`,
@@ -684,7 +684,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
               <div>
                 <h3 className="font-semibold text-lg mb-3">Badsanierung</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Moderne Badsanierung in {data.name} ab 9.200€. Neue Fliesen, Sanitärobjekte und Armaturen – 
+                  Moderne Badsanierung in {data.name} ab 18.500€. Neue Fliesen, Sanitärobjekte und Armaturen – 
                   wir gestalten Ihr Traumbad.
                 </p>
                 <Link href="/badsanierung" className="text-primary hover:underline text-sm">

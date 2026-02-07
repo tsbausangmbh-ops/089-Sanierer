@@ -162,6 +162,7 @@ Preferred communication style: Simple, everyday language (German).
 - Freshness meta tags: og:updated_time, article:modified_time, article:published_time on all pages
 - Crawler HTML: "Zuletzt aktualisiert: Februar 2026" dates + "Kurzantwort" direct-answer summaries
 - Service prices synchronized across llms.txt, crawler-middleware servicePages, serviceSchemaMap
+- Price update (Feb 2026): Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Küchensanierung ab 6.500€, Elektrosanierung ab 150€/m²
 - Phone number normalized to +49 89 444 438 872 across all SEO surfaces
 - Keywords updated from 2024 to 2026 references
 - Copyright updated to 2026

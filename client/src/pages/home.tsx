@@ -93,7 +93,7 @@ const allServices = [
     image: completeImg,
     imageAlt: "Komplettsanierung München - Professionelle Altbausanierung mit Festpreisgarantie",
     description: "Rundum-Sanierung aus einer Hand",
-    price: "ab 920€/m²",
+    price: "ab 1.200€/m²",
     features: ["Alle Gewerke koordiniert", "Festpreisgarantie", "Ein Ansprechpartner"]
   },
   { 
@@ -103,7 +103,7 @@ const allServices = [
     image: bathroomImg,
     imageAlt: "Badsanierung München - Modernes Badezimmer nach Komplettrenovierung",
     description: "Ihr Traumbad in 2-3 Wochen",
-    price: "ab 9.200€",
+    price: "ab 18.500€",
     features: ["Barrierefreie Optionen", "Moderne Designs", "Sanitär & Fliesen"]
   },
   { 
@@ -289,11 +289,11 @@ const testimonials = [
 const faqs = [
   {
     question: "Was kostet eine Komplettsanierung in München?",
-    answer: "Aus unserer Erfahrung mit 268+ Projekten: Eine Komplettsanierung in München kostet zwischen 920€ und 2.300€ pro Quadratmeter. Eine 80m² Wohnung liegt damit zwischen 73.600€ und 184.000€. In Ihrer kostenlosen Beratung erhalten Sie eine genaue Schätzung für Ihr Projekt."
+    answer: "Aus unserer Erfahrung mit 268+ Projekten: Eine Komplettsanierung in München kostet zwischen 1.200€ und 2.300€ pro Quadratmeter. Eine 80m² Wohnung liegt damit zwischen 96.000€ und 184.000€. In Ihrer kostenlosen Beratung erhalten Sie eine genaue Schätzung für Ihr Projekt."
   },
   {
     question: "Was kostet eine Badsanierung in München?",
-    answer: "Eine Badsanierung startet bei etwa 9.200€ für ein kleines Bad mit Standardausstattung. Mittelgroße Bäder liegen bei 15.000-25.000€, Luxusbäder bei 35.000€+. Wir erstellen Ihnen ein verbindliches Festpreis-Angebot."
+    answer: "Eine Badsanierung startet bei etwa 18.500€ für ein Komplettbad. Mittelgroße Bäder liegen bei 20.000-28.000€, Luxusbäder bei 35.000€+. Wir erstellen Ihnen ein verbindliches Festpreis-Angebot."
   },
   {
     question: "Wie lange dauert eine Sanierung?",

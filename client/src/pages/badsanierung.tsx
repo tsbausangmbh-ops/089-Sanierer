@@ -33,7 +33,7 @@ const badHeroContent: HeroContent = {
   titleLine1: "Badsanierung München – Bad renovieren, Badumbau & Badmodernisierung.",
   titleLine2: "Fertig in 2-3 Wochen. Barrierefrei & bodengleich.",
   descriptions: ["Ihr persönlicher Bauleiter koordiniert alle Gewerke.", "Bodengleiche Dusche, LED-Ambiente, Premium-Armaturen."],
-  strongText: "Volle Festpreisgarantie ab 9.200€.",
+  strongText: "Volle Festpreisgarantie ab 18.500€.",
   subText: "Sie entspannen – wir verwandeln Ihr Bad in eine private Wellness-Oase.",
   ctaText: "Jetzt exklusives Bad-Konzept anfordern",
   ctaLink: "/anfrage?service=badsanierung",
@@ -68,7 +68,7 @@ const badFaqs = [
   },
   {
     frage: "Was kostet eine bodengleiche Dusche?",
-    antwort: "Eine bodengleiche Dusche ist in unseren Standardpaketen ab 9.200€ bereits enthalten. Sie ist nicht nur optisch ansprechend, sondern auch barrierefrei und pflegeleicht."
+    antwort: "Eine bodengleiche Dusche ist in unseren Standardpaketen ab 18.500€ bereits enthalten. Sie ist nicht nur optisch ansprechend, sondern auch barrierefrei und pflegeleicht."
   },
   {
     frage: "Welche Fliesen empfehlen Sie für das Bad?",
@@ -84,8 +84,8 @@ export default function Badsanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Badsanierung München ab 9.200€ | Festpreis | 089-Sanierer"
-        description="Badsanierung München: Komplett-Bad ab 9.200€ mit Festpreisgarantie. Bodengleiche Dusche, moderne Fliesen, 5 Jahre Gewährleistung. In 2-3 Wochen fertig."
+        title="Badsanierung München ab 18.500€ | Festpreis | 089-Sanierer"
+        description="Badsanierung München: Komplett-Bad ab 18.500€ mit Festpreisgarantie. Bodengleiche Dusche, moderne Fliesen, 5 Jahre Gewährleistung. In 2-3 Wochen fertig."
         canonicalPath="/badsanierung"
         schema={{
           "@context": "https://schema.org",
@@ -93,7 +93,7 @@ export default function Badsanierung() {
           "name": "Badsanierung München",
           "provider": {"@id": "https://089-sanierer.de/#organization"},
           "areaServed": "München",
-          "description": "Professionelle Badsanierung in München ab 9.200€"
+          "description": "Professionelle Badsanierung in München ab 18.500€"
         }}
         preloadImage={bathroomImg}
       />

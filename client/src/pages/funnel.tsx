@@ -166,7 +166,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
     titleLine1: "Elektrosanierung München – Elektrik erneuern & Neuinstallation.",
     titleLine2: "Sicher, normgerecht nach VDE. Festpreis.",
     descriptions: ["Neue Leitungen nach VDE durch zertifizierte Elektromeister.", "Moderne Sicherungstechnik auf höchstem Niveau."],
-    strongText: "Ab 80€/m² – volle Festpreisgarantie.",
+    strongText: "Ab 150€/m² – volle Festpreisgarantie.",
     subText: "Ihre Elektrik auf dem neuesten Stand. Sicher und zukunftssicher.",
     ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
     checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "E-Check inklusive"],

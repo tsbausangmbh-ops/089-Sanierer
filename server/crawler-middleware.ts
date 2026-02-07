@@ -58,13 +58,13 @@ const servicePages: Record<string, { title: string; description: string; price: 
   badsanierung: {
     title: "Badsanierung München",
     description: "Professionelle Badsanierung in München. Komplettbad inkl. Fliesen, Sanitär, Elektro. Barrierefreie Lösungen möglich.",
-    price: "9.200 - 50.000 €",
+    price: "18.500 - 50.000 €",
     keywords: "Badsanierung München, Bad renovieren München, Badezimmer sanieren München Kosten, Badsanierung München Festpreis, Badrenovierung München, Bad komplett sanieren München, was kostet Badsanierung München 2026, Bad neu machen München Preise, Badumbau München barrierefrei, kleine Badsanierung München, Gäste WC sanieren München Kosten, Bad fliesen München Preis, Dusche einbauen München, Badezimmer modernisieren München, Badsanierung München Dauer Wochen",
   },
   kuechensanierung: {
     title: "Küchensanierung München",
     description: "Küchensanierung in München: Fliesen, Elektro, Wasseranschlüsse. Bauarbeiten ohne Küchenmöbel.",
-    price: "4.500 - 22.000 €",
+    price: "6.500 - 22.000 €",
     keywords: "Küchensanierung München, Küche renovieren München, Küchenumbau München Kosten, Küche umbauen München, Küchenanschlüsse verlegen München, Küche neu gestalten München, Küche modernisieren München Preise, Elektrik Küche verlegen München, Wasseranschluss Küche München, Fliesenspiegel Küche München, Küchenmontage München Kosten, Küchenrenovierung München Dauer, neue Küche einbauen München, Küche komplett erneuern München, Kücheninstallation München Festpreis",
   },
   bodensanierung: {
@@ -105,7 +105,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   const serviceInfo = servicePages[service];
 
   let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer";
-  let description = "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
+  let description = "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
   let keywords = "Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer";
   let mainContent = "";
 
@@ -114,15 +114,15 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       <section>
         <h1>Sanierung München - 089-Sanierer Komplettsanierungen</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> 089-Sanierer ist Münchens Meisterbetrieb für Komplettsanierungen. Badsanierung ab 9.200 €, Wohnungssanierung ab 800 €/m², Komplettsanierung ab 920 €/m² – alles mit verbindlicher Festpreisgarantie, persönlichem Bauleiter und 5 Jahren Gewährleistung. 268+ Projekte, 4,9 Sterne, 98 % Weiterempfehlung.</p>
+        <p><strong>Kurzantwort:</strong> 089-Sanierer ist Münchens Meisterbetrieb für Komplettsanierungen. Badsanierung ab 18.500 €, Wohnungssanierung ab 800 €/m², Komplettsanierung ab 1.200 €/m² – alles mit verbindlicher Festpreisgarantie, persönlichem Bauleiter und 5 Jahren Gewährleistung. 268+ Projekte, 4,9 Sterne, 98 % Weiterempfehlung.</p>
         
         <h2>Unsere Leistungen</h2>
         <ul>
-          <li><strong>Komplettsanierung</strong> - Schlüsselfertige Sanierung ab 920 €/m²</li>
-          <li><strong>Badsanierung</strong> - Komplettbad ab 9.200 €</li>
-          <li><strong>Küchensanierung</strong> - Bauarbeiten ab 4.500 €</li>
+          <li><strong>Komplettsanierung</strong> - Schlüsselfertige Sanierung ab 1.200 €/m²</li>
+          <li><strong>Badsanierung</strong> - Komplettbad ab 18.500 €</li>
+          <li><strong>Küchensanierung</strong> - Bauarbeiten ab 6.500 €</li>
           <li><strong>Bodensanierung</strong> - Alle Bodenbeläge ab 65 €/m²</li>
-          <li><strong>Elektrosanierung</strong> - VDE-konforme Installation ab 80 €/m²</li>
+          <li><strong>Elektrosanierung</strong> - VDE-konforme Installation ab 150 €/m²</li>
           <li><strong>Heizungssanierung</strong> - Moderne Heizsysteme ab 12.000 €</li>
           <li><strong>Dachsanierung</strong> - Dämmung und Eindeckung ab 150 €/m²</li>
           <li><strong>Energetische Sanierung</strong> - KfW-förderfähig ab 200 €/m²</li>
@@ -195,7 +195,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       <section>
         <h1>FAQ & Preise - Sanierung München</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> Sanierungskosten in München 2026: Badsanierung ab 9.200 € (6-8 m²), Komplettsanierung ab 920 €/m², Küchensanierung ab 4.500 €, Elektro ab 80 €/m². Alle Preise als verbindliche Festpreise bei 089-Sanierer, mit 5 Jahren Gewährleistung und persönlichem Bauleiter.</p>
+        <p><strong>Kurzantwort:</strong> Sanierungskosten in München 2026: Badsanierung ab 18.500 € (6-8 m²), Komplettsanierung ab 1.200 €/m², Küchensanierung ab 6.500 €, Elektro ab 150 €/m². Alle Preise als verbindliche Festpreise bei 089-Sanierer, mit 5 Jahren Gewährleistung und persönlichem Bauleiter.</p>
         
         <h2>Preisübersicht (München, Stand 02/2026, netto zzgl. MwSt.)</h2>
         
@@ -389,7 +389,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     `;
   } else if (path === "/kosten") {
     title = "Was kostet Sanierung München? Preise 2025 | 089-Sanierer";
-    description = "Sanierung München Kosten: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung.";
+    description = "Sanierung München Kosten: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung.";
     keywords = "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München";
     mainContent = `
       <section>
@@ -398,8 +398,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Preisübersicht Sanierung München</h2>
         <ul>
-          <li><strong>Komplettsanierung:</strong> ab 920 €/m²</li>
-          <li><strong>Badsanierung:</strong> ab 9.200 €</li>
+          <li><strong>Komplettsanierung:</strong> ab 1.200 €/m²</li>
+          <li><strong>Badsanierung:</strong> ab 18.500 €</li>
           <li><strong>Wohnungssanierung:</strong> ab 800 €/m²</li>
           <li><strong>Kernsanierung:</strong> ab 1.200 €/m²</li>
         </ul>
@@ -417,12 +417,12 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/badsanierung") {
-    title = "Badsanierung München ab 9.200€ | Festpreis | 089-Sanierer";
-    description = "Badsanierung München: Komplett-Badsanierung ab 9.200€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.";
+    title = "Badsanierung München ab 18.500€ | Festpreis | 089-Sanierer";
+    description = "Badsanierung München: Komplett-Badsanierung ab 18.500€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.";
     keywords = "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München";
     mainContent = `
       <section>
-        <h1>Badsanierung München - Komplett ab 9.200€</h1>
+        <h1>Badsanierung München - Komplett ab 18.500€</h1>
         <p>Ihr Bad in neuen Händen. Alles aus einer Hand mit Festpreisgarantie.</p>
         
         <h2>Unsere Badsanierung beinhaltet</h2>
@@ -465,12 +465,12 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/haussanierung") {
-    title = "Haussanierung München | Komplett ab 920€/m² | 089-Sanierer";
-    description = "Haussanierung München: Komplette Haussanierung ab 920€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.";
+    title = "Haussanierung München | Komplett ab 1.200€/m² | 089-Sanierer";
+    description = "Haussanierung München: Komplette Haussanierung ab 1.200€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.";
     keywords = "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München";
     mainContent = `
       <section>
-        <h1>Haussanierung München - ab 920€/m²</h1>
+        <h1>Haussanierung München - ab 1.200€/m²</h1>
         <p>Ihr Haus in neuen Händen. Komplette Sanierung aus einer Hand.</p>
         
         <h2>Wir sanieren</h2>
@@ -530,8 +530,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Unsere Leistungen in ${districtName}</h2>
         <ul>
-          <li>Badsanierung ab 9.200€</li>
-          <li>Komplettsanierung ab 920€/m²</li>
+          <li>Badsanierung ab 18.500€</li>
+          <li>Komplettsanierung ab 1.200€/m²</li>
           <li>Wohnungssanierung ab 800€/m²</li>
           <li>Kernsanierung ab 1.200€/m²</li>
         </ul>
@@ -702,7 +702,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         "name": "Was kostet eine Badsanierung in München?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Eine Badsanierung in München kostet je nach Größe und Ausstattung zwischen 9.200 € und 50.000 € (netto zzgl. MwSt., Stand 02/2026). Ein Komplettbad (6-8m²) startet ab 9.200 €, ein Standard-Bad (5-6m²) liegt bei 16.000-22.000 €, ein Komfort-Bad bei 22.000-32.000 €."
+          "text": "Eine Badsanierung in München kostet je nach Größe und Ausstattung zwischen 18.500 € und 50.000 € (netto zzgl. MwSt., Stand 02/2026). Ein Komplettbad (6-8m²) startet ab 18.500 €, ein Standard-Bad (5-6m²) liegt bei 20.000-28.000 €, ein Komfort-Bad bei 28.000-40.000 €."
         }
       },
       {
@@ -744,7 +744,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     "/badsanierung": {
       serviceType: "Badsanierung München",
       description: "Komplette Badsanierung in München: Fliesen, Sanitär, Elektro. Barrierefreie Lösungen möglich. Festpreisgarantie.",
-      priceRange: "9.200 - 50.000 €"
+      priceRange: "18.500 - 50.000 €"
     },
     "/wohnungssanierung": {
       serviceType: "Wohnungssanierung München",
@@ -754,7 +754,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     "/haussanierung": {
       serviceType: "Haussanierung München",
       description: "Komplette Haussanierung in München für Einfamilien- und Mehrfamilienhäuser. Alle Gewerke aus einer Hand mit Festpreisgarantie.",
-      priceRange: "920 - 2.300 €/m²"
+      priceRange: "1.200 - 2.300 €/m²"
     },
     "/kernsanierung": {
       serviceType: "Kernsanierung München",
@@ -769,12 +769,12 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     "/komplettsanierung": {
       serviceType: "Komplettsanierung München",
       description: "Schlüsselfertige Komplettsanierung von Haus und Wohnung in München. Alle Gewerke koordiniert aus einer Hand.",
-      priceRange: "920 - 2.300 €/m²"
+      priceRange: "1.200 - 2.300 €/m²"
     },
     "/kuechensanierung": {
       serviceType: "Küchensanierung München",
       description: "Küchensanierung in München: Fliesen, Elektro, Wasseranschlüsse. Bauarbeiten ohne Küchenmöbel.",
-      priceRange: "4.500 - 22.000 €"
+      priceRange: "6.500 - 22.000 €"
     },
     "/bodensanierung": {
       serviceType: "Bodensanierung München",
@@ -784,7 +784,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     "/elektrosanierung": {
       serviceType: "Elektrosanierung München",
       description: "Elektroinstallation und Elektrosanierung in München. Sicherungskasten, Leitungen nach VDE-Norm.",
-      priceRange: "80 - 300 €/m²"
+      priceRange: "150 - 300 €/m²"
     },
     "/heizungssanierung": {
       serviceType: "Heizungssanierung München",

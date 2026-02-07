@@ -28,11 +28,11 @@ export function getSeoMeta(path: string): SeoMeta {
   if (normalizedPath === "/" || normalizedPath === "") {
     return {
       title: "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer",
-      description: "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
+      description: "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
       keywords: "Sanierung München, Komplettsanierung München, Badsanierung München, Haussanierung München, 089-Sanierer",
       canonical: BASE_URL,
-      ogTitle: "Was kostet Sanierung in München? Badsanierung ab 9.200€ | 089-Sanierer",
-      ogDescription: "268+ zufriedene Münchner Kunden: Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². Festpreisgarantie, 5 Jahre Gewährleistung.",
+      ogTitle: "Was kostet Sanierung in München? Badsanierung ab 18.500€ | 089-Sanierer",
+      ogDescription: "268+ zufriedene Münchner Kunden: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung.",
     };
   }
 
@@ -170,11 +170,11 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/haussanierung") {
     return {
-      title: "Haussanierung München | Komplett ab 920€/m² | 089-Sanierer",
-      description: "Haussanierung München: Komplette Haussanierung ab 920€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.",
+      title: "Haussanierung München | Komplett ab 1.200€/m² | 089-Sanierer",
+      description: "Haussanierung München: Komplette Haussanierung ab 1.200€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.",
       keywords: "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München",
       canonical: `${BASE_URL}/haussanierung`,
-      ogTitle: "Haussanierung München - ab 920€/m²",
+      ogTitle: "Haussanierung München - ab 1.200€/m²",
       ogDescription: "Komplette Haussanierung für Einfamilien- und Mehrfamilienhäuser mit Festpreisgarantie.",
     };
   }

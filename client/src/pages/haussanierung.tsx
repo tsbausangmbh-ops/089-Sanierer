@@ -33,9 +33,9 @@ const hausHeroContent: HeroContent = {
   imageAlt: "Haussanierung München – Einfamilienhaus komplett sanieren mit Festpreis und Bauleiter",
   badge: "Über 45 erfolgreich sanierte Häuser in München",
   titleLine1: "Haussanierung München – Haus renovieren, Altbau sanieren & Modernisierung.",
-  titleLine2: "Energetisch & förderfähig. Festpreis ab 920€/m².",
+  titleLine2: "Energetisch & förderfähig. Festpreis ab 1.200€/m².",
   descriptions: ["Ihr persönlicher Bauleiter koordiniert bis zu 22 Gewerke.", "Energetische Modernisierung inklusive Fördermittel-Optimierung."],
-  strongText: "Volle Festpreisgarantie ab 920€/m².",
+  strongText: "Volle Festpreisgarantie ab 1.200€/m².",
   subText: "Für anspruchsvolle Immobilienbesitzer, die Qualität schätzen.",
   ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
   ctaLink: "/anfrage?service=komplettsanierung",
@@ -85,8 +85,8 @@ export default function Haussanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Haussanierung München ab 920€/m² | Festpreis | 089-Sanierer"
-        description="Haussanierung München: Komplettsanierung ab 920€/m² mit Festpreisgarantie. Kernsanierung, Altbausanierung, energetische Sanierung. Alle Gewerke aus einer Hand."
+        title="Haussanierung München ab 1.200€/m² | Festpreis | 089-Sanierer"
+        description="Haussanierung München: Komplettsanierung ab 1.200€/m² mit Festpreisgarantie. Kernsanierung, Altbausanierung, energetische Sanierung. Alle Gewerke aus einer Hand."
         canonicalPath="/haussanierung"
         schema={{
           "@context": "https://schema.org",
