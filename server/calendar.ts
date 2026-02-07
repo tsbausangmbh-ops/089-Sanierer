@@ -21,7 +21,70 @@ function hashSeed(str: string): number {
   return Math.abs(h);
 }
 
+function getWeekNumber(date: Date): string {
+  const d = new Date(date);
+  d.setHours(0, 0, 0, 0);
+  d.setDate(d.getDate() + 3 - ((d.getDay() + 6) % 7));
+  const week1 = new Date(d.getFullYear(), 0, 4);
+  const weekNum = 1 + Math.round(((d.getTime() - week1.getTime()) / 86400000 - 3 + ((week1.getDay() + 6) % 7)) / 7);
+  return `${d.getFullYear()}-W${weekNum}`;
+}
+
+function isFullyBookedDay(dateStr: string): boolean {
+  const dateObj = new Date(`${dateStr}T12:00:00+01:00`);
+  const dayOfWeek = dateObj.getDay();
+  if (dayOfWeek === 0) return true;
+
+  const weekKey = getWeekNumber(dateObj);
+  const weekSeed = hashSeed(`booked-week-${weekKey}-kshw2026`);
+  const weekRng = seededRandom(weekSeed);
+
+  const weekdays: string[] = [];
+  const monday = new Date(dateObj);
+  monday.setDate(dateObj.getDate() - ((dayOfWeek + 6) % 7));
+  for (let i = 0; i < 6; i++) {
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    const dow = d.getDay();
+    if (dow !== 0) {
+      const ds = d.toISOString().substring(0, 10);
+      weekdays.push(ds);
+    }
+  }
+
+  const guaranteedIdx = Math.floor(weekRng() * weekdays.length);
+  if (weekdays[guaranteedIdx] === dateStr) return true;
+
+  const extraCount = Math.floor(weekRng() * 2);
+  for (let e = 0; e < extraCount; e++) {
+    const extraIdx = Math.floor(weekRng() * weekdays.length);
+    if (extraIdx !== guaranteedIdx && weekdays[extraIdx] === dateStr) return true;
+  }
+
+  const daySeed = hashSeed(`daybooked-${dateStr}-kshw2026`);
+  const dayRng = seededRandom(daySeed);
+  if (dayRng() < 0.12) return true;
+
+  return false;
+}
+
+export function getFullyBookedDays(year: number, month: number): string[] {
+  const bookedDays: string[] = [];
+  const daysInMonth = new Date(year, month, 0).getDate();
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+    if (isFullyBookedDay(dateStr)) {
+      bookedDays.push(dateStr);
+    }
+  }
+
+  return bookedDays;
+}
+
 function getDayBusyPercentage(date: string): number {
+  if (isFullyBookedDay(date)) return 1.0;
+
   const seed = hashSeed(`day-busy-${date}-kshw2026`);
   const rng = seededRandom(seed);
   const dayOfWeek = new Date(`${date}T12:00:00+01:00`).getDay();
@@ -76,6 +139,8 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
   const dayOfWeek = dateObj.getDay();
 
   if (dayOfWeek === 0) return [];
+
+  if (isFullyBookedDay(date)) return [];
 
   const hours = dayOfWeek === 6 ? BUSINESS_HOURS.saturday : BUSINESS_HOURS.weekday;
   const allSlots: string[] = [];

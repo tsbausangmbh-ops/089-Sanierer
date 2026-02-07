@@ -6,7 +6,7 @@ import { fromZodError } from "zod-validation-error";
 import { setupAuth, requireAuth } from "./auth";
 import OpenAI from "openai";
 import nodemailer from "nodemailer";
-import { getAvailableSlots, createCalendarEvent } from "./calendar";
+import { getAvailableSlots, createCalendarEvent, getFullyBookedDays } from "./calendar";
 
 const serviceLabels: Record<string, string> = {
   komplettsanierung: "Komplettsanierung",
@@ -609,6 +609,25 @@ export async function registerRoutes(
   app.get("/api/appointments", requireAuth, async (req, res) => {
     const appointments = await storage.getAppointments();
     res.json(appointments);
+  });
+
+  app.get("/api/calendar/booked-days", async (req, res) => {
+    try {
+      const { year, month } = req.query;
+      if (!year || !month || typeof year !== "string" || typeof month !== "string") {
+        return res.status(400).json({ error: "Jahr und Monat erforderlich" });
+      }
+      const y = parseInt(year, 10);
+      const m = parseInt(month, 10);
+      if (isNaN(y) || isNaN(m) || m < 1 || m > 12) {
+        return res.status(400).json({ error: "Ungültiges Jahr oder Monat" });
+      }
+      const bookedDays = getFullyBookedDays(y, m);
+      res.json({ year: y, month: m, bookedDays });
+    } catch (error) {
+      console.error("Calendar booked days error:", error);
+      res.status(500).json({ error: "Kalender nicht verfügbar" });
+    }
   });
 
   app.get("/api/calendar/availability", async (req, res) => {

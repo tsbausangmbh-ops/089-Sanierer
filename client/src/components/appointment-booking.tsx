@@ -43,6 +43,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedTime, setSelectedTime] = useState<string>("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [calendarMonth, setCalendarMonth] = useState<Date>(new Date());
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,6 +54,35 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
   });
 
   const dateString = selectedDate ? format(selectedDate, "yyyy-MM-dd") : "";
+
+  const currentYear = calendarMonth.getFullYear();
+  const currentMonth = calendarMonth.getMonth() + 1;
+  const nextMonthDate = new Date(currentYear, calendarMonth.getMonth() + 1, 1);
+  const nextYear = nextMonthDate.getFullYear();
+  const nextMonth = nextMonthDate.getMonth() + 1;
+
+  const { data: bookedCurrent } = useQuery<{ bookedDays: string[] }>({
+    queryKey: ["/api/calendar/booked-days", currentYear, currentMonth],
+    queryFn: async () => {
+      const res = await fetch(`/api/calendar/booked-days?year=${currentYear}&month=${currentMonth}`);
+      if (!res.ok) throw new Error("Fehler");
+      return res.json();
+    },
+  });
+
+  const { data: bookedNext } = useQuery<{ bookedDays: string[] }>({
+    queryKey: ["/api/calendar/booked-days", nextYear, nextMonth],
+    queryFn: async () => {
+      const res = await fetch(`/api/calendar/booked-days?year=${nextYear}&month=${nextMonth}`);
+      if (!res.ok) throw new Error("Fehler");
+      return res.json();
+    },
+  });
+
+  const bookedDaysSet = new Set<string>([
+    ...(bookedCurrent?.bookedDays || []),
+    ...(bookedNext?.bookedDays || []),
+  ]);
 
   const { data: availabilityData, isLoading: loadingSlots } = useQuery<{ date: string; slots: string[] }>({
     queryKey: ["/api/calendar/availability", dateString],
@@ -122,7 +152,9 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
   const maxDate = addDays(new Date(), 60);
 
   const isDateDisabled = (date: Date) => {
-    return date < minDate || date > maxDate || isSunday(date);
+    if (date < minDate || date > maxDate || isSunday(date)) return true;
+    const ds = format(date, "yyyy-MM-dd");
+    return bookedDaysSet.has(ds);
   };
 
   if (step === "success") {
@@ -178,12 +210,24 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                 onSelect={handleDateSelect}
                 disabled={isDateDisabled}
                 locale={de}
+                month={calendarMonth}
+                onMonthChange={setCalendarMonth}
                 className="rounded-md border"
                 data-testid="calendar-date-picker"
               />
             </div>
-            <p className="text-xs text-muted-foreground text-center mt-3">
-              Termine verfügbar: Mo-Fr, 08:00-16:30 Uhr
+            <div className="flex items-center justify-center gap-4 mt-3 text-xs text-muted-foreground">
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-sm bg-primary/15 border border-primary/30" />
+                <span>Verfügbar</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <div className="w-3 h-3 rounded-sm bg-muted line-through opacity-50" />
+                <span>Belegt</span>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-2">
+              Mo–Sa, 08:00–16:30 Uhr
             </p>
           </div>
         )}
