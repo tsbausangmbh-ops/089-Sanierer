@@ -113,6 +113,11 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
     <div class="footer">
       <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
       <p>www.089-sanierer.de</p>
+      <p style="margin-top: 15px; font-size: 11px; color: #999;">
+        Informationen zum Umgang mit Ihren personenbezogenen Daten finden Sie in unserer 
+        <a href="https://089-sanierer.de/datenschutz" style="color: #1e3a5f;">Datenschutzerklärung</a>. 
+        Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
+      </p>
     </div>
   </div>
 </body>
@@ -252,6 +257,11 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
     <div class="footer">
       <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
       <p>www.089-sanierer.de</p>
+      <p style="margin-top: 15px; font-size: 11px; color: #999;">
+        Informationen zum Umgang mit Ihren personenbezogenen Daten finden Sie in unserer 
+        <a href="https://089-sanierer.de/datenschutz" style="color: #1e3a5f;">Datenschutzerklärung</a>. 
+        Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
+      </p>
     </div>
   </div>
 </body>
