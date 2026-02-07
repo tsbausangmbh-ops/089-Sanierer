@@ -56,7 +56,7 @@ function createSmtpTransporter() {
     secure: smtpPort === 465,
     auth: {
       user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
+      pass: process.env.SMTP_PASSWORD || process.env.SMTP_PASS,
     },
     connectionTimeout: 10000,
     greetingTimeout: 10000,
@@ -384,8 +384,9 @@ export async function registerRoutes(
       SMTP_HOST: process.env.SMTP_HOST || "(MISSING)",
       SMTP_PORT: process.env.SMTP_PORT || "(MISSING)",
       SMTP_USER: process.env.SMTP_USER || "(MISSING)",
-      SMTP_PASSWORD_SET: !!process.env.SMTP_PASSWORD,
-      SMTP_PASSWORD_LENGTH: (process.env.SMTP_PASSWORD || "").length,
+      SMTP_PASSWORD_SET: !!(process.env.SMTP_PASSWORD || process.env.SMTP_PASS),
+      SMTP_PASSWORD_LENGTH: (process.env.SMTP_PASSWORD || process.env.SMTP_PASS || "").length,
+      SMTP_PASS_SET: !!process.env.SMTP_PASS,
       SMTP_FROM_EMAIL: process.env.SMTP_FROM_EMAIL || "(MISSING)",
       NODE_ENV: process.env.NODE_ENV || "(NOT SET)",
     };
@@ -398,7 +399,7 @@ export async function registerRoutes(
         secure: false,
         auth: {
           user: process.env.SMTP_USER || "info@089-sanierer.de",
-          pass: process.env.SMTP_PASSWORD,
+          pass: process.env.SMTP_PASSWORD || process.env.SMTP_PASS,
         },
         requireTLS: true,
         connectionTimeout: 10000,
