@@ -78,21 +78,21 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
               <Button 
                 size="lg" 
                 onClick={handleCTA}
-                className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
+                className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-xs sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none whitespace-normal text-center leading-tight"
                 data-testid={`button-${testIdPrefix}-cta`}
               >
-                {content.ctaText}
-                <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
+                <span className="flex-1">{content.ctaText}</span>
+                <ArrowRight className="w-4 h-4 ml-1.5 flex-shrink-0" />
               </Button>
             ) : (
               <Link href={content.ctaLink || "/anfrage"} className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-6 text-sm sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none"
+                  className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white min-h-12 px-4 sm:px-6 text-xs sm:text-base font-semibold shadow-lg animate-pulse hover:animate-none whitespace-normal text-center leading-tight"
                   data-testid={`button-${testIdPrefix}-cta`}
                 >
-                  {content.ctaText}
-                  <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
+                  <span className="flex-1">{content.ctaText}</span>
+                  <ArrowRight className="w-4 h-4 ml-1.5 flex-shrink-0" />
                 </Button>
               </Link>
             )}
