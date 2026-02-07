@@ -568,6 +568,265 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
       </section>
     `;
+  } else if (path === "/agb") {
+    title = "AGB | Allgemeine Geschäftsbedingungen | 089-Sanierer";
+    description = "Allgemeine Geschäftsbedingungen der 089-Sanierer München. Festpreisgarantie, 5 Jahre Gewährleistung, transparente Zahlungsbedingungen für Sanierungsleistungen.";
+    keywords = "AGB 089-Sanierer, Allgemeine Geschäftsbedingungen Sanierung München, Vertragsbedingungen Renovierung München, Gewährleistung Sanierung München, Zahlungsbedingungen Handwerker München";
+    mainContent = `
+      <section>
+        <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+        <p><small>Stand: Februar 2026</small></p>
+
+        <h2>§ 1 Geltungsbereich</h2>
+        <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen 089-Sanierer - Komplettsanierungen Haus & Wohnung, Hardenbergstr. 4, 80992 München (nachfolgend „Auftragnehmer") und dem Auftraggeber über Sanierungs-, Renovierungs- und Bauleistungen.</p>
+
+        <h2>§ 2 Vertragsschluss und Festpreisgarantie</h2>
+        <p>Ein Vertrag kommt durch schriftliche Auftragsbestätigung des Auftragnehmers zustande. Das Angebot enthält einen verbindlichen Festpreis. Nachträgliche Preisänderungen erfolgen nur bei vom Auftraggeber gewünschten Zusatzleistungen, die schriftlich vereinbart werden.</p>
+
+        <h2>§ 3 Leistungsumfang</h2>
+        <p>Der Leistungsumfang ergibt sich aus dem schriftlichen Angebot und der Auftragsbestätigung. Zusätzliche Leistungen bedürfen der schriftlichen Vereinbarung. Die Ausführung erfolgt nach den anerkannten Regeln der Technik und den einschlägigen DIN-Normen.</p>
+
+        <h2>§ 4 Zahlungsbedingungen</h2>
+        <p>Die Zahlung erfolgt in Abschlägen gemäß Baufortschritt: 30 % bei Auftragserteilung, 30 % bei Erreichen des Rohbauzustands, 30 % bei Fertigstellung der Arbeiten, 10 % nach mangelfreier Abnahme. Zahlungen sind innerhalb von 14 Tagen nach Rechnungsstellung fällig.</p>
+
+        <h2>§ 5 Gewährleistung</h2>
+        <p>Die Gewährleistungsfrist beträgt 5 Jahre ab Abnahme der Leistung. Mängel sind unverzüglich schriftlich anzuzeigen. Der Auftragnehmer hat das Recht zur Nachbesserung innerhalb einer angemessenen Frist.</p>
+
+        <h2>§ 6 Haftung</h2>
+        <p>Der Auftragnehmer haftet für Schäden, die durch vorsätzliches oder grob fahrlässiges Verhalten entstehen. Die Haftung für leichte Fahrlässigkeit ist auf vorhersehbare, vertragstypische Schäden begrenzt. Der Auftragnehmer verfügt über eine Betriebshaftpflichtversicherung.</p>
+
+        <h2>§ 7 Terminplanung und Verzug</h2>
+        <p>Die voraussichtliche Bauzeit wird im Angebot angegeben. Verzögerungen durch höhere Gewalt, Witterung oder unvorhergesehene Bausubstanzschäden verlängern die Ausführungsfrist angemessen. Der Auftraggeber wird unverzüglich über Terminänderungen informiert.</p>
+
+        <h2>§ 8 Abnahme</h2>
+        <p>Nach Fertigstellung der Arbeiten erfolgt eine gemeinsame Abnahmebegehung. Etwaige Mängel werden protokolliert und innerhalb einer vereinbarten Frist beseitigt. Die Abnahme gilt als erfolgt, wenn der Auftraggeber die Leistung ohne wesentliche Mängelrüge in Gebrauch nimmt.</p>
+
+        <h2>§ 9 Schlussbestimmungen</h2>
+        <p>Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist München. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+
+        <h2>Kontakt</h2>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Hardenbergstr. 4, 80992 München</p>
+        <p>Telefon: +49 89 444 438 872</p>
+      </section>
+    `;
+  } else if (path === "/gewerke") {
+    title = "Gewerke & Sanierungsleistungen München | 089-Sanierer";
+    description = "Alle Gewerke für Ihre Sanierung in München: Badsanierung, Elektro, Heizung, Boden, Dach, Küche und mehr. Meisterbetrieb mit Festpreisgarantie.";
+    keywords = "Gewerke Sanierung München, Sanierungsleistungen München, Handwerker Gewerke München, Badsanierung München, Elektrosanierung München, Heizungssanierung München, Bodensanierung München, Dachsanierung München, Küchensanierung München";
+    mainContent = `
+      <section>
+        <h1>Unsere Gewerke - Sanierungsleistungen in München</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p>Wählen Sie die passenden Gewerke für Ihr Sanierungsprojekt. Alle Leistungen aus einer Hand mit Festpreisgarantie und 5 Jahren Gewährleistung.</p>
+
+        <h2>Badsanierung</h2>
+        <p>Komplett-Badsanierung inkl. Fliesen, Sanitär, Elektro. Ab 18.500 € (Standard-Bad 6-8 m²). Barrierefreie Lösungen möglich.</p>
+
+        <h2>Küchensanierung</h2>
+        <p>Bauarbeiten für Ihre neue Küche: Fliesen, Elektro, Wasseranschlüsse. Ab 6.500 € (ohne Küchenmöbel).</p>
+
+        <h2>Bodensanierung</h2>
+        <p>Parkett, Fliesen, Vinyl, Laminat. Estricharbeiten und Fußbodenheizung. Ab 65 €/m².</p>
+
+        <h2>Elektrosanierung</h2>
+        <p>VDE-konforme Elektroinstallation, Sicherungskasten, Leitungen. Ab 80 €/m². Smart-Home-Vorbereitung möglich.</p>
+
+        <h2>Heizungssanierung</h2>
+        <p>Gasheizung, Wärmepumpe, Fußbodenheizung. Ab 12.000 €. KfW-Förderberatung inklusive.</p>
+
+        <h2>Dachsanierung</h2>
+        <p>Dachdämmung, Dacheindeckung, Dachfenster. Ab 150 €/m². BAFA- und KfW-förderfähig.</p>
+
+        <h2>Energetische Sanierung</h2>
+        <p>Wärmedämmung, Fensteraustausch, Heizungsmodernisierung. Ab 200 €/m². Förderberatung inklusive.</p>
+
+        <h2>Komplettsanierung</h2>
+        <p>Schlüsselfertige Sanierung aller Gewerke. Ab 920 €/m² (Standard) bis 2.300 €/m² (Gehoben).</p>
+
+        <h2>Malerarbeiten</h2>
+        <p>Wände, Decken, Fassade. Professionelle Malerarbeiten als Einzelleistung oder im Paket.</p>
+
+        <h2>Trockenbau</h2>
+        <p>Trennwände, Abhangdecken, Dachausbau. Professioneller Trockenbau für Ihre Raumgestaltung.</p>
+
+        <p><a href="/anfrage">Jetzt unverbindlich anfragen</a> | <a href="/rechner">Kosten berechnen</a></p>
+      </section>
+    `;
+  } else if (path === "/cookies") {
+    title = "Cookie-Richtlinie | 089-Sanierer";
+    description = "Informationen zur Verwendung von Cookies auf 089-sanierer.de. Technisch notwendige Cookies und optionale Analyse-Cookies.";
+    keywords = "Cookie Richtlinie 089-Sanierer, Cookies Sanierung München, Datenschutz Cookies Handwerker München, Cookie Einstellungen 089-Sanierer";
+    mainContent = `
+      <section>
+        <h1>Cookie-Richtlinie</h1>
+        <p><small>Stand: Februar 2026</small></p>
+
+        <h2>Was sind Cookies?</h2>
+        <p>Cookies sind kleine Textdateien, die beim Besuch unserer Website auf Ihrem Endgerät gespeichert werden. Sie dienen dazu, unsere Website nutzerfreundlicher und sicherer zu gestalten.</p>
+
+        <h2>Technisch notwendige Cookies</h2>
+        <p>Diese Cookies sind für den Betrieb der Website erforderlich und können nicht deaktiviert werden. Sie ermöglichen grundlegende Funktionen wie Seitennavigation, Formulareingaben und Cookie-Einstellungen. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+
+        <h2>Analyse-Cookies</h2>
+        <p>Mit Ihrer Einwilligung setzen wir Analyse-Cookies ein, um die Nutzung unserer Website zu verstehen und zu verbessern. Diese Cookies erfassen anonymisierte Daten über Seitenaufrufe und Nutzerverhalten. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Sie können Ihre Einwilligung jederzeit widerrufen.</p>
+
+        <h2>Cookie-Einstellungen verwalten</h2>
+        <p>Sie können Ihre Cookie-Einstellungen jederzeit über den Cookie-Banner am unteren Bildschirmrand ändern. Alternativ können Sie Cookies in Ihren Browsereinstellungen verwalten oder löschen.</p>
+
+        <h2>Speicherdauer</h2>
+        <p>Technisch notwendige Cookies werden nach Beendigung der Browsersitzung gelöscht (Session-Cookies). Analyse-Cookies werden nach maximal 12 Monaten automatisch gelöscht.</p>
+
+        <h2>Kontakt</h2>
+        <p>Bei Fragen zum Datenschutz erreichen Sie uns unter:</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Hardenbergstr. 4, 80992 München</p>
+        <p>Telefon: +49 89 444 438 872</p>
+      </section>
+    `;
+  } else if (path === "/barrierefreiheit") {
+    title = "Barrierefreiheit | 089-Sanierer";
+    description = "Erklärung zur Barrierefreiheit der Website 089-sanierer.de. Wir streben die Einhaltung von WCAG 2.1 Level AA an.";
+    keywords = "Barrierefreiheit 089-Sanierer, Accessibility Sanierung München, WCAG 2.1 089-Sanierer, barrierefreie Website Handwerker München";
+    mainContent = `
+      <section>
+        <h1>Erklärung zur Barrierefreiheit</h1>
+        <p><small>Stand: Februar 2026</small></p>
+
+        <h2>Unser Anspruch</h2>
+        <p>089-Sanierer ist bestrebt, die Website 089-sanierer.de barrierefrei zugänglich zu gestalten. Wir orientieren uns an den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA und den Anforderungen der Barrierefreie-Informationstechnik-Verordnung (BITV 2.0).</p>
+
+        <h2>Umgesetzte Maßnahmen</h2>
+        <ul>
+          <li>Semantische HTML-Struktur mit korrekten Überschriftenhierarchien</li>
+          <li>Alternativtexte für alle informativen Bilder</li>
+          <li>Ausreichende Farbkontraste gemäß WCAG AA-Standard</li>
+          <li>Tastaturnavigation für alle interaktiven Elemente</li>
+          <li>Responsives Design für verschiedene Bildschirmgrößen</li>
+          <li>Fokus-Indikatoren für Tastaturnutzer</li>
+        </ul>
+
+        <h2>Bekannte Einschränkungen</h2>
+        <p>Trotz unserer Bemühungen können einzelne Inhalte noch nicht vollständig barrierefrei sein. Wir arbeiten kontinuierlich an der Verbesserung der Zugänglichkeit.</p>
+
+        <h2>Feedback und Kontakt</h2>
+        <p>Wenn Sie auf Barrieren stoßen oder Verbesserungsvorschläge haben, kontaktieren Sie uns bitte:</p>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Hardenbergstr. 4, 80992 München</p>
+        <p>Telefon: +49 89 444 438 872</p>
+        <p>Wir nehmen Ihr Anliegen ernst und bemühen uns, Barrieren zeitnah zu beseitigen.</p>
+      </section>
+    `;
+  } else if (path === "/termin") {
+    title = "Termin vereinbaren | Kostenlose Beratung | 089-Sanierer";
+    description = "Vereinbaren Sie einen kostenlosen Beratungstermin für Ihre Sanierung in München. Vor-Ort-Besichtigung und unverbindliches Festpreis-Angebot.";
+    keywords = "Termin Sanierung München, Beratungstermin 089-Sanierer, kostenlose Besichtigung Sanierung München, Sanierungsberatung München Termin, Vor-Ort-Termin Renovierung München";
+    mainContent = `
+      <section>
+        <h1>Termin vereinbaren - Kostenlose Sanierungsberatung</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p>Vereinbaren Sie jetzt Ihren kostenlosen und unverbindlichen Beratungstermin. Wir besichtigen Ihr Objekt vor Ort und erstellen Ihnen ein verbindliches Festpreis-Angebot.</p>
+
+        <h2>So funktioniert es</h2>
+        <ul>
+          <li><strong>Schritt 1:</strong> Termin online buchen oder telefonisch vereinbaren</li>
+          <li><strong>Schritt 2:</strong> Kostenlose Vor-Ort-Besichtigung durch unseren Experten</li>
+          <li><strong>Schritt 3:</strong> Verbindliches Festpreis-Angebot innerhalb von 48 Stunden</li>
+        </ul>
+
+        <h2>Telefonische Terminvereinbarung</h2>
+        <p>Rufen Sie uns direkt an: <strong>+49 89 444 438 872</strong></p>
+        <p>Unsere Öffnungszeiten: Montag bis Freitag, 08:00 - 16:30 Uhr</p>
+
+        <h2>Was erwartet Sie beim Beratungstermin?</h2>
+        <ul>
+          <li>Persönliche Begehung Ihres Objekts</li>
+          <li>Aufnahme Ihrer Wünsche und Anforderungen</li>
+          <li>Fachkundige Einschätzung des Sanierungsbedarfs</li>
+          <li>Transparente Kostenaufstellung</li>
+          <li>Beantwortung all Ihrer Fragen</li>
+        </ul>
+
+        <h2>Unser Service</h2>
+        <p>Die Beratung ist komplett kostenlos und unverbindlich. Sie erhalten ein verbindliches Festpreis-Angebot mit 5 Jahren Gewährleistung. Servicegebiet: München und Umgebung (bis 50 km).</p>
+
+        <h2>Kontakt</h2>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Hardenbergstr. 4, 80992 München</p>
+        <p>Telefon: +49 89 444 438 872</p>
+      </section>
+    `;
+  } else if (path === "/rechner") {
+    title = "Sanierungskosten Rechner München | Kosten berechnen | 089-Sanierer";
+    description = "Berechnen Sie die Kosten für Ihre Sanierung in München. Online-Rechner für Badsanierung, Komplettsanierung, Wohnungssanierung und mehr.";
+    keywords = "Sanierungskosten Rechner München, Kosten berechnen Sanierung München, Badsanierung Rechner München, Komplettsanierung Kosten Rechner, Renovierungskosten München berechnen, Sanierung Preiskalkulator München";
+    mainContent = `
+      <section>
+        <h1>Sanierungskosten Rechner München</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p>Berechnen Sie online die voraussichtlichen Kosten für Ihre Sanierung in München. Unser Rechner liefert Ihnen eine erste Orientierung auf Basis aktueller Marktpreise.</p>
+
+        <h2>Preisübersicht (netto zzgl. MwSt., Stand 02/2026)</h2>
+        <ul>
+          <li><strong>Badsanierung:</strong> 18.500 - 50.000 € (je nach Größe und Ausstattung)</li>
+          <li><strong>Küchensanierung:</strong> 6.500 - 22.000 € (Bauarbeiten ohne Möbel)</li>
+          <li><strong>Bodensanierung:</strong> 65 - 200 €/m² (Vinyl bis Fliesen)</li>
+          <li><strong>Elektrosanierung:</strong> 80 - 300 €/m² (Teilsanierung bis Smart Home)</li>
+          <li><strong>Heizungssanierung:</strong> 12.000 - 65.000 € (Gas bis Wärmepumpe)</li>
+          <li><strong>Dachsanierung:</strong> 150 - 350 €/m²</li>
+          <li><strong>Komplettsanierung:</strong> 920 - 2.300 €/m²</li>
+          <li><strong>Energetische Sanierung:</strong> 200 - 500 €/m²</li>
+        </ul>
+
+        <h2>So funktioniert der Rechner</h2>
+        <ul>
+          <li>Wählen Sie die gewünschten Sanierungsleistungen</li>
+          <li>Geben Sie die Fläche bzw. Raumgröße ein</li>
+          <li>Wählen Sie den gewünschten Ausstattungsstandard</li>
+          <li>Erhalten Sie eine sofortige Kostenschätzung</li>
+        </ul>
+
+        <h2>Verbindliches Angebot gewünscht?</h2>
+        <p>Der Online-Rechner liefert eine unverbindliche Orientierung. Für ein verbindliches Festpreis-Angebot vereinbaren Sie eine kostenlose Vor-Ort-Besichtigung.</p>
+        <p><a href="/termin">Termin vereinbaren</a> | <a href="/anfrage">Anfrage stellen</a></p>
+
+        <h2>Kontakt</h2>
+        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>Telefon: +49 89 444 438 872</p>
+      </section>
+    `;
+  } else if (path === "/danke") {
+    title = "Vielen Dank! | 089-Sanierer";
+    description = "Vielen Dank für Ihre Anfrage bei 089-Sanierer München. Wir melden uns innerhalb von 24 Stunden bei Ihnen.";
+    keywords = "Anfrage bestätigt 089-Sanierer, Sanierungsanfrage München gesendet, Bestätigung Renovierungsanfrage München";
+    mainContent = `
+      <section>
+        <h1>Vielen Dank für Ihre Anfrage!</h1>
+        <p>Ihre Sanierungsanfrage wurde erfolgreich an unser Team übermittelt. Wir freuen uns auf Ihr Projekt!</p>
+
+        <h2>Wie geht es weiter?</h2>
+        <ul>
+          <li><strong>Innerhalb von 24 Stunden:</strong> Ein Mitarbeiter meldet sich telefonisch oder per E-Mail bei Ihnen</li>
+          <li><strong>Terminvereinbarung:</strong> Wir vereinbaren einen kostenlosen Vor-Ort-Termin</li>
+          <li><strong>Besichtigung:</strong> Unser Experte besichtigt Ihr Objekt und bespricht Ihre Wünsche</li>
+          <li><strong>Festpreis-Angebot:</strong> Sie erhalten ein verbindliches Angebot innerhalb von 48 Stunden nach Besichtigung</li>
+        </ul>
+
+        <h2>Fragen in der Zwischenzeit?</h2>
+        <p>Rufen Sie uns gerne an: <strong>+49 89 444 438 872</strong></p>
+        <p>Montag bis Freitag, 08:00 - 16:30 Uhr</p>
+
+        <h2>Unsere Garantien</h2>
+        <ul>
+          <li>Verbindliche Festpreisgarantie</li>
+          <li>5 Jahre Gewährleistung auf alle Arbeiten</li>
+          <li>Persönlicher Bauleiter für Ihr Projekt</li>
+          <li>268+ erfolgreich abgeschlossene Projekte in München</li>
+        </ul>
+
+        <p><a href="/">Zurück zur Startseite</a></p>
+      </section>
+    `;
   } else if (path.startsWith("/muenchen-")) {
     const district = path.replace("/muenchen-", "").replace("/", "");
     const districtNames: Record<string, string> = {
@@ -580,7 +839,29 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       "pasing": "Pasing",
       "giesing": "Giesing",
       "lehel": "Lehel",
-      "trudering": "Trudering-Riem"
+      "trudering": "Trudering-Riem",
+      "allach": "Allach",
+      "untermenzing": "Untermenzing",
+      "obermenzing": "Obermenzing",
+      "aubing": "Aubing",
+      "moosach": "Moosach",
+      "feldmoching": "Feldmoching-Hasenbergl",
+      "laim": "Laim",
+      "nymphenburg": "Nymphenburg",
+      "berg-am-laim": "Berg am Laim",
+      "riem": "Riem",
+      "milbertshofen": "Milbertshofen-Am Hart",
+      "freimann": "Freimann",
+      "solln": "Solln",
+      "grosshadern": "Großhadern",
+      "hadern": "Hadern",
+      "fuerstenried": "Fürstenried",
+      "forstenried": "Forstenried",
+      "thalkirchen": "Thalkirchen",
+      "obersendling": "Obersendling",
+      "ramersdorf": "Ramersdorf",
+      "perlach": "Perlach",
+      "neuperlach": "Neuperlach"
     };
     const districtName = districtNames[district] || district;
     title = `Sanierung ${districtName} München | Festpreis | 089-Sanierer`;
@@ -610,7 +891,69 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else {
-    return "";
+    const umlandCities: Record<string, { name: string; landkreis: string; distance: string }> = {
+      "/dachau": { name: "Dachau", landkreis: "Landkreis Dachau", distance: "~20 km" },
+      "/karlsfeld": { name: "Karlsfeld", landkreis: "Landkreis Dachau", distance: "~12 km" },
+      "/germering": { name: "Germering", landkreis: "Landkreis Fürstenfeldbruck", distance: "~18 km" },
+      "/fuerstenfeldbruck": { name: "Fürstenfeldbruck", landkreis: "Landkreis Fürstenfeldbruck", distance: "~30 km" },
+      "/freising": { name: "Freising", landkreis: "Landkreis Freising", distance: "~35 km" },
+      "/starnberg": { name: "Starnberg", landkreis: "Landkreis Starnberg", distance: "~28 km" },
+      "/garching": { name: "Garching bei München", landkreis: "Landkreis München", distance: "~15 km" },
+      "/unterschleissheim": { name: "Unterschleißheim", landkreis: "Landkreis München", distance: "~15 km" },
+      "/oberschleissheim": { name: "Oberschleißheim", landkreis: "Landkreis München", distance: "~16 km" },
+      "/ottobrunn": { name: "Ottobrunn", landkreis: "Landkreis München", distance: "~12 km" },
+      "/haar": { name: "Haar", landkreis: "Landkreis München", distance: "~13 km" },
+      "/graefelfing": { name: "Gräfelfing", landkreis: "Landkreis München", distance: "~10 km" },
+      "/planegg": { name: "Planegg", landkreis: "Landkreis München", distance: "~12 km" },
+      "/pullach": { name: "Pullach im Isartal", landkreis: "Landkreis München", distance: "~10 km" },
+      "/gruenwald": { name: "Grünwald", landkreis: "Landkreis München", distance: "~12 km" },
+    };
+    const umlandCity = umlandCities[path];
+    if (umlandCity) {
+      const { name: cityName, landkreis, distance } = umlandCity;
+      title = `Sanierung ${cityName} | im Münchner Umland | 089-Sanierer`;
+      description = `Sanierung in ${cityName} (${landkreis}, ${distance} von München): Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. 5 Jahre Gewährleistung.`;
+      keywords = `Sanierung ${cityName}, ${cityName} Sanierung, Badsanierung ${cityName}, Renovierung ${cityName}, Handwerker ${cityName}, Komplettsanierung ${cityName}`;
+      mainContent = `
+        <section>
+          <h1>Sanierung in ${cityName} - im Münchner Umland</h1>
+          <p>Ihr lokaler Partner für Sanierungen in ${cityName} (${landkreis}, nur ${distance} von München entfernt). 089-Sanierer betreut Projekte im gesamten Münchner Umland mit der gleichen Qualität und Festpreisgarantie wie in München.</p>
+
+          <h2>Unsere Leistungen in ${cityName}</h2>
+          <ul>
+            <li>Badsanierung ab 18.500 €</li>
+            <li>Komplettsanierung ab 920 €/m²</li>
+            <li>Wohnungssanierung ab 800 €/m²</li>
+            <li>Kernsanierung ab 1.200 €/m²</li>
+            <li>Küchensanierung ab 6.500 €</li>
+            <li>Elektrosanierung ab 80 €/m²</li>
+            <li>Heizungssanierung ab 12.000 €</li>
+            <li>Dachsanierung ab 150 €/m²</li>
+            <li>Energetische Sanierung ab 200 €/m²</li>
+          </ul>
+
+          <h2>Warum 089-Sanierer in ${cityName}?</h2>
+          <ul>
+            <li>Festpreisgarantie - keine versteckten Kosten</li>
+            <li>5 Jahre Gewährleistung auf alle Arbeiten</li>
+            <li>Persönlicher Bauleiter für Ihr Projekt</li>
+            <li>268+ erfolgreich abgeschlossene Projekte</li>
+            <li>Kurze Anfahrt: nur ${distance} von München</li>
+          </ul>
+
+          <h2>Servicegebiet im Münchner Umland</h2>
+          <p>Wir betreuen Projekte in ${cityName} und dem gesamten ${landkreis}. Kostenlose Vor-Ort-Besichtigung und Beratung inklusive.</p>
+
+          <h2>Kontakt</h2>
+          <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+          <p>Telefon: +49 89 444 438 872</p>
+          <p>Montag bis Freitag: 08:00 - 16:30 Uhr</p>
+          <p><a href="/anfrage">Jetzt Angebot anfordern</a> | <a href="/termin">Termin vereinbaren</a></p>
+        </section>
+      `;
+    } else {
+      return "";
+    }
   }
 
   // IMPORTANT: This schema MUST match seo-head.tsx generateLocalBusinessSchema() exactly
