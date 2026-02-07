@@ -725,6 +725,183 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     ]
   } : null;
 
+  const serviceSchemaMap: Record<string, { serviceType: string; description: string; priceRange: string }> = {
+    "/badsanierung": {
+      serviceType: "Badsanierung München",
+      description: "Komplette Badsanierung in München: Fliesen, Sanitär, Elektro. Barrierefreie Lösungen möglich. Festpreisgarantie.",
+      priceRange: "8.000 - 50.000 €"
+    },
+    "/wohnungssanierung": {
+      serviceType: "Wohnungssanierung München",
+      description: "Komplette Wohnungssanierung in München aus einer Hand. Bad, Küche, Böden, Elektro - alles koordiniert mit Festpreisgarantie.",
+      priceRange: "800 - 1.800 €/m²"
+    },
+    "/haussanierung": {
+      serviceType: "Haussanierung München",
+      description: "Komplette Haussanierung in München für Einfamilien- und Mehrfamilienhäuser. Alle Gewerke aus einer Hand mit Festpreisgarantie.",
+      priceRange: "920 - 2.300 €/m²"
+    },
+    "/kernsanierung": {
+      serviceType: "Kernsanierung München",
+      description: "Professionelle Kernsanierung in München. Rückbau bis auf die Grundsubstanz und kompletter Neuaufbau mit Festpreisgarantie.",
+      priceRange: "1.200 - 2.300 €/m²"
+    },
+    "/kosten": {
+      serviceType: "Sanierungskosten München",
+      description: "Transparente Festpreise für Sanierungen in München. Komplettsanierung, Badsanierung, Wohnungssanierung - alle Kosten im Überblick.",
+      priceRange: "800 - 2.300 €/m²"
+    },
+    "/komplettsanierung": {
+      serviceType: "Komplettsanierung München",
+      description: "Schlüsselfertige Komplettsanierung von Haus und Wohnung in München. Alle Gewerke koordiniert aus einer Hand.",
+      priceRange: "1.000 - 2.300 €/m²"
+    },
+    "/kuechensanierung": {
+      serviceType: "Küchensanierung München",
+      description: "Küchensanierung in München: Fliesen, Elektro, Wasseranschlüsse. Bauarbeiten ohne Küchenmöbel.",
+      priceRange: "6.500 - 22.000 €"
+    },
+    "/bodensanierung": {
+      serviceType: "Bodensanierung München",
+      description: "Bodensanierung in München: Parkett, Fliesen, Vinyl, Teppich. Estricharbeiten und Fußbodenheizung.",
+      priceRange: "65 - 200 €/m²"
+    },
+    "/elektrosanierung": {
+      serviceType: "Elektrosanierung München",
+      description: "Elektroinstallation und Elektrosanierung in München. Sicherungskasten, Leitungen nach VDE-Norm.",
+      priceRange: "85 - 300 €/m²"
+    },
+    "/heizungssanierung": {
+      serviceType: "Heizungssanierung München",
+      description: "Heizungssanierung in München: Gasheizung, Wärmepumpe, Fußbodenheizung. KfW-Förderung möglich.",
+      priceRange: "12.000 - 65.000 €"
+    },
+    "/dachsanierung": {
+      serviceType: "Dachsanierung München",
+      description: "Dachsanierung in München: Dachdämmung, Dacheindeckung, Dachfenster. BAFA- und KfW-Förderung.",
+      priceRange: "150 - 350 €/m²"
+    },
+    "/energetische-sanierung": {
+      serviceType: "Energetische Sanierung München",
+      description: "Energetische Sanierung in München: Wärmedämmung, Fensteraustausch, Heizungsmodernisierung. Förderberatung inklusive.",
+      priceRange: "200 - 500 €/m²"
+    }
+  };
+
+  const serviceSchemaInfo = serviceSchemaMap[path];
+  const serviceSchema = serviceSchemaInfo ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": serviceSchemaInfo.serviceType,
+    "name": serviceSchemaInfo.serviceType,
+    "description": serviceSchemaInfo.description,
+    "url": `${baseURL}${path}`,
+    "provider": {
+      "@id": "https://089-sanierer.de/#organization"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "München",
+      "addressCountry": "DE"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "EUR",
+        "price": serviceSchemaInfo.priceRange
+      },
+      "availability": "https://schema.org/InStock"
+    }
+  } : null;
+
+  const pageFaqMap: Record<string, Array<{ question: string; answer: string }>> = {
+    "/badsanierung": [
+      {
+        question: "Was kostet Badsanierung in München?",
+        answer: "Eine Badsanierung in München kostet je nach Größe und Ausstattung: Gäste-WC (3-4m²) 8.000-12.000€, Standard-Bad (5-6m²) 16.000-22.000€, Komfort-Bad (6-8m²) 22.000-32.000€, Luxus-Bad (ab 8m²) 35.000-50.000€ (netto zzgl. MwSt., Stand 02/2026)."
+      },
+      {
+        question: "Wie lange dauert eine Badsanierung?",
+        answer: "Eine Standard-Badsanierung dauert in der Regel 10-14 Arbeitstage. Bei größeren oder barrierefreien Umbauten kann es 3-4 Wochen dauern."
+      },
+      {
+        question: "Bieten Sie barrierefreie Badsanierung an?",
+        answer: "Ja, wir bieten barrierefreie Badsanierungen in München an: Bodengleiche Duschen, rutschfeste Fliesen, Haltegriffe und breitere Türen. Förderung über KfW möglich."
+      }
+    ],
+    "/wohnungssanierung": [
+      {
+        question: "Was kostet eine Wohnungssanierung in München?",
+        answer: "Eine Wohnungssanierung in München kostet je nach Umfang: Renovierung (Böden, Wände) 300-600€/m², Teilsanierung (inkl. Bad/Küche) 600-1.000€/m², Komplettsanierung 1.000-1.800€/m² (netto zzgl. MwSt., Stand 02/2026)."
+      },
+      {
+        question: "Wie lange dauert eine Wohnungssanierung?",
+        answer: "Eine Komplettsanierung einer 60-80m² Wohnung dauert in der Regel 6-10 Wochen. Bei Teilsanierungen sind es 3-5 Wochen."
+      },
+      {
+        question: "Können wir während der Sanierung in der Wohnung bleiben?",
+        answer: "Bei einer Komplettsanierung empfehlen wir den vorübergehenden Auszug. Bei Teilsanierungen ist das Wohnen oft möglich - wir besprechen das individuell."
+      }
+    ],
+    "/haussanierung": [
+      {
+        question: "Was kostet eine Haussanierung in München?",
+        answer: "Eine Haussanierung in München kostet je nach Umfang: Teilsanierung 400-800€/m², Komplettsanierung Standard 1.000-1.500€/m², Komplettsanierung Gehoben 1.500-2.300€/m² (netto zzgl. MwSt., Stand 02/2026)."
+      },
+      {
+        question: "Sanieren Sie auch Mehrfamilienhäuser?",
+        answer: "Ja, wir sanieren Einfamilienhäuser, Mehrfamilienhäuser, Doppelhaushälften und Reihenhäuser in München und Umgebung."
+      },
+      {
+        question: "Übernehmen Sie die Bauleitung?",
+        answer: "Ja, als Generalunternehmer übernehmen wir die komplette Bauleitung und Koordination aller Gewerke. Sie haben einen einzigen Ansprechpartner."
+      }
+    ],
+    "/kernsanierung": [
+      {
+        question: "Was ist der Unterschied zwischen Kernsanierung und Komplettsanierung?",
+        answer: "Bei einer Kernsanierung wird das Gebäude bis auf die tragende Substanz zurückgebaut und komplett neu aufgebaut. Bei einer Komplettsanierung werden alle Gewerke erneuert, aber die bestehende Substanz wird teilweise beibehalten."
+      },
+      {
+        question: "Wie lange dauert eine Kernsanierung?",
+        answer: "Eine Kernsanierung eines Einfamilienhauses dauert in der Regel 4-8 Monate, abhängig von der Größe und dem Umfang der Maßnahmen."
+      },
+      {
+        question: "Brauche ich eine Baugenehmigung für eine Kernsanierung?",
+        answer: "Nicht in jedem Fall. Reine Innenarbeiten sind meist genehmigungsfrei. Bei statischen Veränderungen oder Änderungen an der Gebäudehülle kann eine Genehmigung erforderlich sein. Wir beraten Sie dazu."
+      }
+    ],
+    "/kosten": [
+      {
+        question: "Sind die Preise Festpreise?",
+        answer: "Ja, wir arbeiten mit Festpreisgarantie. Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Angebot ohne versteckte Kosten."
+      },
+      {
+        question: "Gibt es Fördermöglichkeiten für Sanierungen?",
+        answer: "Ja, für energetische Maßnahmen gibt es KfW-Kredite und BAFA-Zuschüsse. Für barrierefreie Umbauten KfW-Förderung. Wir beraten Sie zu allen Fördermöglichkeiten."
+      },
+      {
+        question: "Was ist in den Preisen enthalten?",
+        answer: "Unsere Festpreise beinhalten Material, Arbeitsleistung, Koordination aller Gewerke und Bauleitung. Nicht enthalten sind behördliche Gebühren und kundenspezifische Sonderwünsche, die vorab besprochen werden."
+      }
+    ]
+  };
+
+  const pageFaqItems = pageFaqMap[path];
+  const pageSpecificFaqSchema = pageFaqItems ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": pageFaqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
+
   return `<!DOCTYPE html>
 <html lang="de" prefix="og: https://ogp.me/ns#">
 <head>
@@ -766,6 +943,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>
   <script type="application/ld+json">${JSON.stringify(websiteData)}</script>
   ${faqSchema ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", ...faqSchema })}</script>` : ''}
+  ${serviceSchema ? `<script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>` : ''}
+  ${pageSpecificFaqSchema ? `<script type="application/ld+json">${JSON.stringify(pageSpecificFaqSchema)}</script>` : ''}
 </head>
 <body>
   <header>

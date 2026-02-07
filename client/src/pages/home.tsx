@@ -789,6 +789,11 @@ export default function Home() {
 
         {/* Hero Section - Clean & Professional */}
         <GlobalHero content={homeHeroContent} scrollToElement={scrollToForm} />
+        <div className="max-w-7xl mx-auto px-6 pt-3 pb-0">
+          <p className="text-xs text-muted-foreground text-right" data-testid="text-last-updated">
+            Stand: Februar 2026
+          </p>
+        </div>
 
         {/* Stats Section */}
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">

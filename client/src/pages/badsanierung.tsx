@@ -99,6 +99,11 @@ export default function Badsanierung() {
 
       <main>
         <GlobalHero content={badHeroContent} />
+        <div className="max-w-7xl mx-auto px-6 pt-3 pb-0">
+          <p className="text-xs text-muted-foreground text-right" data-testid="text-last-updated">
+            Stand: Februar 2026
+          </p>
+        </div>
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">

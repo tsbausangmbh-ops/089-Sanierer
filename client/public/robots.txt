@@ -1,5 +1,5 @@
-# robots.txt für KSHW München - 089-sanierer.de
-# Optimiert für Suchmaschinen und KI-Assistenten
+# robots.txt für 089-Sanierer München
+# Optimiert für Suchmaschinen und KI-Assistenten (GEO 2026)
 
 # Allgemeine Regeln
 User-agent: *
@@ -21,12 +21,18 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Bing
+User-agent: GoogleOther
+Allow: /
+
+# Bing & Microsoft
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 0
 
 User-agent: msnbot
+Allow: /
+
+User-agent: MicrosoftPreview
 Allow: /
 
 # Weitere Suchmaschinen
@@ -40,6 +46,9 @@ User-agent: Baiduspider
 Allow: /
 
 User-agent: Slurp
+Allow: /
+
+User-agent: SeznamBot
 Allow: /
 
 # Social Media Bots
@@ -58,7 +67,7 @@ Allow: /
 User-agent: TelegramBot
 Allow: /
 
-# KI-Assistenten (explizit erlaubt für AI-Suche)
+# KI-Assistenten (explizit erlaubt für AI-Suche / GEO 2026)
 User-agent: GPTBot
 Allow: /
 
@@ -66,6 +75,9 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: Anthropic-AI
@@ -81,20 +93,6 @@ User-agent: YouBot
 Allow: /
 
 User-agent: CCBot
-Allow: /
-
-# Google AI Overviews & SGE 2026
-User-agent: Google-Extended
-Allow: /
-
-User-agent: GoogleOther
-Allow: /
-
-# Microsoft Copilot
-User-agent: Bingbot
-Allow: /
-
-User-agent: MicrosoftPreview
 Allow: /
 
 # Meta AI

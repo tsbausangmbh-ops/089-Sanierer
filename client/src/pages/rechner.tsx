@@ -462,6 +462,11 @@ export default function RechnerPage() {
           content={rechnerHeroContent} 
           scrollToElement={() => document.getElementById('rechner-start')?.scrollIntoView({ behavior: 'smooth' })}
         />
+        <div className="max-w-7xl mx-auto px-6 pt-3 pb-0">
+          <p className="text-xs text-muted-foreground text-right" data-testid="text-last-updated">
+            Stand: Februar 2026
+          </p>
+        </div>
 
         <section id="rechner-start" className="py-6 lg:py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
