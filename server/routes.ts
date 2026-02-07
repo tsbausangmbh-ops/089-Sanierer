@@ -115,9 +115,9 @@ function emailContactBlock() {
 function emailFooter() {
   return `</td></tr>
 <tr><td style="background-color:#eae6df;padding:24px 40px;border-radius:0 0 12px 12px;text-align:center;">
-<p style="margin:0 0 4px;font-size:13px;color:#777;font-weight:600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
-<p style="margin:0 0 12px;font-size:12px;color:#999;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
-<p style="margin:0;font-size:11px;color:#aaa;line-height:1.6;">
+<p style="margin:0 0 4px;font-size:13px;color:#555;font-weight:600;">089-Sanierer \u00b7 KSHW M\u00fcnchen</p>
+<p style="margin:0 0 12px;font-size:12px;color:#666;">Hardenbergstr. 4 \u00b7 80992 M\u00fcnchen</p>
+<p style="margin:0;font-size:11px;color:#777;line-height:1.6;">
 <a href="https://089-sanierer.de" style="color:#1a2e44;text-decoration:none;">www.089-sanierer.de</a> &nbsp;\u00b7&nbsp;
 <a href="https://089-sanierer.de/datenschutz" style="color:#1a2e44;text-decoration:none;">Datenschutz</a> &nbsp;\u00b7&nbsp;
 <a href="https://089-sanierer.de/impressum" style="color:#1a2e44;text-decoration:none;">Impressum</a>
@@ -129,7 +129,7 @@ function emailStep(num: number, text: string) {
   return `<tr><td style="padding:14px 16px;background:#f8f6f3;border-radius:8px;">
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr>
 <td width="40" valign="top"><div style="width:32px;height:32px;background:#1a2e44;color:#fff;border-radius:50%;text-align:center;line-height:32px;font-size:14px;font-weight:700;">${num}</div></td>
-<td style="padding-left:12px;font-size:15px;color:#333;line-height:1.5;">${text}</td>
+<td style="padding-left:12px;font-size:15px;color:#222;line-height:1.5;">${text}</td>
 </tr></table></td></tr><tr><td style="height:8px;"></td></tr>`;
 }
 
@@ -153,13 +153,13 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   if (isContact) {
     htmlContent = `${emailHeader("#2d5016", "#4a7c29")}
 <h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Vielen Dank f\u00fcr Ihre Nachricht, ${lead.name}!</h2>
-<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Wir haben Ihre Nachricht \u00fcber unser Kontaktformular erhalten. Unser Team wird sich <strong style="color:#1a2e44;">schnellstm\u00f6glich</strong> bei Ihnen melden \u2013 in der Regel innerhalb von 24 Stunden.</p>
+<p style="margin:0 0 24px;font-size:15px;color:#2a2a2a;line-height:1.7;">Wir haben Ihre Nachricht \u00fcber unser Kontaktformular erhalten. Unser Team wird sich <strong style="color:#1a2e44;">schnellstm\u00f6glich</strong> bei Ihnen melden \u2013 in der Regel innerhalb von 24 Stunden.</p>
 
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
 <tr><td style="background-color:#f8f6f3;border-left:4px solid #4a7c29;padding:20px 24px;border-radius:0 8px 8px 0;">
-<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre Nachricht</p>
-${lead.description ? `<p style="margin:0 0 6px;font-size:14px;color:#333;line-height:1.6;font-style:italic;">\u201e${lead.description}\u201c</p>` : ""}
-${lead.phone ? `<p style="margin:0;font-size:14px;color:#666;">Telefon: ${lead.phone}</p>` : ""}
+<p style="margin:0 0 4px;font-size:11px;color:#666;text-transform:uppercase;letter-spacing:1px;">Ihre Nachricht</p>
+${lead.description ? `<p style="margin:0 0 6px;font-size:14px;color:#222;line-height:1.6;font-style:italic;">\u201e${lead.description}\u201c</p>` : ""}
+${lead.phone ? `<p style="margin:0;font-size:14px;color:#444;">Telefon: ${lead.phone}</p>` : ""}
 </td></tr></table>
 
 <h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
@@ -176,14 +176,14 @@ ${emailFooter()}`;
 
     htmlContent = `${emailHeader("#1a2e44", "#2a4a6b")}
 <h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Guten Tag, ${lead.name}!</h2>
-<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Vielen Dank f\u00fcr Ihr Vertrauen. Wir haben Ihre Sanierungsanfrage f\u00fcr <strong style="color:#1a2e44;">${serviceLabel}</strong> erhalten und Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden.</p>
+<p style="margin:0 0 24px;font-size:15px;color:#2a2a2a;line-height:1.7;">Vielen Dank f\u00fcr Ihr Vertrauen. Wir haben Ihre Sanierungsanfrage f\u00fcr <strong style="color:#1a2e44;">${serviceLabel}</strong> erhalten und Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden.</p>
 
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
 <tr><td style="background-color:#f8f6f3;border-left:4px solid #c9944a;padding:20px 24px;border-radius:0 8px 8px 0;">
-<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre Sanierungsanfrage</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Leistung:</strong> ${serviceLabel}</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Standort:</strong> ${lead.postalCode}${lead.city ? ` ${lead.city}` : ""}</p>
-${propertyLabel ? `<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Objekttyp:</strong> ${propertyLabel}</p>` : ""}
+<p style="margin:0 0 4px;font-size:11px;color:#666;text-transform:uppercase;letter-spacing:1px;">Ihre Sanierungsanfrage</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Leistung:</strong> ${serviceLabel}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Standort:</strong> ${lead.postalCode}${lead.city ? ` ${lead.city}` : ""}</p>
+${propertyLabel ? `<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Objekttyp:</strong> ${propertyLabel}</p>` : ""}
 ${lead.isUrgent ? '<p style="margin:0;font-size:14px;color:#c9944a;font-weight:600;">Dringend</p>' : ""}
 </td></tr></table>
 
@@ -327,15 +327,15 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   if (isCallback) {
     customerHtml = `${emailHeader("#92600a", "#c9944a")}
 <h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Wir rufen Sie zur\u00fcck, ${appointment.name}!</h2>
-<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Vielen Dank f\u00fcr Ihre R\u00fcckruf-Anfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich schnellstm\u00f6glich bei Ihnen melden \u2013 in der Regel innerhalb von 2 Stunden (Mo\u2013Fr).</p>
+<p style="margin:0 0 24px;font-size:15px;color:#2a2a2a;line-height:1.7;">Vielen Dank f\u00fcr Ihre R\u00fcckruf-Anfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich schnellstm\u00f6glich bei Ihnen melden \u2013 in der Regel innerhalb von 2 Stunden (Mo\u2013Fr).</p>
 
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
 <tr><td style="background-color:#f8f6f3;border-left:4px solid #c9944a;padding:20px 24px;border-radius:0 8px 8px 0;">
-<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre R\u00fcckruf-Anfrage</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Leistung:</strong> ${serviceLabel}</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>R\u00fcckruf an:</strong> ${appointment.phone}</p>
-${appointment.address ? `<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
-${appointment.message ? `<p style="margin:0;font-size:14px;color:#666;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ""}
+<p style="margin:0 0 4px;font-size:11px;color:#666;text-transform:uppercase;letter-spacing:1px;">Ihre R\u00fcckruf-Anfrage</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Leistung:</strong> ${serviceLabel}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>R\u00fcckruf an:</strong> ${appointment.phone}</p>
+${appointment.address ? `<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
+${appointment.message ? `<p style="margin:0;font-size:14px;color:#444;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ""}
 </td></tr></table>
 
 <h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
@@ -345,23 +345,23 @@ ${emailStep(2, "Am Telefon besprechen wir Ihr Vorhaben und kl\u00e4ren <strong s
 ${emailStep(3, "Bei Bedarf vereinbaren wir direkt einen <strong style=\"color:#1a2e44;\">kostenlosen Vor-Ort-Termin</strong>.")}
 </table>
 
-<p style="margin:0 0 20px;font-size:15px;color:#555;line-height:1.7;">Halten Sie bitte Ihr Telefon bereit. Sollten Sie uns vorher erreichen wollen, k\u00f6nnen Sie uns jederzeit kontaktieren.</p>
+<p style="margin:0 0 20px;font-size:15px;color:#2a2a2a;line-height:1.7;">Halten Sie bitte Ihr Telefon bereit. Sollten Sie uns vorher erreichen wollen, k\u00f6nnen Sie uns jederzeit kontaktieren.</p>
 
 ${emailContactBlock()}
 ${emailFooter()}`;
   } else {
     customerHtml = `${emailHeader("#1a2e44", "#2a4a6b")}
 <h2 style="margin:0 0 8px;font-size:22px;color:#1a2e44;font-weight:600;">Ihre Terminanfrage, ${appointment.name}!</h2>
-<p style="margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;">Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen.</p>
+<p style="margin:0 0 24px;font-size:15px;color:#2a2a2a;line-height:1.7;">Vielen Dank f\u00fcr Ihre Terminanfrage. Ihr pers\u00f6nlicher Projekt-Kurator wird sich in K\u00fcrze bei Ihnen melden, um den Termin zu best\u00e4tigen.</p>
 
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:28px;">
 <tr><td style="background-color:#f8f6f3;border-left:4px solid #c9944a;padding:20px 24px;border-radius:0 8px 8px 0;">
-<p style="margin:0 0 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;">Ihre Terminanfrage</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Leistung:</strong> ${serviceLabel}</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
-<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>
-${appointment.address ? `<p style="margin:0 0 6px;font-size:15px;color:#333;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
-${appointment.message ? `<p style="margin:0;font-size:14px;color:#666;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ""}
+<p style="margin:0 0 4px;font-size:11px;color:#666;text-transform:uppercase;letter-spacing:1px;">Ihre Terminanfrage</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Leistung:</strong> ${serviceLabel}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Wunschtermin:</strong> ${formatDateDE(appointment.preferredDate)}</p>
+<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Uhrzeit:</strong> ${formatTimeDE(appointment.preferredTime)} Uhr</p>
+${appointment.address ? `<p style="margin:0 0 6px;font-size:15px;color:#222;"><strong>Adresse:</strong> ${appointment.address}</p>` : ""}
+${appointment.message ? `<p style="margin:0;font-size:14px;color:#444;font-style:italic;">\u201e${appointment.message}\u201c</p>` : ""}
 </td></tr></table>
 
 <h3 style="margin:0 0 16px;font-size:17px;color:#1a2e44;font-weight:600;">So geht es weiter</h3>
