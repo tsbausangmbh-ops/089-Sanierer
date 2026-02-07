@@ -13,12 +13,33 @@ const CRAWLER_USER_AGENTS = [
   "whatsapp",
   "telegrambot",
   "applebot",
+  "applebot-extended",
   "gptbot",
   "chatgpt-user",
+  "openai",
   "claude-web",
-  "perplexitybot",
+  "claudebot",
+  "claude-user",
   "anthropic-ai",
+  "anthropicbot",
+  "perplexitybot",
+  "perplexity-user",
   "cohere-ai",
+  "google-extended",
+  "googleother",
+  "amazonbot",
+  "duckassistbot",
+  "kagibot",
+  "petalbot",
+  "mojeekbot",
+  "meta-externalagent",
+  "meta-externalfetcher",
+  "facebookbot",
+  "youbot",
+  "ccbot",
+  "bytedance",
+  "bytespider",
+  "iaskbot",
   "rogerbot",
   "embedly",
   "quora link preview",
@@ -608,39 +629,61 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Sanierungsleistungen",
+      "name": "Sanierungsleistungen München",
       "itemListElement": [
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Komplettsanierung München",
-            "description": "Vollständige Sanierung von Wohnungen und Häusern aus einer Hand"
-          }
+          "@type": "OfferCatalog",
+          "name": "Komplettsanierung",
+          "itemListElement": [{
+            "@type": "Offer",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "EUR", "price": "1200", "unitText": "pro m²", "description": "ab 1.200€/m² Festpreis" },
+            "itemOffered": { "@type": "Service", "name": "Komplettsanierung München", "description": "Schlüsselfertige Sanierung von Wohnungen und Häusern. Alle Gewerke aus einer Hand, persönlicher Bauleiter, 4-12 Wochen.", "url": `${baseURL}/komplettsanierung` }
+          }]
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Badsanierung München",
-            "description": "Komplette Badsanierung mit Fliesen, Sanitär und Elektro"
-          }
+          "@type": "OfferCatalog",
+          "name": "Badsanierung",
+          "itemListElement": [{
+            "@type": "Offer",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "price": "18500", "description": "ab 18.500€ Komplettpreis für 6-8m² Bad" },
+            "itemOffered": { "@type": "Service", "name": "Badsanierung München", "description": "Komplette Badsanierung mit Fliesen, Sanitär und Elektro. Bodengleiche Dusche, barrierefrei möglich. 10-14 Arbeitstage.", "url": `${baseURL}/badsanierung` }
+          }]
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Wohnungssanierung München",
-            "description": "Professionelle Wohnungssanierung für Altbau und Neubau"
-          }
+          "@type": "OfferCatalog",
+          "name": "Wohnungssanierung",
+          "itemListElement": [{
+            "@type": "Offer",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "EUR", "price": "800", "unitText": "pro m²", "description": "ab 800€/m² Festpreis" },
+            "itemOffered": { "@type": "Service", "name": "Wohnungssanierung München", "description": "Professionelle Wohnungssanierung für Altbau und Neubau. Sanierung auch bei bewohnter Wohnung möglich.", "url": `${baseURL}/wohnungssanierung` }
+          }]
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Haussanierung München",
-            "description": "Umfassende Haussanierung für Einfamilien- und Mehrfamilienhäuser"
-          }
+          "@type": "OfferCatalog",
+          "name": "Haussanierung",
+          "itemListElement": [{
+            "@type": "Offer",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "EUR", "price": "1200", "unitText": "pro m²", "description": "ab 1.200€/m² Festpreis" },
+            "itemOffered": { "@type": "Service", "name": "Haussanierung München", "description": "Umfassende Haussanierung für Einfamilien- und Mehrfamilienhäuser. Kernsanierung und Teilsanierung.", "url": `${baseURL}/haussanierung` }
+          }]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Küchensanierung",
+          "itemListElement": [{
+            "@type": "Offer",
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "price": "6500", "description": "ab 6.500€" },
+            "itemOffered": { "@type": "Service", "name": "Küchensanierung München", "description": "Küchenumbau mit Elektro, Wasser, Fliesen und Malerarbeiten.", "url": `${baseURL}/kuechensanierung` }
+          }]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Elektrosanierung",
+          "itemListElement": [{
+            "@type": "Offer",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "EUR", "price": "150", "unitText": "pro m²", "description": "ab 150€/m²" },
+            "itemOffered": { "@type": "Service", "name": "Elektrosanierung München", "description": "Elektroinstallation nach VDE-Norm. Sicherungskasten, Leitungen, Smart-Home-Vorbereitung.", "url": `${baseURL}/elektrosanierung` }
+          }]
         }
       ]
     },
@@ -903,6 +946,53 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     ]
   };
 
+  const howToSchema = (path === "/" || path === "/komplettsanierung" || path === "/anfrage" || path === "/kosten") ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Sanierung in München beauftragen - So funktioniert es",
+    "description": "In 5 einfachen Schritten zu Ihrer professionellen Sanierung in München mit 089-Sanierer.",
+    "totalTime": "P1D",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "EUR",
+      "value": "0",
+      "name": "Kostenlose Erstberatung"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Anfrage stellen",
+        "text": "Stellen Sie eine kostenlose Anfrage über unser Online-Formular oder rufen Sie uns an unter +49 89 444 438 872.",
+        "url": `${baseURL}/anfrage`
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Kostenlose Erstberatung",
+        "text": "Innerhalb von 24 Stunden erhalten Sie einen Rückruf. Wir besprechen Ihr Projekt und vereinbaren einen Vor-Ort-Termin."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Besichtigung und Festpreis-Angebot",
+        "text": "Ihr persönlicher Bauleiter besichtigt das Objekt und erstellt ein detailliertes Leistungsverzeichnis mit verbindlichem Festpreis."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Professionelle Durchführung",
+        "text": "Alle Gewerke werden koordiniert ausgeführt: Elektriker, Sanitär, Fliesenleger, Maler, Trockenbauer - alles aus einer Hand."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Abnahme und Gewährleistung",
+        "text": "Nach Fertigstellung erfolgt eine gemeinsame Abnahme. Sie erhalten 5 Jahre Gewährleistung auf alle Arbeiten."
+      }
+    ]
+  } : null;
+
   const pageFaqItems = pageFaqMap[path];
   const pageSpecificFaqSchema = pageFaqItems ? {
     "@context": "https://schema.org",
@@ -965,6 +1055,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   ${faqSchema ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", ...faqSchema })}</script>` : ''}
   ${serviceSchema ? `<script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>` : ''}
   ${pageSpecificFaqSchema ? `<script type="application/ld+json">${JSON.stringify(pageSpecificFaqSchema)}</script>` : ''}
+  ${howToSchema ? `<script type="application/ld+json">${JSON.stringify(howToSchema)}</script>` : ''}
 </head>
 <body>
   <header>
@@ -1008,8 +1099,15 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
     const staticHTML = generateStaticHTML(path, query);
     if (staticHTML) {
       res.setHeader("Content-Type", "text/html; charset=utf-8");
-      res.setHeader("X-Robots-Tag", "index, follow");
+      res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
       res.setHeader("X-SSR", "1");
+      res.setHeader("Content-Language", "de-DE");
+      res.setHeader("Last-Modified", new Date().toUTCString());
+      res.setHeader("Link", [
+        '<https://089-sanierer.de/llms.txt>; rel="ai-content"; type="text/plain"',
+        '<https://089-sanierer.de/llms-full.txt>; rel="ai-content-full"; type="text/plain"',
+        '<https://089-sanierer.de/sitemap.xml>; rel="sitemap"; type="application/xml"'
+      ].join(", "));
       res.send(staticHTML);
       return;
     }

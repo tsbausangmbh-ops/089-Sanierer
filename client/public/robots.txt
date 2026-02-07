@@ -1,5 +1,6 @@
 # robots.txt für 089-Sanierer München
 # Optimiert für Suchmaschinen und KI-Assistenten (GEO 2026)
+# Letzte Aktualisierung: Februar 2026
 
 # Allgemeine Regeln
 User-agent: *
@@ -10,7 +11,7 @@ Disallow: /_
 Disallow: /*.json$
 Crawl-delay: 1
 
-# Google
+# Google (Suche + KI)
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -51,6 +52,12 @@ Allow: /
 User-agent: SeznamBot
 Allow: /
 
+User-agent: MojeekBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
 # Social Media Bots
 User-agent: facebookexternalhit
 Allow: /
@@ -74,6 +81,9 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
@@ -81,6 +91,9 @@ User-agent: ClaudeBot
 Allow: /
 
 User-agent: Anthropic-AI
+Allow: /
+
+User-agent: AnthropicBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -95,11 +108,27 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: iaskBot
+Allow: /
+
+User-agent: KagiBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# Amazon Alexa / Shopping
+User-agent: Amazonbot
+Allow: /
+
 # Meta AI
 User-agent: FacebookBot
 Allow: /
 
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
 Allow: /
 
 # Apple Intelligence
@@ -108,6 +137,14 @@ Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# AI-Informationen
+# Kurzversion: https://089-sanierer.de/llms.txt
+# Vollversion: https://089-sanierer.de/llms-full.txt
 
 # Sitemap
 Sitemap: https://089-sanierer.de/sitemap.xml
