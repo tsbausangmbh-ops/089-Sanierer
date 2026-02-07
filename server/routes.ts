@@ -48,16 +48,44 @@ function formatDateTimeDE(dateStr: string | Date): string {
 }
 
 const smtpPort = parseInt(process.env.SMTP_PORT || "587");
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: smtpPort,
-  secure: smtpPort === 465,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASSWORD,
-  },
-  ...(smtpPort === 587 && { requireTLS: true }),
-});
+
+function createSmtpTransporter() {
+  const config: any = {
+    host: process.env.SMTP_HOST,
+    port: smtpPort,
+    secure: smtpPort === 465,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
+    },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
+    tls: {
+      rejectUnauthorized: false,
+      minVersion: 'TLSv1.2',
+    },
+  };
+
+  if (smtpPort === 587) {
+    config.requireTLS = true;
+  }
+
+  return nodemailer.createTransport(config);
+}
+
+let transporter = createSmtpTransporter();
+
+async function getTransporter() {
+  try {
+    await transporter.verify();
+    return transporter;
+  } catch (err) {
+    console.log("SMTP transporter verify failed, recreating...", (err as Error).message);
+    transporter = createSmtpTransporter();
+    return transporter;
+  }
+}
 
 async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   const serviceLabel = serviceLabels[lead.service] || lead.service;
@@ -125,7 +153,8 @@ async function sendCustomerConfirmationEmail(lead: Lead): Promise<void> {
   `;
 
   try {
-    await transporter.sendMail({
+    const smtp = await getTransporter();
+    await smtp.sendMail({
       from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
       to: lead.email,
       subject: `Ihre Anfrage bei 089-Sanierer: ${serviceLabel}`,
@@ -200,7 +229,8 @@ async function sendCompanyLeadNotification(lead: Lead): Promise<void> {
   `;
 
   try {
-    await transporter.sendMail({
+    const smtp = await getTransporter();
+    await smtp.sendMail({
       from: `"089-Sanierer Lead-Bot" <${process.env.SMTP_FROM_EMAIL}>`,
       to: process.env.SMTP_FROM_EMAIL,
       subject: `${lead.isUrgent ? '[DRINGEND] ' : ''}Neue Anfrage: ${lead.name} - ${serviceLabel}`,
@@ -321,14 +351,15 @@ async function sendAppointmentEmails(appointment: Appointment): Promise<void> {
   `;
 
   try {
+    const smtp = await getTransporter();
     await Promise.all([
-      transporter.sendMail({
+      smtp.sendMail({
         from: `"089-Sanierer" <${process.env.SMTP_FROM_EMAIL}>`,
         to: appointment.email,
         subject: `Terminanfrage bei 089-Sanierer: ${serviceLabel}`,
         html: customerHtml,
       }),
-      transporter.sendMail({
+      smtp.sendMail({
         from: `"089-Sanierer Bot" <${process.env.SMTP_FROM_EMAIL}>`,
         to: process.env.SMTP_FROM_EMAIL,
         subject: `Neue Terminanfrage: ${appointment.name} - ${serviceLabel}`,
@@ -356,10 +387,11 @@ export async function registerRoutes(
       console.log("SMTP_USER:", process.env.SMTP_USER);
       console.log("SMTP_PASSWORD exists:", !!process.env.SMTP_PASSWORD);
       
-      await transporter.verify();
+      const smtp = await getTransporter();
+      await smtp.verify();
       console.log("SMTP connection verified successfully!");
       
-      await transporter.sendMail({
+      await smtp.sendMail({
         from: `"089-Sanierer Test" <${process.env.SMTP_FROM_EMAIL}>`,
         to: process.env.SMTP_FROM_EMAIL,
         subject: "Test-E-Mail von 089-Sanierer",
