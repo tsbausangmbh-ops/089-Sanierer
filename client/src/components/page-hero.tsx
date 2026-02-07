@@ -78,14 +78,14 @@ export function PageHero({
           {showCta && (
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6">
               <Link href="/anfrage">
-                <Button size="lg" className="text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500 shadow-lg" data-testid="button-hero-cta">
-                  Kostenlos anfragen
-                  <ChevronRight className="w-5 h-5 ml-2" />
+                <Button size="lg" className="text-sm sm:text-lg w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white border-orange-500 shadow-lg px-4 sm:px-6 whitespace-normal text-center leading-tight" data-testid="button-hero-cta">
+                  <span className="flex-1">Kostenlos anfragen</span>
+                  <ChevronRight className="w-5 h-5 ml-1.5 flex-shrink-0" />
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="text-lg w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
-                  <Phone className="w-5 h-5 mr-2" />
+                <Button size="lg" variant="outline" className="text-sm sm:text-lg w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-4 sm:px-6 whitespace-normal text-center leading-tight">
+                  <Phone className="w-5 h-5 mr-1.5 flex-shrink-0" />
                   089 444438872
                 </Button>
               </a>
