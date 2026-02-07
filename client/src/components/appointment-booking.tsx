@@ -213,6 +213,16 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                 month={calendarMonth}
                 onMonthChange={setCalendarMonth}
                 className="rounded-md border"
+                modifiers={{
+                  booked: (date: Date) => {
+                    if (date < minDate || date > maxDate || isSunday(date)) return false;
+                    const ds = format(date, "yyyy-MM-dd");
+                    return bookedDaysSet.has(ds);
+                  },
+                }}
+                modifiersClassNames={{
+                  booked: "booked-day",
+                }}
                 data-testid="calendar-date-picker"
               />
             </div>
@@ -222,7 +232,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
                 <span>Verfügbar</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-sm bg-muted line-through opacity-50" />
+                <div className="w-3 h-3 rounded-sm bg-red-50 border border-red-200 dark:bg-red-950/20 dark:border-red-900/30" />
                 <span>Belegt</span>
               </div>
             </div>

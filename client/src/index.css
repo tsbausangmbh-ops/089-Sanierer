@@ -183,6 +183,13 @@
   .no-default-hover-elevate {}
   .no-default-active-elevate {}
 
+  .booked-day {
+    @apply !bg-red-50 !text-red-400 !opacity-60 line-through !cursor-not-allowed;
+  }
+  .dark .booked-day {
+    @apply !bg-red-950/20 !text-red-400/60;
+  }
+
   .toggle-elevate::before,
   .toggle-elevate-2::before {
     content: "";
