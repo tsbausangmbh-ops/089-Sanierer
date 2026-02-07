@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, Send, Calendar } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -44,6 +47,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export default function Kontakt() {
   const { toast } = useToast();
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -86,6 +90,14 @@ export default function Kontakt() {
   });
 
   const onSubmit = (data: ContactFormData) => {
+    if (!privacyAccepted) {
+      toast({
+        title: "Datenschutz",
+        description: "Bitte akzeptieren Sie die Datenschutzerklärung.",
+        variant: "destructive",
+      });
+      return;
+    }
     mutation.mutate(data);
   };
 
@@ -199,11 +211,22 @@ export default function Kontakt() {
                           </FormItem>
                         )}
                       />
+                      <div className="flex items-start space-x-3 py-2">
+                        <Checkbox
+                          id="privacy-kontakt"
+                          checked={privacyAccepted}
+                          onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                          data-testid="checkbox-privacy-kontakt"
+                        />
+                        <Label htmlFor="privacy-kontakt" className="text-sm font-normal leading-relaxed cursor-pointer">
+                          Ich stimme der Verarbeitung meiner Daten gemäß der <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link> zu. *
+                        </Label>
+                      </div>
                       <Button 
                         type="submit" 
                         size="lg"
                         className="w-full min-h-12 bg-orange-500 hover:bg-orange-600 text-white border-orange-500 text-xs sm:text-sm"
-                        disabled={mutation.isPending}
+                        disabled={mutation.isPending || !privacyAccepted}
                         data-testid="button-contact-submit"
                       >
                         {mutation.isPending ? (

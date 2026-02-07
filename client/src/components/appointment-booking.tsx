@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -40,6 +42,7 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
   const [step, setStep] = useState<"date" | "time" | "contact" | "success">("date");
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedTime, setSelectedTime] = useState<string>("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -99,6 +102,14 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedDate || !selectedTime) return;
+    if (!privacyAccepted) {
+      toast({
+        title: "Datenschutz",
+        description: "Bitte akzeptieren Sie die Datenschutzerklärung.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     bookingMutation.mutate({
       ...formData,
@@ -341,10 +352,22 @@ export function AppointmentBooking({ preSelectedService, onSuccess }: Appointmen
               </div>
             </div>
 
+            <div className="flex items-start space-x-3 py-2">
+              <Checkbox
+                id="privacy-appointment"
+                checked={privacyAccepted}
+                onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                data-testid="checkbox-privacy-appointment"
+              />
+              <Label htmlFor="privacy-appointment" className="text-sm font-normal leading-relaxed cursor-pointer">
+                Ich stimme der Verarbeitung meiner Daten gemäß der <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link> zu. *
+              </Label>
+            </div>
+
             <Button
               type="submit"
               className="w-full"
-              disabled={bookingMutation.isPending || !formData.name || !formData.email || !formData.phone || !formData.service}
+              disabled={bookingMutation.isPending || !formData.name || !formData.email || !formData.phone || !formData.service || !privacyAccepted}
               data-testid="button-submit-appointment"
             >
               {bookingMutation.isPending ? (
