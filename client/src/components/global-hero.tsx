@@ -43,6 +43,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
         fetchpriority="high"
         width={1200}
         height={655}
+        sizes="100vw"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: 'center' }}
       />

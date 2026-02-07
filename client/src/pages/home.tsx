@@ -1091,7 +1091,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {allServices.map((service) => (
                 <Card key={service.id} className="overflow-hidden group hover-elevate">
-                  <div className="relative h-48">
+                  <div className="relative h-36 sm:h-48">
                     <img 
                       src={service.image} 
                       alt={service.imageAlt}
@@ -1100,6 +1100,7 @@ export default function Home() {
                       decoding="async"
                       width="400"
                       height="192"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">

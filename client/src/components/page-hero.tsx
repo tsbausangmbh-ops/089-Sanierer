@@ -48,7 +48,7 @@ export function PageHero({
           fetchpriority="high"
           width={1200}
           height={655}
-          aria-label={imageAlt || "Haussanierung Vorher-Nachher"}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40 lg:to-black/20" />
       </div>

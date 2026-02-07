@@ -114,6 +114,7 @@ export function SeoFooter() {
                   width="40"
                   height="40"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="flex flex-col">
                   <span className="font-bold text-base leading-tight">089-Sanierer</span>

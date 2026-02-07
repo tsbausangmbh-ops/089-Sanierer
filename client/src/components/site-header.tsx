@@ -43,6 +43,7 @@ export function SiteHeader() {
                 width="40"
                 height="40"
                 loading="eager"
+                decoding="async"
               />
               <div className="flex flex-col">
                 <span className="font-bold text-base leading-tight">089-Sanierer</span>
