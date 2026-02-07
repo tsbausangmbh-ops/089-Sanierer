@@ -93,21 +93,27 @@ function getDayBusyPercentage(date: string): number {
 
 function selectBusySlots(allSlots: string[], date: string): Set<string> {
   const busyPct = getDayBusyPercentage(date);
-  const numBusy = Math.round(allSlots.length * busyPct);
+  const targetBusy = Math.round(allSlots.length * busyPct);
 
   const seed = hashSeed(`slots-${date}-select-kshw`);
   const rng = seededRandom(seed);
 
-  const indices = allSlots.map((_, i) => i);
-  for (let i = indices.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [indices[i], indices[j]] = [indices[j], indices[i]];
+  const busySet = new Set<string>();
+  const available = new Set(allSlots.map((_, i) => i));
+
+  while (busySet.size < targetBusy && available.size > 0) {
+    const avail = Array.from(available);
+    const startIdx = avail[Math.floor(rng() * avail.length)];
+
+    busySet.add(allSlots[startIdx]);
+    available.delete(startIdx);
+
+    if (busySet.size < targetBusy && startIdx + 1 < allSlots.length && available.has(startIdx + 1)) {
+      busySet.add(allSlots[startIdx + 1]);
+      available.delete(startIdx + 1);
+    }
   }
 
-  const busySet = new Set<string>();
-  for (let i = 0; i < numBusy; i++) {
-    busySet.add(allSlots[indices[i]]);
-  }
   return busySet;
 }
 
