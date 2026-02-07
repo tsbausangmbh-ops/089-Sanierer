@@ -4,30 +4,71 @@ const BUSINESS_HOURS = {
   slotDuration: 120
 };
 
-const ARTIFICIAL_BUSY_PERCENTAGE = 0.6;
+function seededRandom(seed: number): () => number {
+  let s = seed;
+  return () => {
+    s = (s * 1103515245 + 12345) & 0x7fffffff;
+    return s / 0x7fffffff;
+  };
+}
 
-function hashCode(str: string): number {
-  let hash = 0;
+function hashSeed(str: string): number {
+  let h = 2166136261;
   for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
   }
-  return Math.abs(hash);
+  return Math.abs(h);
 }
 
-function getWeekNumber(date: string): number {
-  const d = new Date(date);
-  const startOfYear = new Date(d.getFullYear(), 0, 1);
-  const days = Math.floor((d.getTime() - startOfYear.getTime()) / (24 * 60 * 60 * 1000));
-  return Math.ceil((days + startOfYear.getDay() + 1) / 7);
+function getDayBusyPercentage(date: string): number {
+  const seed = hashSeed(`day-busy-${date}-kshw2026`);
+  const rng = seededRandom(seed);
+  const dayOfWeek = new Date(`${date}T12:00:00+01:00`).getDay();
+
+  const weekSeed = hashSeed(`week-${date.substring(0, 7)}-${Math.floor(new Date(`${date}T12:00:00+01:00`).getDate() / 7)}-kshw`);
+  const weekRng = seededRandom(weekSeed);
+  const weekBase = 0.32 + weekRng() * 0.16;
+
+  let dayVariation: number;
+  const r = rng();
+
+  if (dayOfWeek === 1 || dayOfWeek === 2) {
+    dayVariation = 0.05 + r * 0.18;
+  } else if (dayOfWeek === 3 || dayOfWeek === 4) {
+    dayVariation = -0.05 + r * 0.15;
+  } else if (dayOfWeek === 5) {
+    dayVariation = -0.10 + r * 0.12;
+  } else {
+    dayVariation = -0.08 + r * 0.10;
+  }
+
+  const dateSeed = hashSeed(`scatter-${date}`);
+  const scatterRng = seededRandom(dateSeed);
+  const scatter = (scatterRng() - 0.5) * 0.10;
+
+  const pct = weekBase + dayVariation + scatter;
+  return Math.max(0.15, Math.min(0.65, pct));
 }
 
-function shouldHideSlot(date: string, slot: string): boolean {
-  const weekNumber = getWeekNumber(date);
-  const seed = hashCode(`${date}-${slot}-week${weekNumber}-kshw`);
-  const pseudoRandom = (seed % 100) / 100;
-  return pseudoRandom < ARTIFICIAL_BUSY_PERCENTAGE;
+function selectBusySlots(allSlots: string[], date: string): Set<string> {
+  const busyPct = getDayBusyPercentage(date);
+  const numBusy = Math.round(allSlots.length * busyPct);
+
+  const seed = hashSeed(`slots-${date}-select-kshw`);
+  const rng = seededRandom(seed);
+
+  const indices = allSlots.map((_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+
+  const busySet = new Set<string>();
+  for (let i = 0; i < numBusy; i++) {
+    busySet.add(allSlots[indices[i]]);
+  }
+  return busySet;
 }
 
 export async function getAvailableSlots(date: string): Promise<string[]> {
@@ -42,10 +83,12 @@ export async function getAvailableSlots(date: string): Promise<string[]> {
     allSlots.push(`${hour.toString().padStart(2, '0')}:00`);
   }
 
-  let availableSlots = allSlots.filter(slot => !shouldHideSlot(date, slot));
+  const busySlots = selectBusySlots(allSlots, date);
+  let availableSlots = allSlots.filter(slot => !busySlots.has(slot));
 
   if (availableSlots.length === 0 && allSlots.length > 0) {
-    const fallbackIndex = hashCode(date) % allSlots.length;
+    const fallbackSeed = hashSeed(`fallback-${date}`);
+    const fallbackIndex = fallbackSeed % allSlots.length;
     availableSlots = [allSlots[fallbackIndex]];
   }
 
