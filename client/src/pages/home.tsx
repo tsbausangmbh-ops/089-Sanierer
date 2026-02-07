@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImage from "@assets/generated_images/modern_renovated_home_interior.webp";
+import heroImage from "@assets/generated_images/haus_wohnung_sanierung_hero.webp";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 
 const homeHeroContent: HeroContent = {
