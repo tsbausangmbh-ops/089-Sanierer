@@ -33,12 +33,12 @@ const homeHeroContent: HeroContent = {
   checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "hero"
 };
-import bathroomImg from "@assets/generated_images/modern_bathroom_renovation.webp";
-import kitchenImg from "@assets/generated_images/kitchen_renovation_work.webp";
-import floorImg from "@assets/generated_images/parquet_floor_renovation.webp";
-import electricImg from "@assets/generated_images/electrical_renovation_installation.webp";
-import heatingImg from "@assets/generated_images/heating_system_installation.webp";
-import completeImg from "@assets/generated_images/complete_home_renovation_result.webp";
+import bathroomImg from "@assets/generated_images/moderne_badsanierung.webp";
+import kitchenImg from "@assets/generated_images/kuechensanierung_arbeiten.webp";
+import floorImg from "@assets/generated_images/parkettboden_sanierung.webp";
+import electricImg from "@assets/generated_images/elektrosanierung_installation.webp";
+import heatingImg from "@assets/generated_images/heizungsanlage_einbau.webp";
+import completeImg from "@assets/generated_images/komplettsanierung_ergebnis.webp";
 
 import { 
   Bath, 

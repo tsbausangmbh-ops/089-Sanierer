@@ -26,7 +26,7 @@ import {
   Phone
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import wohnungImg from "@assets/generated_images/renovated_luxury_apartment_interior.webp";
+import wohnungImg from "@assets/generated_images/sanierte_luxuswohnung_interieur.webp";
 
 const wohnungHeroContent: HeroContent = {
   backgroundImage: wohnungImg,

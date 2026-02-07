@@ -52,48 +52,48 @@ import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoHead, generateServiceSchema } from "@/components/seo-head";
-import consultationHeroImage from "@assets/generated_images/renovation_consultation_meeting.webp";
-import komplettsanierungHeroImage from "@assets/generated_images/complete_renovation_before-after_split.webp";
-import badsanierungHeroImage from "@assets/generated_images/modern_luxury_bathroom_renovation.webp";
-import kuechensanierungHeroImage from "@assets/generated_images/modern_kitchen_renovation_result.webp";
-import bodensanierungHeroImage from "@assets/generated_images/parquet_floor_renovation_result.webp";
-import elektrosanierungHeroImage from "@assets/generated_images/german_electrical_installation_vde.webp";
-import heizungssanierungHeroImage from "@assets/generated_images/modern_heating_system_installation.webp";
-import dachsanierungHeroImage from "@assets/generated_images/renovated_german_tile_roof.webp";
-import energetischeSanierungHeroImage from "@assets/generated_images/energy_efficient_home_renovation.webp";
+import consultationHeroImage from "@assets/generated_images/sanierungsberatung_gespraech.webp";
+import komplettsanierungHeroImage from "@assets/generated_images/komplettsanierung_vorher_nachher.webp";
+import badsanierungHeroImage from "@assets/generated_images/moderne_luxus_badsanierung.webp";
+import kuechensanierungHeroImage from "@assets/generated_images/moderne_kuechensanierung_ergebnis.webp";
+import bodensanierungHeroImage from "@assets/generated_images/parkettboden_sanierung_ergebnis.webp";
+import elektrosanierungHeroImage from "@assets/generated_images/deutsche_elektroinstallation_vde.webp";
+import heizungssanierungHeroImage from "@assets/generated_images/moderne_heizungsanlage_einbau.webp";
+import dachsanierungHeroImage from "@assets/generated_images/saniertes_ziegeldach.webp";
+import energetischeSanierungHeroImage from "@assets/generated_images/energieeffiziente_haussanierung.webp";
 
 // NLP Section Images - 3 per service showing: work-in-progress, expertise, and results
-import komplettsanierungNlp1 from "@assets/generated_images/professional_renovation_team_coordinating.webp";
-import komplettsanierungNlp2 from "@assets/generated_images/quality_inspection_during_renovation.webp";
-import komplettsanierungNlp3 from "@assets/generated_images/renovated_luxury_apartment_interior.webp";
+import komplettsanierungNlp1 from "@assets/generated_images/sanierungsteam_koordination.webp";
+import komplettsanierungNlp2 from "@assets/generated_images/qualitaetskontrolle_sanierung.webp";
+import komplettsanierungNlp3 from "@assets/generated_images/sanierte_luxuswohnung_interieur.webp";
 
-import badsanierungNlp1 from "@assets/generated_images/tiler_installing_bathroom_tiles.webp";
-import badsanierungNlp2 from "@assets/generated_images/plumber_installing_bathroom_fixtures.webp";
-import badsanierungNlp3 from "@assets/generated_images/luxury_renovated_spa_bathroom.webp";
+import badsanierungNlp1 from "@assets/generated_images/fliesenleger_bad_fliesen.webp";
+import badsanierungNlp2 from "@assets/generated_images/installateur_bad_armaturen_einbau.webp";
+import badsanierungNlp3 from "@assets/generated_images/luxus_spa_bad_saniert.webp";
 
-import kuechensanierungNlp1 from "@assets/generated_images/electrician_preparing_kitchen_electrics.webp";
-import kuechensanierungNlp2 from "@assets/generated_images/plumber_preparing_kitchen_connections.webp";
-import kuechensanierungNlp3 from "@assets/generated_images/kitchen_renovation_construction_completed.webp";
+import kuechensanierungNlp1 from "@assets/generated_images/elektriker_kueche_vorbereitung.webp";
+import kuechensanierungNlp2 from "@assets/generated_images/installateur_kueche_anschluesse.webp";
+import kuechensanierungNlp3 from "@assets/generated_images/kuechensanierung_fertiggestellt.webp";
 
-import bodensanierungNlp1 from "@assets/generated_images/craftsman_installing_parquet_floor.webp";
-import bodensanierungNlp2 from "@assets/generated_images/floor_sanding_and_restoration.webp";
-import bodensanierungNlp3 from "@assets/generated_images/finished_herringbone_parquet_floor.webp";
+import bodensanierungNlp1 from "@assets/generated_images/handwerker_parkettboden_verlegen.webp";
+import bodensanierungNlp2 from "@assets/generated_images/bodenschleifen_und_aufbereitung.webp";
+import bodensanierungNlp3 from "@assets/generated_images/fischgraet_parkettboden_fertig.webp";
 
-import elektrosanierungNlp1 from "@assets/generated_images/electrician_installing_new_cables.webp";
-import elektrosanierungNlp2 from "@assets/generated_images/electrician_installing_electrical_panel.webp";
-import elektrosanierungNlp3 from "@assets/generated_images/modern_electrical_outlets_installed.webp";
+import elektrosanierungNlp1 from "@assets/generated_images/elektriker_neue_kabel_verlegen.webp";
+import elektrosanierungNlp2 from "@assets/generated_images/elektriker_verteilerschrank_einbau.webp";
+import elektrosanierungNlp3 from "@assets/generated_images/moderne_steckdosen_eingebaut.webp";
 
-import heizungssanierungNlp1 from "@assets/generated_images/technician_installing_heat_pump.webp";
-import heizungssanierungNlp2 from "@assets/generated_images/plumber_connecting_heating_radiator.webp";
-import heizungssanierungNlp3 from "@assets/generated_images/modern_heating_boiler_installed.webp";
+import heizungssanierungNlp1 from "@assets/generated_images/techniker_waermepumpe_einbau.webp";
+import heizungssanierungNlp2 from "@assets/generated_images/installateur_heizkoerper_anschluss.webp";
+import heizungssanierungNlp3 from "@assets/generated_images/moderner_heizkessel_eingebaut.webp";
 
-import energetischeSanierungNlp1 from "@assets/generated_images/workers_installing_facade_insulation.webp";
-import energetischeSanierungNlp2 from "@assets/generated_images/installing_energy_efficient_windows.webp";
-import energetischeSanierungNlp3 from "@assets/generated_images/energy_efficient_renovated_house.webp";
+import energetischeSanierungNlp1 from "@assets/generated_images/arbeiter_fassadendaemmung.webp";
+import energetischeSanierungNlp2 from "@assets/generated_images/einbau_energiesparfenster.webp";
+import energetischeSanierungNlp3 from "@assets/generated_images/energieeffizientes_saniertes_haus.webp";
 
-import dachsanierungNlp1 from "@assets/generated_images/roofer_installing_roof_tiles.webp";
-import dachsanierungNlp2 from "@assets/generated_images/installing_roof_attic_insulation.webp";
-import dachsanierungNlp3 from "@assets/generated_images/completed_renovated_house_roof.webp";
+import dachsanierungNlp1 from "@assets/generated_images/dachdecker_dachziegel_verlegen.webp";
+import dachsanierungNlp2 from "@assets/generated_images/einbau_dachdaemmung.webp";
+import dachsanierungNlp3 from "@assets/generated_images/fertig_saniertes_hausdach.webp";
 
 const serviceHeroImages: Record<string, string> = {
   komplettsanierung: komplettsanierungHeroImage,

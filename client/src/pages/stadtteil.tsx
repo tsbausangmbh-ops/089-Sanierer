@@ -25,7 +25,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import stadtteilImg from "@assets/generated_images/modern_renovated_home_interior.webp";
+import stadtteilImg from "@assets/generated_images/modernes_saniertes_wohninterieur.webp";
 
 interface StadtteilData {
   name: string;

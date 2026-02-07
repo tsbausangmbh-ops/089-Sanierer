@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.webp";
+import christmasBackground from "@assets/generated_images/weihnachtsbeleuchtung_hintergrund.webp";
 
 const COOKIE_NAME = "kshw_christmas_popup_shown";
 const COOKIE_CONSENT_KEY = "kshw_cookie_consent";

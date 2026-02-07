@@ -16,7 +16,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
-import contactHeroImage from "@assets/generated_images/customer_service_contact.webp";
+import contactHeroImage from "@assets/generated_images/kundenservice_kontakt.webp";
 
 const kontaktHeroContent: HeroContent = {
   backgroundImage: contactHeroImage,

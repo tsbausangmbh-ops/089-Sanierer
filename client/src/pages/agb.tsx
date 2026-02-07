@@ -4,7 +4,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
-import agbHeroImage from "@assets/generated_images/business_contract_agb.webp";
+import agbHeroImage from "@assets/generated_images/geschaeftsvertrag_agb.webp";
 
 const agbHeroContent: HeroContent = {
   backgroundImage: agbHeroImage,

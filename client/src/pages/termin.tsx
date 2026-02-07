@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
-import terminHeroImage from "@assets/generated_images/appointment_booking_calendar.webp";
+import terminHeroImage from "@assets/generated_images/terminbuchung_kalender.webp";
 
 const terminHeroContent: HeroContent = {
   backgroundImage: terminHeroImage,
