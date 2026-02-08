@@ -36,7 +36,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
       {/* Optimized background image with eager loading for LCP */}
       <div className="absolute inset-0 bg-slate-800" />
       <img 
-        src={`${content.backgroundImage}?v=2026020814`} 
+        src={`${content.backgroundImage}?v=${Date.now()}`} 
         alt={content.imageAlt || ""}
         loading="eager"
         decoding="async"

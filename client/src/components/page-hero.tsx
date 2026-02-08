@@ -40,7 +40,7 @@ export function PageHero({
       <div className="absolute inset-0 pt-16">
         <div className="absolute inset-0 bg-slate-800" />
         <img 
-          src={`${image || defaultHeroImage}?v=2026020814`} 
+          src={`${image || defaultHeroImage}?v=${Date.now()}`} 
           alt={imageAlt || "Haussanierung Vorher-Nachher"}
           className="w-full h-full object-cover animate-fade-in"
           loading="eager"
