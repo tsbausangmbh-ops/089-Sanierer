@@ -270,7 +270,7 @@ export function getSeoMeta(path: string): SeoMeta {
       canonical: `${BASE_URL}/rechner`,
       ogTitle: "Sanierungskosten Rechner München | Online 2026",
       ogDescription: "Online-Rechner für Sanierungskosten München: Badsanierung, Komplettsanierung, Wohnungssanierung. Schnelle Kostenschätzung als erste Orientierung.",
-      ogImage: `${BASE_URL}/images/sanierung_preiskalkulation.webp`,
+      ogImage: `${BASE_URL}/images/kostenrechner_planung_2026.webp`,
       ogImageAlt: "Sanierungskosten Rechner München - Online-Kalkulator für Badsanierung und Komplettsanierung Kosten",
     };
   }

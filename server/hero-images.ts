@@ -13,6 +13,7 @@ export const heroImageMap: Record<string, string> = {
   "/kernsanierung": "/images/haus_alt_vs_neu_vergleich.webp",
   "/kosten": "/images/sanierung_preiskalkulation.webp",
   "/kontakt": "/images/kundenservice_kontakt.webp",
+  "/rechner": "/images/kostenrechner_planung_2026.webp",
   "/ratgeber": "/images/sanierungsberater_experte.webp",
   "/faq-preise": "/images/sanierung_preiskalkulation.webp",
   "/anfrage": "/images/sanierungsberatung_gespraech.webp",
