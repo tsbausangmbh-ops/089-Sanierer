@@ -180,14 +180,22 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Unsere Sanierungsarbeiten und Renovierungsarbeiten</h2>
         <ul>
-          <li><strong>Komplettsanierung</strong> - Schlüsselfertige Sanierung ab 1.200 €/m²</li>
-          <li><strong>Badsanierung</strong> - Komplettbad ab 18.500 €</li>
-          <li><strong>Küchensanierung</strong> - Bauarbeiten ab 6.500 €</li>
-          <li><strong>Bodensanierung</strong> - Alle Bodenbeläge ab 65 €/m²</li>
-          <li><strong>Elektrosanierung</strong> - VDE-konforme Installation ab 150 €/m²</li>
-          <li><strong>Heizungssanierung</strong> - Moderne Heizsysteme ab 12.000 €</li>
+          <li><a href="/anfrage?service=komplettsanierung"><strong>Komplettsanierung</strong></a> - Schlüsselfertige Sanierung ab 1.200 €/m²</li>
+          <li><a href="/badsanierung"><strong>Badsanierung München</strong></a> - Komplettbad ab 18.500 €</li>
+          <li><a href="/anfrage?service=kuechensanierung"><strong>Küchensanierung</strong></a> - Bauarbeiten ab 6.500 €</li>
+          <li><a href="/anfrage?service=bodensanierung"><strong>Bodensanierung</strong></a> - Alle Bodenbeläge ab 65 €/m²</li>
+          <li><a href="/anfrage?service=elektrosanierung"><strong>Elektrosanierung</strong></a> - VDE-konforme Installation ab 150 €/m²</li>
+          <li><a href="/anfrage?service=heizungssanierung"><strong>Heizungssanierung</strong></a> - Moderne Heizsysteme ab 12.000 €</li>
           <li><strong>Dachsanierung</strong> - Dämmung und Eindeckung ab 150 €/m²</li>
           <li><strong>Energetische Sanierung</strong> - KfW-förderfähig ab 200 €/m²</li>
+        </ul>
+        
+        <h3>Landingpages nach Sanierungstyp</h3>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500 €</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800 €/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200 €/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München – Altbau komplett entkernen</a></li>
         </ul>
         
         <h2>Handwerkerservice München – Warum 089-Sanierer?</h2>
@@ -203,13 +211,80 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         </ul>
         
         <h2>Innenausbau Firma München – Servicegebiet</h2>
-        <p>Als Innenausbau Firma München sind wir in ganz München und dem Großraum für Renovierungen München und Sanierungen tätig: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Nymphenburg, sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden im Umkreis von 50 km.</p>
+        <p>Als Innenausbau Firma München sind wir in ganz München und dem Großraum für Renovierungen München und Sanierungen tätig:</p>
+        <h3>München Stadtteile</h3>
+        <ul>
+          <li><a href="/muenchen-schwabing">Sanierung Schwabing</a></li>
+          <li><a href="/muenchen-bogenhausen">Sanierung Bogenhausen</a></li>
+          <li><a href="/muenchen-maxvorstadt">Sanierung Maxvorstadt</a></li>
+          <li><a href="/muenchen-haidhausen">Sanierung Haidhausen</a></li>
+          <li><a href="/muenchen-sendling">Sanierung Sendling</a></li>
+          <li><a href="/muenchen-neuhausen">Sanierung Neuhausen</a></li>
+          <li><a href="/muenchen-pasing">Sanierung Pasing</a></li>
+          <li><a href="/muenchen-giesing">Sanierung Giesing</a></li>
+          <li><a href="/muenchen-lehel">Sanierung Lehel</a></li>
+          <li><a href="/muenchen-trudering">Sanierung Trudering</a></li>
+          <li><a href="/muenchen-nymphenburg">Sanierung Nymphenburg</a></li>
+          <li><a href="/muenchen-laim">Sanierung Laim</a></li>
+          <li><a href="/muenchen-solln">Sanierung Solln</a></li>
+          <li><a href="/muenchen-perlach">Sanierung Perlach</a></li>
+          <li><a href="/muenchen-ramersdorf">Sanierung Ramersdorf</a></li>
+          <li><a href="/muenchen-berg-am-laim">Sanierung Berg am Laim</a></li>
+          <li><a href="/muenchen-moosach">Sanierung Moosach</a></li>
+          <li><a href="/muenchen-allach">Sanierung Allach</a></li>
+          <li><a href="/muenchen-aubing">Sanierung Aubing</a></li>
+          <li><a href="/muenchen-obermenzing">Sanierung Obermenzing</a></li>
+          <li><a href="/muenchen-untermenzing">Sanierung Untermenzing</a></li>
+          <li><a href="/muenchen-feldmoching">Sanierung Feldmoching</a></li>
+          <li><a href="/muenchen-milbertshofen">Sanierung Milbertshofen</a></li>
+          <li><a href="/muenchen-freimann">Sanierung Freimann</a></li>
+          <li><a href="/muenchen-grosshadern">Sanierung Großhadern</a></li>
+          <li><a href="/muenchen-hadern">Sanierung Hadern</a></li>
+          <li><a href="/muenchen-fuerstenried">Sanierung Fürstenried</a></li>
+          <li><a href="/muenchen-forstenried">Sanierung Forstenried</a></li>
+          <li><a href="/muenchen-thalkirchen">Sanierung Thalkirchen</a></li>
+          <li><a href="/muenchen-obersendling">Sanierung Obersendling</a></li>
+          <li><a href="/muenchen-neuperlach">Sanierung Neuperlach</a></li>
+          <li><a href="/muenchen-riem">Sanierung Riem</a></li>
+        </ul>
+        <h3>Münchner Umland</h3>
+        <ul>
+          <li><a href="/dachau">Sanierung Dachau</a></li>
+          <li><a href="/karlsfeld">Sanierung Karlsfeld</a></li>
+          <li><a href="/germering">Sanierung Germering</a></li>
+          <li><a href="/fuerstenfeldbruck">Sanierung Fürstenfeldbruck</a></li>
+          <li><a href="/freising">Sanierung Freising</a></li>
+          <li><a href="/starnberg">Sanierung Starnberg</a></li>
+          <li><a href="/garching">Sanierung Garching</a></li>
+          <li><a href="/unterschleissheim">Sanierung Unterschleißheim</a></li>
+          <li><a href="/oberschleissheim">Sanierung Oberschleißheim</a></li>
+          <li><a href="/ottobrunn">Sanierung Ottobrunn</a></li>
+          <li><a href="/haar">Sanierung Haar</a></li>
+          <li><a href="/graefelfing">Sanierung Gräfelfing</a></li>
+          <li><a href="/planegg">Sanierung Planegg</a></li>
+          <li><a href="/pullach">Sanierung Pullach</a></li>
+          <li><a href="/gruenwald">Sanierung Grünwald</a></li>
+        </ul>
+        
+        <h2>Ratgeber, Kosten & Termine</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/kosten">Sanierungskosten München – Preise & Kalkulation</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner München</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber – Tipps & Kosten 2026</a></li>
+          <li><a href="/termin">Kostenlose Beratung – Termin buchen</a></li>
+          <li><a href="/gewerke">Gewerke-Übersicht – Alle Handwerksleistungen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/barrierefreiheit">Barrierefreiheitserklärung</a></li>
+        </ul>
         
         <h2>Kontakt</h2>
         <p>089-Sanierer – Ihre Sanierungsfirma München für Komplettsanierungen Haus & Wohnung</p>
         <p>Hardenbergstr. 4, 80992 München</p>
-        <p>Telefon: +49 89 444 438 872</p>
+        <p>Telefon: <a href="tel:+4989444438872">+49 89 444 438 872</a></p>
+        <p>E-Mail: <a href="mailto:info@089-sanierer.de">info@089-sanierer.de</a></p>
         <p>Öffnungszeiten: Mo-Fr 08:00-16:30 Uhr</p>
+        <p><a href="/kontakt">Kontaktseite</a> | <a href="/anfrage">Sanierungsanfrage stellen</a></p>
       </section>
     `;
   } else if (path === "/anfrage" && serviceInfo) {
