@@ -2667,8 +2667,22 @@ export default function FunnelPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col overflow-x-hidden">
       <SiteHeader />
+      <GlobalHero 
+        content={{
+          backgroundImage: consultationHeroImage,
+          imageAlt: "Sanierungsberatung München – Persönliche Beratung durch erfahrenen Bauleiter",
+          badge: "Sanierung München",
+          titleLine1: "Ihre Sanierung.",
+          titleLine2: "Professionell & stressfrei.",
+          descriptions: ["Ein Ansprechpartner für alles.", "Festpreis ohne Überraschungen."],
+          strongText: "Jetzt anfragen.",
+          ctaText: "Anfrage starten",
+          checkmarks: ["Festpreisgarantie", "5 Jahre Gewährleistung", "24h Antwort"],
+          dataTestIdPrefix: "funnel-default"
+        }}
+      />
 
-      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pt-20 flex-1">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1">
         {formSent ? (
           <Card className="max-w-2xl mx-auto">
             <CardContent className="pt-8 pb-8 text-center">
