@@ -65,7 +65,7 @@ export function SiteHeader() {
               {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
             </Button>
             <Link href="/termin">
-              <Button size="icon" className="bg-amber-500 text-white border-amber-500">
+              <Button size="icon" className="bg-orange-500 text-white border-orange-500">
                 <CalendarClock className="w-4 h-4" aria-hidden="true" />
               </Button>
             </Link>
@@ -122,7 +122,7 @@ export function SiteHeader() {
               </Button>
             </Link>
             <Link href="/termin">
-              <Button size="sm" className="text-sm bg-amber-500 text-white border-amber-500 ml-1">
+              <Button size="sm" className="text-sm bg-orange-500 text-white border-orange-500 ml-1">
                 <CalendarClock className="w-4 h-4 mr-1" aria-hidden="true" />
                 24H Online-Termine
               </Button>
@@ -191,7 +191,7 @@ export function SiteHeader() {
             </Link>
             <Link href="/termin">
               <Button 
-                className="w-full justify-start bg-amber-500 text-white border-amber-500 mt-2"
+                className="w-full justify-start bg-orange-500 text-white border-orange-500 mt-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <CalendarClock className="w-4 h-4 mr-2" />
