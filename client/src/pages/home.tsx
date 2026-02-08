@@ -805,6 +805,104 @@ export default function Home() {
           </p>
         </div>
 
+        {/* Intro Content Section */}
+        <section className="py-6 lg:py-10 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              <div>
+                <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-4">
+                  Sanierungen in München – Ihr Generalunternehmer für alle Gewerke
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4">
+                  Sie planen eine Sanierung oder Renovierung in München? Als erfahrene Sanierungsfirma koordinieren wir sämtliche Handwerkerleistungen aus einer Hand – von der ersten Beratung bis zur schlüsselfertigen Übergabe. Ob Wohnung, Einfamilienhaus oder Gewerbeobjekt: Bei uns erhalten Sie alles von einem Ansprechpartner, zum garantierten Festpreis.
+                </p>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4">
+                  Als Generalunternehmer für Sanierungen übernehmen wir die komplette Planung und Ausführung Ihrer Renovierungsarbeiten. Unser Netzwerk aus zertifizierten Meisterbetrieben deckt bis zu 22 verschiedene Gewerke ab – von Elektrik und Sanitär über Trockenbau bis hin zu Malerarbeiten und Bodenverlegung. Das bedeutet für Sie: kein Stress mit einzelnen Handwerkern, keine Terminprobleme, keine Überraschungen bei der Rechnung.
+                </p>
+                <div className="grid grid-cols-2 gap-3 mt-6">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                    <span className="text-sm font-medium">Festpreisgarantie auf alle Leistungen</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                    <span className="text-sm font-medium">Persönlicher Bauleiter vor Ort</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                    <span className="text-sm font-medium">Kostenlose Erstberatung in 24h</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                    <span className="text-sm font-medium">5 Jahre Gewährleistung</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-base sm:text-lg font-bold mb-3">
+                  Unsere Leistungen als Handwerkerservice in München
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4">
+                  Ob kleine Badsanierung oder umfangreiche Kernsanierung – wir sind Ihre Renovierungsfirma in München für jedes Projekt. Unsere Kunden schätzen besonders, dass sie sich um nichts kümmern müssen: Wir koordinieren alle Handwerker, beschaffen das Material und sorgen für einen reibungslosen Ablauf.
+                </p>
+                <div className="space-y-3">
+                  <Link href="/kernsanierung">
+                    <div className="flex items-center gap-3 p-3 rounded-md border hover-elevate cursor-pointer">
+                      <HomeIcon className="w-5 h-5 text-primary shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium">Komplett- & Kernsanierung</p>
+                        <p className="text-xs text-muted-foreground">Rundum-Sanierung ab 1.200€/m² Festpreis</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                    </div>
+                  </Link>
+                  <Link href="/badsanierung">
+                    <div className="flex items-center gap-3 p-3 rounded-md border hover-elevate cursor-pointer">
+                      <Bath className="w-5 h-5 text-primary shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium">Badsanierung München</p>
+                        <p className="text-xs text-muted-foreground">Komplettbad ab 18.500€ in 2-3 Wochen</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                    </div>
+                  </Link>
+                  <Link href="/wohnungssanierung">
+                    <div className="flex items-center gap-3 p-3 rounded-md border hover-elevate cursor-pointer">
+                      <Hammer className="w-5 h-5 text-primary shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium">Wohnungssanierung</p>
+                        <p className="text-xs text-muted-foreground">Wohnung komplett sanieren ab 800€/m²</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                    </div>
+                  </Link>
+                  <Link href="/haussanierung">
+                    <div className="flex items-center gap-3 p-3 rounded-md border hover-elevate cursor-pointer">
+                      <Shield className="w-5 h-5 text-primary shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium">Haussanierung</p>
+                        <p className="text-xs text-muted-foreground">Einfamilienhaus sanieren ab 1.200€/m²</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                    </div>
+                  </Link>
+                  <Link href="/kosten">
+                    <div className="flex items-center gap-3 p-3 rounded-md border hover-elevate cursor-pointer">
+                      <Calculator className="w-5 h-5 text-primary shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium">Alle Kosten & Preise 2026</p>
+                        <p className="text-xs text-muted-foreground">Transparente Preisübersicht aller Gewerke</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Stats Section */}
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
