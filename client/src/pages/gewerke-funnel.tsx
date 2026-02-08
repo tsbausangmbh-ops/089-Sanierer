@@ -15,7 +15,6 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { Breadcrumb } from "@/components/breadcrumb";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SeoHead } from "@/components/seo-head";
 const gewerkeHeroImage = "/images/fachhandwerker_meisterbetriebe.webp";
 

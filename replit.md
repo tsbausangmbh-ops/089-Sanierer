@@ -196,7 +196,9 @@ Preferred communication style: Simple, everyday language (German).
 - HTTP `Link: rel=preload` header sent for hero images on every page request (dev + production)
 - SSR renderer also injects `<link rel="preload">` tag into HTML (production)
 - All below-fold images use `loading="lazy"`, hero images use `loading="eager"` + `fetchpriority="high"`
-- Logo/favicon images still imported via Vite (@assets) for bundling
+- Below-fold images resized to 800px wide (quality 75), hero images kept at 1200px (quality 78)
+- Logo served as static file from `/images/089-sanierer-logo.webp` (NOT via Vite @assets)
+- Favicon is 2.5K ICO file at `client/public/favicon.ico`
 - IMPORTANT: When adding new pages with hero images, update `server/hero-images.ts`
 
 ### Build & Deployment

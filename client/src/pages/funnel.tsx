@@ -46,7 +46,6 @@ import {
   X
 } from "lucide-react";
 import { Link } from "wouter";
-import kshwLogoWhiteBg from "@assets/favicon-192-whitebg_1765228119332.png";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
