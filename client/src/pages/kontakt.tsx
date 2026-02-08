@@ -23,7 +23,7 @@ import contactHeroImage from "@assets/generated_images/kundenservice_kontakt.web
 
 const kontaktHeroContent: HeroContent = {
   backgroundImage: contactHeroImage,
-  imageAlt: "Kontakt 089-Sanierer München – Kostenlose Sanierungsberatung und Festpreisangebot anfordern",
+  imageAlt: "Kontakt Sanierungsfirma München – Kostenlose Sanierungsberatung und Festpreisangebot anfordern",
   badge: "Ihr direkter Draht zum Projekt-Kurator",
   titleLine1: "Sanierung München Kontakt – Beratung, Angebot & Terminvereinbarung.",
   titleLine2: "Kostenlos. Persönlich. Unverbindlich.",
@@ -105,7 +105,7 @@ export default function Kontakt() {
       <SeoHead
         title="Sanierung München Anfrage | Kostenlose Beratung 24h"
         description="Sanierung München anfragen: Kostenlose Beratung, Antwort in 24h, Festpreis-Angebot. Tel: 089 444438872. Jetzt unverbindlich Projekt besprechen!"
-        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos, Badsanierung München Termin vereinbaren, Komplettsanierung Anfrage stellen München, Handwerker München schnell verfügbar, Renovierung München kostenlose Besichtigung, Sanierung Angebot einholen München, Altbausanierung München Beratung buchen, Elektrosanierung München Angebot anfordern, Heizungssanierung München Kontakt aufnehmen, 089 Sanierer Telefon Öffnungszeiten, 089-Sanierer erreichbar, Sanierung München Rückruf Service"
+        keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos, Badsanierung München Termin vereinbaren, Komplettsanierung Anfrage stellen München, Handwerker München schnell verfügbar, Renovierung München kostenlose Besichtigung, Sanierung Angebot einholen München, Altbausanierung München Beratung buchen, Elektrosanierung München Angebot anfordern, Heizungssanierung München Kontakt aufnehmen, Sanierung München Rückruf Service"
         canonicalPath="/kontakt"
       />
       <SiteHeader />

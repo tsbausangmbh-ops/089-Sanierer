@@ -123,7 +123,7 @@ const servicePages: Record<string, { title: string; description: string; price: 
 const pageOgImageMap: Record<string, { image: string; alt: string }> = {
   "/": { image: "/images/komplettsanierung_vorher_nachher.webp", alt: "Komplettsanierung München vorher nachher - professionelle Sanierung aus einer Hand mit Festpreisgarantie" },
   "/anfrage": { image: "/images/sanierungsberatung_gespraech.webp", alt: "Kostenlose Sanierungsberatung München - persönliches Gespräch für Ihr Renovierungsprojekt" },
-  "/danke": { image: "/images/erfolgsbestaetigung_haekchen.webp", alt: "Sanierungsanfrage erfolgreich gesendet - 089-Sanierer München antwortet in 24 Stunden" },
+  "/danke": { image: "/images/erfolgsbestaetigung_haekchen.webp", alt: "Sanierungsanfrage erfolgreich gesendet - Antwort in 24 Stunden" },
   "/kosten": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierung München Kosten 2026 - transparente Preiskalkulation und Festpreisgarantie für alle Gewerke" },
   "/komplettsanierung": { image: "/images/komplettsanierung_ergebnis.webp", alt: "Komplettsanierung München Ergebnis - schlüsselfertig sanierte Wohnung mit allen Gewerken aus einer Hand" },
   "/badsanierung": { image: "/images/moderne_badsanierung.webp", alt: "Moderne Badsanierung München - fertig saniertes Badezimmer mit bodengleicher Dusche und hochwertigen Fliesen" },
@@ -137,9 +137,9 @@ const pageOgImageMap: Record<string, { image: string; alt: string }> = {
   "/kernsanierung": { image: "/images/komplettsanierung_haus.webp", alt: "Kernsanierung München - Haus bis auf die Grundsubstanz entkernt und professionell neu aufgebaut" },
   "/energetische-sanierung": { image: "/images/energieeffizientes_saniertes_haus.webp", alt: "Energetische Sanierung München - energieeffizient saniertes Haus mit Wärmedämmung und modernen Fenstern" },
   "/rechner": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierungskosten Rechner München - Online-Kalkulator für Badsanierung und Komplettsanierung Kosten" },
-  "/kontakt": { image: "/images/kundenservice_kontakt.webp", alt: "Kontakt 089-Sanierer München - persönliche Sanierungsberatung und kostenloser Vor-Ort-Termin" },
-  "/impressum": { image: "/images/rechtliche_dokumente_impressum.webp", alt: "Impressum 089-Sanierer München - rechtliche Informationen und Kontaktdaten der Sanierungsfirma" },
-  "/datenschutz": { image: "/images/datenschutz_sicherheit.webp", alt: "Datenschutz 089-Sanierer - DSGVO-konforme Verarbeitung Ihrer Sanierungsanfragen" },
+  "/kontakt": { image: "/images/kundenservice_kontakt.webp", alt: "Kontakt Sanierungsfirma München - persönliche Sanierungsberatung und kostenloser Vor-Ort-Termin" },
+  "/impressum": { image: "/images/rechtliche_dokumente_impressum.webp", alt: "Impressum Sanierungsfirma München - rechtliche Informationen und Kontaktdaten" },
+  "/datenschutz": { image: "/images/datenschutz_sicherheit.webp", alt: "Datenschutz Sanierungsfirma München - DSGVO-konforme Verarbeitung Ihrer Sanierungsanfragen" },
   "/ratgeber": { image: "/images/sanierungsberater_experte.webp", alt: "Sanierung Ratgeber München - Experten-Tipps für Badsanierung, Komplettsanierung und energetische Modernisierung" },
   "/faq-sanierung": { image: "/images/qualitaetskontrolle_sanierung.webp", alt: "FAQ Sanierung München - Antworten auf häufige Fragen zu Kosten, Dauer und Ablauf der Sanierung" },
   "/faq-preise": { image: "/images/sanierung_preiskalkulation.webp", alt: "FAQ und Preise Sanierung München - transparente Kostenübersicht für alle Sanierungsleistungen 2026" },
@@ -159,7 +159,7 @@ function getPageOgImageAlt(path: string): string {
     const district = path.replace("/muenchen-", "").replace(/-/g, " ");
     return `Sanierung ${district} München - lokaler Meisterbetrieb für Badsanierung und Komplettsanierung mit Festpreisgarantie`;
   }
-  return "089-Sanierer München - professionelle Komplettsanierung mit Festpreisgarantie und 5 Jahre Gewährleistung";
+  return "Sanierungsfirma München - professionelle Komplettsanierung mit Festpreisgarantie und 5 Jahre Gewährleistung";
 }
 
 function generateStaticHTML(path: string, query: Record<string, string>): string {
@@ -167,9 +167,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   const service = query.service || "";
   const serviceInfo = servicePages[service];
 
-  let title = "Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer";
-  let description = "Was kostet eine Sanierung in München? 089-Sanierer: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
-  let keywords = "Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer";
+  let title = "Sanierung München | Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m² Festpreis";
+  let description = "Sanierung München: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². 268+ zufriedene Kunden, Festpreisgarantie, 5 Jahre Gewährleistung.";
+  let keywords = "Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München";
   let mainContent = "";
 
   if (path === "/" || path === "") {
@@ -213,7 +213,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/anfrage" && serviceInfo) {
-    title = `${serviceInfo.title} | Kosten & Preise | 089-Sanierer`;
+    title = `${serviceInfo.title} | Kosten & Preise mit Festpreisgarantie 2026`;
     description = serviceInfo.description;
     keywords = servicePages[service]?.keywords || keywords;
     mainContent = `
@@ -234,8 +234,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/anfrage") {
-    title = "Sanierungsanfrage | 089-Sanierer";
-    description = "Stellen Sie jetzt Ihre Sanierungsanfrage. Kostenlose Beratung innerhalb von 24 Stunden.";
+    title = "Sanierungsanfrage München kostenlos | Festpreis-Angebot in 24h erhalten";
+    description = "Sanierungsanfrage München: Kostenlose Beratung und Festpreis-Angebot innerhalb von 24 Stunden für Ihr Sanierungsprojekt.";
     mainContent = `
       <section>
         <h1>Sanierungsanfrage</h1>
@@ -251,9 +251,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/faq-preise") {
-    title = "FAQ & Preise | Sanierung München | 089-Sanierer";
-    description = "Häufige Fragen und Preisübersicht für Sanierungen in München. Transparente Kosten für Bad, Küche, Elektro und mehr.";
-    keywords = "Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, 089-Sanierer, 089 Sanierer";
+    title = "FAQ & Preise Sanierung München 2026 | Kosten, Dauer & Ablauf erklärt";
+    description = "Häufige Fragen und Preisübersicht für Sanierungen in München 2026. Transparente Kosten für Bad, Küche, Elektro und mehr.";
+    keywords = "Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München";
     mainContent = `
       <section>
         <h1>FAQ & Preise - Sanierung München</h1>
@@ -293,9 +293,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/impressum") {
-    title = "Impressum | 089-Sanierer";
-    description = "Impressum und rechtliche Informationen zu 089-Sanierer.";
-    keywords = "089-Sanierer Impressum, 089 Sanierer Kontaktdaten, Komplettsanierungen Haus Wohnung München, Sanierungsfirma München Adresse, Handwerksbetrieb München Impressum, Renovierungsfirma München rechtlich, Bausanierung München Anbieter Info, Sanierung München Unternehmen, Renovierung München Firma, Handwerker München Firmendaten, Sanierungsdienstleister München, Bauunternehmen München Impressum, 089-Sanierer Hardenbergstraße München, Sanierungsbetrieb München Info, Renovierungsservice München legal";
+    title = "Impressum | Sanierungsfirma München – Rechtliche Informationen";
+    description = "Impressum der Sanierungsfirma München. Rechtliche Angaben, Kontaktdaten und Unternehmensinfo gemäß § 5 TMG.";
+    keywords = "Impressum Sanierungsfirma München, Komplettsanierungen Haus Wohnung München, Sanierungsfirma München Adresse, Handwerksbetrieb München Impressum, Renovierungsfirma München rechtlich, Bausanierung München Anbieter Info, Sanierung München Unternehmen, Renovierung München Firma, Handwerker München Firmendaten, Sanierungsdienstleister München, Bauunternehmen München Impressum, Sanierungsbetrieb München Info, Renovierungsservice München legal";
     mainContent = `
       <section>
         <h1>Impressum</h1>
@@ -312,9 +312,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/datenschutz") {
-    title = "Datenschutzerklärung | 089-Sanierer";
-    description = "Datenschutzerklärung von 089-Sanierer gemäß DSGVO.";
-    keywords = "089-Sanierer Datenschutz, 089 Sanierer DSGVO, Datenschutzerklärung Sanierungsfirma München, DSGVO Handwerksbetrieb München, Datenschutz Renovierungsfirma München, personenbezogene Daten Sanierung München, Cookie Richtlinie Handwerker München, Datenschutzrechte Bauunternehmen München, 089-Sanierer Datensicherheit, Sanierung München Datenschutzinfo, Renovierung München Privatsphäre, Handwerker München Datenschutzerklärung, DSGVO konform Sanierung München, Datenschutz Bausanierung München, 089-Sanierer Datenschutzbeauftragter";
+    title = "Datenschutzerklärung | Sanierungsfirma München DSGVO-konform";
+    description = "Datenschutzerklärung der Sanierungsfirma München gemäß DSGVO. Informationen zur Datenverarbeitung und Ihren Rechten.";
+    keywords = "Datenschutz Sanierungsfirma München, Datenschutzerklärung Sanierungsfirma München, DSGVO Handwerksbetrieb München, Datenschutz Renovierungsfirma München, personenbezogene Daten Sanierung München, Cookie Richtlinie Handwerker München, Datenschutzrechte Bauunternehmen München, Sanierung München Datenschutzinfo, Renovierung München Privatsphäre, Handwerker München Datenschutzerklärung, DSGVO konform Sanierung München, Datenschutz Bausanierung München";
     mainContent = `
       <section>
         <h1>Datenschutzerklärung</h1>
@@ -332,9 +332,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/kontakt") {
-    title = "Kontakt | 089-Sanierer";
-    description = "Kontaktieren Sie 089-Sanierer für Ihre Sanierungsanfrage.";
-    keywords = "Kontakt Sanierung München, 089-Sanierer Telefon, 089 Sanierer erreichen, Sanierungsanfrage München stellen, Handwerker München anrufen, Renovierungsfirma München kontaktieren, Badsanierung München anfragen, Kostenvoranschlag Sanierung München, Beratungstermin Renovierung München, Sanierungsfirma München E-Mail, Handwerker München Öffnungszeiten, Komplettsanierung München Termin, Sanierung München Rückruf, Renovierungsberatung München gratis, 089-Sanierer Anfahrt";
+    title = "Kontakt Sanierungsberatung München | Kostenlose Beratung & Vor-Ort-Termin";
+    description = "Kontaktieren Sie uns für Ihre Sanierungsanfrage in München. Kostenlose Beratung und Vor-Ort-Besichtigung.";
+    keywords = "Kontakt Sanierung München, Sanierungsfirma München Telefon, Sanierungsanfrage München stellen, Handwerker München anrufen, Renovierungsfirma München kontaktieren, Badsanierung München anfragen, Kostenvoranschlag Sanierung München, Beratungstermin Renovierung München, Sanierungsfirma München E-Mail, Handwerker München Öffnungszeiten, Komplettsanierung München Termin, Sanierung München Rückruf, Renovierungsberatung München gratis, Sanierungsfirma München Anfahrt";
     mainContent = `
       <section>
         <h1>Kontakt</h1>
@@ -346,9 +346,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/bestaetigung") {
-    title = "Anfrage gesendet | 089-Sanierer";
+    title = "Anfrage erhalten – Sanierungsberatung München startet in 24 Stunden";
     description = "Vielen Dank für Ihre Sanierungsanfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.";
-    keywords = "Sanierungsanfrage gesendet München, Anfrage Bestätigung 089-Sanierer, Renovierungsanfrage erfolgreich München, nächste Schritte Sanierung München, Beratungstermin bestätigt München, Rückmeldung Sanierungsfirma München, Kontaktaufnahme bestätigt Handwerker München, Angebotsanfrage Renovierung München, Sanierung München Terminbestätigung, Projektanfrage München Sanierung, 089-Sanierer Anfrage bestätigt, Kostenvoranschlag angefordert München, Sanierungsberatung angefragt München, Renovierung München Anfrage Status, Handwerkeranfrage München erfolgreich";
+    keywords = "Sanierungsanfrage gesendet München, Anfrage Bestätigung Sanierungsfirma München, Renovierungsanfrage erfolgreich München, nächste Schritte Sanierung München, Beratungstermin bestätigt München, Rückmeldung Sanierungsfirma München, Kontaktaufnahme bestätigt Handwerker München, Angebotsanfrage Renovierung München, Sanierung München Terminbestätigung, Projektanfrage München Sanierung, Anfrage bestätigt Sanierungsfirma München, Kostenvoranschlag angefordert München, Sanierungsberatung angefragt München, Renovierung München Anfrage Status, Handwerkeranfrage München erfolgreich";
     mainContent = `
       <section>
         <h1>Vielen Dank für Ihre Anfrage!</h1>
@@ -367,9 +367,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/ratgeber") {
-    title = "Sanierungskosten München - Ratgeber & Preisübersicht | 089-Sanierer";
-    description = "Was kostet eine Sanierung in München? Detaillierter Ratgeber mit Preisen für Haussanierung, Badsanierung, Dachsanierung, Kellersanierung und mehr. Inklusive Förderungsmöglichkeiten.";
-    keywords = "Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München, 089-Sanierer Ratgeber, 089 Sanierer Tipps";
+    title = "Sanierung Ratgeber München 2026 | Tipps zu Kosten, Planung & Förderung";
+    description = "Sanierung München Ratgeber 2026: Preise für Haussanierung, Badsanierung, Dachsanierung und mehr. Tipps zu Förderung und Planung.";
+    keywords = "Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München, Sanierung Ratgeber München, Sanierung Tipps München";
     mainContent = `
       <section>
         <h1>Sanierungskosten München - Ihr Ratgeber für faire Preise</h1>
@@ -451,8 +451,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/kosten") {
-    title = "Was kostet Sanierung München? Preise 2025 | 089-Sanierer";
-    description = "Sanierung München Kosten: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung.";
+    title = "Sanierung München Kosten 2026 | Preise pro m² mit Festpreisgarantie";
+    description = "Sanierung München Kosten 2026: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung.";
     keywords = "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München";
     mainContent = `
       <section>
@@ -480,8 +480,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/badsanierung") {
-    title = "Badsanierung München ab 18.500€ | Festpreis | 089-Sanierer";
-    description = "Badsanierung München: Komplett-Badsanierung ab 18.500€. Alles aus einer Hand - Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.";
+    title = "Badsanierung München ab 18.500€ | Komplettbad mit Festpreisgarantie 2026";
+    description = "Badsanierung München ab 18.500€: Komplett-Badsanierung mit Fliesen, Sanitär, Elektro. Festpreisgarantie, 5 Jahre Gewährleistung.";
     keywords = "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München";
     mainContent = `
       <section>
@@ -507,7 +507,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/wohnungssanierung") {
-    title = "Wohnungssanierung München ab 800€/m² | 089-Sanierer";
+    title = "Wohnungssanierung München ab 800€/m² | Komplett sanieren mit Festpreis";
     description = "Wohnungssanierung München zum Festpreis ab 800€/m². Komplettsanierung aus einer Hand. 268+ zufriedene Kunden, 5 Jahre Gewährleistung.";
     keywords = "Wohnungssanierung München, Wohnung sanieren München, Wohnung renovieren München, Altbauwohnung sanieren München";
     mainContent = `
@@ -528,8 +528,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/haussanierung") {
-    title = "Haussanierung München | Komplett ab 1.200€/m² | 089-Sanierer";
-    description = "Haussanierung München: Komplette Haussanierung ab 1.200€/m². Einfamilienhaus, Mehrfamilienhaus - alles aus einer Hand mit Festpreisgarantie.";
+    title = "Haussanierung München ab 1.200€/m² | Einfamilienhaus komplett sanieren";
+    description = "Haussanierung München ab 1.200€/m²: Einfamilienhaus, Mehrfamilienhaus komplett sanieren. Alle Gewerke aus einer Hand mit Festpreisgarantie.";
     keywords = "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München";
     mainContent = `
       <section>
@@ -548,8 +548,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/kernsanierung") {
-    title = "Kernsanierung München ab 1.200€/m² | 089-Sanierer";
-    description = "Kernsanierung München: Professionelle Kernsanierung ab 1.200€/m². Bis auf die Grundsubstanz und komplett neu aufbauen. Festpreisgarantie.";
+    title = "Kernsanierung München ab 1.200€/m² | Altbau entkernen & neu aufbauen";
+    description = "Kernsanierung München ab 1.200€/m²: Altbau bis auf die Grundsubstanz entkernen und komplett neu aufbauen. Festpreisgarantie.";
     keywords = "Kernsanierung München, Kernsanierung Kosten München, Altbau Kernsanierung München, Haus entkernen München";
     mainContent = `
       <section>
@@ -569,9 +569,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/agb") {
-    title = "AGB | Allgemeine Geschäftsbedingungen | 089-Sanierer";
-    description = "Allgemeine Geschäftsbedingungen der 089-Sanierer München. Festpreisgarantie, 5 Jahre Gewährleistung, transparente Zahlungsbedingungen für Sanierungsleistungen.";
-    keywords = "AGB 089-Sanierer, Allgemeine Geschäftsbedingungen Sanierung München, Vertragsbedingungen Renovierung München, Gewährleistung Sanierung München, Zahlungsbedingungen Handwerker München";
+    title = "AGB Sanierung München | Allgemeine Geschäftsbedingungen Sanierungsfirma";
+    description = "Allgemeine Geschäftsbedingungen der Sanierungsfirma München. Festpreisgarantie, 5 Jahre Gewährleistung, transparente Zahlungsbedingungen.";
+    keywords = "AGB Sanierungsfirma München, Allgemeine Geschäftsbedingungen Sanierung München, Vertragsbedingungen Renovierung München, Gewährleistung Sanierung München, Zahlungsbedingungen Handwerker München";
     mainContent = `
       <section>
         <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
@@ -611,7 +611,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/gewerke") {
-    title = "Gewerke & Sanierungsleistungen München | 089-Sanierer";
+    title = "Gewerke Sanierung München | Alle Handwerksleistungen aus einer Hand";
     description = "Alle Gewerke für Ihre Sanierung in München: Badsanierung, Elektro, Heizung, Boden, Dach, Küche und mehr. Meisterbetrieb mit Festpreisgarantie.";
     keywords = "Gewerke Sanierung München, Sanierungsleistungen München, Handwerker Gewerke München, Badsanierung München, Elektrosanierung München, Heizungssanierung München, Bodensanierung München, Dachsanierung München, Küchensanierung München";
     mainContent = `
@@ -654,9 +654,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/cookies") {
-    title = "Cookie-Richtlinie | 089-Sanierer";
-    description = "Informationen zur Verwendung von Cookies auf 089-sanierer.de. Technisch notwendige Cookies und optionale Analyse-Cookies.";
-    keywords = "Cookie Richtlinie 089-Sanierer, Cookies Sanierung München, Datenschutz Cookies Handwerker München, Cookie Einstellungen 089-Sanierer";
+    title = "Cookie-Richtlinie | Sanierung München Website – Datenschutz & Cookies";
+    description = "Informationen zur Verwendung von Cookies auf unserer Sanierung München Website. Technisch notwendige und optionale Analyse-Cookies.";
+    keywords = "Cookie Richtlinie Sanierungsfirma München, Cookies Sanierung München, Datenschutz Cookies Handwerker München, Cookie Einstellungen Sanierungsfirma München";
     mainContent = `
       <section>
         <h1>Cookie-Richtlinie</h1>
@@ -685,9 +685,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/barrierefreiheit") {
-    title = "Barrierefreiheit | 089-Sanierer";
-    description = "Erklärung zur Barrierefreiheit der Website 089-sanierer.de. Wir streben die Einhaltung von WCAG 2.1 Level AA an.";
-    keywords = "Barrierefreiheit 089-Sanierer, Accessibility Sanierung München, WCAG 2.1 089-Sanierer, barrierefreie Website Handwerker München";
+    title = "Barrierefreiheit | Erklärung zur Zugänglichkeit unserer Sanierungs-Website";
+    description = "Erklärung zur Barrierefreiheit unserer Sanierung München Website. Wir streben die Einhaltung von WCAG 2.1 Level AA an.";
+    keywords = "Barrierefreiheit Sanierungsfirma München, Accessibility Sanierung München, WCAG 2.1 Sanierungsfirma München, barrierefreie Website Handwerker München";
     mainContent = `
       <section>
         <h1>Erklärung zur Barrierefreiheit</h1>
@@ -718,9 +718,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/termin") {
-    title = "Termin vereinbaren | Kostenlose Beratung | 089-Sanierer";
+    title = "Beratungstermin Sanierung München | Kostenlose Vor-Ort-Besichtigung";
     description = "Vereinbaren Sie einen kostenlosen Beratungstermin für Ihre Sanierung in München. Vor-Ort-Besichtigung und unverbindliches Festpreis-Angebot.";
-    keywords = "Termin Sanierung München, Beratungstermin 089-Sanierer, kostenlose Besichtigung Sanierung München, Sanierungsberatung München Termin, Vor-Ort-Termin Renovierung München";
+    keywords = "Termin Sanierung München, Beratungstermin Sanierungsfirma München, kostenlose Besichtigung Sanierung München, Sanierungsberatung München Termin, Vor-Ort-Termin Renovierung München";
     mainContent = `
       <section>
         <h1>Termin vereinbaren - Kostenlose Sanierungsberatung</h1>
@@ -757,8 +757,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/rechner") {
-    title = "Sanierungskosten Rechner München | Kosten berechnen | 089-Sanierer";
-    description = "Berechnen Sie die Kosten für Ihre Sanierung in München. Online-Rechner für Badsanierung, Komplettsanierung, Wohnungssanierung und mehr.";
+    title = "Sanierungskosten Rechner München | Online Kosten berechnen 2026";
+    description = "Berechnen Sie die Kosten für Ihre Sanierung in München 2026. Online-Rechner für Badsanierung, Komplettsanierung und Wohnungssanierung.";
     keywords = "Sanierungskosten Rechner München, Kosten berechnen Sanierung München, Badsanierung Rechner München, Komplettsanierung Kosten Rechner, Renovierungskosten München berechnen, Sanierung Preiskalkulator München";
     mainContent = `
       <section>
@@ -796,9 +796,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       </section>
     `;
   } else if (path === "/danke") {
-    title = "Vielen Dank! | 089-Sanierer";
-    description = "Vielen Dank für Ihre Anfrage bei 089-Sanierer München. Wir melden uns innerhalb von 24 Stunden bei Ihnen.";
-    keywords = "Anfrage bestätigt 089-Sanierer, Sanierungsanfrage München gesendet, Bestätigung Renovierungsanfrage München";
+    title = "Anfrage erhalten – Sanierungsberatung München startet in 24 Stunden";
+    description = "Vielen Dank für Ihre Anfrage. Ihre Sanierungsberatung in München startet innerhalb von 24 Stunden.";
+    keywords = "Anfrage bestätigt Sanierungsfirma München, Sanierungsanfrage München gesendet, Bestätigung Renovierungsanfrage München";
     mainContent = `
       <section>
         <h1>Vielen Dank für Ihre Anfrage!</h1>
@@ -864,7 +864,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       "neuperlach": "Neuperlach"
     };
     const districtName = districtNames[district] || district;
-    title = `Sanierung ${districtName} München | Festpreis | 089-Sanierer`;
+    title = `Sanierung ${districtName} München | Komplettsanierung & Badsanierung Festpreis`;
     description = `Sanierung in ${districtName}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. Lokaler Anbieter mit 5 Jahren Gewährleistung.`;
     keywords = `Sanierung ${districtName} München, ${districtName} Sanierung, Badsanierung ${districtName}, Renovierung ${districtName}`;
     mainContent = `
@@ -911,8 +911,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     const umlandCity = umlandCities[path];
     if (umlandCity) {
       const { name: cityName, landkreis, distance } = umlandCity;
-      title = `Sanierung ${cityName} | im Münchner Umland | 089-Sanierer`;
-      description = `Sanierung in ${cityName} (${landkreis}, ${distance} von München): Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. 5 Jahre Gewährleistung.`;
+      title = `Sanierung ${cityName} | Komplettsanierung & Badsanierung im Münchner Umland`;
+      description = `Sanierung in ${cityName} (${distance} von München): Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. 5 Jahre Gewährleistung.`;
       keywords = `Sanierung ${cityName}, ${cityName} Sanierung, Badsanierung ${cityName}, Renovierung ${cityName}, Handwerker ${cityName}, Komplettsanierung ${cityName}`;
       mainContent = `
         <section>

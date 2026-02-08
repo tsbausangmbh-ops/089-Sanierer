@@ -453,7 +453,7 @@ export default function RechnerPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead 
-        title="Sanierungsrechner München | Kosten berechnen | 089 Sanierer"
+        title="Sanierungskosten Rechner München | Online Kosten berechnen 2026"
         description="Berechnen Sie die Kosten für Ihre Wohnungs- oder Haussanierung in München. Unverbindlicher Online-Rechner für Komplettsanierung, Badsanierung und mehr."
       />
       <SiteHeader />

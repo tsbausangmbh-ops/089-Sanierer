@@ -8,7 +8,7 @@ import agbHeroImage from "@assets/generated_images/geschaeftsvertrag_agb.webp";
 
 const agbHeroContent: HeroContent = {
   backgroundImage: agbHeroImage,
-  imageAlt: "AGB 089-Sanierer München – Allgemeine Geschäftsbedingungen für Sanierungsaufträge",
+  imageAlt: "AGB Sanierungsfirma München",
   badge: "Faire Vertragsbedingungen",
   titleLine1: "AGB.",
   titleLine2: "Transparente Geschäftsbedingungen.",

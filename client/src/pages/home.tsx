@@ -778,9 +778,9 @@ export default function Home() {
   return (
     <>
       <SeoHead
-        title="Sanierung München | Festpreis & 5 Jahre Garantie | 089-Sanierer"
-        description="Ihre Sanierung ohne Stress: Ein Ansprechpartner, Festpreisgarantie, verbindlicher Termin. 268+ zufriedene Familien in München. Kostenlose Beratung in 24h."
-        keywords="Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München, 089-Sanierer, 089 Sanierer"
+        title="Sanierung München | Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m² Festpreis"
+        description="Sanierung München 2026: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h."
+        keywords="Sanierung München, Sanierungen München, Sanierung aus einer Hand, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Renovierung München, Renovierung, Renovierungen, renovierung aus einer Hand, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Haussanierung München, Haussanierungen, Haus sanieren lassen, Badsanierung München, Badsanierungen sofort, Innenausbau, Kosten, Angebote, Komplettsanierung München Festpreis, Altbausanierung München"
         canonicalPath="/"
         schema={combinedSchema}
         preloadImage={heroImage}

@@ -31,7 +31,7 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <SeoHead
-        title="Admin Login | 089-Sanierer"
+        title="Admin Login | Sanierungsverwaltung München"
         description="Admin-Bereich Login"
         noIndex={true}
       />

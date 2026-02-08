@@ -11,8 +11,8 @@ export default function Barrierefreiheit() {
   return (
     <div className="min-h-screen flex flex-col">
       <SeoHead 
-        title="Barrierefreiheit | Erklärung zur Zugänglichkeit | 089-Sanierer"
-        description="Erklärung zur Barrierefreiheit von 089-Sanierer.de. Informationen zu WCAG 2.1, BITV 2.0 Konformität und Zugänglichkeitsmaßnahmen unserer Website."
+        title="Barrierefreiheit | Erklärung zur Zugänglichkeit unserer Sanierungs-Website"
+        description="Erklärung zur Barrierefreiheit gemäß WCAG 2.1 und BITV 2.0. Informationen zur Zugänglichkeit unserer Sanierungs-Website in München."
       />
       <SiteHeader />
       
@@ -20,8 +20,8 @@ export default function Barrierefreiheit() {
         <PageHero
           title="Erklärung zur Barrierefreiheit"
           subtitle="Zugänglichkeit für alle Nutzer"
-          description="089-Sanierer verpflichtet sich, seine Website barrierefrei zu gestalten – gemäß BITV 2.0 und WCAG 2.1 Richtlinien."
-          imageAlt="Barrierefreiheit 089-Sanierer München – Barrierefreie Sanierung und zugängliche Website"
+          description="Wir verpflichten uns, unsere Website barrierefrei zu gestalten – gemäß BITV 2.0 und WCAG 2.1 Richtlinien."
+          imageAlt="Barrierefreiheit Sanierungsfirma München – Barrierefreie Sanierung und zugängliche Website"
           showCta={false}
           compact={true}
         />

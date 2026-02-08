@@ -348,7 +348,7 @@ const serviceSeoContent: Record<string, {
   komplettsanierung: {
     headline: "Komplettsanierung München | Haus & Wohnung renovieren lassen",
     subheadline: "Schlüsselfertige Sanierung aus einer Hand – Festpreis, Termingarantie, 5 Jahre Gewährleistung",
-    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei 089-Sanierer erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 1.000€/m² (netto zzgl. MwSt., Stand 12/2025) und einer Fertigstellungsgarantie. Über 268 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
+    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei uns erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 1.000€/m² (netto zzgl. MwSt., Stand 12/2025) und einer Fertigstellungsgarantie. Über 268 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
     problems: [
       "Handwerkersuche in München: Wochenlange Wartezeiten und unzuverlässige Termine",
       "Kostenexplosion: Angebote ohne Festpreis führen zu 30-50% Mehrkosten",
@@ -382,7 +382,7 @@ const serviceSeoContent: Record<string, {
   badsanierung: {
     headline: "Badsanierung München | Bad renovieren & neu gestalten lassen",
     subheadline: "Komplette Badrenovierung in 10-15 Werktagen – Festpreis ab 8.000€, alle Gewerke inklusive",
-    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei 089-Sanierer erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 50.000€ für Wellness-Bad (netto zzgl. MwSt., Stand 12/2025). Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 80+ Bäder in München erfolgreich saniert.",
+    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei uns erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 50.000€ für Wellness-Bad (netto zzgl. MwSt., Stand 12/2025). Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 80+ Bäder in München erfolgreich saniert.",
     problems: [
       "Schimmel im Bad München: Gesundheitsrisiko durch schwarze Fugen und feuchte Wände",
       "Alte Badezimmer: 70er/80er Jahre Fliesen, verkalkte Armaturen, vergilbte Wannen",
@@ -416,7 +416,7 @@ const serviceSeoContent: Record<string, {
   kuechensanierung: {
     headline: "Küchensanierung München | Küche renovieren & umbauen lassen",
     subheadline: "Neue Küche komplett installiert – Elektrik, Wasser, Fliesen, Montage aus einer Hand",
-    intro: "Was kostet eine Küchenrenovierung in München? Wer verlegt die Anschlüsse für die neue Küche? Wie lange dauert ein Küchenumbau? Bei 089-Sanierer erhalten Sie den kompletten Küchenumbau aus einer Hand – Elektroinstallation, Wasseranschlüsse, Fliesenarbeiten und finale Montage perfekt koordiniert. Ob Sie Ihre alte Küche aufwerten oder komplett neu gestalten möchten: Festpreis, fester Termin, 5 Jahre Gewährleistung.",
+    intro: "Was kostet eine Küchenrenovierung in München? Wer verlegt die Anschlüsse für die neue Küche? Wie lange dauert ein Küchenumbau? Bei uns erhalten Sie den kompletten Küchenumbau aus einer Hand – Elektroinstallation, Wasseranschlüsse, Fliesenarbeiten und finale Montage perfekt koordiniert. Ob Sie Ihre alte Küche aufwerten oder komplett neu gestalten möchten: Festpreis, fester Termin, 5 Jahre Gewährleistung.",
     problems: [
       "Zu wenig Steckdosen: Moderne Küchen brauchen 8-12 Steckdosen, alte haben oft nur 3-4",
       "Veraltete Elektrik: Alte Leitungen sind nicht für Induktion, Backofen und Dampfgarer ausgelegt",
@@ -450,7 +450,7 @@ const serviceSeoContent: Record<string, {
   bodensanierung: {
     headline: "Bodensanierung München | Parkett, Fliesen & Vinylboden verlegen",
     subheadline: "Neuer Boden in 2-5 Tagen – Parkett ab 45€/m², Vinyl ab 35€/m², Fliesen ab 55€/m²",
-    intro: "Was kostet ein neuer Boden in München? Wie lange dauert eine Bodenrenovierung? Welcher Bodenbelag ist der beste? Bei 089-Sanierer erhalten Sie professionelle Bodenverlegung vom Fachmann – Parkett, Laminat, Vinyl, Fliesen oder Designboden. Inklusive Untergrundvorbereitung, Trittschalldämmung und Sockelleisten. Festpreis pro m², schnelle Umsetzung, 5 Jahre Gewährleistung.",
+    intro: "Was kostet ein neuer Boden in München? Wie lange dauert eine Bodenrenovierung? Welcher Bodenbelag ist der beste? Bei uns erhalten Sie professionelle Bodenverlegung vom Fachmann – Parkett, Laminat, Vinyl, Fliesen oder Designboden. Inklusive Untergrundvorbereitung, Trittschalldämmung und Sockelleisten. Festpreis pro m², schnelle Umsetzung, 5 Jahre Gewährleistung.",
     problems: [
       "Alte Böden: Kratzer, Dellen, Verfärbungen – der Boden sieht abgenutzt aus",
       "Quietschende Dielen: Lose Parkettstäbe und knarrende Böden bei jedem Schritt",
@@ -484,7 +484,7 @@ const serviceSeoContent: Record<string, {
   elektrosanierung: {
     headline: "Elektrosanierung München | Elektrik erneuern & modernisieren",
     subheadline: "Sichere Elektroinstallation nach VDE – mehr Steckdosen, FI-Schutz, Smart Home ready",
-    intro: "Ist Ihre Elektrik noch sicher? Wie viele Steckdosen braucht eine moderne Wohnung? Was kostet eine Elektrosanierung in München? Bei 089-Sanierer modernisieren wir Ihre Elektroinstallation fachgerecht nach VDE-Norm. Vom neuen Sicherungskasten über ausreichend Steckdosen bis zur Wallbox-Vorbereitung. Eingetragener Elektrofachbetrieb, E-Check, Prüfprotokoll für Versicherung inklusive.",
+    intro: "Ist Ihre Elektrik noch sicher? Wie viele Steckdosen braucht eine moderne Wohnung? Was kostet eine Elektrosanierung in München? Bei uns modernisieren wir Ihre Elektroinstallation fachgerecht nach VDE-Norm. Vom neuen Sicherungskasten über ausreichend Steckdosen bis zur Wallbox-Vorbereitung. Eingetragener Elektrofachbetrieb, E-Check, Prüfprotokoll für Versicherung inklusive.",
     problems: [
       "Zu wenige Steckdosen: Moderne Haushalte brauchen 40-60 Steckdosen, Altbauten haben oft nur 15-20",
       "Veraltete Sicherungen: Schmelzsicherungen und fehlender FI-Schutz – lebensgefährlich",
@@ -518,7 +518,7 @@ const serviceSeoContent: Record<string, {
   heizungssanierung: {
     headline: "Heizungssanierung München | Neue Heizung mit bis zu 70% Förderung",
     subheadline: "Wärmepumpe, Gas-Brennwert, Pellets – staatliche Förderung sichern, Heizkosten senken",
-    intro: "Was kostet eine neue Heizung in München? Welche Förderung gibt es 2024/2025? Wärmepumpe oder Gas-Brennwert – was ist besser? Bei 089-Sanierer erhalten Sie unabhängige Beratung und kompletten Heizungstausch aus einer Hand. Wir beantragen Ihre BEG-Förderung (bis 70% Zuschuss), koordinieren alle Gewerke und garantieren einen reibungslosen Umstieg. Zertifizierter Fachbetrieb für Wärmepumpen, Gas, Öl und Pellets.",
+    intro: "Was kostet eine neue Heizung in München? Welche Förderung gibt es 2024/2025? Wärmepumpe oder Gas-Brennwert – was ist besser? Bei uns erhalten Sie unabhängige Beratung und kompletten Heizungstausch aus einer Hand. Wir beantragen Ihre BEG-Förderung (bis 70% Zuschuss), koordinieren alle Gewerke und garantieren einen reibungslosen Umstieg. Zertifizierter Fachbetrieb für Wärmepumpen, Gas, Öl und Pellets.",
     problems: [
       "Hohe Heizkosten: Alte Heizungen verbrauchen 30-50% mehr Energie als moderne Anlagen",
       "Ausfall-Risiko: Heizkessel über 20 Jahre haben erhöhte Ausfallgefahr – gerade im Winter kritisch",
@@ -552,7 +552,7 @@ const serviceSeoContent: Record<string, {
   "energetische-sanierung": {
     headline: "Energetische Sanierung München | Dämmung, Fenster & Förderung",
     subheadline: "Heizkosten um 50% senken – bis zu 45% staatliche Förderung für Dämmung und Fenster",
-    intro: "Wie viel kann ich durch Dämmung sparen? Was kostet eine energetische Sanierung in München? Welche Förderung gibt es? Bei 089-Sanierer erstellen wir Ihren individuellen Sanierungsfahrplan (iSFP) und setzen alle Maßnahmen um – Fassadendämmung, Dachdämmung, neue Fenster, Kellerdeckendämmung. Mit iSFP erhalten Sie 5% Extra-Förderung und sparen langfristig 40-60% Heizkosten. Zertifizierte Energieeffizienz-Experten, BEG-Förderung inklusive.",
+    intro: "Wie viel kann ich durch Dämmung sparen? Was kostet eine energetische Sanierung in München? Welche Förderung gibt es? Bei uns erstellen wir Ihren individuellen Sanierungsfahrplan (iSFP) und setzen alle Maßnahmen um – Fassadendämmung, Dachdämmung, neue Fenster, Kellerdeckendämmung. Mit iSFP erhalten Sie 5% Extra-Förderung und sparen langfristig 40-60% Heizkosten. Zertifizierte Energieeffizienz-Experten, BEG-Förderung inklusive.",
     problems: [
       "Hohe Heizkosten: Schlecht gedämmte Häuser verbrauchen 150-250 kWh/m² statt möglicher 50-70 kWh/m²",
       "Kalte Wände: Außenwände unter 17°C führen zu Schimmel und Unbehaglichkeit",
@@ -586,7 +586,7 @@ const serviceSeoContent: Record<string, {
   dachsanierung: {
     headline: "Dachsanierung München | Dachdecker für Neueindeckung & Dämmung",
     subheadline: "Dach reparieren, dämmen oder komplett neu eindecken – Festpreis, 10 Jahre Garantie",
-    intro: "Ist mein Dach noch dicht? Was kostet eine Dachsanierung in München? Wann lohnt sich eine Neueindeckung? Bei 089-Sanierer erhalten Sie professionelle Dacharbeiten vom Fachbetrieb – Reparatur, Dämmung, Neueindeckung. Wir arbeiten mit allen Dachformen: Steildach, Flachdach, Walmdach, Pultdach. Festpreis nach kostenloser Dachinspektion, bis zu 20% Förderung für Dachdämmung, 10 Jahre Gewährleistung auf Eindeckung.",
+    intro: "Ist mein Dach noch dicht? Was kostet eine Dachsanierung in München? Wann lohnt sich eine Neueindeckung? Bei uns erhalten Sie professionelle Dacharbeiten vom Fachbetrieb – Reparatur, Dämmung, Neueindeckung. Wir arbeiten mit allen Dachformen: Steildach, Flachdach, Walmdach, Pultdach. Festpreis nach kostenloser Dachinspektion, bis zu 20% Förderung für Dachdämmung, 10 Jahre Gewährleistung auf Eindeckung.",
     problems: [
       "Undichtes Dach: Wassereintritt bei Regen oder Schnee – teure Folgeschäden an Dämmung und Bausubstanz",
       "Alte Dachziegel: Poröse, bemooste oder gebrochene Ziegel – Sturmschäden und weitere Undichtigkeiten drohen",
@@ -2494,7 +2494,7 @@ export default function FunnelPage() {
           <CardHeader className="pb-4">
             <CardTitle className="text-lg flex items-center gap-2">
               <Star className="w-5 h-5 text-primary" />
-              Ihre Vorteile mit 089-Sanierer
+              Ihre Vorteile
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -2647,7 +2647,7 @@ export default function FunnelPage() {
           content={serviceHeroContents[preSelectedService] || {
             backgroundImage: consultationHeroImage,
             imageAlt: "Sanierungsberatung München – Persönliche Beratung durch erfahrenen Bauleiter",
-            badge: "089 Sanierer München",
+            badge: "Sanierung München",
             titleLine1: "Ihre Sanierung.",
             titleLine2: "Professionell & stressfrei.",
             descriptions: ["Ein Ansprechpartner für alles.", "Festpreis ohne Überraschungen."],

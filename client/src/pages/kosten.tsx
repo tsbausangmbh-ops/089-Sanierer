@@ -108,8 +108,8 @@ export default function Kosten() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Was kostet eine Sanierung in München? Preise 2025 | 089-Sanierer"
-        description="Sanierung München Kosten: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Kernsanierung ab 1.200€/m². Festpreisgarantie, keine versteckten Kosten."
+        title="Sanierung München Kosten 2026 | Preise pro m² mit Festpreisgarantie"
+        description="Was kostet Sanierung in München? Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Kernsanierung ab 1.200€/m². Transparente Festpreise 2026."
         canonicalPath="/kosten"
         schema={{
           "@context": "https://schema.org",

@@ -382,7 +382,7 @@ export default function FaqPreise() {
       <SeoHead
         title="Sanierung München Preisliste 2024 | Badsanierung ab 8.000€"
         description="Sanierung München Preise: Badsanierung ab 8.000€, Komplettsanierung ab 800€/m², Küche ab 5.000€. Transparente Preisliste, alle FAQ beantwortet."
-        keywords="Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München, 089-Sanierer, 089 Sanierer"
+        keywords="Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München"
         canonicalPath="/faq-preise"
         preloadImage={pricingHeroImage}
       />

@@ -83,7 +83,7 @@ export default function Wohnungssanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Wohnungssanierung München ab 800€/m² | Festpreis | 089-Sanierer"
+        title="Wohnungssanierung München ab 800€/m² | Komplett sanieren mit Festpreis"
         description="Wohnungssanierung München: Komplettsanierung ab 800€/m² mit Festpreisgarantie. Alle Gewerke aus einer Hand. Für Eigentümer und Vermieter."
         canonicalPath="/wohnungssanierung"
         schema={{

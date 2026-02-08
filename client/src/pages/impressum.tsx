@@ -8,10 +8,10 @@ import impressumHeroImage from "@assets/generated_images/rechtliche_dokumente_im
 
 const impressumHeroContent: HeroContent = {
   backgroundImage: impressumHeroImage,
-  imageAlt: "Impressum 089-Sanierer München – Rechtliche Angaben der Sanierungsfirma",
+  imageAlt: "Impressum Sanierungsfirma München",
   badge: "Rechtliche Angaben",
   titleLine1: "Impressum.",
-  titleLine2: "089-Sanierer München.",
+  titleLine2: "Sanierungsfirma München.",
   descriptions: ["KSHW München – Ihr exklusiver Projekt-Kurator.", "Lokale Meisterbetriebe für anspruchsvolle Eigentümer."],
   strongText: "Angaben gemäß § 5 TMG.",
   ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",

@@ -85,7 +85,7 @@ export default function Haussanierung() {
   return (
     <div className="min-h-screen bg-background">
       <SeoHead
-        title="Haussanierung München ab 1.200€/m² | Festpreis | 089-Sanierer"
+        title="Haussanierung München ab 1.200€/m² | Komplettsanierung mit Festpreisgarantie"
         description="Haussanierung München: Komplettsanierung ab 1.200€/m² mit Festpreisgarantie. Kernsanierung, Altbausanierung, energetische Sanierung. Alle Gewerke aus einer Hand."
         canonicalPath="/haussanierung"
         schema={{
