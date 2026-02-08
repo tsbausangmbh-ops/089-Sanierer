@@ -14,7 +14,6 @@ const allServices = [
 ];
 
 const informationLinks = [
-  { href: "/kosten", title: "Sanierung Kosten", description: "Was kostet Sanierung München" },
   { href: "/faq-preise", title: "FAQ & Preise", description: "Sanierungskosten München" },
   { href: "/ratgeber", title: "Ratgeber", description: "Tipps zur Sanierung" },
   { href: "/kontakt", title: "Kontakt", description: "Beratung München" },

@@ -737,8 +737,8 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Link href="/kosten" className="text-primary hover:underline">
-                Alle Preise und Kosten ansehen →
+              <Link href="/faq-preise" className="text-primary hover:underline">
+                FAQ & Preise ansehen →
               </Link>
             </div>
           </div>

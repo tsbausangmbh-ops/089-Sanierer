@@ -124,7 +124,6 @@ const pageOgImageMap: Record<string, { image: string; alt: string }> = {
   "/": { image: "/images/komplettsanierung_vorher_nachher.webp", alt: "Komplettsanierung München vorher nachher - professionelle Sanierung aus einer Hand mit Festpreisgarantie" },
   "/anfrage": { image: "/images/sanierungsberatung_gespraech.webp", alt: "Kostenlose Sanierungsberatung München - persönliches Gespräch für Ihr Renovierungsprojekt" },
   "/danke": { image: "/images/erfolgsbestaetigung_haekchen.webp", alt: "Sanierungsanfrage erfolgreich gesendet - Antwort in 24 Stunden" },
-  "/kosten": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierung München Kosten 2026 - transparente Preiskalkulation und Festpreisgarantie für alle Gewerke" },
   "/komplettsanierung": { image: "/images/komplettsanierung_ergebnis.webp", alt: "Komplettsanierung München Ergebnis - schlüsselfertig sanierte Wohnung mit allen Gewerken aus einer Hand" },
   "/badsanierung": { image: "/images/badsanierung_muenchen_2026.webp", alt: "Moderne Badsanierung München - fertig saniertes Badezimmer mit bodengleicher Dusche und hochwertigen Fliesen" },
   "/kuechensanierung": { image: "/images/moderne_kuechensanierung_ergebnis.webp", alt: "Küchensanierung München Ergebnis - modern sanierte Küche mit neuen Elektro- und Wasseranschlüssen" },
@@ -452,37 +451,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>Kostenlose Erstberatung - Wir melden uns innerhalb von 24 Stunden!</p>
-      </section>
-    `;
-  } else if (path === "/kosten") {
-    title = "Sanierung München Kosten 2026 | Preise pro m²";
-    description = "Sanierung München Kosten 2026: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung.";
-    keywords = "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München";
-    mainContent = `
-      <section>
-        <h1>Sanierungen München Kosten – Was kosten Sanierungsarbeiten?</h1>
-        <p>Transparente Festpreise für Ihre Sanierung. Als Renovierungsfirma München bieten wir faire Preise für alle Renovierungsarbeiten und Sanierungsarbeiten. Alle Preise netto zzgl. MwSt., Stand 01/2025.</p>
-        
-        <h2>Preisübersicht – Sanierung aus einer Hand</h2>
-        <ul>
-          <li><strong>Komplettsanierung:</strong> ab 1.200 €/m²</li>
-          <li><strong>Badsanierung:</strong> ab 18.500 €</li>
-          <li><strong>Wohnungssanierung:</strong> ab 800 €/m²</li>
-          <li><strong>Kernsanierung:</strong> ab 1.200 €/m²</li>
-        </ul>
-        
-        <h2>Ihre Sanierungsfirma München – Vorteile</h2>
-        <ul>
-          <li>Festpreisgarantie - keine versteckten Kosten</li>
-          <li>5 Jahre Gewährleistung</li>
-          <li>Kostenlose Beratung vor Ort</li>
-          <li>268+ zufriedene Kunden in München</li>
-          <li>Generalunternehmer Sanierung – alle Gewerke koordiniert</li>
-        </ul>
-        <p>Als Handwerkerservice München und Innenausbau Firma München kümmern sich unsere Handwerker München um Renovierungen München jeder Größe.</p>
-        
-        <h2>Jetzt Angebot anfordern</h2>
-        <p><a href="/anfrage">Kostenlose Beratung</a> | Telefon: 0152 1227 4043</p>
       </section>
     `;
   } else if (path === "/badsanierung") {
@@ -1316,11 +1284,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       description: "Professionelle Kernsanierung in München. Rückbau bis auf die Grundsubstanz und kompletter Neuaufbau mit Festpreisgarantie.",
       priceRange: "1.200 - 2.300 €/m²"
     },
-    "/kosten": {
-      serviceType: "Sanierungskosten München",
-      description: "Transparente Festpreise für Sanierungen in München. Komplettsanierung, Badsanierung, Wohnungssanierung - alle Kosten im Überblick.",
-      priceRange: "800 - 2.300 €/m²"
-    },
     "/komplettsanierung": {
       serviceType: "Komplettsanierung München",
       description: "Schlüsselfertige Komplettsanierung von Haus und Wohnung in München. Alle Gewerke koordiniert aus einer Hand.",
@@ -1442,23 +1405,9 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         answer: "Nicht in jedem Fall. Reine Innenarbeiten sind meist genehmigungsfrei. Bei statischen Veränderungen oder Änderungen an der Gebäudehülle kann eine Genehmigung erforderlich sein. Wir beraten Sie dazu."
       }
     ],
-    "/kosten": [
-      {
-        question: "Sind die Preise Festpreise?",
-        answer: "Ja, wir arbeiten mit Festpreisgarantie. Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Angebot ohne versteckte Kosten."
-      },
-      {
-        question: "Gibt es Fördermöglichkeiten für Sanierungen?",
-        answer: "Ja, für energetische Maßnahmen gibt es KfW-Kredite und BAFA-Zuschüsse. Für barrierefreie Umbauten KfW-Förderung. Wir beraten Sie zu allen Fördermöglichkeiten."
-      },
-      {
-        question: "Was ist in den Preisen enthalten?",
-        answer: "Unsere Festpreise beinhalten Material, Arbeitsleistung, Koordination aller Gewerke und Bauleitung. Nicht enthalten sind behördliche Gebühren und kundenspezifische Sonderwünsche, die vorab besprochen werden."
-      }
-    ]
   };
 
-  const howToSchema = (path === "/" || path === "/komplettsanierung" || path === "/anfrage" || path === "/kosten") ? {
+  const howToSchema = (path === "/" || path === "/komplettsanierung" || path === "/anfrage") ? {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": "Sanierung in München beauftragen - So funktioniert es",

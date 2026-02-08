@@ -189,7 +189,6 @@ Dachau, Karlsfeld, Starnberg, Fürstenfeldbruck, Germering, Freising, Garching, 
 - Wohnungssanierung: https://089-sanierer.de/wohnungssanierung
 - Haussanierung: https://089-sanierer.de/haussanierung
 - Kernsanierung: https://089-sanierer.de/kernsanierung
-- Kosten & Preise: https://089-sanierer.de/kosten
 - FAQ & Preise: https://089-sanierer.de/faq-preise
 - Ratgeber: https://089-sanierer.de/ratgeber
 - Kostenrechner: https://089-sanierer.de/rechner

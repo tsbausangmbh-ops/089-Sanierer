@@ -22,7 +22,6 @@ const recommendedLinks: RecLink[] = [
   { href: "/wohnungssanierung", icon: Building, title: "Wohnungssanierung", subtitle: "Wohnung komplett sanieren ab 800€/m²" },
   { href: "/haussanierung", icon: HomeIcon, title: "Haussanierung München", subtitle: "Einfamilienhaus sanieren ab 1.200€/m²" },
   { href: "/kernsanierung", icon: Hammer, title: "Kernsanierung München", subtitle: "Entkernung & Neuaufbau zum Festpreis" },
-  { href: "/kosten", icon: Euro, title: "Kosten & Preise 2026", subtitle: "Transparente Preisübersicht aller Gewerke" },
   { href: "/rechner", icon: Calculator, title: "Online Kostenrechner", subtitle: "Sanierungskosten sofort berechnen" },
 ];
 

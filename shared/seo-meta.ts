@@ -106,19 +106,6 @@ export function getSeoMeta(path: string): SeoMeta {
     };
   }
 
-  if (normalizedPath === "/kosten") {
-    return {
-      title: "Sanierung München Kosten 2026 | Preise pro m²",
-      description: "Was kostet Sanierung in München? Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Kernsanierung ab 1.200€/m². Transparente Festpreise 2026.",
-      keywords: "Sanierung München Kosten 2026, was kostet Komplettsanierung München pro qm, Badsanierung Kosten München aktuell, Wohnungssanierung Preis pro Quadratmeter München, Festpreis Sanierung München ohne Nachforderungen, Haussanierung Kosten Einfamilienhaus München, Sanierung Kosten aus einer Hand München, Renovierung München Preise Handwerkerservice, Innenausbau Kosten München Renovierungsfirma, Sanierungskosten Handwerker München Festpreis, Renovierungskosten München Generalunternehmer, was kostet Renovierung München aus einer Hand, Sanierung München Preis pro qm Renovierungsfirma, Kostenübersicht Sanierung München Handwerker",
-      canonical: `${BASE_URL}/kosten`,
-      ogTitle: "Sanierung München Kosten 2026 | Preise pro m²",
-      ogDescription: "Was kostet Sanierung in München? Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Kernsanierung ab 1.200€/m². Transparente Festpreise 2026.",
-      ogImage: `${BASE_URL}/images/sanierung_preiskalkulation.webp`,
-      ogImageAlt: "Sanierung München Kosten 2026 - transparente Preiskalkulation und Festpreisgarantie für alle Gewerke",
-    };
-  }
-
   if (normalizedPath === "/komplettsanierung") {
     return {
       title: "Komplettsanierung München ab 1.200€/m² Festpreis",

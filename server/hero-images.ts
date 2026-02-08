@@ -11,7 +11,6 @@ export const heroImageMap: Record<string, string> = {
   "/wohnungssanierung": "/images/sanierte_luxuswohnung_interieur.webp",
   "/haussanierung": "/images/haus_alt_vs_neu_vergleich.webp",
   "/kernsanierung": "/images/haus_alt_vs_neu_vergleich.webp",
-  "/kosten": "/images/sanierung_preiskalkulation.webp",
   "/kontakt": "/images/kundenservice_kontakt.webp",
   "/rechner": "/images/kostenrechner_planung_2026.webp",
   "/ratgeber": "/images/sanierungsberater_experte.webp",

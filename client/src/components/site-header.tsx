@@ -94,9 +94,9 @@ export function SiteHeader() {
                 Badsanierung
               </Button>
             </Link>
-            <Link href="/kosten">
+            <Link href="/faq-preise">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                Kosten & Preise
+                FAQ & Preise
               </Button>
             </Link>
             <Link href="/ratgeber">

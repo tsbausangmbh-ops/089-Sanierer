@@ -120,7 +120,7 @@ const allServices = [
     description: "Bauarbeiten für Ihre Traumküche",
     price: "ab 6.500€",
     features: ["Fliesen & Elektrik", "Wasser & Abfluss", "Wanddurchbrüche"],
-    link: "/kosten"
+    link: "/anfrage?service=kuechensanierung"
   },
   { 
     id: "bodensanierung", 
@@ -131,7 +131,7 @@ const allServices = [
     description: "Parkett, Fliesen oder Vinyl",
     price: "ab 65€/m²",
     features: ["Fachgerechte Verlegung", "Untergrundvorbereitung", "Fußbodenheizung"],
-    link: "/kosten"
+    link: "/anfrage?service=bodensanierung"
   },
   { 
     id: "elektrosanierung", 
@@ -142,7 +142,7 @@ const allServices = [
     description: "VDE-konforme Installation",
     price: "ab 85€/m²",
     features: ["Neue Leitungen", "Smart-Home ready", "Sicherheitstechnik"],
-    link: "/kosten"
+    link: "/anfrage?service=elektrosanierung"
   },
   { 
     id: "heizungssanierung", 
@@ -153,7 +153,7 @@ const allServices = [
     description: "Bis zu 40% Heizkosten sparen",
     price: "ab 12.000€",
     features: ["Wärmepumpen", "Fußbodenheizung", "Fördermittelberatung"],
-    link: "/kosten"
+    link: "/anfrage?service=heizungssanierung"
   },
 ];
 
@@ -906,12 +906,12 @@ export default function Home() {
                       <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
                     </div>
                   </Link>
-                  <Link href="/kosten">
+                  <Link href="/faq-preise">
                     <div className="flex items-center gap-3 p-3 rounded-md border hover-elevate cursor-pointer">
                       <Calculator className="w-5 h-5 text-primary shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium">Alle Kosten & Preise 2026</p>
-                        <p className="text-xs text-muted-foreground">Transparente Preisübersicht aller Gewerke</p>
+                        <p className="text-sm font-medium">FAQ & Preise 2026</p>
+                        <p className="text-xs text-muted-foreground">Häufige Fragen und Preisübersicht</p>
                       </div>
                       <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
                     </div>

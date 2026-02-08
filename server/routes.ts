@@ -470,6 +470,7 @@ export async function registerRoutes(
     "/faq": "/faq-preise",
     "/preise": "/faq-preise",
     "/prices": "/faq-preise",
+    "/kosten": "/faq-preise",
     "/kosten-rechner": "/rechner",
     "/calculator": "/rechner",
     "/kalkulator": "/rechner",
