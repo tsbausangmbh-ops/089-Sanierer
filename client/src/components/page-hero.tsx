@@ -85,7 +85,7 @@ export function PageHero({
                 </Button>
               </Link>
               <a href="tel:+498944438872">
-                <Button size="lg" variant="outline" className="text-sm sm:text-lg w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-4 sm:px-6 whitespace-normal text-center leading-tight">
+                <Button size="lg" className="text-sm sm:text-lg w-full sm:w-auto bg-green-600 border-green-600 text-white px-4 sm:px-6 whitespace-normal text-center leading-tight">
                   <Phone className="w-5 h-5 mr-1.5 flex-shrink-0" />
                   089 444438872
                 </Button>

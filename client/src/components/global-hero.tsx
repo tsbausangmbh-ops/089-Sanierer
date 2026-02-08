@@ -102,7 +102,7 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="w-full sm:w-auto min-h-12 px-6 text-sm sm:text-base border-white/40 text-white backdrop-blur-sm"
+                className="w-full sm:w-auto min-h-12 px-6 text-sm sm:text-base bg-green-600 border-green-600 text-white"
                 data-testid={`button-${testIdPrefix}-phone`}
               >
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
