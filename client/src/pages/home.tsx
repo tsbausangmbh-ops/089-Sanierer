@@ -32,7 +32,8 @@ const homeHeroContent: HeroContent = {
   descriptions: ["Professionelle Komplettsanierung aus einer Hand.", "Sie entspannen – wir koordinieren."],
   strongText: "Volle Festpreisgarantie ohne versteckte Nachforderungen.",
   subText: "Für anspruchsvolle Immobilienbesitzer in München und Umgebung.",
-  ctaText: "Jetzt exklusives Festpreis-Konzept anfordern",
+  ctaText: "Komplettsanierung anfragen",
+  ctaLink: "/anfrage?service=komplettsanierung",
   checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "hero"
 };
