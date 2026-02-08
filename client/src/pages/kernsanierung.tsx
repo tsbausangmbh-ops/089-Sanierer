@@ -35,7 +35,7 @@ const kernImg = "/images/haus_alt_vs_neu_vergleich.webp";
 
 const kernHeroContent: HeroContent = {
   backgroundImage: kernImg,
-  imageAlt: "Kernsanierung München – Altbau bis auf die Grundmauern sanieren und modernisieren",
+  imageAlt: "Kernsanierung München – Altbau entkernen und komplett sanieren lassen mit Statik, Elektrik, Sanitär und Innenausbau vom Meisterbetrieb zum Festpreis",
   badge: "Über 20 exklusive Kernsanierungen realisiert",
   titleLine1: "Kernsanierung München – Entkernung, Totalsanierung & Grundsanierung.",
   titleLine2: "Neubau-Qualität im Altbau. Festpreis ab 1.200€/m².",

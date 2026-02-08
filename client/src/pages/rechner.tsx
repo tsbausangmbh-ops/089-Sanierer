@@ -37,7 +37,7 @@ const rechnerImg = "/images/kostenrechner_planung_2026.webp";
 
 const rechnerHeroContent: HeroContent = {
   backgroundImage: rechnerImg,
-  imageAlt: "Sanierungskosten Rechner München – Renovierungskosten für Haus und Wohnung berechnen",
+  imageAlt: "Sanierungskosten Rechner München – Renovierungskosten pro Quadratmeter berechnen für Badsanierung, Komplettsanierung und Wohnungssanierung",
   badge: "Exklusiver Investitions-Kalkulator",
   titleLine1: "Sanierungskosten Rechner München – Kosten berechnen & Preise kalkulieren.",
   titleLine2: "Renovierung, Modernisierung & Förderung sofort berechnen.",

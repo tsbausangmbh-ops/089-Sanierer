@@ -35,7 +35,7 @@ const hausImg = "/images/energieeffizientes_saniertes_haus.webp";
 
 const hausHeroContent: HeroContent = {
   backgroundImage: hausImg,
-  imageAlt: "Haussanierung München – Einfamilienhaus komplett sanieren mit Festpreis und Bauleiter",
+  imageAlt: "Haussanierung München – Einfamilienhaus komplett sanieren lassen mit Dach, Fassade, Heizung und Innenausbau vom Generalunternehmer zum Festpreis",
   badge: "Über 45 erfolgreich sanierte Häuser in München",
   titleLine1: "Haussanierung München – Haus renovieren, Altbau sanieren & Modernisierung.",
   titleLine2: "Energetisch & förderfähig. Festpreis ab 1.200€/m².",

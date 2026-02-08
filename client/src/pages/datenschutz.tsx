@@ -8,7 +8,7 @@ const datenschutzHeroImage = "/images/datenschutz_sicherheit.webp";
 
 const datenschutzHeroContent: HeroContent = {
   backgroundImage: datenschutzHeroImage,
-  imageAlt: "Datenschutzerklärung Sanierungsfirma München",
+  imageAlt: "Datenschutzerklärung Sanierungsfirma München – DSGVO-konforme Datenverarbeitung bei 089-Sanierer Komplettsanierung und Renovierung",
   badge: "Höchste Datenschutzstandards",
   titleLine1: "Datenschutz.",
   titleLine2: "Ihre Daten in sicheren Händen.",

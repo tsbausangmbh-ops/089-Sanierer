@@ -28,7 +28,7 @@ const terminHeroImage = "/images/terminbuchung_kalender.webp";
 
 const terminHeroContent: HeroContent = {
   backgroundImage: terminHeroImage,
-  imageAlt: "Kostenlosen Beratungstermin buchen – Sanierungsberatung vor Ort in München",
+  imageAlt: "Kostenlosen Beratungstermin buchen München – Sanierungsberatung und Besichtigung vor Ort mit persönlichem Bauleiter und Festpreisangebot",
   badge: "Ihr persönlicher Beratungstermin",
   titleLine1: "Sanierung München Termin – Kostenlose Beratung & Besichtigung vor Ort.",
   titleLine2: "Festpreis-Angebot in 48h. Unverbindlich.",

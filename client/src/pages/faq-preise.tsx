@@ -19,7 +19,7 @@ const pricingHeroImage = "/images/sanierung_preiskalkulation.webp";
 
 const faqHeroContent: HeroContent = {
   backgroundImage: pricingHeroImage,
-  imageAlt: "Sanierung FAQ München – Häufige Fragen zu Kosten, Dauer und Ablauf der Renovierung",
+  imageAlt: "Sanierung FAQ München – Häufige Fragen zu Renovierungskosten, Sanierungsdauer, Förderung und Ablauf der Komplettsanierung beantwortet",
   badge: "Volle Transparenz für anspruchsvolle Eigentümer",
   titleLine1: "Sanierung München FAQ – Kosten, Preise & häufige Fragen.",
   titleLine2: "Alle Antworten zu Renovierung, Förderung & Ablauf.",

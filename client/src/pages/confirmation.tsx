@@ -24,7 +24,7 @@ const confirmationHeroImage = "/images/erfolgsbestaetigung_haekchen.webp";
 
 const confirmationHeroContent: HeroContent = {
   backgroundImage: confirmationHeroImage,
-  imageAlt: "Sanierungsanfrage erfolgreich gesendet – 089-Sanierer München meldet sich in 24 Stunden",
+  imageAlt: "Sanierungsanfrage erfolgreich gesendet – 089-Sanierer München meldet sich innerhalb 24 Stunden mit persönlichem Festpreis-Angebot",
   badge: "Ihre exklusive Anfrage wurde empfangen",
   titleLine1: "Vielen Dank für Ihr Vertrauen.",
   titleLine2: "Ihr Projekt-Kurator übernimmt.",

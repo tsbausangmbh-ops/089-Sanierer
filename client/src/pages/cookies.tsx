@@ -11,7 +11,7 @@ const cookiesHeroImage = "/images/webseite_cookie_einstellungen.webp";
 
 const cookiesHeroContent: HeroContent = {
   backgroundImage: cookiesHeroImage,
-  imageAlt: "Cookie-Richtlinie Sanierungsfirma München",
+  imageAlt: "Cookie-Richtlinie 089-Sanierer München – DSGVO-konforme Cookie-Einstellungen der Sanierungsfirma für Renovierung und Sanierung",
   badge: "Volle Transparenz",
   titleLine1: "Cookie-Richtlinie.",
   titleLine2: "Sie behalten die Kontrolle.",

@@ -35,7 +35,7 @@ const wohnungImg = "/images/sanierte_luxuswohnung_interieur.webp";
 
 const wohnungHeroContent: HeroContent = {
   backgroundImage: wohnungImg,
-  imageAlt: "Wohnungssanierung München – Altbauwohnung komplett renovieren mit Festpreisgarantie",
+  imageAlt: "Wohnungssanierung München – Altbauwohnung komplett sanieren lassen mit Bad, Küche, Boden und Elektrik vom Generalunternehmer zum Festpreis",
   badge: "Über 85 erfolgreich transformierte Wohnungen",
   titleLine1: "Wohnungssanierung München – Wohnung renovieren & Altbausanierung.",
   titleLine2: "Komplett aus einer Hand. Festpreis ab 800€/m².",

@@ -8,7 +8,7 @@ const agbHeroImage = "/images/geschaeftsvertrag_agb.webp";
 
 const agbHeroContent: HeroContent = {
   backgroundImage: agbHeroImage,
-  imageAlt: "AGB Sanierungsfirma München",
+  imageAlt: "AGB Sanierungsfirma München – Allgemeine Geschäftsbedingungen für Komplettsanierung und Renovierungsarbeiten mit Festpreisgarantie",
   badge: "Faire Vertragsbedingungen",
   titleLine1: "AGB.",
   titleLine2: "Transparente Geschäftsbedingungen.",

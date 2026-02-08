@@ -33,7 +33,7 @@ const bathroomImg = "/images/badsanierung_muenchen_2026.webp";
 
 const badHeroContent: HeroContent = {
   backgroundImage: bathroomImg,
-  imageAlt: "Badsanierung München – Modernes Badezimmer nach professioneller Komplettrenovierung vom Meisterbetrieb",
+  imageAlt: "Badsanierung München – Badezimmer komplett sanieren lassen mit bodengleicher Dusche, barrierefreiem Umbau und Festpreisgarantie vom Meisterbetrieb",
   badge: "Über 120 realisierte Traumbäder in München",
   titleLine1: "Badsanierung München – Bad renovieren, Badumbau & Badmodernisierung.",
   titleLine2: "Fertig in 2-3 Wochen. Barrierefrei & bodengleich.",

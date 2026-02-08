@@ -35,6 +35,28 @@ const linkImages: Record<string, string> = {
   "/anfrage?service=energetische-sanierung": "/images/einbau_energiesparfenster.webp",
 };
 
+const linkImageAlts: Record<string, string> = {
+  "/badsanierung": "Badsanierung München – Bad komplett sanieren lassen mit bodengleicher Dusche und Festpreisgarantie",
+  "/rechner": "Sanierungskosten Rechner München – Renovierungskosten pro Quadratmeter online berechnen",
+  "/faq-preise": "Sanierung FAQ München – Häufige Fragen zu Kosten, Dauer und Ablauf der Renovierung beantwortet",
+  "/ratgeber": "Sanierung Ratgeber München – Expertentipps und Checklisten für Altbausanierung und Renovierung",
+  "/wohnungssanierung": "Wohnungssanierung München – Altbauwohnung komplett sanieren lassen mit allen Gewerken zum Festpreis",
+  "/haussanierung": "Haussanierung München – Einfamilienhaus komplett sanieren mit Innenausbau und Energieberatung",
+  "/kernsanierung": "Kernsanierung München – Altbau entkernen und komplett sanieren lassen vom Meisterbetrieb",
+  "/termin": "Beratungstermin München – Kostenlose Sanierungsberatung und Besichtigung vor Ort buchen",
+  "/kontakt": "Kontakt Sanierungsfirma München – Kostenlose Beratung und Festpreisangebot anfordern",
+  "/muenchen-schwabing": "Sanierung München Schwabing – Renovierungsfirma für Altbausanierung im Stadtteil Schwabing",
+  "/anfrage": "Sanierungsanfrage München – Kostenloses Festpreisangebot für Renovierung in 48 Stunden erhalten",
+  "/anfrage?service=komplettsanierung": "Komplettsanierung anfragen München – Haus und Wohnung sanieren lassen aus einer Hand",
+  "/anfrage?service=badsanierung": "Badsanierung anfragen München – Badezimmer renovieren mit barrierefreiem Umbau",
+  "/anfrage?service=kuechensanierung": "Küchensanierung anfragen München – Küche renovieren mit Elektrik und Sanitär",
+  "/anfrage?service=bodensanierung": "Bodensanierung anfragen München – Parkett verlegen und Fußboden erneuern lassen",
+  "/anfrage?service=elektrosanierung": "Elektrosanierung anfragen München – VDE-konforme Elektrik erneuern vom Meisterbetrieb",
+  "/anfrage?service=heizungssanierung": "Heizungssanierung anfragen München – Wärmepumpe einbauen und Heizung tauschen",
+  "/anfrage?service=dachsanierung": "Dachsanierung anfragen München – Dach neu eindecken und dämmen vom Dachdeckermeister",
+  "/anfrage?service=energetische-sanierung": "Energetische Sanierung anfragen München – Fassadendämmung und Fensteraustausch mit KfW-Förderung",
+};
+
 export function InternalLinks({ title = "Das könnte Sie auch interessieren", links }: InternalLinksProps) {
   if (links.length === 0) return null;
 
@@ -51,7 +73,7 @@ export function InternalLinks({ title = "Das könnte Sie auch interessieren", li
                   <div className="h-32 sm:h-36 overflow-hidden">
                     <img
                       src={img}
-                      alt={link.title}
+                      alt={linkImageAlts[link.href] || link.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       width="400"

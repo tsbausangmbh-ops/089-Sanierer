@@ -13,7 +13,7 @@ const ratgeberHeroImage = "/images/sanierungsberater_experte.webp";
 
 const ratgeberHeroContent: HeroContent = {
   backgroundImage: ratgeberHeroImage,
-  imageAlt: "Sanierung Ratgeber München – Expertentipps für Haus und Wohnungsrenovierung",
+  imageAlt: "Sanierung Ratgeber München – Expertentipps für Altbausanierung, Renovierungskosten kalkulieren und Handwerker finden bei Haus- und Wohnungsrenovierung",
   badge: "Exklusives Expertenwissen für anspruchsvolle Eigentümer",
   titleLine1: "Sanierung Ratgeber München – Kosten, Förderung & Tipps vom Experten.",
   titleLine2: "Haussanierung, Badsanierung & Dämmung im Überblick.",

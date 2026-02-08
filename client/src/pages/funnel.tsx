@@ -109,7 +109,7 @@ const serviceHeroImages: Record<string, string> = {
 const serviceHeroContents: Record<string, HeroContent> = {
   komplettsanierung: {
     backgroundImage: komplettsanierungHeroImage,
-    imageAlt: "Komplettsanierung anfragen München – Wohnung und Haus komplett sanieren lassen",
+    imageAlt: "Komplettsanierung anfragen München – Wohnung und Haus komplett sanieren lassen mit allen Gewerken aus einer Hand zum Festpreis",
     badge: "Ihr exklusiver Projekt-Kurator für Komplettsanierungen",
     titleLine1: "Komplettsanierung München – Wohnung & Haus komplett sanieren.",
     titleLine2: "Ein Ansprechpartner. Ein Festpreis. Alle Gewerke.",
@@ -122,7 +122,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   badsanierung: {
     backgroundImage: badsanierungHeroImage,
-    imageAlt: "Badsanierung anfragen München – Badezimmer renovieren vom zertifizierten Meisterbetrieb",
+    imageAlt: "Badsanierung anfragen München – Bad komplett renovieren mit bodengleicher Dusche und Barrierefreiheit vom zertifizierten Meisterbetrieb",
     badge: "Exklusive Badsanierung für anspruchsvolle Eigentümer",
     titleLine1: "Badsanierung München – Bad renovieren & Badumbau anfragen.",
     titleLine2: "In 10-15 Werktagen zum Traumbad. Festpreis.",
@@ -135,7 +135,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   kuechensanierung: {
     backgroundImage: kuechensanierungHeroImage,
-    imageAlt: "Küchensanierung anfragen München – Küche komplett erneuern mit Festpreisgarantie",
+    imageAlt: "Küchensanierung anfragen München – Küche komplett erneuern mit neuen Wasseranschlüssen, Elektrik und Fliesen zum Festpreis",
     badge: "Exklusive Küchensanierung mit Meisterqualität",
     titleLine1: "Küchensanierung München – Küche renovieren & Küchenumbau.",
     titleLine2: "Elektrik, Wasser, Fliesen – alles aus einer Hand.",
@@ -148,7 +148,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   bodensanierung: {
     backgroundImage: bodensanierungHeroImage,
-    imageAlt: "Bodensanierung anfragen München – Parkett verlegen und Fußboden erneuern lassen",
+    imageAlt: "Bodensanierung anfragen München – Parkett verlegen, Fliesen erneuern und Fußbodenheizung nachrüsten lassen vom Fachbetrieb",
     badge: "Exklusive Bodensanierung mit Meisterbetrieben",
     titleLine1: "Bodensanierung München – Parkett, Fliesen & Vinyl verlegen.",
     titleLine2: "Bodenbelag erneuern in Meisterqualität. Festpreis.",
@@ -161,7 +161,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   elektrosanierung: {
     backgroundImage: elektrosanierungHeroImage,
-    imageAlt: "Elektrosanierung anfragen München – VDE-konforme Elektroinstallation vom Elektromeister",
+    imageAlt: "Elektrosanierung anfragen München – VDE-konforme Elektrik erneuern, neue Leitungen und Sicherungskasten vom Elektromeister",
     badge: "Exklusive Elektrosanierung durch Meisterbetriebe",
     titleLine1: "Elektrosanierung München – Elektrik erneuern & Neuinstallation.",
     titleLine2: "Sicher, normgerecht nach VDE. Festpreis.",
@@ -174,7 +174,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   heizungssanierung: {
     backgroundImage: heizungssanierungHeroImage,
-    imageAlt: "Heizungssanierung anfragen München – Wärmepumpe und Heizung erneuern mit Förderung",
+    imageAlt: "Heizungssanierung anfragen München – Wärmepumpe einbauen, Fußbodenheizung nachrüsten und Heizung tauschen mit KfW-Förderung",
     badge: "Exklusive Heizungssanierung mit Förderberatung",
     titleLine1: "Heizungssanierung München – Heizung tauschen & Wärmepumpe.",
     titleLine2: "Effizient, förderfähig & zukunftssicher.",
@@ -187,7 +187,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   "energetische-sanierung": {
     backgroundImage: energetischeSanierungHeroImage,
-    imageAlt: "Energetische Sanierung anfragen München – KfW-Förderung und Energieberatung inklusive",
+    imageAlt: "Energetische Sanierung anfragen München – Fassadendämmung, Fensteraustausch und Heizungstausch mit KfW/BAFA-Förderung und Energieberatung",
     badge: "Exklusive Energieberatung für Ihre Immobilie",
     titleLine1: "Energetische Sanierung München – Dämmung, Fenster & Heizung.",
     titleLine2: "Bis zu 50% Heizkosten sparen. KfW & BAFA Förderung.",
@@ -200,7 +200,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   dachsanierung: {
     backgroundImage: dachsanierungHeroImage,
-    imageAlt: "Dachsanierung anfragen München – Dach erneuern und dämmen vom Dachdeckermeister",
+    imageAlt: "Dachsanierung anfragen München – Dach neu eindecken, Dachdämmung und Dachfenster einbauen vom Dachdeckermeister",
     badge: "Exklusive Dachsanierung durch Meisterbetriebe",
     titleLine1: "Dachsanierung München – Dach sanieren, Eindeckung & Dämmung.",
     titleLine2: "Dicht, gedämmt & langlebig. 10 Jahre Garantie.",
@@ -216,44 +216,44 @@ const serviceHeroContents: Record<string, HeroContent> = {
 // NLP section images mapping with captions for each service
 const serviceNlpImages: Record<string, { src: string; alt: string }[]> = {
   komplettsanierung: [
-    { src: komplettsanierungNlp1, alt: "Komplettsanierung München - Professionelles Sanierungsteam koordiniert Altbausanierung" },
-    { src: komplettsanierungNlp2, alt: "Wohnungssanierung München - Qualitätskontrolle durch Bauleiter vor Ort" },
-    { src: komplettsanierungNlp3, alt: "Luxuriös sanierte Altbauwohnung München - Vorher-Nachher Ergebnis" },
+    { src: komplettsanierungNlp1, alt: "Komplettsanierung München – Sanierungsteam koordiniert Altbausanierung mit Bauleiter vor Ort für Renovierung aus einer Hand" },
+    { src: komplettsanierungNlp2, alt: "Qualitätskontrolle Wohnungssanierung München – Bauleiter prüft Sanierungsarbeiten und Handwerkerleistung im Altbau" },
+    { src: komplettsanierungNlp3, alt: "Sanierte Altbauwohnung München Vorher-Nachher – Komplettrenovierung mit neuem Bad, Küche und Parkett vom Meisterbetrieb" },
   ],
   badsanierung: [
-    { src: badsanierungNlp1, alt: "Badsanierung München - Fliesenleger verlegt großformatige Badfliesen" },
-    { src: badsanierungNlp2, alt: "Badezimmer renovieren München - Sanitärinstallateur montiert Regendusche" },
-    { src: badsanierungNlp3, alt: "Barrierefreies Bad München - Fertig saniertes Luxus-Badezimmer" },
+    { src: badsanierungNlp1, alt: "Badsanierung München – Fliesenleger verlegt großformatige Wandfliesen im Bad bei Badezimmer-Komplettrenovierung" },
+    { src: badsanierungNlp2, alt: "Badezimmer renovieren München – Sanitärinstallateur montiert Regendusche und Armaturen bei barrierefreiem Badumbau" },
+    { src: badsanierungNlp3, alt: "Barrierefreies Badezimmer München – Fertig saniertes Luxusbad mit bodengleicher Dusche und Doppelwaschtisch" },
   ],
   kuechensanierung: [
-    { src: kuechensanierungNlp1, alt: "Küchensanierung München - Elektriker installiert Küchenanschlüsse" },
-    { src: kuechensanierungNlp2, alt: "Küche renovieren München - Sanitärinstallateur verlegt Wasseranschlüsse" },
-    { src: kuechensanierungNlp3, alt: "Moderne Küche nach Sanierung München - Hochwertige Einbauküche" },
+    { src: kuechensanierungNlp1, alt: "Küchensanierung München – Elektriker installiert neue Starkstromanschlüsse und Steckdosen für Einbauküche" },
+    { src: kuechensanierungNlp2, alt: "Küche renovieren München – Sanitärinstallateur verlegt neue Wasseranschlüsse und Abwasserleitungen für Küchenumbau" },
+    { src: kuechensanierungNlp3, alt: "Fertige Küchensanierung München – Hochwertige moderne Einbauküche mit neuen Fliesen, Elektrik und Wasseranschlüssen" },
   ],
   bodensanierung: [
-    { src: bodensanierungNlp1, alt: "Parkettboden verlegen München - Handwerker bei der Parkettverlegung" },
-    { src: bodensanierungNlp2, alt: "Parkett schleifen München - Fachgerechte Bodenrenovierung" },
-    { src: bodensanierungNlp3, alt: "Fischgrätparkett München - Hochwertiger Eichenparkett verlegt" },
+    { src: bodensanierungNlp1, alt: "Parkettboden verlegen München – Bodenleger bei fachgerechter Parkettverlegung mit Trittschalldämmung und Sockelleisten" },
+    { src: bodensanierungNlp2, alt: "Parkett schleifen und versiegeln München – Handwerker renoviert Eichenparkett bei Bodensanierung im Altbau" },
+    { src: bodensanierungNlp3, alt: "Fischgrätparkett München verlegt – Hochwertiger Eichenparkett nach professioneller Bodensanierung mit Fußbodenheizung" },
   ],
   elektrosanierung: [
-    { src: elektrosanierungNlp1, alt: "Elektrosanierung München - Elektriker verlegt VDE-konforme Leitungen" },
-    { src: elektrosanierungNlp2, alt: "Sicherungskasten erneuern München - Moderner Verteilerkasten Installation" },
-    { src: elektrosanierungNlp3, alt: "Smart-Home Elektrik München - Moderne Steckdosen und Schalter" },
+    { src: elektrosanierungNlp1, alt: "Elektrosanierung München – Elektromeister verlegt VDE-konforme Leitungen und Kabelkanäle bei Komplettrenovierung" },
+    { src: elektrosanierungNlp2, alt: "Sicherungskasten erneuern München – Elektriker installiert modernen FI-Schutzschalter und Verteilerkasten nach VDE" },
+    { src: elektrosanierungNlp3, alt: "Smart-Home Elektroinstallation München – Moderne Steckdosen, Lichtschalter und KNX-System nach Elektrosanierung" },
   ],
   heizungssanierung: [
-    { src: heizungssanierungNlp1, alt: "Wärmepumpe Installation München - Techniker montiert energieeffiziente Heizung" },
-    { src: heizungssanierungNlp2, alt: "Heizung erneuern München - Fachgerechter Heizkörper-Anschluss" },
-    { src: heizungssanierungNlp3, alt: "Brennwertheizung München - Moderne Gas-Brennwerttherme installiert" },
+    { src: heizungssanierungNlp1, alt: "Wärmepumpe Installation München – Heizungstechniker montiert energieeffiziente Luft-Wasser-Wärmepumpe mit KfW-Förderung" },
+    { src: heizungssanierungNlp2, alt: "Heizung erneuern München – Installateur schließt neue Heizkörper und Fußbodenheizung an bei Heizungstausch" },
+    { src: heizungssanierungNlp3, alt: "Brennwertheizung München – Moderne Gas-Brennwerttherme mit Warmwasserspeicher fachgerecht installiert vom Meisterbetrieb" },
   ],
   "energetische-sanierung": [
-    { src: energetischeSanierungNlp1, alt: "Fassadendämmung München - WDVS Dämmung für Altbau" },
-    { src: energetischeSanierungNlp2, alt: "Fenster austauschen München - Dreifachverglasung Installation" },
-    { src: energetischeSanierungNlp3, alt: "KfW-Effizienzhaus München - Energetisch saniertes Einfamilienhaus" },
+    { src: energetischeSanierungNlp1, alt: "Fassadendämmung München Altbau – WDVS Wärmedämmverbundsystem fachgerecht angebracht für energetische Sanierung mit KfW-Förderung" },
+    { src: energetischeSanierungNlp2, alt: "Fenster austauschen München – Dreifachverglasung mit Wärmeschutzverglasung einbauen bei energetischer Altbausanierung" },
+    { src: energetischeSanierungNlp3, alt: "KfW-Effizienzhaus München – Energetisch saniertes Einfamilienhaus mit Wärmepumpe, Dämmung und Photovoltaik nach iSFP" },
   ],
   dachsanierung: [
-    { src: dachsanierungNlp1, alt: "Dachsanierung München - Dachdecker verlegt neue Tonziegel" },
-    { src: dachsanierungNlp2, alt: "Dachdämmung München - Zwischensparrendämmung Installation" },
-    { src: dachsanierungNlp3, alt: "Neues Dach München - Fertig saniertes Steildach mit Gauben" },
+    { src: dachsanierungNlp1, alt: "Dachsanierung München – Dachdeckermeister verlegt neue Tonziegel bei Dachneueindeckung mit Unterspannbahn" },
+    { src: dachsanierungNlp2, alt: "Dachdämmung München – Zwischensparrendämmung und Aufsparrendämmung fachgerecht eingebaut für energetische Dachsanierung" },
+    { src: dachsanierungNlp3, alt: "Neues Dach München – Komplett saniertes Steildach mit Dachgauben, neuen Ziegeln und Dachdämmung vom Meisterbetrieb" },
   ],
 };
 
