@@ -17,6 +17,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { RecommendedLinks } from "@/components/recommended-links";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 const contactHeroImage = "/images/kundenservice_kontakt.webp";
@@ -385,6 +386,7 @@ export default function Kontakt() {
             </div>
           </div>
         </div>
+        <RecommendedLinks currentPath="/kontakt" />
       </main>
 
       <section className="py-4 lg:py-6 bg-background">

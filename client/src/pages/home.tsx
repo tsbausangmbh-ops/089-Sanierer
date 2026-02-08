@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
+import { RecommendedLinks } from "@/components/recommended-links";
 import { LazyImage } from "@/components/lazy-image";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { SeoHead, generateCombinedSchema } from "@/components/seo-head";
@@ -1303,6 +1304,7 @@ export default function Home() {
           </div>
         </section>
 
+        <RecommendedLinks currentPath="/" />
         <InternalLinks links={linkSets.fromHome} />
         <SeoFooter />
       </div>

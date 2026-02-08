@@ -7,6 +7,7 @@ import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
+import { RecommendedLinks } from "@/components/recommended-links";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 const ratgeberHeroImage = "/images/sanierungsberater_experte.webp";
@@ -982,6 +983,7 @@ export default function Ratgeber() {
 
           </div>
         </div>
+        <RecommendedLinks currentPath="/ratgeber" />
       </main>
 
       <section className="py-4 lg:py-6 bg-background">

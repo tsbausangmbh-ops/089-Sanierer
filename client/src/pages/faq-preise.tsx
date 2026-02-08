@@ -13,6 +13,7 @@ import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
+import { RecommendedLinks } from "@/components/recommended-links";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 const pricingHeroImage = "/images/sanierung_preiskalkulation.webp";
@@ -698,6 +699,7 @@ export default function FaqPreise() {
             </div>
           </div>
         </section>
+        <RecommendedLinks currentPath="/faq-preise" />
       </main>
 
       <InternalLinks links={linkSets.fromFaqPreise} />

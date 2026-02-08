@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
+import { RecommendedLinks } from "@/components/recommended-links";
 import { SeoHead } from "@/components/seo-head";
 import {
   Accordion,
@@ -867,6 +868,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
             </p>
           </div>
         </section>
+        <RecommendedLinks />
       </main>
 
       <InternalLinks links={linkSets.fromStadtteil(data.name)} />
