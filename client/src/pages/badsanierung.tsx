@@ -22,9 +22,13 @@ import {
   Users,
   HelpCircle,
   Phone,
-  ArrowRight
+  ArrowRight,
+  Home as HomeIcon,
+  Hammer,
+  Calculator
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
+import { ServiceIntro } from "@/components/service-intro";
 const bathroomImg = "/images/badsanierung_muenchen_2026.webp";
 
 const badHeroContent: HeroContent = {
@@ -107,6 +111,23 @@ export default function Badsanierung() {
             Stand: Februar 2026
           </p>
         </div>
+
+        <ServiceIntro
+          headline="Badsanierung in München – Ihr Handwerkerservice für das perfekte Bad"
+          paragraphs={[
+            "Eine professionelle Badsanierung ist mehr als nur neue Fliesen. Als erfahrene Sanierungsfirma in München übernehmen wir alle Renovierungsarbeiten aus einer Hand – von der Demontage Ihres alten Bades bis zur schlüsselfertigen Übergabe Ihres neuen Traumbads. Sanitär, Elektrik, Fliesen und Malerarbeiten: Alles koordiniert von einem persönlichen Bauleiter.",
+            "Unsere Handwerker in München sind zertifizierte Meisterbetriebe mit jahrelanger Erfahrung in der Badsanierung. Ob barrierefreie Dusche, Luxusbad oder kompakte Gästetoilette – wir liefern Sanierungsarbeiten auf höchstem Niveau. Als Ihr Generalunternehmer für Badsanierungen garantieren wir Ihnen einen verbindlichen Festpreis ohne Nachforderungen."
+          ]}
+          benefits={["Festpreis ab 18.500€", "Fertig in 2-3 Wochen", "Barrierefrei & bodengleich", "5 Jahre Gewährleistung"]}
+          linksHeadline="Weitere Sanierungen in München"
+          linksDescription="Neben der Badsanierung bieten wir Ihnen als Renovierungsfirma in München die Sanierung aus einer Hand für alle Bereiche Ihres Zuhauses."
+          links={[
+            { href: "/kernsanierung", icon: HomeIcon, title: "Komplett- & Kernsanierung", subtitle: "Rundum-Sanierung ab 1.200€/m² Festpreis" },
+            { href: "/wohnungssanierung", icon: Hammer, title: "Wohnungssanierung", subtitle: "Wohnung komplett sanieren ab 800€/m²" },
+            { href: "/haussanierung", icon: Shield, title: "Haussanierung München", subtitle: "Einfamilienhaus sanieren ab 1.200€/m²" },
+            { href: "/kosten", icon: Calculator, title: "Alle Kosten & Preise 2026", subtitle: "Transparente Preisübersicht aller Gewerke" },
+          ]}
+        />
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">

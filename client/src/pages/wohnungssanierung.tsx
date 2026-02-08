@@ -24,9 +24,13 @@ import {
   Paintbrush,
   HelpCircle,
   ArrowRight,
-  Phone
+  Phone,
+  Bath,
+  Hammer,
+  Calculator
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
+import { ServiceIntro } from "@/components/service-intro";
 const wohnungImg = "/images/sanierte_luxuswohnung_interieur.webp";
 
 const wohnungHeroContent: HeroContent = {
@@ -106,6 +110,23 @@ export default function Wohnungssanierung() {
             Stand: Februar 2026
           </p>
         </div>
+
+        <ServiceIntro
+          headline="Wohnungssanierung München – Renovierung aus einer Hand vom Generalunternehmer"
+          paragraphs={[
+            "Sie möchten Ihre Wohnung komplett sanieren lassen? Als Ihre Innenausbau-Firma in München übernehmen wir alle Sanierungsarbeiten aus einer Hand – Elektrik, Sanitär, Böden, Wände und Decken. Ein Ansprechpartner, ein Festpreis, ein Termin. So funktioniert Renovierung ohne Stress.",
+            "Ob Münchner Altbauwohnung oder moderne Eigentumswohnung: Unsere Handwerker in München sind spezialisiert auf Wohnungssanierungen jeder Größe. Als Generalunternehmer koordinieren wir bis zu 22 Gewerke und sorgen dafür, dass Ihre Renovierungsarbeiten termingerecht und im Budget abgeschlossen werden. So wird Ihre Sanierungsfirma zum Problemlöser."
+          ]}
+          benefits={["Festpreis ab 800€/m²", "Alle Gewerke koordiniert", "Persönlicher Bauleiter", "5 Jahre Gewährleistung"]}
+          linksHeadline="Weitere Leistungen unseres Handwerkerservice"
+          linksDescription="Neben der Wohnungssanierung bieten wir als Renovierungsfirma München umfassende Sanierungen für jedes Projekt."
+          links={[
+            { href: "/badsanierung", icon: Bath, title: "Badsanierung München", subtitle: "Komplettbad ab 18.500€ in 2-3 Wochen" },
+            { href: "/haussanierung", icon: Shield, title: "Haussanierung München", subtitle: "Einfamilienhaus sanieren ab 1.200€/m²" },
+            { href: "/kernsanierung", icon: Hammer, title: "Kernsanierung", subtitle: "Entkernung & Neuaufbau zum Festpreis" },
+            { href: "/kosten", icon: Calculator, title: "Alle Kosten & Preise 2026", subtitle: "Transparente Preisübersicht aller Gewerke" },
+          ]}
+        />
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">

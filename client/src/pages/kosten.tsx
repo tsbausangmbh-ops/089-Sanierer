@@ -26,6 +26,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
+import { ServiceIntro } from "@/components/service-intro";
 const kostenImg = "/images/komplettsanierung_ergebnis.webp";
 
 const kostenHeroContent: HeroContent = {
@@ -129,6 +130,24 @@ export default function Kosten() {
             Stand: Februar 2026
           </p>
         </div>
+
+        <ServiceIntro
+          headline="Sanierung Kosten München – Transparente Preise vom Handwerkerservice"
+          paragraphs={[
+            "Was kostet eine Sanierung in München wirklich? Als ehrliche Sanierungsfirma geben wir Ihnen volle Kostentransparenz – vor Beginn der Renovierungsarbeiten. Keine versteckten Posten, keine Nachforderungen. Unser Festpreis-Versprechen gilt für alle Sanierungsarbeiten aus einer Hand.",
+            "Ob Badsanierung, Wohnungssanierung oder komplette Haussanierung: Als Generalunternehmer für Sanierungen in München kalkulieren wir alle Gewerke transparent. Unsere Handwerker München arbeiten nach detaillierten Leistungsverzeichnissen. So wissen Sie als Eigentümer genau, wofür Sie bezahlen – und haben die volle Kontrolle über Ihre Renovierung aus einer Hand."
+          ]}
+          benefits={["Verbindliche Festpreise", "Keine Nachforderungen", "Detaillierte Aufschlüsselung", "Faire Zahlungsmodelle"]}
+          linksHeadline="Unsere Sanierungen im Detail"
+          linksDescription="Informieren Sie sich über die einzelnen Leistungen unserer Innenausbau-Firma München."
+          links={[
+            { href: "/badsanierung", icon: Bath, title: "Badsanierung München", subtitle: "Komplettbad ab 18.500€ in 2-3 Wochen" },
+            { href: "/wohnungssanierung", icon: Building, title: "Wohnungssanierung", subtitle: "Wohnung komplett sanieren ab 800€/m²" },
+            { href: "/haussanierung", icon: HomeIcon, title: "Haussanierung München", subtitle: "Einfamilienhaus sanieren ab 1.200€/m²" },
+            { href: "/kernsanierung", icon: Hammer, title: "Kernsanierung", subtitle: "Entkernung & Neuaufbau zum Festpreis" },
+            { href: "/rechner", icon: Calculator, title: "Online Kostenrechner", subtitle: "Sanierungskosten sofort berechnen" },
+          ]}
+        />
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">

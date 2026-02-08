@@ -24,9 +24,13 @@ import {
   Hammer,
   HelpCircle,
   Phone,
-  ArrowRight
+  ArrowRight,
+  Building,
+  Bath,
+  Calculator
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
+import { ServiceIntro } from "@/components/service-intro";
 const hausImg = "/images/energieeffizientes_saniertes_haus.webp";
 
 const hausHeroContent: HeroContent = {
@@ -108,6 +112,23 @@ export default function Haussanierung() {
             Stand: Februar 2026
           </p>
         </div>
+
+        <ServiceIntro
+          headline="Haussanierung München – Ihre Sanierungsfirma für das komplette Haus"
+          paragraphs={[
+            "Eine Haussanierung ist eines der größten Projekte im Leben eines Eigentümers. Als Generalunternehmer für Sanierungen in München koordinieren wir alle Renovierungsarbeiten aus einer Hand – von der Heizung über Elektrik und Sanitär bis hin zu Dach, Fassade und Innenausbau. Bis zu 22 Gewerke, ein Ansprechpartner, ein Festpreis.",
+            "Unser Handwerkerservice in München umfasst zertifizierte Meisterbetriebe für jedes Gewerk. Ob energetische Modernisierung mit KfW-Förderung oder komplette Kernsanierung: Als erfahrene Renovierungsfirma München stehen wir für termingerechte Sanierungsarbeiten mit voller Festpreisgarantie. Ihre Handwerker in München – zuverlässig und transparent."
+          ]}
+          benefits={["Festpreis ab 1.200€/m²", "KfW-Förderung möglich", "Bis zu 22 Gewerke", "5 Jahre Gewährleistung"]}
+          linksHeadline="Weitere Sanierungen aus einer Hand"
+          linksDescription="Ob einzelnes Gewerk oder Komplettsanierung – als Ihre Innenausbau-Firma München bieten wir Ihnen alle Leistungen."
+          links={[
+            { href: "/kernsanierung", icon: Hammer, title: "Kernsanierung München", subtitle: "Entkernung & Neuaufbau zum Festpreis" },
+            { href: "/badsanierung", icon: Bath, title: "Badsanierung München", subtitle: "Komplettbad ab 18.500€ in 2-3 Wochen" },
+            { href: "/wohnungssanierung", icon: Building, title: "Wohnungssanierung", subtitle: "Wohnung komplett sanieren ab 800€/m²" },
+            { href: "/kosten", icon: Calculator, title: "Alle Kosten & Preise 2026", subtitle: "Transparente Preisübersicht aller Gewerke" },
+          ]}
+        />
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">
