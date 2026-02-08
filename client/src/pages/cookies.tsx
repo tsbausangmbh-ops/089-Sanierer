@@ -252,6 +252,69 @@ export default function Cookies() {
               </p>
             </section>
 
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">Welche Cookies verwenden wir?</h2>
+              <p className="text-muted-foreground">
+                Auf unserer Website kommen verschiedene Arten von Cookies zum Einsatz. Diese lassen sich in technisch notwendige und optionale Cookies unterteilen. Nachfolgend erläutern wir die einzelnen Kategorien im Detail.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Essentielle Cookies</h3>
+              <p className="text-muted-foreground">
+                Essentielle Cookies sind für den grundlegenden Betrieb unserer Website unerlässlich. Sie ermöglichen zentrale Funktionen wie die Navigation zwischen Seiten, den Zugriff auf geschützte Bereiche und die Speicherung Ihrer Cookie-Einstellungen. Diese Cookies werden ohne Ihre vorherige Einwilligung gesetzt, da die Website ohne sie nicht funktionsfähig wäre. Sie enthalten keine personenbezogenen Daten und werden in der Regel nach Ende der Browsersitzung gelöscht.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Analyse-Cookies</h3>
+              <p className="text-muted-foreground">
+                Analyse-Cookies helfen uns, das Nutzungsverhalten auf unserer Website zu verstehen und unser Angebot kontinuierlich zu verbessern. Sie sammeln anonymisierte Informationen darüber, welche Seiten am häufigsten besucht werden und wie Besucher auf unsere Website gelangen. Diese Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gesetzt und können jederzeit über die Cookie-Einstellungen deaktiviert werden.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">Cookie-Einstellungen verwalten</h2>
+              <p className="text-muted-foreground">
+                Sie haben jederzeit die Möglichkeit, Ihre Cookie-Einstellungen anzupassen. Nachfolgend erfahren Sie, wie Sie Cookies in Ihrem Browser verwalten und Ihre Einwilligung widerrufen können.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Cookies in Ihrem Browser deaktivieren</h3>
+              <p className="text-muted-foreground">
+                Alle gängigen Webbrowser bieten die Möglichkeit, Cookies zu blockieren, einzuschränken oder zu löschen. Die entsprechenden Einstellungen finden Sie in den Datenschutz- oder Sicherheitsoptionen Ihres Browsers. Bitte beachten Sie, dass das vollständige Blockieren von Cookies die Funktionalität unserer Website beeinträchtigen kann. Technisch notwendige Cookies sind für den ordnungsgemäßen Betrieb erforderlich.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Cookie-Consent widerrufen</h3>
+              <p className="text-muted-foreground">
+                Ihre über den Cookie-Banner erteilte Einwilligung können Sie jederzeit widerrufen. Nutzen Sie dazu die Schaltfläche „Cookie-Einstellungen" auf dieser Seite oder in der Fußzeile unserer Website. Nach dem Widerruf werden keine weiteren optionalen Cookies gesetzt. Bereits gesetzte Cookies können Sie über die Browser-Einstellungen manuell löschen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">Drittanbieter-Cookies</h2>
+              <p className="text-muted-foreground">
+                Neben unseren eigenen Cookies können auf unserer Website auch Cookies von Drittanbietern gesetzt werden. Diese dienen insbesondere der Analyse und der Verbesserung unseres Online-Angebots.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Google Analytics und Tag Manager</h3>
+              <p className="text-muted-foreground">
+                Wir verwenden Google Analytics zur statistischen Auswertung der Websitenutzung. Die dabei eingesetzten Cookies werden von Google Ireland Limited bereitgestellt und nur nach Ihrer ausdrücklichen Einwilligung aktiviert. Der Google Tag Manager dient der Verwaltung und Ausspielung der eingebundenen Analyse-Tools und setzt selbst keine eigenständigen Cookies. Die IP-Anonymisierung ist aktiviert, sodass Ihre IP-Adresse innerhalb der EU gekürzt wird.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">Speicherdauer und Löschung</h2>
+              <p className="text-muted-foreground">
+                Die Speicherdauer von Cookies variiert je nach Art und Zweck. Nachfolgend erläutern wir die verschiedenen Speicherfristen und Löschmechanismen.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Session-Cookies vs. persistente Cookies</h3>
+              <p className="text-muted-foreground">
+                Session-Cookies werden automatisch gelöscht, sobald Sie Ihren Browser schließen. Sie dienen ausschließlich der Aufrechterhaltung Ihrer Sitzung während des Besuchs unserer Website. Persistente Cookies hingegen verbleiben für einen festgelegten Zeitraum auf Ihrem Gerät und ermöglichen es uns, Sie bei einem erneuten Besuch wiederzuerkennen. Die Speicherdauer persistenter Cookies beträgt je nach Zweck zwischen einem Tag und zwei Jahren.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Automatische Löschfristen</h3>
+              <p className="text-muted-foreground">
+                Alle auf unserer Website verwendeten Cookies haben eine fest definierte Ablaufzeit. Nach Ablauf dieser Frist werden sie automatisch von Ihrem Gerät entfernt. Das Cookie für die Speicherung Ihrer Einwilligungspräferenzen hat eine Gültigkeitsdauer von einem Jahr. Analyse-Cookies wie die von Google Analytics haben unterschiedliche Laufzeiten zwischen einem Tag und zwei Jahren.
+              </p>
+            </section>
+
             <section className="border-t pt-8 mt-8">
               <p className="text-sm text-muted-foreground">
                 <strong>Stand:</strong> 2026 – Diese Cookie-Richtlinie wurde gemäß den Anforderungen des TDDDG und der DSGVO erstellt.

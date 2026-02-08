@@ -274,6 +274,86 @@ export default function Kernsanierung() {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Kernsanierung München – Kosten realistisch kalkulieren
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Was kostet eine Kernsanierung pro Quadratmeter?</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  In München liegen die Kosten für eine Kernsanierung je nach Ausstattungsstandard zwischen 1.200 und 2.000 Euro pro Quadratmeter. Der Preis hängt von der Gebäudesubstanz, dem gewünschten Ausbaustandard und den notwendigen statischen Maßnahmen ab. Hochwertige Materialien und individuelle Grundrissänderungen können den Preis nach oben beeinflussen. Wir erstellen Ihnen ein detailliertes Festpreisangebot nach der kostenlosen Vor-Ort-Besichtigung.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Kernsanierung vs. Neubau – Wann lohnt sich was?</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Ein Neubau in München kostet durchschnittlich 3.000 bis 4.500 Euro pro Quadratmeter – ohne Grundstück. Die Kernsanierung spart nicht nur erhebliche Kosten, sondern auch Zeit und bürokratischen Aufwand. Zudem profitieren Sie vom Bestandsschutz und können bestehende Baugenehmigungen nutzen. In den meisten Fällen ist die Kernsanierung die wirtschaftlichere und nachhaltigere Lösung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Ablauf einer Kernsanierung – Schritt für Schritt
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Entkernung und Rohbauarbeiten</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Im ersten Schritt werden alle nicht-tragenden Wände, Bodenbeläge, Installationen und Verkleidungen fachgerecht entfernt und entsorgt. Anschließend erfolgt die statische Prüfung und gegebenenfalls die Verstärkung tragender Elemente. Neue Wanddurchbrüche und Grundrissänderungen werden in dieser Phase realisiert. Die Rohbauarbeiten schaffen die Grundlage für den kompletten Neuaufbau.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Haustechnik komplett erneuern</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Nach der Entkernung wird die gesamte Haustechnik auf den neuesten Stand gebracht. Dazu gehören die komplette Elektroinstallation nach aktuellen VDE-Normen, neue Sanitärleitungen und eine moderne Heizungsanlage. Auf Wunsch integrieren wir Smart-Home-Systeme, Fußbodenheizung und Lüftungsanlagen mit Wärmerückgewinnung. Alle Installationen werden vor dem Verschließen der Wände dokumentiert und geprüft.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Kernsanierung und Denkmalschutz in München
+            </h2>
+            <div>
+              <h3 className="font-semibold mb-2">Auflagen und Genehmigungen</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                München verfügt über zahlreiche denkmalgeschützte Gebäude, bei denen besondere Auflagen für Sanierungsarbeiten gelten. Die untere Denkmalschutzbehörde muss bei Veränderungen an der Fassade, den Fenstern oder der Dachform vorab genehmigen. Wir arbeiten eng mit den Behörden zusammen und kennen die spezifischen Anforderungen der Münchner Denkmalschutzbehörde. Zusätzlich können Sie bei denkmalgeschützten Gebäuden von erhöhten steuerlichen Abschreibungsmöglichkeiten nach §7i EStG profitieren.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Kernsanierung für verschiedene Gebäudetypen
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Altbau-Kernsanierung mit Charme-Erhalt</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Münchner Altbauten aus der Gründerzeit bestechen durch hohe Decken, Stuckelemente und Parkettböden. Bei einer Kernsanierung bewahren wir diese charakteristischen Merkmale, während wir die gesamte Technik erneuern. Stuck wird restauriert, Dielenböden werden aufgearbeitet und historische Türen erhalten eine Auffrischung. So verbinden wir den unverwechselbaren Altbau-Charme mit modernem Wohnkomfort und aktueller Energieeffizienz.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Mehrfamilienhaus kernsanieren</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Die Kernsanierung eines Mehrfamilienhauses erfordert besondere Planung und Koordination. Wir erstellen einen Bauablaufplan, der die Interessen aller Parteien berücksichtigt und die Belastung für Bewohner minimiert. Etappenweise Sanierung einzelner Wohneinheiten ist ebenso möglich wie die Komplettsanierung des gesamten Gebäudes. Für Eigentümergemeinschaften bieten wir spezielle Beratung zur Beschlussfassung und Finanzierung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">

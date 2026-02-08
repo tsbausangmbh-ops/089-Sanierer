@@ -437,6 +437,69 @@ export default function AGB() {
               </div>
             </section>
 
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">8. Vertragsschluss und Auftragserteilung</h2>
+              <p className="text-muted-foreground">
+                Der Vertragsschluss bei Sanierungsleistungen erfolgt in mehreren Schritten und gewährleistet maximale Transparenz für beide Vertragsparteien. Nachfolgend erläutern wir den genauen Ablauf.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Angebot und Annahme</h3>
+              <p className="text-muted-foreground">
+                Nach einer unverbindlichen Erstberatung und einer Besichtigung vor Ort erstellen wir ein individuelles, detailliertes Angebot. Dieses Angebot enthält eine exakte Leistungsbeschreibung, die verwendeten Materialien, den Zeitplan sowie den Festpreis. Ein verbindlicher Vertrag kommt erst durch die schriftliche Annahme des Angebots durch den Auftraggeber zustande. Mündliche Zusagen bedürfen der schriftlichen Bestätigung.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Festpreisgarantie und Kostenvoranschlag</h3>
+              <p className="text-muted-foreground">
+                KSHW München bietet Ihnen eine Festpreisgarantie für alle im Angebot aufgeführten Leistungen. Der vereinbarte Preis ist verbindlich und wird nicht ohne vorherige Abstimmung und schriftliche Vereinbarung geändert. Zusatzleistungen oder Änderungswünsche, die über den vereinbarten Leistungsumfang hinausgehen, werden separat kalkuliert und bedürfen der schriftlichen Beauftragung durch den Auftraggeber.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">9. Leistungsumfang und Ausführung</h2>
+              <p className="text-muted-foreground">
+                Der Leistungsumfang wird individuell auf Basis der Besichtigung vor Ort und der Wünsche des Auftraggebers festgelegt. Alle Leistungen werden fachgerecht und nach den anerkannten Regeln der Technik ausgeführt.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Bauausführung und Terminplanung</h3>
+              <p className="text-muted-foreground">
+                Die Bauausführung erfolgt gemäß dem vereinbarten Zeitplan. Vor Beginn der Arbeiten erstellen wir einen detaillierten Bauzeitenplan, der die einzelnen Gewerke, Meilensteine und den voraussichtlichen Fertigstellungstermin umfasst. Verzögerungen, die durch unvorhergesehene Umstände (z. B. Schlechtwetter, fehlende behördliche Genehmigungen) entstehen, werden dem Auftraggeber unverzüglich mitgeteilt.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Materialauswahl und Qualitätsstandards</h3>
+              <p className="text-muted-foreground">
+                Wir verwenden ausschließlich hochwertige Materialien namhafter Hersteller, die den geltenden DIN-Normen und Qualitätsstandards entsprechen. Die Materialauswahl erfolgt in Abstimmung mit dem Auftraggeber. Alle verwendeten Produkte sind für den jeweiligen Einsatzzweck geprüft und zertifiziert. Auf Wunsch stellen wir Materialproben und technische Datenblätter zur Verfügung.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">10. Gewährleistung und Mängelansprüche</h2>
+              <p className="text-muted-foreground">
+                Wir stehen für die Qualität unserer Arbeit und gewähren umfassende Gewährleistungsrechte gemäß den gesetzlichen Bestimmungen des BGB für Bauwerke.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Gewährleistungsfrist und Nachbesserung</h3>
+              <p className="text-muted-foreground">
+                Die gesetzliche Gewährleistungsfrist für Bauleistungen beträgt gemäß § 634a Abs. 1 Nr. 2 BGB fünf Jahre ab Abnahme des Werks. Innerhalb dieser Frist haben Sie Anspruch auf kostenlose Nachbesserung bei berechtigten Mängelrügen. Mängel sind uns unverzüglich schriftlich anzuzeigen, damit wir zeitnah reagieren können. Unser Ziel ist es, eventuelle Mängel schnell und unbürokratisch zu beheben.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">11. Zahlungsbedingungen</h2>
+              <p className="text-muted-foreground">
+                Unsere Zahlungsbedingungen sind transparent und fair gestaltet. Nachfolgend finden Sie alle relevanten Informationen zu Abschlagszahlungen, Schlussrechnungen und Zahlungsfristen.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Abschlagszahlungen und Schlussrechnung</h3>
+              <p className="text-muted-foreground">
+                Abschlagszahlungen werden nach Baufortschritt in Rechnung gestellt und orientieren sich am Wert der jeweils erbrachten Leistungen gemäß § 632a BGB. Bei Verbraucherbauverträgen dürfen die Abschlagszahlungen insgesamt 90 % der vereinbarten Gesamtvergütung nicht überschreiten. Die Schlussrechnung wird nach erfolgter Abnahme des Gesamtwerks gestellt und ist innerhalb von 14 Tagen zahlbar.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Zahlungsverzug und Mahnung</h3>
+              <p className="text-muted-foreground">
+                Bei Zahlungsverzug ist der Auftragnehmer berechtigt, Verzugszinsen in gesetzlicher Höhe zu verlangen. Für Verbraucher beträgt der Verzugszins 5 Prozentpunkte über dem Basiszinssatz, für Unternehmer 9 Prozentpunkte über dem Basiszinssatz gemäß §§ 288, 247 BGB. Vor Einleitung eines gerichtlichen Mahnverfahrens erfolgt in der Regel eine schriftliche Zahlungserinnerung mit angemessener Nachfrist.
+              </p>
+            </section>
+
             <section className="border-t pt-8 mt-8">
               <p className="text-sm text-muted-foreground">
                 <strong>Stand:</strong> 2026 – Diese AGB wurden gemäß den aktuellen Anforderungen für das Baugewerbe und Verbraucherschutzrecht 2026 erstellt.

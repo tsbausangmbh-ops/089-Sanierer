@@ -248,6 +248,86 @@ export default function Wohnungssanierung() {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Wohnungssanierung München – Kosten und Zeitrahmen
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Was kostet eine Wohnungssanierung pro Quadratmeter?</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Die Kosten einer Wohnungssanierung in München liegen zwischen 800€ und 1.800€ pro Quadratmeter. Eine Standardsanierung mit neuer Elektrik, Sanitär, Böden und Malerarbeiten kostet durchschnittlich 1.000€/m². Hochwertige Ausstattungen mit Eichenparkett, Designbädern und smarter Haustechnik können bis zu 2.200€/m² erreichen. Bei uns erhalten Sie vorab einen verbindlichen Festpreis.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Zeitplanung: So lange dauert eine Komplettsanierung</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Eine 60-80 m² Wohnung wird in 6-8 Wochen komplett saniert. Die exakte Dauer hängt vom Umfang der Arbeiten ab: Reine Oberflächensanierung geht schneller, eine Kernsanierung mit Grundrissänderungen kann bis zu 12 Wochen dauern. Wir erstellen einen detaillierten Bauzeitenplan, damit Sie genau wissen, wann Sie einziehen können.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Altbausanierung in München – Besonderheiten beachten
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Denkmalschutz und Altbausubstanz</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Viele Münchner Altbauten stehen unter Denkmalschutz oder Ensembleschutz. Bei der Sanierung müssen historische Elemente wie Stuckdecken, Kastenfenster oder Dielenböden erhalten oder fachgerecht restauriert werden. Wir kennen die Auflagen der Münchner Denkmalschutzbehörde und berücksichtigen diese von Anfang an in der Planung.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Energetische Sanierung im Altbau</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Altbauwohnungen in München haben häufig einen Energieverbrauch von über 200 kWh/m² pro Jahr. Durch Innendämmung, neue Fenster und eine moderne Heizungsanlage lässt sich der Verbrauch um bis zu 50% senken. Die Investition rechnet sich durch niedrigere Nebenkosten und eine deutliche Wertsteigerung der Immobilie.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Wohnungssanierung für Vermieter und Eigentümer
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="font-semibold mb-2">Wertsteigerung durch professionelle Sanierung</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Eine professionelle Komplettsanierung steigert den Marktwert Ihrer Münchner Wohnung um durchschnittlich 20-35%. Vermieter können nach einer Modernisierung bis zu 3€/m² mehr Kaltmiete verlangen. Die Sanierungskosten refinanzieren sich in der Regel innerhalb von 5-8 Jahren durch höhere Mieteinnahmen und geringere Instandhaltungskosten.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Sanierungsablauf – Von der Planung bis zur Übergabe
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Baubegleitung und Qualitätskontrolle</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Ihr persönlicher Bauleiter ist täglich auf der Baustelle und koordiniert alle Gewerke. Regelmäßige Qualitätskontrollen stellen sicher, dass jeder Arbeitsschritt den höchsten Standards entspricht. Sie erhalten wöchentliche Fortschrittsberichte mit Fotos und können jederzeit den aktuellen Stand Ihrer Sanierung einsehen.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Übergabe und Gewährleistung</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Bei der Übergabe gehen wir gemeinsam jeden Raum durch und dokumentieren den Zustand in einem Abnahmeprotokoll. Eventuelle Restarbeiten werden sofort erfasst und zeitnah erledigt. Nach der Abnahme erhalten Sie 5 Jahre Gewährleistung auf alle durchgeführten Arbeiten – für Ihre Sicherheit und Ihr gutes Gefühl.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">

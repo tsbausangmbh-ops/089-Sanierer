@@ -743,6 +743,98 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Sanierung in {data.name} – Lokale Besonderheiten
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base mb-6">
+              Jeder Münchner Stadtteil hat seine eigenen baulichen Besonderheiten. In {data.name} kennen wir die typischen Gebäudestrukturen und wissen, worauf es bei der Sanierung ankommt.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Altbaubestand und typische Sanierungsbedarfe</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Mit einem Altbauanteil von {data.altbauAnteil} weist {data.name} einen für München typischen Gebäudebestand auf. Häufige Sanierungsbedarfe sind die Erneuerung der Elektrik, die Modernisierung von Bädern und Küchen sowie die Verbesserung der Wärmedämmung. Gerade bei älteren Gebäuden ist eine gründliche Voruntersuchung auf Schadstoffe wie Asbest oder Bleileitungen unerlässlich.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Baugenehmigungen und lokale Vorschriften</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Für reine Innenraumsanierungen ist in {data.name} in der Regel keine Baugenehmigung erforderlich. Bei Eingriffen in tragende Wände, Fassadenänderungen oder Dachausbauten muss jedoch eine Genehmigung beim Baureferat der Stadt München eingeholt werden. In denkmalgeschützten Gebäuden gelten besondere Auflagen, die wir für Sie prüfen und berücksichtigen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Beliebte Sanierungsleistungen in {data.name}
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base mb-6">
+              Die Nachfrage nach Sanierungsleistungen in {data.name} ist vielfältig. Hier sind die am häufigsten angefragten Gewerke und Projekte in Ihrem Viertel.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Badsanierung – Der häufigste Sanierungswunsch</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Die Badsanierung ist in {data.name} die am häufigsten nachgefragte Einzelleistung. Veraltete Badezimmer mit kleinen Fliesen und Badewanne werden durch moderne Walk-In-Duschen, Großformatfliesen und zeitgemäße Sanitärobjekte ersetzt. Barrierefreie Umbauten gewinnen zunehmend an Bedeutung, auch bei jüngeren Eigentümern, die langfristig planen.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Küchen- und Wohnraumsanierung</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Neben dem Bad stehen Küchen- und Wohnraumsanierungen in {data.name} hoch im Kurs. Offene Grundrisse, neue Bodenbeläge und moderne Elektroinstallationen verwandeln ältere Wohnungen in zeitgemäße Lebensräume. Wir koordinieren alle Gewerke – von der Elektrik über den Trockenbau bis zu Maler- und Bodenarbeiten – für ein stimmiges Gesamtergebnis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Wertsteigerung durch Sanierung in {data.name}
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base mb-6">
+              Eine professionelle Sanierung steigert den Wert Ihrer Immobilie nachhaltig. Gerade in einem gefragten Markt wie München zahlt sich die Investition in die Modernisierung Ihrer Immobilie aus.
+            </p>
+            <div>
+              <h3 className="font-semibold mb-2">Immobilienwerte im Münchner Stadtteil</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Die Immobilienpreise in {data.name} gehören zu den höchsten in Deutschland. Eine fachgerechte Sanierung kann den Quadratmeterpreis Ihrer Immobilie um 15 bis 30 Prozent steigern. Besonders wirksam sind energetische Maßnahmen, die eine bessere Energieklasse ermöglichen, sowie die Modernisierung von Bädern und Küchen. Auch für eine spätere Vermietung erhöhen sanierte Wohnungen die erzielbaren Mietpreise deutlich.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Referenzen und Erfahrungen in {data.name}
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base mb-6">
+              Vertrauen entsteht durch Erfahrung und Ergebnisse. Wir sind stolz auf unsere zahlreichen erfolgreichen Projekte in {data.name} und der näheren Umgebung.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Unsere Projekte in der Nachbarschaft</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  In {data.name} und den angrenzenden Vierteln haben wir bereits zahlreiche Sanierungsprojekte erfolgreich umgesetzt. Von der kompletten Altbauwohnung über Badsanierungen bis hin zu aufwendigen Kernsanierungen – unsere Referenzen sprechen für sich. Gerne zeigen wir Ihnen vergleichbare Projekte in Ihrer Nachbarschaft.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Kundenstimmen aus dem Stadtteil</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Unsere Kunden in {data.name} schätzen vor allem die persönliche Betreuung, die Termintreue und die handwerkliche Qualität unserer Arbeit. Mit einer Weiterempfehlungsrate von 98 Prozent gehören wir zu den bestbewerteten Sanierungsunternehmen in München. Kurze Anfahrtswege und lokale Kenntnisse sorgen für eine reibungslose Projektabwicklung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">

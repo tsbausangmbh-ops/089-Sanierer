@@ -238,6 +238,86 @@ export default function Badsanierung() {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Badsanierung München – Kosten und Preise im Überblick
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Was kostet eine Badsanierung pro Quadratmeter?</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  In München liegen die Kosten für eine Badsanierung je nach Ausstattung zwischen 1.800€ und 3.500€ pro Quadratmeter. Eine Standardsanierung mit hochwertigen Fliesen, modernen Sanitärobjekten und neuer Elektrik kostet durchschnittlich 2.300€/m². Luxusausstattungen mit Naturstein, Regendusche und Smart-Home-Elementen können bis zu 4.000€/m² erreichen.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Kostenbeispiel: Badezimmer 8m² komplett sanieren</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Ein typisches 8m²-Bad in München kostet bei einer Komplettsanierung zwischen 18.500€ und 28.000€. Darin enthalten sind Demontage, neue Fliesen, bodengleiche Dusche, WC, Waschtisch, Armaturen, Elektrik und alle Installationsarbeiten. Bei uns erhalten Sie einen verbindlichen Festpreis – ohne Nachforderungen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Barrierefreies Bad – Zukunftssicher sanieren
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Bodengleiche Dusche nachrüsten in München</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Eine bodengleiche Dusche ist das Herzstück jeder barrierefreien Badsanierung. In Münchner Altbauten setzen wir spezielle Flachduschtassen oder geflieste Duschbereiche mit Linienablauf ein. Der Umbau dauert in der Regel 3-5 Tage und kostet zwischen 3.500€ und 6.000€ je nach baulichen Gegebenheiten.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">KfW-Förderung für barrierefreie Badsanierung</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Die KfW fördert den barrierefreien Umbau Ihres Badezimmers mit dem Programm „Altersgerecht Umbauen" (455-B) mit Zuschüssen bis zu 6.250€. Voraussetzung ist die Einhaltung der DIN 18040-2 Normen. Wir beraten Sie zur Förderfähigkeit und unterstützen bei der Antragstellung, damit Sie den maximalen Zuschuss erhalten.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Materialien und Ausstattung für Ihr neues Bad
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="font-semibold mb-2">Fliesen-Trends 2026 für Münchner Bäder</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Großformatige Fliesen in 120x60 cm oder 120x120 cm dominieren 2026 die Münchner Badgestaltung. Natürliche Farbtöne wie Greige, warmes Taupe und sanftes Salbeigrün liegen im Trend. Besonders beliebt sind Fliesen in Natursteinoptik und Betonoptik, die pflegeleicht und zeitlos wirken. Wir arbeiten mit allen namhaften Fliesenherstellern zusammen und begleiten Sie gerne in die Ausstellung.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Badsanierung in Münchner Stadtteilen
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Badsanierung in Altbauwohnungen</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Altbauten in Schwabing, Maxvorstadt oder Haidhausen stellen besondere Anforderungen an die Badsanierung. Oft müssen Steigleitungen erneuert, Holzbalkendecken verstärkt und unebene Böden ausgeglichen werden. Unsere Handwerker kennen die typischen Altbau-Herausforderungen in München und finden für jede Situation die passende Lösung.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Badsanierung in Neubauten und modernen Wohnungen</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Auch in neueren Münchner Wohnungen lohnt sich eine Badsanierung – etwa wenn das Bad nach 15-20 Jahren nicht mehr zeitgemäß ist. In Neubauten in Riem, Freiham oder Obersendling sind die Voraussetzungen ideal: Moderne Leitungen, gerade Wände und ausreichende Raumhöhe ermöglichen eine schnelle und kostengünstige Umsetzung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">

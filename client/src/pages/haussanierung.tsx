@@ -246,6 +246,86 @@ export default function Haussanierung() {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Haussanierung München – Kosten und Finanzierung
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Sanierungskosten pro Quadratmeter in München</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Die Kosten für eine Haussanierung in München variieren je nach Umfang zwischen 920€ und 2.500€ pro Quadratmeter. Eine Standardsanierung mit neuer Elektrik, Sanitär, Heizung und Innenausbau liegt bei ca. 1.200€/m². Eine Kernsanierung bis auf den Rohbau kann 1.800-2.500€/m² kosten – immer noch deutlich günstiger als ein Neubau mit 3.500-4.500€/m².
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">KfW-Förderung und BAFA-Zuschüsse nutzen</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Die KfW bietet für energetische Sanierungen zinsgünstige Kredite bis 150.000€ pro Wohneinheit mit Tilgungszuschüssen von bis zu 45%. Das BAFA bezuschusst den Heizungstausch mit bis zu 70% der förderfähigen Kosten. Wir arbeiten mit zertifizierten Energieberatern zusammen und helfen Ihnen, die maximale Fördersumme zu sichern.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Energetische Haussanierung – Pflicht und Chance
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Gebäudeenergiegesetz (GEG) 2026 – Was Eigentümer wissen müssen</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Das GEG verpflichtet Hauseigentümer bei umfassenden Sanierungen zur Einhaltung bestimmter energetischer Mindeststandards. Ab 2026 gelten verschärfte Anforderungen an den Primärenergiebedarf. Wer jetzt saniert, kann die Vorgaben vorausschauend erfüllen und profitiert von deutlich niedrigeren Heizkosten – häufig bis zu 60% Einsparung gegenüber dem unsanierten Zustand.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Wärmedämmung, Fenster und Heizungstausch</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Die drei wichtigsten Maßnahmen der energetischen Sanierung sind Wärmedämmung (Fassade, Dach, Kellerdecke), neue Fenster mit Dreifachverglasung und ein modernes Heizsystem. Eine Wärmepumpe in Kombination mit Photovoltaik senkt die Heizkosten drastisch. Wir planen die Maßnahmen aufeinander abgestimmt, damit Sie den optimalen Energiestandard erreichen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Fassadensanierung und Außenarbeiten
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="font-semibold mb-2">WDVS-Fassadendämmung in München</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Ein Wärmedämmverbundsystem (WDVS) ist die effektivste Methode zur Fassadendämmung. In München kostet eine WDVS-Fassadendämmung zwischen 120€ und 220€ pro Quadratmeter Fassadenfläche, je nach Dämmstärke und Material. Die Investition amortisiert sich durch Heizkosteneinsparungen in der Regel innerhalb von 8-12 Jahren und steigert den Immobilienwert nachhaltig.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Haussanierung nach Baujahr – Was ist zu beachten?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Häuser der 60er und 70er Jahre sanieren</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Häuser aus den 1960er und 1970er Jahren haben häufig Flachdächer, einschalige Außenwände ohne Dämmung und veraltete Elektro- sowie Sanitärinstallationen. Asbest in Fassadenplatten oder Bodenbelägen muss fachgerecht entfernt werden. Eine Komplettsanierung dieser Häuser bringt enorme Energieeinsparungen und verwandelt sie in moderne, komfortable Wohnhäuser.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Häuser der 80er und 90er Jahre modernisieren</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Häuser aus den 1980er und 1990er Jahren haben oft bereits eine Grunddämmung, aber Fenster, Heizungsanlage und Bäder sind nach 30-40 Jahren erneuerungsbedürftig. Der Sanierungsaufwand ist in der Regel geringer als bei älteren Häusern. Typische Maßnahmen sind Fenstertausch, Heizungsmodernisierung, Badsanierung und die Erneuerung der Elektroverteilung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">

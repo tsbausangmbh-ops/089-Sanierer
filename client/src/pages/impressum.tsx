@@ -225,6 +225,69 @@ export default function Impressum() {
               </p>
             </section>
 
+            <section>
+              <h2 className="text-xl font-bold mb-4">Unternehmensangaben gemäß §5 TMG</h2>
+              <p className="text-muted-foreground">
+                Nachfolgend finden Sie weiterführende Informationen zu den Gewerbeanmeldungen und berufsrechtlichen Grundlagen unserer Tätigkeit im Bereich Komplettsanierung in München.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Handelsregistereintrag und Gewerbeanmeldung</h3>
+              <p className="text-muted-foreground">
+                Beide Gewerbebetriebe sind ordnungsgemäß beim zuständigen Gewerbeamt der Landeshauptstadt München angemeldet. Die Gewerbeanmeldungen umfassen sämtliche Tätigkeiten im Bereich Bau, Sanierung, Renovierung und Projektkoordination. Eine Eintragung im Handelsregister liegt derzeit nicht vor, da es sich um Einzelunternehmen handelt, die nicht handelsregisterpflichtig sind.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Berufsrechtliche Regelungen</h3>
+              <p className="text-muted-foreground">
+                Für die ausgeführten Tätigkeiten gelten die Bestimmungen der Handwerksordnung (HwO) sowie die jeweiligen Landesregelungen des Freistaats Bayern. Meisterpflichtige Gewerke werden ausschließlich durch eingetragene Meisterbetriebe unseres Partnernetzwerks ausgeführt. Die zuständige Aufsichtsbehörde ist die Handwerkskammer für München und Oberbayern, Max-Joseph-Straße 4, 80333 München.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Haftungsausschluss (Disclaimer)</h2>
+              <p className="text-muted-foreground">
+                Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Haftung für Inhalte</h3>
+              <p className="text-muted-foreground">
+                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Haftung für Links</h3>
+              <p className="text-muted-foreground">
+                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Urheberrecht und Bildrechte</h2>
+              <p className="text-muted-foreground">
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Nutzung der Inhalte</h3>
+              <p className="text-muted-foreground">
+                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold mb-4">Streitschlichtung</h2>
+              <p className="text-muted-foreground">
+                Wir sind grundsätzlich bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Nachfolgend finden Sie Informationen zur Online-Streitbeilegung und zur zuständigen Verbraucherschlichtungsstelle.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Online-Streitbeilegung</h3>
+              <p className="text-muted-foreground">
+                Die Europäische Kommission hat die Online-Streitbeilegungsplattform (OS-Plattform) gemäß Verordnung (EU) 2024/3228 zum 20. Juli 2025 eingestellt. Damit steht dieses Verfahren zur außergerichtlichen Beilegung von Streitigkeiten nicht mehr zur Verfügung. Für Beschwerden stehen Ihnen weiterhin die unten genannten Schlichtungsstellen sowie der ordentliche Rechtsweg zur Verfügung.
+              </p>
+
+              <h3 className="text-lg font-semibold mb-2 mt-6">Verbraucherschlichtungsstelle</h3>
+              <p className="text-muted-foreground">
+                Die zuständige Verbraucherschlichtungsstelle ist die Schlichtungsstelle für den Bereich Handwerk bei den Bayerischen Handwerkskammern. Bei Streitigkeiten aus Werkverträgen im Handwerksbereich können Sie sich an diese Stelle wenden. Die Teilnahme an einem Schlichtungsverfahren ist für beide Parteien freiwillig, wir sind jedoch grundsätzlich zur Teilnahme bereit.
+              </p>
+            </section>
+
             <section className="border-t pt-8 mt-8">
               <p className="text-sm text-muted-foreground">
                 <strong>Stand:</strong> Januar 2026 – Impressum gemäß § 5 DDG und aktuellen Anforderungen für Handwerksbetriebe.

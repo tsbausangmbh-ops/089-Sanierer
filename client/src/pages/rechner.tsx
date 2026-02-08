@@ -843,6 +843,64 @@ export default function RechnerPage() {
         </section>
       </main>
 
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierungskosten berechnen – So nutzen Sie unseren Rechner</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Eingabewerte richtig einschätzen</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Für ein möglichst genaues Ergebnis sollten Sie die Wohnfläche Ihrer Immobilie kennen. Diese finden Sie in Ihrem Mietvertrag, Grundrissplan oder der Teilungserklärung. Schätzen Sie die Fläche eher großzügig, um spätere Überraschungen zu vermeiden. Auch der aktuelle Zustand der Räume beeinflusst die Sanierungskosten erheblich – Altbauten erfordern beispielsweise oft umfangreichere Elektro- und Sanitärarbeiten.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Was ist im Berechnungsergebnis enthalten?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Unser Rechner kalkuliert auf Basis aktueller Münchner Marktpreise 2026 und berücksichtigt Material-, Arbeits- und Entsorgungskosten. Die angezeigten Preise verstehen sich als Netto-Richtwerte. Im verbindlichen Festpreisangebot sind alle Leistungen detailliert aufgeschlüsselt – inklusive Anfahrt, Bauschutt-Entsorgung und Endreinigung.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Kostenfaktoren bei der Sanierung in München</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Materialkosten vs. Arbeitskosten</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Bei einer typischen Sanierung in München entfallen etwa 40–50 % der Gesamtkosten auf Materialien und 50–60 % auf Handwerkerleistungen. Hochwertige Materialien wie Naturstein-Fliesen oder Marken-Armaturen können den Materialanteil deutlich erhöhen. Unsere Meisterbetriebe arbeiten mit bewährten Lieferanten zusammen und geben Einkaufsvorteile direkt an Sie weiter.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Regionale Preisunterschiede in Bayern</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">München gehört zu den teuersten Standorten für Sanierungsarbeiten in Deutschland. Die Handwerkerkosten liegen hier etwa 15–25 % über dem bayerischen Durchschnitt. Gründe dafür sind höhere Lebenshaltungskosten, Fachkräftemangel und strenge Bauvorschriften. Unser Rechner berücksichtigt diese regionalen Besonderheiten und liefert realistische Münchner Marktpreise.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Vom Kostenvoranschlag zum Festpreisangebot</h2>
+          <div className="max-w-3xl mx-auto">
+            <h3 className="font-semibold mb-2">Warum Online-Rechner nur Richtwerte liefern</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">Jede Immobilie ist einzigartig – versteckte Mängel, besondere Grundrisse oder denkmalschutzrechtliche Auflagen können die tatsächlichen Kosten beeinflussen. Unser Online-Rechner gibt Ihnen eine fundierte Ersteinschätzung, ersetzt aber keine professionelle Vor-Ort-Besichtigung. Nach einer kostenlosen Begehung durch unseren Bauleiter erhalten Sie ein verbindliches Festpreisangebot – ohne Nachforderungen und ohne Kleingedrucktes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Spartipps für Ihre Sanierung</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Eigenleistung – Wo lohnt es sich?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Einfache Arbeiten wie das Entfernen von Tapeten, Malerarbeiten oder das Ausräumen von Räumen können Sie selbst übernehmen und so Kosten sparen. Bei Elektro-, Sanitär- und Heizungsarbeiten sollten Sie jedoch immer auf zertifizierte Fachbetriebe setzen – fehlerhafte Installationen können zu Sicherheitsrisiken und teuren Folgeschäden führen.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Fördermittel optimal kombinieren</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Für energetische Sanierungen stehen zahlreiche Förderprogramme von KfW und BAFA zur Verfügung. Die Zuschüsse können bis zu 45 % der förderfähigen Kosten betragen. Wichtig ist, die Förderanträge vor Beginn der Sanierung zu stellen. Unser Team unterstützt Sie bei der Antragstellung und hilft Ihnen, verschiedene Programme optimal zu kombinieren.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <SeoFooter />
     </div>
   );

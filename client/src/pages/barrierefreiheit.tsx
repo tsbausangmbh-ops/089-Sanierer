@@ -224,6 +224,77 @@ export default function Barrierefreiheit() {
               </CardContent>
             </Card>
 
+            <Card className="mb-8">
+              <CardContent className="pt-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Unser Engagement für Barrierefreiheit</h2>
+                <p className="text-muted-foreground mb-4">
+                  Barrierefreiheit ist für uns kein einmaliges Projekt, sondern ein kontinuierlicher Prozess. Wir verpflichten uns, unsere digitalen Angebote stetig zu verbessern und allen Nutzern einen gleichberechtigten Zugang zu ermöglichen.
+                </p>
+
+                <h3 className="font-semibold mb-2">WCAG 2.1 Konformitätsstufe</h3>
+                <p className="text-muted-foreground mb-4">
+                  Unsere Website orientiert sich an den Web Content Accessibility Guidelines (WCAG) 2.1 auf Konformitätsstufe AA. Diese Stufe stellt sicher, dass Inhalte für eine möglichst breite Gruppe von Nutzern zugänglich sind, einschließlich Menschen mit Seh-, Hör-, motorischen und kognitiven Einschränkungen. Wir arbeiten daran, in Zukunft auch einzelne Kriterien der Stufe AAA zu erfüllen.
+                </p>
+
+                <h3 className="font-semibold mb-2">Regelmäßige Überprüfung und Verbesserung</h3>
+                <p className="text-muted-foreground">
+                  Wir führen regelmäßige Barrierefreiheitstests durch, sowohl automatisiert als auch manuell mit assistiven Technologien. Bei jeder Aktualisierung der Website werden die neuen Inhalte und Funktionen auf ihre Zugänglichkeit geprüft. Erkannte Barrieren werden priorisiert und zeitnah behoben.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="mb-8">
+              <CardContent className="pt-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Barrierefreie Funktionen dieser Website</h2>
+                <p className="text-muted-foreground mb-4">
+                  Unsere Website verfügt über zahlreiche Funktionen, die die Nutzung für Menschen mit unterschiedlichen Einschränkungen erleichtern.
+                </p>
+
+                <h3 className="font-semibold mb-2">Tastaturnavigation und Screenreader</h3>
+                <p className="text-muted-foreground mb-4">
+                  Alle interaktiven Elemente unserer Website sind vollständig per Tastatur bedienbar. Die Tabulatorreihenfolge folgt einer logischen Struktur, sodass Nutzer effizient durch die Seite navigieren können. Für Screenreader-Nutzer sind alle Inhalte mit semantischem HTML, ARIA-Labels und beschreibenden Alt-Texten für Bilder ausgestattet.
+                </p>
+
+                <h3 className="font-semibold mb-2">Kontraste und Schriftgrößen</h3>
+                <p className="text-muted-foreground">
+                  Alle Texte auf unserer Website erfüllen die WCAG-Mindestanforderungen für Farbkontraste (4,5:1 für normalen Text, 3:1 für großen Text). Die Schriftgrößen sind in relativen Einheiten definiert, sodass sie über die Browser-Einstellungen individuell angepasst werden können. Die Website passt sich automatisch an verschiedene Bildschirmgrößen und Vergrößerungsstufen an.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="mb-8">
+              <CardContent className="pt-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Barrierefreies Bauen und Sanieren</h2>
+                <p className="text-muted-foreground mb-4">
+                  Neben der digitalen Barrierefreiheit liegt uns auch die physische Barrierefreiheit am Herzen. Als Sanierungsunternehmen in München beraten und unterstützen wir Sie bei der barrierefreien Gestaltung Ihrer Wohn- und Geschäftsräume.
+                </p>
+
+                <h3 className="font-semibold mb-2">Barrierefreie Badsanierung nach DIN 18040</h3>
+                <p className="text-muted-foreground">
+                  Wir planen und realisieren barrierefreie Bäder gemäß DIN 18040-2 für Wohnungen und DIN 18040-1 für öffentlich zugängliche Gebäude. Dazu gehören bodengleiche Duschen, unterfahrbare Waschtische, ausreichende Bewegungsflächen und rutschfeste Bodenbeläge. Unsere Experten beraten Sie umfassend zu Fördermöglichkeiten durch KfW-Programme und Pflegekassen für den barrierefreien Umbau.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="mb-8">
+              <CardContent className="pt-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4">Feedback und Kontakt zur Barrierefreiheit</h2>
+                <p className="text-muted-foreground mb-4">
+                  Ihre Rückmeldungen sind uns wichtig, um die Barrierefreiheit unserer Website kontinuierlich zu verbessern. Nachfolgend finden Sie Informationen, wie Sie uns Barrieren melden können und an welche Stelle Sie sich bei Bedarf wenden können.
+                </p>
+
+                <h3 className="font-semibold mb-2">Melden Sie Barrieren</h3>
+                <p className="text-muted-foreground mb-4">
+                  Wenn Sie auf unserer Website auf Barrieren stoßen oder Schwierigkeiten bei der Nutzung haben, teilen Sie uns dies bitte mit. Senden Sie eine E-Mail an info@089-sanierer.de mit einer Beschreibung des Problems. Wir werden uns innerhalb von fünf Werktagen bei Ihnen melden und eine Lösung erarbeiten.
+                </p>
+
+                <h3 className="font-semibold mb-2">Durchsetzungsstelle für digitale Barrierefreiheit</h3>
+                <p className="text-muted-foreground">
+                  Sollten Sie mit unserer Reaktion auf Ihre Anfrage nicht zufrieden sein, können Sie sich an die zuständige Durchsetzungsstelle wenden. Für Bayern ist das Landesamt für Digitalisierung, Breitband und Vermessung zuständig. Dort können Sie ein Durchsetzungsverfahren gemäß Art. 2 BayDiG einleiten, um die Barrierefreiheit unserer Website überprüfen zu lassen.
+                </p>
+              </CardContent>
+            </Card>
+
             <div className="mt-8 text-center">
               <Link href="/kontakt">
                 <Button size="lg" data-testid="button-contact-accessibility">

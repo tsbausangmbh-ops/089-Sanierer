@@ -257,6 +257,86 @@ export default function Kosten() {
           </div>
         </section>
 
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Sanierungskosten München 2026 – Aktuelle Preise
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Preisentwicklung bei Baumaterialien</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Die Materialpreise in der Baubranche haben sich seit 2022 auf einem erhöhten Niveau stabilisiert. Besonders Holz, Dämmstoffe und Sanitärkeramik unterliegen weiterhin Preisschwankungen. Durch langfristige Lieferantenverträge und Großbestellungen können wir stabile Preise für unsere Kunden sichern. In unserem Festpreisangebot sind alle Materialkosten bereits enthalten – unabhängig von Marktentwicklungen.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Handwerkerkosten in München vs. Umland</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Handwerkerstunden in München liegen durchschnittlich 15-25% über dem bayerischen Durchschnitt. Das erklärt sich durch höhere Lebenshaltungskosten, Anfahrtswege und die starke Nachfrage. Im direkten Umland wie Dachau, Freising oder Erding sind die Stundensätze etwas niedriger. Als Münchner Generalunternehmer bündeln wir alle Gewerke effizient und geben Einsparungen direkt an Sie weiter.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Förderungen und Finanzierung der Sanierung
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">KfW-Kredit und BAFA-Zuschuss beantragen</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Für energetische Sanierungen stehen attraktive Förderprogramme zur Verfügung. Die KfW bietet zinsgünstige Kredite bis 150.000 Euro pro Wohneinheit mit Tilgungszuschüssen von bis zu 25%. Das BAFA bezuschusst Einzelmaßnahmen wie Heizungstausch oder Dämmung mit bis zu 40% der Kosten. Wir unterstützen Sie bei der Antragstellung und stellen sicher, dass alle förderfähigen Maßnahmen berücksichtigt werden.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Steuerliche Absetzbarkeit von Sanierungskosten</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Energetische Sanierungsmaßnahmen an selbstgenutztem Wohnraum können über drei Jahre mit bis zu 20% der Kosten steuerlich abgesetzt werden. Bei vermieteten Objekten sind Sanierungskosten als Werbungskosten oder Herstellungskosten absetzbar. Denkmalgeschützte Gebäude bieten zusätzliche Abschreibungsmöglichkeiten von bis zu 90% der Sanierungskosten über 12 Jahre. Sprechen Sie uns an – wir beraten Sie gemeinsam mit Ihrem Steuerberater.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-accent/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Versteckte Kosten bei der Sanierung vermeiden
+            </h2>
+            <div>
+              <h3 className="font-semibold mb-2">Typische Kostenfallen und wie Sie sich schützen</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                Die häufigsten Kostenfallen bei Sanierungen sind unzureichende Voruntersuchungen, fehlende Leistungsverzeichnisse und ungenaue Kostenvoranschläge. Verdeckte Mängel wie Schimmel hinter Verkleidungen, marode Leitungen oder Asbest-Altlasten können erhebliche Mehrkosten verursachen. Wir führen vor jedem Projekt eine gründliche Bestandsaufnahme durch und dokumentieren den Zustand des Gebäudes. Unser Festpreisangebot schützt Sie vor unkalkulierbaren Nachforderungen – der genannte Preis gilt verbindlich.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4 lg:py-6 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
+              Sanierungskosten nach Gewerk aufgeschlüsselt
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold mb-2">Rohbau und Trockenbau Kosten</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Rohbauarbeiten wie Wanddurchbrüche, Mauererneuerungen und statische Verstärkungen kosten in München zwischen 80 und 200 Euro pro Quadratmeter. Trockenbauarbeiten für neue Wände, Deckenverkleidungen und Installationsschächte liegen bei 40 bis 90 Euro pro Quadratmeter. Die genauen Kosten hängen von der Komplexität der Arbeiten und den verwendeten Materialien ab. In unserem Angebot schlüsseln wir jeden Posten transparent auf.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Elektro, Sanitär und Heizung Kosten</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Die Erneuerung der Elektroinstallation kostet bei einer Komplettsanierung durchschnittlich 80 bis 150 Euro pro Quadratmeter. Neue Sanitärinstallationen inklusive Leitungen und Anschlüsse liegen bei 60 bis 120 Euro pro Quadratmeter. Eine moderne Heizungsanlage mit Fußbodenheizung schlägt mit 100 bis 180 Euro pro Quadratmeter zu Buche. Diese Investitionen in die Haustechnik steigern den Wohnkomfort erheblich und senken langfristig die Energiekosten.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 lg:py-10 bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-4">

@@ -981,34 +981,119 @@ export default function Ratgeber() {
             </section>
 
           </div>
-
-          <div className="mt-16 text-center">
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="pt-8 pb-8">
-                <h2 className="text-lg sm:text-xl font-bold mb-4">Bereit für Ihre <span className="text-accent">Sanierung</span> in <span className="text-accent">München</span>?</h2>
-                <p className="mb-6 opacity-90">
-                  Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
-                </p>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-                  <Link href="/termin" className="w-full sm:w-auto">
-                    <Button size="lg" className="w-full sm:w-auto min-h-12 gap-2 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 text-xs sm:text-sm" data-testid="button-ratgeber-booking">
-                      <Calendar className="w-5 h-5 flex-shrink-0" />
-                      24 Std. Online Termin
-                    </Button>
-                  </Link>
-                  <Link href="/anfrage" className="w-full sm:w-auto">
-                    <Button size="lg" variant="secondary" className="w-full sm:w-auto min-h-12 gap-2 text-xs sm:text-sm" data-testid="button-ratgeber-cta">
-                      Jetzt kostenlos anfragen
-                      <ArrowRight className="w-5 h-5 flex-shrink-0" />
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
         </div>
       </main>
+
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung richtig planen – Checkliste für Eigentümer</h2>
+          <p className="text-muted-foreground text-sm sm:text-base mb-6">
+            Eine erfolgreiche Sanierung beginnt mit einer gründlichen Planung. Wer vorher die richtigen Fragen stellt und alle relevanten Punkte berücksichtigt, spart am Ende Zeit, Geld und Nerven. Unsere Checkliste hilft Ihnen dabei, Ihr Sanierungsprojekt in München strukturiert anzugehen.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Bestandsaufnahme und Zustandsbewertung</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Bevor Sie mit der Sanierung beginnen, sollten Sie den aktuellen Zustand Ihrer Immobilie genau dokumentieren. Lassen Sie Bausubstanz, Elektrik, Leitungen und Dämmung von einem Fachmann prüfen. Eine professionelle Bestandsaufnahme deckt versteckte Mängel auf und bildet die Grundlage für eine realistische Kostenschätzung.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Prioritäten setzen – Was muss zuerst saniert werden?</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Nicht alles muss sofort gemacht werden. Sicherheitsrelevante Mängel wie defekte Elektrik oder Feuchtigkeitsschäden haben immer Vorrang. Danach folgen energetische Maßnahmen wie Dämmung und Heizungstausch, die sich langfristig durch Einsparungen amortisieren. Kosmetische Arbeiten wie neue Böden oder Malerarbeiten können oft in einer späteren Phase erfolgen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Handwerker finden in München – Worauf achten?</h2>
+          <p className="text-muted-foreground text-sm sm:text-base mb-6">
+            Die Wahl des richtigen Handwerkers entscheidet über Qualität, Kosten und Termintreue Ihres Sanierungsprojekts. In München gibt es zahlreiche Anbieter – doch nicht alle halten, was sie versprechen. Hier erfahren Sie, worauf Sie achten sollten.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Seriöse Handwerker erkennen</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Achten Sie auf eine gültige Handwerkskammer-Eintragung und Meisterqualifikation. Seriöse Betriebe bieten Ihnen Referenzen aus der Region, haben eine transparente Preisgestaltung und schließen verbindliche Verträge ab. Lassen Sie sich Versicherungsnachweise zeigen und prüfen Sie Online-Bewertungen auf unabhängigen Portalen.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Angebote vergleichen – So geht's richtig</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Holen Sie mindestens drei Angebote ein und vergleichen Sie nicht nur den Endpreis. Achten Sie auf den Leistungsumfang, die verwendeten Materialien und ob Nebenkosten wie Entsorgung oder Anfahrt enthalten sind. Ein detailliertes Leistungsverzeichnis ermöglicht einen fairen Vergleich und schützt Sie vor bösen Überraschungen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung während der Bewohnung – Tipps</h2>
+          <p className="text-muted-foreground text-sm sm:text-base mb-6">
+            Viele Eigentümer möchten während der Sanierung in ihrer Wohnung bleiben. Das ist bei kleineren Maßnahmen oft möglich, erfordert aber eine gute Organisation und klare Absprachen mit dem Handwerksteam.
+          </p>
+          <div>
+            <h3 className="font-semibold mb-2">Baustelleneinrichtung und Staubschutz</h3>
+            <p className="text-muted-foreground text-sm sm:text-base">
+              Professioneller Staubschutz ist unverzichtbar, wenn Sie während der Sanierung in Ihrem Zuhause bleiben. Staubschutzwände aus Folie trennen den Baubereich von den Wohnräumen ab und verhindern die Ausbreitung von Feinstaub. Empfindliche Möbel und Böden sollten mit Abdeckvlies geschützt werden. Planen Sie außerdem feste Arbeitszeiten mit dem Handwerksteam, damit Sie Ihren Alltag weiterführen können.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Nachhaltigkeit bei der Sanierung</h2>
+          <p className="text-muted-foreground text-sm sm:text-base mb-6">
+            Nachhaltiges Sanieren schont nicht nur die Umwelt, sondern senkt langfristig auch Ihre Betriebskosten. Immer mehr Eigentümer in München setzen auf ökologische Baustoffe und energieeffiziente Lösungen bei der Modernisierung ihrer Immobilie.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Ökologische Baustoffe und Recycling</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Bei der Wahl der Baustoffe können Sie einen großen Beitrag zur Nachhaltigkeit leisten. Naturmaterialien wie Holzfaserdämmung, Kalkputz oder Lehmfarben bieten eine gesunde Wohnumgebung und sind umweltfreundlich. Alte Materialien wie Holz, Metall und Ziegel können häufig recycelt oder wiederverwendet werden, was die Entsorgungskosten senkt und Ressourcen schont.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Energieeffizienz langfristig steigern</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Eine gut geplante energetische Sanierung reduziert den Energieverbrauch Ihrer Immobilie um bis zu 70 Prozent. Investieren Sie in hochwertige Dämmung, moderne Fenster mit Dreifachverglasung und eine effiziente Heizungsanlage. Die höheren Anfangsinvestitionen amortisieren sich durch deutlich niedrigere Heizkosten und attraktive staatliche Förderungen wie KfW-Kredite und BAFA-Zuschüsse.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="bg-primary text-primary-foreground">
+            <CardContent className="pt-8 pb-8">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 text-center">Bereit für Ihre <span className="text-accent">Sanierung</span> in <span className="text-accent">München</span>?</h2>
+              <p className="mb-6 opacity-90 text-center">
+                Unverbindliches Angebot, ehrliche Beratung, transparente Preise – starten Sie jetzt Ihr Projekt in München.
+              </p>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+                <Link href="/termin" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto min-h-12 gap-2 bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-500 text-xs sm:text-sm" data-testid="button-ratgeber-booking">
+                    <Calendar className="w-5 h-5 flex-shrink-0" />
+                    24 Std. Online Termin
+                  </Button>
+                </Link>
+                <Link href="/anfrage" className="w-full sm:w-auto">
+                  <Button size="lg" variant="secondary" className="w-full sm:w-auto min-h-12 gap-2 text-xs sm:text-sm" data-testid="button-ratgeber-cta">
+                    Jetzt kostenlos anfragen
+                    <ArrowRight className="w-5 h-5 flex-shrink-0" />
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
 
       <InternalLinks links={linkSets.fromRatgeber} />
       <SeoFooter />

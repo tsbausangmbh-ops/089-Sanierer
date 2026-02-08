@@ -344,6 +344,69 @@ export default function Datenschutz() {
               </p>
             </section>
 
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">12. Datenerhebung auf dieser Website</h2>
+              <p className="text-muted-foreground">
+                Auf unserer Website werden verschiedene Daten erhoben, die für den technischen Betrieb und die Verbesserung unseres Angebots erforderlich sind. Nachfolgend erläutern wir die einzelnen Erhebungsvorgänge im Detail.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Server-Log-Dateien</h3>
+              <p className="text-muted-foreground">
+                Bei jedem Zugriff auf unsere Website werden automatisch Informationen in Server-Log-Dateien gespeichert, die Ihr Browser automatisch übermittelt. Dazu gehören unter anderem die IP-Adresse, der verwendete Browser und das Betriebssystem, die Referrer-URL sowie Datum und Uhrzeit des Zugriffs. Diese Daten werden ausschließlich zur Sicherstellung eines störungsfreien Betriebs der Website und zur Verbesserung unseres Angebots ausgewertet. Eine Zusammenführung mit anderen Datenquellen findet nicht statt. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Kontaktformular und Anfragen</h3>
+              <p className="text-muted-foreground">
+                Wenn Sie uns über das Kontaktformular oder per E-Mail eine Anfrage senden, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Nachricht) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrages zusammenhängt, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO bei berechtigtem Interesse an der Bearbeitung Ihrer Anfrage.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">13. Cookies und Tracking-Technologien</h2>
+              <p className="text-muted-foreground">
+                Unsere Website verwendet Cookies und ähnliche Tracking-Technologien, um die Benutzererfahrung zu verbessern und statistische Auswertungen zu ermöglichen. Detaillierte Informationen finden Sie auch in unserer <Link href="/cookies" className="text-primary hover:underline">Cookie-Richtlinie</Link>.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Technisch notwendige Cookies</h3>
+              <p className="text-muted-foreground">
+                Technisch notwendige Cookies sind für den ordnungsgemäßen Betrieb unserer Website unerlässlich. Sie ermöglichen grundlegende Funktionen wie die Seitennavigation und den Zugriff auf geschützte Bereiche. Diese Cookies werden ohne Ihre Einwilligung gesetzt, da die Website ohne sie nicht funktionieren würde. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Analyse-Tools und Reichweitenmessung</h3>
+              <p className="text-muted-foreground">
+                Wir setzen Analyse-Tools ein, um die Nutzung unserer Website statistisch auszuwerten und unser Angebot zu verbessern. Die dabei verwendeten Cookies werden nur nach Ihrer ausdrücklichen Einwilligung gesetzt. Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen auf unserer Website widerrufen. Die Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">14. Ihre Rechte als Betroffener</h2>
+              <p className="text-muted-foreground">
+                Nach der Datenschutz-Grundverordnung stehen Ihnen umfassende Rechte hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten zu. Diese Rechte können Sie jederzeit gegenüber uns geltend machen.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Auskunft, Berichtigung und Löschung</h3>
+              <p className="text-muted-foreground">
+                Sie haben das Recht, jederzeit unentgeltlich Auskunft über die bei uns gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO). Darüber hinaus können Sie die Berichtigung unrichtiger Daten (Art. 16 DSGVO) sowie die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen (Art. 17 DSGVO). Zur Ausübung dieser Rechte genügt eine formlose Mitteilung an die im Impressum angegebene Kontaktadresse.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg sm:text-xl font-bold mb-6 text-primary">15. Datensicherheit und technische Maßnahmen</h2>
+              <p className="text-muted-foreground">
+                Wir setzen umfangreiche technische und organisatorische Maßnahmen ein, um Ihre personenbezogenen Daten vor unberechtigtem Zugriff, Verlust oder Missbrauch zu schützen.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">SSL/TLS-Verschlüsselung</h3>
+              <p className="text-muted-foreground">
+                Unsere Website nutzt eine SSL- bzw. TLS-Verschlüsselung für die sichere Übertragung aller Daten. Dies gewährleistet, dass Ihre Eingaben – insbesondere bei Kontaktformularen und Anfragen – verschlüsselt an unseren Server übermittelt werden. Eine verschlüsselte Verbindung erkennen Sie am Schloss-Symbol in der Browserleiste und am Präfix „https://" in der Adresszeile.
+              </p>
+
+              <h3 className="text-xl font-bold mb-4 mt-6">Auftragsverarbeitung nach Art. 28 DSGVO</h3>
+              <p className="text-muted-foreground">
+                Mit allen externen Dienstleistern, die in unserem Auftrag personenbezogene Daten verarbeiten, haben wir Verträge zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO abgeschlossen. Diese Verträge stellen sicher, dass unsere Partner Ihre Daten ausschließlich nach unseren Weisungen und unter Einhaltung der geltenden Datenschutzbestimmungen verarbeiten. Regelmäßige Überprüfungen stellen die Einhaltung der vereinbarten Sicherheitsstandards sicher.
+              </p>
+            </section>
+
             <section className="border-t pt-8 mt-8">
               <p className="text-sm text-muted-foreground">
                 <strong>Stand:</strong> 2026 – Diese Datenschutzerklärung wurde gemäß den aktuellen Anforderungen der DSGVO und des TDDDG erstellt.

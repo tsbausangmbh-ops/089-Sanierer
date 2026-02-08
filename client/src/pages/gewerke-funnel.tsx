@@ -1094,6 +1094,64 @@ export default function GewerkeFunnel() {
         </div>
       </main>
 
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Handwerker-Vermittlung in München – So funktioniert's</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Qualifizierte Fachbetriebe aus der Region</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Unser Netzwerk umfasst über 50 geprüfte Meisterbetriebe aus München und dem Großraum. Jeder Betrieb wird vor der Aufnahme persönlich besucht und auf Qualifikation, Zuverlässigkeit und Kundenzufriedenheit geprüft. Wir vermitteln ausschließlich Fachbetriebe mit Meisterbrief und nachweisbarer Erfahrung in ihrem jeweiligen Gewerk.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Transparente Preise ohne Vermittlungsgebühr</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Für Sie als Kunde fallen keine Vermittlungsgebühren an – unsere Dienstleistung ist für Auftraggeber vollständig kostenlos. Die Handwerkerpreise entsprechen den regulären Marktpreisen, es gibt keine versteckten Aufschläge. Sie erhalten ein transparentes Festpreisangebot, das alle Leistungen detailliert aufschlüsselt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Verfügbare Gewerke und Fachbereiche</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Sanitär, Elektro und Heizung</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Unsere Sanitär-Meisterbetriebe übernehmen alle Arbeiten rund um Wasseranschlüsse, Abwasser und Badinstallationen. Die Elektrofachbetriebe führen VDE-konforme Neuinstallationen und Erweiterungen durch. Im Bereich Heizung vermitteln wir Spezialisten für Wärmepumpen, Gas- und Ölheizungen sowie Fußbodenheizungssysteme.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Maler, Fliesenleger und Trockenbau</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Unsere Maler- und Lackiererbetriebe kümmern sich um Wand- und Deckengestaltung, Fassadenanstriche und Tapezierarbeiten. Erfahrene Fliesenleger verlegen Fliesen, Naturstein und Mosaik in allen Räumen. Für Trockenbauarbeiten wie Ständerwände, abgehängte Decken und Dachausbau stehen spezialisierte Fachbetriebe bereit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Qualitätssicherung bei der Handwerker-Vermittlung</h2>
+          <div className="max-w-3xl mx-auto">
+            <h3 className="font-semibold mb-2">Bewertungssystem und Referenzen</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">Nach Abschluss jedes Auftrags bitten wir unsere Kunden um eine Bewertung des vermittelten Handwerkers. Diese Bewertungen fließen in unser internes Qualitätsranking ein. Betriebe, die wiederholt negative Rückmeldungen erhalten, werden aus unserem Netzwerk ausgeschlossen. So garantieren wir dauerhaft hohe Qualitätsstandards für alle vermittelten Gewerke.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Häufige Fragen zur Handwerker-Vermittlung</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Wie schnell wird ein Handwerker vermittelt?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">In der Regel erhalten Sie innerhalb von 24 Stunden ein passendes Angebot von einem qualifizierten Fachbetrieb. Bei Standardgewerken wie Maler- oder Fliesenarbeiten ist die Vermittlung oft noch am selben Tag möglich. Bei spezialisierten Gewerken wie Heizungsbau oder Elektrotechnik kann die Vermittlung je nach Auslastung 2–3 Werktage dauern.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Was passiert bei Reklamationen?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Sollten Sie mit der ausgeführten Arbeit nicht zufrieden sein, steht Ihnen unser Kundenservice als Vermittler zur Seite. Wir setzen uns mit dem Handwerksbetrieb in Verbindung und sorgen für eine zeitnahe Nachbesserung. Alle vermittelten Betriebe gewähren die gesetzliche Gewährleistung, und bei Meisterbetrieben profitieren Sie zusätzlich von der Haftpflichtversicherung der Handwerkskammer.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <SeoFooter />
     </div>
   );

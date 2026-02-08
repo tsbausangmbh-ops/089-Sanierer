@@ -2808,6 +2808,64 @@ export default function FunnelPage() {
         )}
       </main>
 
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Warum eine Anfrage über 089-Sanierer?</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Geprüfte Meisterbetriebe aus München</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Alle unsere Partnerbetriebe sind in der Handwerkskammer München eingetragen und verfügen über einen Meisterbrief. Wir prüfen Qualifikationen, Referenzen und Bonität, bevor ein Betrieb in unser Netzwerk aufgenommen wird. So stellen wir sicher, dass nur die besten Handwerker Münchens an Ihrem Projekt arbeiten.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Festpreisgarantie ohne Nachforderungen</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Unser Festpreisangebot ist verbindlich – der vereinbarte Preis gilt, egal was passiert. Unvorhergesehene Mehrkosten gehen nicht zu Ihren Lasten. Diese Sicherheit unterscheidet uns von klassischen Handwerkervermittlungen, bei denen Sie das Risiko von Kostensteigerungen selbst tragen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">So geht es nach Ihrer Anfrage weiter</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Persönliche Beratung innerhalb von 24 Stunden</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Nach Eingang Ihrer Anfrage meldet sich ein persönlicher Projektberater innerhalb von 24 Stunden bei Ihnen. In einem ersten Gespräch klären wir Ihre Wünsche, den Zeitrahmen und besondere Anforderungen. Anschließend vereinbaren wir einen kostenlosen Besichtigungstermin vor Ort.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Kostenlose Vor-Ort-Besichtigung</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Unser erfahrener Bauleiter besichtigt Ihre Immobilie und nimmt alle relevanten Maße und Details auf. Er dokumentiert den Ist-Zustand, identifiziert mögliche Herausforderungen und bespricht mit Ihnen verschiedene Gestaltungsoptionen. Innerhalb von 48 Stunden nach der Besichtigung erhalten Sie Ihr detailliertes Festpreisangebot.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sicherheit und Datenschutz bei Ihrer Anfrage</h2>
+          <div className="max-w-3xl mx-auto">
+            <h3 className="font-semibold mb-2">DSGVO-konforme Datenverarbeitung</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">Ihre persönlichen Daten werden ausschließlich zur Bearbeitung Ihrer Sanierungsanfrage verwendet und nicht an Dritte weitergegeben. Unsere Server befinden sich in Deutschland und erfüllen alle Anforderungen der europäischen Datenschutz-Grundverordnung (DSGVO). Nach Abschluss Ihres Projekts werden Ihre Daten auf Wunsch vollständig gelöscht.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-4 lg:py-6 bg-accent/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Häufige Fragen zur Anfrage</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-2">Ist die Anfrage wirklich kostenlos?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Ja, die Anfrage über unser Formular ist zu 100 % kostenlos und unverbindlich. Auch die anschließende Erstberatung und die Vor-Ort-Besichtigung sind für Sie kostenfrei. Ein Vertrag kommt erst zustande, wenn Sie unser schriftliches Festpreisangebot ausdrücklich annehmen.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Wie lange dauert es bis zum Angebot?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">Nach der Vor-Ort-Besichtigung erhalten Sie Ihr detailliertes Festpreisangebot in der Regel innerhalb von 48 Stunden. Bei besonders umfangreichen Komplettsanierungen kann die Angebotserstellung bis zu 5 Werktage dauern, da alle Gewerke einzeln kalkuliert und koordiniert werden müssen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <SeoFooter />
     </div>
   );
