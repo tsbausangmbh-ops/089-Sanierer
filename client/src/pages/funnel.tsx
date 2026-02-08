@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { RecommendedLinks } from "@/components/recommended-links";
 import { 
   Home, 
   Bath, 
@@ -2572,6 +2573,8 @@ export default function FunnelPage() {
             <p>Relevante Suchbegriffe: {content.keywords.join(", ")}</p>
           </div>
         )}
+
+        <RecommendedLinks />
 
         <div className="text-center py-8 bg-muted/30 rounded-lg">
           <h2 className="text-xl sm:text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
