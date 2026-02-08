@@ -47,8 +47,8 @@ export function PageHero({
           decoding="async"
           // @ts-ignore - fetchpriority is valid HTML attribute
           fetchpriority="high"
-          width={1200}
-          height={655}
+          width={1920}
+          height={1048}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40 lg:to-black/20" />
