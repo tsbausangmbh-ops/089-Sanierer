@@ -31,7 +31,6 @@ import {
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { ServiceIntro } from "@/components/service-intro";
-import { RecommendedLinks } from "@/components/recommended-links";
 const kernImg = "/images/haus_alt_vs_neu_vergleich.webp";
 
 const kernHeroContent: HeroContent = {
@@ -400,7 +399,6 @@ export default function Kernsanierung() {
             </p>
           </div>
         </section>
-        <RecommendedLinks currentPath="/kernsanierung" />
       </main>
 
       <InternalLinks links={linkSets.fromKernsanierung} />

@@ -12,7 +12,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { RecommendedLinks } from "@/components/recommended-links";
 import { 
   Home, 
   Bath, 
@@ -48,6 +47,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { SiteHeader } from "@/components/site-header";
+import { InternalLinks, linkSets } from "@/components/internal-links";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
@@ -2574,8 +2574,6 @@ export default function FunnelPage() {
           </div>
         )}
 
-        <RecommendedLinks />
-
         <div className="text-center py-8 bg-muted/30 rounded-lg">
           <h2 className="text-xl sm:text-2xl font-bold mb-4">In 2 Minuten zum kostenlosen Festpreis-Angebot</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
@@ -2883,6 +2881,7 @@ export default function FunnelPage() {
         </div>
       </section>
 
+      <InternalLinks links={linkSets.fromFunnel} />
       <SeoFooter />
     </div>
   );

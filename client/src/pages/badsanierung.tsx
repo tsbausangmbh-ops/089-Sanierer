@@ -29,7 +29,6 @@ import {
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { ServiceIntro } from "@/components/service-intro";
-import { RecommendedLinks } from "@/components/recommended-links";
 const bathroomImg = "/images/badsanierung_muenchen_2026.webp";
 
 const badHeroContent: HeroContent = {
@@ -364,7 +363,6 @@ export default function Badsanierung() {
             </p>
           </div>
         </section>
-        <RecommendedLinks currentPath="/badsanierung" />
       </main>
 
       <InternalLinks links={linkSets.fromBadsanierung} />

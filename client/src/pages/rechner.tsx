@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
-import { RecommendedLinks } from "@/components/recommended-links";
+import { InternalLinks, linkSets } from "@/components/internal-links";
 import { SeoHead } from "@/components/seo-head";
 import {
   Building,
@@ -842,7 +842,6 @@ export default function RechnerPage() {
             </div>
           </div>
         </section>
-        <RecommendedLinks currentPath="/rechner" />
       </main>
 
       <section className="py-4 lg:py-6 bg-background">
@@ -903,6 +902,7 @@ export default function RechnerPage() {
         </div>
       </section>
 
+      <InternalLinks links={linkSets.fromRechner} />
       <SeoFooter />
     </div>
   );

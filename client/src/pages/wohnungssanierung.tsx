@@ -31,7 +31,6 @@ import {
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { ServiceIntro } from "@/components/service-intro";
-import { RecommendedLinks } from "@/components/recommended-links";
 const wohnungImg = "/images/sanierte_luxuswohnung_interieur.webp";
 
 const wohnungHeroContent: HeroContent = {
@@ -374,7 +373,6 @@ export default function Wohnungssanierung() {
             </p>
           </div>
         </section>
-        <RecommendedLinks currentPath="/wohnungssanierung" />
       </main>
 
       <InternalLinks links={linkSets.fromWohnungssanierung} />
