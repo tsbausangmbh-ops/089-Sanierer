@@ -11,14 +11,14 @@ import {
 const kshwLogo = "/images/089-sanierer-logo.webp";
 
 const allServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung", icon: Home },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath },
-  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed },
-  { id: "bodensanierung", title: "Bodensanierung", icon: Layers },
-  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap },
-  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame },
-  { id: "dachsanierung", title: "Dachsanierung", icon: Triangle },
-  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Leaf },
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: Home, href: "/kernsanierung" },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath, href: "/badsanierung" },
+  { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, href: "/anfrage?service=kuechensanierung" },
+  { id: "bodensanierung", title: "Bodensanierung", icon: Layers, href: "/anfrage?service=bodensanierung" },
+  { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, href: "/anfrage?service=elektrosanierung" },
+  { id: "heizungssanierung", title: "Heizungssanierung", icon: Flame, href: "/anfrage?service=heizungssanierung" },
+  { id: "dachsanierung", title: "Dachsanierung", icon: Triangle, href: "/anfrage?service=dachsanierung" },
+  { id: "energetische-sanierung", title: "Energetische Sanierung", icon: Leaf, href: "/anfrage?service=energetische-sanierung" },
 ];
 
 export function SiteHeader() {
@@ -80,7 +80,7 @@ export function SiteHeader() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
                 {allServices.map((service) => (
-                  <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+                  <Link key={service.id} href={service.href}>
                     <DropdownMenuItem className="cursor-pointer" data-testid={`dropdown-item-${service.id}`}>
                       <service.icon className="w-4 h-4 mr-2" />
                       {service.title}
@@ -89,14 +89,14 @@ export function SiteHeader() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link href="/anfrage?service=badsanierung">
+            <Link href="/badsanierung">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                 Badsanierung
               </Button>
             </Link>
-            <Link href="/anfrage?service=energetische-sanierung">
+            <Link href="/kosten">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                Energetische Sanierung
+                Kosten & Preise
               </Button>
             </Link>
             <Link href="/ratgeber">
@@ -139,7 +139,7 @@ export function SiteHeader() {
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
             <p className="text-xs text-white/50 uppercase tracking-wider px-4 py-1">Leistungen</p>
             {allServices.map((service) => (
-              <Link key={service.id} href={`/anfrage?service=${service.id}`}>
+              <Link key={service.id} href={service.href}>
                 <Button 
                   variant="ghost" 
                   className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10"
