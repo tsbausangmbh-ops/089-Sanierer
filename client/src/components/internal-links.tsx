@@ -5,12 +5,26 @@ interface InternalLink {
   href: string;
   title: string;
   description: string;
+  image?: string;
 }
 
 interface InternalLinksProps {
   title?: string;
   links: InternalLink[];
 }
+
+const linkImages: Record<string, string> = {
+  "/badsanierung": "/images/badsanierung_muenchen_2026.webp",
+  "/kosten": "/images/sanierung_preiskalkulation.webp",
+  "/rechner": "/images/kostenrechner_planung_2026.webp",
+  "/faq-preise": "/images/sanierungsberatung_gespraech.webp",
+  "/ratgeber": "/images/qualitaetskontrolle_sanierung.webp",
+  "/wohnungssanierung": "/images/komplettsanierung_ergebnis.webp",
+  "/haussanierung": "/images/komplettsanierung_haus.webp",
+  "/kernsanierung": "/images/komplettsanierung_vorher_nachher.webp",
+  "/termin": "/images/sanierungsberater_experte.webp",
+  "/muenchen-schwabing": "/images/energieeffiziente_haussanierung.webp",
+};
 
 export function InternalLinks({ title = "Das könnte Sie auch interessieren", links }: InternalLinksProps) {
   if (links.length === 0) return null;
@@ -20,15 +34,32 @@ export function InternalLinks({ title = "Das könnte Sie auch interessieren", li
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-lg sm:text-xl font-semibold mb-6">{title}</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {links.map((link) => (
-            <Link key={link.href} href={link.href} data-testid={`link-internal-${link.href.replace(/\//g, '-').replace(/^-/, '')}`} className="flex items-start gap-3 p-4 rounded-md bg-background border hover-elevate cursor-pointer">
-              <div className="flex-1 min-w-0">
-                <p className="font-medium text-sm">{link.title}</p>
-                <p className="text-xs text-muted-foreground mt-1">{link.description}</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0" />
-            </Link>
-          ))}
+          {links.map((link) => {
+            const img = link.image || linkImages[link.href];
+            return (
+              <Link key={link.href} href={link.href} data-testid={`link-internal-${link.href.replace(/\//g, '-').replace(/^-/, '')}`} className="rounded-md bg-background border hover-elevate cursor-pointer overflow-hidden">
+                {img && (
+                  <div className="h-32 sm:h-36 overflow-hidden">
+                    <img
+                      src={img}
+                      alt={link.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      width="400"
+                      height="144"
+                    />
+                  </div>
+                )}
+                <div className="flex items-start gap-3 p-4">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-sm">{link.title}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{link.description}</p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0" />
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
