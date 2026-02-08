@@ -126,7 +126,7 @@ const pageOgImageMap: Record<string, { image: string; alt: string }> = {
   "/danke": { image: "/images/erfolgsbestaetigung_haekchen.webp", alt: "Sanierungsanfrage erfolgreich gesendet - Antwort in 24 Stunden" },
   "/kosten": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierung München Kosten 2026 - transparente Preiskalkulation und Festpreisgarantie für alle Gewerke" },
   "/komplettsanierung": { image: "/images/komplettsanierung_ergebnis.webp", alt: "Komplettsanierung München Ergebnis - schlüsselfertig sanierte Wohnung mit allen Gewerken aus einer Hand" },
-  "/badsanierung": { image: "/images/moderne_badsanierung.webp", alt: "Moderne Badsanierung München - fertig saniertes Badezimmer mit bodengleicher Dusche und hochwertigen Fliesen" },
+  "/badsanierung": { image: "/images/badsanierung_muenchen_2026.webp", alt: "Moderne Badsanierung München - fertig saniertes Badezimmer mit bodengleicher Dusche und hochwertigen Fliesen" },
   "/kuechensanierung": { image: "/images/moderne_kuechensanierung_ergebnis.webp", alt: "Küchensanierung München Ergebnis - modern sanierte Küche mit neuen Elektro- und Wasseranschlüssen" },
   "/bodensanierung": { image: "/images/parkettboden_sanierung_ergebnis.webp", alt: "Bodensanierung München - frisch verlegter Parkettboden nach professioneller Sanierung mit Fußbodenheizung" },
   "/elektrosanierung": { image: "/images/elektrosanierung_installation.webp", alt: "Elektrosanierung München - fachgerechte Elektroinstallation nach VDE-Norm durch zertifizierten Meisterbetrieb" },

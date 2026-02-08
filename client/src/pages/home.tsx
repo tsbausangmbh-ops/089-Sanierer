@@ -36,7 +36,7 @@ const homeHeroContent: HeroContent = {
   checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "hero"
 };
-const bathroomImg = "/images/moderne_badsanierung.webp";
+const bathroomImg = "/images/badsanierung_muenchen_2026.webp";
 const kitchenImg = "/images/kuechensanierung_arbeiten.webp";
 const floorImg = "/images/parkettboden_sanierung.webp";
 const electricImg = "/images/elektrosanierung_installation.webp";

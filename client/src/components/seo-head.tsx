@@ -218,7 +218,7 @@ export function generateLocalBusinessSchema() {
     "foundingDate": "2019",
     "image": [
       "https://089-sanierer.de/images/komplettsanierung_vorher_nachher.webp",
-      "https://089-sanierer.de/images/moderne_badsanierung.webp",
+      "https://089-sanierer.de/images/badsanierung_muenchen_2026.webp",
       "https://089-sanierer.de/images/sanierte_luxuswohnung_interieur.webp"
     ],
     "logo": {

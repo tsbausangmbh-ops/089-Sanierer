@@ -1,7 +1,7 @@
 export const heroImageMap: Record<string, string> = {
   "/": "/images/komplettsanierung_vorher_nachher.webp",
   "/komplettsanierung": "/images/komplettsanierung_vorher_nachher.webp",
-  "/badsanierung": "/images/moderne_badsanierung.webp",
+  "/badsanierung": "/images/badsanierung_muenchen_2026.webp",
   "/kuechensanierung": "/images/moderne_kuechensanierung_ergebnis.webp",
   "/bodensanierung": "/images/parkettboden_sanierung_ergebnis.webp",
   "/elektrosanierung": "/images/elektrosanierung_installation.webp",

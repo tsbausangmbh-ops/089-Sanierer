@@ -140,7 +140,7 @@ export function getSeoMeta(path: string): SeoMeta {
       canonical: `${BASE_URL}/badsanierung`,
       ogTitle: "Badsanierung München ab 18.500€ | Festpreis",
       ogDescription: "Badsanierung München: Komplettbad ab 18.500€ inkl. Fliesen, Sanitär & Elektro. Bodengleiche Dusche, barrierefrei möglich. In 2-3 Wochen fertig.",
-      ogImage: `${BASE_URL}/images/moderne_badsanierung.webp`,
+      ogImage: `${BASE_URL}/images/badsanierung_muenchen_2026.webp`,
       ogImageAlt: "Moderne Badsanierung München - fertig saniertes Badezimmer mit bodengleicher Dusche und hochwertigen Fliesen",
     };
   }
