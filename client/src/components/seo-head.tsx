@@ -216,6 +216,17 @@ export function generateLocalBusinessSchema() {
     "telephone": "+49-89-444438872",
     "email": "info@089-sanierer.de",
     "foundingDate": "2019",
+    "image": [
+      "https://089-sanierer.de/images/komplettsanierung_vorher_nachher.webp",
+      "https://089-sanierer.de/images/moderne_badsanierung.webp",
+      "https://089-sanierer.de/images/sanierte_luxuswohnung_interieur.webp"
+    ],
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://089-sanierer.de/images/logo_089_sanierer.webp",
+      "width": "512",
+      "height": "512"
+    },
     "priceRange": "€€-€€€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Überweisung, Barzahlung",
