@@ -34,7 +34,7 @@ export function RecommendedLinks({ currentPath }: { currentPath?: string }) {
   const displayLinks = links.slice(0, 6);
 
   return (
-    <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
+    <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background" data-testid="section-recommended-links">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-6 text-center">
           Das könnte Sie auch interessieren
