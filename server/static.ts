@@ -23,7 +23,7 @@ export function serveStatic(app: Express) {
       } else if (filePath.match(/\.(js|css)$/)) {
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
       } else if (filePath.match(/\.(png|jpg|jpeg|gif|webp|svg|ico)$/)) {
-        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        res.setHeader('Cache-Control', 'public, max-age=86400, must-revalidate');
       } else if (filePath.match(/\.(woff|woff2|ttf|eot)$/)) {
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
       }
