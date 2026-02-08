@@ -69,12 +69,12 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/" || normalizedPath === "") {
     return {
-      title: "Sanierung München | Badsanierung & Komplettsanierung",
-      description: "Sanierung München 2026: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
-      keywords: "Sanierung München, Komplettsanierung München Kosten 2026, Badsanierung München Festpreis, Haussanierung München Meisterbetrieb, Wohnung sanieren lassen München, Sanierungsfirma München Erfahrungen, Handwerker Komplettsanierung München günstig",
+      title: "Sanierung München | Renovierung aus einer Hand | Komplettsanierung",
+      description: "Sanierung München 2026: Ihre Renovierungsfirma München für Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Handwerkerservice mit alle Gewerke aus einer Hand. Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
+      keywords: "Sanierung München, Komplettsanierung München Kosten 2026, Badsanierung München Festpreis, Haussanierung München Meisterbetrieb, Wohnung sanieren lassen München, Sanierungsfirma München Erfahrungen, Handwerker Komplettsanierung München günstig, Renovierungsfirma München Festpreis, Handwerkerservice München Sanierung aus einer Hand, Innenausbau Firma München Komplettsanierung, Sanierung aus einer Hand München Meisterbetrieb, Generalunternehmer Renovierung München, Altbausanierung München Renovierungsfirma, schlüsselfertige Renovierung München alle Gewerke, Handwerker München Komplettsanierung Wohnung Haus",
       canonical: BASE_URL,
-      ogTitle: "Sanierung München | Badsanierung & Komplettsanierung",
-      ogDescription: "Sanierung München 2026: Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
+      ogTitle: "Sanierung München | Renovierung aus einer Hand | Komplettsanierung",
+      ogDescription: "Sanierung München 2026: Ihre Renovierungsfirma München für Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². Handwerkerservice mit alle Gewerke aus einer Hand. Festpreisgarantie, 5 Jahre Gewährleistung. Kostenlose Beratung in 24h.",
       ogImage: `${BASE_URL}/images/komplettsanierung_vorher_nachher.webp`,
       ogImageAlt: "Komplettsanierung München vorher nachher - professionelle Sanierung aus einer Hand mit Festpreisgarantie",
     };
@@ -110,7 +110,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Sanierung München Kosten 2026 | Preise pro m²",
       description: "Was kostet Sanierung in München? Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Kernsanierung ab 1.200€/m². Transparente Festpreise 2026.",
-      keywords: "Sanierung München Kosten 2026, was kostet Komplettsanierung München pro qm, Badsanierung Kosten München aktuell, Wohnungssanierung Preis pro Quadratmeter München, Festpreis Sanierung München ohne Nachforderungen, Haussanierung Kosten Einfamilienhaus München",
+      keywords: "Sanierung München Kosten 2026, was kostet Komplettsanierung München pro qm, Badsanierung Kosten München aktuell, Wohnungssanierung Preis pro Quadratmeter München, Festpreis Sanierung München ohne Nachforderungen, Haussanierung Kosten Einfamilienhaus München, Sanierung Kosten aus einer Hand München, Renovierung München Preise Handwerkerservice, Innenausbau Kosten München Renovierungsfirma, Sanierungskosten Handwerker München Festpreis, Renovierungskosten München Generalunternehmer, was kostet Renovierung München aus einer Hand, Sanierung München Preis pro qm Renovierungsfirma, Kostenübersicht Sanierung München Handwerker",
       canonical: `${BASE_URL}/kosten`,
       ogTitle: "Sanierung München Kosten 2026 | Preise pro m²",
       ogDescription: "Was kostet Sanierung in München? Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m², Kernsanierung ab 1.200€/m². Transparente Festpreise 2026.",
@@ -136,7 +136,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Badsanierung München ab 18.500€ | Festpreis",
       description: "Badsanierung München: Komplettbad ab 18.500€ inkl. Fliesen, Sanitär & Elektro. Bodengleiche Dusche, barrierefrei möglich. In 2-3 Wochen fertig.",
-      keywords: "Badsanierung München Kosten 2026, Bad komplett sanieren München Festpreis, barrierefreie Badsanierung München, Badezimmer modernisieren München Meisterbetrieb, bodengleiche Dusche einbauen München, Bad renovieren München Dauer und Kosten",
+      keywords: "Badsanierung München Kosten 2026, Bad komplett sanieren München Festpreis, barrierefreie Badsanierung München, Badezimmer modernisieren München Meisterbetrieb, bodengleiche Dusche einbauen München, Bad renovieren München Dauer und Kosten, Badsanierung aus einer Hand München, Badezimmer Renovierungsfirma München, Handwerker Bad München Festpreis, Bad Innenausbau München Meisterbetrieb, Badsanierung Handwerkerservice München komplett, barrierefreies Bad umbauen München Renovierungsfirma, Badezimmer sanieren lassen München Handwerker, Bad komplett erneuern München Sanierungsfirma",
       canonical: `${BASE_URL}/badsanierung`,
       ogTitle: "Badsanierung München ab 18.500€ | Festpreis",
       ogDescription: "Badsanierung München: Komplettbad ab 18.500€ inkl. Fliesen, Sanitär & Elektro. Bodengleiche Dusche, barrierefrei möglich. In 2-3 Wochen fertig.",
@@ -149,7 +149,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Küchensanierung München ab 6.500€ | Festpreis",
       description: "Küchensanierung München: Elektro, Wasser, Fliesen & Malerarbeiten ab 6.500€. Festpreisgarantie für alle Küchenumbau-Arbeiten. Jetzt anfragen.",
-      keywords: "Küchensanierung München Kosten, Küche komplett sanieren München, Küchenumbau München Festpreis, Küche modernisieren München Handwerker, Elektro und Wasser Küche München, Küchenrenovierung München Meisterbetrieb",
+      keywords: "Küchensanierung München Kosten, Küche komplett sanieren München, Küchenumbau München Festpreis, Küche modernisieren München Handwerker, Elektro und Wasser Küche München, Küchenrenovierung München Meisterbetrieb, Küche sanieren aus einer Hand München, Küchenrenovierung Handwerkerservice München, Küche Innenausbau München Festpreis, Küche komplett erneuern München Renovierungsfirma, Küchenumbau München Handwerker alle Gewerke, Küchensanierung Sanierungsfirma München, Küche modernisieren Renovierung München, neue Küche München Generalunternehmer",
       canonical: `${BASE_URL}/kuechensanierung`,
       ogTitle: "Küchensanierung München ab 6.500€ | Festpreis",
       ogDescription: "Küchensanierung München: Elektro, Wasser, Fliesen & Malerarbeiten ab 6.500€. Festpreisgarantie für alle Küchenumbau-Arbeiten. Jetzt anfragen.",
@@ -162,7 +162,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Bodensanierung München ab 65€/m² | Parkett & Fliesen",
       description: "Bodensanierung München: Parkett, Fliesen, Vinyl ab 65€/m². Estrich, Fußbodenheizung nachrüsten. Fachgerechte Verlegung mit Festpreisgarantie.",
-      keywords: "Bodensanierung München Kosten, Parkett verlegen München Meisterbetrieb, Fliesen sanieren München Festpreis, Estrich erneuern München, Fußbodenheizung nachrüsten München, Vinyl Boden verlegen München Kosten",
+      keywords: "Bodensanierung München Kosten, Parkett verlegen München Meisterbetrieb, Fliesen sanieren München Festpreis, Estrich erneuern München, Fußbodenheizung nachrüsten München, Vinyl Boden verlegen München Kosten, Boden sanieren aus einer Hand München, Bodenbelag Handwerkerservice München, Parkett verlegen München Renovierungsfirma, Fliesen Boden Innenausbau München, Bodensanierung Handwerker München Festpreis, Estrich sanieren München Sanierungsfirma, Vinyl Parkett Fliesen München Renovierung, Bodenbeläge München Generalunternehmer",
       canonical: `${BASE_URL}/bodensanierung`,
       ogTitle: "Bodensanierung München ab 65€/m² | Parkett & Fliesen",
       ogDescription: "Bodensanierung München: Parkett, Fliesen, Vinyl ab 65€/m². Estrich, Fußbodenheizung nachrüsten. Fachgerechte Verlegung mit Festpreisgarantie.",
@@ -175,7 +175,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Elektrosanierung München ab 150€/m² | VDE-konform",
       description: "Elektrosanierung München: Leitungen, Sicherungskasten, Smart Home ab 150€/m². VDE-konforme Installation vom Meisterbetrieb mit Festpreis.",
-      keywords: "Elektrosanierung München Kosten pro qm, Elektroinstallation komplett erneuern München, Altbau Elektrik sanieren München VDE, Sicherungskasten tauschen München, Smart Home Vorbereitung Sanierung München, Elektriker Komplettsanierung München",
+      keywords: "Elektrosanierung München Kosten pro qm, Elektroinstallation komplett erneuern München, Altbau Elektrik sanieren München VDE, Sicherungskasten tauschen München, Smart Home Vorbereitung Sanierung München, Elektriker Komplettsanierung München, Elektrik sanieren aus einer Hand München, Elektriker München Renovierungsfirma, Elektroinstallation Handwerkerservice München, Elektrosanierung Innenausbau München, Steckdosen nachrüsten München Handwerker, Sicherungskasten erneuern München Sanierungsfirma, Smart Home Elektrik München Renovierung, VDE Elektrosanierung München Generalunternehmer",
       canonical: `${BASE_URL}/elektrosanierung`,
       ogTitle: "Elektrosanierung München ab 150€/m² | VDE-konform",
       ogDescription: "Elektrosanierung München: Leitungen, Sicherungskasten, Smart Home ab 150€/m². VDE-konforme Installation vom Meisterbetrieb mit Festpreis.",
@@ -201,7 +201,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Heizungssanierung München ab 12.000€ | Festpreis",
       description: "Heizungssanierung München: Wärmepumpe, Gas-Brennwert, Pelletheizung ab 12.000€. BAFA- und KfW-Förderung. Energieeffiziente Heizungslösungen.",
-      keywords: "Heizungssanierung München Kosten 2026, Wärmepumpe einbauen München Förderung, Heizung erneuern Altbau München, Fußbodenheizung nachrüsten München, Gas Heizung tauschen München, Heizungsmodernisierung München KfW BAFA",
+      keywords: "Heizungssanierung München Kosten 2026, Wärmepumpe einbauen München Förderung, Heizung erneuern Altbau München, Fußbodenheizung nachrüsten München, Gas Heizung tauschen München, Heizungsmodernisierung München KfW BAFA, Heizung sanieren aus einer Hand München, Heizungstausch Handwerkerservice München, Wärmepumpe München Renovierungsfirma, Heizung Innenausbau München Festpreis, Heizungsmodernisierung Handwerker München, Gasheizung erneuern München Sanierungsfirma, Fußbodenheizung nachrüsten München Renovierung, Heizung komplett erneuern München Generalunternehmer",
       canonical: `${BASE_URL}/heizungssanierung`,
       ogTitle: "Heizungssanierung München ab 12.000€ | Festpreis",
       ogDescription: "Heizungssanierung München: Wärmepumpe, Gas-Brennwert, Pelletheizung ab 12.000€. BAFA- und KfW-Förderung. Energieeffiziente Heizungslösungen.",
@@ -212,9 +212,9 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/wohnungssanierung") {
     return {
-      title: "Wohnungssanierung München ab 800€/m² | Festpreis",
-      description: "Wohnungssanierung München: Komplette Sanierung ab 800€/m² mit Festpreisgarantie. Altbau & Neubau, alle Gewerke aus einer Hand. Jetzt beraten lassen.",
-      keywords: "Wohnungssanierung München Kosten pro qm 2026, Altbauwohnung komplett sanieren München, Wohnung renovieren lassen München Festpreis, Mietwohnung sanieren München, Eigentumswohnung sanieren München Meisterbetrieb, Wohnungssanierung München Dauer",
+      title: "Wohnungssanierung München | Renovierung aus einer Hand ab 800€/m²",
+      description: "Wohnungssanierung München: Komplette Wohnungsrenovierung ab 800€/m² mit Festpreisgarantie. Altbau & Neubau, alle Gewerke aus einer Hand. Jetzt beraten lassen.",
+      keywords: "Wohnungssanierung München Kosten pro qm 2026, Altbauwohnung komplett sanieren München, Wohnung renovieren lassen München Festpreis, Mietwohnung sanieren München, Eigentumswohnung sanieren München Meisterbetrieb, Wohnungssanierung München Dauer, Wohnungsrenovierung München Festpreis Handwerker, Wohnung renovieren aus einer Hand München, Altbauwohnung Renovierungsfirma München, Wohnungssanierung Handwerkerservice München komplett, Wohnung Innenausbau München Sanierungsfirma, Eigentumswohnung renovieren München Generalunternehmer, Mietwohnung sanieren München Renovierung, Wohnungsrenovierung München alle Gewerke",
       canonical: `${BASE_URL}/wohnungssanierung`,
       ogTitle: "Wohnungssanierung München ab 800€/m² | Festpreis",
       ogDescription: "Wohnungssanierung München: Komplette Sanierung ab 800€/m² mit Festpreisgarantie. Altbau & Neubau, alle Gewerke aus einer Hand. Jetzt beraten lassen.",
@@ -225,9 +225,9 @@ export function getSeoMeta(path: string): SeoMeta {
 
   if (normalizedPath === "/haussanierung") {
     return {
-      title: "Haussanierung München ab 1.200€/m² | Festpreis",
-      description: "Haussanierung München: Komplette Haussanierung ab 1.200€/m² mit Festpreisgarantie. Einfamilienhaus & Mehrfamilienhaus, alle Gewerke koordiniert.",
-      keywords: "Haussanierung München Kosten 2026, Einfamilienhaus komplett sanieren München, Altbau Haus sanieren München Festpreis, Haus renovieren München Meisterbetrieb, Mehrfamilienhaus sanieren München, Haussanierung München Dauer und Ablauf",
+      title: "Haussanierung München | Renovierung aus einer Hand ab 1.200€/m²",
+      description: "Haussanierung München: Komplette Haussanierung ab 1.200€/m² mit Festpreisgarantie. Einfamilienhaus & Mehrfamilienhaus, Renovierung aus einer Hand mit allen Gewerken koordiniert.",
+      keywords: "Haussanierung München Kosten 2026, Einfamilienhaus komplett sanieren München, Altbau Haus sanieren München Festpreis, Haus renovieren München Meisterbetrieb, Mehrfamilienhaus sanieren München, Haussanierung München Dauer und Ablauf, Haus renovieren aus einer Hand München, Haussanierung Renovierungsfirma München, Einfamilienhaus Handwerkerservice München, Haus Innenausbau München Sanierungsfirma, Altbau Haus renovieren München Handwerker, Haussanierung München Generalunternehmer, Haus komplett sanieren München Renovierung, Mehrfamilienhaus renovieren München Festpreis",
       canonical: `${BASE_URL}/haussanierung`,
       ogTitle: "Haussanierung München ab 1.200€/m² | Festpreis",
       ogDescription: "Haussanierung München: Komplette Haussanierung ab 1.200€/m² mit Festpreisgarantie. Einfamilienhaus & Mehrfamilienhaus, alle Gewerke koordiniert.",
@@ -240,7 +240,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Kernsanierung München ab 1.200€/m² | Altbau",
       description: "Kernsanierung München: Professionelles Entkernen und Neuaufbau ab 1.200€/m². Festpreisgarantie, persönlicher Bauleiter, 5 Jahre Gewährleistung.",
-      keywords: "Kernsanierung München Kosten pro qm 2026, Altbau Kernsanierung München Erfahrungen, Haus entkernen und sanieren München, Kernsanierung vs Komplettsanierung München, Kernsanierung Einfamilienhaus München Dauer, Rohbau Sanierung München Festpreis",
+      keywords: "Kernsanierung München Kosten pro qm 2026, Altbau Kernsanierung München Erfahrungen, Haus entkernen und sanieren München, Kernsanierung vs Komplettsanierung München, Kernsanierung Einfamilienhaus München Dauer, Rohbau Sanierung München Festpreis, Kernsanierung aus einer Hand München, Altbau entkernen Renovierungsfirma München, Kernsanierung Handwerkerservice München, Entkernung Innenausbau München Festpreis, Rohbau sanieren München Sanierungsfirma, Kernsanierung Handwerker München Generalunternehmer, Altbau komplett entkernen München Renovierung, Kernsanierung schlüsselfertig München alle Gewerke",
       canonical: `${BASE_URL}/kernsanierung`,
       ogTitle: "Kernsanierung München ab 1.200€/m² | Altbau",
       ogDescription: "Kernsanierung München: Professionelles Entkernen und Neuaufbau ab 1.200€/m². Festpreisgarantie, persönlicher Bauleiter, 5 Jahre Gewährleistung.",
@@ -266,7 +266,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Sanierungskosten Rechner München | Online 2026",
       description: "Online-Rechner für Sanierungskosten München: Badsanierung, Komplettsanierung, Wohnungssanierung. Schnelle Kostenschätzung als erste Orientierung.",
-      keywords: "Sanierungsrechner München online, Sanierung Kosten berechnen München, Badsanierung Rechner Kosten, Renovierungskosten pro qm München berechnen, Komplettsanierung Kalkulator München, was kostet meine Sanierung München",
+      keywords: "Sanierungsrechner München online, Sanierung Kosten berechnen München, Badsanierung Rechner Kosten, Renovierungskosten pro qm München berechnen, Komplettsanierung Kalkulator München, was kostet meine Sanierung München, Renovierungskosten München berechnen Handwerkerservice, Sanierung aus einer Hand Kosten Rechner München, Innenausbau Kosten München online berechnen, Renovierungsfirma München Preise kalkulieren, Sanierungskosten München Handwerker Kalkulator, was kostet Renovierung aus einer Hand München, Sanierung München online Preisrechner Festpreis, Renovierungskosten pro qm München berechnen",
       canonical: `${BASE_URL}/rechner`,
       ogTitle: "Sanierungskosten Rechner München | Online 2026",
       ogDescription: "Online-Rechner für Sanierungskosten München: Badsanierung, Komplettsanierung, Wohnungssanierung. Schnelle Kostenschätzung als erste Orientierung.",
@@ -279,7 +279,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Kontakt Sanierung München | Kostenlose Beratung",
       description: "Kostenlose Sanierungsberatung München. Telefon: +49 89 444 438 872. Persönliche Beratung, Vor-Ort-Besichtigung und Festpreis-Angebot in 24 Stunden.",
-      keywords: "Sanierung Kontakt München, Sanierung München kostenlose Beratung, Sanierungsfirma München Telefon, Handwerker München Terminvereinbarung, Sanierungsberatung München vor Ort",
+      keywords: "Sanierung Kontakt München, Sanierung München kostenlose Beratung, Sanierungsfirma München Telefon, Handwerker München Terminvereinbarung, Sanierungsberatung München vor Ort, Renovierungsfirma München Kontakt, Handwerkerservice München Telefon, Innenausbau Firma München Anfrage, Sanierung aus einer Hand München Beratung, Handwerker München Sanierung Terminvereinbarung, Renovierung München kostenlose Beratung, Sanierungsfirma München Angebot anfordern, Generalunternehmer München Kontakt Sanierung",
       canonical: `${BASE_URL}/kontakt`,
       ogTitle: "Kontakt Sanierung München | Kostenlose Beratung",
       ogDescription: "Kostenlose Sanierungsberatung München. Telefon: +49 89 444 438 872. Persönliche Beratung, Vor-Ort-Besichtigung und Festpreis-Angebot in 24 Stunden.",
@@ -318,7 +318,7 @@ export function getSeoMeta(path: string): SeoMeta {
     return {
       title: "Sanierung Ratgeber München 2026 | Kosten & Tipps",
       description: "Praxisnahe Ratgeber zu Sanierung in München: Badsanierung, Komplettsanierung, energetische Modernisierung. Fachwissen und Entscheidungshilfen.",
-      keywords: "Sanierung Ratgeber München 2026, Badsanierung Tipps und Tricks, Renovierung planen München Checkliste, Modernisierung Altbau Ratgeber, Sanierung richtig planen München, Renovierungskosten sparen Tipps München",
+      keywords: "Sanierung Ratgeber München 2026, Badsanierung Tipps und Tricks, Renovierung planen München Checkliste, Modernisierung Altbau Ratgeber, Sanierung richtig planen München, Renovierungskosten sparen Tipps München, Sanierung Ratgeber Renovierungsfirma München, Renovierung planen München Handwerkerservice, Innenausbau Tipps München Sanierungsfirma, Sanierung aus einer Hand München Ratgeber, Renovierung Checkliste München Handwerker, Altbau sanieren Tipps München Renovierungsfirma, Sanierungsplanung München Generalunternehmer, Renovierung vorbereiten München alle Gewerke",
       canonical: `${BASE_URL}/ratgeber`,
       ogTitle: "Sanierung Ratgeber München 2026 | Kosten & Tipps",
       ogDescription: "Praxisnahe Ratgeber zu Sanierung in München: Badsanierung, Komplettsanierung, energetische Modernisierung. Fachwissen und Entscheidungshilfen.",
@@ -423,7 +423,7 @@ export function getSeoMeta(path: string): SeoMeta {
       return {
         title: `Sanierung ${meta.name} | Komplettsanierung München`,
         description: `Sanierung in ${meta.name}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. 5 Jahre Gewährleistung. Jetzt beraten lassen.`,
-        keywords: `Sanierung ${meta.name} München Festpreis, Badsanierung ${meta.name} Kosten, Komplettsanierung ${meta.name} München, Wohnung sanieren ${meta.name}, Handwerker ${meta.name} München Sanierung, Renovierung ${meta.name} Meisterbetrieb`,
+        keywords: `Sanierung ${meta.name} München Festpreis, Badsanierung ${meta.name} Kosten, Komplettsanierung ${meta.name} München, Wohnung sanieren ${meta.name}, Handwerker ${meta.name} München Sanierung, Renovierung ${meta.name} Meisterbetrieb, Renovierungsfirma ${meta.name} München, Handwerkerservice ${meta.name}, Sanierung aus einer Hand ${meta.name} München, Innenausbau ${meta.name} München, Renovierung ${meta.name} Handwerker München, Wohnungsrenovierung ${meta.name} München Festpreis`,
         canonical: `${BASE_URL}${normalizedPath}`,
         ogTitle: `Sanierung ${meta.name} | Komplettsanierung München`,
         ogDescription: `Sanierung in ${meta.name}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. 5 Jahre Gewährleistung. Jetzt beraten lassen.`,
