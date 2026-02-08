@@ -104,11 +104,6 @@ export function SiteHeader() {
                 Ratgeber
               </Button>
             </Link>
-            <Link href="/faq-preise">
-              <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
-                FAQ & Preise
-              </Button>
-            </Link>
             <Link href="/rechner">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                 <Calculator className="w-4 h-4 mr-1" />
