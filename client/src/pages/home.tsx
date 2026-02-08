@@ -96,7 +96,8 @@ const allServices = [
     imageAlt: "Komplettsanierung München - Professionelle Altbausanierung mit Festpreisgarantie",
     description: "Rundum-Sanierung aus einer Hand",
     price: "ab 1.200€/m²",
-    features: ["Alle Gewerke koordiniert", "Festpreisgarantie", "Ein Ansprechpartner"]
+    features: ["Alle Gewerke koordiniert", "Festpreisgarantie", "Ein Ansprechpartner"],
+    link: "/kernsanierung"
   },
   { 
     id: "badsanierung", 
@@ -106,7 +107,8 @@ const allServices = [
     imageAlt: "Badsanierung München - Modernes Badezimmer nach Komplettrenovierung",
     description: "Ihr Traumbad in 2-3 Wochen",
     price: "ab 18.500€",
-    features: ["Barrierefreie Optionen", "Moderne Designs", "Sanitär & Fliesen"]
+    features: ["Barrierefreie Optionen", "Moderne Designs", "Sanitär & Fliesen"],
+    link: "/badsanierung"
   },
   { 
     id: "kuechensanierung", 
@@ -116,7 +118,8 @@ const allServices = [
     imageAlt: "Küchensanierung München - Fachgerechte Küchenrenovierung mit Elektrik",
     description: "Bauarbeiten für Ihre Traumküche",
     price: "ab 6.500€",
-    features: ["Fliesen & Elektrik", "Wasser & Abfluss", "Wanddurchbrüche"]
+    features: ["Fliesen & Elektrik", "Wasser & Abfluss", "Wanddurchbrüche"],
+    link: "/kosten"
   },
   { 
     id: "bodensanierung", 
@@ -126,7 +129,8 @@ const allServices = [
     imageAlt: "Bodensanierung München - Parkett verlegen und Fußbodenheizung einbauen",
     description: "Parkett, Fliesen oder Vinyl",
     price: "ab 65€/m²",
-    features: ["Fachgerechte Verlegung", "Untergrundvorbereitung", "Fußbodenheizung"]
+    features: ["Fachgerechte Verlegung", "Untergrundvorbereitung", "Fußbodenheizung"],
+    link: "/kosten"
   },
   { 
     id: "elektrosanierung", 
@@ -136,7 +140,8 @@ const allServices = [
     imageAlt: "Elektrosanierung München - VDE-konforme Elektroinstallation vom Meisterbetrieb",
     description: "VDE-konforme Installation",
     price: "ab 85€/m²",
-    features: ["Neue Leitungen", "Smart-Home ready", "Sicherheitstechnik"]
+    features: ["Neue Leitungen", "Smart-Home ready", "Sicherheitstechnik"],
+    link: "/kosten"
   },
   { 
     id: "heizungssanierung", 
@@ -146,7 +151,8 @@ const allServices = [
     imageAlt: "Heizungssanierung München - Wärmepumpe und Fußbodenheizung Installation",
     description: "Bis zu 40% Heizkosten sparen",
     price: "ab 12.000€",
-    features: ["Wärmepumpen", "Fußbodenheizung", "Fördermittelberatung"]
+    features: ["Wärmepumpen", "Fußbodenheizung", "Fördermittelberatung"],
+    link: "/kosten"
   },
 ];
 
@@ -1109,14 +1115,21 @@ export default function Home() {
                     </div>
                   </div>
                   <CardContent className="p-4">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
                       <span className="font-semibold text-primary">{service.price}</span>
-                      <Link href={`/anfrage?service=${service.id}`}>
-                        <Button variant="default" size="sm" className="bg-accent hover:bg-accent/90" data-testid={`button-service-${service.id}`}>
-                          Jetzt anfragen
-                          <ChevronRight className="w-4 h-4 ml-1" />
-                        </Button>
-                      </Link>
+                      <div className="flex items-center gap-2">
+                        <Link href={service.link}>
+                          <Button variant="outline" size="sm" data-testid={`button-info-${service.id}`}>
+                            Mehr erfahren
+                          </Button>
+                        </Link>
+                        <Link href={`/anfrage?service=${service.id}`}>
+                          <Button variant="default" size="sm" className="bg-accent" data-testid={`button-service-${service.id}`}>
+                            Jetzt anfragen
+                            <ChevronRight className="w-4 h-4 ml-1" />
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
