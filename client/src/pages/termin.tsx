@@ -24,7 +24,7 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { format } from "date-fns";
-import terminHeroImage from "@assets/generated_images/terminbuchung_kalender.webp";
+const terminHeroImage = "/images/terminbuchung_kalender.webp";
 
 const terminHeroContent: HeroContent = {
   backgroundImage: terminHeroImage,

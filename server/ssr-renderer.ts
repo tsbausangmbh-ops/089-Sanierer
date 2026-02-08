@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { getSeoMeta, type SeoMeta } from "../shared/seo-meta";
+import { getHeroImageForRoute } from "./hero-images";
 
 let templateCache: string | null = null;
 
@@ -51,6 +52,12 @@ export function renderHtmlWithMeta(requestPath: string, isDev: boolean = false):
   }
   if (meta.ogImageAlt) {
     html = replacePlaceholder(html, "SSR_OG_IMAGE_ALT", meta.ogImageAlt);
+  }
+
+  const heroImage = getHeroImageForRoute(requestPath);
+  if (heroImage) {
+    const preloadLink = `<link rel="preload" as="image" type="image/webp" href="${heroImage}" fetchpriority="high">`;
+    html = html.replace("</head>", `${preloadLink}\n  </head>`);
   }
 
   return html;

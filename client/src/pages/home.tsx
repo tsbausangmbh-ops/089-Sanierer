@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroImage from "@assets/generated_images/haus_wohnung_sanierung_hero.webp";
+const heroImage = "/images/haus_wohnung_sanierung_hero.webp";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 
 const homeHeroContent: HeroContent = {
@@ -34,12 +34,12 @@ const homeHeroContent: HeroContent = {
   checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
   dataTestIdPrefix: "hero"
 };
-import bathroomImg from "@assets/generated_images/moderne_badsanierung.webp";
-import kitchenImg from "@assets/generated_images/kuechensanierung_arbeiten.webp";
-import floorImg from "@assets/generated_images/parkettboden_sanierung.webp";
-import electricImg from "@assets/generated_images/elektrosanierung_installation.webp";
-import heatingImg from "@assets/generated_images/heizungsanlage_einbau.webp";
-import completeImg from "@assets/generated_images/komplettsanierung_ergebnis.webp";
+const bathroomImg = "/images/moderne_badsanierung.webp";
+const kitchenImg = "/images/kuechensanierung_arbeiten.webp";
+const floorImg = "/images/parkettboden_sanierung.webp";
+const electricImg = "/images/elektrosanierung_installation.webp";
+const heatingImg = "/images/heizungsanlage_einbau.webp";
+const completeImg = "/images/komplettsanierung_ergebnis.webp";
 
 import { 
   Bath, 

@@ -20,7 +20,7 @@ import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
-import confirmationHeroImage from "@assets/generated_images/erfolgsbestaetigung_haekchen.webp";
+const confirmationHeroImage = "/images/erfolgsbestaetigung_haekchen.webp";
 
 const confirmationHeroContent: HeroContent = {
   backgroundImage: confirmationHeroImage,

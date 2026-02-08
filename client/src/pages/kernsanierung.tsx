@@ -26,7 +26,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import kernImg from "@assets/generated_images/haus_alt_vs_neu_vergleich.webp";
+const kernImg = "/images/haus_alt_vs_neu_vergleich.webp";
 
 const kernHeroContent: HeroContent = {
   backgroundImage: kernImg,

@@ -190,6 +190,15 @@ Preferred communication style: Simple, everyday language (German).
 3. Create React component in `client/src/pages/`
 4. Register route in `client/src/App.tsx`
 
+**Image Performance Optimization (Feb 2026):**
+- All hero images served as static files from `client/public/images/` (NOT via Vite @assets imports)
+- Hero image mapping centralized in `server/hero-images.ts`
+- HTTP `Link: rel=preload` header sent for hero images on every page request (dev + production)
+- SSR renderer also injects `<link rel="preload">` tag into HTML (production)
+- All below-fold images use `loading="lazy"`, hero images use `loading="eager"` + `fetchpriority="high"`
+- Logo/favicon images still imported via Vite (@assets) for bundling
+- IMPORTANT: When adding new pages with hero images, update `server/hero-images.ts`
+
 ### Build & Deployment
 
 **Build Process:**

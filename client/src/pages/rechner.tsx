@@ -32,7 +32,7 @@ import {
   Warehouse
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import rechnerImg from "@assets/generated_images/sanierungsberater_experte.webp";
+const rechnerImg = "/images/sanierungsberater_experte.webp";
 
 const rechnerHeroContent: HeroContent = {
   backgroundImage: rechnerImg,

@@ -5,6 +5,7 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
+import { getHeroImageForRoute } from "./hero-images";
 
 const app = express();
 
@@ -12,15 +13,19 @@ app.use(compression());
 
 // Performance & Security Headers
 app.use((req, res, next) => {
-  // Security headers
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
   res.setHeader('X-XSS-Protection', '1; mode=block');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(self)');
-  
-  // Performance headers
   res.setHeader('X-DNS-Prefetch-Control', 'on');
+  
+  if (!req.path.startsWith("/api") && !req.path.match(/\.(js|css|webp|png|jpg|svg|ico|woff|woff2|json|txt|xml)$/)) {
+    const heroImg = getHeroImageForRoute(req.path);
+    if (heroImg) {
+      res.setHeader('Link', `<${heroImg}>; rel=preload; as=image; type=image/webp`);
+    }
+  }
   
   next();
 });

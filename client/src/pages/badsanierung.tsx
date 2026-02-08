@@ -24,7 +24,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import bathroomImg from "@assets/generated_images/moderne_badsanierung.webp";
+const bathroomImg = "/images/moderne_badsanierung.webp";
 
 const badHeroContent: HeroContent = {
   backgroundImage: bathroomImg,

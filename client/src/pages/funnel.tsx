@@ -52,48 +52,47 @@ import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoHead, generateServiceSchema } from "@/components/seo-head";
-import consultationHeroImage from "@assets/generated_images/sanierungsberatung_gespraech.webp";
-import komplettsanierungHeroImage from "@assets/generated_images/komplettsanierung_vorher_nachher.webp";
-import badsanierungHeroImage from "@assets/generated_images/moderne_luxus_badsanierung.webp";
-import kuechensanierungHeroImage from "@assets/generated_images/moderne_kuechensanierung_ergebnis.webp";
-import bodensanierungHeroImage from "@assets/generated_images/parkettboden_sanierung_ergebnis.webp";
-import elektrosanierungHeroImage from "@assets/generated_images/deutsche_elektroinstallation_vde.webp";
-import heizungssanierungHeroImage from "@assets/generated_images/moderne_heizungsanlage_einbau.webp";
-import dachsanierungHeroImage from "@assets/generated_images/saniertes_ziegeldach.webp";
-import energetischeSanierungHeroImage from "@assets/generated_images/energieeffiziente_haussanierung.webp";
+const consultationHeroImage = "/images/sanierungsberatung_gespraech.webp";
+const komplettsanierungHeroImage = "/images/komplettsanierung_vorher_nachher.webp";
+const badsanierungHeroImage = "/images/moderne_luxus_badsanierung.webp";
+const kuechensanierungHeroImage = "/images/moderne_kuechensanierung_ergebnis.webp";
+const bodensanierungHeroImage = "/images/parkettboden_sanierung_ergebnis.webp";
+const elektrosanierungHeroImage = "/images/deutsche_elektroinstallation_vde.webp";
+const heizungssanierungHeroImage = "/images/moderne_heizungsanlage_einbau.webp";
+const dachsanierungHeroImage = "/images/saniertes_ziegeldach.webp";
+const energetischeSanierungHeroImage = "/images/energieeffiziente_haussanierung.webp";
 
-// NLP Section Images - 3 per service showing: work-in-progress, expertise, and results
-import komplettsanierungNlp1 from "@assets/generated_images/sanierungsteam_koordination.webp";
-import komplettsanierungNlp2 from "@assets/generated_images/qualitaetskontrolle_sanierung.webp";
-import komplettsanierungNlp3 from "@assets/generated_images/sanierte_luxuswohnung_interieur.webp";
+const komplettsanierungNlp1 = "/images/sanierungsteam_koordination.webp";
+const komplettsanierungNlp2 = "/images/qualitaetskontrolle_sanierung.webp";
+const komplettsanierungNlp3 = "/images/sanierte_luxuswohnung_interieur.webp";
 
-import badsanierungNlp1 from "@assets/generated_images/fliesenleger_bad_fliesen.webp";
-import badsanierungNlp2 from "@assets/generated_images/installateur_bad_armaturen_einbau.webp";
-import badsanierungNlp3 from "@assets/generated_images/luxus_spa_bad_saniert.webp";
+const badsanierungNlp1 = "/images/fliesenleger_bad_fliesen.webp";
+const badsanierungNlp2 = "/images/installateur_bad_armaturen_einbau.webp";
+const badsanierungNlp3 = "/images/luxus_spa_bad_saniert.webp";
 
-import kuechensanierungNlp1 from "@assets/generated_images/elektriker_kueche_vorbereitung.webp";
-import kuechensanierungNlp2 from "@assets/generated_images/installateur_kueche_anschluesse.webp";
-import kuechensanierungNlp3 from "@assets/generated_images/kuechensanierung_fertiggestellt.webp";
+const kuechensanierungNlp1 = "/images/elektriker_kueche_vorbereitung.webp";
+const kuechensanierungNlp2 = "/images/installateur_kueche_anschluesse.webp";
+const kuechensanierungNlp3 = "/images/kuechensanierung_fertiggestellt.webp";
 
-import bodensanierungNlp1 from "@assets/generated_images/handwerker_parkettboden_verlegen.webp";
-import bodensanierungNlp2 from "@assets/generated_images/bodenschleifen_und_aufbereitung.webp";
-import bodensanierungNlp3 from "@assets/generated_images/fischgraet_parkettboden_fertig.webp";
+const bodensanierungNlp1 = "/images/handwerker_parkettboden_verlegen.webp";
+const bodensanierungNlp2 = "/images/bodenschleifen_und_aufbereitung.webp";
+const bodensanierungNlp3 = "/images/fischgraet_parkettboden_fertig.webp";
 
-import elektrosanierungNlp1 from "@assets/generated_images/elektriker_neue_kabel_verlegen.webp";
-import elektrosanierungNlp2 from "@assets/generated_images/elektriker_verteilerschrank_einbau.webp";
-import elektrosanierungNlp3 from "@assets/generated_images/moderne_steckdosen_eingebaut.webp";
+const elektrosanierungNlp1 = "/images/elektriker_neue_kabel_verlegen.webp";
+const elektrosanierungNlp2 = "/images/elektriker_verteilerschrank_einbau.webp";
+const elektrosanierungNlp3 = "/images/moderne_steckdosen_eingebaut.webp";
 
-import heizungssanierungNlp1 from "@assets/generated_images/techniker_waermepumpe_einbau.webp";
-import heizungssanierungNlp2 from "@assets/generated_images/installateur_heizkoerper_anschluss.webp";
-import heizungssanierungNlp3 from "@assets/generated_images/moderner_heizkessel_eingebaut.webp";
+const heizungssanierungNlp1 = "/images/techniker_waermepumpe_einbau.webp";
+const heizungssanierungNlp2 = "/images/installateur_heizkoerper_anschluss.webp";
+const heizungssanierungNlp3 = "/images/moderner_heizkessel_eingebaut.webp";
 
-import energetischeSanierungNlp1 from "@assets/generated_images/arbeiter_fassadendaemmung.webp";
-import energetischeSanierungNlp2 from "@assets/generated_images/einbau_energiesparfenster.webp";
-import energetischeSanierungNlp3 from "@assets/generated_images/energieeffizientes_saniertes_haus.webp";
+const energetischeSanierungNlp1 = "/images/arbeiter_fassadendaemmung.webp";
+const energetischeSanierungNlp2 = "/images/einbau_energiesparfenster.webp";
+const energetischeSanierungNlp3 = "/images/energieeffizientes_saniertes_haus.webp";
 
-import dachsanierungNlp1 from "@assets/generated_images/dachdecker_dachziegel_verlegen.webp";
-import dachsanierungNlp2 from "@assets/generated_images/einbau_dachdaemmung.webp";
-import dachsanierungNlp3 from "@assets/generated_images/fertig_saniertes_hausdach.webp";
+const dachsanierungNlp1 = "/images/dachdecker_dachziegel_verlegen.webp";
+const dachsanierungNlp2 = "/images/einbau_dachdaemmung.webp";
+const dachsanierungNlp3 = "/images/fertig_saniertes_hausdach.webp";
 
 const serviceHeroImages: Record<string, string> = {
   komplettsanierung: komplettsanierungHeroImage,

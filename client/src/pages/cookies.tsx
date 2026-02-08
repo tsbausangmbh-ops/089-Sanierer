@@ -7,7 +7,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
-import cookiesHeroImage from "@assets/generated_images/webseite_cookie_einstellungen.webp";
+const cookiesHeroImage = "/images/webseite_cookie_einstellungen.webp";
 
 const cookiesHeroContent: HeroContent = {
   backgroundImage: cookiesHeroImage,
