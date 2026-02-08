@@ -11,8 +11,8 @@ import {
 const kshwLogo = "/images/089-sanierer-logo.webp";
 
 const allServices = [
-  { id: "komplettsanierung", title: "Komplettsanierung", icon: Home, href: "/kernsanierung" },
-  { id: "badsanierung", title: "Badsanierung", icon: Bath, href: "/badsanierung" },
+  { id: "komplettsanierung", title: "Komplettsanierung", icon: Home, href: "/anfrage?service=komplettsanierung" },
+  { id: "badsanierung", title: "Badsanierung", icon: Bath, href: "/anfrage?service=badsanierung" },
   { id: "kuechensanierung", title: "Küchensanierung", icon: UtensilsCrossed, href: "/anfrage?service=kuechensanierung" },
   { id: "bodensanierung", title: "Bodensanierung", icon: Layers, href: "/anfrage?service=bodensanierung" },
   { id: "elektrosanierung", title: "Elektrosanierung", icon: Zap, href: "/anfrage?service=elektrosanierung" },
@@ -89,7 +89,7 @@ export function SiteHeader() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link href="/badsanierung">
+            <Link href="/anfrage?service=badsanierung">
               <Button variant="ghost" size="sm" className="text-sm text-white/80 hover:text-white hover:bg-white/10">
                 Badsanierung
               </Button>
