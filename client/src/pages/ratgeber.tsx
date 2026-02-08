@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
+import { InternalLinks, linkSets } from "@/components/internal-links";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SeoHead } from "@/components/seo-head";
 const ratgeberHeroImage = "/images/sanierungsberater_experte.webp";
@@ -1009,6 +1010,7 @@ export default function Ratgeber() {
         </div>
       </main>
 
+      <InternalLinks links={linkSets.fromRatgeber} />
       <SeoFooter />
     </div>
   );

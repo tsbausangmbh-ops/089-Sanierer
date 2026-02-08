@@ -30,6 +30,31 @@ app.use((req, res, next) => {
   next();
 });
 
+// Crawler-Logging: Alle Bot-Zugriffe loggen (vor crawlerMiddleware, da diese direkt antwortet)
+const CRAWLER_BOTS = [
+  "Googlebot", "Bingbot", "bingbot", "Slurp", "DuckDuckBot", "Baiduspider",
+  "YandexBot", "GPTBot", "ChatGPT-User", "ClaudeBot", "PerplexityBot",
+  "Applebot", "Amazonbot", "PetalBot", "SeznamBot", "MojeekBot",
+  "facebookexternalhit", "Twitterbot", "LinkedInBot",
+  "Google-Extended", "OAI-SearchBot", "Bytespider",
+  "AhrefsBot", "SemrushBot", "MJ12bot",
+];
+
+app.use((req, res, next) => {
+  const ua = req.headers["user-agent"] || "";
+  const bot = CRAWLER_BOTS.find((b) => ua.includes(b));
+  if (bot) {
+    const formattedTime = new Date().toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    });
+    console.log(`${formattedTime} [crawler] [CRAWLER] ${bot} | ${req.method} ${req.originalUrl} | IP: ${req.ip}`);
+  }
+  next();
+});
+
 // SEO: Built-in crawler middleware for all search engines and AI bots
 // Serves pre-rendered static HTML to crawlers without external dependencies
 app.use(crawlerMiddleware);

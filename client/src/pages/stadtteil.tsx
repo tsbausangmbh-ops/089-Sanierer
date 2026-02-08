@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
+import { InternalLinks, linkSets } from "@/components/internal-links";
 import { SeoHead } from "@/components/seo-head";
 import {
   Accordion,
@@ -776,6 +777,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         </section>
       </main>
 
+      <InternalLinks links={linkSets.fromStadtteil(data.name)} />
       <SeoFooter />
     </div>
   );
