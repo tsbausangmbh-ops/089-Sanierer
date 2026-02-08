@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { getSeoMeta } from "@shared/seo-meta";
 
 interface SeoHeadProps {
   title: string;
@@ -18,13 +19,16 @@ export function SeoHead({
   description,
   keywords,
   canonicalPath,
-  ogImage = "https://089-sanierer.de/og-image.jpg",
+  ogImage,
   ogImageAlt,
   ogType = "website",
   noIndex = false,
   schema,
   preloadImage
 }: SeoHeadProps) {
+  const seoMeta = canonicalPath ? getSeoMeta(canonicalPath) : null;
+  const resolvedOgImage = ogImage || seoMeta?.ogImage || "https://089-sanierer.de/images/komplettsanierung_vorher_nachher.webp";
+  const resolvedOgImageAlt = ogImageAlt || seoMeta?.ogImageAlt || "Sanierungsfirma München - professionelle Komplettsanierung";
   useEffect(() => {
     if (preloadImage) {
       const existingPreload = document.querySelector(`link[rel="preload"][as="image"][href="${preloadImage}"]`);
@@ -71,10 +75,11 @@ export function SeoHead({
     updateMeta("og:title", title, true);
     updateMeta("og:description", description, true);
     updateMeta("og:type", ogType, true);
-    updateMeta("og:image", ogImage, true);
-    if (ogImageAlt) {
-      updateMeta("og:image:alt", ogImageAlt, true);
-    }
+    updateMeta("og:image", resolvedOgImage, true);
+    updateMeta("og:image:alt", resolvedOgImageAlt, true);
+    updateMeta("og:image:width", "1200", true);
+    updateMeta("og:image:height", "630", true);
+    updateMeta("og:image:type", "image/webp", true);
     
     if (canonicalPath) {
       const canonicalUrl = `https://089-sanierer.de${canonicalPath}`;
@@ -91,12 +96,11 @@ export function SeoHead({
       }
     }
 
+    updateMeta("twitter:card", "summary_large_image");
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
-    updateMeta("twitter:image", ogImage);
-    if (ogImageAlt) {
-      updateMeta("twitter:image:alt", ogImageAlt);
-    }
+    updateMeta("twitter:image", resolvedOgImage);
+    updateMeta("twitter:image:alt", resolvedOgImageAlt);
 
     if (schema) {
       // Check if SSR already injected a LocalBusiness schema (to avoid duplicates for crawlers)
@@ -162,7 +166,7 @@ export function SeoHead({
         dynamicSchema.remove();
       }
     };
-  }, [title, description, keywords, canonicalPath, ogImage, ogImageAlt, ogType, noIndex, schema]);
+  }, [title, description, keywords, canonicalPath, resolvedOgImage, resolvedOgImageAlt, ogType, noIndex, schema]);
 
   return null;
 }

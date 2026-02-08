@@ -136,7 +136,7 @@ const pageOgImageMap: Record<string, { image: string; alt: string }> = {
   "/haussanierung": { image: "/images/haus_vorher_nachher_zickzack.webp", alt: "Haussanierung München vorher nachher - Einfamilienhaus komplett saniert mit Festpreisgarantie" },
   "/kernsanierung": { image: "/images/komplettsanierung_haus.webp", alt: "Kernsanierung München - Haus bis auf die Grundsubstanz entkernt und professionell neu aufgebaut" },
   "/energetische-sanierung": { image: "/images/energieeffizientes_saniertes_haus.webp", alt: "Energetische Sanierung München - energieeffizient saniertes Haus mit Wärmedämmung und modernen Fenstern" },
-  "/rechner": { image: "/images/sanierung_preiskalkulation.webp", alt: "Sanierungskosten Rechner München - Online-Kalkulator für Badsanierung und Komplettsanierung Kosten" },
+  "/rechner": { image: "/images/kostenrechner_planung_2026.webp", alt: "Sanierungskosten Rechner München - Online-Kalkulator für Badsanierung und Komplettsanierung Kosten" },
   "/kontakt": { image: "/images/kundenservice_kontakt.webp", alt: "Kontakt Sanierungsfirma München - persönliche Sanierungsberatung und kostenloser Vor-Ort-Termin" },
   "/impressum": { image: "/images/rechtliche_dokumente_impressum.webp", alt: "Impressum Sanierungsfirma München - rechtliche Informationen und Kontaktdaten" },
   "/datenschutz": { image: "/images/datenschutz_sicherheit.webp", alt: "Datenschutz Sanierungsfirma München - DSGVO-konforme Verarbeitung Ihrer Sanierungsanfragen" },
@@ -566,6 +566,123 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         </ul>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/kuechensanierung") {
+    title = "Küchensanierung München ab 6.500€ | Festpreis";
+    description = "Küchensanierung München: Elektro, Wasser, Fliesen & Malerarbeiten ab 6.500€. Festpreisgarantie für alle Küchenumbau-Arbeiten.";
+    keywords = "Küchensanierung München, Küchenumbau München, Küche sanieren München Kosten, Küche renovieren München Festpreis, Küchensanierung aus einer Hand München";
+    mainContent = `
+      <section>
+        <h1>Küchensanierung München - ab 6.500€</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p><strong>Kurzantwort:</strong> Küchensanierung in München ab 6.500€ (nur Bauarbeiten, ohne Küchenmöbel). Alle Gewerke aus einer Hand: Elektro, Wasser, Fliesen und Malerarbeiten mit verbindlicher Festpreisgarantie.</p>
+        
+        <h2>Unsere Küchensanierung umfasst</h2>
+        <ul>
+          <li>Elektroinstallation (Steckdosen, Licht, Herdanschluss)</li>
+          <li>Wasseranschlüsse (Spüle, Geschirrspüler)</li>
+          <li>Fliesenarbeiten (Boden und Spritzschutz)</li>
+          <li>Malerarbeiten (Wände und Decke)</li>
+          <li>Bodenbelag nach Wahl</li>
+        </ul>
+        
+        <h2>Kosten Küchensanierung München 2026</h2>
+        <p>Kleine Küche: 6.500 - 10.000€ | Mittlere Küche: 10.000 - 15.000€ | Große Küche: 15.000 - 22.000€</p>
+        
+        <h2>Kontakt</h2>
+        <p>Telefon: +49 89 444 438 872</p>
+        <p><a href="/anfrage?service=kuechensanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/bodensanierung") {
+    title = "Bodensanierung München ab 65€/m² | Parkett & Fliesen";
+    description = "Bodensanierung München: Parkett, Fliesen, Vinyl ab 65€/m². Estrich, Fußbodenheizung nachrüsten. Fachgerechte Verlegung mit Festpreisgarantie.";
+    keywords = "Bodensanierung München, Parkett verlegen München, Fliesen legen München, Boden sanieren München Kosten, Estrich München, Fußbodenheizung München";
+    mainContent = `
+      <section>
+        <h1>Bodensanierung München - ab 65€/m²</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p><strong>Kurzantwort:</strong> Professionelle Bodensanierung in München ab 65€/m². Parkett, Fliesen, Vinyl und Laminat. Estricharbeiten und Fußbodenheizung nachrüsten möglich. Festpreisgarantie.</p>
+        
+        <h2>Bodenbeläge im Überblick</h2>
+        <ul>
+          <li>Vinyl/Laminat: 65 - 100€/m²</li>
+          <li>Parkett: 100 - 150€/m²</li>
+          <li>Fliesen: 120 - 200€/m²</li>
+          <li>Estrich erneuern: 40 - 80€/m²</li>
+          <li>Fußbodenheizung nachrüsten: 80 - 150€/m²</li>
+        </ul>
+        
+        <h2>Leistungen Bodensanierung</h2>
+        <ul>
+          <li>Altbelag entfernen und entsorgen</li>
+          <li>Untergrund vorbereiten und ausgleichen</li>
+          <li>Fachgerechte Verlegung nach Herstellervorgaben</li>
+          <li>Sockelleisten und Übergänge</li>
+        </ul>
+        
+        <h2>Kontakt</h2>
+        <p>Telefon: +49 89 444 438 872</p>
+        <p><a href="/anfrage?service=bodensanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/elektrosanierung") {
+    title = "Elektrosanierung München ab 150€/m² | VDE-konform";
+    description = "Elektrosanierung München: Leitungen, Sicherungskasten, Smart Home ab 150€/m². VDE-konforme Installation vom Meisterbetrieb mit Festpreis.";
+    keywords = "Elektrosanierung München, Elektroinstallation München, Elektriker München Sanierung, Sicherungskasten München, Smart Home München, VDE Elektrik München";
+    mainContent = `
+      <section>
+        <h1>Elektrosanierung München - ab 150€/m²</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p><strong>Kurzantwort:</strong> VDE-konforme Elektrosanierung in München ab 150€/m². Komplette Erneuerung der Elektrik: Leitungen, Sicherungskasten, Steckdosen und Smart-Home-Vorbereitung. Meisterbetrieb mit Festpreisgarantie.</p>
+        
+        <h2>Leistungen Elektrosanierung</h2>
+        <ul>
+          <li>Komplette Leitungserneuerung nach VDE-Norm</li>
+          <li>Sicherungskasten austauschen</li>
+          <li>Steckdosen und Schalter erneuern</li>
+          <li>Beleuchtungskonzept umsetzen</li>
+          <li>Smart-Home-Vorbereitung</li>
+          <li>Prüfprotokoll und Abnahme</li>
+        </ul>
+        
+        <h2>Kosten Elektrosanierung München 2026</h2>
+        <p>Teilsanierung: 85 - 130€/m² | Komplett: 130 - 200€/m² | Smart Home: 200 - 300€/m²</p>
+        
+        <h2>Kontakt</h2>
+        <p>Telefon: +49 89 444 438 872</p>
+        <p><a href="/anfrage?service=elektrosanierung">Jetzt Angebot anfordern</a></p>
+      </section>
+    `;
+  } else if (path === "/heizungssanierung") {
+    title = "Heizungssanierung München ab 12.000€ | Festpreis";
+    description = "Heizungssanierung München: Wärmepumpe, Gas-Brennwert, Pelletheizung ab 12.000€. BAFA- und KfW-Förderung. Energieeffiziente Heizungslösungen.";
+    keywords = "Heizungssanierung München, Heizung erneuern München, Wärmepumpe München, Gasheizung München, Fußbodenheizung München, Heizung tauschen München Kosten";
+    mainContent = `
+      <section>
+        <h1>Heizungssanierung München - ab 12.000€</h1>
+        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
+        <p><strong>Kurzantwort:</strong> Heizungssanierung in München ab 12.000€. Wärmepumpe, Gas-Brennwert oder Pelletheizung mit BAFA- und KfW-Förderung. Fußbodenheizung nachrüsten möglich. Festpreisgarantie.</p>
+        
+        <h2>Heizungssysteme im Überblick</h2>
+        <ul>
+          <li>Gasheizung (Brennwert): 12.000 - 20.000€</li>
+          <li>Wärmepumpe: 25.000 - 50.000€</li>
+          <li>Pelletheizung: 20.000 - 35.000€</li>
+          <li>Fußbodenheizung nachrüsten: 80 - 150€/m²</li>
+        </ul>
+        
+        <h2>Förderung Heizungssanierung</h2>
+        <ul>
+          <li>BAFA-Förderung für Wärmepumpe bis 40%</li>
+          <li>KfW-Förderung für energieeffiziente Heizung</li>
+          <li>Kostenlose Förderberatung inklusive</li>
+        </ul>
+        
+        <h2>Kontakt</h2>
+        <p>Telefon: +49 89 444 438 872</p>
+        <p><a href="/anfrage?service=heizungssanierung">Jetzt Angebot anfordern</a></p>
       </section>
     `;
   } else if (path === "/agb") {
