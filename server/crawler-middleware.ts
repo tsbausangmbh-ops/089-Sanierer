@@ -175,11 +175,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   if (path === "/" || path === "") {
     mainContent = `
       <section>
-        <h1>Sanierung München - 089-Sanierer Komplettsanierungen</h1>
+        <h1>Sanierungen München – Ihre Sanierungsfirma für Komplettsanierungen aus einer Hand</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> 089-Sanierer ist Münchens Meisterbetrieb für Komplettsanierungen. Badsanierung ab 18.500 €, Wohnungssanierung ab 800 €/m², Komplettsanierung ab 1.200 €/m² – alles mit verbindlicher Festpreisgarantie, persönlichem Bauleiter und 5 Jahren Gewährleistung. 268+ Projekte, 4,9 Sterne, 98 % Weiterempfehlung.</p>
+        <p><strong>Kurzantwort:</strong> 089-Sanierer ist Münchens Meisterbetrieb für Sanierungsarbeiten und Renovierungsarbeiten. Badsanierung ab 18.500 €, Wohnungssanierung ab 800 €/m², Komplettsanierung ab 1.200 €/m² – alles mit verbindlicher Festpreisgarantie, persönlichem Bauleiter und 5 Jahren Gewährleistung. Als erfahrene Renovierungsfirma München bieten wir Sanierung aus einer Hand: 268+ Projekte, 4,9 Sterne, 98 % Weiterempfehlung.</p>
         
-        <h2>Unsere Leistungen</h2>
+        <h2>Unsere Sanierungsarbeiten und Renovierungsarbeiten</h2>
         <ul>
           <li><strong>Komplettsanierung</strong> - Schlüsselfertige Sanierung ab 1.200 €/m²</li>
           <li><strong>Badsanierung</strong> - Komplettbad ab 18.500 €</li>
@@ -191,7 +191,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li><strong>Energetische Sanierung</strong> - KfW-förderfähig ab 200 €/m²</li>
         </ul>
         
-        <h2>Warum 089-Sanierer?</h2>
+        <h2>Handwerkerservice München – Warum 089-Sanierer?</h2>
+        <p>Als Generalunternehmer Sanierung koordinieren wir alle Gewerke und bieten Renovierung aus einer Hand. Unsere erfahrenen Handwerker München garantieren höchste Qualität bei jeder Sanierung.</p>
         <ul>
           <li>268+ erfolgreich abgeschlossene Projekte</li>
           <li>4,9 von 5 Sternen Kundenbewertung</li>
@@ -202,11 +203,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li>Kostenlose Beratung innerhalb von 24 Stunden</li>
         </ul>
         
-        <h2>Servicegebiet</h2>
-        <p>Wir sind in ganz München und dem Großraum für Sie da: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Nymphenburg, sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden im Umkreis von 50 km.</p>
+        <h2>Innenausbau Firma München – Servicegebiet</h2>
+        <p>Als Innenausbau Firma München sind wir in ganz München und dem Großraum für Renovierungen München und Sanierungen tätig: Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Nymphenburg, sowie Dachau, Starnberg, Freising, Germering und weitere Gemeinden im Umkreis von 50 km.</p>
         
         <h2>Kontakt</h2>
-        <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+        <p>089-Sanierer – Ihre Sanierungsfirma München für Komplettsanierungen Haus & Wohnung</p>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: +49 89 444 438 872</p>
         <p>Öffnungszeiten: Mo-Fr 08:00-16:30 Uhr</p>
@@ -256,11 +257,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München";
     mainContent = `
       <section>
-        <h1>FAQ & Preise - Sanierung München</h1>
+        <h1>FAQ & Preise – Sanierungen München und Renovierungen München</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> Sanierungskosten in München 2026: Badsanierung ab 18.500 € (6-8 m²), Komplettsanierung ab 1.200 €/m², Küchensanierung ab 6.500 €, Elektro ab 150 €/m². Alle Preise als verbindliche Festpreise bei 089-Sanierer, mit 5 Jahren Gewährleistung und persönlichem Bauleiter.</p>
+        <p><strong>Kurzantwort:</strong> Sanierungskosten für Sanierungsarbeiten in München 2026: Badsanierung ab 18.500 € (6-8 m²), Komplettsanierung ab 1.200 €/m², Küchensanierung ab 6.500 €, Elektro ab 150 €/m². Alle Preise als verbindliche Festpreise bei 089-Sanierer – Ihrer Sanierungsfirma München für Renovierungsarbeiten aus einer Hand, mit 5 Jahren Gewährleistung und persönlichem Bauleiter.</p>
         
-        <h2>Preisübersicht (München, Stand 02/2026, netto zzgl. MwSt.)</h2>
+        <h2>Preisübersicht Handwerkerservice München (Stand 02/2026, netto zzgl. MwSt.)</h2>
         
         <h3>Komplettsanierung</h3>
         <p>Standard: 1.000 - 1.500 €/m² | Gehoben: 1.500 - 2.300 €/m²</p>
@@ -337,12 +338,14 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Kontakt Sanierung München, Sanierungsfirma München Telefon, Sanierungsanfrage München stellen, Handwerker München anrufen, Renovierungsfirma München kontaktieren, Badsanierung München anfragen, Kostenvoranschlag Sanierung München, Beratungstermin Renovierung München, Sanierungsfirma München E-Mail, Handwerker München Öffnungszeiten, Komplettsanierung München Termin, Sanierung München Rückruf, Renovierungsberatung München gratis, Sanierungsfirma München Anfahrt";
     mainContent = `
       <section>
-        <h1>Kontakt</h1>
-        <h2>089-Sanierer - Komplettsanierungen Haus & Wohnung</h2>
+        <h1>Kontakt – Ihre Sanierungsfirma München</h1>
+        <h2>089-Sanierer – Handwerkerservice München für Sanierungsarbeiten</h2>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: 0152 122 740 43</p>
-        <h3>Öffnungszeiten</h3>
+        <p>Kontaktieren Sie unsere Renovierungsfirma München für alle Renovierungsarbeiten und Sanierungen München. Ob Renovierung aus einer Hand oder einzelne Handwerker München – wir beraten Sie gerne kostenlos und unverbindlich.</p>
+        <h3>Öffnungszeiten Handwerker München</h3>
         <p>Montag - Freitag: 08:00 - 16:30 Uhr</p>
+        <p>Als Generalunternehmer Sanierung bieten wir Ihnen Sanierung aus einer Hand – von der Beratung bis zur schlüsselfertigen Übergabe.</p>
       </section>
     `;
   } else if (path === "/bestaetigung") {
@@ -372,8 +375,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München, Sanierung Ratgeber München, Sanierung Tipps München";
     mainContent = `
       <section>
-        <h1>Sanierungskosten München - Ihr Ratgeber für faire Preise</h1>
-        <p>Alle Preisangaben auf dieser Seite sind unverbindliche Richtwerte. Stand: Dezember 2025, Preise netto zzgl. 19% MwSt.</p>
+        <h1>Sanierungsarbeiten München – Ratgeber für faire Preise bei Sanierungen München</h1>
+        <p>Alle Preisangaben auf dieser Seite sind unverbindliche Richtwerte. Als Ihre Sanierungsfirma München bieten wir transparente Kosten für alle Renovierungsarbeiten und Sanierungsarbeiten. Stand: Dezember 2025, Preise netto zzgl. 19% MwSt.</p>
         
         <h2>Was kostet eine Haussanierung in München?</h2>
         <p>Eine Haussanierung in München kostet je nach Umfang und Zustand:</p>
@@ -428,12 +431,13 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>BAFA-Förderung: 15-20% Zuschuss möglich. KfW-Kredit: vergünstigte Konditionen.</p>
         
         <h2>Was kostet eine Wohnungssanierung in München?</h2>
-        <p>Wohnungssanierung München:</p>
+        <p>Wohnungssanierung München – Renovierungen München zum Festpreis:</p>
         <ul>
           <li><strong>Renovierung (Böden, Wände, Decken):</strong> 300 - 600 €/m²</li>
           <li><strong>Teilsanierung (inkl. Bad/Küche):</strong> 600 - 1.000 €/m²</li>
           <li><strong>Komplettsanierung:</strong> 1.000 - 1.800 €/m²</li>
         </ul>
+        <p>Als Generalunternehmer Sanierung koordinieren wir alle Handwerker München für Ihre Wohnungssanierung. Unsere Renovierungsfirma München bietet Renovierung aus einer Hand mit Festpreisgarantie. Ob Innenausbau Firma München oder Handwerkerservice München – bei uns erhalten Sie Sanierung aus einer Hand.</p>
         
         <h2>Welche Förderung gibt es für energetische Sanierung in München?</h2>
         <p>Förderprogramme für energetische Sanierung:</p>
@@ -456,10 +460,10 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Sanierung München Kosten, was kostet Sanierung München, Badsanierung Kosten München, Komplettsanierung Preis München, Festpreis Sanierung München";
     mainContent = `
       <section>
-        <h1>Was kostet eine Sanierung in München?</h1>
-        <p>Transparente Festpreise für Ihre Sanierung. Alle Preise netto zzgl. MwSt., Stand 01/2025.</p>
+        <h1>Sanierungen München Kosten – Was kosten Sanierungsarbeiten?</h1>
+        <p>Transparente Festpreise für Ihre Sanierung. Als Renovierungsfirma München bieten wir faire Preise für alle Renovierungsarbeiten und Sanierungsarbeiten. Alle Preise netto zzgl. MwSt., Stand 01/2025.</p>
         
-        <h2>Preisübersicht Sanierung München</h2>
+        <h2>Preisübersicht – Sanierung aus einer Hand</h2>
         <ul>
           <li><strong>Komplettsanierung:</strong> ab 1.200 €/m²</li>
           <li><strong>Badsanierung:</strong> ab 18.500 €</li>
@@ -467,13 +471,15 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li><strong>Kernsanierung:</strong> ab 1.200 €/m²</li>
         </ul>
         
-        <h2>Unsere Vorteile</h2>
+        <h2>Ihre Sanierungsfirma München – Vorteile</h2>
         <ul>
           <li>Festpreisgarantie - keine versteckten Kosten</li>
           <li>5 Jahre Gewährleistung</li>
           <li>Kostenlose Beratung vor Ort</li>
           <li>268+ zufriedene Kunden in München</li>
+          <li>Generalunternehmer Sanierung – alle Gewerke koordiniert</li>
         </ul>
+        <p>Als Handwerkerservice München und Innenausbau Firma München kümmern sich unsere Handwerker München um Renovierungen München jeder Größe.</p>
         
         <h2>Jetzt Angebot anfordern</h2>
         <p><a href="/anfrage">Kostenlose Beratung</a> | Telefon: 0152 1227 4043</p>
@@ -485,10 +491,10 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Badsanierung München, Bad sanieren München, Badsanierung Kosten München, Bad renovieren München, Badezimmer sanieren München";
     mainContent = `
       <section>
-        <h1>Badsanierung München - Komplett ab 18.500€</h1>
-        <p>Ihr Bad in neuen Händen. Alles aus einer Hand mit Festpreisgarantie.</p>
+        <h1>Badsanierung München – Sanierungsarbeiten komplett ab 18.500€</h1>
+        <p>Ihr Bad in neuen Händen. Als erfahrene Sanierungsfirma München bieten wir Ihnen die komplette Badsanierung aus einer Hand mit Festpreisgarantie. Unsere qualifizierten Handwerker München übernehmen alle Renovierungsarbeiten – von der Planung bis zur Übergabe.</p>
         
-        <h2>Unsere Badsanierung beinhaltet</h2>
+        <h2>Unsere Badsanierung – Renovierung aus einer Hand</h2>
         <ul>
           <li>Komplette Fliesenarbeiten</li>
           <li>Sanitärinstallation</li>
@@ -502,6 +508,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li>Standard-Bad (6-8 m²): 16.000 - 22.000 €</li>
           <li>Komfort-Bad: 22.000 - 32.000 €</li>
         </ul>
+        <p>Vertrauen Sie bei Ihren Sanierungen München auf unseren professionellen Handwerkerservice München.</p>
         
         <p><a href="/anfrage?service=badsanierung">Jetzt Angebot anfordern</a></p>
       </section>
@@ -512,10 +519,10 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Wohnungssanierung München, Wohnung sanieren München, Wohnung renovieren München, Altbauwohnung sanieren München";
     mainContent = `
       <section>
-        <h1>Wohnungssanierung München - ab 800€/m²</h1>
-        <p>Komplette Wohnungssanierung aus einer Hand mit Festpreisgarantie.</p>
+        <h1>Wohnungssanierung München – Renovierungen München ab 800€/m²</h1>
+        <p>Komplette Wohnungssanierung und Renovierungsarbeiten aus einer Hand mit Festpreisgarantie. Als Ihre Renovierungsfirma München koordinieren wir alle Sanierungsarbeiten – vom Innenausbau bis zur schlüsselfertigen Übergabe.</p>
         
-        <h2>Leistungen</h2>
+        <h2>Sanierungsarbeiten und Leistungen</h2>
         <ul>
           <li>Badsanierung</li>
           <li>Küchensanierung</li>
@@ -523,6 +530,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li>Elektrosanierung</li>
           <li>Malerarbeiten</li>
         </ul>
+        <p>Unsere Handwerker München übernehmen als Generalunternehmer Sanierung die Koordination aller Gewerke. Profitieren Sie von unserem Handwerkerservice München für Ihre Wohnungssanierung.</p>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
       </section>
@@ -533,16 +541,17 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Haussanierung München, Haus sanieren München, Einfamilienhaus sanieren München, Haus renovieren München";
     mainContent = `
       <section>
-        <h1>Haussanierung München - ab 1.200€/m²</h1>
-        <p>Ihr Haus in neuen Händen. Komplette Sanierung aus einer Hand.</p>
+        <h1>Haussanierung München – Sanierungsfirma für komplette Sanierungsarbeiten</h1>
+        <p>Ihr Haus in neuen Händen. Als Generalunternehmer Sanierung bieten wir komplette Haussanierung aus einer Hand – alle Renovierungsarbeiten koordiniert durch einen Ansprechpartner. Unsere Sanierungsfirma München steht für termingerechte und qualitativ hochwertige Sanierungen München.</p>
         
-        <h2>Wir sanieren</h2>
+        <h2>Renovierungen München – Wir sanieren</h2>
         <ul>
           <li>Einfamilienhäuser</li>
           <li>Mehrfamilienhäuser</li>
           <li>Doppelhaushälften</li>
           <li>Reihenhäuser</li>
         </ul>
+        <p>Unsere erfahrenen Handwerker München übernehmen sämtliche Sanierungsarbeiten inklusive Innenausbau. Vertrauen Sie auf unseren zuverlässigen Handwerkerservice München.</p>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
       </section>
@@ -553,10 +562,10 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Kernsanierung München, Kernsanierung Kosten München, Altbau Kernsanierung München, Haus entkernen München";
     mainContent = `
       <section>
-        <h1>Kernsanierung München - ab 1.200€/m²</h1>
-        <p>Zurück zum Kern, neu aufgebaut. Professionelle Kernsanierung in München.</p>
+        <h1>Kernsanierung München – Generalunternehmer Sanierung ab 1.200€/m²</h1>
+        <p>Zurück zum Kern, neu aufgebaut. Als Innenausbau Firma München und erfahrene Sanierungsfirma München führen wir professionelle Kernsanierungen durch. Alle Sanierungsarbeiten und Renovierungsarbeiten aus einer Hand – mit Festpreisgarantie.</p>
         
-        <h2>Kernsanierung beinhaltet</h2>
+        <h2>Kernsanierung – umfassende Sanierungen München</h2>
         <ul>
           <li>Rückbau bis zur Grundsubstanz</li>
           <li>Neue Elektroinstallation</li>
@@ -564,6 +573,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li>Neue Heizung</li>
           <li>Kompletter Innenausbau</li>
         </ul>
+        <p>Unsere Handwerker München koordinieren als Generalunternehmer Sanierung alle Gewerke. Profitieren Sie von unserer Erfahrung als Renovierungsfirma München.</p>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
       </section>
@@ -574,11 +584,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Küchensanierung München, Küchenumbau München, Küche sanieren München Kosten, Küche renovieren München Festpreis, Küchensanierung aus einer Hand München";
     mainContent = `
       <section>
-        <h1>Küchensanierung München - ab 6.500€</h1>
+        <h1>Küchensanierung München – Renovierungsarbeiten ab 6.500€</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> Küchensanierung in München ab 6.500€ (nur Bauarbeiten, ohne Küchenmöbel). Alle Gewerke aus einer Hand: Elektro, Wasser, Fliesen und Malerarbeiten mit verbindlicher Festpreisgarantie.</p>
+        <p><strong>Kurzantwort:</strong> Küchensanierung in München ab 6.500€ (nur Bauarbeiten, ohne Küchenmöbel). Alle Sanierungsarbeiten aus einer Hand: Elektro, Wasser, Fliesen und Malerarbeiten mit verbindlicher Festpreisgarantie. Als Ihre Renovierungsfirma München und Innenausbau Firma München übernehmen unsere Handwerker München sämtliche Renovierungen München für Ihre Küche.</p>
         
-        <h2>Unsere Küchensanierung umfasst</h2>
+        <h2>Unsere Küchensanierung – Sanierung aus einer Hand</h2>
         <ul>
           <li>Elektroinstallation (Steckdosen, Licht, Herdanschluss)</li>
           <li>Wasseranschlüsse (Spüle, Geschirrspüler)</li>
@@ -601,11 +611,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Bodensanierung München, Parkett verlegen München, Fliesen legen München, Boden sanieren München Kosten, Estrich München, Fußbodenheizung München";
     mainContent = `
       <section>
-        <h1>Bodensanierung München - ab 65€/m²</h1>
+        <h1>Bodensanierung München – Sanierungsarbeiten ab 65€/m²</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> Professionelle Bodensanierung in München ab 65€/m². Parkett, Fliesen, Vinyl und Laminat. Estricharbeiten und Fußbodenheizung nachrüsten möglich. Festpreisgarantie.</p>
+        <p><strong>Kurzantwort:</strong> Professionelle Bodensanierung in München ab 65€/m². Parkett, Fliesen, Vinyl und Laminat – alle Renovierungsarbeiten aus einer Hand. Unsere Handwerker München führen Estricharbeiten und Fußbodenheizung nachrüsten fachgerecht durch. Festpreisgarantie von Ihrer Sanierungsfirma München.</p>
         
-        <h2>Bodenbeläge im Überblick</h2>
+        <h2>Bodenbeläge im Überblick – Renovierungen München</h2>
         <ul>
           <li>Vinyl/Laminat: 65 - 100€/m²</li>
           <li>Parkett: 100 - 150€/m²</li>
@@ -633,11 +643,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Elektrosanierung München, Elektroinstallation München, Elektriker München Sanierung, Sicherungskasten München, Smart Home München, VDE Elektrik München";
     mainContent = `
       <section>
-        <h1>Elektrosanierung München - ab 150€/m²</h1>
+        <h1>Elektrosanierung München – Sanierungsarbeiten ab 150€/m²</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> VDE-konforme Elektrosanierung in München ab 150€/m². Komplette Erneuerung der Elektrik: Leitungen, Sicherungskasten, Steckdosen und Smart-Home-Vorbereitung. Meisterbetrieb mit Festpreisgarantie.</p>
+        <p><strong>Kurzantwort:</strong> VDE-konforme Elektrosanierung in München ab 150€/m². Komplette Erneuerung der Elektrik: Leitungen, Sicherungskasten, Steckdosen und Smart-Home-Vorbereitung. Unsere Handwerker München arbeiten als Meisterbetrieb mit Festpreisgarantie. Als Innenausbau Firma München bieten wir Sanierung aus einer Hand für alle Renovierungsarbeiten.</p>
         
-        <h2>Leistungen Elektrosanierung</h2>
+        <h2>Leistungen Elektrosanierung – Handwerkerservice München</h2>
         <ul>
           <li>Komplette Leitungserneuerung nach VDE-Norm</li>
           <li>Sicherungskasten austauschen</li>
@@ -661,11 +671,11 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     keywords = "Heizungssanierung München, Heizung erneuern München, Wärmepumpe München, Gasheizung München, Fußbodenheizung München, Heizung tauschen München Kosten";
     mainContent = `
       <section>
-        <h1>Heizungssanierung München - ab 12.000€</h1>
+        <h1>Heizungssanierung München – Sanierungsarbeiten ab 12.000€</h1>
         <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
-        <p><strong>Kurzantwort:</strong> Heizungssanierung in München ab 12.000€. Wärmepumpe, Gas-Brennwert oder Pelletheizung mit BAFA- und KfW-Förderung. Fußbodenheizung nachrüsten möglich. Festpreisgarantie.</p>
+        <p><strong>Kurzantwort:</strong> Heizungssanierung in München ab 12.000€. Wärmepumpe, Gas-Brennwert oder Pelletheizung mit BAFA- und KfW-Förderung. Als Generalunternehmer Sanierung koordinieren unsere Handwerker München alle Renovierungsarbeiten rund um Ihre Heizung. Sanierung aus einer Hand mit Festpreisgarantie von Ihrer Sanierungsfirma München.</p>
         
-        <h2>Heizungssysteme im Überblick</h2>
+        <h2>Heizungssysteme – Renovierungen München im Überblick</h2>
         <ul>
           <li>Gasheizung (Brennwert): 12.000 - 20.000€</li>
           <li>Wärmepumpe: 25.000 - 50.000€</li>

@@ -146,7 +146,7 @@ export default function Kontakt() {
               ) : (
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-6">Ihre kostenlose Sanierungsanfrage – 100% unverbindlich</h2>
+                  <h2 className="text-xl font-bold mb-6">Ihre kostenlose Anfrage für Sanierungsarbeiten – 100% unverbindlich</h2>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                       <FormField
@@ -279,7 +279,7 @@ export default function Kontakt() {
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie <strong>089-Sanierer</strong>?</h2>
+                  <h2 className="text-xl font-bold mb-4">Wie erreichen Sie Ihren Handwerkerservice München?</h2>
                   <div className="space-y-4">
                     <a href="tel:+498944438872" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                       <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
@@ -319,16 +319,16 @@ export default function Kontakt() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
-                    <strong>Sanierungsbetrieb München</strong> – Wir sind in allen Stadtteilen für Sie da: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Trudering und Umland.
+                    <strong>Sanierungsfirma München</strong> – Wir sind als Handwerker München in allen Stadtteilen für Sie da: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Trudering und Umland.
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold mb-4">Welche <strong>Sanierung</strong> brauchen Sie in <strong>München</strong>?</h2>
+                  <h2 className="text-xl font-bold mb-4">Welche Sanierungen München brauchen Sie?</h2>
                   <p className="text-muted-foreground mb-4">
-                    Sie wissen schon, was Sie brauchen? In 2 Minuten zum kostenlosen <strong>Festpreis-Angebot</strong>.
+                    Sie wissen schon, was Sie brauchen? Ob Renovierungsarbeiten oder Komplettsanierung – in 2 Minuten zum kostenlosen <strong>Festpreis-Angebot</strong>.
                   </p>
                   <div className="space-y-4">
                     <Link href="/termin">
@@ -390,13 +390,13 @@ export default function Kontakt() {
       <section className="py-4 lg:py-6 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-            Beratungsgespräch – So läuft es ab
+            Beratungsgespräch bei Ihrer Renovierungsfirma München – So läuft es ab
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold mb-2">Kostenlose Erstberatung vor Ort in München</h3>
+              <h3 className="font-semibold mb-2">Kostenlose Erstberatung für Sanierung aus einer Hand</h3>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Nach Ihrer Kontaktaufnahme vereinbaren wir einen Besichtigungstermin direkt bei Ihnen vor Ort in München. Unser erfahrener Projekt-Kurator nimmt den Ist-Zustand Ihrer Immobilie auf und bespricht mit Ihnen Ihre Wünsche und Vorstellungen. Die Erstberatung ist für Sie komplett kostenlos und unverbindlich. Innerhalb weniger Tage erhalten Sie ein detailliertes Festpreisangebot mit transparenter Kostenaufstellung.
+                Nach Ihrer Kontaktaufnahme vereinbaren wir einen Besichtigungstermin direkt bei Ihnen vor Ort in München. Unser erfahrener Projekt-Kurator nimmt den Ist-Zustand Ihrer Immobilie auf und bespricht mit Ihnen Ihre Wünsche und Vorstellungen. Als Generalunternehmer Sanierung bieten wir Ihnen die Erstberatung komplett kostenlos und unverbindlich an. Innerhalb weniger Tage erhalten Sie ein detailliertes Festpreisangebot mit transparenter Kostenaufstellung.
               </p>
             </div>
             <div>
@@ -412,12 +412,12 @@ export default function Kontakt() {
       <section className="py-4 lg:py-6 bg-accent/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-            Unsere Erreichbarkeit und Servicezeiten
+            Erreichbarkeit und Servicezeiten – Innenausbau Firma München
           </h2>
           <div>
             <h3 className="font-semibold mb-2">Notfall-Sanierung – Schnelle Hilfe bei Wasserschäden</h3>
             <p className="text-sm sm:text-base text-muted-foreground">
-              Bei akuten Wasserschäden, Rohrbrüchen oder anderen Notfällen sind wir auch außerhalb unserer regulären Geschäftszeiten erreichbar. Unser Notfall-Team kann kurzfristig Sofortmaßnahmen einleiten, um Folgeschäden zu minimieren. Rufen Sie uns in dringenden Fällen direkt unter 089 444438872 an. Wir koordinieren die notwendige Trocknung, Schadensdokumentation und anschließende Sanierung aus einer Hand.
+              Bei akuten Wasserschäden, Rohrbrüchen oder anderen Notfällen sind wir auch außerhalb unserer regulären Geschäftszeiten erreichbar. Unser Notfall-Team kann kurzfristig Sofortmaßnahmen einleiten, um Folgeschäden zu minimieren. Rufen Sie uns in dringenden Fällen direkt unter 089 444438872 an. Wir koordinieren die notwendige Trocknung, Schadensdokumentation und anschließende Renovierung aus einer Hand.
             </p>
           </div>
         </div>
@@ -426,7 +426,7 @@ export default function Kontakt() {
       <section className="py-4 lg:py-6 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-            Häufige Fragen zum ersten Kontakt
+            Häufige Fragen zu Renovierungen München
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -448,7 +448,7 @@ export default function Kontakt() {
       <section className="py-4 lg:py-6 bg-accent/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-            Sanierungsberatung für Eigentümer und Verwalter
+            Sanierungsberatung für Eigentümer und Verwalter in München
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>

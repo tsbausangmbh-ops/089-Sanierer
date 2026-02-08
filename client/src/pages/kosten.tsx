@@ -133,11 +133,11 @@ export default function Kosten() {
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold mb-6">
-              Haben Sie Angst vor der Kostenfalle Sanierung?
+              Haben Sie Angst vor der Kostenfalle bei Sanierungsarbeiten?
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none text-left space-y-4">
               <p className="text-sm sm:text-base text-muted-foreground">
-                <strong>Kennen Sie diese Geschichten?</strong> "Der Handwerker hat am Ende das Doppelte verlangt." "Nach drei Wochen kamen immer neue Rechnungen." "Die Sanierung hat mein Budget komplett gesprengt." – Diese Horrorgeschichten machen vielen Eigentümern zu Recht Angst.
+                <strong>Kennen Sie diese Geschichten?</strong> "Der Handwerker München hat am Ende das Doppelte verlangt." "Nach drei Wochen kamen immer neue Rechnungen." "Die Sanierungsarbeiten haben mein Budget komplett gesprengt." – Diese Horrorgeschichten machen vielen Eigentümern zu Recht Angst.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground">
                 <strong>Das Grundproblem:</strong> Bei den meisten Handwerkern bekommen Sie einen Kostenvoranschlag. Der kann "um bis zu 20%" überschritten werden – legal! Und bei unvorhergesehenen Problemen kommen weitere Nachforderungen. Am Ende wissen Sie nie, was Sie wirklich zahlen.
@@ -163,7 +163,7 @@ export default function Kosten() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Aktuelle Preise 2026
+              Aktuelle Preise für Sanierungen München 2026
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto">
               {kostenuebersicht.map((item) => (
@@ -205,7 +205,7 @@ export default function Kosten() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-                Warum Festpreise?
+                Warum Festpreise für Renovierungsarbeiten?
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-6">
@@ -217,9 +217,9 @@ export default function Kosten() {
                 </div>
                 <div className="text-center p-6">
                   <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Planungssicherheit</h3>
+                  <h3 className="font-semibold mb-2">Planungssicherheit durch Sanierung aus einer Hand</h3>
                   <p className="text-muted-foreground text-sm">
-                    Sie wissen vorher genau, was Sie bezahlen.
+                    Sie wissen vorher genau, was Sie bezahlen – Ihre Renovierung aus einer Hand.
                   </p>
                 </div>
                 <div className="text-center p-6">
@@ -270,9 +270,9 @@ export default function Kosten() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Handwerkerkosten in München vs. Umland</h3>
+                <h3 className="font-semibold mb-2">Handwerkerservice München vs. Umland – Kosten im Vergleich</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  Handwerkerstunden in München liegen durchschnittlich 15-25% über dem bayerischen Durchschnitt. Das erklärt sich durch höhere Lebenshaltungskosten, Anfahrtswege und die starke Nachfrage. Im direkten Umland wie Dachau, Freising oder Erding sind die Stundensätze etwas niedriger. Als Münchner Generalunternehmer bündeln wir alle Gewerke effizient und geben Einsparungen direkt an Sie weiter.
+                  Handwerkerstunden in München liegen durchschnittlich 15-25% über dem bayerischen Durchschnitt. Das erklärt sich durch höhere Lebenshaltungskosten, Anfahrtswege und die starke Nachfrage. Im direkten Umland wie Dachau, Freising oder Erding sind die Stundensätze etwas niedriger. Als Generalunternehmer Sanierung bündeln wir alle Gewerke effizient und geben Einsparungen direkt an Sie weiter.
                 </p>
               </div>
             </div>
@@ -282,7 +282,7 @@ export default function Kosten() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Förderungen und Finanzierung der Sanierung
+              Förderungen und Finanzierung für Renovierungen München
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -304,12 +304,12 @@ export default function Kosten() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Versteckte Kosten bei der Sanierung vermeiden
+              Versteckte Kosten bei Sanierungsarbeiten vermeiden
             </h2>
             <div>
-              <h3 className="font-semibold mb-2">Typische Kostenfallen und wie Sie sich schützen</h3>
+              <h3 className="font-semibold mb-2">Typische Kostenfallen und wie unsere Sanierungsfirma München Sie schützt</h3>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Die häufigsten Kostenfallen bei Sanierungen sind unzureichende Voruntersuchungen, fehlende Leistungsverzeichnisse und ungenaue Kostenvoranschläge. Verdeckte Mängel wie Schimmel hinter Verkleidungen, marode Leitungen oder Asbest-Altlasten können erhebliche Mehrkosten verursachen. Wir führen vor jedem Projekt eine gründliche Bestandsaufnahme durch und dokumentieren den Zustand des Gebäudes. Unser Festpreisangebot schützt Sie vor unkalkulierbaren Nachforderungen – der genannte Preis gilt verbindlich.
+                Die häufigsten Kostenfallen bei Sanierungen sind unzureichende Voruntersuchungen, fehlende Leistungsverzeichnisse und ungenaue Kostenvoranschläge. Verdeckte Mängel wie Schimmel hinter Verkleidungen, marode Leitungen oder Asbest-Altlasten können erhebliche Mehrkosten verursachen. Als erfahrene Renovierungsfirma München führen wir vor jedem Projekt eine gründliche Bestandsaufnahme durch und dokumentieren den Zustand des Gebäudes. Unser Festpreisangebot schützt Sie vor unkalkulierbaren Nachforderungen – der genannte Preis gilt verbindlich.
               </p>
             </div>
           </div>
@@ -322,7 +322,7 @@ export default function Kosten() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold mb-2">Rohbau und Trockenbau Kosten</h3>
+                <h3 className="font-semibold mb-2">Rohbau, Innenausbau und Trockenbau Kosten</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Rohbauarbeiten wie Wanddurchbrüche, Mauererneuerungen und statische Verstärkungen kosten in München zwischen 80 und 200 Euro pro Quadratmeter. Trockenbauarbeiten für neue Wände, Deckenverkleidungen und Installationsschächte liegen bei 40 bis 90 Euro pro Quadratmeter. Die genauen Kosten hängen von der Komplexität der Arbeiten und den verwendeten Materialien ab. In unserem Angebot schlüsseln wir jeden Posten transparent auf.
                 </p>
@@ -330,7 +330,7 @@ export default function Kosten() {
               <div>
                 <h3 className="font-semibold mb-2">Elektro, Sanitär und Heizung Kosten</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  Die Erneuerung der Elektroinstallation kostet bei einer Komplettsanierung durchschnittlich 80 bis 150 Euro pro Quadratmeter. Neue Sanitärinstallationen inklusive Leitungen und Anschlüsse liegen bei 60 bis 120 Euro pro Quadratmeter. Eine moderne Heizungsanlage mit Fußbodenheizung schlägt mit 100 bis 180 Euro pro Quadratmeter zu Buche. Diese Investitionen in die Haustechnik steigern den Wohnkomfort erheblich und senken langfristig die Energiekosten.
+                  Die Erneuerung der Elektroinstallation kostet bei einer Komplettsanierung durchschnittlich 80 bis 150 Euro pro Quadratmeter. Neue Sanitärinstallationen inklusive Leitungen und Anschlüsse liegen bei 60 bis 120 Euro pro Quadratmeter. Eine moderne Heizungsanlage mit Fußbodenheizung schlägt mit 100 bis 180 Euro pro Quadratmeter zu Buche. Als Innenausbau Firma München koordinieren wir alle haustechnischen Gewerke und steigern so den Wohnkomfort erheblich bei langfristig niedrigeren Energiekosten.
                 </p>
               </div>
             </div>

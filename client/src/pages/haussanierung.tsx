@@ -142,7 +142,7 @@ export default function Haussanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Unsere Leistungen
+              Unsere Leistungen – Sanierungsarbeiten aus einer Hand
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {hausLeistungen.map((item) => (
@@ -167,7 +167,7 @@ export default function Haussanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Preisübersicht nach Haustyp
+              Preisübersicht nach Haustyp – Sanierungen München
             </h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {haustypen.map((item) => (
@@ -185,7 +185,7 @@ export default function Haussanierung() {
               ))}
             </div>
             <p className="text-center text-muted-foreground text-sm mt-6">
-              Preise für Standardsanierung. Kernsanierung ab 1.200€/m².
+              Preise für Standardsanierung inkl. aller Renovierungsarbeiten. Kernsanierung ab 1.200€/m².
             </p>
           </div>
         </section>
@@ -194,28 +194,28 @@ export default function Haussanierung() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-                Warum 089-Sanierer für Ihre Haussanierung?
+                Warum 089-Sanierer – Ihre Sanierungsfirma München
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-6">
                   <Euro className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">Festpreisgarantie</h3>
                   <p className="text-muted-foreground text-sm">
-                    Der Preis im Angebot ist der Endpreis. Keine Überraschungen.
+                    Der Preis im Angebot ist der Endpreis. Keine Überraschungen bei Ihren Renovierungsarbeiten.
                   </p>
                 </div>
                 <div className="text-center p-6">
                   <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Ein Ansprechpartner</h3>
+                  <h3 className="font-semibold mb-2">Sanierung aus einer Hand</h3>
                   <p className="text-muted-foreground text-sm">
-                    Wir koordinieren alle Gewerke. Sie haben einen festen Kontakt.
+                    Als Generalunternehmer Sanierung koordinieren wir alle Gewerke. Sie haben einen festen Kontakt.
                   </p>
                 </div>
                 <div className="text-center p-6">
                   <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">5 Jahre Garantie</h3>
                   <p className="text-muted-foreground text-sm">
-                    Langfristige Gewährleistung auf alle Arbeiten.
+                    Langfristige Gewährleistung auf alle Sanierungsarbeiten und Renovierungen.
                   </p>
                 </div>
               </div>
@@ -255,7 +255,7 @@ export default function Haussanierung() {
               <div>
                 <h3 className="font-semibold mb-2">Sanierungskosten pro Quadratmeter in München</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  Die Kosten für eine Haussanierung in München variieren je nach Umfang zwischen 920€ und 2.500€ pro Quadratmeter. Eine Standardsanierung mit neuer Elektrik, Sanitär, Heizung und Innenausbau liegt bei ca. 1.200€/m². Eine Kernsanierung bis auf den Rohbau kann 1.800-2.500€/m² kosten – immer noch deutlich günstiger als ein Neubau mit 3.500-4.500€/m².
+                  Die Kosten für Sanierungen München variieren je nach Umfang zwischen 920€ und 2.500€ pro Quadratmeter. Eine Standardsanierung mit neuer Elektrik, Sanitär, Heizung und Innenausbau liegt bei ca. 1.200€/m². Als erfahrene Renovierungsfirma München bieten wir Kernsanierungen bis auf den Rohbau für 1.800-2.500€/m² – immer noch deutlich günstiger als ein Neubau mit 3.500-4.500€/m².
                 </p>
               </div>
               <div>
@@ -271,7 +271,7 @@ export default function Haussanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Energetische Haussanierung – Pflicht und Chance
+              Energetische Haussanierung – Renovierungen München mit Zukunft
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -283,7 +283,7 @@ export default function Haussanierung() {
               <div>
                 <h3 className="font-semibold mb-2">Wärmedämmung, Fenster und Heizungstausch</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  Die drei wichtigsten Maßnahmen der energetischen Sanierung sind Wärmedämmung (Fassade, Dach, Kellerdecke), neue Fenster mit Dreifachverglasung und ein modernes Heizsystem. Eine Wärmepumpe in Kombination mit Photovoltaik senkt die Heizkosten drastisch. Wir planen die Maßnahmen aufeinander abgestimmt, damit Sie den optimalen Energiestandard erreichen.
+                  Die drei wichtigsten Maßnahmen der energetischen Sanierung sind Wärmedämmung (Fassade, Dach, Kellerdecke), neue Fenster mit Dreifachverglasung und ein modernes Heizsystem. Eine Wärmepumpe in Kombination mit Photovoltaik senkt die Heizkosten drastisch. Unser Handwerkerservice München plant alle Maßnahmen aufeinander abgestimmt, damit Sie den optimalen Energiestandard erreichen.
                 </p>
               </div>
             </div>
@@ -293,7 +293,7 @@ export default function Haussanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Fassadensanierung und Außenarbeiten
+              Fassadensanierung und Außenarbeiten – Handwerker München
             </h2>
             <div className="max-w-3xl mx-auto">
               <h3 className="font-semibold mb-2">WDVS-Fassadendämmung in München</h3>
@@ -313,7 +313,7 @@ export default function Haussanierung() {
               <div>
                 <h3 className="font-semibold mb-2">Häuser der 60er und 70er Jahre sanieren</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  Häuser aus den 1960er und 1970er Jahren haben häufig Flachdächer, einschalige Außenwände ohne Dämmung und veraltete Elektro- sowie Sanitärinstallationen. Asbest in Fassadenplatten oder Bodenbelägen muss fachgerecht entfernt werden. Eine Komplettsanierung dieser Häuser bringt enorme Energieeinsparungen und verwandelt sie in moderne, komfortable Wohnhäuser.
+                  Häuser aus den 1960er und 1970er Jahren haben häufig Flachdächer, einschalige Außenwände ohne Dämmung und veraltete Elektro- sowie Sanitärinstallationen. Asbest in Fassadenplatten oder Bodenbelägen muss fachgerecht entfernt werden. Als Innenausbau Firma München übernehmen wir die Komplettsanierung dieser Häuser – mit enormen Energieeinsparungen und der Verwandlung in moderne, komfortable Wohnhäuser.
                 </p>
               </div>
               <div>

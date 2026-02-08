@@ -803,7 +803,7 @@ export default function Home() {
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-base sm:text-xl lg:text-2xl font-bold text-center mb-4">
-              Warum Münchner uns vertrauen
+              Warum Münchner uns als Sanierungsfirma vertrauen
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
@@ -822,10 +822,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Kennen Sie das Gefühl?
+                Sanierungsarbeiten planen – Kennen Sie das Gefühl?
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                Eine <span className="text-accent font-semibold">Sanierung</span> planen, aber nur an Probleme denken?
+                <span className="text-accent font-semibold">Renovierungsarbeiten</span> planen, aber nur an Probleme denken? Viele Münchner kennen das.
               </p>
             </div>
             
@@ -848,10 +848,10 @@ export default function Home() {
             {/* NLP: Problem-Solver CTA after Pain Points */}
             <div className="mt-8 bg-gradient-to-r from-primary to-primary/80 rounded-xl p-6 lg:p-8 text-center">
               <h3 className="text-base sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Das muss nicht so sein. Wir sind Ihre Problemlöser.
+                Das muss nicht so sein. Wir sind Ihr Handwerkerservice in München.
               </h3>
               <p className="text-white/90 mb-4 max-w-xl mx-auto">
-                Seit 20 Jahren lösen wir genau diese Probleme für Münchner Familien. 
+                Seit 20 Jahren lösen wir genau diese Probleme für Münchner Familien – als Ihre Innenausbau-Firma. 
                 <strong> Jeden Tag. Zuverlässig. Zum Festpreis.</strong>
               </p>
               <Button 
@@ -876,11 +876,11 @@ export default function Home() {
                 <span>Ihre Fragen - Unsere Antworten</span>
               </div>
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-3">
-                Das fragen uns Kunden am häufigsten
+                Das fragen uns Kunden bei Sanierungen in München am häufigsten
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Wir verstehen Ihre Bedenken. Hier sind die ehrlichen Antworten auf die Fragen, 
-                die Sie sich bei einer <span className="text-accent font-medium">Renovierung in München</span> stellen.
+                die Sie sich bei <span className="text-accent font-medium">Renovierungen in München</span> und <span className="text-accent font-medium">Sanierungen München</span> stellen.
               </p>
             </div>
 
@@ -963,10 +963,10 @@ export default function Home() {
                 <span>Die Lösung</span>
               </div>
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                So fühlt sich <span className="text-accent">Sanierung</span> wirklich an
+                Renovierung aus einer Hand – So fühlt sich <span className="text-accent">Sanierung</span> wirklich an
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                Mit uns an Ihrer Seite wird Ihre Sanierung zum entspannten Erlebnis.
+                Als Ihre Renovierungsfirma in München koordinieren wir alle Gewerke – Ihre Sanierung wird zum entspannten Erlebnis.
               </p>
             </div>
             
@@ -1008,10 +1008,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Ihr Weg zum <span className="text-accent">Traumzuhause</span>
+                Sanierung aus einer Hand – Ihr Weg zum <span className="text-accent">Traumzuhause</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                In 4 einfachen Schritten von der Idee zur fertigen Sanierung.
+                In 4 einfachen Schritten von der Idee zur fertigen Sanierung. Als Generalunternehmer für Sanierung koordinieren wir alles.
               </p>
             </div>
             
@@ -1083,10 +1083,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Unsere <span className="text-accent">Leistungen</span>
+                Unsere <span className="text-accent">Leistungen</span> – Innenausbau & Sanierungsarbeiten
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                Von der kleinen Badrenovierung bis zur kompletten Haussanierung.
+                Von der kleinen Badrenovierung bis zur kompletten Haussanierung. Handwerker München für alle Renovierungsarbeiten.
               </p>
             </div>
             
@@ -1133,10 +1133,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Häufige <span className="text-accent">Fragen</span>
+                Häufige <span className="text-accent">Fragen</span> zu Sanierungen in München
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Alles, was Sie wissen müssen.
+                Alles, was Sie über Renovierungen München und Sanierungsarbeiten wissen müssen.
               </p>
             </div>
             

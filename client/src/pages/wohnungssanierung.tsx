@@ -140,7 +140,7 @@ export default function Wohnungssanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Was wir sanieren
+              Unsere Sanierungsarbeiten – Was wir für Sie sanieren
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {leistungen.map((item) => (
@@ -159,7 +159,7 @@ export default function Wohnungssanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Preisübersicht nach Wohnungsgröße
+              Preisübersicht – Renovierungsfirma München nach Wohnungsgröße
             </h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {wohnungstypen.map((item) => (
@@ -183,7 +183,7 @@ export default function Wohnungssanierung() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-                Für Eigentümer und Vermieter
+                Sanierung aus einer Hand – Für Eigentümer und Vermieter
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
@@ -257,7 +257,7 @@ export default function Wohnungssanierung() {
               <div>
                 <h3 className="font-semibold mb-2">Was kostet eine Wohnungssanierung pro Quadratmeter?</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  Die Kosten einer Wohnungssanierung in München liegen zwischen 800€ und 1.800€ pro Quadratmeter. Eine Standardsanierung mit neuer Elektrik, Sanitär, Böden und Malerarbeiten kostet durchschnittlich 1.000€/m². Hochwertige Ausstattungen mit Eichenparkett, Designbädern und smarter Haustechnik können bis zu 2.200€/m² erreichen. Bei uns erhalten Sie vorab einen verbindlichen Festpreis.
+                  Die Kosten für Renovierungsarbeiten an einer Wohnung in München liegen zwischen 800€ und 1.800€ pro Quadratmeter. Eine Standardsanierung mit neuer Elektrik, Sanitär, Böden und Malerarbeiten kostet durchschnittlich 1.000€/m². Hochwertige Ausstattungen mit Eichenparkett, Designbädern und smarter Haustechnik können bis zu 2.200€/m² erreichen. Als Ihr Handwerkerservice München erhalten Sie vorab einen verbindlichen Festpreis.
                 </p>
               </div>
               <div>
@@ -273,13 +273,13 @@ export default function Wohnungssanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Altbausanierung in München – Besonderheiten beachten
+              Altbausanierung in München – Handwerker München für besondere Anforderungen
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold mb-2">Denkmalschutz und Altbausubstanz</h3>
+                <h3 className="font-semibold mb-2">Denkmalschutz und Altbausubstanz – Renovierungen München</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  Viele Münchner Altbauten stehen unter Denkmalschutz oder Ensembleschutz. Bei der Sanierung müssen historische Elemente wie Stuckdecken, Kastenfenster oder Dielenböden erhalten oder fachgerecht restauriert werden. Wir kennen die Auflagen der Münchner Denkmalschutzbehörde und berücksichtigen diese von Anfang an in der Planung.
+                  Viele Münchner Altbauten stehen unter Denkmalschutz oder Ensembleschutz. Bei der Sanierung müssen historische Elemente wie Stuckdecken, Kastenfenster oder Dielenböden erhalten oder fachgerecht restauriert werden. Als erfahrene Innenausbau Firma München kennen wir die Auflagen der Denkmalschutzbehörde und berücksichtigen diese von Anfang an in der Planung.
                 </p>
               </div>
               <div>
@@ -298,9 +298,9 @@ export default function Wohnungssanierung() {
               Wohnungssanierung für Vermieter und Eigentümer
             </h2>
             <div className="max-w-3xl mx-auto">
-              <h3 className="font-semibold mb-2">Wertsteigerung durch professionelle Sanierung</h3>
+              <h3 className="font-semibold mb-2">Wertsteigerung durch professionelle Sanierungen München</h3>
               <p className="text-muted-foreground text-sm sm:text-base">
-                Eine professionelle Komplettsanierung steigert den Marktwert Ihrer Münchner Wohnung um durchschnittlich 20-35%. Vermieter können nach einer Modernisierung bis zu 3€/m² mehr Kaltmiete verlangen. Die Sanierungskosten refinanzieren sich in der Regel innerhalb von 5-8 Jahren durch höhere Mieteinnahmen und geringere Instandhaltungskosten.
+                Eine professionelle Komplettsanierung als Renovierung aus einer Hand steigert den Marktwert Ihrer Münchner Wohnung um durchschnittlich 20-35%. Vermieter können nach einer Modernisierung bis zu 3€/m² mehr Kaltmiete verlangen. Als Ihre Sanierungsfirma München sorgen wir dafür, dass sich die Sanierungskosten in der Regel innerhalb von 5-8 Jahren durch höhere Mieteinnahmen und geringere Instandhaltungskosten refinanzieren.
               </p>
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function Wohnungssanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Sanierungsablauf – Von der Planung bis zur Übergabe
+              Sanierungsablauf – Generalunternehmer Sanierung von der Planung bis zur Übergabe
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>

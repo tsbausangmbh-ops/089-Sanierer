@@ -141,7 +141,7 @@ export default function Badsanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Was ist inklusive?
+              Unsere Sanierungsarbeiten – Was ist inklusive?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {badFeatures.map((feature) => (
@@ -160,7 +160,7 @@ export default function Badsanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              So läuft Ihre Badsanierung ab
+              So läuft Ihre Badsanierung ab – Renovierung aus einer Hand
             </h2>
             <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {prozessSteps.map((item) => (
@@ -180,7 +180,7 @@ export default function Badsanierung() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-                Ihre Vorteile
+                Ihre Vorteile – Sanierungsfirma München mit Festpreis
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <Card>
@@ -188,7 +188,7 @@ export default function Badsanierung() {
                     <Euro className="w-12 h-12 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Festpreisgarantie</h3>
                     <p className="text-muted-foreground text-sm">
-                      Keine versteckten Kosten, keine Nachforderungen
+                      Keine versteckten Kosten, keine Nachforderungen – Ihr Handwerkerservice München mit transparenter Preisgestaltung
                     </p>
                   </CardContent>
                 </Card>
@@ -247,7 +247,7 @@ export default function Badsanierung() {
               <div>
                 <h3 className="font-semibold mb-2">Was kostet eine Badsanierung pro Quadratmeter?</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  In München liegen die Kosten für eine Badsanierung je nach Ausstattung zwischen 1.800€ und 3.500€ pro Quadratmeter. Eine Standardsanierung mit hochwertigen Fliesen, modernen Sanitärobjekten und neuer Elektrik kostet durchschnittlich 2.300€/m². Luxusausstattungen mit Naturstein, Regendusche und Smart-Home-Elementen können bis zu 4.000€/m² erreichen.
+                  In München liegen die Kosten für eine Badsanierung je nach Ausstattung zwischen 1.800€ und 3.500€ pro Quadratmeter. Alle Renovierungsarbeiten – von hochwertigen Fliesen über moderne Sanitärobjekte bis zur neuen Elektrik – kosten durchschnittlich 2.300€/m². Luxusausstattungen mit Naturstein, Regendusche und Smart-Home-Elementen können bis zu 4.000€/m² erreichen.
                 </p>
               </div>
               <div>
@@ -263,7 +263,7 @@ export default function Badsanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Barrierefreies Bad – Zukunftssicher sanieren
+              Barrierefreies Bad – Zukunftssicher sanieren vom Fachhandwerker
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -285,7 +285,7 @@ export default function Badsanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Materialien und Ausstattung für Ihr neues Bad
+              Materialien und Ausstattung – Renovierungen München für Ihr neues Bad
             </h2>
             <div className="max-w-3xl mx-auto">
               <h3 className="font-semibold mb-2">Fliesen-Trends 2026 für Münchner Bäder</h3>
@@ -303,9 +303,9 @@ export default function Badsanierung() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold mb-2">Badsanierung in Altbauwohnungen</h3>
+                <h3 className="font-semibold mb-2">Badsanierung in Altbauwohnungen – Sanierungen München</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
-                  Altbauten in Schwabing, Maxvorstadt oder Haidhausen stellen besondere Anforderungen an die Badsanierung. Oft müssen Steigleitungen erneuert, Holzbalkendecken verstärkt und unebene Böden ausgeglichen werden. Unsere Handwerker kennen die typischen Altbau-Herausforderungen in München und finden für jede Situation die passende Lösung.
+                  Altbauten in Schwabing, Maxvorstadt oder Haidhausen stellen besondere Anforderungen an die Badsanierung. Oft müssen Steigleitungen erneuert, Holzbalkendecken verstärkt und unebene Böden ausgeglichen werden. Als erfahrene Innenausbau Firma München kennen unsere Handwerker die typischen Altbau-Herausforderungen und finden für jede Situation die passende Lösung.
                 </p>
               </div>
               <div>

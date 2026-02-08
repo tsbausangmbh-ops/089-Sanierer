@@ -107,7 +107,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Haussanierung in München? Wie teuer ist eine Kernsanierung? Lohnt sich die Sanierung eines alten Hauses? 
-                  Diese Fragen beschäftigen viele Immobilienbesitzer in der Region München.
+                  Diese Fragen beschäftigen viele Immobilienbesitzer in der Region München. Als erfahrene Sanierungsfirma München begleiten wir Sie durch alle Sanierungsarbeiten.
                 </p>
               </div>
 
@@ -213,7 +213,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet Fassade streichen in München? Wo finde ich gute Malerarbeiten in meiner Nähe? 
-                  Hier finden Sie alle Informationen zu Fassadensanierung und Malerarbeiten.
+                  Hier finden Sie alle Informationen zu Fassadensanierung und Renovierungsarbeiten für Ihr Gebäude.
                 </p>
               </div>
 
@@ -319,7 +319,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Dachsanierung in München? Wie teuer ist ein Dachausbau? Welche Kosten fallen beim Dachboden ausbauen an? 
-                  Alle wichtigen Informationen zu Dacharbeiten und Kosten.
+                  Alle wichtigen Informationen zu Dacharbeiten und Kosten – mit unserem Handwerkerservice München planen Sie sicher.
                 </p>
               </div>
 
@@ -440,7 +440,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Badsanierung in München? Welche Kosten fallen bei einem neuen Badezimmer an? 
-                  Alle Informationen zu Badsanierungen mit Preisbeispielen.
+                  Alle Informationen zu Badsanierungen mit Preisbeispielen – Ihre Renovierungsfirma München berät Sie gerne.
                 </p>
               </div>
 
@@ -546,7 +546,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Kellersanierung? Wie wird ein feuchter Keller trockengelegt? 
-                  Informationen zu Kellerabdichtung, Kellersanierung und Kosten.
+                  Informationen zu Kellerabdichtung, Kellersanierung und Kosten – als Generalunternehmer Sanierung übernehmen wir alle Gewerke.
                 </p>
               </div>
 
@@ -633,7 +633,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Dachdämmung? Wie teuer ist eine Innendämmung? 
-                  Alle Informationen zu Dämmmaßnahmen, Kosten und Fördermöglichkeiten.
+                  Alle Informationen zu Dämmmaßnahmen, Kosten und Fördermöglichkeiten. Als Innenausbau Firma München koordinieren wir Ihre Sanierungen München fachgerecht.
                 </p>
               </div>
 
@@ -751,7 +751,7 @@ export default function Ratgeber() {
               <div className="prose prose-lg dark:prose-invert max-w-none mb-4">
                 <p className="text-muted-foreground">
                   Was kostet eine Wohnungssanierung in München? Wie teuer ist die Renovierung einer Altbauwohnung? 
-                  Alle Informationen zu Kosten und Ablauf.
+                  Alle Informationen zu Kosten und Ablauf – Renovierungen München vom erfahrenen Handwerker München.
                 </p>
               </div>
 
@@ -986,9 +986,9 @@ export default function Ratgeber() {
 
       <section className="py-4 lg:py-6 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung richtig planen – Checkliste für Eigentümer</h2>
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung aus einer Hand richtig planen – Checkliste für Eigentümer</h2>
           <p className="text-muted-foreground text-sm sm:text-base mb-6">
-            Eine erfolgreiche Sanierung beginnt mit einer gründlichen Planung. Wer vorher die richtigen Fragen stellt und alle relevanten Punkte berücksichtigt, spart am Ende Zeit, Geld und Nerven. Unsere Checkliste hilft Ihnen dabei, Ihr Sanierungsprojekt in München strukturiert anzugehen.
+            Eine erfolgreiche Sanierung beginnt mit einer gründlichen Planung. Wer vorher die richtigen Fragen stellt und alle relevanten Punkte berücksichtigt, spart am Ende Zeit, Geld und Nerven. Unsere Checkliste hilft Ihnen dabei, Ihre Sanierungsarbeiten in München strukturiert anzugehen – mit Renovierung aus einer Hand.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -1009,9 +1009,9 @@ export default function Ratgeber() {
 
       <section className="py-4 lg:py-6 bg-accent/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Handwerker finden in München – Worauf achten?</h2>
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Handwerker München finden – Worauf achten?</h2>
           <p className="text-muted-foreground text-sm sm:text-base mb-6">
-            Die Wahl des richtigen Handwerkers entscheidet über Qualität, Kosten und Termintreue Ihres Sanierungsprojekts. In München gibt es zahlreiche Anbieter – doch nicht alle halten, was sie versprechen. Hier erfahren Sie, worauf Sie achten sollten.
+            Die Wahl des richtigen Handwerkerservice München entscheidet über Qualität, Kosten und Termintreue Ihres Sanierungsprojekts. In München gibt es zahlreiche Anbieter – doch nicht alle halten, was sie versprechen. Hier erfahren Sie, worauf Sie bei Renovierungsarbeiten achten sollten.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div>

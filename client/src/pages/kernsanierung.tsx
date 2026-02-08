@@ -170,12 +170,12 @@ export default function Kernsanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-4">
-              Was ist eine Kernsanierung?
+              Was ist eine Kernsanierung? – Sanierungsarbeiten komplett erklärt
             </h2>
             <p className="text-center text-muted-foreground max-w-7xl mx-auto mb-12">
               Bei einer Kernsanierung wird das Gebäude bis auf die tragenden Wände zurückgebaut. 
               Alle Installationen, Böden, Wände und Decken werden erneuert. 
-              Das Ergebnis: Ein Altbau mit dem Komfort eines Neubaus.
+              Das Ergebnis: Ein Altbau mit dem Komfort eines Neubaus – Renovierung aus einer Hand.
             </p>
             <div className="max-w-7xl mx-auto">
               <div className="space-y-6">
@@ -198,7 +198,7 @@ export default function Kernsanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-12">
-              Was ist inklusive?
+              Was ist inklusive? – Sanierung aus einer Hand
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
               {wasIstInklusive.map((item) => (
@@ -215,7 +215,7 @@ export default function Kernsanierung() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-                Wann lohnt sich eine Kernsanierung?
+                Wann lohnt sich eine Kernsanierung? – Handwerkerservice München berät
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <Card>
@@ -277,19 +277,19 @@ export default function Kernsanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Kernsanierung München – Kosten realistisch kalkulieren
+              Sanierungen München – Kosten realistisch kalkulieren
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-semibold mb-2">Was kostet eine Kernsanierung pro Quadratmeter?</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  In München liegen die Kosten für eine Kernsanierung je nach Ausstattungsstandard zwischen 1.200 und 2.000 Euro pro Quadratmeter. Der Preis hängt von der Gebäudesubstanz, dem gewünschten Ausbaustandard und den notwendigen statischen Maßnahmen ab. Hochwertige Materialien und individuelle Grundrissänderungen können den Preis nach oben beeinflussen. Wir erstellen Ihnen ein detailliertes Festpreisangebot nach der kostenlosen Vor-Ort-Besichtigung.
+                  In München liegen die Kosten für eine Kernsanierung je nach Ausstattungsstandard zwischen 1.200 und 2.000 Euro pro Quadratmeter. Der Preis hängt von der Gebäudesubstanz, dem gewünschten Ausbaustandard und den notwendigen statischen Maßnahmen ab. Hochwertige Materialien und individuelle Grundrissänderungen können den Preis nach oben beeinflussen. Als erfahrene Sanierungsfirma München erstellen wir Ihnen ein detailliertes Festpreisangebot nach der kostenlosen Vor-Ort-Besichtigung.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Kernsanierung vs. Neubau – Wann lohnt sich was?</h3>
+                <h3 className="font-semibold mb-2">Kernsanierung vs. Neubau – Generalunternehmer Sanierung im Vorteil</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  Ein Neubau in München kostet durchschnittlich 3.000 bis 4.500 Euro pro Quadratmeter – ohne Grundstück. Die Kernsanierung spart nicht nur erhebliche Kosten, sondern auch Zeit und bürokratischen Aufwand. Zudem profitieren Sie vom Bestandsschutz und können bestehende Baugenehmigungen nutzen. In den meisten Fällen ist die Kernsanierung die wirtschaftlichere und nachhaltigere Lösung.
+                  Ein Neubau in München kostet durchschnittlich 3.000 bis 4.500 Euro pro Quadratmeter – ohne Grundstück. Die Kernsanierung spart nicht nur erhebliche Kosten, sondern auch Zeit und bürokratischen Aufwand. Zudem profitieren Sie vom Bestandsschutz und können bestehende Baugenehmigungen nutzen. In den meisten Fällen ist die Kernsanierung die wirtschaftlichere und nachhaltigere Lösung für Renovierungen München.
                 </p>
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function Kernsanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Ablauf einer Kernsanierung – Schritt für Schritt
+              Ablauf der Renovierungsarbeiten – Schritt für Schritt
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -309,9 +309,9 @@ export default function Kernsanierung() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Haustechnik komplett erneuern</h3>
+                <h3 className="font-semibold mb-2">Haustechnik komplett erneuern – Handwerker München</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  Nach der Entkernung wird die gesamte Haustechnik auf den neuesten Stand gebracht. Dazu gehören die komplette Elektroinstallation nach aktuellen VDE-Normen, neue Sanitärleitungen und eine moderne Heizungsanlage. Auf Wunsch integrieren wir Smart-Home-Systeme, Fußbodenheizung und Lüftungsanlagen mit Wärmerückgewinnung. Alle Installationen werden vor dem Verschließen der Wände dokumentiert und geprüft.
+                  Nach der Entkernung wird die gesamte Haustechnik auf den neuesten Stand gebracht. Dazu gehören die komplette Elektroinstallation nach aktuellen VDE-Normen, neue Sanitärleitungen und eine moderne Heizungsanlage. Auf Wunsch integrieren wir Smart-Home-Systeme, Fußbodenheizung und Lüftungsanlagen mit Wärmerückgewinnung. Unsere erfahrenen Handwerker dokumentieren und prüfen alle Installationen vor dem Verschließen der Wände.
                 </p>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function Kernsanierung() {
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Kernsanierung und Denkmalschutz in München
+              Kernsanierung und Denkmalschutz – Innenausbau Firma München
             </h2>
             <div>
               <h3 className="font-semibold mb-2">Auflagen und Genehmigungen</h3>
@@ -335,13 +335,13 @@ export default function Kernsanierung() {
         <section className="py-4 lg:py-6 bg-accent/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Kernsanierung für verschiedene Gebäudetypen
+              Kernsanierung für verschiedene Gebäudetypen – Renovierungsfirma München
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-semibold mb-2">Altbau-Kernsanierung mit Charme-Erhalt</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  Münchner Altbauten aus der Gründerzeit bestechen durch hohe Decken, Stuckelemente und Parkettböden. Bei einer Kernsanierung bewahren wir diese charakteristischen Merkmale, während wir die gesamte Technik erneuern. Stuck wird restauriert, Dielenböden werden aufgearbeitet und historische Türen erhalten eine Auffrischung. So verbinden wir den unverwechselbaren Altbau-Charme mit modernem Wohnkomfort und aktueller Energieeffizienz.
+                  Münchner Altbauten aus der Gründerzeit bestechen durch hohe Decken, Stuckelemente und Parkettböden. Bei unseren Sanierungsarbeiten bewahren wir diese charakteristischen Merkmale, während wir die gesamte Technik erneuern. Stuck wird restauriert, Dielenböden werden aufgearbeitet und historische Türen erhalten eine Auffrischung. So verbinden wir den unverwechselbaren Altbau-Charme mit modernem Wohnkomfort und aktueller Energieeffizienz.
                 </p>
               </div>
               <div>

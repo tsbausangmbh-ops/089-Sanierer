@@ -167,6 +167,15 @@ Preferred communication style: Simple, everyday language (German).
 - Keywords updated from 2024 to 2026 references
 - Copyright updated to 2026
 
+**On-Page SEO Keyword Integration (Feb 2026):**
+- All 12 primary keywords integrated into visible H2/H3 headings and body text across all pages
+- Primary keywords: Sanierungsarbeiten, Sanierungen München, Renovierungen München, Renovierungsarbeiten, Handwerkerservice München, Sanierung aus einer Hand, Renovierung aus einer Hand, Handwerker München, Innenausbau Firma München, Renovierungsfirma München, Sanierungsfirma München, Generalunternehmer Sanierung
+- Pages optimized: home, badsanierung, wohnungssanierung, haussanierung, kernsanierung, kosten, ratgeber, kontakt
+- Crawler-middleware HTML blocks also updated with keywords for: home, badsanierung, wohnungssanierung, haussanierung, kernsanierung, kosten, kontakt, ratgeber, küchensanierung, bodensanierung, elektrosanierung, heizungssanierung, faq-preise
+- Each page has 6-10+ different primary keywords naturally integrated
+- Keywords placed in H2/H3 section headings and supporting paragraph text
+- SEO meta tags (seo-meta.ts) also contain all primary keywords plus 8+ longtail keywords per page
+
 **Bug Fixes Applied (Jan 2026):**
 - Removed javascript:history.back() from 404 page (replaced with button onClick)
 - Added schema duplicate detection in seo-head.tsx to prevent SSR + client double injection
