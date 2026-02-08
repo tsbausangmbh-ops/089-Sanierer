@@ -20,6 +20,13 @@ app.use((req, res, next) => {
   res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(self)');
   res.setHeader('X-DNS-Prefetch-Control', 'on');
   
+  if (req.path.match(/\.(webp|png|jpg|jpeg|svg|ico)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    res.setHeader('Vary', 'Accept-Encoding');
+  } else if (req.path.match(/\.(js|css|woff|woff2)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+  
   if (!req.path.startsWith("/api") && !req.path.match(/\.(js|css|webp|png|jpg|svg|ico|woff|woff2|json|txt|xml)$/)) {
     const heroImg = getHeroImageForRoute(req.path);
     if (heroImg) {

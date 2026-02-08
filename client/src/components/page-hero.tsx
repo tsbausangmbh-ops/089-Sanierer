@@ -38,12 +38,13 @@ export function PageHero({
   return (
     <section className={`relative pt-16 ${minHeight} flex items-center`}>
       <div className="absolute inset-0 pt-16">
+        <div className="absolute inset-0 bg-slate-800" />
         <img 
           src={image || defaultHeroImage} 
           alt={imageAlt || "Haussanierung Vorher-Nachher"}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-fade-in"
           loading="eager"
-          decoding="sync"
+          decoding="async"
           // @ts-ignore - fetchpriority is valid HTML attribute
           fetchpriority="high"
           width={1200}

@@ -51,6 +51,7 @@ import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoHead, generateServiceSchema } from "@/components/seo-head";
+import { LazyImage } from "@/components/lazy-image";
 const consultationHeroImage = "/images/sanierungsberatung_gespraech.webp";
 const komplettsanierungHeroImage = "/images/komplettsanierung_vorher_nachher.webp";
 const badsanierungHeroImage = "/images/moderne_luxus_badsanierung.webp";
@@ -2514,12 +2515,10 @@ export default function FunnelPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {serviceNlpImages[preSelectedService].map((image, index) => (
                 <div key={index} className="relative group overflow-hidden rounded-lg">
-                  <img 
+                  <LazyImage 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-36 sm:h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
+                    className="w-full h-36 sm:h-48 object-cover"
                     width="400"
                     height="192"
                     sizes="(max-width: 768px) 100vw, 33vw"

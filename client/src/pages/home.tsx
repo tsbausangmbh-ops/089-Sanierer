@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
+import { LazyImage } from "@/components/lazy-image";
 import { highlightKeywords, pageKeywords } from "@/lib/highlight";
 import { SeoHead, generateCombinedSchema } from "@/components/seo-head";
 import { useToast } from "@/hooks/use-toast";
@@ -1093,12 +1094,10 @@ export default function Home() {
               {allServices.map((service) => (
                 <Card key={service.id} className="overflow-hidden group hover-elevate">
                   <div className="relative h-36 sm:h-48">
-                    <img 
+                    <LazyImage 
                       src={service.image} 
                       alt={service.imageAlt}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
+                      className="w-full h-full object-cover"
                       width="400"
                       height="192"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

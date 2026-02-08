@@ -34,17 +34,18 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
   return (
     <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-start lg:items-center overflow-hidden hero-section">
       {/* Optimized background image with eager loading for LCP */}
+      <div className="absolute inset-0 bg-slate-800" />
       <img 
         src={content.backgroundImage} 
         alt={content.imageAlt || ""}
         loading="eager"
-        decoding="sync"
+        decoding="async"
         // @ts-ignore - fetchpriority is valid HTML attribute
         fetchpriority="high"
         width={1200}
         height={655}
         sizes="100vw"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover animate-fade-in"
         style={{ objectPosition: 'center' }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
