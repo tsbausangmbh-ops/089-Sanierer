@@ -436,6 +436,7 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
 
   const stadtteilHeroContent: HeroContent = {
     backgroundImage: stadtteilImg,
+    mobileImageSrc: "/images/mobile/modernes_saniertes_wohninterieur.webp",
     imageAlt: `Sanierung ${data.name} München – Komplettsanierung, Badsanierung und Renovierung vom lokalen Meisterbetrieb in ${data.name} zum Festpreis`,
     badge: `Ihr exklusiver Projekt-Kurator in ${data.name}`,
     titleLine1: `Sanierung ${data.name} München – Renovierung, Modernisierung & Festpreis.`,

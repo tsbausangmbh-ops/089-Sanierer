@@ -20,6 +20,7 @@ const gewerkeHeroImage = "/images/fachhandwerker_meisterbetriebe.webp";
 
 const gewerkeHeroContent: HeroContent = {
   backgroundImage: gewerkeHeroImage,
+  mobileImageSrc: "/images/mobile/fachhandwerker_meisterbetriebe.webp",
   imageAlt: "Einzelgewerk beauftragen München – Elektriker, Sanitär oder Maler direkt buchen",
   badge: "Exklusive Meisterbetriebe für Einzelgewerke",
   titleLine1: "Handwerker München – Maler, Elektriker, Sanitär & Fachbetriebe.",

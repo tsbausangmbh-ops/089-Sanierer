@@ -4,6 +4,7 @@ import { Phone, ArrowRight, CheckCircle, BadgeCheck } from "lucide-react";
 
 export interface HeroContent {
   backgroundImage: string;
+  mobileImageSrc?: string;
   imageAlt?: string;
   badge: string;
   titleLine1: string;
@@ -35,19 +36,28 @@ export function GlobalHero({ content, scrollToElement }: GlobalHeroProps) {
     <section className="relative min-h-[65vh] lg:min-h-[70vh] flex items-start lg:items-center overflow-hidden hero-section">
       {/* Optimized background image with eager loading for LCP */}
       <div className="absolute inset-0 bg-slate-800" />
-      <img 
-        src={`${content.backgroundImage}?v=${Date.now()}`} 
-        alt={content.imageAlt || ""}
-        loading="eager"
-        decoding="async"
-        // @ts-ignore - fetchpriority is valid HTML attribute
-        fetchpriority="high"
-        width={1920}
-        height={1048}
-        sizes="100vw"
-        className="absolute inset-0 w-full h-full object-cover animate-fade-in"
-        style={{ objectPosition: 'center' }}
-      />
+      <picture>
+        {content.mobileImageSrc && (
+          <source
+            media="(max-width: 768px)"
+            srcSet={`${content.mobileImageSrc}?v=${Date.now()}`}
+            type="image/webp"
+          />
+        )}
+        <img 
+          src={`${content.backgroundImage}?v=${Date.now()}`} 
+          alt={content.imageAlt || ""}
+          loading="eager"
+          decoding="async"
+          // @ts-ignore - fetchpriority is valid HTML attribute
+          fetchpriority="high"
+          width={1920}
+          height={1048}
+          sizes="100vw"
+          className="absolute inset-0 w-full h-full object-cover animate-fade-in"
+          style={{ objectPosition: 'center' }}
+        />
+      </picture>
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-24 pt-24 lg:pt-24 pb-10 lg:pb-16 w-full">

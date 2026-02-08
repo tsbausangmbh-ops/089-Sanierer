@@ -9,6 +9,7 @@ const heroImage = "/images/sanierungsberater_experte.webp";
 
 const notFoundHeroContent: HeroContent = {
   backgroundImage: heroImage,
+  mobileImageSrc: "/images/mobile/sanierungsberater_experte.webp",
   imageAlt: "Seite nicht gefunden – 089-Sanierer München Sanierungsfirma für Komplettsanierung und Renovierung",
   badge: "Seite nicht gefunden",
   titleLine1: "404.",

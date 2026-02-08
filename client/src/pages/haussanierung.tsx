@@ -35,6 +35,7 @@ const hausImg = "/images/energieeffizientes_saniertes_haus.webp";
 
 const hausHeroContent: HeroContent = {
   backgroundImage: hausImg,
+  mobileImageSrc: "/images/mobile/energieeffizientes_saniertes_haus.webp",
   imageAlt: "Haussanierung München – Einfamilienhaus komplett sanieren lassen mit Dach, Fassade, Heizung und Innenausbau vom Generalunternehmer zum Festpreis",
   badge: "Über 45 erfolgreich sanierte Häuser in München",
   titleLine1: "Haussanierung München – Haus renovieren, Altbau sanieren & Modernisierung.",

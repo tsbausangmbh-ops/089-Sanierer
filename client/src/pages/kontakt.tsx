@@ -24,6 +24,7 @@ const contactHeroImage = "/images/kundenservice_kontakt.webp";
 
 const kontaktHeroContent: HeroContent = {
   backgroundImage: contactHeroImage,
+  mobileImageSrc: "/images/mobile/kundenservice_kontakt.webp",
   imageAlt: "Kontakt Sanierungsfirma München – Kostenlose Sanierungsberatung vor Ort und unverbindliches Festpreisangebot für Renovierung anfordern",
   badge: "Ihr direkter Draht zum Projekt-Kurator",
   titleLine1: "Sanierung München Kontakt – Beratung, Angebot & Terminvereinbarung.",

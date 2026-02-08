@@ -109,6 +109,7 @@ const serviceHeroImages: Record<string, string> = {
 const serviceHeroContents: Record<string, HeroContent> = {
   komplettsanierung: {
     backgroundImage: komplettsanierungHeroImage,
+    mobileImageSrc: "/images/mobile/komplettsanierung_vorher_nachher.webp",
     imageAlt: "Komplettsanierung anfragen München – Wohnung und Haus komplett sanieren lassen mit allen Gewerken aus einer Hand zum Festpreis",
     badge: "Ihr exklusiver Projekt-Kurator für Komplettsanierungen",
     titleLine1: "Komplettsanierung München – Wohnung & Haus komplett sanieren.",
@@ -122,6 +123,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   badsanierung: {
     backgroundImage: badsanierungHeroImage,
+    mobileImageSrc: "/images/mobile/badsanierung_muenchen_2026.webp",
     imageAlt: "Badsanierung anfragen München – Bad komplett renovieren mit bodengleicher Dusche und Barrierefreiheit vom zertifizierten Meisterbetrieb",
     badge: "Exklusive Badsanierung für anspruchsvolle Eigentümer",
     titleLine1: "Badsanierung München – Bad renovieren & Badumbau anfragen.",
@@ -135,6 +137,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   kuechensanierung: {
     backgroundImage: kuechensanierungHeroImage,
+    mobileImageSrc: "/images/mobile/moderne_kuechensanierung_ergebnis.webp",
     imageAlt: "Küchensanierung anfragen München – Küche komplett erneuern mit neuen Wasseranschlüssen, Elektrik und Fliesen zum Festpreis",
     badge: "Exklusive Küchensanierung mit Meisterqualität",
     titleLine1: "Küchensanierung München – Küche renovieren & Küchenumbau.",
@@ -148,6 +151,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   bodensanierung: {
     backgroundImage: bodensanierungHeroImage,
+    mobileImageSrc: "/images/mobile/parkettboden_sanierung_ergebnis.webp",
     imageAlt: "Bodensanierung anfragen München – Parkett verlegen, Fliesen erneuern und Fußbodenheizung nachrüsten lassen vom Fachbetrieb",
     badge: "Exklusive Bodensanierung mit Meisterbetrieben",
     titleLine1: "Bodensanierung München – Parkett, Fliesen & Vinyl verlegen.",
@@ -161,6 +165,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   elektrosanierung: {
     backgroundImage: elektrosanierungHeroImage,
+    mobileImageSrc: "/images/mobile/deutsche_elektroinstallation_vde.webp",
     imageAlt: "Elektrosanierung anfragen München – VDE-konforme Elektrik erneuern, neue Leitungen und Sicherungskasten vom Elektromeister",
     badge: "Exklusive Elektrosanierung durch Meisterbetriebe",
     titleLine1: "Elektrosanierung München – Elektrik erneuern & Neuinstallation.",
@@ -174,6 +179,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   heizungssanierung: {
     backgroundImage: heizungssanierungHeroImage,
+    mobileImageSrc: "/images/mobile/moderne_heizungsanlage_einbau.webp",
     imageAlt: "Heizungssanierung anfragen München – Wärmepumpe einbauen, Fußbodenheizung nachrüsten und Heizung tauschen mit KfW-Förderung",
     badge: "Exklusive Heizungssanierung mit Förderberatung",
     titleLine1: "Heizungssanierung München – Heizung tauschen & Wärmepumpe.",
@@ -187,6 +193,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   "energetische-sanierung": {
     backgroundImage: energetischeSanierungHeroImage,
+    mobileImageSrc: "/images/mobile/energieeffiziente_haussanierung.webp",
     imageAlt: "Energetische Sanierung anfragen München – Fassadendämmung, Fensteraustausch und Heizungstausch mit KfW/BAFA-Förderung und Energieberatung",
     badge: "Exklusive Energieberatung für Ihre Immobilie",
     titleLine1: "Energetische Sanierung München – Dämmung, Fenster & Heizung.",
@@ -200,6 +207,7 @@ const serviceHeroContents: Record<string, HeroContent> = {
   },
   dachsanierung: {
     backgroundImage: dachsanierungHeroImage,
+    mobileImageSrc: "/images/mobile/saniertes_ziegeldach.webp",
     imageAlt: "Dachsanierung anfragen München – Dach neu eindecken, Dachdämmung und Dachfenster einbauen vom Dachdeckermeister",
     badge: "Exklusive Dachsanierung durch Meisterbetriebe",
     titleLine1: "Dachsanierung München – Dach sanieren, Eindeckung & Dämmung.",
@@ -2644,6 +2652,7 @@ export default function FunnelPage() {
         <GlobalHero 
           content={serviceHeroContents[preSelectedService] || {
             backgroundImage: consultationHeroImage,
+            mobileImageSrc: "/images/mobile/sanierungsberatung_gespraech.webp",
             imageAlt: "Sanierungsberatung München – Persönliche Beratung durch erfahrenen Bauleiter",
             badge: "Sanierung München",
             titleLine1: "Ihre Sanierung.",
@@ -2671,6 +2680,7 @@ export default function FunnelPage() {
       <GlobalHero 
         content={{
           backgroundImage: consultationHeroImage,
+          mobileImageSrc: "/images/mobile/sanierungsberatung_gespraech.webp",
           imageAlt: "Sanierungsberatung München – Persönliche Beratung durch erfahrenen Bauleiter",
           badge: "Sanierung München",
           titleLine1: "Ihre Sanierung.",

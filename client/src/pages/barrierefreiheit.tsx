@@ -22,6 +22,7 @@ export default function Barrierefreiheit() {
           subtitle="Zugänglichkeit für alle Nutzer"
           description="Wir verpflichten uns, unsere Website barrierefrei zu gestalten – gemäß BITV 2.0 und WCAG 2.1 Richtlinien."
           imageAlt="Barrierefreiheit Sanierungsfirma München – Barrierefreie Sanierung und zugängliche Website"
+          mobileImageSrc="/images/mobile/modernes_saniertes_wohninterieur.webp"
           showCta={false}
           compact={true}
         />

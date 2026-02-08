@@ -8,6 +8,7 @@ const impressumHeroImage = "/images/rechtliche_dokumente_impressum.webp";
 
 const impressumHeroContent: HeroContent = {
   backgroundImage: impressumHeroImage,
+  mobileImageSrc: "/images/mobile/rechtliche_dokumente_impressum.webp",
   imageAlt: "Impressum 089-Sanierer München – Sanierungsfirma für Komplettsanierung, Badsanierung und Renovierung in München",
   badge: "Rechtliche Angaben",
   titleLine1: "Impressum.",
