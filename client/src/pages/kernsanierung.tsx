@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { ServiceIntro } from "@/components/service-intro";
+import { RecommendedLinks } from "@/components/recommended-links";
 const kernImg = "/images/haus_alt_vs_neu_vergleich.webp";
 
 const kernHeroContent: HeroContent = {
@@ -148,14 +149,6 @@ export default function Kernsanierung() {
             "Ob denkmalgeschützter Altbau oder sanierungsbedürftiges Nachkriegshaus: Unsere Handwerker in München sind Spezialisten für Kernsanierungen. Als Sanierungsfirma München garantieren wir Ihnen einen verbindlichen Festpreis für alle Renovierungsarbeiten – von der Elektrik über Sanitär bis zum kompletten Innenausbau. Ihre Renovierung aus einer Hand, ohne Kompromisse."
           ]}
           benefits={["Festpreis ab 1.200€/m²", "Neubau-Qualität im Altbau", "KfW-Förderung möglich", "5 Jahre Gewährleistung"]}
-          linksHeadline="Weitere Leistungen als Renovierungsfirma München"
-          linksDescription="Neben der Kernsanierung bieten wir als Handwerkerservice München umfassende Sanierungen für jedes Projekt."
-          links={[
-            { href: "/haussanierung", icon: HomeIcon2, title: "Haussanierung München", subtitle: "Einfamilienhaus sanieren ab 1.200€/m²" },
-            { href: "/badsanierung", icon: Bath, title: "Badsanierung München", subtitle: "Komplettbad ab 18.500€ in 2-3 Wochen" },
-            { href: "/wohnungssanierung", icon: Hammer, title: "Wohnungssanierung", subtitle: "Wohnung komplett sanieren ab 800€/m²" },
-            { href: "/kosten", icon: Calculator, title: "Alle Kosten & Preise 2026", subtitle: "Transparente Preisübersicht aller Gewerke" },
-          ]}
         />
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
@@ -407,6 +400,7 @@ export default function Kernsanierung() {
             </p>
           </div>
         </section>
+        <RecommendedLinks currentPath="/kernsanierung" />
       </main>
 
       <InternalLinks links={linkSets.fromKernsanierung} />

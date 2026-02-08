@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { ServiceIntro } from "@/components/service-intro";
+import { RecommendedLinks } from "@/components/recommended-links";
 const bathroomImg = "/images/badsanierung_muenchen_2026.webp";
 
 const badHeroContent: HeroContent = {
@@ -119,14 +120,6 @@ export default function Badsanierung() {
             "Unsere Handwerker in München sind zertifizierte Meisterbetriebe mit jahrelanger Erfahrung in der Badsanierung. Ob barrierefreie Dusche, Luxusbad oder kompakte Gästetoilette – wir liefern Sanierungsarbeiten auf höchstem Niveau. Als Ihr Generalunternehmer für Badsanierungen garantieren wir Ihnen einen verbindlichen Festpreis ohne Nachforderungen."
           ]}
           benefits={["Festpreis ab 18.500€", "Fertig in 2-3 Wochen", "Barrierefrei & bodengleich", "5 Jahre Gewährleistung"]}
-          linksHeadline="Weitere Sanierungen in München"
-          linksDescription="Neben der Badsanierung bieten wir Ihnen als Renovierungsfirma in München die Sanierung aus einer Hand für alle Bereiche Ihres Zuhauses."
-          links={[
-            { href: "/kernsanierung", icon: HomeIcon, title: "Komplett- & Kernsanierung", subtitle: "Rundum-Sanierung ab 1.200€/m² Festpreis" },
-            { href: "/wohnungssanierung", icon: Hammer, title: "Wohnungssanierung", subtitle: "Wohnung komplett sanieren ab 800€/m²" },
-            { href: "/haussanierung", icon: Shield, title: "Haussanierung München", subtitle: "Einfamilienhaus sanieren ab 1.200€/m²" },
-            { href: "/kosten", icon: Calculator, title: "Alle Kosten & Preise 2026", subtitle: "Transparente Preisübersicht aller Gewerke" },
-          ]}
         />
 
         <section className="py-8 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
@@ -371,6 +364,7 @@ export default function Badsanierung() {
             </p>
           </div>
         </section>
+        <RecommendedLinks currentPath="/badsanierung" />
       </main>
 
       <InternalLinks links={linkSets.fromBadsanierung} />
