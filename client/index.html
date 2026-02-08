@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       
-      // Consent Mode V2: Standard verweigert bis Einwilligung
       gtag('consent', 'default', {
         'analytics_storage': 'denied',
         'ad_storage': 'denied',
@@ -34,11 +33,7 @@
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
     <!-- Performance: Preload critical resources -->
-    <link rel="preload" href="/src/main.tsx" as="script" crossorigin />
     <link rel="modulepreload" href="/src/main.tsx" />
-    
-    <!-- Resource Hints for faster navigation -->
-    <link rel="prefetch" href="/anfrage" />
     
     <!-- Primary Meta Tags - SSR Injected -->
     <title><!--SSR_TITLE-->Sanierung München | Was kostet Badsanierung, Haussanierung, Komplettsanierung? | 089-Sanierer<!--/SSR_TITLE--></title>
@@ -47,23 +42,14 @@
     <meta name="keywords" content="<!--SSR_KEYWORDS-->Sanierung München, Komplettsanierung München, Badsanierung München, 089-Sanierer<!--/SSR_KEYWORDS-->" />
     <link rel="canonical" href="<!--SSR_CANONICAL-->https://089-sanierer.de<!--/SSR_CANONICAL-->" />
     
-    <!-- Geo Meta Tags - Extended for Local SEO 2026 -->
+    <!-- Geo Meta Tags - Local SEO -->
     <meta name="geo.region" content="DE-BY" />
     <meta name="geo.placename" content="München, Bayern, Deutschland" />
     <meta name="geo.position" content="48.137154;11.576124" />
     <meta name="ICBM" content="48.137154, 11.576124" />
-    <meta name="city" content="München" />
-    <meta name="state" content="Bayern" />
-    <meta name="country" content="Deutschland" />
-    <meta name="zipcode" content="80992" />
-    <meta name="distribution" content="local" />
-    <meta name="target" content="München, Bayern, Oberbayern, Großraum München" />
-    <meta name="coverage" content="München, Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Maxvorstadt, Lehel, Laim, Moosach, Allach, Aubing, Nymphenburg, Berg am Laim, Riem, Milbertshofen, Freimann, Solln, Großhadern, Hadern, Fürstenried, Forstenried, Thalkirchen, Obersendling, Ramersdorf, Perlach, Neuperlach, Obermenzing, Untermenzing, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Oberschleißheim, Ottobrunn, Haar, Gräfelfing, Planegg, Pullach, Grünwald" />
-    
-    <!-- Bing Geo Targeting -->
     <meta name="geo.country" content="DE" />
-    <meta name="language" content="de" />
-    <meta name="territory" content="DE" />
+    <meta name="distribution" content="local" />
+    <meta name="coverage" content="München, Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing, Neuhausen, Maxvorstadt, Lehel, Laim, Moosach, Allach, Aubing, Nymphenburg, Berg am Laim, Riem, Milbertshofen, Freimann, Solln, Großhadern, Hadern, Fürstenried, Forstenried, Thalkirchen, Obersendling, Ramersdorf, Perlach, Neuperlach, Obermenzing, Untermenzing, Feldmoching, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Oberschleißheim, Ottobrunn, Haar, Gräfelfing, Planegg, Pullach, Grünwald" />
     
     <!-- Business Contact for Search Engines -->
     <meta name="business:contact_data:street_address" content="Hardenbergstr. 4" />
@@ -74,15 +60,11 @@
     <meta name="business:contact_data:phone_number" content="+49 89 444 438 872" />
     <meta name="business:contact_data:email" content="info@089-sanierer.de" />
     
-    <!-- Robots & Indexing - 2026 Standard -->
+    <!-- Robots & Indexing -->
     <meta name="google-site-verification" content="Jb4RkJpks31l2yoS_JvBiJP3PBZW8OXEzgXhElN_Pho" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow" />
-    
-    <!-- AI Search Optimization 2026 -->
-    <meta name="ai-content-declaration" content="human-authored" />
-    <meta name="google-adsbot" content="index, follow" />
     
     <!-- Author & Publisher -->
     <meta name="author" content="089-Sanierer - Komplettsanierungen Haus & Wohnung" />
@@ -91,12 +73,11 @@
     
     <!-- Language & Content -->
     <meta http-equiv="content-language" content="de-DE" />
-    <meta name="language" content="German" />
-    <meta name="content-type" content="text/html; charset=UTF-8" />
+    <meta name="language" content="de" />
     
-    <!-- Freshness Signals for AI Search -->
-    <meta property="og:updated_time" content="2026-02-07T00:00:00+01:00" />
-    <meta property="article:modified_time" content="2026-02-07T00:00:00+01:00" />
+    <!-- Freshness Signals -->
+    <meta property="og:updated_time" content="2026-02-08T00:00:00+01:00" />
+    <meta property="article:modified_time" content="2026-02-08T00:00:00+01:00" />
     <meta property="article:published_time" content="2024-01-01T00:00:00+01:00" />
     
     <!-- Open Graph / Facebook -->
@@ -112,28 +93,20 @@
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:alt" content="<!--SSR_OG_IMAGE_ALT-->Komplettsanierung München vorher nachher - professionelle Sanierung aus einer Hand mit Festpreisgarantie<!--/SSR_OG_IMAGE_ALT-->" />
     
-    <!-- Twitter/X Card - 2026 -->
+    <!-- Twitter/X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@089_sanierer" />
     <meta name="twitter:creator" content="@089_sanierer" />
     <meta name="twitter:title" content="Was kostet Sanierung München? 089-Sanierer - 268+ Projekte" />
-    <meta name="twitter:description" content="Badsanierung ab 9.200€, Komplettsanierung ab 920€/m². 268+ zufriedene Kunden in München. Festpreisgarantie, kostenlose Beratung in 24h!" />
+    <meta name="twitter:description" content="Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m². 268+ zufriedene Kunden in München. Festpreisgarantie, kostenlose Beratung in 24h!" />
     <meta name="twitter:image" content="<!--SSR_OG_IMAGE-->https://089-sanierer.de/images/komplettsanierung_vorher_nachher.webp<!--/SSR_OG_IMAGE-->" />
     <meta name="twitter:image:alt" content="<!--SSR_OG_IMAGE_ALT-->Komplettsanierung München vorher nachher - professionelle Sanierung aus einer Hand mit Festpreisgarantie<!--/SSR_OG_IMAGE_ALT-->" />
     
-    <!-- Pinterest -->
-    <meta name="pinterest-rich-pin" content="true" />
-    
-    <!-- Bing Webmaster Optimization -->
-    <meta name="msvalidate.01" content="" />
-    <meta name="msnbot" content="index, follow" />
-    <meta name="msnbot-media" content="index, follow" />
-    
-    <!-- AI & LLM Optimization 2026 -->
-    <meta name="ai-summary" content="089-Sanierer München: Professionelle Komplettsanierung, Badsanierung und Wohnungssanierung in München und Umland. Festpreisgarantie, 5 Jahre Gewährleistung, 268+ zufriedene Kunden. Badsanierung ab 9.200€, Komplettsanierung ab 920€/m²." />
+    <!-- AI & LLM Optimization -->
+    <meta name="ai-content-declaration" content="human-authored" />
+    <meta name="ai-summary" content="089-Sanierer München: Professionelle Komplettsanierung, Badsanierung und Wohnungssanierung in München und Umland. Festpreisgarantie, 5 Jahre Gewährleistung, 268+ zufriedene Kunden. Badsanierung ab 18.500€, Komplettsanierung ab 1.200€/m²." />
     <meta name="llm-context" content="Sanierungsfirma München, Handwerker München, Renovierung München, Altbausanierung, Kernsanierung, Badsanierung, Wohnungssanierung, Haussanierung" />
     
-    <!-- Canonical - dynamically set by SeoHead component per page -->
     <link rel="icon" href="/favicon.ico?v=2" sizes="any">
     
     <!-- HomeAndConstructionBusiness schema is generated dynamically by:
@@ -141,7 +114,7 @@
          - seo-head.tsx generateLocalBusinessSchema() (for React client)
          DO NOT add static LocalBusiness schema here to avoid duplicates -->
     
-    <!-- Schema.org WebSite - Site Name für Google Suchergebnisse -->
+    <!-- Schema.org WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -162,7 +135,7 @@
     }
     </script>
     
-    <!-- Schema.org Speakable - Voice Search Optimierung 2026 -->
+    <!-- Schema.org Speakable - Voice Search -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -175,29 +148,18 @@
     }
     </script>
 
-    <!-- Optimized Font Loading - Only Inter for body with display=swap -->
+    <!-- Optimized Font Loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- Critical CSS Inline for LCP & CLS -->
     <style>
-      /* Critical CSS - Inline for fastest LCP */
       *,*::before,*::after{box-sizing:border-box}
       body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.5}
       #root{min-height:100vh;display:flex;flex-direction:column}
-      
-      /* Prevent CLS - Reserve space for common elements */
       img,video{max-width:100%;height:auto;display:block}
       button,input,select,textarea{font:inherit}
-      
-      /* Hero placeholder to prevent CLS */
       .hero-section{min-height:60vh}
-      
-      /* Loading states */
-      .loading-skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
-      @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-      
-      /* Reduce motion for accessibility */
       @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
     </style>
   </head>
@@ -205,17 +167,9 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Performance: Defer non-critical scripts -->
+    <!-- Web Vitals Reporting -->
     <script>
-      // Lazy load images with native loading
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('img[data-src]').forEach(function(img) {
-          img.src = img.dataset.src;
-        });
-      });
-      
-      // Report Web Vitals
-      if ('web-vital' in window || typeof PerformanceObserver !== 'undefined') {
+      if (typeof PerformanceObserver !== 'undefined') {
         try {
           new PerformanceObserver(function(list) {
             list.getEntries().forEach(function(entry) {
