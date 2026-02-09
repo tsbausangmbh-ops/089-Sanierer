@@ -1,0 +1,49 @@
+ habe sanitär-muenchen.de (IDN → xn--sanitr-muenchen-4kb.de) kurz gegengeprüft. Der Hauptgrund, warum Google sehr wahrscheinlich nicht sauber crawlt, ist bei dir robots.txt + Sitemap.
+
+Kritischer Fehler in robots.txt (alles eine Zeile)
+Deine robots.txt wird als eine einzige Zeile ausgeliefert und beginnt mit # …. In robots.txt gilt: Alles nach # bis zum Zeilenende ist Kommentar. Wenn es nur eine Zeile gibt, ist damit die komplette Datei kommentiert – inklusive User-agent, Allow, Sitemap usw. Ergebnis: Google bekommt faktisch keine verwertbaren Direktiven und vor allem keinen Sitemap-Hinweis.
+
+Fix: robots.txt muss echte Zeilenumbrüche enthalten und die Direktiven dürfen nicht “hinter” einem # in derselben Zeile stehen.
+
+Empfohlene Minimal-version (sauber, kurz, Google-freundlich):
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sanitär-muenchen.de/sitemap.xml
+
+
+Sitemap.xml ist aktuell nicht abrufbar (HTTP 400)
+Beim Abruf von https://sanitär-muenchen.de/sitemap.xml kommt bei mir ein Fehler (Status 400). Wenn die Sitemap nicht mit 200 OK und gültigem XML kommt, wird Google deutlich schlechter (oder gar nicht) in die URL-Abdeckung kommen.
+
+Fix-Checkliste für die Sitemap:
+
+https://sanitär-muenchen.de/sitemap.xml muss 200 liefern (nicht 3xx/4xx/5xx).
+
+Content-Type ideal: application/xml oder text/xml.
+
+Kein WAF/Firewall-Block für Googlebot.
+
+Keine kaputten Zeichen/Encoding-Probleme (IDN/UTF-8 sauber).
+
+Danach in der Google Search Console neu einreichen.
+
+Was du jetzt sofort testen solltest (ohne Rätselraten)
+A) Server-Statuscodes prüfen (auf deinem VPS):
+
+curl -I https://sanitär-muenchen.de/robots.txt
+curl -I https://sanitär-muenchen.de/sitemap.xml
+curl -I https://sanitär-muenchen.de/
+curl -I http://sanitär-muenchen.de/
+
+
+Wichtig: robots.txt und sitemap.xml müssen von überall erreichbar sein (ohne Login, ohne Bot-Schutz).
+
+B) robots.txt korrekt ausliefern
+
+Stelle sicher, dass dein Webserver nicht minifiziert oder “einzeilig” ausspielt.
+
+Datei exakt unter /.well-known/ ist egal – Google erwartet robots unter /robots.txt.
+
+C) Interne Verlinkung / Rendering
+Wenn deine Startseite (oder Unterseiten) stark JS-lastig sind (SPA) und wenige echte <a href> Links serverseitig im HTML stehen, crawlt Google langsamer. In dem Fall: SSR/Prerendering oder zumindest saubere HTML-Navigation + interne Links.
