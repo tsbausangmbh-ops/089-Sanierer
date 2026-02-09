@@ -365,6 +365,28 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h3>Welche Gewährleistung gibt es?</h3>
         <p>Wir bieten 5 Jahre Gewährleistung auf alle unsere Arbeiten.</p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=komplettsanierung">Komplettsanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/termin">Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+          <li><a href="/">Startseite</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/impressum") {
@@ -384,6 +406,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>KI-Transparenzhinweis (EU AI Act)</h2>
         <p>089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.</p>
         <p>Rechtsgrundlage: Verordnung (EU) 2024/1689 (EU AI Act), Art. 50 | DSGVO Art. 22</p>
+        
+        <h2>Sanierungsleistungen entdecken</h2>
+        <ul>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/badsanierung">Badsanierung München</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München</a></li>
+          <li><a href="/haussanierung">Haussanierung München</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/datenschutz") {
@@ -404,6 +439,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>KI-Transparenzhinweis</h2>
         <p>089-Sanierer setzt KI-basierte Systeme ein. Rechtsgrundlage: EU AI Act (Verordnung 2024/1689), Art. 50.</p>
+        
+        <h2>Sanierungsleistungen entdecken</h2>
+        <ul>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/badsanierung">Badsanierung München</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München</a></li>
+          <li><a href="/haussanierung">Haussanierung München</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/kontakt") {
@@ -420,6 +468,28 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h3>Öffnungszeiten Handwerker München</h3>
         <p>Montag - Freitag: 08:00 - 16:30 Uhr</p>
         <p>Als Generalunternehmer Sanierung bieten wir Ihnen Sanierung aus einer Hand – von der Beratung bis zur schlüsselfertigen Übergabe.</p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=komplettsanierung">Komplettsanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/termin">Beratungstermin buchen</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+          <li><a href="/">Startseite</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/bestaetigung") {
@@ -440,7 +510,21 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Kontakt</h2>
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
-        <p>Telefon: 0152 122 740 43</p>
+        <p>Telefon: +49 89 444 438 872</p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Neue Sanierungsanfrage stellen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/ratgeber") {
@@ -526,6 +610,28 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Telefon: 0152 122 740 43</p>
         <p>Kostenlose Erstberatung - Wir melden uns innerhalb von 24 Stunden!</p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=komplettsanierung">Komplettsanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/termin">Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+          <li><a href="/">Startseite</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/badsanierung") {
@@ -554,6 +660,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Vertrauen Sie bei Ihren Sanierungen München auf unseren professionellen Handwerkerservice München.</p>
         
         <p><a href="/anfrage?service=badsanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/wohnungssanierung") {
@@ -576,6 +703,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Unsere Handwerker München übernehmen als Generalunternehmer Sanierung die Koordination aller Gewerke. Profitieren Sie von unserem Handwerkerservice München für Ihre Wohnungssanierung.</p>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/haussanierung") {
@@ -597,6 +745,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Unsere erfahrenen Handwerker München übernehmen sämtliche Sanierungsarbeiten inklusive Innenausbau. Vertrauen Sie auf unseren zuverlässigen Handwerkerservice München.</p>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/kernsanierung") {
@@ -619,6 +788,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Unsere Handwerker München koordinieren als Generalunternehmer Sanierung alle Gewerke. Profitieren Sie von unserer Erfahrung als Renovierungsfirma München.</p>
         
         <p><a href="/anfrage?service=komplettsanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/kuechensanierung") {
@@ -646,6 +836,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Kontakt</h2>
         <p>Telefon: +49 89 444 438 872</p>
         <p><a href="/anfrage?service=kuechensanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/bodensanierung") {
@@ -678,6 +889,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Kontakt</h2>
         <p>Telefon: +49 89 444 438 872</p>
         <p><a href="/anfrage?service=bodensanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/elektrosanierung") {
@@ -706,6 +938,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Kontakt</h2>
         <p>Telefon: +49 89 444 438 872</p>
         <p><a href="/anfrage?service=elektrosanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/heizungssanierung") {
@@ -736,6 +989,27 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Kontakt</h2>
         <p>Telefon: +49 89 444 438 872</p>
         <p><a href="/anfrage?service=heizungssanierung">Jetzt Angebot anfordern</a></p>
+        
+        <h2>Verwandte Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=bodensanierung">Bodensanierung München ab 65€/m²</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/agb") {
@@ -778,6 +1052,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: +49 89 444 438 872</p>
+        
+        <h2>Sanierungsleistungen entdecken</h2>
+        <ul>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/badsanierung">Badsanierung München</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München</a></li>
+          <li><a href="/haussanierung">Haussanierung München</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/gewerke") {
@@ -821,6 +1108,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Trennwände, Abhangdecken, Dachausbau. Professioneller Trockenbau für Ihre Raumgestaltung.</p>
 
         <p><a href="/anfrage">Jetzt unverbindlich anfragen</a> | <a href="/rechner">Kosten berechnen</a></p>
+        
+        <h2>Service-Seiten</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München Details & Preise</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München Details & Preise</a></li>
+          <li><a href="/haussanierung">Haussanierung München Details & Preise</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München Details & Preise</a></li>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/termin">Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/cookies") {
@@ -852,6 +1152,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: +49 89 444 438 872</p>
+        
+        <h2>Sanierungsleistungen entdecken</h2>
+        <ul>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/badsanierung">Badsanierung München</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München</a></li>
+          <li><a href="/haussanierung">Haussanierung München</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/barrierefreiheit") {
@@ -885,6 +1198,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: +49 89 444 438 872</p>
         <p>Wir nehmen Ihr Anliegen ernst und bemühen uns, Barrieren zeitnah zu beseitigen.</p>
+        
+        <h2>Sanierungsleistungen entdecken</h2>
+        <ul>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/badsanierung">Badsanierung München</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München</a></li>
+          <li><a href="/haussanierung">Haussanierung München</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/termin") {
@@ -924,6 +1250,28 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: +49 89 444 438 872</p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=komplettsanierung">Komplettsanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+          <li><a href="/">Startseite</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/rechner") {
@@ -963,6 +1311,28 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Kontakt</h2>
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
         <p>Telefon: +49 89 444 438 872</p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=komplettsanierung">Komplettsanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München ab 150€/m²</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München ab 12.000€</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/termin">Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/anfrage">Sanierungsanfrage stellen</a></li>
+          <li><a href="/">Startseite</a></li>
+        </ul>
       </section>
     `;
   } else if (path === "/danke") {
@@ -995,6 +1365,18 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         </ul>
 
         <p><a href="/">Zurück zur Startseite</a></p>
+        
+        <h2>Unsere Sanierungsleistungen</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/faq-preise">FAQ & Preise</a></li>
+          <li><a href="/rechner">Kostenrechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+          <li><a href="/kontakt">Kontakt</a></li>
+        </ul>
       </section>
     `;
   } else if (path.startsWith("/muenchen-")) {
@@ -1057,7 +1439,28 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li>Lokale Expertise in ${districtName}</li>
         </ul>
         
-        <p><a href="/anfrage">Jetzt Angebot anfordern</a></p>
+        <h2>Unsere Sanierungsleistungen in ${districtName}</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800€/m²</a></li>
+          <li><a href="/haussanierung">Haussanierung München ab 1.200€/m²</a></li>
+          <li><a href="/kernsanierung">Kernsanierung München</a></li>
+          <li><a href="/anfrage?service=komplettsanierung">Komplettsanierung München ab 1.200€/m²</a></li>
+          <li><a href="/anfrage?service=kuechensanierung">Küchensanierung München ab 6.500€</a></li>
+          <li><a href="/anfrage?service=elektrosanierung">Elektrosanierung München</a></li>
+          <li><a href="/anfrage?service=heizungssanierung">Heizungssanierung München</a></li>
+        </ul>
+        
+        <h2>Weitere Informationen</h2>
+        <ul>
+          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Sanierung Ratgeber München</a></li>
+          <li><a href="/termin">Kostenlosen Beratungstermin buchen</a></li>
+          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+          <li><a href="/">Startseite - Alle Leistungen</a></li>
+          <li><a href="/anfrage">Jetzt Angebot anfordern</a></li>
+        </ul>
       </section>
     `;
   } else {
@@ -1119,6 +1522,19 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <p>Telefon: +49 89 444 438 872</p>
           <p>Montag bis Freitag: 08:00 - 16:30 Uhr</p>
           <p><a href="/anfrage">Jetzt Angebot anfordern</a> | <a href="/termin">Termin vereinbaren</a></p>
+          
+          <h2>Sanierungsleistungen</h2>
+          <ul>
+            <li><a href="/badsanierung">Badsanierung München ab 18.500€</a></li>
+            <li><a href="/wohnungssanierung">Wohnungssanierung ab 800€/m²</a></li>
+            <li><a href="/haussanierung">Haussanierung ab 1.200€/m²</a></li>
+            <li><a href="/kernsanierung">Kernsanierung München</a></li>
+            <li><a href="/faq-preise">FAQ & Preise</a></li>
+            <li><a href="/rechner">Kostenrechner</a></li>
+            <li><a href="/ratgeber">Sanierung Ratgeber</a></li>
+            <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
+            <li><a href="/">Startseite - Alle Leistungen</a></li>
+          </ul>
         </section>
       `;
     } else {
