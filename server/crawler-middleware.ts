@@ -1555,6 +1555,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="bingbot" content="index, follow">
   <link rel="canonical" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
+  <link rel="alternate" hreflang="de" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
+  <link rel="alternate" hreflang="x-default" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -1608,13 +1610,50 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     ${mainContent}
   </main>
   <footer>
-    <p>© 2026 089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
+    <p>© 2026 089-Sanierer - Komplettsanierungen Haus & Wohnung München</p>
+    <nav aria-label="Sanierungsleistungen">
+      <h4>Sanierungsleistungen</h4>
+      <a href="/badsanierung">Badsanierung München</a>
+      <a href="/wohnungssanierung">Wohnungssanierung München</a>
+      <a href="/haussanierung">Haussanierung München</a>
+      <a href="/kernsanierung">Kernsanierung München</a>
+      <a href="/anfrage?service=komplettsanierung">Komplettsanierung München</a>
+      <a href="/anfrage?service=kuechensanierung">Küchensanierung München</a>
+      <a href="/anfrage?service=bodensanierung">Bodensanierung München</a>
+      <a href="/anfrage?service=elektrosanierung">Elektrosanierung München</a>
+      <a href="/anfrage?service=heizungssanierung">Heizungssanierung München</a>
+    </nav>
+    <nav aria-label="Informationen">
+      <h4>Informationen</h4>
+      <a href="/faq-preise">FAQ & Preise</a>
+      <a href="/rechner">Kostenrechner</a>
+      <a href="/ratgeber">Sanierung Ratgeber</a>
+      <a href="/kontakt">Kontakt & Anfahrt</a>
+      <a href="/termin">Beratungstermin buchen</a>
+      <a href="/anfrage">Sanierungsanfrage</a>
+    </nav>
+    <nav aria-label="Stadtteile München">
+      <h4>Sanierung in München</h4>
+      <a href="/muenchen-schwabing">Schwabing</a>
+      <a href="/muenchen-bogenhausen">Bogenhausen</a>
+      <a href="/muenchen-maxvorstadt">Maxvorstadt</a>
+      <a href="/muenchen-haidhausen">Haidhausen</a>
+      <a href="/muenchen-sendling">Sendling</a>
+      <a href="/muenchen-neuhausen">Neuhausen</a>
+      <a href="/muenchen-pasing">Pasing</a>
+      <a href="/muenchen-giesing">Giesing</a>
+      <a href="/muenchen-lehel">Lehel</a>
+      <a href="/muenchen-trudering">Trudering</a>
+    </nav>
     <nav aria-label="Rechtliche Links">
+      <h4>Rechtliches</h4>
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
+      <a href="/agb">AGB</a>
+      <a href="/cookies">Cookie-Richtlinie</a>
     </nav>
     <address>
-      089-Sanierer, Hardenbergstr. 4, 80992 München | Tel: 0152 122 740 43
+      089-Sanierer, Hardenbergstr. 4, 80992 München | Tel: <a href="tel:+4989444438872">+49 89 444 438 872</a> | E-Mail: <a href="mailto:info@089-sanierer.de">info@089-sanierer.de</a>
     </address>
   </footer>
 </body>
