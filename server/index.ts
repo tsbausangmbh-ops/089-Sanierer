@@ -39,12 +39,14 @@ app.use((req, res, next) => {
 
 // Crawler-Logging: Alle Bot-Zugriffe loggen (vor crawlerMiddleware, da diese direkt antwortet)
 const CRAWLER_BOTS = [
-  "Googlebot", "Bingbot", "bingbot", "Slurp", "DuckDuckBot", "Baiduspider",
-  "YandexBot", "GPTBot", "ChatGPT-User", "ClaudeBot", "PerplexityBot",
-  "Applebot", "Amazonbot", "PetalBot", "SeznamBot", "MojeekBot",
-  "facebookexternalhit", "Twitterbot", "LinkedInBot",
-  "Google-Extended", "OAI-SearchBot", "Bytespider",
-  "AhrefsBot", "SemrushBot", "MJ12bot",
+  "Googlebot", "Google-InspectionTool", "AdsBot-Google", "APIs-Google",
+  "Mediapartners-Google", "Storebot-Google", "GoogleOther", "Google-Extended",
+  "Bingbot", "BingPreview", "Slurp", "DuckDuckBot", "Baiduspider",
+  "YandexBot", "GPTBot", "ChatGPT-User", "OAI-SearchBot", "ClaudeBot",
+  "PerplexityBot", "Applebot", "Amazonbot", "PetalBot", "SeznamBot",
+  "MojeekBot", "facebookexternalhit", "Twitterbot", "LinkedInBot",
+  "Bytespider", "AhrefsBot", "SemrushBot", "MJ12bot",
+  "Chrome-Lighthouse", "Google Page Speed",
 ];
 
 app.use((req, res, next) => {
