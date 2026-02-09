@@ -145,6 +145,10 @@ function Router() {
         <Route path="/planegg" component={StadtteilPage} />
         <Route path="/pullach" component={StadtteilPage} />
         <Route path="/gruenwald" component={StadtteilPage} />
+        <Route path="/erding" component={StadtteilPage} />
+        <Route path="/ismaning" component={StadtteilPage} />
+        <Route path="/unterhaching" component={StadtteilPage} />
+        <Route path="/vaterstetten" component={StadtteilPage} />
         <Route path="/danke" component={Confirmation} />
         <Route component={NotFound} />
       </Switch>

@@ -413,6 +413,38 @@ const stadtteile: Record<string, StadtteilData> = {
     besonderheiten: ["Höchste Grundstückspreise", "Prominentenwohnort", "Bavaria Filmstadt"],
     altbauAnteil: "ca. 50%",
     typischeObjekte: ["Villen", "Luxusanwesen", "Herrschaftliche Häuser"]
+  },
+  "erding": {
+    name: "Erding",
+    slug: "erding",
+    beschreibung: "Erding ist eine aufstrebende Stadt östlich von München, bekannt für die Therme und wachsende Wohngebiete.",
+    besonderheiten: ["Therme Erding", "Flughafennähe", "Wachsendes Neubaugebiet"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Eigentumswohnungen"]
+  },
+  "ismaning": {
+    name: "Ismaning",
+    slug: "ismaning",
+    beschreibung: "Ismaning ist eine wohlhabende Gemeinde nördlich von München mit exzellenter S-Bahn-Anbindung.",
+    besonderheiten: ["S-Bahn S8 Anbindung", "Medienstandort", "Hohe Lebensqualität"],
+    altbauAnteil: "ca. 30%",
+    typischeObjekte: ["Einfamilienhäuser", "Doppelhaushälften", "Eigentumswohnungen"]
+  },
+  "unterhaching": {
+    name: "Unterhaching",
+    slug: "unterhaching",
+    beschreibung: "Unterhaching ist eine familienfreundliche Gemeinde südlich von München mit U-Bahn-Anbindung.",
+    besonderheiten: ["U-Bahn U1 Anbindung", "Sportpark", "Geothermie-Heizwerk"],
+    altbauAnteil: "ca. 40%",
+    typischeObjekte: ["Einfamilienhäuser", "Reihenhäuser", "Eigentumswohnungen"]
+  },
+  "vaterstetten": {
+    name: "Vaterstetten",
+    slug: "vaterstetten",
+    beschreibung: "Vaterstetten ist eine der größten Gemeinden im Landkreis Ebersberg mit guter Anbindung an München.",
+    besonderheiten: ["S-Bahn S4 Anbindung", "Familienfreundlich", "Viel Grün"],
+    altbauAnteil: "ca. 35%",
+    typischeObjekte: ["Einfamilienhäuser", "Doppelhaushälften", "Reihenhäuser"]
   }
 };
 

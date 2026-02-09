@@ -269,7 +269,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h2>Ratgeber, Kosten & Termine</h2>
         <ul>
           <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
-          <li><a href="/kosten">Sanierungskosten München – Preise & Kalkulation</a></li>
+          <li><a href="/faq-preise">Sanierungskosten München – Preise & Kalkulation</a></li>
           <li><a href="/rechner">Sanierungskosten-Rechner München</a></li>
           <li><a href="/ratgeber">Sanierung Ratgeber – Tipps & Kosten 2026</a></li>
           <li><a href="/termin">Kostenlose Beratung – Termin buchen</a></li>
@@ -322,7 +322,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         </ul>
         
         <h2>Kontakt</h2>
-        <p>Telefon: 0152 122 740 43</p>
+        <p>Telefon: +49 89 444 438 872</p>
       </section>
     `;
   } else if (path === "/faq-preise") {
@@ -397,11 +397,18 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       <section>
         <h1>Impressum</h1>
         <h2>Angaben gemäß § 5 TMG</h2>
+        
+        <h3>Gewerbebetrieb 1</h3>
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
-        <p>Hardenbergstr. 4</p>
-        <p>80992 München</p>
+        <p>Hardenbergstr. 4, 80992 München</p>
+        <p>Telefon: +49 89 444 438 872</p>
+        <p>E-Mail: info@089-sanierer.de</p>
+        
+        <h3>Gewerbebetrieb 2</h3>
+        <p>KSHW München - Ali Kemal Kurt (Einzelunternehmen)</p>
+        <p>Zielstattstr. 9, 81379 München</p>
         <p>Telefon: 0152 122 740 43</p>
-        <p>Steuernummer: folgt</p>
+        <p>E-Mail: info@komplettsanierungen-haus-wohnung.de</p>
         
         <h2>KI-Transparenzhinweis (EU AI Act)</h2>
         <p>089-Sanierer setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.</p>
@@ -463,7 +470,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <h1>Kontakt – Ihre Sanierungsfirma München</h1>
         <h2>089-Sanierer – Handwerkerservice München für Sanierungsarbeiten</h2>
         <p>Hardenbergstr. 4, 80992 München</p>
-        <p>Telefon: 0152 122 740 43</p>
+        <p>Telefon: +49 89 444 438 872</p>
         <p>Kontaktieren Sie unsere Renovierungsfirma München für alle Renovierungsarbeiten und Sanierungen München. Ob Renovierung aus einer Hand oder einzelne Handwerker München – wir beraten Sie gerne kostenlos und unverbindlich.</p>
         <h3>Öffnungszeiten Handwerker München</h3>
         <p>Montag - Freitag: 08:00 - 16:30 Uhr</p>
@@ -505,7 +512,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         <ul>
           <li>Wir prüfen Ihre Anfrage und melden uns innerhalb von 24 Stunden</li>
           <li>Sie erhalten eine Bestätigung per E-Mail</li>
-          <li>Bei Fragen erreichen Sie uns unter 0152 122 740 43</li>
+          <li>Bei Fragen erreichen Sie uns unter +49 89 444 438 872</li>
         </ul>
         
         <h2>Kontakt</h2>
@@ -608,7 +615,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
         
         <h2>Kontakt</h2>
         <p>089-Sanierer - Komplettsanierungen Haus & Wohnung</p>
-        <p>Telefon: 0152 122 740 43</p>
+        <p>Telefon: +49 89 444 438 872</p>
         <p>Kostenlose Erstberatung - Wir melden uns innerhalb von 24 Stunden!</p>
         
         <h2>Unsere Sanierungsleistungen</h2>
@@ -1480,6 +1487,10 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       "/planegg": { name: "Planegg", landkreis: "Landkreis München", distance: "~12 km" },
       "/pullach": { name: "Pullach im Isartal", landkreis: "Landkreis München", distance: "~10 km" },
       "/gruenwald": { name: "Grünwald", landkreis: "Landkreis München", distance: "~12 km" },
+      "/erding": { name: "Erding", landkreis: "Landkreis Erding", distance: "~35 km" },
+      "/ismaning": { name: "Ismaning", landkreis: "Landkreis München", distance: "~14 km" },
+      "/unterhaching": { name: "Unterhaching", landkreis: "Landkreis München", distance: "~10 km" },
+      "/vaterstetten": { name: "Vaterstetten", landkreis: "Landkreis Ebersberg", distance: "~18 km" },
     };
     const umlandCity = umlandCities[path];
     if (umlandCity) {

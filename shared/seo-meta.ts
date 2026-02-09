@@ -62,6 +62,10 @@ const umlandMeta: Record<string, string> = {
   planegg: "Planegg",
   pullach: "Pullach",
   gruenwald: "Grünwald",
+  erding: "Erding",
+  ismaning: "Ismaning",
+  unterhaching: "Unterhaching",
+  vaterstetten: "Vaterstetten",
 };
 
 export function getSeoMeta(path: string): SeoMeta {
