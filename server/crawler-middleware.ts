@@ -195,43 +195,41 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   if (path === "/" || path === "") {
     mainContent = `
       <section>
-        <h1>Sanierungen München – Ihre Sanierungsfirma für Komplettsanierungen aus einer Hand</h1>
-        <p><strong>Kurzantwort:</strong> 089-Sanierer ist Münchens Meisterbetrieb für Sanierungsarbeiten und Renovierungsarbeiten. Badsanierung ab 18.500 €, Wohnungssanierung ab 800 €/m², Komplettsanierung ab 1.200 €/m² – alles mit verbindlicher Festpreisgarantie, persönlichem Bauleiter und 5 Jahren Gewährleistung. Als erfahrene Renovierungsfirma München bieten wir Sanierung aus einer Hand: 268+ Projekte, 4,9 Sterne, 98 % Weiterempfehlung.</p>
+        <h1>Komplettsanierung München – 089-Sanierer</h1>
+        <p>089-Sanierer koordiniert Komplettsanierungen in München: von der Badsanierung bis zur Kernsanierung, alle Gewerke aus einer Hand. Verbindlicher Festpreis, persönlicher Bauleiter, 5 Jahre Gewährleistung.</p>
         
-        <h2>Unsere Sanierungsarbeiten und Renovierungsarbeiten</h2>
+        <h2>Leistungen und Richtpreise</h2>
         <ul>
-          <li><a href="/anfrage?service=komplettsanierung"><strong>Komplettsanierung</strong></a> - Schlüsselfertige Sanierung ab 1.200 €/m²</li>
-          <li><a href="/badsanierung"><strong>Badsanierung München</strong></a> - Komplettbad ab 18.500 €</li>
-          <li><a href="/anfrage?service=kuechensanierung"><strong>Küchensanierung</strong></a> - Bauarbeiten ab 6.500 €</li>
-          <li><a href="/anfrage?service=bodensanierung"><strong>Bodensanierung</strong></a> - Alle Bodenbeläge ab 65 €/m²</li>
-          <li><a href="/anfrage?service=elektrosanierung"><strong>Elektrosanierung</strong></a> - VDE-konforme Installation ab 150 €/m²</li>
-          <li><a href="/anfrage?service=heizungssanierung"><strong>Heizungssanierung</strong></a> - Moderne Heizsysteme ab 12.000 €</li>
-          <li><strong>Dachsanierung</strong> - Dämmung und Eindeckung ab 150 €/m²</li>
-          <li><strong>Energetische Sanierung</strong> - KfW-förderfähig ab 200 €/m²</li>
+          <li><a href="/anfrage?service=komplettsanierung"><strong>Komplettsanierung</strong></a> – ab 1.200 €/m²</li>
+          <li><a href="/badsanierung"><strong>Badsanierung</strong></a> – ab 18.500 €</li>
+          <li><a href="/anfrage?service=kuechensanierung"><strong>Küchensanierung</strong></a> – ab 6.500 €</li>
+          <li><a href="/anfrage?service=bodensanierung"><strong>Bodensanierung</strong></a> – ab 65 €/m²</li>
+          <li><a href="/anfrage?service=elektrosanierung"><strong>Elektrosanierung</strong></a> – ab 150 €/m²</li>
+          <li><a href="/anfrage?service=heizungssanierung"><strong>Heizungssanierung</strong></a> – ab 12.000 €</li>
+        </ul>
+        <p>Alle Preise netto zzgl. MwSt., ca.-Angaben. Verbindlicher Festpreis nach kostenloser Besichtigung.</p>
+        
+        <h2>Detailseiten nach Sanierungstyp</h2>
+        <ul>
+          <li><a href="/badsanierung">Badsanierung – Ablauf, Dauer und Kosten</a></li>
+          <li><a href="/wohnungssanierung">Wohnungssanierung – Planung und Festpreis</a></li>
+          <li><a href="/haussanierung">Haussanierung – Einfamilienhaus komplett sanieren</a></li>
+          <li><a href="/kernsanierung">Kernsanierung – Altbau entkernen und neu aufbauen</a></li>
         </ul>
         
-        <h3>Landingpages nach Sanierungstyp</h3>
+        <h2>Über 089-Sanierer</h2>
+        <p>Seit 2019 in München. Wir koordinieren bis zu 22 Gewerke – Elektrik, Sanitär, Trockenbau, Fliesenarbeiten, Malerarbeiten und mehr. Ein Ansprechpartner steuert Ihr gesamtes Projekt.</p>
         <ul>
-          <li><a href="/badsanierung">Badsanierung München ab 18.500 €</a></li>
-          <li><a href="/wohnungssanierung">Wohnungssanierung München ab 800 €/m²</a></li>
-          <li><a href="/haussanierung">Haussanierung München ab 1.200 €/m²</a></li>
-          <li><a href="/kernsanierung">Kernsanierung München – Altbau komplett entkernen</a></li>
+          <li>150+ abgeschlossene Projekte</li>
+          <li>4,9 von 5 Sternen (Google-Bewertungen)</li>
+          <li>98 % Weiterempfehlung</li>
+          <li>Festpreis vor Baubeginn</li>
+          <li>5 Jahre Gewährleistung</li>
+          <li>Kostenlose Erstberatung innerhalb von 24 Stunden</li>
         </ul>
         
-        <h2>Handwerkerservice München – Warum 089-Sanierer?</h2>
-        <p>Als Generalunternehmer Sanierung koordinieren wir alle Gewerke und bieten Renovierung aus einer Hand. Unsere erfahrenen Handwerker München garantieren höchste Qualität bei jeder Sanierung.</p>
-        <ul>
-          <li>268+ erfolgreich abgeschlossene Projekte</li>
-          <li>4,9 von 5 Sternen Kundenbewertung</li>
-          <li>98 % Weiterempfehlungsrate</li>
-          <li>Festpreisgarantie - keine versteckten Kosten</li>
-          <li>5 Jahre Gewährleistung auf alle Arbeiten</li>
-          <li>Persönlicher Bauleiter für jedes Projekt</li>
-          <li>Kostenlose Beratung innerhalb von 24 Stunden</li>
-        </ul>
-        
-        <h2>Innenausbau Firma München – Servicegebiet</h2>
-        <p>Als Innenausbau Firma München sind wir in ganz München und dem Großraum für Renovierungen München und Sanierungen tätig:</p>
+        <h2>Servicegebiet</h2>
+        <p>München und Umland – alle Stadtteile und angrenzende Gemeinden:</p>
         <h3>München Stadtteile</h3>
         <ul>
           <li><a href="/muenchen-schwabing">Sanierung Schwabing</a></li>
@@ -286,25 +284,21 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
           <li><a href="/gruenwald">Sanierung Grünwald</a></li>
         </ul>
         
-        <h2>Ratgeber, Kosten & Termine</h2>
+        <h2>Weitere Informationen</h2>
         <ul>
-          <li><a href="/faq-preise">FAQ & Preise Sanierung München 2026</a></li>
-          <li><a href="/faq-preise">Sanierungskosten München – Preise & Kalkulation</a></li>
-          <li><a href="/rechner">Sanierungskosten-Rechner München</a></li>
-          <li><a href="/ratgeber">Sanierung Ratgeber – Tipps & Kosten 2026</a></li>
-          <li><a href="/termin">Kostenlose Beratung – Termin buchen</a></li>
-          <li><a href="/gewerke">Gewerke-Übersicht – Alle Handwerksleistungen</a></li>
-          <li><a href="/kontakt">Kontakt & Anfahrt</a></li>
-          <li><a href="/barrierefreiheit">Barrierefreiheitserklärung</a></li>
+          <li><a href="/faq-preise">FAQ und Preisübersicht</a></li>
+          <li><a href="/rechner">Sanierungskosten-Rechner</a></li>
+          <li><a href="/ratgeber">Ratgeber: Sanierung planen</a></li>
+          <li><a href="/termin">Beratungstermin vereinbaren</a></li>
+          <li><a href="/gewerke">Gewerke-Übersicht</a></li>
+          <li><a href="/kontakt">Kontakt und Anfahrt</a></li>
         </ul>
         
         <h2>Kontakt</h2>
-        <p>089-Sanierer – Ihre Sanierungsfirma München für Komplettsanierungen Haus & Wohnung</p>
-        <p>Hardenbergstr. 4, 80992 München</p>
+        <p>089-Sanierer | Hardenbergstr. 4, 80992 München</p>
         <p>Telefon: <a href="tel:+4989444438872">+49 89 444 438 872</a></p>
         <p>E-Mail: <a href="mailto:info@089-sanierer.de">info@089-sanierer.de</a></p>
-        <p>Öffnungszeiten: Mo-Fr 08:00-16:30 Uhr</p>
-        <p><a href="/kontakt">Kontaktseite</a> | <a href="/anfrage">Sanierungsanfrage stellen</a></p>
+        <p>Mo–Fr 08:00–16:30 Uhr</p>
       </section>
     `;
   } else if (path === "/anfrage" && serviceInfo) {

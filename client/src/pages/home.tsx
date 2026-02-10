@@ -26,16 +26,16 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 const homeHeroContent: HeroContent = {
   backgroundImage: heroImage,
   mobileImageSrc: "/images/mobile/haus_wohnung_sanierung_hero.webp",
-  imageAlt: "Haus und Wohnung sanieren München – Vorher-Nachher Komplettsanierung mit Festpreisgarantie",
-  badge: "Über 150 erfolgreich realisierte Projekte in München",
-  titleLine1: "Sanierung München – Komplettsanierung, Renovierung & Modernisierung.",
-  titleLine2: "Bis zu 22 Gewerke. Ein Ansprechpartner. Festpreis.",
-  descriptions: ["Professionelle Komplettsanierung aus einer Hand.", "Sie entspannen – wir koordinieren."],
-  strongText: "Volle Festpreisgarantie ohne versteckte Nachforderungen.",
-  subText: "Für anspruchsvolle Immobilienbesitzer in München und Umgebung.",
-  ctaText: "Komplettsanierung anfragen",
+  imageAlt: "Komplettsanierung einer Altbauwohnung in München – fertig saniertes Wohnzimmer mit neuem Parkett und Malerarbeiten",
+  badge: "Seit 2019 in München – über 150 abgeschlossene Projekte",
+  titleLine1: "Komplettsanierung in München.",
+  titleLine2: "Alle Gewerke. Ein Ansprechpartner.",
+  descriptions: ["Wir koordinieren Handwerker, Materialien und Termine – Sie haben Ruhe."],
+  strongText: "Verbindlicher Festpreis vor Baubeginn.",
+  subText: "Für Wohnungen, Häuser und Gewerbe in München und Umgebung.",
+  ctaText: "Kostenlose Beratung anfragen",
   ctaLink: "/anfrage?service=komplettsanierung",
-  checkmarks: ["98% Weiterempfehlung", "5 Jahre Gewährleistung", "Meisterbetriebe"],
+  checkmarks: ["Meisterbetriebe", "5 Jahre Gewährleistung", "Festpreis"],
   dataTestIdPrefix: "hero"
 };
 const bathroomImg = "/images/badsanierung_muenchen_2026.webp";
@@ -161,23 +161,23 @@ const allServices = [
 const painPoints = [
   { 
     icon: XCircle, 
-    title: "Endlose Suche nach Handwerkern",
-    description: "Sie rufen an, niemand meldet sich zurück. Wochen vergehen. Die Frustration wächst."
+    title: "Handwerker finden",
+    description: "Viele Betriebe sind ausgelastet oder melden sich nicht zurück. Die Suche kostet Zeit."
   },
   { 
     icon: Euro, 
-    title: "Angst vor Kostenexplosion",
-    description: "Ihr Budget wird gesprengt. Nachforderungen kommen. Das Projekt wird zum finanziellen Albtraum."
+    title: "Kosten im Griff behalten",
+    description: "Ohne klares Angebot entstehen schnell unerwartete Nachträge. Ein Festpreis schafft Sicherheit."
   },
   { 
     icon: AlertTriangle, 
-    title: "Chaos ohne Ende",
-    description: "Handwerker kommen nicht, Material fehlt, keiner koordiniert. Ihr Leben steht still."
+    title: "Gewerke koordinieren",
+    description: "Elektriker, Fliesenleger, Sanitär – wer aufeinander warten muss, verliert Zeit."
   },
   { 
     icon: Timer, 
-    title: "Monate statt Wochen",
-    description: "Die Sanierung zieht sich. Kein Ende in Sicht. Sie fragen sich: War das richtig?"
+    title: "Termintreue sicherstellen",
+    description: "Ohne zentrale Steuerung ziehen sich Projekte oft länger als geplant."
   },
 ];
 
@@ -232,9 +232,9 @@ const transformations = [
 ];
 
 const stats = [
-  { value: "150+", label: "erfolgreich realisierte Projekte", icon: Award },
-  { value: "98%", label: "Weiterempfehlungsquote", icon: ThumbsUp },
-  { value: "100%", label: "Festpreisgarantie", icon: BadgeCheck },
+  { value: "150+", label: "abgeschlossene Projekte", icon: Award },
+  { value: "98%", label: "Weiterempfehlung", icon: ThumbsUp },
+  { value: "22", label: "Gewerke aus einer Hand", icon: Wrench },
   { value: "5 Jahre", label: "Gewährleistung", icon: Shield },
 ];
 
@@ -806,7 +806,7 @@ export default function Home() {
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-base sm:text-xl lg:text-2xl font-bold text-center mb-4">
-              Warum Münchner uns als Sanierungsfirma vertrauen
+              089-Sanierer auf einen Blick
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
@@ -826,13 +826,13 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div>
                 <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-4">
-                  Sanierungen in München – Ihr Generalunternehmer für alle Gewerke
+                  So funktioniert Ihre Sanierung mit uns
                 </h2>
                 <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                  Sie planen eine Sanierung oder Renovierung in München? Als erfahrene Sanierungsfirma koordinieren wir sämtliche Handwerkerleistungen aus einer Hand – von der ersten Beratung bis zur schlüsselfertigen Übergabe. Ob Wohnung, Einfamilienhaus oder Gewerbeobjekt: Bei uns erhalten Sie alles von einem Ansprechpartner, zum garantierten Festpreis.
+                  Sie planen eine Sanierung oder Renovierung? Wir übernehmen die komplette Koordination – von der Beratung bis zur schlüsselfertigen Übergabe. Ob Wohnung, Einfamilienhaus oder Gewerbe: Ein Ansprechpartner, ein Festpreis, alle Gewerke.
                 </p>
                 <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                  Als Generalunternehmer für Sanierungen übernehmen wir die komplette Planung und Ausführung Ihrer Renovierungsarbeiten. Unser Netzwerk aus zertifizierten Meisterbetrieben deckt bis zu 22 verschiedene Gewerke ab – von Elektrik und Sanitär über Trockenbau bis hin zu Malerarbeiten und Bodenverlegung. Das bedeutet für Sie: kein Stress mit einzelnen Handwerkern, keine Terminprobleme, keine Überraschungen bei der Rechnung.
+                  Unser Netzwerk aus Meisterbetrieben deckt 22 Gewerke ab: Elektrik, Sanitär, Trockenbau, Malerarbeiten, Bodenverlegung und mehr. Sie müssen sich um nichts kümmern – wir regeln Termine, Material und Ausführung.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mt-6">
                   <div className="flex items-start gap-2">
@@ -856,10 +856,10 @@ export default function Home() {
 
               <div>
                 <h3 className="text-base sm:text-lg font-bold mb-3">
-                  Unsere Leistungen als Handwerkerservice in München
+                  Unsere Leistungen im Überblick
                 </h3>
                 <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                  Ob kleine Badsanierung oder umfangreiche Kernsanierung – wir sind Ihre Renovierungsfirma in München für jedes Projekt. Unsere Kunden schätzen besonders, dass sie sich um nichts kümmern müssen: Wir koordinieren alle Handwerker, beschaffen das Material und sorgen für einen reibungslosen Ablauf.
+                  Von der Badsanierung bis zur Kernsanierung – wir koordinieren alle Arbeiten, beschaffen Material und sorgen für reibungslose Abläufe.
                 </p>
                 <div className="space-y-3">
                   <Link href="/kernsanierung">
@@ -923,10 +923,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Sanierungsarbeiten planen – Kennen Sie das Gefühl?
+                Typische Herausforderungen bei Sanierungen
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                <span className="text-accent font-semibold">Renovierungsarbeiten</span> planen, aber nur an Probleme denken? Viele Münchner kennen das.
+                Diese Punkte beschäftigen unsere Kunden am häufigsten – und genau dafür haben wir Lösungen.
               </p>
             </div>
             
@@ -946,14 +946,12 @@ export default function Home() {
               ))}
             </div>
 
-            {/* NLP: Problem-Solver CTA after Pain Points */}
             <div className="mt-8 bg-gradient-to-r from-primary to-primary/80 rounded-xl p-6 lg:p-8 text-center">
               <h3 className="text-base sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Das muss nicht so sein. Wir sind Ihr Handwerkerservice in München.
+                Wir übernehmen die Koordination für Sie.
               </h3>
               <p className="text-white/90 mb-4 max-w-xl mx-auto">
-                Seit 20 Jahren lösen wir genau diese Probleme für Münchner Familien – als Ihre Innenausbau-Firma. 
-                <strong> Jeden Tag. Zuverlässig. Zum Festpreis.</strong>
+                Ein Ansprechpartner, ein Festpreis, alle Gewerke – so läuft Ihre Sanierung ohne Stress.
               </p>
               <Button 
                 size="lg" 
@@ -961,7 +959,7 @@ export default function Home() {
                 className="bg-white text-primary hover:bg-white/90 font-semibold text-xs sm:text-sm"
                 data-testid="button-pain-points-cta"
               >
-                Jetzt Lösung anfragen - kostenlos
+                Kostenlose Beratung anfragen
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -977,11 +975,10 @@ export default function Home() {
                 <span>Ihre Fragen - Unsere Antworten</span>
               </div>
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold mb-3">
-                Das fragen uns Kunden bei Sanierungen in München am häufigsten
+                Häufige Fragen unserer Kunden
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Wir verstehen Ihre Bedenken. Hier sind die ehrlichen Antworten auf die Fragen, 
-                die Sie sich bei <span className="text-accent font-medium">Renovierungen in München</span> und <span className="text-accent font-medium">Sanierungen München</span> stellen.
+                Ehrliche Antworten auf die wichtigsten Fragen rund um Ihre Sanierung.
               </p>
             </div>
 
@@ -1013,12 +1010,6 @@ export default function Home() {
                             <p className="text-sm text-muted-foreground">{item.solution}</p>
                           </div>
                         </div>
-                        
-                        <div className="mt-3">
-                          <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
-                            <strong>{item.keyword}</strong>
-                          </span>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -1026,28 +1017,27 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center mt-8 bg-green-500/10 rounded-xl p-6 border border-green-500/20">
+            <div className="text-center mt-8 bg-primary/5 rounded-xl p-6 border border-primary/10">
               <p className="text-base sm:text-lg font-semibold text-foreground mb-2">
-                Genug gelesen? Handeln Sie jetzt.
+                Noch Fragen? Wir beraten Sie gerne.
               </p>
               <p className="text-muted-foreground mb-4 max-w-lg mx-auto">
-                Jede Woche, die Sie warten, kostet Sie Zeit und Nerven. Wir lösen Ihr Problem - 
-                <strong className="text-foreground"> heute noch.</strong>
+                In einem kurzen Gespräch klären wir, wie wir Ihr Projekt umsetzen können.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button 
                   size="lg" 
                   onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full sm:w-auto min-h-12 bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base"
+                  className="w-full sm:w-auto min-h-12 text-sm sm:text-base"
                   data-testid="button-faq-cta"
                 >
-                  Ja, ich will mein Problem lösen
+                  Beratung anfragen
                   <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                 </Button>
                 <a href="tel:+498944438872" className="w-full sm:w-auto">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto min-h-12 text-sm sm:text-base" data-testid="button-faq-phone">
                     <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
-                    089 444438872
+                    089 444 438 872
                   </Button>
                 </a>
               </div>
@@ -1064,10 +1054,10 @@ export default function Home() {
                 <span>Die Lösung</span>
               </div>
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Renovierung aus einer Hand – So fühlt sich <span className="text-accent">Sanierung</span> wirklich an
+                Unser <span className="text-accent">Arbeitsweise</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                Als Ihre Renovierungsfirma in München koordinieren wir alle Gewerke – Ihre Sanierung wird zum entspannten Erlebnis.
+                Was Sie von der Zusammenarbeit mit uns erwarten können.
               </p>
             </div>
             
@@ -1083,18 +1073,14 @@ export default function Home() {
               ))}
             </div>
 
-            {/* NLP: Urgency CTA after Transformation */}
             <div className="mt-8 text-center">
-              <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                So könnte Ihre Sanierung auch aussehen. Der erste Schritt?
-              </p>
               <Button 
                 size="lg" 
                 onClick={() => document.getElementById('anfrage-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-accent hover:bg-accent/90 min-h-12 px-8 sm:px-10 text-sm sm:text-base"
+                className="min-h-12 px-8 sm:px-10 text-sm sm:text-base"
                 data-testid="button-transformation-cta"
               >
-                Jetzt Ihr Problem schildern
+                Projekt besprechen
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -1154,10 +1140,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Sanierung aus einer Hand – Ihr Weg zum <span className="text-accent">Traumzuhause</span>
+                Ablauf Ihrer <span className="text-accent">Sanierung</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                In 4 einfachen Schritten von der Idee zur fertigen Sanierung. Als Generalunternehmer für Sanierung koordinieren wir alles.
+                In 4 Schritten von der Anfrage bis zur Fertigstellung.
               </p>
             </div>
             
@@ -1229,10 +1215,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
-                Unsere <span className="text-accent">Leistungen</span> – Innenausbau & Sanierungsarbeiten
+                Unsere <span className="text-accent">Leistungen</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                Von der kleinen Badrenovierung bis zur kompletten Haussanierung. Handwerker München für alle Renovierungsarbeiten.
+                Von der Badsanierung bis zur Komplettsanierung – alle Details auf den jeweiligen Leistungsseiten.
               </p>
             </div>
             
