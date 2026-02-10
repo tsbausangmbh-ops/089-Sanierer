@@ -801,10 +801,6 @@ export default function Home() {
 
         {/* Hero Section - Clean & Professional */}
         <GlobalHero content={homeHeroContent} scrollToElement={scrollToForm} />
-        <div className="max-w-7xl mx-auto px-6 pt-3 pb-0">
-          <p className="text-xs text-muted-foreground text-right" data-testid="text-last-updated">
-          </p>
-        </div>
 
         {/* Stats Section */}
         <section className="py-4 lg:py-5 bg-primary text-primary-foreground">
@@ -1101,6 +1097,51 @@ export default function Home() {
                 Jetzt Ihr Problem schildern
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Partnernetzwerk Section */}
+        <section className="py-6 lg:py-8 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                <Handshake className="w-4 h-4" />
+                <span>Starke Partner</span>
+              </div>
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-4">
+                Unser <span className="text-accent">Partnernetzwerk</span> in München
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
+                Wir arbeiten mit geprüften Fachbetrieben aus Sanitär, Heizung, Klima und Elektro zusammen – für effiziente Abläufe aus einer Hand.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { name: "089-Sanierer", desc: "Innenausbau & Komplettsanierung", url: "https://089-sanierer.de" },
+                { name: "KSHW München", desc: "Innenausbau & Komplettsanierung", url: "https://kshw-muenchen.de" },
+                { name: "089Dach GmbH", desc: "Dachdecker- & Spenglerarbeiten", url: "https://089dach.de" },
+                { name: "Extrucon GmbH", desc: "Webdesign & Digitalagentur", url: "https://extrucon.de" },
+                { name: "Sanitär München", desc: "Sanitär & Badinstallation", url: "https://xn--sanitr-mnchen-dlb.de" },
+                { name: "Aquapro24", desc: "Sanitär, Heizung & Klima", url: "https://aquapro24.de" },
+              ].map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                  data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  <Card className="p-4 h-full text-center hover-elevate">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Building className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="font-bold text-sm mb-1">{partner.name}</h3>
+                    <p className="text-xs text-muted-foreground">{partner.desc}</p>
+                  </Card>
+                </a>
+              ))}
             </div>
           </div>
         </section>
