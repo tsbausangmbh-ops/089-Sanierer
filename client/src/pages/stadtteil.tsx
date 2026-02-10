@@ -650,34 +650,6 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
           </div>
         </section>
 
-        <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-6">
-              Sanierung in {data.name} – Ihr lokaler Experte
-            </h2>
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="mb-4">
-                Als erfahrener Sanierungsbetrieb kennen wir {data.name} und die besonderen Anforderungen der lokalen Bausubstanz. 
-                {data.beschreibung} Ob Renovierung, Modernisierung oder Kernsanierung – wir koordinieren alle Gewerke und 
-                sorgen für eine reibungslose Umsetzung Ihres Projekts.
-              </p>
-              <p className="mb-4">
-                Unsere Leistungen in {data.name} umfassen Badsanierung, Küchensanierung, Bodensanierung, Elektrosanierung 
-                sowie energetische Maßnahmen wie Dämmung und Heizungserneuerung. Als Generalunternehmer übernehmen wir die 
-                komplette Projektsteuerung – von der Planung bis zur Schlüsselübergabe.
-              </p>
-              <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">Warum 089-Sanierer in {data.name}?</h3>
-              <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Lokale Expertise: Wir kennen die Bauvorschriften und Genehmigungsverfahren in München</li>
-                <li>Festpreisgarantie: Keine versteckten Kosten, keine Nachforderungen</li>
-                <li>Meisterbetriebe: Alle Arbeiten werden von zertifizierten Fachbetrieben ausgeführt</li>
-                <li>Persönlicher Bauleiter: Ein Ansprechpartner für Ihr gesamtes Projekt</li>
-                <li>5 Jahre Gewährleistung: Langfristige Sicherheit für Ihre Investition</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
         <section className="py-4 lg:py-6 bg-background">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
@@ -696,56 +668,6 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-6">
-              Unsere Leistungen im Detail
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-lg mb-3">Wohnungssanierung</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Komplette Wohnungssanierung in {data.name} ab 800€/m². Wir renovieren Ihre Wohnung vom Boden bis zur Decke – 
-                  inklusive Elektrik, Sanitär und Malerarbeiten.
-                </p>
-                <Link href="/wohnungssanierung" className="text-primary hover:underline text-sm">
-                  Mehr zur Wohnungssanierung →
-                </Link>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-3">Badsanierung</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Moderne Badsanierung in {data.name} ab 18.500€. Neue Fliesen, Sanitärobjekte und Armaturen – 
-                  wir gestalten Ihr Traumbad.
-                </p>
-                <Link href="/badsanierung" className="text-primary hover:underline text-sm">
-                  Mehr zur Badsanierung →
-                </Link>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-3">Kernsanierung</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Kernsanierung für Altbauten in {data.name}. Wir erneuern Elektrik, Sanitär, Heizung und Böden – 
-                  für ein rundum modernisiertes Zuhause.
-                </p>
-                <Link href="/kernsanierung" className="text-primary hover:underline text-sm">
-                  Mehr zur Kernsanierung →
-                </Link>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-3">Energetische Sanierung</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Senken Sie Ihre Energiekosten durch Dämmung, neue Fenster und moderne Heizungstechnik. 
-                  Wir beraten Sie zu Fördermöglichkeiten.
-                </p>
-                <Link href="/energetische-sanierung" className="text-primary hover:underline text-sm">
-                  Mehr zur energetischen Sanierung →
-                </Link>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -772,98 +694,6 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
               <Link href="/faq-preise" className="text-primary hover:underline">
                 FAQ & Preise ansehen →
               </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Sanierung in {data.name} – Lokale Besonderheiten
-            </h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Jeder Münchner Stadtteil hat seine eigenen baulichen Besonderheiten. In {data.name} kennen wir die typischen Gebäudestrukturen und wissen, worauf es bei der Sanierung ankommt.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-2">Altbaubestand und typische Sanierungsbedarfe</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Mit einem Altbauanteil von {data.altbauAnteil} weist {data.name} einen für München typischen Gebäudebestand auf. Häufige Sanierungsbedarfe sind die Erneuerung der Elektrik, die Modernisierung von Bädern und Küchen sowie die Verbesserung der Wärmedämmung. Gerade bei älteren Gebäuden ist eine gründliche Voruntersuchung auf Schadstoffe wie Asbest oder Bleileitungen unerlässlich.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Baugenehmigungen und lokale Vorschriften</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Für reine Innenraumsanierungen ist in {data.name} in der Regel keine Baugenehmigung erforderlich. Bei Eingriffen in tragende Wände, Fassadenänderungen oder Dachausbauten muss jedoch eine Genehmigung beim Baureferat der Stadt München eingeholt werden. In denkmalgeschützten Gebäuden gelten besondere Auflagen, die wir für Sie prüfen und berücksichtigen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Beliebte Sanierungsleistungen in {data.name}
-            </h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Die Nachfrage nach Sanierungsleistungen in {data.name} ist vielfältig. Hier sind die am häufigsten angefragten Gewerke und Projekte in Ihrem Viertel.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-2">Badsanierung – Der häufigste Sanierungswunsch</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Die Badsanierung ist in {data.name} die am häufigsten nachgefragte Einzelleistung. Veraltete Badezimmer mit kleinen Fliesen und Badewanne werden durch moderne Walk-In-Duschen, Großformatfliesen und zeitgemäße Sanitärobjekte ersetzt. Barrierefreie Umbauten gewinnen zunehmend an Bedeutung, auch bei jüngeren Eigentümern, die langfristig planen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Küchen- und Wohnraumsanierung</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Neben dem Bad stehen Küchen- und Wohnraumsanierungen in {data.name} hoch im Kurs. Offene Grundrisse, neue Bodenbeläge und moderne Elektroinstallationen verwandeln ältere Wohnungen in zeitgemäße Lebensräume. Wir koordinieren alle Gewerke – von der Elektrik über den Trockenbau bis zu Maler- und Bodenarbeiten – für ein stimmiges Gesamtergebnis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Wertsteigerung durch Sanierung in {data.name}
-            </h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Eine professionelle Sanierung steigert den Wert Ihrer Immobilie nachhaltig. Gerade in einem gefragten Markt wie München zahlt sich die Investition in die Modernisierung Ihrer Immobilie aus.
-            </p>
-            <div>
-              <h3 className="font-semibold mb-2">Immobilienwerte im Münchner Stadtteil</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Die Immobilienpreise in {data.name} gehören zu den höchsten in Deutschland. Eine fachgerechte Sanierung kann den Quadratmeterpreis Ihrer Immobilie um 15 bis 30 Prozent steigern. Besonders wirksam sind energetische Maßnahmen, die eine bessere Energieklasse ermöglichen, sowie die Modernisierung von Bädern und Küchen. Auch für eine spätere Vermietung erhöhen sanierte Wohnungen die erzielbaren Mietpreise deutlich.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">
-              Referenzen und Erfahrungen in {data.name}
-            </h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Vertrauen entsteht durch Erfahrung und Ergebnisse. Wir sind stolz auf unsere zahlreichen erfolgreichen Projekte in {data.name} und der näheren Umgebung.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-2">Unsere Projekte in der Nachbarschaft</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  In {data.name} und den angrenzenden Vierteln haben wir bereits zahlreiche Sanierungsprojekte erfolgreich umgesetzt. Von der kompletten Altbauwohnung über Badsanierungen bis hin zu aufwendigen Kernsanierungen – unsere Referenzen sprechen für sich. Gerne zeigen wir Ihnen vergleichbare Projekte in Ihrer Nachbarschaft.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Kundenstimmen aus dem Stadtteil</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Unsere Kunden in {data.name} schätzen vor allem die persönliche Betreuung, die Termintreue und die handwerkliche Qualität unserer Arbeit. Mit einer Weiterempfehlungsrate von 98 Prozent gehören wir zu den bestbewerteten Sanierungsunternehmen in München. Kurze Anfahrtswege und lokale Kenntnisse sorgen für eine reibungslose Projektabwicklung.
-                </p>
-              </div>
             </div>
           </div>
         </section>

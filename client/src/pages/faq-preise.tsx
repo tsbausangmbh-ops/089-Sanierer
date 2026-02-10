@@ -96,11 +96,6 @@ const faqItems = [
     link: "/anfrage"
   },
   {
-    question: "Arbeiten Ihre Handwerker auch am Wochenende?",
-    answer: "Unsere regulären **Arbeitszeiten** sind **Montag bis Freitag von 7:00 bis 17:00 Uhr**. In Ausnahmefällen und nach Absprache können wir auch **samstags** arbeiten. Lärmintensive Arbeiten führen wir nur zu den gesetzlich erlaubten Zeiten durch.",
-    link: "/kontakt"
-  },
-  {
     question: "Welche Fördermittel gibt es für Sanierungen in München?",
     answer: "Für **energetische Sanierungen** gibt es attraktive **KfW-Förderungen** und **BAFA-Zuschüsse**. Wir beraten Sie zu den Fördermöglichkeiten und unterstützen Sie bei der Antragstellung. So können Sie **bis zu 45% der Kosten sparen**.",
     link: "/anfrage?service=energetische-sanierung"
@@ -109,11 +104,6 @@ const faqItems = [
     question: "Wie schnell können Sie mit der Sanierung in München beginnen?",
     answer: "Nach Auftragserteilung können wir in der Regel **innerhalb von 2-4 Wochen** mit den Arbeiten beginnen. Bei **dringenden Projekten** versuchen wir, schnellere Lösungen zu finden. Die Materialbestellung und Planung benötigt jedoch etwas Vorlaufzeit.",
     link: "/anfrage"
-  },
-  {
-    question: "Vermitteln Sie einzelne Handwerker in München?",
-    answer: "Ja, über unseren **Handwerker-Vermittlungsservice** vermitteln wir auch einzelne **Gewerke** wie **Maler, Elektriker, Fliesenleger oder Sanitärinstallateure**. Alle Partner sind **geprüfte Handwerker aus München** und Umgebung.",
-    link: "/gewerke"
   },
   {
     question: "Brauche ich eine Baugenehmigung für meine Sanierung in München?",
@@ -131,60 +121,9 @@ const faqItems = [
     link: "/kontakt"
   },
   {
-    question: "Sind Ihre Handwerker in München versichert?",
-    answer: "Ja, alle unsere **Handwerker und Partnerunternehmen** sind vollständig versichert. Wir verfügen über eine **Betriebshaftpflichtversicherung** mit einer Deckungssumme von **5 Millionen Euro**.",
-    link: "/gewerke"
-  },
-  {
-    question: "Kann ich eigene Materialien für die Sanierung beistellen?",
-    answer: "Grundsätzlich ja, allerdings übernehmen wir dann **keine Gewährleistung** für diese Materialien. Wir empfehlen, Materialien über uns zu beziehen, da wir **Handwerkerrabatte** weitergeben und die Qualität garantieren können.",
-    link: "/anfrage"
-  },
-  {
-    question: "Wie läuft die Kommunikation während der Bauphase?",
-    answer: "Sie erhalten einen **festen Ansprechpartner**, der Sie regelmäßig über den Fortschritt informiert. Wir sind **telefonisch und per WhatsApp** erreichbar. Auf Wunsch erhalten Sie **wöchentliche Foto-Updates**.",
-    link: "/kontakt"
-  },
-  {
-    question: "Entsorgen Sie auch den Bauschutt bei Sanierungen?",
-    answer: "Ja, die **fachgerechte Entsorgung** von Bauschutt und Altmaterialien ist in unseren Angeboten enthalten. Wir stellen Container und kümmern uns um die **umweltgerechte Entsorgung**.",
-    link: "/anfrage"
-  },
-  {
     question: "In welchen Münchner Stadtteilen arbeiten Sie?",
     answer: "Wir arbeiten in **ganz München** und dem **Münchner Umland**: **Schwabing, Bogenhausen, Sendling, Pasing, Trudering, Haidhausen, Giesing** sowie **Dachau, Starnberg, Freising, Germering** und weitere Gemeinden.",
     link: "/kontakt"
-  },
-  {
-    question: "Wie gehen Sie mit Altbausanierungen in München um?",
-    answer: "**Altbauten** erfordern besondere Sorgfalt. Wir haben **langjährige Erfahrung mit Münchner Altbauten** und kennen die typischen Herausforderungen wie **Holzbalkendecken**, alte Leitungen und **Denkmalschutzauflagen**.",
-    link: "/ratgeber"
-  },
-  {
-    question: "Bieten Sie barrierefreie Sanierungen in München an?",
-    answer: "Ja, wir sind spezialisiert auf **barrierefreie Umbauten nach DIN 18040**. Dazu gehören **bodengleiche Duschen**, verbreiterte Türen, Haltegriffe und rutschfeste Böden. Für solche Maßnahmen gibt es oft **KfW-Förderungen**.",
-    link: "/anfrage?service=badsanierung"
-  },
-  {
-    question: "Können Sie auch Teilsanierungen in München durchführen?",
-    answer: "Selbstverständlich. Ob **Badsanierung**, **Küchenerneuerung** oder nur **neue Böden** – wir führen auch **Teilsanierungen** durch. Die **Mindestauftragssumme** liegt bei **5.000 Euro**.",
-    link: "/anfrage"
-  },
-  {
-    question: "Was ist der Unterschied zwischen Renovierung und Sanierung?",
-    answer: "Eine Renovierung umfasst kosmetische Verbesserungen wie Streichen oder Tapezieren. Eine Sanierung beinhaltet tiefgreifende Maßnahmen wie neue Elektrik, Sanitär, Heizung oder Bausubstanzverbesserungen."
-  },
-  {
-    question: "Wie schützen Sie meine Möbel und Böden während der Arbeiten?",
-    answer: "Wir arbeiten mit professionellen Abdeckungen, Staubschutzwänden und Folien. Empfindliche Bereiche werden sorgfältig geschützt. Bei Komplettsanierungen empfehlen wir, Möbel vorübergehend auszulagern."
-  },
-  {
-    question: "Erstellen Sie auch 3D-Visualisierungen?",
-    answer: "Ja, auf Wunsch erstellen wir 3D-Visualisierungen Ihrer geplanten Sanierung. So können Sie sich vorab ein genaues Bild machen und Änderungen vor Baubeginn vornehmen."
-  },
-  {
-    question: "Wie kann ich den Fortschritt meiner Sanierung verfolgen?",
-    answer: "Sie erhalten regelmäßige Updates per WhatsApp oder E-Mail mit Fotos. Zusätzlich sind Baustellenbesuche nach Absprache jederzeit möglich. Bei größeren Projekten führen wir wöchentliche Baubesprechungen durch."
   }
 ];
 
@@ -611,90 +550,6 @@ export default function FaqPreise() {
               <p className="mt-4 text-sm text-muted-foreground">
                 Kostenlos. Unverbindlich. Antwort in 24 Stunden garantiert.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Preisübersicht – Sanierungskosten in München</h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Die Kosten einer Sanierung in München hängen von vielen Faktoren ab: Zustand der Bausubstanz, gewünschte Ausstattung und Umfang der Arbeiten. Hier finden Sie detaillierte Kostenaufstellungen für die häufigsten Sanierungsleistungen.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-2">Badsanierung Kosten im Detail</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Eine Badsanierung in München umfasst in der Regel den Rückbau alter Fliesen, die Erneuerung von Sanitärleitungen, neue Sanitärobjekte und moderne Fliesen. Bei einem Standard-Bad von 5-6 m² beginnen die Kosten bei rund 16.000 Euro netto. Barrierefreie Umbauten mit bodengleicher Dusche und rutschfesten Fliesen kosten zusätzlich ca. 3.000-5.000 Euro. Hochwertige Badgestaltungen mit Designarmaturen und Großformatfliesen können bis zu 50.000 Euro erreichen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Küchensanierung Kosten im Detail</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Die Küchensanierung umfasst die baulichen Maßnahmen ohne die Küchenmöbel selbst. Dazu gehören neue Elektroleitungen, Wasseranschlüsse, Bodenfliesen und Wandgestaltung. Für eine kleine Küche bis 10 m² rechnen Sie mit Baukosten ab 6.500 Euro netto. Bei größeren Küchen über 15 m² mit aufwendiger Installation können die Kosten auf 22.000 Euro und mehr steigen. Wir empfehlen, die Küchenplanung frühzeitig mit den Bauarbeiten abzustimmen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Zahlungsmodalitäten und Abrechnung</h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Transparenz bei der Abrechnung ist uns besonders wichtig. Sie wissen jederzeit, wofür Sie bezahlen und welche Leistungen in Ihrem Festpreis enthalten sind.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-2">Abschlagszahlungen und Schlussrechnung</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Wir arbeiten mit einem fairen Zahlungsplan: 30 Prozent bei Auftragserteilung, 40 Prozent bei Baubeginn und 30 Prozent nach Fertigstellung und gemeinsamer Abnahme. So haben Sie die finanzielle Kontrolle und wir können Materialien rechtzeitig beschaffen. Die Schlussrechnung wird erst nach Ihrer Abnahme gestellt, sodass Sie sicher sein können, dass alle vereinbarten Leistungen erbracht wurden.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Gewährleistung nach Fertigstellung</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Auf alle ausgeführten Arbeiten erhalten Sie 5 Jahre Gewährleistung – das geht über die gesetzliche Mindestanforderung hinaus. Sollten innerhalb dieser Zeit Mängel auftreten, beheben wir diese schnell und unkompliziert. Die Gewährleistungsfrist beginnt mit dem Tag der Abnahme und wird für jeden Gewerk einzeln dokumentiert.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-accent/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Häufige Missverständnisse bei Sanierungskosten</h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Viele Eigentümer unterschätzen die Komplexität einer Sanierung und tappen in typische Kostenfallen. Hier klären wir die häufigsten Missverständnisse auf.
-            </p>
-            <div>
-              <h3 className="font-semibold mb-2">Warum günstige Angebote teuer werden können</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Ein auffallend niedriger Angebotspreis ist oft ein Warnsignal. Günstige Anbieter sparen häufig bei der Materialqualität, kalkulieren Nebenkosten wie Entsorgung und Anfahrt nicht ein oder setzen auf ungelernte Hilfskräfte. Im Laufe des Projekts kommen dann Nachforderungen hinzu, die den Preis weit über seriöse Angebote treiben. Achten Sie daher immer auf ein detailliertes Leistungsverzeichnis und fragen Sie gezielt nach, welche Leistungen im Preis enthalten sind und welche nicht.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-4 lg:py-6 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung steuerlich absetzen</h2>
-            <p className="text-muted-foreground text-sm sm:text-base mb-6">
-              Sanierungskosten können unter bestimmten Voraussetzungen steuerlich geltend gemacht werden. Das gilt sowohl für selbstgenutzte Immobilien als auch für vermietete Objekte. Nutzen Sie die Steuervergünstigungen, um Ihre Investition in die Immobilie zu optimieren.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-2">Handwerkerleistungen in der Steuererklärung</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Arbeitskosten für Handwerkerleistungen können Sie als Eigentümer einer selbstgenutzten Immobilie steuerlich geltend machen. Bis zu 20 Prozent der Lohnkosten sind absetzbar, maximal 1.200 Euro pro Jahr. Wichtig ist, dass die Rechnung per Überweisung bezahlt wird – Barzahlungen werden vom Finanzamt nicht anerkannt. Materialkosten sind von dieser Regelung ausgenommen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Energetische Sanierung – Steuerbonus nach §35c EStG</h3>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  Für energetische Sanierungsmaßnahmen an selbstgenutztem Wohneigentum gibt es einen attraktiven Steuerbonus. Über drei Jahre verteilt können Sie bis zu 20 Prozent der Kosten direkt von Ihrer Steuerschuld abziehen, maximal 40.000 Euro pro Objekt. Förderfähig sind unter anderem Wärmedämmung, Fenstererneuerung, Heizungsoptimierung und der Einbau digitaler Steuerungssysteme. Voraussetzung ist, dass das Gebäude mindestens zehn Jahre alt ist.
-                </p>
-              </div>
             </div>
           </div>
         </section>

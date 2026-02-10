@@ -172,34 +172,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Das fragen uns Münchner Hausbesitzer am häufigsten</h3>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-medium">Wie lange dauert eine Haussanierung?</p>
-                      <p className="text-muted-foreground">Eine Kernsanierung dauert typischerweise 3-6 Monate, abhängig vom Umfang der Arbeiten.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Lohnt sich die Sanierung eines alten Hauses?</p>
-                      <p className="text-muted-foreground">In München mit hohen Grundstückspreisen lohnt sich die Sanierung oft mehr als Abriss und Neubau. Zudem gibt es KfW-Förderungen bis zu 150.000 EUR.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Was ist bei einer Altbausanierung wichtig?</p>
-                      <p className="text-muted-foreground">Fachgerechte Analyse der Bausubstanz, Schadstoffprüfung und ein realistischer Kostenplan mit Puffer (ca. 20%).</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
-                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-haus-preise">
-                      Alle Sanierungskosten München im Überblick
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-haus-anfrage">
-                      Komplettsanierung in München anfragen
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="fassade" className="scroll-mt-24">
@@ -278,34 +250,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Ihre Fragen zu Fassade und Malerarbeiten</h3>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-medium">Wie finde ich gute Malerarbeiten in meiner Nähe?</p>
-                      <p className="text-muted-foreground">Achten Sie auf erfahrene <strong>Handwerker in München</strong> mit Referenzen aus Ihrer Region. Wir arbeiten mit <strong>geprüften Partnerbetrieben</strong> zusammen.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Wie oft muss man eine Fassade streichen?</p>
-                      <p className="text-muted-foreground">Alle <strong>10-15 Jahre</strong> bei normaler Beanspruchung. Nordseiten und Wetterseiten können früher Auffrischung benötigen.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Wann ist die beste Zeit für Fassadenarbeiten?</p>
-                      <p className="text-muted-foreground"><strong>April bis Oktober</strong> bei trockener Witterung und Temperaturen über 5°C. Keine direkte Sonneneinstrahlung beim Trocknen.</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
-                    <Link href="/gewerke" className="text-primary hover:underline text-sm" data-testid="link-fassade-gewerke">
-                      Maler & Fassadenbauer in München finden
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-fassade-anfrage">
-                      Fassadenarbeiten München anfragen
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="dach" className="scroll-mt-24">
@@ -403,30 +347,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Das wollen Sie über Dachsanierung wissen</h3>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-medium">Wann muss ein Dach saniert werden?</p>
-                      <p className="text-muted-foreground">Bei undichten Stellen, beschädigten Ziegeln, Moos-/Algenbefall oder nach <strong>40-60 Jahren Lebensdauer</strong>.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Gibt es Förderung für Dachsanierung?</p>
-                      <p className="text-muted-foreground">Ja! <strong>BAFA fördert Dachdämmung</strong> mit 15% Zuschuss, bei iSFP sogar <strong>20%</strong>. KfW bietet günstige Kredite.</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
-                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-dach-preise">
-                      Dachsanierung Kosten München im Detail
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=dachsanierung" className="text-primary hover:underline text-sm" data-testid="link-dach-anfrage">
-                      Dachsanierung München anfragen
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="badezimmer" className="scroll-mt-24">
@@ -509,30 +429,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Ihre Fragen zur Badsanierung</h3>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-medium">Wie lange dauert eine Badsanierung?</p>
-                      <p className="text-muted-foreground">Ein Standard-Bad dauert ca. 2-3 Wochen. Größere Umbauten mit Grundrissänderung 3-4 Wochen.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Gibt es Förderung für barrierefreie Bäder?</p>
-                      <p className="text-muted-foreground">Ja! KfW fördert altersgerechte Umbauten mit bis zu 6.250 EUR Zuschuss (Programm 455-B).</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
-                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-bad-preise">
-                      Detaillierte Badsanierung Preise in München
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=badsanierung" className="text-primary hover:underline text-sm" data-testid="link-bad-anfrage">
-                      Jetzt Badsanierung in München anfragen
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="keller" className="scroll-mt-24">
@@ -607,19 +503,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <div className="flex flex-wrap gap-3">
-                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-keller-preise">
-                      Kellersanierung Kosten München
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-keller-anfrage">
-                      Kellersanierung in München anfragen
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="daemmung" className="scroll-mt-24">
@@ -714,30 +597,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">Das wollen Sie über Dämmung wissen</h3>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-medium">Was bringt eine Dachdämmung?</p>
-                      <p className="text-muted-foreground">Bis zu <strong>30% Heizenergie-Ersparnis</strong>. Die Investition amortisiert sich oft in <strong>8-12 Jahren</strong>.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Welche Dämmung ist die beste?</p>
-                      <p className="text-muted-foreground">Die <strong>Aufsparrendämmung</strong> bietet die beste Dämmwirkung, ist aber teurer. <strong>Zwischensparrendämmung</strong> ist ein guter Kompromiss.</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-primary/20 flex flex-wrap gap-3">
-                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-daemmung-preise">
-                      Dämmung Kosten München im Detail
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=energetische-sanierung" className="text-primary hover:underline text-sm" data-testid="link-daemmung-anfrage">
-                      Energetische Sanierung München anfragen
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="wohnung" className="scroll-mt-24">
@@ -823,23 +682,6 @@ export default function Ratgeber() {
                 </Card>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20 mt-8">
-                <CardContent className="pt-6">
-                  <div className="flex flex-wrap gap-3">
-                    <Link href="/faq-preise" className="text-primary hover:underline text-sm" data-testid="link-wohnung-preise">
-                      Wohnungssanierung Kosten München
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/anfrage?service=komplettsanierung" className="text-primary hover:underline text-sm" data-testid="link-wohnung-anfrage">
-                      Wohnungssanierung in München anfragen
-                    </Link>
-                    <span className="text-muted-foreground">|</span>
-                    <Link href="/gewerke" className="text-primary hover:underline text-sm" data-testid="link-wohnung-gewerke">
-                      Handwerker in München finden
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
             <section id="energetisch" className="scroll-mt-24">
@@ -959,114 +801,11 @@ export default function Ratgeber() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold mb-3">So funktioniert die Förderung</h3>
-                  <div className="space-y-4 text-sm">
-                    <div>
-                      <p className="font-medium">Was ist der Unterschied zwischen BAFA und KfW Förderung?</p>
-                      <p className="text-muted-foreground">BAFA bietet Zuschüsse für Einzelmaßnahmen (Heizung, Dämmung, Fenster). KfW bietet günstige Kredite mit Tilgungszuschuss für Komplettsanierungen zum Effizienzhaus.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Brauche ich einen Energieberater?</p>
-                      <p className="text-muted-foreground">Für die meisten Förderungen ja. Der Energieberater erstellt den individuellen Sanierungsfahrplan (iSFP) und Sie erhalten 5% zusätzliche Förderung.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Wie beantrage ich die Förderung?</p>
-                      <p className="text-muted-foreground">BAFA-Anträge werden online gestellt BEVOR die Arbeiten beginnen. Wir unterstützen Sie gerne dabei!</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </section>
 
           </div>
         </div>
       </main>
-
-      <section className="py-4 lg:py-6 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung aus einer Hand richtig planen – Checkliste für Eigentümer</h2>
-          <p className="text-muted-foreground text-sm sm:text-base mb-6">
-            Eine erfolgreiche Sanierung beginnt mit einer gründlichen Planung. Wer vorher die richtigen Fragen stellt und alle relevanten Punkte berücksichtigt, spart am Ende Zeit, Geld und Nerven. Unsere Checkliste hilft Ihnen dabei, Ihre Sanierungsarbeiten in München strukturiert anzugehen – mit Renovierung aus einer Hand.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-2">Bestandsaufnahme und Zustandsbewertung</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Bevor Sie mit der Sanierung beginnen, sollten Sie den aktuellen Zustand Ihrer Immobilie genau dokumentieren. Lassen Sie Bausubstanz, Elektrik, Leitungen und Dämmung von einem Fachmann prüfen. Eine professionelle Bestandsaufnahme deckt versteckte Mängel auf und bildet die Grundlage für eine realistische Kostenschätzung.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Prioritäten setzen – Was muss zuerst saniert werden?</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Nicht alles muss sofort gemacht werden. Sicherheitsrelevante Mängel wie defekte Elektrik oder Feuchtigkeitsschäden haben immer Vorrang. Danach folgen energetische Maßnahmen wie Dämmung und Heizungstausch, die sich langfristig durch Einsparungen amortisieren. Kosmetische Arbeiten wie neue Böden oder Malerarbeiten können oft in einer späteren Phase erfolgen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-accent/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Handwerker München finden – Worauf achten?</h2>
-          <p className="text-muted-foreground text-sm sm:text-base mb-6">
-            Die Wahl des richtigen Handwerkerservice München entscheidet über Qualität, Kosten und Termintreue Ihres Sanierungsprojekts. In München gibt es zahlreiche Anbieter – doch nicht alle halten, was sie versprechen. Hier erfahren Sie, worauf Sie bei Renovierungsarbeiten achten sollten.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-2">Seriöse Handwerker erkennen</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Achten Sie auf eine gültige Handwerkskammer-Eintragung und Meisterqualifikation. Seriöse Betriebe bieten Ihnen Referenzen aus der Region, haben eine transparente Preisgestaltung und schließen verbindliche Verträge ab. Lassen Sie sich Versicherungsnachweise zeigen und prüfen Sie Online-Bewertungen auf unabhängigen Portalen.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Angebote vergleichen – So geht's richtig</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Holen Sie mindestens drei Angebote ein und vergleichen Sie nicht nur den Endpreis. Achten Sie auf den Leistungsumfang, die verwendeten Materialien und ob Nebenkosten wie Entsorgung oder Anfahrt enthalten sind. Ein detailliertes Leistungsverzeichnis ermöglicht einen fairen Vergleich und schützt Sie vor bösen Überraschungen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Sanierung während der Bewohnung – Tipps</h2>
-          <p className="text-muted-foreground text-sm sm:text-base mb-6">
-            Viele Eigentümer möchten während der Sanierung in ihrer Wohnung bleiben. Das ist bei kleineren Maßnahmen oft möglich, erfordert aber eine gute Organisation und klare Absprachen mit dem Handwerksteam.
-          </p>
-          <div>
-            <h3 className="font-semibold mb-2">Baustelleneinrichtung und Staubschutz</h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
-              Professioneller Staubschutz ist unverzichtbar, wenn Sie während der Sanierung in Ihrem Zuhause bleiben. Staubschutzwände aus Folie trennen den Baubereich von den Wohnräumen ab und verhindern die Ausbreitung von Feinstaub. Empfindliche Möbel und Böden sollten mit Abdeckvlies geschützt werden. Planen Sie außerdem feste Arbeitszeiten mit dem Handwerksteam, damit Sie Ihren Alltag weiterführen können.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-accent/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Nachhaltigkeit bei der Sanierung</h2>
-          <p className="text-muted-foreground text-sm sm:text-base mb-6">
-            Nachhaltiges Sanieren schont nicht nur die Umwelt, sondern senkt langfristig auch Ihre Betriebskosten. Immer mehr Eigentümer in München setzen auf ökologische Baustoffe und energieeffiziente Lösungen bei der Modernisierung ihrer Immobilie.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-2">Ökologische Baustoffe und Recycling</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Bei der Wahl der Baustoffe können Sie einen großen Beitrag zur Nachhaltigkeit leisten. Naturmaterialien wie Holzfaserdämmung, Kalkputz oder Lehmfarben bieten eine gesunde Wohnumgebung und sind umweltfreundlich. Alte Materialien wie Holz, Metall und Ziegel können häufig recycelt oder wiederverwendet werden, was die Entsorgungskosten senkt und Ressourcen schont.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Energieeffizienz langfristig steigern</h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
-                Eine gut geplante energetische Sanierung reduziert den Energieverbrauch Ihrer Immobilie um bis zu 70 Prozent. Investieren Sie in hochwertige Dämmung, moderne Fenster mit Dreifachverglasung und eine effiziente Heizungsanlage. Die höheren Anfangsinvestitionen amortisieren sich durch deutlich niedrigere Heizkosten und attraktive staatliche Förderungen wie KfW-Kredite und BAFA-Zuschüsse.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-4 lg:py-6 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

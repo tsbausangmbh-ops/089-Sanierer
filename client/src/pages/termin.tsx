@@ -333,64 +333,6 @@ export default function TerminPage() {
         </div>
       </main>
 
-      <section className="py-4 lg:py-6 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Online-Terminbuchung – Schnell und unkompliziert</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-2">Verfügbare Beratungstermine in München</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">Wir bieten Ihnen flexible Beratungstermine in ganz München und Umgebung an. Unser Team ist in allen Stadtteilen aktiv – von Schwabing über Bogenhausen bis Sendling. In der Regel können wir innerhalb von 3–5 Werktagen einen Vor-Ort-Termin anbieten. Für dringende Anfragen stehen Express-Termine zur Verfügung.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Vor-Ort-Beratung vs. Video-Beratung</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">Für eine erste Einschätzung Ihres Projekts bieten wir auch Video-Beratungen per Videoanruf an. Dabei können Sie uns Ihre Räume per Kamera zeigen und erhalten eine grobe Kosteneinschätzung. Für ein verbindliches Festpreisangebot ist jedoch immer eine Vor-Ort-Besichtigung durch unseren Bauleiter erforderlich, da nur so alle Details erfasst werden können.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-accent/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Was passiert nach der Terminbuchung?</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-2">Vorbereitung auf Ihren Beratungstermin</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">Nach Ihrer Buchung erhalten Sie eine Bestätigungsmail mit allen Details zu Ihrem Termin. Unser Bauleiter bereitet sich individuell auf Ihr Projekt vor und recherchiert vorab relevante Bauvorschriften für Ihre Immobilie. So können wir die Beratungszeit optimal nutzen und Ihnen direkt vor Ort erste Empfehlungen geben.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Unterlagen und Fotos mitbringen</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">Bereiten Sie für den Beratungstermin idealerweise Grundrisspläne, vorhandene Kostenvoranschläge und Fotos vom aktuellen Zustand vor. Bei Eigentumswohnungen ist die Teilungserklärung hilfreich, da sie Aufschluss über Gemeinschaftseigentum gibt. Je mehr Informationen vorliegen, desto schneller können wir Ihnen ein detailliertes Festpreisangebot erstellen.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Beratung für verschiedene Sanierungsprojekte</h2>
-          <div className="max-w-3xl mx-auto">
-            <h3 className="font-semibold mb-2">Erstberatung für Komplettsanierungen</h3>
-            <p className="text-sm sm:text-base text-muted-foreground">Bei Komplettsanierungen nehmen wir uns besonders viel Zeit für die Erstberatung. Gemeinsam besprechen wir den Umfang der Arbeiten, mögliche Grundrissänderungen und energetische Maßnahmen. Unser Bauleiter erstellt ein Leistungsverzeichnis mit allen Gewerken und koordiniert anschließend sämtliche Handwerksbetriebe – Sie haben nur einen Ansprechpartner für das gesamte Projekt.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 lg:py-6 bg-accent/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center mb-8">Flexible Terminoptionen für Berufstätige</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-2">Abend- und Samstagstermine</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">Wir wissen, dass viele unserer Kunden beruflich stark eingebunden sind. Deshalb bieten wir nach Absprache auch Beratungstermine am Abend bis 19:00 Uhr sowie an Samstagen an. So können Sie die Beratung bequem in Ihren Alltag integrieren, ohne dafür Urlaub nehmen zu müssen.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Express-Beratung für dringende Projekte</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">Bei Wasserschäden, Schimmelbefall oder anderen dringenden Sanierungsfällen bieten wir kurzfristige Express-Beratungen an. In der Regel können wir innerhalb von 24–48 Stunden einen Notfalltermin organisieren. Unser Bauleiter begutachtet den Schaden vor Ort und leitet umgehend die notwendigen Sofortmaßnahmen ein.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <SeoFooter />
     </div>
   );
