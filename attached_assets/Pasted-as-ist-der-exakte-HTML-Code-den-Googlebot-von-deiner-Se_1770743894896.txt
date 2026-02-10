@@ -1,0 +1,63 @@
+as ist der exakte HTML-Code, den Googlebot von deiner Seite erhält und verarbeitet (GSC → URL-Prüfung → Gecrawlte Seite anzeigen → HTML). Es ist kein Fehler, sondern die reale Server-Antwort.
+
+Was das für dich bedeutet (wichtig):
+
+Google kann deine Seite vollständig rendern und lesen.
+Der HTML-Body enthält bereits Text, Überschriften, interne Links, CTAs usw. → Indexierung technisch möglich.
+Du hast kein klassisches JS-Rendering-Problem (kein „leeres Root-Div“).
+
+Google sieht deine Seite als SSR / vorgerendert.
+<body class="hydrated">, Content im HTML, Assets nachgeladen → genau das will Google.
+Das ist deutlich besser als reines Client-Side-Rendering.
+
+Warum Seiten evtl. trotzdem nicht ranken / verzögert indexiert werden:
+Nicht wegen HTML – sondern wegen SEO-Signalen. Typische Bremsen, die ich in deinem Code sehe:
+
+Extrem viele Meta-Bots → Google ignoriert 90 % davon, aber es wirkt „manipulativ“ und bringt keinen Vorteil.
+
+Sehr lange, stark verkaufsgetriebene Texte (NLP-lastig) im Above-the-Fold → kann als „commercial intent heavy“ gewertet werden.
+
+Keyword-Dichte extrem hoch („Dachdecker München“ zigfach) → Risiko für algorithmische Dämpfung.
+
+Eine URL = sehr viele Themen (Notdienst, Sanierung, Spenglerei, Dämmung, Bezirke, Umland) → semantische Verwässerung.
+
+Subdomain (dacharbeiten.089dach.de) → schwächer als saubere Hauptdomain-Struktur, wenn nicht sauber verlinkt.
+
+Was Google Search Console damit intern macht:
+
+HTML wird analysiert
+
+Text, Überschriften, interne Links extrahiert
+
+Canonical geprüft
+
+Danach entscheidet Google ob / wann / wie stark indexiert wird
+→ das kann Tage bis Wochen dauern, trotz perfektem HTML.
+
+Konkrete Empfehlungen (priorisiert):
+
+Meta-Bot-Aufräumen (Pflicht)
+Behalte nur:
+
+robots
+
+googlebot
+
+Google-Extended
+Alles andere raus.
+
+Eine Seite = ein Suchintent
+Startseite: Dachdecker München (Brand + Core)
+Notdienst, Spenglerei, Dachsanierung → eigene starke URLs, intern hart verlinkt.
+
+Content entschärfen
+
+Weniger Wiederholungen „Dachdecker München“
+
+Mehr fachliche Signale (Materialien, Normen, Abläufe, Dauer, Preise realistisch)
+
+Interne Autorität stärken
+
+Bezirksseiten → nur verlinken, wenn sie eigene Substanz haben
+
+Kein reines SEO-Footprint-Netz

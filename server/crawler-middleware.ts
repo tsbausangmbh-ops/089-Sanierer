@@ -1987,8 +1987,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta name="description" content="${description}">
   <meta name="keywords" content="${keywords}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="bingbot" content="index, follow">
   <link rel="canonical" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
   <link rel="alternate" hreflang="de" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
   <link rel="alternate" hreflang="x-default" href="${baseURL}${path}${service ? `?service=${service}` : ""}">
