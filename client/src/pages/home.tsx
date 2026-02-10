@@ -1122,7 +1122,7 @@ export default function Home() {
                 { name: "KSHW München", desc: "Innenausbau & Komplettsanierung", url: "https://komplettsanierungen-haus-wohnung.de" },
                 { name: "089Dach GmbH", desc: "Dachdecker- & Spenglerarbeiten", url: "https://089dach.de" },
                 { name: "Extrucon GmbH", desc: "Webdesign & Digitalagentur", url: "https://extrucon.de" },
-                { name: "Sanitär München", desc: "Sanitär & Badinstallation", url: "https://xn--sanitr-mnchen-dlb.de" },
+                { name: "Sanitär München", desc: "Sanitär & Badinstallation", url: "https://sanitär-muenchen.de" },
                 { name: "Aquapro24", desc: "Sanitär, Heizung & Klima", url: "https://aquapro24.de" },
               ].map((partner) => (
                 <a
