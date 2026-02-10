@@ -196,7 +196,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Sanierungen München – Ihre Sanierungsfirma für Komplettsanierungen aus einer Hand</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p><strong>Kurzantwort:</strong> 089-Sanierer ist Münchens Meisterbetrieb für Sanierungsarbeiten und Renovierungsarbeiten. Badsanierung ab 18.500 €, Wohnungssanierung ab 800 €/m², Komplettsanierung ab 1.200 €/m² – alles mit verbindlicher Festpreisgarantie, persönlichem Bauleiter und 5 Jahren Gewährleistung. Als erfahrene Renovierungsfirma München bieten wir Sanierung aus einer Hand: 268+ Projekte, 4,9 Sterne, 98 % Weiterempfehlung.</p>
         
         <h2>Unsere Sanierungsarbeiten und Renovierungsarbeiten</h2>
@@ -315,7 +314,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>${serviceInfo.title}</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p>${serviceInfo.description}</p>
         
         <h2>Preisübersicht</h2>
@@ -353,7 +351,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>FAQ & Preise – Sanierungen München und Renovierungen München</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p><strong>Kurzantwort:</strong> Sanierungskosten für Sanierungsarbeiten in München 2026: Badsanierung ab 18.500 € (6-8 m²), Komplettsanierung ab 1.200 €/m², Küchensanierung ab 6.500 €, Elektro ab 150 €/m². Alle Preise als verbindliche Festpreise bei 089-Sanierer – Ihrer Sanierungsfirma München für Renovierungsarbeiten aus einer Hand, mit 5 Jahren Gewährleistung und persönlichem Bauleiter.</p>
         
         <h2>Preisübersicht Handwerkerservice München (Stand 02/2026, netto zzgl. MwSt.)</h2>
@@ -846,7 +843,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Küchensanierung München – Renovierungsarbeiten ab 6.500€</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p><strong>Kurzantwort:</strong> Küchensanierung in München ab 6.500€ (nur Bauarbeiten, ohne Küchenmöbel). Alle Sanierungsarbeiten aus einer Hand: Elektro, Wasser, Fliesen und Malerarbeiten mit verbindlicher Festpreisgarantie. Als Ihre Renovierungsfirma München und Innenausbau Firma München übernehmen unsere Handwerker München sämtliche Renovierungen München für Ihre Küche.</p>
         
         <h2>Unsere Küchensanierung – Sanierung aus einer Hand</h2>
@@ -894,7 +890,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Bodensanierung München – Sanierungsarbeiten ab 65€/m²</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p><strong>Kurzantwort:</strong> Professionelle Bodensanierung in München ab 65€/m². Parkett, Fliesen, Vinyl und Laminat – alle Renovierungsarbeiten aus einer Hand. Unsere Handwerker München führen Estricharbeiten und Fußbodenheizung nachrüsten fachgerecht durch. Festpreisgarantie von Ihrer Sanierungsfirma München.</p>
         
         <h2>Bodenbeläge im Überblick – Renovierungen München</h2>
@@ -947,7 +942,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Elektrosanierung München – Sanierungsarbeiten ab 150€/m²</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p><strong>Kurzantwort:</strong> VDE-konforme Elektrosanierung in München ab 150€/m². Komplette Erneuerung der Elektrik: Leitungen, Sicherungskasten, Steckdosen und Smart-Home-Vorbereitung. Unsere Handwerker München arbeiten als Meisterbetrieb mit Festpreisgarantie. Als Innenausbau Firma München bieten wir Sanierung aus einer Hand für alle Renovierungsarbeiten.</p>
         
         <h2>Leistungen Elektrosanierung – Handwerkerservice München</h2>
@@ -996,7 +990,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Heizungssanierung München – Sanierungsarbeiten ab 12.000€</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p><strong>Kurzantwort:</strong> Heizungssanierung in München ab 12.000€. Wärmepumpe, Gas-Brennwert oder Pelletheizung mit BAFA- und KfW-Förderung. Als Generalunternehmer Sanierung koordinieren unsere Handwerker München alle Renovierungsarbeiten rund um Ihre Heizung. Sanierung aus einer Hand mit Festpreisgarantie von Ihrer Sanierungsfirma München.</p>
         
         <h2>Heizungssysteme – Renovierungen München im Überblick</h2>
@@ -1047,7 +1040,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
-        <p><small>Stand: Februar 2026</small></p>
 
         <h2>§ 1 Geltungsbereich</h2>
         <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen 089-Sanierer - Komplettsanierungen Haus & Wohnung, Hardenbergstr. 4, 80992 München (nachfolgend „Auftragnehmer") und dem Auftraggeber über Sanierungs-, Renovierungs- und Bauleistungen.</p>
@@ -1102,7 +1094,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Unsere Gewerke - Sanierungsleistungen in München</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p>Wählen Sie die passenden Gewerke für Ihr Sanierungsprojekt. Alle Leistungen aus einer Hand mit Festpreisgarantie und 5 Jahren Gewährleistung.</p>
 
         <h2>Badsanierung</h2>
@@ -1158,7 +1149,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Cookie-Richtlinie</h1>
-        <p><small>Stand: Februar 2026</small></p>
 
         <h2>Was sind Cookies?</h2>
         <p>Cookies sind kleine Textdateien, die beim Besuch unserer Website auf Ihrem Endgerät gespeichert werden. Sie dienen dazu, unsere Website nutzerfreundlicher und sicherer zu gestalten.</p>
@@ -1202,7 +1192,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Erklärung zur Barrierefreiheit</h1>
-        <p><small>Stand: Februar 2026</small></p>
 
         <h2>Unser Anspruch</h2>
         <p>089-Sanierer ist bestrebt, die Website 089-sanierer.de barrierefrei zugänglich zu gestalten. Wir orientieren uns an den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA und den Anforderungen der Barrierefreie-Informationstechnik-Verordnung (BITV 2.0).</p>
@@ -1248,7 +1237,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Termin vereinbaren - Kostenlose Sanierungsberatung</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p>Vereinbaren Sie jetzt Ihren kostenlosen und unverbindlichen Beratungstermin. Wir besichtigen Ihr Objekt vor Ort und erstellen Ihnen ein verbindliches Festpreis-Angebot.</p>
 
         <h2>So funktioniert es</h2>
@@ -1309,7 +1297,6 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Sanierungskosten Rechner München</h1>
-        <p><small>Zuletzt aktualisiert: Februar 2026</small></p>
         <p>Berechnen Sie online die voraussichtlichen Kosten für Ihre Sanierung in München. Unser Rechner liefert Ihnen eine erste Orientierung auf Basis aktueller Marktpreise.</p>
 
         <h2>Preisübersicht (netto zzgl. MwSt., Stand 02/2026)</h2>

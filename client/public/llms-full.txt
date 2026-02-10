@@ -1,7 +1,7 @@
 # 089-Sanierer München - llms-full.txt (Ausführliche Version)
 # Vollständige Informationen für AI-Suchmaschinen
 # https://089-sanierer.de
-# Version: 3.0 | Stand: Februar 2026
+# Version: 3.0
 # Letzte Aktualisierung: 07.02.2026
 # Kurzversion: https://089-sanierer.de/llms.txt
 

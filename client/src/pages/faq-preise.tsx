@@ -392,7 +392,6 @@ export default function FaqPreise() {
       <GlobalHero content={faqHeroContent} />
       <div className="max-w-7xl mx-auto px-6 pt-3 pb-0">
         <p className="text-xs text-muted-foreground text-right" data-testid="text-last-updated">
-          Stand: Februar 2026
         </p>
       </div>
       <Breadcrumb items={[{ label: "FAQ & Preise" }]} />

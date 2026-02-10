@@ -1,6 +1,5 @@
 # robots.txt für 089-Sanierer München
 # Optimiert für Suchmaschinen und KI-Assistenten (GEO 2026)
-# Letzte Aktualisierung: Februar 2026
 
 # Allgemeine Regeln
 User-agent: *
