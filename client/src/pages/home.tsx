@@ -1118,7 +1118,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
-                { name: "089-Sanierer", desc: "Innenausbau & Komplettsanierung", url: "https://089-sanierer.de" },
+                { name: "Estriche München", desc: "Estricharbeiten & Bodensysteme", url: "https://estriche-muenchen.de" },
                 { name: "KSHW München", desc: "Innenausbau & Komplettsanierung", url: "https://komplettsanierungen-haus-wohnung.de" },
                 { name: "089Dach GmbH", desc: "Dachdecker- & Spenglerarbeiten", url: "https://089dach.de" },
                 { name: "Extrucon GmbH", desc: "Webdesign & Digitalagentur", url: "https://extrucon.de" },
