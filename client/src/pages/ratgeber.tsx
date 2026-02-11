@@ -8,7 +8,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const ratgeberHeroImage = "/images/sanierungsberater_experte.webp";
 
 const ratgeberHeroContent: HeroContent = {
@@ -30,10 +30,11 @@ export default function Ratgeber() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SeoHead
-        title="Haussanierung München Kosten 2024 | KfW Förderung 45%"
+        title="Haussanierung München Kosten 2026 | KfW Förderung 45%"
         description="Was kostet Haussanierung München? Kernsanierung ab 400€/m², KfW-Förderung bis 45%, Altbau-Tipps. Erfahrung aus 268+ Projekten. Jetzt informieren!"
         keywords="Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung München, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Badsanierung München, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, KfW Förderung Sanierung, Altbausanierung München"
         canonicalPath="/ratgeber"
+        schema={generatePageGraphSchema({ path: "/ratgeber", name: "Sanierungs-Ratgeber München", description: "Ratgeber für Haussanierung und Renovierung in München mit Kosten und Fördertipps." })}
       />
       <SiteHeader />
       <GlobalHero content={ratgeberHeroContent} />
@@ -54,7 +55,7 @@ export default function Ratgeber() {
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h2 className="text-xl font-bold mb-2">Kostenloser Sanierungs-Ratgeber 2025</h2>
+                  <h2 className="text-xl font-bold mb-2">Kostenloser Sanierungs-Ratgeber 2026</h2>
                   <p className="text-muted-foreground mb-3">
                     32 Seiten Expertenwissen: Kosten, Tipps, Checklisten und Förderungen für Ihre erfolgreiche Sanierung in München.
                   </p>
@@ -66,7 +67,7 @@ export default function Ratgeber() {
                 </div>
                 <div className="flex-shrink-0">
                   <a 
-                    href="/downloads/sanierungs-ratgeber-2025.pdf" 
+                    href="/downloads/sanierungs-ratgeber-2026.pdf" 
                     download
                     data-testid="button-download-ratgeber-pdf"
                   >

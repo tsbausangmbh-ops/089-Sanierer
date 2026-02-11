@@ -388,7 +388,7 @@ function LeadMagnetSection() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <p className="text-muted-foreground">
-                  <strong className="text-foreground">Fördermittel-Guide 2025</strong>: Bis zu 70% Zuschüsse sichern
+                  <strong className="text-foreground">Fördermittel-Guide 2026</strong>: Bis zu 70% Zuschüsse sichern
                 </p>
               </div>
             </div>

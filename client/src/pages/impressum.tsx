@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const impressumHeroImage = "/images/rechtliche_dokumente_impressum.webp";
 
 const impressumHeroContent: HeroContent = {
@@ -29,6 +29,7 @@ export default function Impressum() {
         description="Impressum und Kontaktdaten von KSHW München. Verantwortlich: Mustafa Sakar & Ali Kemal Kurt. Telefon: 089 444438872. Komplettsanierung Haus & Wohnung."
         keywords="Impressum Sanierungsfirma München, Komplettsanierung München Kontakt, Renovierungsfirma Bayern Impressum, Handwerker München Rechtliches, Baufirma München Angaben, Sanierung München Anbieter"
         canonicalPath="/impressum"
+        schema={generatePageGraphSchema({ path: "/impressum", name: "Impressum – 089-Sanierer München", description: "Impressum und Kontaktdaten von KSHW München." })}
       />
       <SiteHeader />
       <GlobalHero content={impressumHeroContent} />

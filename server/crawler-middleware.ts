@@ -553,7 +553,7 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
     mainContent = `
       <section>
         <h1>Sanierungsarbeiten München – Ratgeber für faire Preise bei Sanierungen München</h1>
-        <p>Alle Preisangaben auf dieser Seite sind unverbindliche Richtwerte. Als Ihre Sanierungsfirma München bieten wir transparente Kosten für alle Renovierungsarbeiten und Sanierungsarbeiten. Stand: Dezember 2025, Preise netto zzgl. 19% MwSt.</p>
+        <p>Alle Preisangaben auf dieser Seite sind unverbindliche Richtwerte. Als Ihre Sanierungsfirma München bieten wir transparente Kosten für alle Renovierungsarbeiten und Sanierungsarbeiten. Stand: Februar 2026, Preise netto zzgl. 19% MwSt.</p>
         
         <h2>Was kostet eine Haussanierung in München?</h2>
         <p>Eine Haussanierung in München kostet je nach Umfang und Zustand:</p>
@@ -1696,12 +1696,15 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   };
 
   const websiteData = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${baseURL}/#website`,
     "name": "089-Sanierer - Sanierung München",
     "alternateName": "089 Sanierer",
     "url": baseURL,
     "inLanguage": "de-DE",
+    "publisher": {
+      "@id": `${baseURL}/#organization`
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
@@ -1710,6 +1713,18 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
       },
       "query-input": "required name=search_term_string"
     }
+  };
+
+  const webPageData = {
+    "@type": "WebPage",
+    "@id": `${baseURL}${path}#webpage`,
+    "url": `${baseURL}${path}`,
+    "name": title.split(" | ")[0],
+    "description": description,
+    "isPartOf": { "@id": `${baseURL}/#website` },
+    "about": { "@id": `${baseURL}/#organization` },
+    "inLanguage": "de-DE",
+    "dateModified": "2026-02-11"
   };
 
   // FAQPage schema for /faq-preise (only page with visible FAQ content per Google guidelines)
@@ -2015,14 +2030,20 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
   <meta name="geo.position" content="48.1351;11.5820">
   <meta name="ICBM" content="48.1351, 11.5820">
   
-  <!-- Structured Data -->
-  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
-  <script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>
-  <script type="application/ld+json">${JSON.stringify(websiteData)}</script>
-  ${faqSchema ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", ...faqSchema })}</script>` : ''}
-  ${serviceSchema ? `<script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>` : ''}
-  ${pageSpecificFaqSchema ? `<script type="application/ld+json">${JSON.stringify(pageSpecificFaqSchema)}</script>` : ''}
-  ${howToSchema ? `<script type="application/ld+json">${JSON.stringify(howToSchema)}</script>` : ''}
+  <!-- Structured Data (@graph) -->
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      (() => { const { "@context": _, ...rest } = structuredData; return rest; })(),
+      websiteData,
+      webPageData,
+      (() => { const { "@context": _, ...rest } = breadcrumbData; return rest; })(),
+      ...(faqSchema ? [faqSchema] : []),
+      ...(serviceSchema ? [(() => { const { "@context": _, ...rest } = serviceSchema; return rest; })()] : []),
+      ...(pageSpecificFaqSchema ? [(() => { const { "@context": _, ...rest } = pageSpecificFaqSchema; return rest; })()] : []),
+      ...(howToSchema ? [(() => { const { "@context": _, ...rest } = howToSchema; return rest; })()] : [])
+    ]
+  })}</script>
 </head>
 <body>
   <header>

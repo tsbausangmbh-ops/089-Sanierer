@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Phone, CalendarDays, PhoneCall, User, Mail, MessageSquare, MapPin, Loader2, CheckCircle, Clock } from "lucide-react";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import { AppointmentBooking } from "@/components/appointment-booking";
 import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
@@ -288,6 +288,7 @@ export default function TerminPage() {
         description="Sanierung München: Jetzt kostenlosen Beratungstermin buchen oder Rückruf anfordern. Experte kommt zu Ihnen, Festpreis-Angebot in 48h. Online-Terminbuchung Mo-Fr 8:00-16:30 Uhr."
         keywords="Sanierung München Termin, Beratung Renovierung München, Handwerker Termin buchen, Sanierung Besichtigung kostenlos, Rückruf Sanierung München, Badsanierung München Termin online buchen, Komplettsanierung Beratungstermin München, kostenlose Besichtigung Sanierung München, Handwerker München Termin vereinbaren, Renovierung München Vor-Ort-Termin, Sanierung München Kalender online, 089-Sanierer Terminbuchung, Sanierung München 24h Rückmeldung"
         canonicalPath="/termin"
+        schema={generatePageGraphSchema({ path: "/termin", name: "Termin buchen – Sanierung München", description: "Kostenlosen Beratungstermin für Sanierung in München buchen." })}
       />
       <SiteHeader />
       <GlobalHero content={terminHeroContent} />

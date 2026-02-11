@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const datenschutzHeroImage = "/images/datenschutz_sicherheit.webp";
 
 const datenschutzHeroContent: HeroContent = {
@@ -29,6 +29,7 @@ export default function Datenschutz() {
         description="Datenschutzerklärung: So schützen wir Ihre Daten. DSGVO-konform, Ihre Rechte, Cookies und Datenverarbeitung bei Sanierungsanfragen erklärt."
         keywords="Datenschutz Sanierung München, DSGVO Renovierungsfirma, Datenschutzerklärung Handwerker, Privatsphäre Baufirma Bayern, Komplettsanierung Datenschutz, DSGVO konform Bauunternehmen"
         canonicalPath="/datenschutz"
+        schema={generatePageGraphSchema({ path: "/datenschutz", name: "Datenschutzerklärung – 089-Sanierer", description: "DSGVO-konforme Datenschutzerklärung für Sanierungsanfragen." })}
       />
       <SiteHeader />
       <GlobalHero content={datenschutzHeroContent} />

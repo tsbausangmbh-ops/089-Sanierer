@@ -19,7 +19,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const contactHeroImage = "/images/kundenservice_kontakt.webp";
 
 const kontaktHeroContent: HeroContent = {
@@ -109,6 +109,7 @@ export default function Kontakt() {
         description="Sanierung München anfragen: Kostenlose Beratung, Antwort in 24h, Festpreis-Angebot. Tel: 089 444438872. Jetzt unverbindlich Projekt besprechen!"
         keywords="Sanierung München Anfrage, Handwerker München kontaktieren, Renovierung Angebot München, Sanierung Beratung kostenlos, Badsanierung München Termin vereinbaren, Komplettsanierung Anfrage stellen München, Handwerker München schnell verfügbar, Renovierung München kostenlose Besichtigung, Sanierung Angebot einholen München, Altbausanierung München Beratung buchen, Elektrosanierung München Angebot anfordern, Heizungssanierung München Kontakt aufnehmen, Sanierung München Rückruf Service"
         canonicalPath="/kontakt"
+        schema={generatePageGraphSchema({ path: "/kontakt", name: "Kontakt – Sanierung München anfragen", description: "Kostenlose Beratung für Sanierung in München. Antwort in 24h, Festpreis-Angebot." })}
       />
       <SiteHeader />
 

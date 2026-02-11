@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import {
   Accordion,
   AccordionContent,
@@ -122,14 +122,10 @@ export default function Kernsanierung() {
         title="Kernsanierung München ab 1.200€/m² | Altbau entkernen & neu aufbauen"
         description="Kernsanierung München: Komplettsanierung bis auf den Rohbau ab 1.200€/m². Neue Elektrik, Sanitär, Heizung. Festpreisgarantie, 5 Jahre Gewährleistung."
         canonicalPath="/kernsanierung"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Kernsanierung München",
-          "provider": {"@id": "https://089-sanierer.de/#organization"},
-          "areaServed": "München",
-          "description": "Professionelle Kernsanierung in München"
-        }}
+        schema={generatePageGraphSchema(
+          { path: "/kernsanierung", name: "Kernsanierung München", description: "Professionelle Kernsanierung in München – Rückbau und Neuaufbau." },
+          [{ "@type": "Service", "serviceType": "Kernsanierung München", "name": "Kernsanierung München", "description": "Professionelle Kernsanierung in München – Rückbau und Neuaufbau", "provider": {"@id": "https://089-sanierer.de/#organization"}, "areaServed": {"@type": "City", "name": "München", "addressCountry": "DE"} }]
+        )}
         preloadImage={kernImg}
       />
       <SiteHeader />

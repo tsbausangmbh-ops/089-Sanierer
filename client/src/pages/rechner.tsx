@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import {
   Building,
   Home as HomeIcon,
@@ -457,6 +457,7 @@ export default function RechnerPage() {
       <SeoHead 
         title="Sanierungskosten Rechner München | Online Kosten berechnen 2026"
         description="Berechnen Sie die Kosten für Ihre Wohnungs- oder Haussanierung in München. Unverbindlicher Online-Rechner für Komplettsanierung, Badsanierung und mehr."
+        schema={generatePageGraphSchema({ path: "/rechner", name: "Sanierungskosten Rechner München", description: "Online Kostenrechner für Sanierung in München." })}
       />
       <SiteHeader />
 

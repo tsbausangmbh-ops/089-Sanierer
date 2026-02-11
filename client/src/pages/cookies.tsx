@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const cookiesHeroImage = "/images/webseite_cookie_einstellungen.webp";
 
 const cookiesHeroContent: HeroContent = {
@@ -32,6 +32,7 @@ export default function Cookies() {
         description="Cookie-Richtlinie für 089-sanierer.de. Erfahren Sie, welche Cookies wir verwenden und wie Sie Ihre Einstellungen anpassen können. DSGVO & TDDDG konform."
         keywords="Cookie Richtlinie Sanierung, Cookies Renovierungsfirma München, TDDDG Handwerker Website, Tracking Baufirma Bayern, Cookie Einstellungen Bauunternehmen"
         canonicalPath="/cookies"
+        schema={generatePageGraphSchema({ path: "/cookies", name: "Cookie-Richtlinie – 089-Sanierer", description: "Cookie-Richtlinie für 089-sanierer.de, DSGVO & TDDDG konform." })}
       />
       <SiteHeader />
       <GlobalHero content={cookiesHeroContent} />

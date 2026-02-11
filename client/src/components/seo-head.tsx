@@ -323,6 +323,7 @@ export function generateWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://089-sanierer.de/#website",
     "name": "089-Sanierer",
     "url": "https://089-sanierer.de",
     "description": "Komplettsanierungen in München - Badsanierung, Wohnungssanierung, Haussanierung mit Festpreisgarantie",
@@ -339,9 +340,22 @@ export function generateWebsiteSchema() {
 }
 
 export function generateCombinedSchema(additionalSchemas: object[] = []) {
+  const webPageSchema = {
+    "@type": "WebPage",
+    "@id": "https://089-sanierer.de/#webpage",
+    "url": "https://089-sanierer.de",
+    "name": "089-Sanierer – Komplettsanierungen in München",
+    "isPartOf": { "@id": "https://089-sanierer.de/#website" },
+    "about": { "@id": "https://089-sanierer.de/#organization" },
+    "inLanguage": "de-DE",
+    "datePublished": "2019-01-01",
+    "dateModified": "2026-02-11"
+  };
+
   const schemas = [
     generateLocalBusinessSchema(),
     generateWebsiteSchema(),
+    webPageSchema,
     ...additionalSchemas
   ];
   
@@ -354,6 +368,43 @@ export function generateCombinedSchema(additionalSchemas: object[] = []) {
   };
 }
 
+export function generatePageGraphSchema(page: {
+  path: string;
+  name: string;
+  description: string;
+  dateModified?: string;
+}, additionalSchemas: object[] = []) {
+  const pageUrl = `https://089-sanierer.de${page.path}`;
+  const webPageSchema = {
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    "url": pageUrl,
+    "name": page.name,
+    "description": page.description,
+    "isPartOf": { "@id": "https://089-sanierer.de/#website" },
+    "about": { "@id": "https://089-sanierer.de/#organization" },
+    "inLanguage": "de-DE",
+    "dateModified": page.dateModified || "2026-02-11"
+  };
+
+  const websiteRef = generateWebsiteSchema();
+  const { "@context": _ws, ...websiteRest } = websiteRef as Record<string, unknown>;
+
+  const schemas = [
+    websiteRest,
+    webPageSchema,
+    ...additionalSchemas.map(s => {
+      const { "@context": _, ...rest } = s as Record<string, unknown>;
+      return rest;
+    })
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": schemas
+  };
+}
+
 export function generateServicePageSchema(service: {
   name: string;
   description: string;
@@ -362,7 +413,6 @@ export function generateServicePageSchema(service: {
   image?: string;
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": service.name,
     "name": service.name,

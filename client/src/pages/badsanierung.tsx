@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import {
   Accordion,
   AccordionContent,
@@ -93,14 +93,10 @@ export default function Badsanierung() {
         title="Badsanierung München ab 18.500€ | Komplettbad mit Festpreisgarantie 2026"
         description="Badsanierung München: Komplettbad ab 18.500€ inkl. Fliesen, Sanitär & Elektro. Bodengleiche Dusche, barrierefrei möglich. In 2-3 Wochen fertig."
         canonicalPath="/badsanierung"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Badsanierung München",
-          "provider": {"@id": "https://089-sanierer.de/#organization"},
-          "areaServed": "München",
-          "description": "Professionelle Badsanierung in München ab 18.500€"
-        }}
+        schema={generatePageGraphSchema(
+          { path: "/badsanierung", name: "Badsanierung München ab 18.500€", description: "Professionelle Badsanierung in München ab 18.500€ inkl. Fliesen, Sanitär & Elektro." },
+          [{ "@type": "Service", "serviceType": "Badsanierung München", "name": "Badsanierung München", "description": "Professionelle Badsanierung in München ab 18.500€", "provider": {"@id": "https://089-sanierer.de/#organization"}, "areaServed": {"@type": "City", "name": "München", "addressCountry": "DE"} }]
+        )}
         preloadImage={bathroomImg}
       />
       <SiteHeader />

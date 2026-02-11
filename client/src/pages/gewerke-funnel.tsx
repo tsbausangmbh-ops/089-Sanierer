@@ -15,7 +15,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const gewerkeHeroImage = "/images/fachhandwerker_meisterbetriebe.webp";
 
 const gewerkeHeroContent: HeroContent = {
@@ -349,6 +349,7 @@ export default function GewerkeFunnel() {
         description="Handwerker München finden: Maler, Elektriker, Sanitär, Fliesenleger, Schreiner. Geprüfte Fachbetriebe, kostenlose Vermittlung, Angebot in 48h."
         keywords="Handwerker München gesucht, Maler München günstig, Elektriker München schnell, Sanitär München Notdienst, Fliesenleger München Empfehlung, Schreiner München finden, Trockenbauer München Angebot, Parkettleger München Kosten, Dachdecker München zuverlässig, Handwerker München kostenlos vermittelt, Maler München Wohnung streichen Kosten, Elektriker München Altbau Sanierung, Sanitär München Bad renovieren, Fliesenleger München Bad Preise, Handwerker München geprüft empfohlen"
         canonicalPath="/gewerke"
+        schema={generatePageGraphSchema({ path: "/gewerke", name: "Handwerker München finden", description: "Geprüfte Handwerker in München: Maler, Elektriker, Sanitär, Fliesenleger." })}
       />
       <SiteHeader />
       <GlobalHero content={gewerkeHeroContent} />
@@ -787,7 +788,7 @@ export default function GewerkeFunnel() {
                     ))}
                   </RadioGroup>
                   <p className="text-xs text-muted-foreground mt-4 text-center">
-                    * Preise basieren auf durchschnittlichen Münchner Handwerkerpreisen (Stand 2024/2025)
+                    * Preise basieren auf durchschnittlichen Münchner Handwerkerpreisen (Stand 2026)
                   </p>
                 </CardContent>
               </Card>

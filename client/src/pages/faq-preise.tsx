@@ -14,7 +14,7 @@ import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const pricingHeroImage = "/images/sanierung_preiskalkulation.webp";
 
 const faqHeroContent: HeroContent = {
@@ -72,7 +72,7 @@ const faqItems = [
   },
   {
     question: "Was kostet eine Badsanierung in München?",
-    answer: "Eine **Badsanierung in München** kostet je nach Größe und Ausstattung zwischen **8.000 € und 50.000 €** (netto zzgl. MwSt., Stand 12/2025). Ein **Gäste-WC (3-4m²)** liegt bei etwa **8.000-12.000 €**, ein **Standard-Bad (5-6m²)** bei **16.000-22.000 €**, ein **Komfort-Bad** bei **22.000-32.000 €**. Barrierefreie Umbauten kosten ca. **+3.000-5.000 €** extra. Wir erstellen Ihnen ein individuelles Angebot.",
+    answer: "Eine **Badsanierung in München** kostet je nach Größe und Ausstattung zwischen **8.000 € und 50.000 €** (netto zzgl. MwSt., Stand 02/2026). Ein **Gäste-WC (3-4m²)** liegt bei etwa **8.000-12.000 €**, ein **Standard-Bad (5-6m²)** bei **16.000-22.000 €**, ein **Komfort-Bad** bei **22.000-32.000 €**. Barrierefreie Umbauten kosten ca. **+3.000-5.000 €** extra. Wir erstellen Ihnen ein individuelles Angebot.",
     link: "/anfrage?service=badsanierung"
   },
   {
@@ -132,7 +132,7 @@ const priceRanges = [
     service: "Komplettsanierung",
     icon: HomeIcon,
     priceRange: "1.000 - 2.300 €/m²",
-    description: "Je nach Zustand und Ausstattungswünschen (Stand 12/2025, netto zzgl. MwSt., Angabe ohne Gewähr)",
+    description: "Je nach Zustand und Ausstattungswünschen (Stand 02/2026, netto zzgl. MwSt., Angabe ohne Gewähr)",
     examples: [
       "Standard: 1.000-1.300 €/m²",
       "Gehoben: 1.300-1.700 €/m²",
@@ -143,7 +143,7 @@ const priceRanges = [
     service: "Badsanierung",
     icon: Bath,
     priceRange: "8.000 - 50.000 €",
-    description: "Abhängig von Größe und Ausstattung (Stand 12/2025, netto zzgl. MwSt., Angabe ohne Gewähr)",
+    description: "Abhängig von Größe und Ausstattung (Stand 02/2026, netto zzgl. MwSt., Angabe ohne Gewähr)",
     examples: [
       "Gäste-WC (3-4m²): ab 8.000 €",
       "Standard-Bad (5-6m²): ab 16.000 €",
@@ -155,7 +155,7 @@ const priceRanges = [
     service: "Küchensanierung",
     icon: UtensilsCrossed,
     priceRange: "6.500 - 22.000 €",
-    description: "Nur Bauarbeiten OHNE Küchenmöbel (Stand 12/2025, netto zzgl. MwSt., Angabe ohne Gewähr)",
+    description: "Nur Bauarbeiten OHNE Küchenmöbel (Stand 02/2026, netto zzgl. MwSt., Angabe ohne Gewähr)",
     examples: [
       "Kleine Küche (bis 10m²): ab 6.500 €",
       "Mittlere Küche (10-15m²): ab 10.000 €",
@@ -166,7 +166,7 @@ const priceRanges = [
     service: "Bodensanierung",
     icon: Layers,
     priceRange: "65 - 200 €/m²",
-    description: "Material und Verlegung (Stand 12/2025, netto zzgl. MwSt., Angabe ohne Gewähr)",
+    description: "Material und Verlegung (Stand 02/2026, netto zzgl. MwSt., Angabe ohne Gewähr)",
     examples: [
       "Laminat/Vinyl: 65-100 €/m²",
       "Fliesen: 100-160 €/m²",
@@ -177,7 +177,7 @@ const priceRanges = [
     service: "Elektrosanierung",
     icon: Zap,
     priceRange: "85 - 300 €/m²",
-    description: "Kompletterneuerung der Elektrik (Stand 12/2025, netto zzgl. MwSt., Angabe ohne Gewähr)",
+    description: "Kompletterneuerung der Elektrik (Stand 02/2026, netto zzgl. MwSt., Angabe ohne Gewähr)",
     examples: [
       "Teilsanierung: 85-130 €/m²",
       "Komplettsanierung Altbau: 130-200 €/m²",
@@ -188,7 +188,7 @@ const priceRanges = [
     service: "Heizungssanierung",
     icon: Flame,
     priceRange: "12.000 - 65.000 €",
-    description: "Neue Heizungsanlage inkl. Einbau (Stand 12/2025, netto zzgl. MwSt., Angabe ohne Gewähr)",
+    description: "Neue Heizungsanlage inkl. Einbau (Stand 02/2026, netto zzgl. MwSt., Angabe ohne Gewähr)",
     examples: [
       "Gasheizung Brennwert: ab 12.000 €",
       "Wärmepumpe Luft-Wasser: ab 35.000 €",
@@ -202,7 +202,7 @@ const tradePrices = [
     trade: "Maler & Lackierer",
     icon: PaintBucket,
     hourlyRate: "65 - 90 €/Std.",
-    description: "Malerarbeiten in München (Stand 12/2025, netto zzgl. MwSt.)",
+    description: "Malerarbeiten in München (Stand 02/2026, netto zzgl. MwSt.)",
     examples: [
       "Wände streichen (pro m²): 15 - 25 €",
       "Decken streichen (pro m²): 18 - 28 €",
@@ -216,7 +216,7 @@ const tradePrices = [
     trade: "Elektriker",
     icon: Plug,
     hourlyRate: "80 - 110 €/Std.",
-    description: "Elektroinstallation in München (Stand 12/2025, netto zzgl. MwSt.)",
+    description: "Elektroinstallation in München (Stand 02/2026, netto zzgl. MwSt.)",
     examples: [
       "Steckdose setzen: 100 - 150 €",
       "Lichtschalter installieren: 80 - 130 €",
@@ -230,7 +230,7 @@ const tradePrices = [
     trade: "Sanitär & Klempner",
     icon: Droplets,
     hourlyRate: "85 - 115 €/Std.",
-    description: "Sanitärinstallation in München (Stand 12/2025, netto zzgl. MwSt.)",
+    description: "Sanitärinstallation in München (Stand 02/2026, netto zzgl. MwSt.)",
     examples: [
       "Wasserhahn montieren: 100 - 180 €",
       "WC austauschen: 300 - 550 €",
@@ -244,7 +244,7 @@ const tradePrices = [
     trade: "Heizungsbauer",
     icon: Thermometer,
     hourlyRate: "85 - 120 €/Std.",
-    description: "Heizungsinstallation in München (Stand 12/2025, netto zzgl. MwSt.)",
+    description: "Heizungsinstallation in München (Stand 02/2026, netto zzgl. MwSt.)",
     examples: [
       "Heizkörper austauschen: 300 - 600 €",
       "Thermostat wechseln: 100 - 180 €",
@@ -258,7 +258,7 @@ const tradePrices = [
     trade: "Fliesenleger",
     icon: Layers,
     hourlyRate: "70 - 95 €/Std.",
-    description: "Fliesenarbeiten in München (Stand 12/2025, netto zzgl. MwSt.)",
+    description: "Fliesenarbeiten in München (Stand 02/2026, netto zzgl. MwSt.)",
     examples: [
       "Bodenfliesen verlegen (pro m²): 60 - 90 €",
       "Wandfliesen verlegen (pro m²): 65 - 100 €",
@@ -272,7 +272,7 @@ const tradePrices = [
     trade: "Schreiner & Tischler",
     icon: Wrench,
     hourlyRate: "75 - 105 €/Std.",
-    description: "Schreinerarbeiten in München (Stand 12/2025, netto zzgl. MwSt.)",
+    description: "Schreinerarbeiten in München (Stand 02/2026, netto zzgl. MwSt.)",
     examples: [
       "Zimmertür einbauen: 300 - 550 €",
       "Einbauschrank (pro lfm): 1.000 - 1.800 €",
@@ -320,10 +320,11 @@ export default function FaqPreise() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SeoHead
-        title="Sanierung München Preisliste 2024 | Badsanierung ab 8.000€"
+        title="Sanierung München Preisliste 2026 | Badsanierung ab 8.000€"
         description="Sanierung München Preise: Badsanierung ab 8.000€, Komplettsanierung ab 800€/m², Küche ab 5.000€. Transparente Preisliste, alle FAQ beantwortet."
         keywords="Sanierung München Kosten, Sanierungen München, Renovierung München, Renovierungen, Handwerker München, Handwerker, Generalunternehmer München, Generalunternehmer, Badsanierung München, Badsanierungen sofort, Wohnungssanierung, Wohnungssanierungen, Wohnungsrenovierung München, Haussanierung München, Haussanierungen, Haus sanieren lassen, Sanierung aus einer Hand, renovierung aus einer Hand, Innenausbau, Kosten, Angebote, Komplettsanierung Preis München, Altbausanierung München"
         canonicalPath="/faq-preise"
+        schema={generatePageGraphSchema({ path: "/faq-preise", name: "FAQ & Preise – Sanierung München", description: "Sanierung München Preise und häufige Fragen transparent beantwortet." })}
         preloadImage={pricingHeroImage}
       />
       <SiteHeader />

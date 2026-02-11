@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import {
   Accordion,
   AccordionContent,
@@ -94,14 +94,10 @@ export default function Haussanierung() {
         title="Haussanierung München ab 1.200€/m² | Komplettsanierung mit Festpreisgarantie"
         description="Haussanierung München: Komplettsanierung ab 1.200€/m² mit Festpreisgarantie. Kernsanierung, Altbausanierung, energetische Sanierung. Alle Gewerke aus einer Hand."
         canonicalPath="/haussanierung"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Haussanierung München",
-          "provider": {"@id": "https://089-sanierer.de/#organization"},
-          "areaServed": "München",
-          "description": "Professionelle Haussanierung in München"
-        }}
+        schema={generatePageGraphSchema(
+          { path: "/haussanierung", name: "Haussanierung München", description: "Komplette Haussanierung in München für Ein- und Mehrfamilienhäuser." },
+          [{ "@type": "Service", "serviceType": "Haussanierung München", "name": "Haussanierung München", "description": "Komplette Haussanierung in München für Ein- und Mehrfamilienhäuser", "provider": {"@id": "https://089-sanierer.de/#organization"}, "areaServed": {"@type": "City", "name": "München", "addressCountry": "DE"} }]
+        )}
         preloadImage={hausImg}
       />
       <SiteHeader />

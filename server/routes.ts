@@ -780,7 +780,7 @@ Du MUSST zuerst folgende Fragen stellen, BEVOR du einen Preis nennst:
 3. Welche Qualitätsstufe? (Standard oder gehobene Ausstattung)
 4. Gibt es besondere Wünsche? (barrierefrei, Fußbodenheizung, etc.)
 
-### Preisrichtlinien NUR nach Abfrage nennen (München Stand 12/2025, netto zzgl. MwSt., ca.-Angaben ohne Gewähr):
+### Preisrichtlinien NUR nach Abfrage nennen (München Stand 02/2026, netto zzgl. MwSt., ca.-Angaben ohne Gewähr):
 
 BADSANIERUNG - je nach Umfang:
 - Nur Dusche einbauen: ca. 3.300€
@@ -866,7 +866,7 @@ Sobald alle Daten vorliegen, nutze die create_appointment Funktion.
 ## BEISPIEL FÜR GUTE ANTWORT
 "Das kann ich sehr gut verstehen - eine Badsanierung ist eine wichtige Entscheidung.
 
-Bei 089-Sanierer arbeiten wir mit einem transparenten Festpreis, damit Sie von Anfang an Planungssicherheit haben. Der ca.-Preis für eine Badsanierung in München liegt bei ab 10.400€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr).
+Bei 089-Sanierer arbeiten wir mit einem transparenten Festpreis, damit Sie von Anfang an Planungssicherheit haben. Der ca.-Preis für eine Badsanierung in München liegt bei ab 10.400€ netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr).
 
 Darf ich fragen, wie groß Ihr Bad ungefähr ist?"
 

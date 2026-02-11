@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import {
   Accordion,
   AccordionContent,
@@ -92,14 +92,10 @@ export default function Wohnungssanierung() {
         title="Wohnungssanierung München ab 800€/m² | Komplett sanieren mit Festpreis"
         description="Wohnungssanierung München: Komplettsanierung ab 800€/m² mit Festpreisgarantie. Alle Gewerke aus einer Hand. Für Eigentümer und Vermieter."
         canonicalPath="/wohnungssanierung"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Wohnungssanierung München",
-          "provider": {"@id": "https://089-sanierer.de/#organization"},
-          "areaServed": "München",
-          "description": "Professionelle Wohnungssanierung in München"
-        }}
+        schema={generatePageGraphSchema(
+          { path: "/wohnungssanierung", name: "Wohnungssanierung München", description: "Komplette Wohnungssanierung in München aus einer Hand." },
+          [{ "@type": "Service", "serviceType": "Wohnungssanierung München", "name": "Wohnungssanierung München", "description": "Komplette Wohnungssanierung in München aus einer Hand", "provider": {"@id": "https://089-sanierer.de/#organization"}, "areaServed": {"@type": "City", "name": "München", "addressCountry": "DE"} }]
+        )}
         preloadImage={wohnungImg}
       />
       <SiteHeader />

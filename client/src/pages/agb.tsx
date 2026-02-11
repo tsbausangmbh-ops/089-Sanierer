@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
 import { SeoFooter } from "@/components/seo-footer";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 const agbHeroImage = "/images/geschaeftsvertrag_agb.webp";
 
 const agbHeroContent: HeroContent = {
@@ -29,6 +29,7 @@ export default function AGB() {
         description="Allgemeine Geschäftsbedingungen für Sanierungsleistungen. Bauvertragsrecht, Verbraucherschutz, Gewährleistung. KSHW München."
         keywords="AGB Sanierung München, Allgemeine Geschäftsbedingungen Renovierung, Bauvertrag München, Sanierungsvertrag AGB, Handwerker AGB Bayern, Komplettsanierung Vertragsbedingungen"
         canonicalPath="/agb"
+        schema={generatePageGraphSchema({ path: "/agb", name: "AGB – 089-Sanierer München", description: "Allgemeine Geschäftsbedingungen für Sanierungsleistungen." })}
       />
       <SiteHeader />
       <GlobalHero content={agbHeroContent} />

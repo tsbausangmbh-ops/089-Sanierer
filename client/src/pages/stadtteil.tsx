@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SeoFooter } from "@/components/seo-footer";
 import { InternalLinks, linkSets } from "@/components/internal-links";
-import { SeoHead } from "@/components/seo-head";
+import { SeoHead, generatePageGraphSchema } from "@/components/seo-head";
 import {
   Accordion,
   AccordionContent,
@@ -527,17 +527,10 @@ function StadtteilContent({ stadtteil }: StadtteilPageProps) {
         title={`Sanierung ${data.name} München | Festpreis | 089-Sanierer`}
         description={`Sanierung in ${data.name}: Badsanierung, Komplettsanierung, Kernsanierung zum Festpreis. Lokaler Anbieter mit 5 Jahren Gewährleistung. Kostenlose Beratung.`}
         canonicalPath={`/muenchen-${data.slug}`}
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": `Sanierung ${data.name} München`,
-          "provider": {"@id": "https://089-sanierer.de/#organization"},
-          "areaServed": {
-            "@type": "City",
-            "name": `München ${data.name}`
-          },
-          "description": `Professionelle Sanierungsleistungen in München ${data.name}`
-        }}
+        schema={generatePageGraphSchema(
+          { path: `/muenchen-${data.slug}`, name: `Sanierung ${data.name} München`, description: `Professionelle Sanierungsleistungen in München ${data.name}` },
+          [{ "@type": "Service", "serviceType": `Sanierung ${data.name} München`, "name": `Sanierung ${data.name} München`, "description": `Professionelle Sanierungsleistungen in München ${data.name}`, "provider": {"@id": "https://089-sanierer.de/#organization"}, "areaServed": {"@type": "City", "name": `München ${data.name}`, "addressCountry": "DE"} }]
+        )}
         preloadImage={stadtteilImg}
       />
       <SiteHeader />

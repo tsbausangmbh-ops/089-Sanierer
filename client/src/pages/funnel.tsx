@@ -51,7 +51,7 @@ import { InternalLinks, linkSets } from "@/components/internal-links";
 import { SeoFooter } from "@/components/seo-footer";
 import { highlightKeywords, serviceKeywords } from "@/lib/highlight";
 import { GlobalHero, HeroContent } from "@/components/global-hero";
-import { SeoHead, generateServiceSchema } from "@/components/seo-head";
+import { SeoHead, generateServiceSchema, generatePageGraphSchema } from "@/components/seo-head";
 import { LazyImage } from "@/components/lazy-image";
 const consultationHeroImage = "/images/sanierungsberatung_gespraech.webp";
 const komplettsanierungHeroImage = "/images/komplettsanierung_vorher_nachher.webp";
@@ -356,7 +356,7 @@ const serviceSeoContent: Record<string, {
   komplettsanierung: {
     headline: "Komplettsanierung München | Haus & Wohnung renovieren lassen",
     subheadline: "Schlüsselfertige Sanierung aus einer Hand – Festpreis, Termingarantie, 5 Jahre Gewährleistung",
-    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei uns erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 1.000€/m² (netto zzgl. MwSt., Stand 12/2025) und einer Fertigstellungsgarantie. Über 268 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
+    intro: "Was kostet eine Komplettsanierung in München? Wie lange dauert eine Kernsanierung? Wer koordiniert die Handwerker? Bei uns erhalten Sie Antworten und eine professionelle Komplettlösung. Wir sanieren Häuser und Wohnungen in München schlüsselfertig – mit einem festen Ansprechpartner, transparenten Festpreisen ab 1.000€/m² (netto zzgl. MwSt., Stand 02/2026) und einer Fertigstellungsgarantie. Über 268 zufriedene Kunden in München vertrauen auf unsere Meisterqualität.",
     problems: [
       "Handwerkersuche in München: Wochenlange Wartezeiten und unzuverlässige Termine",
       "Kostenexplosion: Angebote ohne Festpreis führen zu 30-50% Mehrkosten",
@@ -381,7 +381,7 @@ const serviceSeoContent: Record<string, {
     geoText: "089-Sanierer – Ihr Sanierungspartner vor Ort. Wir sanieren in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Au, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Obermenzing, Allach, Moosach, Milbertshofen, Freimann, Trudering, Riem, Berg am Laim, Ramersdorf, Perlach, Neuperlach, Solln, Obersendling, Thalkirchen, Fürstenried, Forstenried, Großhadern und Hadern. Ebenso im Münchner Umland: Landkreis München, Dachau, Karlsfeld, Germering, Fürstenfeldbruck, Freising, Starnberg, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald, Pullach, Gräfelfing und Planegg.",
     ctaText: "Jetzt Sanierungsproblem lösen",
     faq: [
-      { question: "Was kostet eine Komplettsanierung in München pro m²?", answer: "Eine Komplettsanierung in München kostet ca. 1.000-2.300€/m² (netto zzgl. MwSt., Stand 12/2025), abhängig von Zustand, Ausstattungswunsch und Umfang der Arbeiten." },
+      { question: "Was kostet eine Komplettsanierung in München pro m²?", answer: "Eine Komplettsanierung in München kostet ca. 1.000-2.300€/m² (netto zzgl. MwSt., Stand 02/2026), abhängig von Zustand, Ausstattungswunsch und Umfang der Arbeiten." },
       { question: "Wie lange dauert eine Komplettsanierung?", answer: "Eine Komplettsanierung einer 80m² Wohnung dauert ca. 6-8 Wochen, ein Einfamilienhaus 10-16 Wochen – abhängig vom Sanierungsumfang." },
       { question: "Kann ich während der Sanierung in der Wohnung bleiben?", answer: "Ja, wir bieten Sanierung bei bewohnter Immobilie an – mit Staubschutz, Lärmschutzzeiten und täglicher Reinigung." }
     ],
@@ -390,7 +390,7 @@ const serviceSeoContent: Record<string, {
   badsanierung: {
     headline: "Badsanierung München | Bad renovieren & neu gestalten lassen",
     subheadline: "Komplette Badrenovierung in 10-15 Werktagen – Festpreis ab 8.000€, alle Gewerke inklusive",
-    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei uns erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 50.000€ für Wellness-Bad (netto zzgl. MwSt., Stand 12/2025). Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 80+ Bäder in München erfolgreich saniert.",
+    intro: "Was kostet eine Badsanierung in München? Wie lange dauert eine komplette Badrenovierung? Welcher Handwerker macht alles? Bei uns erhalten Sie ein komplett neues Badezimmer aus einer Hand – Fliesenleger, Sanitär, Elektriker und Maler perfekt koordiniert. Badsanierung München ab 8.000€ für Gäste-WC bis 50.000€ für Wellness-Bad (netto zzgl. MwSt., Stand 02/2026). Festpreisgarantie, 14-21 Tage Bauzeit, 5 Jahre Gewährleistung. Bereits 80+ Bäder in München erfolgreich saniert.",
     problems: [
       "Schimmel im Bad München: Gesundheitsrisiko durch schwarze Fugen und feuchte Wände",
       "Alte Badezimmer: 70er/80er Jahre Fliesen, verkalkte Armaturen, vergilbte Wannen",
@@ -415,7 +415,7 @@ const serviceSeoContent: Record<string, {
     geoText: "Badsanierung in München und Umgebung – Ihr lokaler Badexperte. Wir sanieren Badezimmer in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Laim, Pasing, Trudering, Riem, Berg am Laim, Perlach, Neuperlach, Solln, Großhadern und allen weiteren Stadtteilen. Auch im Münchner Umland: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar, Grünwald und Pullach.",
     ctaText: "Jetzt Badproblem lösen",
     faq: [
-      { question: "Was kostet eine komplette Badsanierung in München?", answer: "Eine Badsanierung in München kostet (netto zzgl. MwSt., Stand 12/2025): Gäste-WC 8.000-12.000€, Standard-Bad 16.000-22.000€, Komfort-Bad 22.000-32.000€, Luxus-Bad 35.000-50.000€. Barrierefreier Umbau: +3.000-5.000€." },
+      { question: "Was kostet eine komplette Badsanierung in München?", answer: "Eine Badsanierung in München kostet (netto zzgl. MwSt., Stand 02/2026): Gäste-WC 8.000-12.000€, Standard-Bad 16.000-22.000€, Komfort-Bad 22.000-32.000€, Luxus-Bad 35.000-50.000€. Barrierefreier Umbau: +3.000-5.000€." },
       { question: "Wie lange dauert eine Badsanierung?", answer: "Eine komplette Badsanierung dauert 10-15 Werktage. Ein Gäste-WC ist in 5-7 Tagen fertig. Während der Bauzeit organisieren wir Ersatz-WC-Nutzung." },
       { question: "Muss ich während der Badsanierung ausziehen?", answer: "Nein, Sie können in Ihrer Wohnung bleiben. Wir installieren Staubschutzwände und organisieren die Nutzung eines Ersatz-WCs." }
     ],
@@ -526,7 +526,7 @@ const serviceSeoContent: Record<string, {
   heizungssanierung: {
     headline: "Heizungssanierung München | Neue Heizung mit bis zu 70% Förderung",
     subheadline: "Wärmepumpe, Gas-Brennwert, Pellets – staatliche Förderung sichern, Heizkosten senken",
-    intro: "Was kostet eine neue Heizung in München? Welche Förderung gibt es 2024/2025? Wärmepumpe oder Gas-Brennwert – was ist besser? Bei uns erhalten Sie unabhängige Beratung und kompletten Heizungstausch aus einer Hand. Wir beantragen Ihre BEG-Förderung (bis 70% Zuschuss), koordinieren alle Gewerke und garantieren einen reibungslosen Umstieg. Zertifizierter Fachbetrieb für Wärmepumpen, Gas, Öl und Pellets.",
+    intro: "Was kostet eine neue Heizung in München? Welche Förderung gibt es 2026? Wärmepumpe oder Gas-Brennwert – was ist besser? Bei uns erhalten Sie unabhängige Beratung und kompletten Heizungstausch aus einer Hand. Wir beantragen Ihre BEG-Förderung (bis 70% Zuschuss), koordinieren alle Gewerke und garantieren einen reibungslosen Umstieg. Zertifizierter Fachbetrieb für Wärmepumpen, Gas, Öl und Pellets.",
     problems: [
       "Hohe Heizkosten: Alte Heizungen verbrauchen 30-50% mehr Energie als moderne Anlagen",
       "Ausfall-Risiko: Heizkessel über 20 Jahre haben erhöhte Ausfallgefahr – gerade im Winter kritisch",
@@ -551,7 +551,7 @@ const serviceSeoContent: Record<string, {
     geoText: "Heizungssanierung in München und Umgebung – Ihr zertifizierter Heizungsfachbetrieb. Wir installieren neue Heizungen in: Schwabing, Maxvorstadt, Bogenhausen, Haidhausen, Giesing, Sendling, Westend, Neuhausen, Nymphenburg, Pasing, Trudering, Riem, Perlach, Solln und allen Münchner Stadtteilen. Service auch in: Dachau, Karlsfeld, Germering, Starnberg, Freising, Garching, Unterschleißheim, Ottobrunn, Haar und Grünwald.",
     ctaText: "Jetzt Heizkosten senken",
     faq: [
-      { question: "Was kostet eine neue Heizung in München?", answer: "Heizungskosten München (netto zzgl. MwSt., Stand 12/2025): Gas-Brennwert 12.000-20.000€, Luft-Wärmepumpe 35.000-52.000€, Sole-Wärmepumpe 52.000-65.000€ – minus bis zu 70% Förderung möglich." },
+      { question: "Was kostet eine neue Heizung in München?", answer: "Heizungskosten München (netto zzgl. MwSt., Stand 02/2026): Gas-Brennwert 12.000-20.000€, Luft-Wärmepumpe 35.000-52.000€, Sole-Wärmepumpe 52.000-65.000€ – minus bis zu 70% Förderung möglich." },
       { question: "Wie viel Förderung bekomme ich für eine neue Heizung?", answer: "BEG-Förderung 2024: 30% Basis + 20% Klimabonus + 20% Einkommensbonus = bis zu 70%. Wärmepumpe mit max. Förderung: Von 20.000€ Kosten zahlen Sie nur 6.000€." },
       { question: "Wie lange dauert ein Heizungstausch?", answer: "Ein Heizungstausch dauert 1-3 Tage. In dieser Zeit stellen wir eine mobile Heizung, damit Sie nicht frieren. Bei Wärmepumpen kann die Außeneinheit manchmal länger dauern." }
     ],
@@ -894,16 +894,16 @@ type ServiceDetails = {
 };
 
 const getPriceRangeForService = (service: string): string => {
-  // Münchner Preise Stand 12/2025 (Internet-Recherche + 30% Zuschlag), netto zzgl. MwSt., ca.-Angaben ohne Gewähr
+  // Münchner Preise Stand 02/2026 (Internet-Recherche + 30% Zuschlag), netto zzgl. MwSt., ca.-Angaben ohne Gewähr
   const priceRanges: Record<string, string> = {
-    komplettsanierung: "Ca.-Preise München: Standard 1.000-1.300€/m² | Gehoben 1.300-1.700€/m² | Premium 1.700-2.300€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    badsanierung: "Ca.-Preise München je nach Umfang: Dusche ca. 3.300€ | Gäste-WC ca. 8.000-12.000€ | Standard-Bad ca. 16.000-22.000€ | Luxus-Bad ca. 35.000-50.000€ | Barrierefrei +3.000-5.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    kuechensanierung: "Ca.-Preise München (nur Bauarbeiten OHNE Küchenmöbel): Fliesen, Elektro, Wasser - kleine Küche ca. 6.500-10.000€ | mittlere ca. 10.000-15.000€ | große ca. 15.000-22.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    bodensanierung: "Ca.-Preise München: Laminat/Vinyl 65-100€/m² | Parkett 130-200€/m² | Fliesen 100-160€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    elektrosanierung: "Ca.-Preise München: Teilsanierung 85-130€/m² | Komplett 130-200€/m² | Mit Smart Home 200-300€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    heizungssanierung: "Ca.-Preise München: Gasheizung 12.000-20.000€ | Wärmepumpe Luft 35.000-52.000€ | Wärmepumpe Sole 52.000-65.000€ netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    "energetische-sanierung": "Ca.-Preise München: Fassadendämmung 200-350€/m² | Fenster 650-1.000€/Stk | Dachdämmung 100-200€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
-    dachsanierung: "Ca.-Preise München: Eindeckung 200-280€/m² | Mit Dämmung 280-400€/m² | Flachdach 130-200€/m² netto zzgl. MwSt. (Stand 12/2025, Angabe ohne Gewähr)",
+    komplettsanierung: "Ca.-Preise München: Standard 1.000-1.300€/m² | Gehoben 1.300-1.700€/m² | Premium 1.700-2.300€/m² netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    badsanierung: "Ca.-Preise München je nach Umfang: Dusche ca. 3.300€ | Gäste-WC ca. 8.000-12.000€ | Standard-Bad ca. 16.000-22.000€ | Luxus-Bad ca. 35.000-50.000€ | Barrierefrei +3.000-5.000€ netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    kuechensanierung: "Ca.-Preise München (nur Bauarbeiten OHNE Küchenmöbel): Fliesen, Elektro, Wasser - kleine Küche ca. 6.500-10.000€ | mittlere ca. 10.000-15.000€ | große ca. 15.000-22.000€ netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    bodensanierung: "Ca.-Preise München: Laminat/Vinyl 65-100€/m² | Parkett 130-200€/m² | Fliesen 100-160€/m² netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    elektrosanierung: "Ca.-Preise München: Teilsanierung 85-130€/m² | Komplett 130-200€/m² | Mit Smart Home 200-300€/m² netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    heizungssanierung: "Ca.-Preise München: Gasheizung 12.000-20.000€ | Wärmepumpe Luft 35.000-52.000€ | Wärmepumpe Sole 52.000-65.000€ netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    "energetische-sanierung": "Ca.-Preise München: Fassadendämmung 200-350€/m² | Fenster 650-1.000€/Stk | Dachdämmung 100-200€/m² netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
+    dachsanierung: "Ca.-Preise München: Eindeckung 200-280€/m² | Mit Dämmung 280-400€/m² | Flachdach 130-200€/m² netto zzgl. MwSt. (Stand 02/2026, Angabe ohne Gewähr)",
   };
   return priceRanges[service] || "Fordern Sie jetzt Ihr kostenloses Festpreis-Angebot an!";
 };
@@ -2633,11 +2633,10 @@ export default function FunnelPage() {
       priceRange: "€€-€€€",
       areaServed: "München"
     });
-    // FAQPage schema removed - only on /faq-preise page per Google guidelines
-    const combinedSchema = {
-      "@context": "https://schema.org",
-      "@graph": [serviceSchema]
-    };
+    const combinedSchema = generatePageGraphSchema(
+      { path: `/anfrage?service=${preSelectedService}`, name: content.headline.split("|")[0].trim(), description: content.intro.substring(0, 155) },
+      [serviceSchema]
+    );
     
     return (
       <div className="min-h-screen bg-background flex flex-col overflow-x-hidden">
