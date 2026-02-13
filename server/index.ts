@@ -65,6 +65,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// Temporary debug endpoint - REMOVE after testing
+app.get("/_debug-prerender", (req, res) => {
+  const hasToken = !!process.env.PRERENDER_TOKEN;
+  const tokenLen = process.env.PRERENDER_TOKEN ? process.env.PRERENDER_TOKEN.length : 0;
+  res.json({ hasToken, tokenLen, nodeEnv: process.env.NODE_ENV });
+});
+
 // SEO: Prerender.io for search engines and AI bots (primary)
 // Falls back to built-in crawler middleware if Prerender.io is unavailable
 app.use(prerenderMiddleware);
