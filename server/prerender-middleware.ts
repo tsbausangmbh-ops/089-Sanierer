@@ -100,11 +100,11 @@ function hasIgnoredExtension(url: string): boolean {
   return IGNORED_EXTENSIONS.some((ext) => path.endsWith(ext));
 }
 
+const CANONICAL_HOST = "089-sanierer.de";
+
 function buildPrerenderUrl(req: Request): string {
-  const protocol = req.headers["x-forwarded-proto"] || req.protocol || "https";
-  const host = req.headers["x-forwarded-host"] || req.headers["host"] || "089-sanierer.de";
   const originalUrl = req.originalUrl || req.url;
-  return `${PRERENDER_SERVICE_URL}${protocol}://${host}${originalUrl}`;
+  return `${PRERENDER_SERVICE_URL}https://${CANONICAL_HOST}${originalUrl}`;
 }
 
 export function prerenderMiddleware(req: Request, res: Response, next: NextFunction) {
