@@ -5,6 +5,7 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
+import { prerenderMiddleware } from "./prerender-middleware";
 import { getHeroImageForRoute } from "./hero-images";
 
 const app = express();
@@ -64,8 +65,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// SEO: Built-in crawler middleware for all search engines and AI bots
-// Serves pre-rendered static HTML to crawlers without external dependencies
+// SEO: Prerender.io for search engines and AI bots (primary)
+// Falls back to built-in crawler middleware if Prerender.io is unavailable
+app.use(prerenderMiddleware);
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 

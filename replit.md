@@ -140,8 +140,10 @@ Preferred communication style: Simple, everyday language (German).
 4. Placeholder markers are replaced with actual values
 5. Complete HTML with correct meta tags is sent to browser/crawler
 
-**Crawler Support:**
-- `server/crawler-middleware.ts` - Serves full static HTML to search engine bots
+**Crawler Support (2-Tier):**
+- `server/prerender-middleware.ts` - Custom Prerender.io middleware (primary): Detects bot UAs, forwards to Prerender.io service via PRERENDER_TOKEN, returns pre-rendered HTML
+- `server/crawler-middleware.ts` - Built-in static HTML fallback (secondary): Serves hand-crafted HTML if Prerender.io is unavailable
+- Flow: Bot request → Prerender.io attempt → if fail/timeout → crawler-middleware fallback → response
 - Internal linking via footer components for PageRank distribution
 
 **Schema Architecture (CRITICAL):**
