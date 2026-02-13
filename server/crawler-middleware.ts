@@ -2111,7 +2111,8 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 async function tryPrerender(req: Request, userAgent: string): Promise<string | null> {
   const token = process.env.PRERENDER_TOKEN;
   if (!token) {
-    console.log(`[prerender] SKIP: no PRERENDER_TOKEN`);
+    const allEnvKeys = Object.keys(process.env).filter(k => k.includes("PRERENDER") || k.includes("prerender")).join(", ");
+    console.log(`[prerender] SKIP: no PRERENDER_TOKEN (available keys with prerender: ${allEnvKeys || "none"})`);
     return null;
   }
 
