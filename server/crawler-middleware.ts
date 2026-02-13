@@ -2174,7 +2174,7 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
       res.setHeader("X-Prerender", "1");
       res.setHeader("Content-Language", "de-DE");
       res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
-      res.send(prerenderHtml);
+      res.send(prerenderHtml.replace("</body>", "<!-- served-by: prerender.io -->\n</body>"));
       return;
     }
 
