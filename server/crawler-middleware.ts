@@ -2108,6 +2108,49 @@ function generateStaticHTML(path: string, query: Record<string, string>): string
 </html>`;
 }
 
+async function tryPrerender(req: Request, userAgent: string): Promise<string | null> {
+  const token = process.env.PRERENDER_TOKEN;
+  if (!token) {
+    console.log(`[prerender] SKIP: no PRERENDER_TOKEN`);
+    return null;
+  }
+
+  const PRERENDER_SERVICE_URL = "https://service.prerender.io/";
+  const CANONICAL_HOST = "089-sanierer.de";
+  const originalUrl = req.originalUrl || req.url;
+  const prerenderUrl = `${PRERENDER_SERVICE_URL}https://${CANONICAL_HOST}${originalUrl}`;
+
+  const formattedTime = new Date().toLocaleTimeString("en-US", {
+    hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true,
+  });
+
+  try {
+    const prerenderRes = await fetch(prerenderUrl, {
+      headers: {
+        "X-Prerender-Token": token,
+        "User-Agent": userAgent,
+        "Accept": "text/html",
+      },
+      redirect: "follow",
+      signal: AbortSignal.timeout(15000),
+    });
+
+    const status = prerenderRes.status;
+
+    if (status === 401 || status === 403) {
+      console.log(`${formattedTime} [prerender] AUTH_FAIL ${req.originalUrl} (${status}) → fallback`);
+      return null;
+    }
+
+    const html = await prerenderRes.text();
+    console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (${status}, ${html.length} bytes)`);
+    return html;
+  } catch (err: any) {
+    console.log(`${formattedTime} [prerender] ERROR ${req.originalUrl}: ${err.message} → fallback`);
+    return null;
+  }
+}
+
 export async function crawlerMiddleware(req: Request, res: Response, next: NextFunction): Promise<void> {
   const userAgent = req.headers["user-agent"] || "";
   const path = req.path;
@@ -2121,8 +2164,21 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
   const forceSSR = query.ssr === "1";
 
   if (isCrawlerRequest || forceSSR) {
+    // Priority 1: Prerender.io
+    const prerenderHtml = await tryPrerender(req, userAgent);
+    if (prerenderHtml) {
+      res.setHeader("Content-Type", "text/html; charset=utf-8");
+      res.setHeader("X-Prerender", "1");
+      res.setHeader("Content-Language", "de-DE");
+      res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+      res.send(prerenderHtml);
+      return;
+    }
+
+    // Priority 2: Built-in static HTML fallback
     const staticHTML = generateStaticHTML(path, query);
     if (staticHTML) {
+      console.log(`[crawler] FALLBACK ${req.originalUrl} → static HTML`);
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
       res.setHeader("X-SSR", "1");

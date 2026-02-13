@@ -5,7 +5,6 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seedAdminUser } from "./seed-admin";
 import { crawlerMiddleware } from "./crawler-middleware";
-import { prerenderMiddleware } from "./prerender-middleware";
 import { getHeroImageForRoute } from "./hero-images";
 
 const app = express();
@@ -65,16 +64,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Temporary debug endpoint - REMOVE after testing
-app.get("/api/_debug-prerender", (req, res) => {
-  const hasToken = !!process.env.PRERENDER_TOKEN;
-  const tokenLen = process.env.PRERENDER_TOKEN ? process.env.PRERENDER_TOKEN.length : 0;
-  res.json({ hasToken, tokenLen, nodeEnv: process.env.NODE_ENV });
-});
-
-// SEO: Prerender.io for search engines and AI bots (primary)
-// Falls back to built-in crawler middleware if Prerender.io is unavailable
-app.use(prerenderMiddleware);
+// SEO: Crawler middleware with integrated Prerender.io (priority 1) + static HTML fallback (priority 2)
 app.use(crawlerMiddleware);
 const httpServer = createServer(app);
 
