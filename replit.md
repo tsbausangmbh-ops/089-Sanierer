@@ -142,7 +142,6 @@ Preferred communication style: Simple, everyday language (German).
 
 **Crawler Support:**
 - `server/crawler-middleware.ts` - Serves full static HTML to search engine bots
-- Prerender.io integration for production (PRERENDER_TOKEN env var)
 - Internal linking via footer components for PageRank distribution
 
 **Schema Architecture (CRITICAL):**
