@@ -2166,6 +2166,8 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
 
   if (isCrawlerRequest || forceSSR) {
     // Priority 1: Prerender.io
+    const hasToken = !!process.env.PRERENDER_TOKEN;
+    res.setHeader("X-Prerender-Token-Available", hasToken ? "yes" : "no");
     const prerenderHtml = await tryPrerender(req, userAgent);
     if (prerenderHtml) {
       res.setHeader("Content-Type", "text/html; charset=utf-8");
