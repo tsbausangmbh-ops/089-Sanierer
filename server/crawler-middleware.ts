@@ -2181,7 +2181,8 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
     // Priority 2: Built-in static HTML fallback
     const staticHTML = generateStaticHTML(path, query);
     if (staticHTML) {
-      console.log(`[crawler] FALLBACK ${req.originalUrl} → static HTML`);
+      const hasToken = !!process.env.PRERENDER_TOKEN;
+      console.log(`[crawler] FALLBACK ${req.originalUrl} → static HTML (token: ${hasToken})`);
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
       res.setHeader("X-SSR", "1");
@@ -2192,7 +2193,8 @@ export async function crawlerMiddleware(req: Request, res: Response, next: NextF
         '<https://089-sanierer.de/llms-full.txt>; rel="ai-content-full"; type="text/plain"',
         '<https://089-sanierer.de/sitemap.xml>; rel="sitemap"; type="application/xml"'
       ].join(", "));
-      res.send(staticHTML);
+      const debugComment = `<!-- prerender-debug: token=${hasToken}, fallback=static-html -->`;
+      res.send(staticHTML.replace("</body>", `${debugComment}\n</body>`));
       return;
     }
   }
