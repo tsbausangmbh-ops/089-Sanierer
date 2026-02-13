@@ -110,6 +110,7 @@ function buildPrerenderUrl(req: Request): string {
 export async function prerenderMiddleware(req: Request, res: Response, next: NextFunction) {
   const token = process.env.PRERENDER_TOKEN;
   if (!token) {
+    console.log(`[prerender] SKIP: no PRERENDER_TOKEN env var`);
     return next();
   }
 
