@@ -25,7 +25,7 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,80%,18%)] text-white border-b border-white/15">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[hsl(220,80%,18%)] to-[hsl(220,60%,32%)] text-white border-b border-white/15">
       <a 
         href="#main-content" 
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded"
