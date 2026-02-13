@@ -107,7 +107,7 @@ function buildPrerenderUrl(req: Request): string {
   return `${PRERENDER_SERVICE_URL}https://${CANONICAL_HOST}${originalUrl}`;
 }
 
-export function prerenderMiddleware(req: Request, res: Response, next: NextFunction) {
+export async function prerenderMiddleware(req: Request, res: Response, next: NextFunction) {
   const token = process.env.PRERENDER_TOKEN;
   if (!token) {
     return next();
@@ -145,52 +145,52 @@ export function prerenderMiddleware(req: Request, res: Response, next: NextFunct
     hour12: true,
   });
 
-  fetch(prerenderUrl, {
-    headers,
-    redirect: "follow",
-    signal: AbortSignal.timeout(15000),
-  })
-    .then(async (prerenderRes) => {
-      const status = prerenderRes.status;
+  try {
+    const prerenderRes = await fetch(prerenderUrl, {
+      headers,
+      redirect: "follow",
+      signal: AbortSignal.timeout(15000),
+    });
 
-      if (status === 401 || status === 403) {
-        console.log(`${formattedTime} [prerender] AUTH_FAIL ${req.originalUrl} (${status}) → fallback`);
-        return next();
-      }
+    const status = prerenderRes.status;
 
-      if (status === 301 || status === 302 || status === 307 || status === 308) {
-        const location = prerenderRes.headers.get("location");
-        if (location) {
-          console.log(`${formattedTime} [prerender] REDIRECT ${req.originalUrl} → ${location} (${status})`);
-          res.set("X-Prerender", "1");
-          return res.redirect(status, location);
-        }
-        return next();
-      }
+    if (status === 401 || status === 403) {
+      console.log(`${formattedTime} [prerender] AUTH_FAIL ${req.originalUrl} (${status}) → fallback`);
+      return next();
+    }
 
-      if (req.method === "HEAD") {
-        console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (HEAD ${status})`);
-        res.status(status);
-        res.set("Content-Type", "text/html; charset=utf-8");
+    if (status === 301 || status === 302 || status === 307 || status === 308) {
+      const location = prerenderRes.headers.get("location");
+      if (location) {
+        console.log(`${formattedTime} [prerender] REDIRECT ${req.originalUrl} → ${location} (${status})`);
         res.set("X-Prerender", "1");
-        return res.end();
+        return res.redirect(status, location);
       }
+      return next();
+    }
 
-      const html = await prerenderRes.text();
-      console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (${status}, ${html.length} bytes)`);
+    if (req.method === "HEAD") {
+      console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (HEAD ${status})`);
       res.status(status);
       res.set("Content-Type", "text/html; charset=utf-8");
       res.set("X-Prerender", "1");
+      return res.end();
+    }
 
-      const cacheControl = prerenderRes.headers.get("cache-control");
-      if (cacheControl) {
-        res.set("Cache-Control", cacheControl);
-      }
+    const html = await prerenderRes.text();
+    console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (${status}, ${html.length} bytes)`);
+    res.status(status);
+    res.set("Content-Type", "text/html; charset=utf-8");
+    res.set("X-Prerender", "1");
 
-      res.send(html);
-    })
-    .catch((err) => {
-      console.log(`${formattedTime} [prerender] ERROR ${req.originalUrl}: ${err.message} → fallback`);
-      next();
-    });
+    const cacheControl = prerenderRes.headers.get("cache-control");
+    if (cacheControl) {
+      res.set("Cache-Control", cacheControl);
+    }
+
+    res.send(html);
+  } catch (err: any) {
+    console.log(`${formattedTime} [prerender] ERROR ${req.originalUrl}: ${err.message} → fallback`);
+    next();
+  }
 }
