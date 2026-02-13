@@ -153,8 +153,8 @@ export function prerenderMiddleware(req: Request, res: Response, next: NextFunct
     .then(async (prerenderRes) => {
       const status = prerenderRes.status;
 
-      if (status >= 500) {
-        console.log(`${formattedTime} [prerender] MISS ${req.originalUrl} (${status}) → fallback`);
+      if (status === 401 || status === 403) {
+        console.log(`${formattedTime} [prerender] AUTH_FAIL ${req.originalUrl} (${status}) → fallback`);
         return next();
       }
 
@@ -177,12 +177,7 @@ export function prerenderMiddleware(req: Request, res: Response, next: NextFunct
       }
 
       const html = await prerenderRes.text();
-      if (!html || html.length < 100) {
-        console.log(`${formattedTime} [prerender] EMPTY ${req.originalUrl} → fallback`);
-        return next();
-      }
-
-      console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (${status})`);
+      console.log(`${formattedTime} [prerender] HIT ${req.originalUrl} (${status}, ${html.length} bytes)`);
       res.status(status);
       res.set("Content-Type", "text/html; charset=utf-8");
       res.set("X-Prerender", "1");
