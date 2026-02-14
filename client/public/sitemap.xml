@@ -5,14 +5,14 @@
   <!-- Hauptseiten -->
   <url>
     <loc>https://089-sanierer.de/</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/anfrage</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
@@ -21,28 +21,35 @@
   
   <url>
     <loc>https://089-sanierer.de/badsanierung</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/wohnungssanierung</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/haussanierung</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/kernsanierung</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://089-sanierer.de/kosten</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -50,42 +57,42 @@
   <!-- Info & Tools Seiten -->
   <url>
     <loc>https://089-sanierer.de/faq-preise</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/rechner</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/ratgeber</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/termin</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/kontakt</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/gewerke</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -93,35 +100,35 @@
   <!-- Legal -->
   <url>
     <loc>https://089-sanierer.de/impressum</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/datenschutz</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/agb</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/cookies</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/barrierefreiheit</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -129,224 +136,224 @@
   <!-- München Stadtteile -->
   <url>
     <loc>https://089-sanierer.de/muenchen-schwabing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-bogenhausen</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-maxvorstadt</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-haidhausen</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-sendling</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-neuhausen</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-pasing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-giesing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-lehel</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-trudering</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-allach</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-untermenzing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-obermenzing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-aubing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-moosach</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-feldmoching</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-laim</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-nymphenburg</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-berg-am-laim</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-riem</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-milbertshofen</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-freimann</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-solln</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-grosshadern</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-hadern</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-fuerstenried</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-forstenried</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-thalkirchen</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-obersendling</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-ramersdorf</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-perlach</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/muenchen-neuperlach</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -354,133 +361,133 @@
   <!-- Umland -->
   <url>
     <loc>https://089-sanierer.de/dachau</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/karlsfeld</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/germering</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/fuerstenfeldbruck</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/freising</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/starnberg</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/garching</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/unterschleissheim</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/oberschleissheim</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/ottobrunn</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/haar</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/graefelfing</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/planegg</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/pullach</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/gruenwald</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/erding</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/ismaning</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/unterhaching</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   
   <url>
     <loc>https://089-sanierer.de/vaterstetten</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
